@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<settings>
+  <section _="0118143a-daaa-4614-9de4-034b028f791e" />
+  <section _="071cf92d-acfa-46a1-8eef-dfac1d01e644" />
+  <section _="0a9208ec-cfab-41c2-82c6-fcda44a8e684" />
+  <section _="102dcd2e-be0a-477c-b4d0-600c5ca28a6a" />
+  <section _="13c22a09-e143-430e-b2d9-91da7b2a5388" />
+  <section _="1ace15fd-d689-40dc-b1e7-6eec25b3116f" />
+  <section _="2366a90d-c708-4a10-81af-7887976bc3fb" />
+  <section _="2e163d85-e4b5-419a-a525-010df2bea323" />
+  <section _="2f066064-741b-454e-9d21-b04bcf802018" />
+  <section _="3126ab8a-167a-4071-8335-e16d6188f6c9" />
+  <section _="33e1988b-8eff-4f4c-a064-fa99a7d0c64d">
+    <section _="MainWindowControlState">
+      <section _="Horizontal" horizontal="True">
+        <section _="Length" l="606" />
+        <section _="Length" l="6" />
+        <section _="Length" l="1.05*" />
+      </section>
+      <section _="Location" g="5495ee9f-1ef2-45f3-a320-22a89bfdf731" l="Left" />
+      <section _="Location" g="5827d693-a5df-4d65-b1f8-acf249508a96" l="Bottom" />
+      <section _="Location" g="8e359be0-c8cd-4ca7-b228-8c836219af85" l="Bottom" />
+      <section _="Location" g="ffd1f456-dc69-46d7-8c96-858b36c57bc3" l="Bottom" />
+      <section _="ToolWindow" index="0" is-horizontal="False" location="Left">
+        <section _="Group" index="0">
+          <section _="Content" g="5495ee9f-1ef2-45f3-a320-22a89bfdf731" />
+        </section>
+        <section _="StackedContent" horizontal="True">
+          <section _="Length" l="0.95*" />
+        </section>
+      </section>
+      <section _="ToolWindow" index="-1" is-horizontal="False" location="Right">
+        <section _="StackedContent" horizontal="True" />
+      </section>
+      <section _="ToolWindow" index="-1" is-horizontal="False" location="Top">
+        <section _="StackedContent" horizontal="True" />
+      </section>
+      <section _="ToolWindow" index="0" is-horizontal="False" location="Bottom">
+        <section _="Group" index="0">
+          <section _="Content" g="8e359be0-c8cd-4ca7-b228-8c836219af85" />
+          <section _="Content" g="5827d693-a5df-4d65-b1f8-acf249508a96" />
+        </section>
+        <section _="StackedContent" horizontal="True">
+          <section _="Length" l="0.95*" />
+        </section>
+      </section>
+      <section _="Vertical" horizontal="False">
+        <section _="Length" l="0.95*" />
+        <section _="Length" l="6" />
+        <section _="Length" l="228" />
+      </section>
+    </section>
+    <section _="SavedWindowState" Bounds="26,26,1300,730" IsFullScreen="False" WindowState="Maximized" />
+  </section>
+  <section _="34cf0af5-d265-4393-bc68-9b8c9b8ea622" ShowAllThemes="False" ThemeGuid="64efbb2c-0aca-467c-8389-9fa350376f3f" />
+  <section _="3643ce93-84d5-455a-9183-94b58bc80942" />
+  <section _="3e04abe0-fd5e-4938-b40c-f86aa0fa377d" />
+  <section _="40476b68-2e8a-4507-8f59-727fe87a04ee" />
+  <section _="42cb1310-641d-4eb7-971d-16dc5cf9a40d" />
+  <section _="4d05c47d-3f6a-429e-9cb3-232e10d45468" />
+  <section _="53863c11-df95-43f2-8f86-5e9dfcce6893">
+    <section _="FileLists" name="(Default)">
+      <section _="FileList" name="(Default)">
+        <section _="File" name="C:\Program Files\Clone Hero\Clone Hero_Data\Managed\Assembly-CSharp.dll" />
+        <section _="File" name="C:\Program Files\Clone Hero\Clone Hero_Data\Managed\mscorlib.dll" />
+      </section>
+    </section>
+    <section _="TabGroupWindow" index="0" is-horizontal="False" name="Main">
+      <section _="StackedContent" horizontal="True">
+        <section _="Length" l="0.95*" />
+      </section>
+      <section _="TabGroup" index="0">
+        <section _="Tab">
+          <section _="Content" _g_="de0390b0-747c-4f53-9cff-1d10b93dd5dd" Language="4162dada-67c3-4de4-a5f3-6552c8353ece" />
+          <section _="Path">
+            <section _="Name" id="ab10c139-2735-4595-9e47-2ee0ee247c6d" name="C:\PROGRAM FILES\CLONE HERO\CLONE HERO_DATA\MANAGED\ASSEMBLY-CSHARP.DLL" />
+          </section>
+          <section _="TabUI" zoom="1" />
+          <section _="UI" CaretAffinity="Successor" CaretPosition="0" CaretVirtualSpaces="0" TopLinePosition="0" TopLineVerticalDistance="0" ViewportLeft="0" />
+        </section>
+      </section>
+    </section>
+  </section>
+  <section _="5e4c09be-8239-4275-b797-dcbce63aefc4" />
+  <section _="611a864b-fd4e-4505-8c5f-0165cd09b77a" />
+  <section _="642b9276-3c9a-4efe-9b3b-d62046824b18">
+    <section _="file" name="C:\Program Files\Clone Hero\Clone Hero_Data\Managed\Assembly-CSharp.dll" />
+    <section _="file" name="C:\Users\atrius\Downloads\dnSpy-net-win64\bin\wpfgfx_cor3.dll" />
+    <section _="file" name="C:\Users\atrius\Downloads\dnSpy-net-win64\bin\WindowsFormsIntegration.dll" />
+    <section _="file" name="C:\Users\atrius\Downloads\dnSpy-net-win64\bin\WindowsBase.dll" />
+    <section _="file" name="C:\Users\atrius\Downloads\dnSpy-net-win64\bin\vcruntime140_cor3.dll" />
+    <section _="file" name="C:\Users\atrius\Downloads\dnSpy-net-win64\bin\UIAutomationTypes.dll" />
+    <section _="file" name="C:\Users\atrius\Downloads\dnSpy-net-win64\bin\UIAutomationProvider.dll" />
+    <section _="file" name="C:\Users\atrius\Downloads\dnSpy-net-win64\bin\UIAutomationClientSideProviders.dll" />
+    <section _="file" name="C:\Users\atrius\Downloads\dnSpy-net-win64\bin\UIAutomationClient.dll" />
+    <section _="file" name="C:\Users\atrius\Downloads\dnSpy-net-win64\bin\System.Xml.XPath.XDocument.dll" />
+    <section _="file" name="C:\Users\atrius\Downloads\dnSpy-net-win64\bin\System.Xml.XPath.dll" />
+    <section _="file" name="C:\Users\atrius\Downloads\dnSpy-net-win64\bin\System.Xml.XmlSerializer.dll" />
+    <section _="file" name="C:\Users\atrius\Downloads\dnSpy-net-win64\bin\System.Xml.XmlDocument.dll" />
+    <section _="file" name="C:\Users\atrius\Downloads\dnSpy-net-win64\bin\System.Xml.XDocument.dll" />
+    <section _="file" name="C:\Users\atrius\Downloads\dnSpy-net-win64\bin\System.Xml.Serialization.dll" />
+    <section _="file" name="C:\Users\atrius\Downloads\dnSpy-net-win64\bin\System.Xml.ReaderWriter.dll" />
+    <section _="file" name="C:\Users\atrius\Downloads\dnSpy-net-win64\bin\System.Xml.Linq.dll" />
+    <section _="file" name="C:\Users\atrius\Downloads\dnSpy-net-win64\bin\System.Xml.dll" />
+    <section _="file" name="C:\Users\atrius\Downloads\dnSpy-net-win64\bin\System.Xaml.dll" />
+    <section _="file" name="C:\Users\atrius\Downloads\dnSpy-net-win64\bin\System.Windows.Presentation.dll" />
+    <section _="file" name="C:\Users\atrius\Downloads\dnSpy-net-win64\bin\System.Windows.Input.Manipulations.dll" />
+    <section _="file" name="C:\Users\atrius\Downloads\dnSpy-net-win64\bin\System.Windows.Forms.Primitives.dll" />
+    <section _="file" name="C:\Users\atrius\Downloads\dnSpy-net-win64\bin\System.Windows.Forms.dll" />
+    <section _="file" name="C:\Users\atrius\Downloads\dnSpy-net-win64\bin\System.Windows.Forms.Design.Editors.dll" />
+    <section _="file" name="C:\Users\atrius\Downloads\dnSpy-net-win64\bin\System.Windows.Forms.Design.dll" />
+    <section _="file" name="C:\Users\atrius\Downloads\dnSpy-net-win64\bin\System.Windows.Extensions.dll" />
+    <section _="file" name="C:\Users\atrius\Downloads\dnSpy-net-win64\bin\System.Windows.dll" />
+    <section _="file" name="C:\Users\atrius\Downloads\dnSpy-net-win64\bin\System.Windows.Controls.Ribbon.dll" />
+    <section _="file" name="C:\Users\atrius\Downloads\dnSpy-net-win64\bin\System.Web.HttpUtility.dll" />
+    <section _="file" name="C:\Users\atrius\Downloads\dnSpy-net-win64\bin\System.Web.dll" />
+  </section>
+  <section _="6745457f-254b-4b7b-90f1-f948f0721c3b" />
+  <section _="68377c1d-228a-4317-ab10-11796f6deb18" CaseSensitive="False" MatchAnySearchTerm="False" MatchWholeWords="False" SearchCompilerGeneratedMembers="True" SearchDecompiledData="True" SearchFrameworkAssemblies="True" SearchLocation="AllFiles" SearchType="Literal" SyntaxHighlight="True" />
+  <section _="686c5cfb-ff63-4aa5-8c92-e08607ae5146" />
+  <section _="6a7e565d-dc09-4aae-a7c8-e86a835fcbfc" LanguageGuid="4162dada-67c3-4de4-a5f3-6552c8353ece" />
+  <section _="6aa691d6-c3b8-4823-87ec-dc2e9134cb3e" />
+  <section _="7280c4eb-1135-4f39-b6e0-57bd0a2454d6" />
+  <section _="7caef193-7f6a-4710-8e47-547a71d6fdbc" />
+  <section _="87c84585-355b-4bf2-b5ee-c61bc1975552" />
+  <section _="8a9e5743-f634-45ce-a841-e2275338dc28" />
+  <section _="91f1ed94-1bea-4853-9240-b542a7d022ca" />
+  <section _="b744ae6d-24e0-47a3-acf6-388eccb1c65a" />
+  <section _="ba10705f-f9a0-4cf6-b3a8-b0e4a76151a6">
+    <section _="Group" name="CodeEditor">
+      <section _="ContentType" name="CSharp">
+        <section _="Option" name="TextView/ZoomLevel" value="100" />
+      </section>
+    </section>
+    <section _="Group" name="REPL">
+      <section _="ContentType" name="REPL C# Roslyn">
+        <section _="Option" name="TextView/ZoomLevel" value="75" />
+      </section>
+    </section>
+    <section _="Group" name="DocumentViewer">
+      <section _="ContentType" name="any">
+        <section _="Option" name="Adornments/HighlightCurrentLine/Enable" value="True" />
+      </section>
+    </section>
+  </section>
+  <section _="d9809eb3-1605-4e05-a84f-6ee241faad6c" />
+  <section _="dd6752b1-5336-4601-a9b2-0879e18ae9f3" HexadecimalNumbers="False" MaxStringLength="20000" ShowILBytes="True" ShowILComments="False" ShowPdbInfo="True" ShowTokenAndRvaComments="False" ShowXmlDocumentation="True" SortMembers="False" />
+  <section _="eaa1be38-7a55-44af-ad93-5b7ee2327edd" />
+  <section _="eb2d9511-93b9-4985-bb99-1758bf2a5ade" />
+  <section _="ef5c4f77-ac84-413b-93ab-4773f0013514" />
+  <section _="f1634589-21ad-42dc-a729-e23cbd7072d2" />
+  <section _="f70d9afd-0233-4630-a2a7-0c5a157158ff" />
+  <section _="fbc6039c-8a7a-49dc-9c32-52c1b73de0a3" />
+</settings>
