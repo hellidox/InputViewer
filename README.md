@@ -9,4 +9,4 @@ If your pull request touches every file it won't be merged!
 - Added proper analytics toggle
 - Added total score stat
 - Optimized Practice UI by a lot (original calls string.Format every frame, this calls ZString.AppendFormat 30 times per second
-  ZString.AppendFormat is slightly slower but doesn't generate garbage so less lag spikes
+  ZString.AppendFormat doesn't generate garbage so less lag spikes
