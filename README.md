@@ -4,6 +4,11 @@ If your pull request touches every file it won't be merged!
 
 # Patch Notes
 
+
+## V2.0.8.2
+- Fix the analytics file reader issue
+
+  
 ## V2.0.8.1
 - You can now properly opt out of analytics. Only reason you couldn't before is because i forgo t
 - Mod source code is now public at https://github.com/hellidox/InputViewer (you could already just use dnspy and i still recommend dnspy, however this does have a diff thing and commit messages built in so that's nice)
