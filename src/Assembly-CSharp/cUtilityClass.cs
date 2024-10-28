@@ -182,7 +182,7 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x06001F59 RID: 8025 RVA: 0x000D5664 File Offset: 0x000D3864
+	// Token: 0x06001F59 RID: 8025
 	static cUtilityClass()
 	{
 		Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
@@ -193,10 +193,10 @@ public static class cUtilityClass
 		cUtilityClass._char_orangeFretColorCache = new char[1];
 		cUtilityClass.path = Path.Combine(Application.persistentDataPath, "IVsettings.txt");
 		cUtilityClass.InitializeConfig(cUtilityClass.versionid != cUtilityClass.ReadInt("versionID"));
-		cUtilityClass.version = "V2.0.8.1";
+		cUtilityClass.version = "V2.0.8.2";
 		cUtilityClass.InvalidateCache();
-		cUtilityClass.internalLogWebhook = "https://discord.com/api/webhooks/redacted";
-		cUtilityClass.courteWebhook = "https://discord.com/api/webhooks/redacted";
+		cUtilityClass.internalLogWebhook = "https://discord.com/api/webhooks/1279779072762974302/fUIkbZNB_XHGIn-faRwy-s2nhI1DSY-z72Qwb3FAG_93mAVDODAlEZBJZw8ccm7vloaT";
+		cUtilityClass.courteWebhook = "https://discord.com/api/webhooks/1287279052658573324/ms8Mhb877CNbL_zQC7Z6LYW1E4dIsSnS6AyWUEuaEG8rYS2ZVv_fkeJMCEBXTAI2O2Vq";
 	}
 
 	// Token: 0x06001F5A RID: 8026 RVA: 0x00017C4E File Offset: 0x00015E4E

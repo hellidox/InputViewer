@@ -822,7 +822,7 @@ public class MainMenu : BaseMenu
 		this.\u02B6\u02B8\u02B3\u02BF\u02BC\u02BB\u02BF\u02C0\u02B6\u02B2\u02C1 = \u02B8\u02BC\u02BC\u02C0\u02BB\u02C1\u02BB\u02BC\u02B2\u02B7\u02C0.\u02B2\u02BB\u02B9\u02B8\u02B5\u02B9\u02BF\u02B6\u02B7\u02BB\u02B5;
 	}
 
-	// Token: 0x0600065F RID: 1631 RVA: 0x0003AC08 File Offset: 0x00038E08
+	// Token: 0x0600065F RID: 1631
 	protected override void Start()
 	{
 		if (GlobalVariables.playTime > 0)
@@ -861,7 +861,7 @@ public class MainMenu : BaseMenu
 		}
 		else
 		{
-			if (cUtilityClass.ReadKeyValue("analyticsVersion", text2) != "3")
+			if (cUtilityClass.ReadKeyValue("analyticsVersion", text2) == "3")
 			{
 				goto IL_0336;
 			}
