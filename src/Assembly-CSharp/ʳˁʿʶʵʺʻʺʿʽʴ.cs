@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 public interface \u02B3\u02C1\u02BF\u02B6\u02B5\u02BA\u02BB\u02BA\u02BF\u02BD\u02B4 : IDisposable
 {

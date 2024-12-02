@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 [Flags]
 public enum \u02C1\u02B7\u02B6\u02BF\u02B3\u02B4\u02BF\u02BE\u02BC\u02C0\u02C1

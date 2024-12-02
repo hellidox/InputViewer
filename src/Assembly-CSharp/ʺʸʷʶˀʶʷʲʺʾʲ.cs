@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 public class \u02BA\u02B8\u02B7\u02B6\u02C0\u02B6\u02B7\u02B2\u02BA\u02BE\u02B2 : Exception
 {

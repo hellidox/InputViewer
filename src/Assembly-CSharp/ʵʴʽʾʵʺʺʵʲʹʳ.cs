@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using StrikeCore;
 
 public struct \u02B5\u02B4\u02BD\u02BE\u02B5\u02BA\u02BA\u02B5\u02B2\u02B9\u02B3

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 public interface \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\u02B9\u02C0\u02B8\u02B4\u02BC
 {

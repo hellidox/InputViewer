@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using StrikeCore;
 using UnityEngine;
 using UnityEngine.UI;

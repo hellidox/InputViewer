@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using StrikeCore;
 
 public class \u02BE\u02BA\u02BA\u02BE\u02B2\u02B3\u02C1\u02C1\u02BC\u02B6\u02B9 : \u02BB\u02BE\u02BC\u02B9\u02B3\u02B2\u02B6\u02B6\u02BB\u02BE\u02B9

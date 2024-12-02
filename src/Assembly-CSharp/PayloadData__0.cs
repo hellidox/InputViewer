@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 
 internal class PayloadData__0

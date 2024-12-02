@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 public static class \u02B5\u02B7\u02BD\u02B4\u02B9\u02BD\u02B3\u02B9\u02B7\u02B4\u02B7
 {

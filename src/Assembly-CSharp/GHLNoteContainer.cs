@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 
 public class GHLNoteContainer : MonoBehaviour, \u02BF\u02BB\u02BF\u02B2\u02B6\u02C1\u02BC\u02BD\u02B3\u02BB\u02BB, \u02C0\u02C1\u02B8\u02BF\u02BB\u02BB\u02B9\u02BC\u02B9\u02BD\u02B7

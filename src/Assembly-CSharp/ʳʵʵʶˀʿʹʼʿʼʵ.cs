@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Cysharp.Text;
 using StrikeCore.Logging;
 using UnityEngine;

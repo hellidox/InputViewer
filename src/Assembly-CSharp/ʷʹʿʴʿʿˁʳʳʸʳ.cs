@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 internal static class \u02B7\u02B9\u02BF\u02B4\u02BF\u02BF\u02C1\u02B3\u02B3\u02B8\u02B3
 {

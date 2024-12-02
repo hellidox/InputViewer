@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 
 public class \u02BC\u02BB\u02B2\u02BE\u02BD\u02B7\u02B5\u02B2\u02B6\u02BA\u02C0 : \u02BC\u02BB\u02BE\u02BC\u02C1\u02B5\u02C1\u02C1\u02B5\u02B6\u02BB

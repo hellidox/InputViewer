@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 
 internal class \u02B2\u02B6\u02B3\u02BA\u02B2\u02B8\u02B6\u02B8\u02BF\u02B4\u02BF

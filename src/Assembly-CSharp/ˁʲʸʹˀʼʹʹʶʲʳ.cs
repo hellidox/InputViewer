@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Security.Cryptography;
 
 public static class \u02C1\u02B2\u02B8\u02B9\u02C0\u02BC\u02B9\u02B9\u02B6\u02B2\u02B3

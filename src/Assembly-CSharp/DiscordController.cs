@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using DiscordRPC;
 using DiscordRPC.Logging;
 using DiscordRPC.Message;

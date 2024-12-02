@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Runtime.CompilerServices;
 
 public static class \u02C1\u02BE\u02B4\u02B3\u02B4\u02BF\u02B8\u02C1\u02B6\u02BC\u02BE

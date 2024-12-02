@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -342,7 +342,9 @@ public class MainMenu : BaseMenu
 			" IVMod version ",
 			cUtilityClass.version,
 			"\nTime played: ",
-			string.Format("{0:00}:{1:00}:{2:00}", timeSpan.TotalHours, timeSpan.TotalMinutes % 60.0, timeSpan.TotalSeconds % 60.0)
+			string.Format("{0:00}:{1:00}:{2:00}", timeSpan.TotalHours, timeSpan.TotalMinutes % 60.0, timeSpan.TotalSeconds % 60.0),
+			"\nTotal points: ",
+			string.Format("{0:n", GlobalVariables.totalPoints)
 		});
 		if (this.fs == 0f)
 		{
