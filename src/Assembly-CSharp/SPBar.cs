@@ -195,7 +195,7 @@ public class SPBar : MonoBehaviour, \u02C0\u02C1\u02B8\u02BF\u02BB\u02BB\u02B9\u
 		this.ticker += Time.deltaTime;
 		if (this.ticker > 0.033333335f)
 		{
-			if (cUtilityClass.rainbowSPBar)
+			if (GlobalHelper.rainbowSPBar)
 			{
 				this.wasEnabledLastFrame = true;
 				float num = Time.realtimeSinceStartup / 15f;

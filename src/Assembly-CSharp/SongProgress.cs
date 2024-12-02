@@ -276,7 +276,7 @@ public class SongProgress : MonoBehaviour
 		if (this.ticker > 15)
 		{
 			this.ticker = 0;
-			string songProgressColor = cUtilityClass.songProgressColor;
+			string songProgressColor = GlobalHelper.songProgressColor;
 			if (!(this.lastColor == songProgressColor))
 			{
 				this.lastColor = songProgressColor;

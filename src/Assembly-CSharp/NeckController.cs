@@ -609,7 +609,7 @@ public class NeckController : BaseNeckController
 
 	private void Update()
 	{
-		if (!cUtilityClass.perFretFlameColors)
+		if (!GlobalHelper.perFretFlameColors)
 		{
 			if (!this.colorsReset)
 			{
@@ -633,7 +633,7 @@ public class NeckController : BaseNeckController
 				Debug.Log("normal:");
 				Color color = this.nc[j];
 				Debug.Log(color);
-				float colorIntensity = cUtilityClass.colorIntensity;
+				float colorIntensity = GlobalHelper.colorIntensity;
 				if (colorIntensity <= -1f)
 				{
 					color = Color.black;

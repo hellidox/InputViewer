@@ -1069,11 +1069,11 @@ public abstract class BaseGuitarPlayer : BasePlayer
 				text,
 				text,
 				(this.su && this.sd) ? text : ((this.su && !this.sd) ? text2 : ((!this.su && this.sd) ? text3 : (text5 + text))),
-				this.g ? ("<color=" + cUtilityClass.greenFretColor + ">") : text5,
-				this.r ? ("<color=" + cUtilityClass.redFretColor + ">") : text5,
-				this.y ? ("<color=" + cUtilityClass.yellowFretColor + ">") : text5,
-				this.b ? ("<color=" + cUtilityClass.blueFretColor + ">") : text5,
-				this.o ? ("<color=" + cUtilityClass.orangeFretColor + ">") : text5,
+				this.g ? ("<color=" + GlobalHelper.greenFretColor + ">") : text5,
+				this.r ? ("<color=" + GlobalHelper.redFretColor + ">") : text5,
+				this.y ? ("<color=" + GlobalHelper.yellowFretColor + ">") : text5,
+				this.b ? ("<color=" + GlobalHelper.blueFretColor + ">") : text5,
+				this.o ? ("<color=" + GlobalHelper.orangeFretColor + ">") : text5,
 				text4,
 				"                                   "
 			});
@@ -1105,7 +1105,7 @@ public abstract class BaseGuitarPlayer : BasePlayer
 				if (this.g)
 				{
 					utf16ValueStringBuilder.Append("<color=");
-					utf16ValueStringBuilder.Append(new ReadOnlySpan<char>(cUtilityClass.char_greenFretColor));
+					utf16ValueStringBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_greenFretColor));
 				}
 				else
 				{
@@ -1115,7 +1115,7 @@ public abstract class BaseGuitarPlayer : BasePlayer
 				if (this.r)
 				{
 					utf16ValueStringBuilder.Append("<color=");
-					utf16ValueStringBuilder.Append(new ReadOnlySpan<char>(cUtilityClass.char_redFretColor));
+					utf16ValueStringBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_redFretColor));
 				}
 				else
 				{
@@ -1125,7 +1125,7 @@ public abstract class BaseGuitarPlayer : BasePlayer
 				if (this.y)
 				{
 					utf16ValueStringBuilder.Append("<color=");
-					utf16ValueStringBuilder.Append(new ReadOnlySpan<char>(cUtilityClass.char_yellowFretColor));
+					utf16ValueStringBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_yellowFretColor));
 				}
 				else
 				{
@@ -1135,7 +1135,7 @@ public abstract class BaseGuitarPlayer : BasePlayer
 				if (this.b)
 				{
 					utf16ValueStringBuilder.Append("<color=");
-					utf16ValueStringBuilder.Append(new ReadOnlySpan<char>(cUtilityClass.char_blueFretColor));
+					utf16ValueStringBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_blueFretColor));
 				}
 				else
 				{
@@ -1145,7 +1145,7 @@ public abstract class BaseGuitarPlayer : BasePlayer
 				if (this.o)
 				{
 					utf16ValueStringBuilder.Append("<color=");
-					utf16ValueStringBuilder.Append(new ReadOnlySpan<char>(cUtilityClass.char_orangeFretColor));
+					utf16ValueStringBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_orangeFretColor));
 				}
 				else
 				{
@@ -1185,7 +1185,7 @@ public abstract class BaseGuitarPlayer : BasePlayer
 			if (this.g)
 			{
 				utf16ValueStringBuilder.Append("<color=");
-				utf16ValueStringBuilder.Append(new ReadOnlySpan<char>(cUtilityClass.char_greenFretColor));
+				utf16ValueStringBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_greenFretColor));
 			}
 			else
 			{
@@ -1195,7 +1195,7 @@ public abstract class BaseGuitarPlayer : BasePlayer
 			if (this.r)
 			{
 				utf16ValueStringBuilder.Append("<color=");
-				utf16ValueStringBuilder.Append(new ReadOnlySpan<char>(cUtilityClass.char_redFretColor));
+				utf16ValueStringBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_redFretColor));
 			}
 			else
 			{
@@ -1205,7 +1205,7 @@ public abstract class BaseGuitarPlayer : BasePlayer
 			if (this.y)
 			{
 				utf16ValueStringBuilder.Append("<color=");
-				utf16ValueStringBuilder.Append(new ReadOnlySpan<char>(cUtilityClass.char_yellowFretColor));
+				utf16ValueStringBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_yellowFretColor));
 			}
 			else
 			{
@@ -1215,7 +1215,7 @@ public abstract class BaseGuitarPlayer : BasePlayer
 			if (this.b)
 			{
 				utf16ValueStringBuilder.Append("<color=");
-				utf16ValueStringBuilder.Append(new ReadOnlySpan<char>(cUtilityClass.char_blueFretColor));
+				utf16ValueStringBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_blueFretColor));
 			}
 			else
 			{
@@ -1225,7 +1225,7 @@ public abstract class BaseGuitarPlayer : BasePlayer
 			if (this.o)
 			{
 				utf16ValueStringBuilder.Append("<color=");
-				utf16ValueStringBuilder.Append(new ReadOnlySpan<char>(cUtilityClass.char_orangeFretColor));
+				utf16ValueStringBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_orangeFretColor));
 			}
 			else
 			{

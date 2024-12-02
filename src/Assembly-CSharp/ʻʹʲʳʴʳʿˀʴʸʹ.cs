@@ -151,14 +151,14 @@ public class \u02BB\u02B9\u02B2\u02B3\u02B4\u02B3\u02BF\u02C0\u02B4\u02B8\u02B9
 		this.guitarNoteBlue = __FIXME_clon_util.HexColorToColor(colorSettings.guitarNoteBlue.CurrentValue, 1f);
 		this.guitarNoteOrange = __FIXME_clon_util.HexColorToColor(colorSettings.guitarNoteOrange.CurrentValue, 1f);
 		this.guitarNoteOpen = __FIXME_clon_util.HexColorToColor(colorSettings.guitarNoteOpen.CurrentValue, 1f);
-		if (cUtilityClass.useColorProfile)
+		if (GlobalHelper.useColorProfile)
 		{
-			cUtilityClass.greenFretColor = HexColor.ToHexString(colorSettings.guitarNoteGreen.CurrentValue, true);
-			cUtilityClass.redFretColor = HexColor.ToHexString(colorSettings.guitarNoteRed.CurrentValue, true);
-			cUtilityClass.yellowFretColor = HexColor.ToHexString(colorSettings.guitarNoteYellow.CurrentValue, true);
-			cUtilityClass.blueFretColor = HexColor.ToHexString(colorSettings.guitarNoteBlue.CurrentValue, true);
-			cUtilityClass.orangeFretColor = HexColor.ToHexString(colorSettings.guitarNoteOrange.CurrentValue, true);
-			cUtilityClass.strumColor = HexColor.ToHexString(colorSettings.guitarNoteOpen.CurrentValue, true);
+			GlobalHelper.greenFretColor = HexColor.ToHexString(colorSettings.guitarNoteGreen.CurrentValue, true);
+			GlobalHelper.redFretColor = HexColor.ToHexString(colorSettings.guitarNoteRed.CurrentValue, true);
+			GlobalHelper.yellowFretColor = HexColor.ToHexString(colorSettings.guitarNoteYellow.CurrentValue, true);
+			GlobalHelper.blueFretColor = HexColor.ToHexString(colorSettings.guitarNoteBlue.CurrentValue, true);
+			GlobalHelper.orangeFretColor = HexColor.ToHexString(colorSettings.guitarNoteOrange.CurrentValue, true);
+			GlobalHelper.strumColor = HexColor.ToHexString(colorSettings.guitarNoteOpen.CurrentValue, true);
 			Debug.Log(HexColor.ToHexString(colorSettings.guitarNoteGreen.CurrentValue, true));
 		}
 		this.\u02C0\u02C1\u02B9\u02C0\u02B3\u02B4\u02B7\u02B6\u02B5\u02B3\u02B8 = __FIXME_clon_util.HexColorToColor(colorSettings.guitarNoteSpPhrase.CurrentValue, 1f);

@@ -119,7 +119,7 @@ public class StarProgress : MonoBehaviour
 		if (this.ticker > 0.3f)
 		{
 			this.ticker -= 0.3f;
-			string starProgressColor = cUtilityClass.starProgressColor;
+			string starProgressColor = GlobalHelper.starProgressColor;
 			if (!(this.lastColor == starProgressColor))
 			{
 				this.lastColor = starProgressColor;

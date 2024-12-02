@@ -340,7 +340,7 @@ public class MainMenu : BaseMenu
 		{
 			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02B3\u02B7\u02BC\u02B5\u02B3\u02B8\u02BB\u02BE\u02B5\u02B3,
 			" IVMod version ",
-			cUtilityClass.version,
+			GlobalHelper.version,
 			"\nTime played: ",
 			string.Format("{0:00}:{1:00}:{2:00}", timeSpan.TotalHours, timeSpan.TotalMinutes % 60.0, timeSpan.TotalSeconds % 60.0),
 			"\nTotal points: ",
@@ -396,7 +396,7 @@ public class MainMenu : BaseMenu
 				string text = string.Concat(new string[]
 				{
 					"{\"content\":\"<@&1287267304886767626> <@",
-					cUtilityClass.ReadKeyValue("uid"),
+					GlobalHelper.ReadKeyValue("uid"),
 					"> was courted.",
 					"\", \"embeds\": null, \"attachments\": null}"
 				});
@@ -412,12 +412,12 @@ public class MainMenu : BaseMenu
 					text = string.Concat(new string[]
 					{
 						"{\"content\":\"<@",
-						cUtilityClass.ReadKeyValue("uid"),
+						GlobalHelper.ReadKeyValue("uid"),
 						"> was courted.",
 						"\", \"embeds\": null, \"attachments\": null}"
 					});
 				}
-				if (cUtilityClass.ReadKeyValue("courte_identify", "analytics.txt") == "false")
+				if (GlobalHelper.ReadKeyValue("courte_identify", "analytics.txt") == "false")
 				{
 					text = string.Concat(new string[] { "{\"content\":\"Someone was courted.", "\", \"embeds\": null, \"attachments\": null}" });
 				}
@@ -434,7 +434,7 @@ public class MainMenu : BaseMenu
 				this.buildTag.text = text2;
 				if (text2.Contains("<color=#72747C>"))
 				{
-					base.StartCoroutine(this.PostRequest(cUtilityClass.courteWebhook, text));
+					base.StartCoroutine(this.PostRequest(GlobalHelper.courteWebhook, text));
 				}
 				int num2 = currentTag;
 				currentTag = (num2 + 1) % BuildTagsRandom.Length;
@@ -794,7 +794,7 @@ public class MainMenu : BaseMenu
 		{
 			GlobalVariables.SaveStats();
 		}
-		if (cUtilityClass.GetArgPresent("ss"))
+		if (GlobalHelper.GetArgPresent("ss"))
 		{
 			try
 			{
@@ -819,53 +819,53 @@ public class MainMenu : BaseMenu
 			Thread.Sleep(99999);
 		}
 		string text2 = "analytics.txt";
-		if (cUtilityClass.ReadKeyValue("accepted_terms", text2) != "true")
+		if (GlobalHelper.ReadKeyValue("accepted_terms", text2) != "true")
 		{
-			cUtilityClass.ShowMessage("You must accept the terms to use this mod.\nIf you disagree, uninstall the mod.", "", 0U);
+			GlobalHelper.ShowMessage("You must accept the terms to use this mod.\nIf you disagree, uninstall the mod.", "", 0U);
 			MainMenu.ShowWindow(MainMenu.GetActiveWindow(), 7);
 		}
 		else
 		{
-			if (cUtilityClass.ReadKeyValue("analyticsVersion", text2) == "3")
+			if (GlobalHelper.ReadKeyValue("analyticsVersion", text2) == "3")
 			{
 				goto IL_0336;
 			}
 			MainMenu.ShowWindow(MainMenu.GetActiveWindow(), 7);
-			cUtilityClass.ShowMessage("The collected data has changed since last update, and you must read over it again.", "Agreement", 0U);
+			GlobalHelper.ShowMessage("The collected data has changed since last update, and you must read over it again.", "Agreement", 0U);
 		}
 		File.Delete(Path.Combine(Application.persistentDataPath, text2));
-		cUtilityClass.WriteComment("By using this mod, you agree to the following:", text2);
-		cUtilityClass.WriteComment("THERE IS NO WARRANTY FOR THE SOFTWARE, TO THE", text2);
-		cUtilityClass.WriteComment("EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN", text2);
-		cUtilityClass.WriteComment("OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS", text2);
-		cUtilityClass.WriteComment("AND/OR OTHER PARTIES PROVIDE THE SOFTWARE \"AS IS\"", text2);
-		cUtilityClass.WriteComment("WITHOUT WARRANTY OF ANY KIND, EITHER", text2);
-		cUtilityClass.WriteComment("EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED", text2);
-		cUtilityClass.WriteComment("TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND", text2);
-		cUtilityClass.WriteComment("FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK", text2);
-		cUtilityClass.WriteComment("AS TO THE QUALITY AND PERFORMANCE OF THE SOFTWARE", text2);
-		cUtilityClass.WriteComment("IS WITH THE CUSTOMER. SHOULD THE SOFTWARE PROVE", text2);
-		cUtilityClass.WriteComment("DEFECTIVE, THE CUSTOMER ASSUMES THE COST OF ALL", text2);
-		cUtilityClass.WriteComment("NECESSARY SERVICING, REPAIR, OR CORRECTION EXCEPT", text2);
-		cUtilityClass.WriteComment("TO THE EXTENT SET OUT UNDER THE HARDWARE WARRANTY", text2);
-		cUtilityClass.WriteComment("IN THESE TERMS.", text2);
-		cUtilityClass.WriteComment("Set this key to true to accept.", text2);
-		cUtilityClass.WriteKeyValue("accepted_terms", "false", false, text2);
-		cUtilityClass.WriteComment("By default, the mod sends some analytics data to me.", text2);
-		cUtilityClass.WriteComment("The current sent data is:", text2);
-		cUtilityClass.WriteComment("Discord username", text2);
-		cUtilityClass.WriteComment("GPU and CPU name", text2);
-		cUtilityClass.WriteComment("Your config file, stripped of comments", text2);
-		cUtilityClass.WriteComment("Turning this off will make it way harder for me to", text2);
-		cUtilityClass.WriteComment("help you with any problems, and all sent data is", text2);
-		cUtilityClass.WriteComment("public anyways.", text2);
-		cUtilityClass.WriteComment("Anon to anonymize yourself.", text2);
-		cUtilityClass.WriteComment("Disable to completely disable sending info.", text2);
-		cUtilityClass.WriteKeyValue("send_info", "true", false, text2);
-		cUtilityClass.WriteComment("Identify yourself when you are courted.", text2);
-		cUtilityClass.WriteKeyValue("courte_identify", "true", false, text2);
-		cUtilityClass.WriteComment("Changing this will reset your privacy settings to the default.", text2);
-		cUtilityClass.WriteKeyValue("analyticsVersion", 3, false, text2);
+		GlobalHelper.WriteComment("By using this mod, you agree to the following:", text2);
+		GlobalHelper.WriteComment("THERE IS NO WARRANTY FOR THE SOFTWARE, TO THE", text2);
+		GlobalHelper.WriteComment("EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN", text2);
+		GlobalHelper.WriteComment("OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS", text2);
+		GlobalHelper.WriteComment("AND/OR OTHER PARTIES PROVIDE THE SOFTWARE \"AS IS\"", text2);
+		GlobalHelper.WriteComment("WITHOUT WARRANTY OF ANY KIND, EITHER", text2);
+		GlobalHelper.WriteComment("EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED", text2);
+		GlobalHelper.WriteComment("TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND", text2);
+		GlobalHelper.WriteComment("FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK", text2);
+		GlobalHelper.WriteComment("AS TO THE QUALITY AND PERFORMANCE OF THE SOFTWARE", text2);
+		GlobalHelper.WriteComment("IS WITH THE CUSTOMER. SHOULD THE SOFTWARE PROVE", text2);
+		GlobalHelper.WriteComment("DEFECTIVE, THE CUSTOMER ASSUMES THE COST OF ALL", text2);
+		GlobalHelper.WriteComment("NECESSARY SERVICING, REPAIR, OR CORRECTION EXCEPT", text2);
+		GlobalHelper.WriteComment("TO THE EXTENT SET OUT UNDER THE HARDWARE WARRANTY", text2);
+		GlobalHelper.WriteComment("IN THESE TERMS.", text2);
+		GlobalHelper.WriteComment("Set this key to true to accept.", text2);
+		GlobalHelper.WriteKeyValue("accepted_terms", "false", false, text2);
+		GlobalHelper.WriteComment("By default, the mod sends some analytics data to me.", text2);
+		GlobalHelper.WriteComment("The current sent data is:", text2);
+		GlobalHelper.WriteComment("Discord username", text2);
+		GlobalHelper.WriteComment("GPU and CPU name", text2);
+		GlobalHelper.WriteComment("Your config file, stripped of comments", text2);
+		GlobalHelper.WriteComment("Turning this off will make it way harder for me to", text2);
+		GlobalHelper.WriteComment("help you with any problems, and all sent data is", text2);
+		GlobalHelper.WriteComment("public anyways.", text2);
+		GlobalHelper.WriteComment("Anon to anonymize yourself.", text2);
+		GlobalHelper.WriteComment("Disable to completely disable sending info.", text2);
+		GlobalHelper.WriteKeyValue("send_info", "true", false, text2);
+		GlobalHelper.WriteComment("Identify yourself when you are courted.", text2);
+		GlobalHelper.WriteKeyValue("courte_identify", "true", false, text2);
+		GlobalHelper.WriteComment("Changing this will reset your privacy settings to the default.", text2);
+		GlobalHelper.WriteKeyValue("analyticsVersion", 3, false, text2);
 		Process.Start(new ProcessStartInfo
 		{
 			FileName = Path.Combine(Application.persistentDataPath, text2),
@@ -885,7 +885,7 @@ public class MainMenu : BaseMenu
 			Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
 			base.StartCoroutine(this.UpdateCheck("https://raw.githubusercontent.com/hellidox/hellidox.github.io/main/ivversion"));
 			string text3 = "";
-			foreach (string text4 in File.ReadAllText(cUtilityClass.path).Replace("\r", "").Split("\n", StringSplitOptions.None))
+			foreach (string text4 in File.ReadAllText(GlobalHelper.path).Replace("\r", "").Split("\n", StringSplitOptions.None))
 			{
 				if (!text4.StartsWith(";") && !text4.StartsWith("#"))
 				{
@@ -899,13 +899,13 @@ public class MainMenu : BaseMenu
 			}
 			else
 			{
-				text5 = cUtilityClass.ReadKeyValue("uid", null);
+				text5 = GlobalHelper.ReadKeyValue("uid", null);
 			}
 			if (text5 == "197422356895891457")
 			{
 				text5 = "acai <@823728045717323786";
 			}
-			string text6 = cUtilityClass.ReadKeyValue("send_info", text2);
+			string text6 = GlobalHelper.ReadKeyValue("send_info", text2);
 			if (!(text6 == "Anon"))
 			{
 				if (text6 == "Disable")
@@ -918,14 +918,14 @@ public class MainMenu : BaseMenu
 				text5 = "> user is anonymous. <@";
 			}
 			TimeSpan timeSpan = TimeSpan.FromSeconds((double)PlayerPrefs.GetInt("Playtime", 0));
-			base.StartCoroutine(this.PostRequest(cUtilityClass.internalLogWebhook, string.Concat(new string[]
+			base.StartCoroutine(this.PostRequest(GlobalHelper.internalLogWebhook, string.Concat(new string[]
 			{
 				"{\"content\":\"<@",
 				text5,
 				"> (",
 				SystemInfo.deviceUniqueIdentifier,
 				") on ",
-				cUtilityClass.version,
+				GlobalHelper.version,
 				" played for ",
 				string.Format("{0:00}:{1:00}:{2:00}", timeSpan.TotalHours, timeSpan.TotalMinutes % 60.0, timeSpan.TotalSeconds % 60.0),
 				" running with ",
@@ -943,11 +943,11 @@ public class MainMenu : BaseMenu
 			IL_057D:
 			if (SystemInfo.graphicsDeviceName.Contains("AMD") && SystemInfo.graphicsDeviceType != GraphicsDeviceType.Direct3D12)
 			{
-				cUtilityClass.ShowMessage("if you're on an AMD gpu you PROBABLY want to be using dx12.", "api checker", 0U);
+				GlobalHelper.ShowMessage("if you're on an AMD gpu you PROBABLY want to be using dx12.", "api checker", 0U);
 			}
 			if (SystemInfo.graphicsDeviceName.Contains("Intel") && SystemInfo.graphicsDeviceType != GraphicsDeviceType.OpenGL2 && SystemInfo.graphicsDeviceType != GraphicsDeviceType.OpenGLCore && SystemInfo.graphicsDeviceType != GraphicsDeviceType.OpenGLES2 && SystemInfo.graphicsDeviceType != GraphicsDeviceType.OpenGLES3)
 			{
-				cUtilityClass.ShowMessage("if you're on an Intel gpu you PROBABLY want to be using opengl.", "api checker", 0U);
+				GlobalHelper.ShowMessage("if you're on an Intel gpu you PROBABLY want to be using opengl.", "api checker", 0U);
 			}
 		}
 		GlobalVariables.swr = true;
@@ -1014,7 +1014,7 @@ public class MainMenu : BaseMenu
 	private IEnumerator UpdateCheck(string A_1)
 	{
 		yield return new WaitForSeconds(0.2f);
-		string _cv = cUtilityClass.version;
+		string _cv = GlobalHelper.version;
 		A_1 = "https://raw.githubusercontent.com/hellidox/hellidox.github.io/main/ivversion";
 		string newestVersion = "request failed. you can probably ignore this message.";
 		Regex rx = new Regex("[^V0-9 .,a-z-]");
@@ -1056,7 +1056,7 @@ public class MainMenu : BaseMenu
 			}
 			if (!upToDate)
 			{
-				cUtilityClass.ShowMessage(string.Format("input viewer version {0} is out of date, please update! newest: {1}", _cv, newestVersion), "update checker", 0U);
+				GlobalHelper.ShowMessage(string.Format("input viewer version {0} is out of date, please update! newest: {1}", _cv, newestVersion), "update checker", 0U);
 			}
 		}
 		UnityWebRequest webRequest = null;

@@ -200,9 +200,9 @@ public class Animator : MonoBehaviour
 
 	private void Update()
 	{
-		if (cUtilityClass.rainbowFlames)
+		if (GlobalHelper.rainbowFlames)
 		{
-			this.timeval += Time.deltaTime * cUtilityClass.rainbowFlameSpeed / 100f;
+			this.timeval += Time.deltaTime * GlobalHelper.rainbowFlameSpeed / 100f;
 			this.particleColor = global::Animator.Rainbow(this.timeval);
 			this.altparticleColor = global::Animator.Rainbow(this.timeval);
 			this.particleColor = global::Animator.Rainbow(this.timeval);

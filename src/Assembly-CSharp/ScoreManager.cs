@@ -248,7 +248,7 @@ public class ScoreManager : MonoBehaviour
 		if (this.ticker > 0.66f)
 		{
 			this.ticker -= 0.66f;
-			Color color = __FIXME_clon_util.HexColorToColor(HexColor.FromHexString(cUtilityClass.scoreColor), 1f);
+			Color color = __FIXME_clon_util.HexColorToColor(HexColor.FromHexString(GlobalHelper.scoreColor), 1f);
 			if (color == Color.black)
 			{
 				color = Color.clear;
@@ -258,7 +258,7 @@ public class ScoreManager : MonoBehaviour
 			{
 				array[i].color = color;
 			}
-			color = __FIXME_clon_util.HexColorToColor(HexColor.FromHexString(cUtilityClass.noteStreakColor), 1f);
+			color = __FIXME_clon_util.HexColorToColor(HexColor.FromHexString(GlobalHelper.noteStreakColor), 1f);
 			if (color == Color.white)
 			{
 				color = this.comboOrigColor;

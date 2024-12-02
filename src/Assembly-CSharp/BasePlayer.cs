@@ -165,7 +165,7 @@ public abstract class BasePlayer : MonoBehaviour
 			}
 		}
 		this.playerNameTextBox.text = this.playerStuff.playerInfo.playerName.CurrentValueDisplay;
-		if (this.playerStuff.playerInfo.displayName || cUtilityClass.showJudgementsUnderFretboard || this.playerStuff.playerInfo.isRemotePlayer)
+		if (this.playerStuff.playerInfo.displayName || GlobalHelper.showJudgementsUnderFretboard || this.playerStuff.playerInfo.isRemotePlayer)
 		{
 			this.playerNameTextBox.gameObject.SetActive(true);
 		}
@@ -214,7 +214,7 @@ public abstract class BasePlayer : MonoBehaviour
 		}
 		if (!this.playerStuff.playerInfo.HasModChartModifier)
 		{
-			if (cUtilityClass.showBeatlines)
+			if (GlobalHelper.showBeatlines)
 			{
 				this.beatlines.enabled = true;
 				this.showBeatlines = true;
@@ -224,7 +224,7 @@ public abstract class BasePlayer : MonoBehaviour
 				this.beatlines.enabled = false;
 				this.showBeatlines = false;
 			}
-			if (cUtilityClass.showHighway)
+			if (GlobalHelper.showHighway)
 			{
 				this.highway.gameObject.SetActive(true);
 				this.showHighway = true;
@@ -234,7 +234,7 @@ public abstract class BasePlayer : MonoBehaviour
 				this.highway.gameObject.SetActive(false);
 				this.showHighway = false;
 			}
-			if (cUtilityClass.showHighwaySide)
+			if (GlobalHelper.showHighwaySide)
 			{
 				this.highwayObjects[0].SetActive(true);
 				this.highwayObjects[1].SetActive(true);
@@ -246,7 +246,7 @@ public abstract class BasePlayer : MonoBehaviour
 				this.highwayObjects[1].SetActive(false);
 				this.showHighwaySide = false;
 			}
-			if (cUtilityClass.showFretStrings)
+			if (GlobalHelper.showFretStrings)
 			{
 				this.showFretStrings = true;
 				this.neckController.ShowFretStrings();
@@ -256,7 +256,7 @@ public abstract class BasePlayer : MonoBehaviour
 				this.showFretStrings = false;
 				this.neckController.HideFretStrings();
 			}
-			if (cUtilityClass.showHPBar)
+			if (GlobalHelper.showHPBar)
 			{
 				this.healthContainer.gameObject.SetActive(true);
 				return;
@@ -612,9 +612,9 @@ public abstract class BasePlayer : MonoBehaviour
 			}
 			else
 			{
-				if (cUtilityClass.soundOnJudgeBreak)
+				if (GlobalHelper.soundOnJudgeBreak)
 				{
-					BassAudioManager.Instance.PlaySoundInternal(SoundID.FreestyleSnare, 0, 116.666664f * cUtilityClass.judgeBreakSoundVolume);
+					BassAudioManager.Instance.PlaySoundInternal(SoundID.FreestyleSnare, 0, 116.666664f * GlobalHelper.judgeBreakSoundVolume);
 				}
 				this.missFromWindow = false;
 			}
@@ -781,12 +781,12 @@ public abstract class BasePlayer : MonoBehaviour
 			BasePlayer.JudgementAndFloat judgementAndFloat = BasePlayer.CalculateJudgementAndScore(this.\u02BB\u02B3\u02B2\u02C0\u02B3\u02BC\u02B3\u02B5\u02BB\u02C0\u02B6);
 			if (judgementAndFloat.judgement != BasePlayer.Judgement.Miss)
 			{
-				if (judgementAndFloat.judgement > cUtilityClass.maximumImprecision)
+				if (judgementAndFloat.judgement > GlobalHelper.maximumImprecision)
 				{
 					this.missFromWindow = true;
 					this.\u02B6\u02B9\u02BC\u02C0\u02B6\u02BE\u02B4\u02BA\u02BC\u02BB\u02C1(false);
 				}
-				else if (judgementAndFloat.judgement == BasePlayer.Judgement.Early && cUtilityClass.breakComboOnEarly)
+				else if (judgementAndFloat.judgement == BasePlayer.Judgement.Early && GlobalHelper.breakComboOnEarly)
 				{
 					this.missFromWindow = true;
 					this.\u02B6\u02B9\u02BC\u02C0\u02B6\u02BE\u02B4\u02BA\u02BC\u02BB\u02C1(false);
@@ -820,7 +820,7 @@ public abstract class BasePlayer : MonoBehaviour
 		this.ticker += Time.deltaTime;
 		if (this.ticker > 0.67f && !this.playerStuff.playerInfo.HasModChartModifier)
 		{
-			if (cUtilityClass.showBeatlines)
+			if (GlobalHelper.showBeatlines)
 			{
 				this.beatlines.enabled = true;
 				this.showBeatlines = true;
@@ -830,7 +830,7 @@ public abstract class BasePlayer : MonoBehaviour
 				this.beatlines.enabled = false;
 				this.showBeatlines = false;
 			}
-			if (cUtilityClass.showHighway)
+			if (GlobalHelper.showHighway)
 			{
 				this.highway.gameObject.SetActive(true);
 				this.showHighway = true;
@@ -840,7 +840,7 @@ public abstract class BasePlayer : MonoBehaviour
 				this.highway.gameObject.SetActive(false);
 				this.showHighway = false;
 			}
-			if (cUtilityClass.showHighwaySide)
+			if (GlobalHelper.showHighwaySide)
 			{
 				this.highwayObjects[0].SetActive(true);
 				this.highwayObjects[1].SetActive(true);
@@ -852,7 +852,7 @@ public abstract class BasePlayer : MonoBehaviour
 				this.highwayObjects[1].SetActive(false);
 				this.showHighwaySide = false;
 			}
-			if (cUtilityClass.showFretStrings)
+			if (GlobalHelper.showFretStrings)
 			{
 				this.showFretStrings = true;
 				this.neckController.ShowFretStrings();
@@ -862,13 +862,13 @@ public abstract class BasePlayer : MonoBehaviour
 				this.showFretStrings = false;
 				this.neckController.HideFretStrings();
 			}
-			if (cUtilityClass.showHPBar)
+			if (GlobalHelper.showHPBar)
 			{
 				if (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02B8\u02B9\u02BA\u02BB\u02C1\u02BB\u02B9\u02BE\u02C1\u02B9)
 				{
 					this.healthContainer.gameObject.SetActive(true);
 				}
-				else if (cUtilityClass.hideHPOnFail)
+				else if (GlobalHelper.hideHPOnFail)
 				{
 					this.healthContainer.gameObject.SetActive(false);
 				}
@@ -1155,12 +1155,12 @@ public abstract class BasePlayer : MonoBehaviour
 
 	public static BasePlayer.JudgementAndFloat CalculateJudgementAndScore(float inaccuracy)
 	{
-		float[] array = cUtilityClass.judgeTimings(cUtilityClass.useJudgeLevel);
-		cUtilityClass.WeightSystem weightSystem = cUtilityClass.weightSystem;
+		float[] array = GlobalHelper.judgeTimings(GlobalHelper.useJudgeLevel);
+		GlobalHelper.WeightSystem weightSystem = GlobalHelper.weightSystem;
 		float[] array2;
-		if (weightSystem != cUtilityClass.WeightSystem.Custom)
+		if (weightSystem != GlobalHelper.WeightSystem.Custom)
 		{
-			if (weightSystem != cUtilityClass.WeightSystem.Etterna)
+			if (weightSystem != GlobalHelper.WeightSystem.Etterna)
 			{
 				array2 = new float[] { 1.1f, 1.1f, 1.081f, 0.72f, 0.28f, -0.55f, -1.1f, -0.7f };
 			}

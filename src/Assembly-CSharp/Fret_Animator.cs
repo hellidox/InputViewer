@@ -72,7 +72,7 @@ public class Fret_Animator : BaseFretAnimator
 
 	private void \u02C1\u02C1\u02B4\u02B6\u02BB\u02C1\u02B7\u02B5\u02BE\u02BE\u02B3()
 	{
-		if (cUtilityClass.strikelineFPSFix)
+		if (GlobalHelper.strikelineFPSFix)
 		{
 			return;
 		}
@@ -141,7 +141,7 @@ public class Fret_Animator : BaseFretAnimator
 				{
 					num = 2f;
 				}
-				this.\u02B3\u02BF\u02B9\u02BA\u02B5\u02B9\u02B7\u02BC\u02BC\u02B8\u02B8.y = this.\u02B3\u02BF\u02B9\u02BA\u02B5\u02B9\u02B7\u02BC\u02BC\u02B8\u02B8.y - 0.008333334f * cUtilityClass.strikelinePistonSpeed * this.\u02B7\u02BB\u02BB\u02C1\u02B6\u02B9\u02B8\u02B3\u02B9\u02B3\u02B8 * num;
+				this.\u02B3\u02BF\u02B9\u02BA\u02B5\u02B9\u02B7\u02BC\u02BC\u02B8\u02B8.y = this.\u02B3\u02BF\u02B9\u02BA\u02B5\u02B9\u02B7\u02BC\u02BC\u02B8\u02B8.y - 0.008333334f * GlobalHelper.strikelinePistonSpeed * this.\u02B7\u02BB\u02BB\u02C1\u02B6\u02B9\u02B8\u02B3\u02B9\u02B3\u02B8 * num;
 				return;
 			}
 		}

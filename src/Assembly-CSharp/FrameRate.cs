@@ -21,8 +21,8 @@ public class FrameRate : MonoBehaviour
 	{
 		this.startTime = (double)Time.realtimeSinceStartup;
 		BasePlayer.interval = 0.1f;
-		cUtilityClass.InvalidateCache();
-		this.rfi = cUtilityClass.renderFrameInterval;
+		GlobalHelper.InvalidateCache();
+		this.rfi = GlobalHelper.renderFrameInterval;
 		typeof(OnDemandRendering).GetField("m_RenderFrameInterval", BindingFlags.Static | BindingFlags.NonPublic).SetValue(null, this.rfi);
 		this.cullingmask = Camera.main.cullingMask;
 		this.clearflags = Camera.main.clearFlags;
@@ -32,10 +32,10 @@ public class FrameRate : MonoBehaviour
 		this.ticker = 2f;
 		GlobalVariables.misses = 0;
 		GC.Collect();
-		bool useJudgements = cUtilityClass.useJudgements;
+		bool useJudgements = GlobalHelper.useJudgements;
 		this.textDisplay = base.GetComponent<TextMeshProUGUI>();
 		this.timer1 = this.const1;
-		this.textDisplay.fontSize *= 0.7f * cUtilityClass.fontSize;
+		this.textDisplay.fontSize *= 0.7f * GlobalHelper.fontSize;
 		this.upperLeftTextBuilder = ZString.CreateStringBuilder();
 		this.underHighwayTextBuilder = ZString.CreateStringBuilder();
 	}
@@ -68,11 +68,11 @@ public class FrameRate : MonoBehaviour
 				this.ctime = null;
 				this.stime = null;
 				this.ticker -= 1f;
-				if (cUtilityClass.showClock)
+				if (GlobalHelper.showClock)
 				{
 					this.ctime = DateTime.Now.ToString("hh:mm:ss tt");
 				}
-				if (cUtilityClass.showSessionTimer)
+				if (GlobalHelper.showSessionTimer)
 				{
 					this.stime = TimeSpan.FromSeconds((double)((int)Time.realtimeSinceStartup) % TimeSpan.MaxValue.TotalSeconds).ToString("hh\\:mm\\:ss");
 				}
@@ -87,7 +87,7 @@ public class FrameRate : MonoBehaviour
 			}
 			if ((Time.frameCount & 255) > 0)
 			{
-				this.rr = 1f / (float)cUtilityClass.inputViewerHz;
+				this.rr = 1f / (float)GlobalHelper.inputViewerHz;
 			}
 			this.ptimer -= Time.deltaTime;
 			if (this.ptimer < 0f)
@@ -112,7 +112,7 @@ public class FrameRate : MonoBehaviour
 				float num = this.timer2 / (float)this.counter1;
 				this.best = 1f / this.best;
 				string text;
-				if (!cUtilityClass.showFPS)
+				if (!GlobalHelper.showFPS)
 				{
 					text = "\n";
 				}
@@ -152,9 +152,9 @@ public class FrameRate : MonoBehaviour
 			{
 				if (Input.GetKey(KeyCode.LeftControl))
 				{
-					cUtilityClass.InitializeConfig(true);
+					GlobalHelper.InitializeConfig(true);
 				}
-				cUtilityClass.InvalidateCache();
+				GlobalHelper.InvalidateCache();
 			}
 			if (Input.GetKey(KeyCode.F3))
 			{
@@ -166,41 +166,41 @@ public class FrameRate : MonoBehaviour
 				{
 					if (Input.GetKey(KeyCode.LeftShift))
 					{
-						cUtilityClass.rainbowSPBar = !cUtilityClass.rainbowSPBar;
+						GlobalHelper.rainbowSPBar = !GlobalHelper.rainbowSPBar;
 					}
 					else
 					{
-						cUtilityClass.rainbowFlames = !cUtilityClass.rainbowFlames;
+						GlobalHelper.rainbowFlames = !GlobalHelper.rainbowFlames;
 					}
 				}
 				if (Input.GetKey(KeyCode.LeftShift))
 				{
-					this.orig = cUtilityClass.rainbowSPBar.ToString();
+					this.orig = GlobalHelper.rainbowSPBar.ToString();
 				}
 				else
 				{
-					this.orig = cUtilityClass.rainbowFlames.ToString();
+					this.orig = GlobalHelper.rainbowFlames.ToString();
 				}
 			}
 			if (Input.GetKey(KeyCode.F9))
 			{
-				cUtilityClass.rainbowFlameSpeed *= 1f - 0.35f * Time.unscaledDeltaTime;
-				this.orig = cUtilityClass.rainbowFlameSpeed.ToString("F3");
+				GlobalHelper.rainbowFlameSpeed *= 1f - 0.35f * Time.unscaledDeltaTime;
+				this.orig = GlobalHelper.rainbowFlameSpeed.ToString("F3");
 			}
 			if (Input.GetKey(KeyCode.F10))
 			{
-				cUtilityClass.rainbowFlameSpeed *= 1f + 0.35f * Time.unscaledDeltaTime;
-				this.orig = cUtilityClass.rainbowFlameSpeed.ToString("F3");
+				GlobalHelper.rainbowFlameSpeed *= 1f + 0.35f * Time.unscaledDeltaTime;
+				this.orig = GlobalHelper.rainbowFlameSpeed.ToString("F3");
 			}
 			if (Input.GetKeyDown(KeyCode.F11))
 			{
 				this.textDisplay.fontSize *= 0.95f;
-				cUtilityClass.fontSize *= 0.95f;
+				GlobalHelper.fontSize *= 0.95f;
 			}
 			if (Input.GetKeyDown(KeyCode.F12))
 			{
 				this.textDisplay.fontSize *= 1.05f;
-				cUtilityClass.fontSize *= 1.05f;
+				GlobalHelper.fontSize *= 1.05f;
 			}
 			if (this.instance != null && this.updateInputs)
 			{
@@ -222,22 +222,22 @@ public class FrameRate : MonoBehaviour
 				this.upperLeftTextBuilder.AppendFormat<int>(" {0:000}%<color=#ffffffcc>\n", GlobalVariables.progress);
 				if (this._legacyBinds)
 				{
-					foreach (float num2 in cUtilityClass.judgeTimings(cUtilityClass.useJudgeLevel))
+					foreach (float num2 in GlobalHelper.judgeTimings(GlobalHelper.useJudgeLevel))
 					{
 						this.upperLeftTextBuilder.AppendFormat<float>("{0}ms\n", Mathf.Round(num2 * 2000f));
 					}
 				}
-				if (cUtilityClass.showClock)
+				if (GlobalHelper.showClock)
 				{
 					this.upperLeftTextBuilder.Append(this.ctime);
 				}
 				this.upperLeftTextBuilder.Append("\n");
-				if (cUtilityClass.showSessionTimer)
+				if (GlobalHelper.showSessionTimer)
 				{
 					this.upperLeftTextBuilder.Append(this.stime);
 				}
 				this.upperLeftTextBuilder.Append("\n");
-				if (cUtilityClass.showOverstrums)
+				if (GlobalHelper.showOverstrums)
 				{
 					if (this.ostime > 0f)
 					{
@@ -262,7 +262,7 @@ public class FrameRate : MonoBehaviour
 				{
 					this.upperLeftTextBuilder.Append("\n<color=#ffffffcc>");
 				}
-				if (cUtilityClass.showMissCounter)
+				if (GlobalHelper.showMissCounter)
 				{
 					if (this.gtime > 0f)
 					{
@@ -287,7 +287,7 @@ public class FrameRate : MonoBehaviour
 				{
 					this.upperLeftTextBuilder.Append("\n<color=#ffffffcc>");
 				}
-				if (cUtilityClass.showMissCounter)
+				if (GlobalHelper.showMissCounter)
 				{
 					if (this.gtime > 0f)
 					{
@@ -312,7 +312,7 @@ public class FrameRate : MonoBehaviour
 				{
 					this.upperLeftTextBuilder.Append("\n");
 				}
-				if (cUtilityClass.showGhosts)
+				if (GlobalHelper.showGhosts)
 				{
 					if (this.ghosts > 0)
 					{
@@ -333,9 +333,9 @@ public class FrameRate : MonoBehaviour
 				{
 					this.upperLeftTextBuilder.Append("\n");
 				}
-				if (cUtilityClass.useJudgements && cUtilityClass.showJudgementsUnderFretboard)
+				if (GlobalHelper.useJudgements && GlobalHelper.showJudgementsUnderFretboard)
 				{
-					if (cUtilityClass.showAvgInaccuracy)
+					if (GlobalHelper.showAvgInaccuracy)
 					{
 						this.underHighwayTextBuilder.AppendFormat<float, float>("</i>{0:00.00}% - {1:00.00}ms\n", this.instance.precision.Accuracy * 100f, this.instance.precision.avgInaccuracy * 1000f);
 						this.underHighwayTextBuilder.AppendFormat<float>("{0:00.00}", BasePlayer.lastOffset * 1000f);
@@ -371,9 +371,9 @@ public class FrameRate : MonoBehaviour
 					this.instance.playerNameTextBox.SetCharArray(this.underHighwayTextBuilder.AsArraySegment().ToArray<char>());
 					this.underHighwayTextBuilder.Clear();
 				}
-				if (cUtilityClass.showInputViewer)
+				if (GlobalHelper.showInputViewer)
 				{
-					this.upperLeftTextBuilder.AppendFormat<int>("<i><indent={0}em>", cUtilityClass.inputViewerIndent);
+					this.upperLeftTextBuilder.AppendFormat<int>("<i><indent={0}em>", GlobalHelper.inputViewerIndent);
 					if (minputs.su && minputs.sd)
 					{
 						this.upperLeftTextBuilder.Append("<color=#cc11cc>██");
@@ -394,7 +394,7 @@ public class FrameRate : MonoBehaviour
 					if (minputs.g || this.lastg < minputs.gcount)
 					{
 						this.upperLeftTextBuilder.Append("<color=");
-						this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(cUtilityClass.char_greenFretColor));
+						this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_greenFretColor));
 					}
 					else
 					{
@@ -404,7 +404,7 @@ public class FrameRate : MonoBehaviour
 					if (minputs.r || this.lastr < minputs.rcount)
 					{
 						this.upperLeftTextBuilder.Append("<color=");
-						this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(cUtilityClass.char_redFretColor));
+						this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_redFretColor));
 					}
 					else
 					{
@@ -414,7 +414,7 @@ public class FrameRate : MonoBehaviour
 					if (minputs.y || this.lasty < minputs.ycount)
 					{
 						this.upperLeftTextBuilder.Append("<color=");
-						this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(cUtilityClass.char_yellowFretColor));
+						this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_yellowFretColor));
 					}
 					else
 					{
@@ -424,7 +424,7 @@ public class FrameRate : MonoBehaviour
 					if (minputs.b || this.lastb < minputs.bcount)
 					{
 						this.upperLeftTextBuilder.Append("<color=");
-						this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(cUtilityClass.char_blueFretColor));
+						this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_blueFretColor));
 					}
 					else
 					{
@@ -434,7 +434,7 @@ public class FrameRate : MonoBehaviour
 					if (minputs.o || this.lasto < minputs.ocount)
 					{
 						this.upperLeftTextBuilder.Append("<color=");
-						this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(cUtilityClass.char_orangeFretColor));
+						this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_orangeFretColor));
 					}
 					else
 					{
@@ -446,17 +446,17 @@ public class FrameRate : MonoBehaviour
 					this.lastb = minputs.bcount;
 					this.lasto = minputs.ocount;
 					this.upperLeftTextBuilder.Append(">██</i></indent>\n<color=");
-					this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(cUtilityClass.char_greenFretColor));
+					this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_greenFretColor));
 					this.upperLeftTextBuilder.AppendFormat<int, float>(">{1:0.000} - {0:00000}\n<color=", minputs.gcount, minputs.gptime);
-					this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(cUtilityClass.char_redFretColor));
+					this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_redFretColor));
 					this.upperLeftTextBuilder.AppendFormat<int, float>(">{1:0.000} - {0:00000}\n<color=", minputs.rcount, minputs.rptime);
-					this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(cUtilityClass.char_yellowFretColor));
+					this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_yellowFretColor));
 					this.upperLeftTextBuilder.AppendFormat<int, float>(">{1:0.000} - {0:00000}\n<color=", minputs.ycount, minputs.yptime);
-					this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(cUtilityClass.char_blueFretColor));
+					this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_blueFretColor));
 					this.upperLeftTextBuilder.AppendFormat<int, float>(">{1:0.000} - {0:00000}\n<color=", minputs.bcount, minputs.bptime);
-					this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(cUtilityClass.char_orangeFretColor));
+					this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_orangeFretColor));
 					this.upperLeftTextBuilder.AppendFormat<int, float>(">{1:0.000} - {0:00000}\n<color=", minputs.ocount, minputs.optime);
-					this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(cUtilityClass.char_strumColor));
+					this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_strumColor));
 					this.upperLeftTextBuilder.AppendFormat<float, float>(">{0:0.000} - {1:0.000}\n", minputs.sutime, minputs.sdtime);
 					this.upperLeftTextBuilder.AppendFormat<int, int>("{0:00000} - {1:00000}", minputs.sucount, minputs.sdcount);
 				}
@@ -511,18 +511,18 @@ public class FrameRate : MonoBehaviour
 				if (GlobalVariables.deafened)
 				{
 					GlobalVariables.deafened = false;
-					cUtilityClass.ExecuteVBS("CreateObject(\"WScript.Shell\").SendKeys(\"{SCROLLLOCK}\")", "deafen");
+					GlobalHelper.ExecuteVBS("CreateObject(\"WScript.Shell\").SendKeys(\"{SCROLLLOCK}\")", "deafen");
 				}
 			}
-			if (this.misses == 0 && this.os == 0 && this.combo > 0 && !GlobalVariables.deafened && cUtilityClass.deafenAtPercentage != -1 && GlobalVariables.progress >= cUtilityClass.deafenAtPercentage && GlobalVariables.progress != 100)
+			if (this.misses == 0 && this.os == 0 && this.combo > 0 && !GlobalVariables.deafened && GlobalHelper.deafenAtPercentage != -1 && GlobalVariables.progress >= GlobalHelper.deafenAtPercentage && GlobalVariables.progress != 100)
 			{
 				GlobalVariables.deafened = true;
-				cUtilityClass.ExecuteVBS("CreateObject(\"WScript.Shell\").SendKeys(\"{SCROLLLOCK}\")", "deafen");
+				GlobalHelper.ExecuteVBS("CreateObject(\"WScript.Shell\").SendKeys(\"{SCROLLLOCK}\")", "deafen");
 			}
 			if (GlobalVariables.progress == 100 && GlobalVariables.deafened)
 			{
 				GlobalVariables.deafened = false;
-				cUtilityClass.ExecuteVBS("CreateObject(\"WScript.Shell\").SendKeys(\"{SCROLLLOCK}\")", "deafen");
+				GlobalHelper.ExecuteVBS("CreateObject(\"WScript.Shell\").SendKeys(\"{SCROLLLOCK}\")", "deafen");
 			}
 			if (GlobalVariables.hasReset)
 			{
@@ -553,7 +553,7 @@ public class FrameRate : MonoBehaviour
 			Debug.Log(num3);
 			return;
 		}
-		if (cUtilityClass.useJudgements)
+		if (GlobalHelper.useJudgements)
 		{
 			BaseGuitarPlayer.instance.precision.Clear();
 			BaseGuitarPlayer.instance.playerNameTextBox.fontSize *= 0.315f;
