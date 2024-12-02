@@ -1,10 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
-// Token: 0x0200003B RID: 59
 public static class \u02B5\u02BE\u02B4\u02B2\u02B7\u02C0\u02BD\u02B8\u02B4\u02BB\u02BD
 {
-	// Token: 0x0600022C RID: 556 RVA: 0x00023EDC File Offset: 0x000220DC
 	public static double \u02B7\u02C0\u02BE\u02B8\u02B6\u02B8\u02B7\u02B8\u02BB\u02B2\u02C1(this List<\u02BD\u02BC\u02C0\u02BE\u02B2\u02BB\u02C0\u02B5\u02B5\u02BA\u02C1> \u02B8\u02C1\u02B7\u02B6\u02C0\u02BD\u02BD\u02B2\u02B6\u02BA\u02B9)
 	{
 		double num = 0.0;
@@ -25,7 +23,6 @@ public static class \u02B5\u02BE\u02B4\u02B2\u02B7\u02C0\u02BD\u02B8\u02B4\u02BB
 		return num / (double)num2;
 	}
 
-	// Token: 0x0600022D RID: 557 RVA: 0x00023F6C File Offset: 0x0002216C
 	public static double \u02B6\u02B3\u02BD\u02B3\u02B5\u02B4\u02B6\u02B3\u02B6\u02C1\u02BB(this List<\u02BD\u02BC\u02C0\u02BE\u02B2\u02BB\u02C0\u02B5\u02B5\u02BA\u02C1> \u02B8\u02C1\u02B7\u02B6\u02C0\u02BD\u02BD\u02B2\u02B6\u02BA\u02B9, double \u02B8\u02B4\u02BB\u02B6\u02B4\u02BB\u02BE\u02BD\u02B8\u02B8\u02BB)
 	{
 		double num = 0.0;
@@ -46,7 +43,6 @@ public static class \u02B5\u02BE\u02B4\u02B2\u02B7\u02C0\u02BD\u02B8\u02B4\u02BB
 		return Math.Sqrt(num / (double)(num2 - 1));
 	}
 
-	// Token: 0x0600022E RID: 558 RVA: 0x00024008 File Offset: 0x00022208
 	public static double \u02BE\u02BE\u02B6\u02B5\u02B6\u02C0\u02B6\u02B2\u02B8\u02B5\u02B4(this List<\u02BD\u02BC\u02C0\u02BE\u02B2\u02BB\u02C0\u02B5\u02B5\u02BA\u02C1> \u02B8\u02C1\u02B7\u02B6\u02C0\u02BD\u02BD\u02B2\u02B6\u02BA\u02B9)
 	{
 		double num = \u02B8\u02C1\u02B7\u02B6\u02C0\u02BD\u02BD\u02B2\u02B6\u02BA\u02B9.\u02B7\u02C0\u02BE\u02B8\u02B6\u02B8\u02B7\u02B8\u02BB\u02B2\u02C1();

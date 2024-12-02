@@ -1,21 +1,18 @@
-﻿using System;
+using System;
 using System.Collections;
 using StrikeCore;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x020000F1 RID: 241
 internal class ServerListMenu : BaseMenu
 {
-	// Token: 0x06000965 RID: 2405 RVA: 0x0000A828 File Offset: 0x00008A28
 	[\u02B2\u02B6\u02B4\u02B9\u02BF\u02C0\u02BA\u02BD\u02C0\u02B3\u02BD]
 	public void SortPassword()
 	{
 		this.\u02B3\u02B4\u02B2\u02BF\u02B7\u02BF\u02C1\u02B9\u02BF\u02B9\u02BD(\u02B8\u02B3\u02BD\u02BF\u02BB\u02B8\u02B8\u02C0\u02B7\u02B9\u02B2.Password, new Comparison<\u02BC\u02BB\u02B5\u02B7\u02BC\u02B6\u02B4\u02B6\u02B2\u02BA\u02B9>(ServerListMenu.<>c.<>9.\u02B2\u02BA\u02B6\u02BB\u02B2\u02BD\u02B3\u02BC\u02BB\u02BF\u02BF));
 	}
 
-	// Token: 0x06000967 RID: 2407 RVA: 0x0000A88B File Offset: 0x00008A8B
 	public override void \u02B5\u02BF\u02B2\u02B4\u02BB\u02B5\u02B9\u02B4\u02BC\u02BB\u02C1()
 	{
 		if (this.\u02B4\u02BF\u02B7\u02B6\u02BD\u02BF\u02C0\u02BD\u02B4\u02B6\u02B4 != \u02B8\u02B3\u02BD\u02BF\u02BB\u02B8\u02B8\u02C0\u02B7\u02B9\u02B2.None)
@@ -26,7 +23,6 @@ internal class ServerListMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x06000968 RID: 2408 RVA: 0x0000A8B0 File Offset: 0x00008AB0
 	public override void \u02BA\u02BC\u02C1\u02BE\u02B6\u02B4\u02B9\u02B2\u02B3\u02BD\u02B4()
 	{
 		if (!this.\u02B6\u02BF\u02B6\u02C1\u02B4\u02B9\u02BA\u02B9\u02B2\u02C1\u02C0)
@@ -35,27 +31,23 @@ internal class ServerListMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x06000969 RID: 2409 RVA: 0x0000A8C0 File Offset: 0x00008AC0
 	[\u02B2\u02B6\u02B4\u02B9\u02BF\u02C0\u02BA\u02BD\u02C0\u02B3\u02BD]
 	public void SortGameMode()
 	{
 		this.\u02B3\u02B4\u02B2\u02BF\u02B7\u02BF\u02C1\u02B9\u02BF\u02B9\u02BD(\u02B8\u02B3\u02BD\u02BF\u02BB\u02B8\u02B8\u02C0\u02B7\u02B9\u02B2.GameMode, new Comparison<\u02BC\u02BB\u02B5\u02B7\u02BC\u02B6\u02B4\u02B6\u02B2\u02BA\u02B9>(ServerListMenu.<>c.<>9.\u02BD\u02B8\u02BB\u02B2\u02B9\u02B6\u02B7\u02BC\u02B8\u02B2\u02B6));
 	}
 
-	// Token: 0x0600096A RID: 2410 RVA: 0x00008D52 File Offset: 0x00006F52
 	public void \u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD()
 	{
 		base.gameObject.SetActive(true);
 	}
 
-	// Token: 0x0600096B RID: 2411 RVA: 0x0000A8E8 File Offset: 0x00008AE8
 	[\u02B2\u02B6\u02B4\u02B9\u02BF\u02C0\u02BA\u02BD\u02C0\u02B3\u02BD]
 	public void SortJoinable()
 	{
 		this.\u02B3\u02B4\u02B2\u02BF\u02B7\u02BF\u02C1\u02B9\u02BF\u02B9\u02BD(\u02B8\u02B3\u02BD\u02BF\u02BB\u02B8\u02B8\u02C0\u02B7\u02B9\u02B2.Joinable, new Comparison<\u02BC\u02BB\u02B5\u02B7\u02BC\u02B6\u02B4\u02B6\u02B2\u02BA\u02B9>(ServerListMenu.<>c.<>9.\u02B2\u02BF\u02BC\u02B2\u02BE\u02B3\u02B3\u02BB\u02BE\u02B9\u02B7));
 	}
 
-	// Token: 0x0600096C RID: 2412 RVA: 0x00052D58 File Offset: 0x00050F58
 	private void \u02B8\u02B8\u02C1\u02BD\u02BC\u02B3\u02C0\u02B8\u02BD\u02B5\u02BC()
 	{
 		this.\u02BF\u02B4\u02B5\u02B8\u02BC\u02B6\u02BB\u02C1\u02B6\u02B7\u02BC = this.\u02C1\u02BD\u02BC\u02BC\u02B2\u02B9\u02C1\u02BC\u02B7\u02B6\u02BA.\u02B9\u02BC\u02BD\u02C0\u02BA\u02B7\u02B7\u02B6\u02B3\u02BB\u02BC.Count;
@@ -65,7 +57,6 @@ internal class ServerListMenu : BaseMenu
 		this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 	}
 
-	// Token: 0x0600096D RID: 2413 RVA: 0x00052DCC File Offset: 0x00050FCC
 	private \u02B8\u02B3\u02BD\u02BF\u02BB\u02B8\u02B8\u02C0\u02B7\u02B9\u02B2 \u02BC\u02BC\u02BA\u02B8\u02B6\u02BF\u02B5\u02B9\u02B8\u02C0\u02C1(\u02B8\u02B3\u02BD\u02BF\u02BB\u02B8\u02B8\u02C0\u02B7\u02B9\u02B2 \u02B2\u02BD\u02B3\u02BF\u02B6\u02BB\u02BD\u02B2\u02C0\u02BF\u02B9)
 	{
 		int num = (int)(\u02B2\u02BD\u02B3\u02BF\u02B6\u02BB\u02BD\u02B2\u02C0\u02BF\u02B9 + 1);
@@ -76,7 +67,6 @@ internal class ServerListMenu : BaseMenu
 		return (\u02B8\u02B3\u02BD\u02BF\u02BB\u02B8\u02B8\u02C0\u02B7\u02B9\u02B2)num;
 	}
 
-	// Token: 0x0600096E RID: 2414 RVA: 0x0000A910 File Offset: 0x00008B10
 	protected override void OnDisable()
 	{
 		base.OnDisable();
@@ -88,14 +78,12 @@ internal class ServerListMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x0600096F RID: 2415 RVA: 0x0000A93E File Offset: 0x00008B3E
 	[\u02B2\u02B6\u02B4\u02B9\u02BF\u02C0\u02BA\u02BD\u02C0\u02B3\u02BD]
 	public void SortName()
 	{
 		this.\u02B3\u02B4\u02B2\u02BF\u02B7\u02BF\u02C1\u02B9\u02BF\u02B9\u02BD(\u02B8\u02B3\u02BD\u02BF\u02BB\u02B8\u02B8\u02C0\u02B7\u02B9\u02B2.Name, new Comparison<\u02BC\u02BB\u02B5\u02B7\u02BC\u02B6\u02B4\u02B6\u02B2\u02BA\u02B9>(ServerListMenu.<>c.<>9.\u02B3\u02B9\u02B3\u02B6\u02BE\u02BE\u02C0\u02B9\u02BF\u02B7\u02C1));
 	}
 
-	// Token: 0x06000970 RID: 2416 RVA: 0x00052DE8 File Offset: 0x00050FE8
 	private void \u02B3\u02B2\u02BD\u02B4\u02B9\u02B2\u02C1\u02BA\u02B8\u02BF\u02B2(\u02B8\u02B3\u02BD\u02BF\u02BB\u02B8\u02B8\u02C0\u02B7\u02B9\u02B2 \u02B2\u02BD\u02B3\u02BF\u02B6\u02BB\u02BD\u02B2\u02C0\u02BF\u02B9)
 	{
 		switch (\u02B2\u02BD\u02B3\u02BF\u02B6\u02BB\u02BD\u02B2\u02C0\u02BF\u02B9)
@@ -123,7 +111,6 @@ internal class ServerListMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x06000971 RID: 2417 RVA: 0x0000A8B0 File Offset: 0x00008AB0
 	public virtual void \u02BD\u02B4\u02BC\u02B5\u02BD\u02B9\u02B3\u02B6\u02B8\u02BA\u02B8()
 	{
 		if (!this.\u02B6\u02BF\u02B6\u02C1\u02B4\u02B9\u02BA\u02B9\u02B2\u02C1\u02C0)
@@ -132,7 +119,6 @@ internal class ServerListMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x06000972 RID: 2418 RVA: 0x0000A966 File Offset: 0x00008B66
 	public override void \u02B8\u02BF\u02B4\u02B2\u02BE\u02B5\u02BC\u02B2\u02B5\u02BD\u02B8()
 	{
 		if (this.\u02B6\u02B2\u02B5\u02B5\u02B3\u02B9\u02B9\u02BE\u02BC\u02BE\u02B9)
@@ -143,13 +129,11 @@ internal class ServerListMenu : BaseMenu
 		this.\u02B3\u02B2\u02BD\u02B4\u02B9\u02B2\u02C1\u02BA\u02B8\u02BF\u02B2(this.\u02BC\u02BC\u02BA\u02B8\u02B6\u02BF\u02B5\u02B9\u02B8\u02C0\u02C1(this.\u02B4\u02BF\u02B7\u02B6\u02BD\u02BF\u02C0\u02BD\u02B4\u02B6\u02B4));
 	}
 
-	// Token: 0x06000973 RID: 2419 RVA: 0x0000A98A File Offset: 0x00008B8A
 	public void \u02C0\u02BC\u02BA\u02BD\u02BC\u02B7\u02C1\u02BC\u02BE\u02B4\u02B4()
 	{
 		this.\u02B3\u02B4\u02B2\u02BF\u02B7\u02BF\u02C1\u02B9\u02BF\u02B9\u02BD((\u02B8\u02B3\u02BD\u02BF\u02BB\u02B8\u02B8\u02C0\u02B7\u02B9\u02B2)7, new Comparison<\u02BC\u02BB\u02B5\u02B7\u02BC\u02B6\u02B4\u02B6\u02B2\u02BA\u02B9>(ServerListMenu.<>c.<>9.\u02B2\u02BA\u02B6\u02BB\u02B2\u02BD\u02B3\u02BC\u02BB\u02BF\u02BF));
 	}
 
-	// Token: 0x06000974 RID: 2420 RVA: 0x00052E40 File Offset: 0x00051040
 	public void \u02B7\u02C0\u02B5\u02B2\u02BD\u02B9\u02BB\u02B9\u02BF\u02B8\u02B3(\u02B8\u02B3\u02BD\u02BF\u02BB\u02B8\u02B8\u02C0\u02B7\u02B9\u02B2 \u02B2\u02BD\u02B3\u02BF\u02B6\u02BB\u02BD\u02B2\u02C0\u02BF\u02B9, bool \u02BA\u02BD\u02B2\u02C1\u02BD\u02BA\u02BB\u02B2\u02C0\u02BD\u02BC)
 	{
 		if (\u02B2\u02BD\u02B3\u02BF\u02B6\u02BB\u02BD\u02B2\u02C0\u02BF\u02B9 == \u02B8\u02B3\u02BD\u02BF\u02BB\u02B8\u02B8\u02C0\u02B7\u02B9\u02B2.None)
@@ -166,7 +150,6 @@ internal class ServerListMenu : BaseMenu
 		gameObject.transform.rotation = this.\u02BA\u02B8\u02C1\u02BC\u02C1\u02B5\u02BF\u02B8\u02B6\u02B5\u02B5;
 	}
 
-	// Token: 0x06000975 RID: 2421 RVA: 0x0000A9B2 File Offset: 0x00008BB2
 	private IEnumerator \u02BC\u02BB\u02B8\u02B4\u02B2\u02B8\u02B2\u02BE\u02B5\u02B9\u02B4()
 	{
 		this.\u02B6\u02BF\u02B6\u02C1\u02B4\u02B9\u02BA\u02B9\u02B2\u02C1\u02C0 = true;
@@ -194,7 +177,6 @@ internal class ServerListMenu : BaseMenu
 		yield break;
 	}
 
-	// Token: 0x06000976 RID: 2422 RVA: 0x00052E94 File Offset: 0x00051094
 	protected override void OnEnable()
 	{
 		this.\u02C1\u02BD\u02BC\u02BC\u02B2\u02B9\u02C1\u02BC\u02B7\u02B6\u02BA = new \u02B7\u02B8\u02B4\u02B3\u02BB\u02C1\u02BE\u02C0\u02BE\u02B3\u02BD();
@@ -206,7 +188,6 @@ internal class ServerListMenu : BaseMenu
 		this.Reset();
 	}
 
-	// Token: 0x06000977 RID: 2423 RVA: 0x00052F0C File Offset: 0x0005110C
 	private void \u02BB\u02BC\u02BA\u02B6\u02BB\u02B8\u02C0\u02BD\u02C0\u02B6\u02B6()
 	{
 		this.\u02BF\u02B4\u02B5\u02B8\u02BC\u02B6\u02BB\u02C1\u02B6\u02B7\u02BC = this.\u02C1\u02BD\u02BC\u02BC\u02B2\u02B9\u02C1\u02BC\u02B7\u02B6\u02BA.\u02B9\u02BC\u02BD\u02C0\u02BA\u02B7\u02B7\u02B6\u02B3\u02BB\u02BC.Count;
@@ -216,7 +197,6 @@ internal class ServerListMenu : BaseMenu
 		this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 	}
 
-	// Token: 0x06000978 RID: 2424 RVA: 0x0000A966 File Offset: 0x00008B66
 	public virtual void \u02B5\u02BC\u02C0\u02C1\u02BC\u02B6\u02BC\u02BD\u02B9\u02B8\u02B2()
 	{
 		if (this.\u02B6\u02B2\u02B5\u02B5\u02B3\u02B9\u02B9\u02BE\u02BC\u02BE\u02B9)
@@ -227,7 +207,6 @@ internal class ServerListMenu : BaseMenu
 		this.\u02B3\u02B2\u02BD\u02B4\u02B9\u02B2\u02C1\u02BA\u02B8\u02BF\u02B2(this.\u02BC\u02BC\u02BA\u02B8\u02B6\u02BF\u02B5\u02B9\u02B8\u02C0\u02C1(this.\u02B4\u02BF\u02B7\u02B6\u02BD\u02BF\u02C0\u02BD\u02B4\u02B6\u02B4));
 	}
 
-	// Token: 0x06000979 RID: 2425 RVA: 0x0000A9C1 File Offset: 0x00008BC1
 	public virtual void \u02BB\u02BC\u02C0\u02BB\u02BB\u02C1\u02BC\u02B8\u02B6\u02BD\u02BA()
 	{
 		if (this.\u02B4\u02BF\u02B7\u02B6\u02BD\u02BF\u02C0\u02BD\u02B4\u02B6\u02B4 != \u02B8\u02B3\u02BD\u02BF\u02BB\u02B8\u02B8\u02C0\u02B7\u02B9\u02B2.None)
@@ -238,7 +217,6 @@ internal class ServerListMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x0600097A RID: 2426 RVA: 0x00052F80 File Offset: 0x00051180
 	private void Reset()
 	{
 		this.\u02BF\u02B4\u02B5\u02B8\u02BC\u02B6\u02BB\u02C1\u02B6\u02B7\u02BC = 0;
@@ -260,7 +238,6 @@ internal class ServerListMenu : BaseMenu
 		this.\u02C1\u02BD\u02BC\u02C0\u02B3\u02B9\u02B6\u02B9\u02B7\u02BE\u02BB = base.StartCoroutine(this.\u02B5\u02C0\u02B3\u02BA\u02B9\u02C1\u02B8\u02B5\u02B4\u02C1\u02BA());
 	}
 
-	// Token: 0x0600097B RID: 2427 RVA: 0x00053008 File Offset: 0x00051208
 	public void \u02B9\u02BE\u02BF\u02C1\u02BE\u02BC\u02B3\u02C0\u02B8\u02B4\u02B7(\u02B8\u02B3\u02BD\u02BF\u02BB\u02B8\u02B8\u02C0\u02B7\u02B9\u02B2 \u02B2\u02BD\u02B3\u02BF\u02B6\u02BB\u02BD\u02B2\u02C0\u02BF\u02B9, bool \u02BA\u02BD\u02B2\u02C1\u02BD\u02BA\u02BB\u02B2\u02C0\u02BD\u02BC)
 	{
 		if (\u02B2\u02BD\u02B3\u02BF\u02B6\u02BB\u02BD\u02B2\u02C0\u02BF\u02B9 == \u02B8\u02B3\u02BD\u02BF\u02BB\u02B8\u02B8\u02C0\u02B7\u02B9\u02B2.None)
@@ -277,20 +254,17 @@ internal class ServerListMenu : BaseMenu
 		gameObject.transform.rotation = this.\u02BA\u02B8\u02C1\u02BC\u02C1\u02B5\u02BF\u02B8\u02B6\u02B5\u02B5;
 	}
 
-	// Token: 0x0600097C RID: 2428 RVA: 0x0000A9E6 File Offset: 0x00008BE6
 	public virtual void \u02B8\u02B3\u02B9\u02BD\u02BF\u02BE\u02BE\u02B2\u02BB\u02BE\u02C0()
 	{
 		base.\u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8();
 		base.gameObject.SetActive(true);
 	}
 
-	// Token: 0x0600097D RID: 2429 RVA: 0x0000A93E File Offset: 0x00008B3E
 	public void \u02B4\u02B9\u02B7\u02B7\u02B6\u02B9\u02B4\u02C0\u02BF\u02BC\u02BD()
 	{
 		this.\u02B3\u02B4\u02B2\u02BF\u02B7\u02BF\u02C1\u02B9\u02BF\u02B9\u02BD(\u02B8\u02B3\u02BD\u02BF\u02BB\u02B8\u02B8\u02C0\u02B7\u02B9\u02B2.Name, new Comparison<\u02BC\u02BB\u02B5\u02B7\u02BC\u02B6\u02B4\u02B6\u02B2\u02BA\u02B9>(ServerListMenu.<>c.<>9.\u02B3\u02B9\u02B3\u02B6\u02BE\u02BE\u02C0\u02B9\u02BF\u02B7\u02C1));
 	}
 
-	// Token: 0x0600097E RID: 2430 RVA: 0x0005305C File Offset: 0x0005125C
 	private void \u02B3\u02B4\u02B2\u02BF\u02B7\u02BF\u02C1\u02B9\u02BF\u02B9\u02BD(\u02B8\u02B3\u02BD\u02BF\u02BB\u02B8\u02B8\u02C0\u02B7\u02B9\u02B2 \u02B2\u02BD\u02B3\u02BF\u02B6\u02BB\u02BD\u02B2\u02C0\u02BF\u02B9, Comparison<\u02BC\u02BB\u02B5\u02B7\u02BC\u02B6\u02B4\u02B6\u02B2\u02BA\u02B9> \u02B9\u02BE\u02C0\u02BF\u02C1\u02BF\u02BE\u02B8\u02BD\u02BE\u02B8)
 	{
 		if (this.\u02B4\u02BF\u02B7\u02B6\u02BD\u02BF\u02C0\u02BD\u02B4\u02B6\u02B4 == \u02B2\u02BD\u02B3\u02BF\u02B6\u02BB\u02BD\u02B2\u02C0\u02BF\u02B9)
@@ -309,7 +283,6 @@ internal class ServerListMenu : BaseMenu
 		this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 	}
 
-	// Token: 0x0600097F RID: 2431 RVA: 0x000530D0 File Offset: 0x000512D0
 	public virtual void \u02C0\u02BE\u02B9\u02B5\u02B6\u02C1\u02B5\u02C0\u02BE\u02B8\u02C1()
 	{
 		if (this.\u02BF\u02B4\u02B5\u02B8\u02BC\u02B6\u02BB\u02C1\u02B6\u02B7\u02BC == 0)
@@ -330,7 +303,6 @@ internal class ServerListMenu : BaseMenu
 		});
 	}
 
-	// Token: 0x06000980 RID: 2432 RVA: 0x0000A9FA File Offset: 0x00008BFA
 	public void \u02B9\u02BC\u02B5\u02BB\u02BE\u02B6\u02C0\u02C1\u02C0\u02B4\u02BB(\u02B8\u02B3\u02BD\u02BF\u02BB\u02B8\u02B8\u02C0\u02B7\u02B9\u02B2 \u02B2\u02BD\u02B3\u02BF\u02B6\u02BB\u02BD\u02B2\u02C0\u02BF\u02B9)
 	{
 		if (\u02B2\u02BD\u02B3\u02BF\u02B6\u02BB\u02BD\u02B2\u02C0\u02BF\u02B9 == \u02B8\u02B3\u02BD\u02BF\u02BB\u02B8\u02B8\u02C0\u02B7\u02B9\u02B2.None)
@@ -340,7 +312,6 @@ internal class ServerListMenu : BaseMenu
 		this.sortOrderIcons[(int)\u02B2\u02BD\u02B3\u02BF\u02B6\u02BB\u02BD\u02B2\u02C0\u02BF\u02B9].SetActive(false);
 	}
 
-	// Token: 0x06000981 RID: 2433 RVA: 0x0000A8B0 File Offset: 0x00008AB0
 	public virtual void \u02B8\u02BD\u02BE\u02BD\u02BE\u02C1\u02BA\u02C0\u02BE\u02BA\u02C0()
 	{
 		if (!this.\u02B6\u02BF\u02B6\u02C1\u02B4\u02B9\u02BA\u02B9\u02B2\u02C1\u02C0)
@@ -349,7 +320,6 @@ internal class ServerListMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x06000982 RID: 2434 RVA: 0x0000A9B2 File Offset: 0x00008BB2
 	private IEnumerator \u02B5\u02C0\u02B3\u02BA\u02B9\u02C1\u02B8\u02B5\u02B4\u02C1\u02BA()
 	{
 		this.\u02B6\u02BF\u02B6\u02C1\u02B4\u02B9\u02BA\u02B9\u02B2\u02C1\u02C0 = true;
@@ -377,14 +347,12 @@ internal class ServerListMenu : BaseMenu
 		yield break;
 	}
 
-	// Token: 0x06000983 RID: 2435 RVA: 0x0000AA0F File Offset: 0x00008C0F
 	[\u02B2\u02B6\u02B4\u02B9\u02BF\u02C0\u02BA\u02BD\u02C0\u02B3\u02BD]
 	public void SortSpectators()
 	{
 		this.\u02B3\u02B4\u02B2\u02BF\u02B7\u02BF\u02C1\u02B9\u02BF\u02B9\u02BD(\u02B8\u02B3\u02BD\u02BF\u02BB\u02B8\u02B8\u02C0\u02B7\u02B9\u02B2.Spectators, new Comparison<\u02BC\u02BB\u02B5\u02B7\u02BC\u02B6\u02B4\u02B6\u02B2\u02BA\u02B9>(ServerListMenu.<>c.<>9.\u02BD\u02BC\u02B8\u02B8\u02BC\u02BF\u02BC\u02BD\u02B7\u02C0\u02C0));
 	}
 
-	// Token: 0x06000984 RID: 2436 RVA: 0x00053140 File Offset: 0x00051340
 	private void \u02BC\u02B7\u02B4\u02B7\u02B2\u02B7\u02BA\u02B2\u02C1\u02C0\u02BC()
 	{
 		this.\u02BF\u02B4\u02B5\u02B8\u02BC\u02B6\u02BB\u02C1\u02B6\u02B7\u02BC = this.\u02C1\u02BD\u02BC\u02BC\u02B2\u02B9\u02C1\u02BC\u02B7\u02B6\u02BA.\u02B9\u02BC\u02BD\u02C0\u02BA\u02B7\u02B7\u02B6\u02B3\u02BB\u02BC.Count;
@@ -394,7 +362,6 @@ internal class ServerListMenu : BaseMenu
 		this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 	}
 
-	// Token: 0x06000985 RID: 2437 RVA: 0x0000AA37 File Offset: 0x00008C37
 	public virtual void \u02BB\u02B3\u02B2\u02C1\u02BF\u02B3\u02B7\u02B5\u02B7\u02B8\u02BE()
 	{
 		if (this.\u02B6\u02B2\u02B5\u02B5\u02B3\u02B9\u02B9\u02BE\u02BC\u02BE\u02B9)
@@ -405,7 +372,6 @@ internal class ServerListMenu : BaseMenu
 		this.\u02B3\u02B2\u02BD\u02B4\u02B9\u02B2\u02C1\u02BA\u02B8\u02BF\u02B2(this.\u02BC\u02BC\u02BA\u02B8\u02B6\u02BF\u02B5\u02B9\u02B8\u02C0\u02C1(this.\u02B4\u02BF\u02B7\u02B6\u02BD\u02BF\u02C0\u02BD\u02B4\u02B6\u02B4));
 	}
 
-	// Token: 0x06000986 RID: 2438 RVA: 0x0000AA5B File Offset: 0x00008C5B
 	protected override void Start()
 	{
 		this.\u02B4\u02B8\u02BA\u02B8\u02BE\u02BF\u02B8\u02BB\u02B3\u02B7\u02B5 = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Versus");
@@ -413,7 +379,6 @@ internal class ServerListMenu : BaseMenu
 		base.Start();
 	}
 
-	// Token: 0x06000987 RID: 2439 RVA: 0x0000AA8D File Offset: 0x00008C8D
 	protected virtual void \u02B5\u02B9\u02B7\u02B7\u02B6\u02B5\u02BC\u02BA\u02B4\u02B2\u02B4()
 	{
 		this.\u02C1\u02BD\u02BC\u02BC\u02B2\u02B9\u02C1\u02BC\u02B7\u02B6\u02BA.\u02B4\u02B5\u02BE\u02C0\u02BE\u02BA\u02C0\u02C1\u02BD\u02B5\u02B9();
@@ -424,7 +389,6 @@ internal class ServerListMenu : BaseMenu
 		base.Update();
 	}
 
-	// Token: 0x06000988 RID: 2440 RVA: 0x0000AABE File Offset: 0x00008CBE
 	protected override void Update()
 	{
 		this.\u02C1\u02BD\u02BC\u02BC\u02B2\u02B9\u02C1\u02BC\u02B7\u02B6\u02BA.\u02B4\u02B5\u02BE\u02C0\u02BE\u02BA\u02C0\u02C1\u02BD\u02B5\u02B9();
@@ -435,7 +399,6 @@ internal class ServerListMenu : BaseMenu
 		base.Update();
 	}
 
-	// Token: 0x06000989 RID: 2441 RVA: 0x000531B4 File Offset: 0x000513B4
 	private void \u02BF\u02BB\u02B9\u02BF\u02B9\u02BF\u02B4\u02B9\u02B9\u02B4\u02BE()
 	{
 		this.\u02BF\u02B4\u02B5\u02B8\u02BC\u02B6\u02BB\u02C1\u02B6\u02B7\u02BC = this.\u02C1\u02BD\u02BC\u02BC\u02B2\u02B9\u02C1\u02BC\u02B7\u02B6\u02BA.\u02B9\u02BC\u02BD\u02C0\u02BA\u02B7\u02B7\u02B6\u02B3\u02BB\u02BC.Count;
@@ -445,14 +408,12 @@ internal class ServerListMenu : BaseMenu
 		this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 	}
 
-	// Token: 0x0600098A RID: 2442 RVA: 0x0000AAEF File Offset: 0x00008CEF
 	public virtual void \u02B7\u02B6\u02B8\u02BA\u02BC\u02BD\u02B9\u02B4\u02B2\u02B8\u02BB()
 	{
 		base.\u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8();
 		base.gameObject.SetActive(false);
 	}
 
-	// Token: 0x0600098B RID: 2443 RVA: 0x00053228 File Offset: 0x00051428
 	public override void \u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3()
 	{
 		if (this.\u02BF\u02B4\u02B5\u02B8\u02BC\u02B6\u02BB\u02C1\u02B6\u02B7\u02BC == 0)
@@ -473,14 +434,12 @@ internal class ServerListMenu : BaseMenu
 		});
 	}
 
-	// Token: 0x0600098C RID: 2444 RVA: 0x0000AAEF File Offset: 0x00008CEF
 	public override void \u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8()
 	{
 		base.\u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8();
 		base.gameObject.SetActive(false);
 	}
 
-	// Token: 0x0600098D RID: 2445 RVA: 0x000530D0 File Offset: 0x000512D0
 	public virtual void \u02BB\u02C1\u02B3\u02BF\u02BB\u02BB\u02B4\u02BA\u02B7\u02B4\u02BD()
 	{
 		if (this.\u02BF\u02B4\u02B5\u02B8\u02BC\u02B6\u02BB\u02C1\u02B6\u02B7\u02BC == 0)
@@ -501,7 +460,6 @@ internal class ServerListMenu : BaseMenu
 		});
 	}
 
-	// Token: 0x0600098E RID: 2446 RVA: 0x0000AB03 File Offset: 0x00008D03
 	public override void \u02BA\u02B4\u02BC\u02B6\u02BC\u02B7\u02BD\u02B3\u02BA\u02BE\u02C0()
 	{
 		base.\u02BA\u02B4\u02BC\u02B6\u02BC\u02B7\u02BD\u02B3\u02BA\u02BE\u02C0();
@@ -509,7 +467,6 @@ internal class ServerListMenu : BaseMenu
 		base.gameObject.SetActive(false);
 	}
 
-	// Token: 0x0600098F RID: 2447 RVA: 0x0000AB22 File Offset: 0x00008D22
 	protected virtual void \u02B2\u02BB\u02B6\u02B4\u02BE\u02B8\u02B9\u02B2\u02B3\u02B6\u02C1()
 	{
 		this.\u02B4\u02B8\u02BA\u02B8\u02BE\u02BF\u02B8\u02BB\u02B3\u02B7\u02B5 = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02BA\u02B9\u02C1\u02B9\u02B2\u02BD\u02B2\u02BC\u02B7\u02BA\u02B8().\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4("AutoSave Results Screenshot");
@@ -517,14 +474,12 @@ internal class ServerListMenu : BaseMenu
 		base.Start();
 	}
 
-	// Token: 0x06000990 RID: 2448 RVA: 0x0000AB54 File Offset: 0x00008D54
 	[\u02B2\u02B6\u02B4\u02B9\u02BF\u02C0\u02BA\u02BD\u02C0\u02B3\u02BD]
 	public void SortPlayers()
 	{
 		this.\u02B3\u02B4\u02B2\u02BF\u02B7\u02BF\u02C1\u02B9\u02BF\u02B9\u02BD(\u02B8\u02B3\u02BD\u02BF\u02BB\u02B8\u02B8\u02C0\u02B7\u02B9\u02B2.Players, new Comparison<\u02BC\u02BB\u02B5\u02B7\u02BC\u02B6\u02B4\u02B6\u02B2\u02BA\u02B9>(ServerListMenu.<>c.<>9.\u02BD\u02B5\u02C1\u02BB\u02BC\u02BF\u02B2\u02BE\u02B7\u02B5\u02C1));
 	}
 
-	// Token: 0x06000991 RID: 2449 RVA: 0x0000AB03 File Offset: 0x00008D03
 	public virtual void \u02B9\u02B8\u02B2\u02BD\u02B3\u02BA\u02C0\u02BA\u02BC\u02BC\u02B5()
 	{
 		base.\u02BA\u02B4\u02BC\u02B6\u02BC\u02B7\u02BD\u02B3\u02BA\u02BE\u02C0();
@@ -532,7 +487,6 @@ internal class ServerListMenu : BaseMenu
 		base.gameObject.SetActive(false);
 	}
 
-	// Token: 0x06000992 RID: 2450 RVA: 0x00053298 File Offset: 0x00051498
 	protected override void \u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8()
 	{
 		if (this.\u02BF\u02B4\u02B5\u02B8\u02BC\u02B6\u02BB\u02C1\u02B6\u02B7\u02BC == 0)
@@ -574,68 +528,49 @@ internal class ServerListMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x04000754 RID: 1876
 	private \u02B7\u02B8\u02B4\u02B3\u02BB\u02C1\u02BE\u02C0\u02BE\u02B3\u02BD \u02C1\u02BD\u02BC\u02BC\u02B2\u02B9\u02C1\u02BC\u02B7\u02B6\u02BA;
 
-	// Token: 0x04000755 RID: 1877
 	private Coroutine \u02C1\u02BD\u02BC\u02C0\u02B3\u02B9\u02B6\u02B9\u02B7\u02BE\u02BB;
 
-	// Token: 0x04000756 RID: 1878
 	private bool \u02B6\u02BF\u02B6\u02C1\u02B4\u02B9\u02BA\u02B9\u02B2\u02C1\u02C0;
 
-	// Token: 0x04000757 RID: 1879
 	[SerializeField]
 	private int maxBroadcastTries = 3;
 
-	// Token: 0x04000758 RID: 1880
 	[SerializeField]
 	private float broadcastRetryTime = 2f;
 
-	// Token: 0x04000759 RID: 1881
 	[SerializeField]
 	private GameObject[] itemObjects;
 
-	// Token: 0x0400075A RID: 1882
 	private string \u02B4\u02B8\u02BA\u02B8\u02BE\u02BF\u02B8\u02BB\u02B3\u02B7\u02B5;
 
-	// Token: 0x0400075B RID: 1883
 	private string \u02B7\u02BB\u02B2\u02BA\u02BE\u02B6\u02C0\u02B4\u02B5\u02B4\u02B9;
 
-	// Token: 0x0400075C RID: 1884
 	private int \u02BF\u02B4\u02B5\u02B8\u02BC\u02B6\u02BB\u02C1\u02B6\u02B7\u02BC;
 
-	// Token: 0x0400075D RID: 1885
 	[SerializeField]
 	private Transform thisSelection;
 
-	// Token: 0x0400075E RID: 1886
 	[SerializeField]
 	private GameObject loadIcon;
 
-	// Token: 0x0400075F RID: 1887
 	[SerializeField]
 	private GameObject[] sortOrderIcons;
 
-	// Token: 0x04000760 RID: 1888
 	[SerializeField]
 	private OnlineMenu onlineMenu;
 
-	// Token: 0x04000761 RID: 1889
 	[SerializeField]
 	private ServerDetails serverDetails;
 
-	// Token: 0x04000762 RID: 1890
 	public TextMeshProUGUI \u02B7\u02BE\u02B7\u02B2\u02B5\u02B6\u02BB\u02BB\u02C0\u02BC\u02BF;
 
-	// Token: 0x04000763 RID: 1891
 	private \u02B8\u02B3\u02BD\u02BF\u02BB\u02B8\u02B8\u02C0\u02B7\u02B9\u02B2 \u02B4\u02BF\u02B7\u02B6\u02BD\u02BF\u02C0\u02BD\u02B4\u02B6\u02B4 = \u02B8\u02B3\u02BD\u02BF\u02BB\u02B8\u02B8\u02C0\u02B7\u02B9\u02B2.None;
 
-	// Token: 0x04000764 RID: 1892
 	private bool \u02BF\u02BF\u02BB\u02BA\u02BB\u02BC\u02BF\u02B8\u02B5\u02B9\u02B8;
 
-	// Token: 0x04000765 RID: 1893
 	private bool \u02B6\u02B2\u02B5\u02B5\u02B3\u02B9\u02B9\u02BE\u02BC\u02BE\u02B9;
 
-	// Token: 0x04000766 RID: 1894
 	private Quaternion \u02BA\u02B8\u02C1\u02BC\u02C1\u02B5\u02BF\u02B8\u02B6\u02B5\u02B5 = Quaternion.Euler(0f, 0f, 180f);
 }

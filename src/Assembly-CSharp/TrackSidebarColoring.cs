@@ -1,11 +1,9 @@
-﻿using System;
+using System;
 using UnityEngine;
 
-// Token: 0x020001CE RID: 462
 [RequireComponent(typeof(SpriteRenderer))]
 public class TrackSidebarColoring : MonoBehaviour
 {
-	// Token: 0x06001472 RID: 5234 RVA: 0x000A1CFC File Offset: 0x0009FEFC
 	public void \u02BC\u02B5\u02BA\u02B9\u02BF\u02B2\u02BC\u02B5\u02B4\u02B8\u02BD(\u02B3\u02B4\u02B2\u02B4\u02B4\u02B2\u02B8\u02BF\u02BC\u02C0\u02B6 \u02BC\u02BC\u02C1\u02C1\u02BE\u02B7\u02BE\u02BC\u02BB\u02B3\u02B2)
 	{
 		if (this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC == null)
@@ -27,7 +25,6 @@ public class TrackSidebarColoring : MonoBehaviour
 		this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC.SetPropertyBlock(this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2);
 	}
 
-	// Token: 0x06001473 RID: 5235 RVA: 0x00010BB3 File Offset: 0x0000EDB3
 	public void \u02BE\u02B6\u02B9\u02B2\u02C1\u02B9\u02B8\u02B6\u02B4\u02B3\u02B3()
 	{
 		this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2 = new MaterialPropertyBlock();
@@ -35,7 +32,6 @@ public class TrackSidebarColoring : MonoBehaviour
 		this.\u02B4\u02BA\u02B5\u02B8\u02B8\u02BD\u02B2\u02BA\u02BE\u02BC\u02C1 = Shader.PropertyToID("Artist");
 	}
 
-	// Token: 0x06001474 RID: 5236 RVA: 0x00010BDC File Offset: 0x0000EDDC
 	public void \u02BF\u02B2\u02C1\u02C1\u02B6\u02BE\u02B3\u02BD\u02B8\u02B3\u02BE()
 	{
 		this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2 = new MaterialPropertyBlock();
@@ -43,7 +39,6 @@ public class TrackSidebarColoring : MonoBehaviour
 		this.\u02B4\u02BA\u02B5\u02B8\u02B8\u02BD\u02B2\u02BA\u02BE\u02BC\u02C1 = Shader.PropertyToID("song");
 	}
 
-	// Token: 0x06001475 RID: 5237 RVA: 0x000A1D78 File Offset: 0x0009FF78
 	public void \u02C0\u02BA\u02B8\u02B4\u02BA\u02B8\u02BF\u02B8\u02B9\u02B2\u02B9(\u02B3\u02B4\u02B2\u02B4\u02B4\u02B2\u02B8\u02BF\u02BC\u02C0\u02B6 \u02BC\u02BC\u02C1\u02C1\u02BE\u02B7\u02BE\u02BC\u02BB\u02B3\u02B2)
 	{
 		if (this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC == null)
@@ -65,7 +60,6 @@ public class TrackSidebarColoring : MonoBehaviour
 		this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC.SetPropertyBlock(this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2);
 	}
 
-	// Token: 0x06001476 RID: 5238 RVA: 0x000A1DF4 File Offset: 0x0009FFF4
 	public void \u02B7\u02B4\u02B2\u02BB\u02B4\u02B6\u02BA\u02BF\u02BB\u02BD\u02C1(\u02B3\u02B4\u02B2\u02B4\u02B4\u02B2\u02B8\u02BF\u02BC\u02C0\u02B6 \u02BC\u02BC\u02C1\u02C1\u02BE\u02B7\u02BE\u02BC\u02BB\u02B3\u02B2)
 	{
 		if (this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC == null)
@@ -87,7 +81,6 @@ public class TrackSidebarColoring : MonoBehaviour
 		this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC.SetPropertyBlock(this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2);
 	}
 
-	// Token: 0x06001477 RID: 5239 RVA: 0x000A1E70 File Offset: 0x000A0070
 	public void \u02BC\u02B5\u02B4\u02BE\u02B5\u02C0\u02C1\u02BE\u02B8\u02BD\u02BF(\u02B3\u02B4\u02B2\u02B4\u02B4\u02B2\u02B8\u02BF\u02BC\u02C0\u02B6 \u02BC\u02BC\u02C1\u02C1\u02BE\u02B7\u02BE\u02BC\u02BB\u02B3\u02B2)
 	{
 		if (this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC == null)
@@ -109,7 +102,6 @@ public class TrackSidebarColoring : MonoBehaviour
 		this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC.SetPropertyBlock(this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2);
 	}
 
-	// Token: 0x06001478 RID: 5240 RVA: 0x000A1EEC File Offset: 0x000A00EC
 	public void \u02B5\u02B2\u02B2\u02B5\u02BE\u02C1\u02B2\u02B6\u02C1\u02BD\u02B4(\u02B3\u02B4\u02B2\u02B4\u02B4\u02B2\u02B8\u02BF\u02BC\u02C0\u02B6 \u02BC\u02BC\u02C1\u02C1\u02BE\u02B7\u02BE\u02BC\u02BB\u02B3\u02B2)
 	{
 		if (this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC == null)
@@ -131,7 +123,6 @@ public class TrackSidebarColoring : MonoBehaviour
 		this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC.SetPropertyBlock(this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2);
 	}
 
-	// Token: 0x06001479 RID: 5241 RVA: 0x00010C05 File Offset: 0x0000EE05
 	public void \u02B5\u02B9\u02B5\u02B3\u02BF\u02C1\u02B7\u02BD\u02C0\u02B7\u02C0()
 	{
 		this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2 = new MaterialPropertyBlock();
@@ -139,7 +130,6 @@ public class TrackSidebarColoring : MonoBehaviour
 		this.\u02B4\u02BA\u02B5\u02B8\u02B8\u02BD\u02B2\u02BA\u02BE\u02BC\u02C1 = Shader.PropertyToID("");
 	}
 
-	// Token: 0x0600147A RID: 5242 RVA: 0x000A1F68 File Offset: 0x000A0168
 	public void \u02BC\u02BA\u02BD\u02B5\u02B3\u02B4\u02B6\u02BB\u02BF\u02BA\u02B7(\u02B3\u02B4\u02B2\u02B4\u02B4\u02B2\u02B8\u02BF\u02BC\u02C0\u02B6 \u02BC\u02BC\u02C1\u02C1\u02BE\u02B7\u02BE\u02BC\u02BB\u02B3\u02B2)
 	{
 		if (this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC == null)
@@ -161,7 +151,6 @@ public class TrackSidebarColoring : MonoBehaviour
 		this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC.SetPropertyBlock(this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2);
 	}
 
-	// Token: 0x0600147B RID: 5243 RVA: 0x000A1FE4 File Offset: 0x000A01E4
 	public void \u02BF\u02C1\u02BA\u02B7\u02C0\u02BC\u02B7\u02BD\u02B3\u02BD\u02B6(\u02B3\u02B4\u02B2\u02B4\u02B4\u02B2\u02B8\u02BF\u02BC\u02C0\u02B6 \u02BC\u02BC\u02C1\u02C1\u02BE\u02B7\u02BE\u02BC\u02BB\u02B3\u02B2)
 	{
 		if (this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC == null)
@@ -183,7 +172,6 @@ public class TrackSidebarColoring : MonoBehaviour
 		this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC.SetPropertyBlock(this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2);
 	}
 
-	// Token: 0x0600147C RID: 5244 RVA: 0x00010C2E File Offset: 0x0000EE2E
 	public void \u02BD\u02BF\u02B6\u02B8\u02BB\u02B2\u02BF\u02C0\u02B5\u02B9\u02BC()
 	{
 		this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2 = new MaterialPropertyBlock();
@@ -191,7 +179,6 @@ public class TrackSidebarColoring : MonoBehaviour
 		this.\u02B4\u02BA\u02B5\u02B8\u02B8\u02BD\u02B2\u02BA\u02BE\u02BC\u02C1 = Shader.PropertyToID("Unable to select player prefab!");
 	}
 
-	// Token: 0x0600147D RID: 5245 RVA: 0x000A2060 File Offset: 0x000A0260
 	public void \u02C0\u02B6\u02B9\u02B4\u02BA\u02B4\u02B2\u02B6\u02BA\u02BC\u02B3(\u02B3\u02B4\u02B2\u02B4\u02B4\u02B2\u02B8\u02BF\u02BC\u02C0\u02B6 \u02BC\u02BC\u02C1\u02C1\u02BE\u02B7\u02BE\u02BC\u02BB\u02B3\u02B2)
 	{
 		if (this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC == null)
@@ -213,7 +200,6 @@ public class TrackSidebarColoring : MonoBehaviour
 		this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC.SetPropertyBlock(this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2);
 	}
 
-	// Token: 0x0600147E RID: 5246 RVA: 0x00010C57 File Offset: 0x0000EE57
 	public void \u02B7\u02BF\u02BC\u02C0\u02B5\u02BD\u02BF\u02BB\u02C1\u02BF\u02B2()
 	{
 		this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2 = new MaterialPropertyBlock();
@@ -221,7 +207,6 @@ public class TrackSidebarColoring : MonoBehaviour
 		this.\u02B4\u02BA\u02B5\u02B8\u02B8\u02BD\u02B2\u02BA\u02BE\u02BC\u02C1 = Shader.PropertyToID("Allow Duplicate Songs");
 	}
 
-	// Token: 0x0600147F RID: 5247 RVA: 0x00010C80 File Offset: 0x0000EE80
 	public void \u02B3\u02B8\u02C1\u02BE\u02B7\u02C0\u02B8\u02B8\u02B3\u02B3\u02B7()
 	{
 		this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2 = new MaterialPropertyBlock();
@@ -229,7 +214,6 @@ public class TrackSidebarColoring : MonoBehaviour
 		this.\u02B4\u02BA\u02B5\u02B8\u02B8\u02BD\u02B2\u02BA\u02BE\u02BC\u02C1 = Shader.PropertyToID("Full Scan Elapsed Time: ");
 	}
 
-	// Token: 0x06001480 RID: 5248 RVA: 0x000A1F68 File Offset: 0x000A0168
 	public void \u02BF\u02BB\u02B3\u02BD\u02B5\u02B6\u02B3\u02B3\u02B5\u02B2\u02B6(\u02B3\u02B4\u02B2\u02B4\u02B4\u02B2\u02B8\u02BF\u02BC\u02C0\u02B6 \u02BC\u02BC\u02C1\u02C1\u02BE\u02B7\u02BE\u02BC\u02BB\u02B3\u02B2)
 	{
 		if (this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC == null)
@@ -251,7 +235,6 @@ public class TrackSidebarColoring : MonoBehaviour
 		this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC.SetPropertyBlock(this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2);
 	}
 
-	// Token: 0x06001481 RID: 5249 RVA: 0x000A20DC File Offset: 0x000A02DC
 	public void \u02BE\u02B9\u02BD\u02C1\u02B8\u02B9\u02B7\u02B8\u02B8\u02B4\u02BB(\u02B3\u02B4\u02B2\u02B4\u02B4\u02B2\u02B8\u02BF\u02BC\u02C0\u02B6 \u02BC\u02BC\u02C1\u02C1\u02BE\u02B7\u02BE\u02BC\u02BB\u02B3\u02B2)
 	{
 		if (this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC == null)
@@ -273,7 +256,6 @@ public class TrackSidebarColoring : MonoBehaviour
 		this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC.SetPropertyBlock(this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2);
 	}
 
-	// Token: 0x06001483 RID: 5251 RVA: 0x00010CA9 File Offset: 0x0000EEA9
 	public void \u02BE\u02BD\u02B8\u02B8\u02B9\u02BA\u02BA\u02BA\u02B4\u02B2\u02B4()
 	{
 		this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2 = new MaterialPropertyBlock();
@@ -281,7 +263,6 @@ public class TrackSidebarColoring : MonoBehaviour
 		this.\u02B4\u02BA\u02B5\u02B8\u02B8\u02BD\u02B2\u02BA\u02BE\u02BC\u02C1 = Shader.PropertyToID("Disabled");
 	}
 
-	// Token: 0x06001484 RID: 5252 RVA: 0x00010CD2 File Offset: 0x0000EED2
 	public void Awake()
 	{
 		this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2 = new MaterialPropertyBlock();
@@ -289,7 +270,6 @@ public class TrackSidebarColoring : MonoBehaviour
 		this.\u02B4\u02BA\u02B5\u02B8\u02B8\u02BD\u02B2\u02BA\u02BE\u02BC\u02C1 = Shader.PropertyToID("_BlendColor");
 	}
 
-	// Token: 0x06001485 RID: 5253 RVA: 0x00010BDC File Offset: 0x0000EDDC
 	public void \u02B9\u02BD\u02B5\u02C1\u02B6\u02B6\u02BD\u02B9\u02BC\u02C1\u02B3()
 	{
 		this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2 = new MaterialPropertyBlock();
@@ -297,7 +277,6 @@ public class TrackSidebarColoring : MonoBehaviour
 		this.\u02B4\u02BA\u02B5\u02B8\u02B8\u02BD\u02B2\u02BA\u02BE\u02BC\u02C1 = Shader.PropertyToID("song");
 	}
 
-	// Token: 0x06001486 RID: 5254 RVA: 0x000A2158 File Offset: 0x000A0358
 	public void \u02BE\u02B7\u02C0\u02BD\u02C0\u02B7\u02BE\u02B4\u02C1\u02BC\u02B7(\u02B3\u02B4\u02B2\u02B4\u02B4\u02B2\u02B8\u02BF\u02BC\u02C0\u02B6 \u02BC\u02BC\u02C1\u02C1\u02BE\u02B7\u02BE\u02BC\u02BB\u02B3\u02B2)
 	{
 		if (this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC == null)
@@ -319,20 +298,15 @@ public class TrackSidebarColoring : MonoBehaviour
 		this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC.SetPropertyBlock(this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2);
 	}
 
-	// Token: 0x04000F2B RID: 3883
 	private SpriteRenderer \u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC;
 
-	// Token: 0x04000F2C RID: 3884
 	private MaterialPropertyBlock \u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2;
 
-	// Token: 0x04000F2D RID: 3885
 	private int \u02B4\u02BA\u02B5\u02B8\u02B8\u02BD\u02B2\u02BA\u02BE\u02BC\u02C1;
 
-	// Token: 0x04000F2E RID: 3886
 	[SerializeField]
 	private Color drunkModeColor;
 
-	// Token: 0x04000F2F RID: 3887
 	[SerializeField]
 	private Color precisionModeColor;
 }

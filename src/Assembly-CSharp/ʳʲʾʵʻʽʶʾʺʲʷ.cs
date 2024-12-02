@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.IO;
 using UnityEngine;
@@ -6,10 +6,8 @@ using UnityEngine.Android;
 using UnityEngine.Networking;
 using YamlDotNet.Serialization;
 
-// Token: 0x02000019 RID: 25
 public class \u02B3\u02B2\u02BE\u02B5\u02BB\u02BD\u02B6\u02BE\u02BA\u02B2\u02B7
 {
-	// Token: 0x06000116 RID: 278 RVA: 0x0001E1A8 File Offset: 0x0001C3A8
 	public static int \u02BF\u02B6\u02B7\u02BF\u02C1\u02BD\u02B2\u02B5\u02B8\u02BD\u02BC()
 	{
 		int @static;
@@ -20,7 +18,6 @@ public class \u02B3\u02B2\u02BE\u02B5\u02BB\u02BD\u02B6\u02BE\u02BA\u02B2\u02B7
 		return @static;
 	}
 
-	// Token: 0x06000117 RID: 279 RVA: 0x0001E1EC File Offset: 0x0001C3EC
 	public static int \u02B6\u02B5\u02B8\u02C1\u02BD\u02C1\u02B4\u02B3\u02B8\u02B6\u02C0()
 	{
 		int @static;
@@ -31,7 +28,6 @@ public class \u02B3\u02B2\u02BE\u02B5\u02BB\u02BD\u02B6\u02BE\u02BA\u02B2\u02B7
 		return @static;
 	}
 
-	// Token: 0x06000118 RID: 280 RVA: 0x0001E230 File Offset: 0x0001C430
 	private static bool \u02BA\u02B8\u02B8\u02BB\u02BA\u02B7\u02B3\u02BC\u02B5\u02BB\u02BE()
 	{
 		bool flag;
@@ -49,7 +45,6 @@ public class \u02B3\u02B2\u02BE\u02B5\u02BB\u02BD\u02B6\u02BE\u02BA\u02B2\u02B7
 		return flag;
 	}
 
-	// Token: 0x06000119 RID: 281 RVA: 0x0001E274 File Offset: 0x0001C474
 	private static void \u02C0\u02C0\u02BE\u02B2\u02B5\u02BD\u02BD\u02B5\u02B6\u02B8\u02B8()
 	{
 		string text = Path.Combine(__FIXME_clon_util.\u02B4\u02B6\u02BE\u02B5\u02BB\u02BA\u02BB\u02C0\u02C1\u02C1\u02B7(), "saVersion");
@@ -61,7 +56,6 @@ public class \u02B3\u02B2\u02BE\u02B5\u02BB\u02BD\u02B6\u02BE\u02BA\u02B2\u02B7
 		File.WriteAllText(text, text2);
 	}
 
-	// Token: 0x0600011A RID: 282 RVA: 0x0001E2B8 File Offset: 0x0001C4B8
 	public static bool \u02B5\u02BA\u02BF\u02B5\u02BF\u02B8\u02C1\u02B8\u02BD\u02B3\u02C0()
 	{
 		if (\u02B3\u02B2\u02BE\u02B5\u02BB\u02BD\u02B6\u02BE\u02BA\u02B2\u02B7.\u02BF\u02B6\u02B7\u02BF\u02C1\u02BD\u02B2\u02B5\u02B8\u02BD\u02BC() < -40)
@@ -123,7 +117,6 @@ public class \u02B3\u02B2\u02BE\u02B5\u02BB\u02BD\u02B6\u02BE\u02BA\u02B2\u02B7
 		}
 	}
 
-	// Token: 0x0600011B RID: 283 RVA: 0x0001E440 File Offset: 0x0001C640
 	public static bool \u02BA\u02BF\u02C1\u02C1\u02BE\u02B8\u02C0\u02C1\u02B6\u02C0\u02BA()
 	{
 		if (\u02B3\u02B2\u02BE\u02B5\u02BB\u02BD\u02B6\u02BE\u02BA\u02B2\u02B7.\u02B6\u02B5\u02B8\u02C1\u02BD\u02C1\u02B4\u02B3\u02B8\u02B6\u02C0() < 30)
@@ -169,7 +162,6 @@ public class \u02B3\u02B2\u02BE\u02B5\u02BB\u02BD\u02B6\u02BE\u02BA\u02B2\u02B7
 		}
 	}
 
-	// Token: 0x0600011C RID: 284 RVA: 0x0001E5C8 File Offset: 0x0001C7C8
 	public static bool \u02BD\u02B6\u02BD\u02B4\u02BE\u02BE\u02B4\u02BD\u02B5\u02B2\u02BF()
 	{
 		string text = Path.Combine(__FIXME_clon_util.\u02B4\u02B6\u02BE\u02B5\u02BB\u02BA\u02BB\u02C0\u02C1\u02C1\u02B7(), "saVersion");
@@ -182,7 +174,6 @@ public class \u02B3\u02B2\u02BE\u02B5\u02BB\u02BD\u02B6\u02BE\u02BA\u02B2\u02B7
 		return !(text2 != text3);
 	}
 
-	// Token: 0x0600011D RID: 285 RVA: 0x000066DC File Offset: 0x000048DC
 	public static IEnumerator \u02BA\u02BC\u02BA\u02B8\u02B9\u02B4\u02B7\u02B4\u02B3\u02B5\u02BE()
 	{
 		string streamingAssetsFolder = __FIXME_clon_util.\u02B4\u02B6\u02BE\u02B5\u02BB\u02BA\u02BB\u02C0\u02C1\u02C1\u02B7();

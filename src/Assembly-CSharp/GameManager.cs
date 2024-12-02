@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -8,11 +8,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-// Token: 0x0200005E RID: 94
 [RequireComponent(typeof(NoteAnimator))]
 public class GameManager : MonoBehaviour
 {
-	// Token: 0x060003AF RID: 943 RVA: 0x00007E01 File Offset: 0x00006001
 	public void \u02BD\u02B2\u02B7\u02B7\u02B4\u02B3\u02C1\u02BA\u02B5\u02BD\u02BD()
 	{
 		BassAudioManager.Instance.\u02BD\u02C1\u02B5\u02B5\u02B7\u02C0\u02BE\u02B4\u02BF\u02B7\u02BF();
@@ -21,7 +19,6 @@ public class GameManager : MonoBehaviour
 		FadeBehaviour.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BB\u02B2\u02BF\u02B4\u02BA\u02B3\u02C1\u02B7\u02B6\u02B5\u02BE("Drums", 1465f);
 	}
 
-	// Token: 0x060003B0 RID: 944 RVA: 0x0002CA44 File Offset: 0x0002AC44
 	public void EndSong()
 	{
 		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02B8\u02B9\u02BA\u02BB\u02C1\u02BB\u02B9\u02BE\u02C1\u02B9)
@@ -74,7 +71,6 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060003B1 RID: 945 RVA: 0x0002CF00 File Offset: 0x0002B100
 	private void \u02B4\u02B3\u02BE\u02B5\u02B4\u02BB\u02BA\u02B8\u02B5\u02BF\u02BF()
 	{
 		if (this.\u02B4\u02BC\u02BF\u02BC\u02BA\u02B9\u02B8\u02B2\u02BD\u02BE\u02BD.\u02B2\u02B5\u02B9\u02BC\u02B2\u02BE\u02BF\u02BC\u02B5\u02BD\u02C1.Count == 0)
@@ -89,7 +85,6 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060003B2 RID: 946 RVA: 0x0002CF74 File Offset: 0x0002B174
 	private void Awake()
 	{
 		this.\u02B5\u02B4\u02B9\u02C1\u02BC\u02C0\u02B4\u02B4\u02BC\u02B6\u02B3 = Shader.PropertyToID("_OutputHue");
@@ -117,7 +112,6 @@ public class GameManager : MonoBehaviour
 		this.\u02BF\u02B8\u02BA\u02BB\u02BC\u02B5\u02BE\u02B7\u02C1\u02BA\u02BC = new \u02BB\u02B3\u02BF\u02BC\u02B5\u02B7\u02BA\u02B9\u02C0\u02B8\u02BE(this);
 	}
 
-	// Token: 0x060003B3 RID: 947 RVA: 0x0002D078 File Offset: 0x0002B278
 	private void OnDestroy()
 	{
 		ReInput.ControllerPreDisconnectEvent -= this.\u02B8\u02B9\u02BE\u02BC\u02B7\u02BA\u02B5\u02BC\u02BA\u02B5\u02B8;
@@ -134,13 +128,11 @@ public class GameManager : MonoBehaviour
 		this.\u02BF\u02B8\u02BA\u02BB\u02BC\u02B5\u02BE\u02B7\u02C1\u02BA\u02BC = null;
 	}
 
-	// Token: 0x060003B4 RID: 948 RVA: 0x00007E31 File Offset: 0x00006031
 	public List<Vector2> \u02B4\u02B7\u02B6\u02BA\u02BA\u02B9\u02B5\u02C0\u02B2\u02BD\u02B5(\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7)
 	{
 		return this.\u02B4\u02BC\u02BF\u02BC\u02BA\u02B9\u02B8\u02B2\u02BD\u02BE\u02BD.\u02B8\u02C1\u02B8\u02C1\u02C0\u02B8\u02B5\u02B4\u02B6\u02BC\u02B7(\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerInfo.\u02BA\u02BD\u02BC\u02BC\u02B4\u02BD\u02B4\u02BE\u02B2\u02B7\u02C1, \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerInfo.\u02C1\u02BD\u02BA\u02B2\u02B5\u02BC\u02C1\u02BF\u02B6\u02BB\u02BD).\u02B6\u02BE\u02C0\u02B2\u02BD\u02B8\u02B2\u02B4\u02B9\u02B7\u02BF;
 	}
 
-	// Token: 0x060003B5 RID: 949 RVA: 0x00007E59 File Offset: 0x00006059
 	public float \u02BE\u02C1\u02BF\u02BD\u02BA\u02B8\u02B6\u02B5\u02B5\u02B8\u02B7()
 	{
 		if (!this.\u02C0\u02B4\u02B5\u02B4\u02BA\u02B2\u02BB\u02BB\u02BB\u02B8\u02B8)
@@ -150,13 +142,11 @@ public class GameManager : MonoBehaviour
 		return (float)(this.\u02BA\u02BC\u02B2\u02BE\u02B7\u02C0\u02BD\u02B7\u02B2\u02B9\u02BF - this.\u02BB\u02B4\u02B6\u02BC\u02BD\u02B5\u02C1\u02B3\u02BC\u02B3\u02BA) / (float)this.\u02BF\u02C1\u02C1\u02BE\u02B8\u02B4\u02B8\u02BF\u02B6\u02BD\u02BA;
 	}
 
-	// Token: 0x060003B6 RID: 950 RVA: 0x00007E31 File Offset: 0x00006031
 	public List<Vector2> \u02BF\u02BB\u02C0\u02B2\u02C1\u02B3\u02BE\u02C0\u02B4\u02B5\u02BF(\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7)
 	{
 		return this.\u02B4\u02BC\u02BF\u02BC\u02BA\u02B9\u02B8\u02B2\u02BD\u02BE\u02BD.\u02B8\u02C1\u02B8\u02C1\u02C0\u02B8\u02B5\u02B4\u02B6\u02BC\u02B7(\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerInfo.\u02BA\u02BD\u02BC\u02BC\u02B4\u02BD\u02B4\u02BE\u02B2\u02B7\u02C1, \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerInfo.\u02C1\u02BD\u02BA\u02B2\u02B5\u02BC\u02C1\u02BF\u02B6\u02BB\u02BD).\u02B6\u02BE\u02C0\u02B2\u02BD\u02B8\u02B2\u02B4\u02B9\u02B7\u02BF;
 	}
 
-	// Token: 0x060003B7 RID: 951 RVA: 0x0002D0D4 File Offset: 0x0002B2D4
 	public void \u02B6\u02B4\u02BD\u02BC\u02B5\u02B6\u02B2\u02BF\u02B5\u02B3\u02BA(bool \u02BE\u02B4\u02BA\u02B7\u02BB\u02B7\u02BD\u02BF\u02B2\u02B3\u02B5)
 	{
 		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
@@ -301,7 +291,6 @@ public class GameManager : MonoBehaviour
 		\u02B8\u02B8\u02B7\u02BE\u02B3\u02BF\u02B3\u02B4\u02B4\u02B9\u02BA.\u02C1\u02B6\u02B3\u02C0\u02B4\u02BB\u02BF\u02BF\u02B7\u02B2\u02C0("SongQuit", dictionary3);
 	}
 
-	// Token: 0x060003B8 RID: 952 RVA: 0x0002D8AC File Offset: 0x0002BAAC
 	private void \u02BB\u02C0\u02BC\u02BA\u02B6\u02BB\u02B4\u02B3\u02B2\u02BB\u02BA()
 	{
 		if (!CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BA\u02B8\u02B6\u02BB\u02B5\u02B2\u02B8\u02B6\u02BB\u02BB || !SettingsController.\u02BE\u02B2\u02B6\u02B7\u02B3\u02BB\u02B2\u02B8\u02BC\u02B7\u02BF || GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BB\u02B4\u02BD\u02B2\u02BC\u02B7\u02C0\u02C1\u02B8\u02B4\u02BD == 1)
@@ -352,7 +341,6 @@ public class GameManager : MonoBehaviour
 		component2.rect = rect;
 	}
 
-	// Token: 0x060003B9 RID: 953 RVA: 0x00007E7F File Offset: 0x0000607F
 	private IEnumerator \u02BD\u02B7\u02B2\u02BE\u02B7\u02BD\u02C1\u02BE\u02C1\u02B9\u02B7()
 	{
 		this.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5 = false;
@@ -369,7 +357,6 @@ public class GameManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060003BA RID: 954 RVA: 0x0002D9E4 File Offset: 0x0002BBE4
 	public void \u02BE\u02BD\u02BD\u02B9\u02BD\u02BF\u02B3\u02BE\u02BD\u02BB\u02BC()
 	{
 		if (this._basePlayer.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0.Count > 0 && this.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9 > (double)this._basePlayer.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0[0].\u02B2\u02B8\u02BA\u02BA\u02BC\u02B7\u02B5\u02B5\u02B6\u02B5\u02C1)
@@ -478,7 +465,6 @@ public class GameManager : MonoBehaviour
 		this.practiceUI.\u02BD\u02B8\u02B4\u02BD\u02B8\u02B8\u02B8\u02BF\u02B4\u02B9\u02B6();
 	}
 
-	// Token: 0x060003BB RID: 955 RVA: 0x00007E8E File Offset: 0x0000608E
 	public void \u02B9\u02C0\u02BF\u02C1\u02B6\u02BA\u02C0\u02BB\u02BE\u02B4\u02B7(int \u02C0\u02B4\u02BC\u02BA\u02B4\u02C1\u02BF\u02B3\u02B7\u02B6\u02B6)
 	{
 		if (this.\u02B4\u02B5\u02B3\u02BB\u02B9\u02BD\u02B5\u02B4\u02B9\u02BC\u02BC != null)
@@ -488,7 +474,6 @@ public class GameManager : MonoBehaviour
 		this.\u02B4\u02B5\u02B3\u02BB\u02B9\u02BD\u02B5\u02B4\u02B9\u02BC\u02BC = base.StartCoroutine(this.\u02B7\u02BA\u02B9\u02B3\u02B3\u02B3\u02BC\u02B5\u02BC\u02B9\u02B2(\u02C0\u02B4\u02BC\u02BA\u02B4\u02C1\u02BF\u02B3\u02B7\u02B6\u02B6));
 	}
 
-	// Token: 0x060003BC RID: 956 RVA: 0x00007EB7 File Offset: 0x000060B7
 	private IEnumerator \u02B7\u02BA\u02B9\u02B3\u02B3\u02B3\u02BC\u02B5\u02BC\u02B9\u02B2(int \u02BF\u02BD\u02B9\u02B2\u02B7\u02BE\u02C0\u02BB\u02BE\u02BF\u02B4)
 	{
 		yield return new WaitForSeconds(1f);
@@ -514,13 +499,11 @@ public class GameManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060003BD RID: 957 RVA: 0x00007ECD File Offset: 0x000060CD
 	public void \u02BA\u02B6\u02B5\u02BA\u02B8\u02B6\u02B8\u02BF\u02BE\u02BA\u02BB()
 	{
 		base.StartCoroutine(this.\u02BD\u02BC\u02B4\u02B9\u02C0\u02BE\u02B2\u02BC\u02BC\u02B2\u02B5());
 	}
 
-	// Token: 0x060003BE RID: 958 RVA: 0x0002DD88 File Offset: 0x0002BF88
 	private string \u02B9\u02B2\u02B8\u02BE\u02BB\u02B6\u02B4\u02B7\u02C0\u02C0\u02B2(\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7)
 	{
 		string text = "Prefabs/Gameplay/Players/";
@@ -539,7 +522,6 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060003BF RID: 959 RVA: 0x0002DDF4 File Offset: 0x0002BFF4
 	private void \u02B9\u02BB\u02B8\u02B6\u02C0\u02B5\u02B9\u02BD\u02B7\u02BA\u02BF()
 	{
 		BasePlayer[] u02BE_u02B8_u02C1_u02B3_u02BD_u02B9_u02B7_u02B4_u02BD_u02B5_u02BD = this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD;
@@ -553,7 +535,6 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060003C0 RID: 960 RVA: 0x0002DE2C File Offset: 0x0002C02C
 	public Sprite \u02BC\u02C1\u02B7\u02C0\u02BD\u02BD\u02BE\u02B5\u02B4\u02B7\u02B9()
 	{
 		if (SettingsController.\u02B7\u02BE\u02C1\u02BD\u02BD\u02C0\u02B4\u02BA\u02BC\u02B6\u02B9)
@@ -616,7 +597,6 @@ public class GameManager : MonoBehaviour
 		return sprite;
 	}
 
-	// Token: 0x060003C1 RID: 961 RVA: 0x00007EDC File Offset: 0x000060DC
 	public float \u02B5\u02B2\u02C0\u02BB\u02BA\u02B9\u02B4\u02BB\u02C0\u02B3\u02B5()
 	{
 		if (!this.\u02C0\u02B4\u02B5\u02B4\u02BA\u02B2\u02BB\u02BB\u02BB\u02B8\u02B8)
@@ -626,7 +606,6 @@ public class GameManager : MonoBehaviour
 		return (float)(this.\u02BA\u02BC\u02B2\u02BE\u02B7\u02C0\u02BD\u02B7\u02B2\u02B9\u02BF - this.\u02BB\u02B4\u02B6\u02BC\u02BD\u02B5\u02C1\u02B3\u02BC\u02B3\u02BA) / (float)this.\u02C0\u02B2\u02B8\u02BC\u02BD\u02B6\u02B4\u02B8\u02B4\u02B6\u02BC;
 	}
 
-	// Token: 0x060003C2 RID: 962 RVA: 0x0002E004 File Offset: 0x0002C204
 	private void \u02C0\u02C0\u02B4\u02B8\u02BE\u02B4\u02B6\u02B5\u02B4\u02BD\u02B7(float \u02B4\u02BE\u02B7\u02B3\u02B8\u02B2\u02B2\u02C1\u02BB\u02BB\u02B6, float \u02B7\u02BC\u02B9\u02BE\u02C1\u02BE\u02B5\u02B7\u02B6\u02BC\u02BA)
 	{
 		for (int i = 0; i < this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD.Length; i++)
@@ -643,7 +622,6 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060003C3 RID: 963 RVA: 0x00007F02 File Offset: 0x00006102
 	private IEnumerator \u02BD\u02BC\u02B4\u02B9\u02C0\u02BE\u02B2\u02BC\u02BC\u02B2\u02B5()
 	{
 		this.\u02BC\u02B4\u02B9\u02BC\u02B8\u02B6\u02B5\u02BE\u02C0\u02BA\u02B6();
@@ -663,13 +641,11 @@ public class GameManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060003C4 RID: 964 RVA: 0x00007F11 File Offset: 0x00006111
 	private void \u02BC\u02B3\u02BC\u02BF\u02B5\u02BE\u02B5\u02B7\u02BB\u02BA\u02B2(\u02BB\u02B3\u02BF\u02BC\u02B5\u02B7\u02BA\u02B9\u02C0\u02B8\u02BE \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5)
 	{
 		this.<\u02C1\u02BF\u02B4\u02BE\u02BE\u02BC\u02B5\u02BE\u02BE\u02B4\u02B7>k__BackingField = \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5;
 	}
 
-	// Token: 0x060003C5 RID: 965 RVA: 0x0002E078 File Offset: 0x0002C278
 	private void \u02B3\u02BB\u02C0\u02B9\u02B5\u02BC\u02BA\u02BD\u02B3\u02BA\u02BF()
 	{
 		if (this.\u02B4\u02BC\u02BF\u02BC\u02BA\u02B9\u02B8\u02B2\u02BD\u02BE\u02BD.\u02B2\u02B5\u02B9\u02BC\u02B2\u02BE\u02BF\u02BC\u02B5\u02BD\u02C1.Count == 0)
@@ -684,7 +660,6 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060003C6 RID: 966 RVA: 0x0002E0EC File Offset: 0x0002C2EC
 	public int \u02C0\u02C1\u02B3\u02B7\u02C1\u02BE\u02B7\u02B4\u02C1\u02BC\u02B7(ref int \u02B2\u02B4\u02BE\u02C1\u02C1\u02BC\u02C1\u02B6\u02BF\u02BF\u02BD, bool \u02C0\u02BE\u02B6\u02BF\u02B5\u02BD\u02BA\u02BD\u02BC\u02B7\u02BF)
 	{
 		if (!this.\u02C0\u02B4\u02B5\u02B4\u02BA\u02B2\u02BB\u02BB\u02BB\u02B8\u02B8)
@@ -706,24 +681,18 @@ public class GameManager : MonoBehaviour
 		return num;
 	}
 
-	// Token: 0x060003C7 RID: 967 RVA: 0x00007ECD File Offset: 0x000060CD
 	public void \u02BF\u02BF\u02B4\u02BB\u02B7\u02B8\u02C1\u02BD\u02BD\u02B8\u02B2()
 	{
 		base.StartCoroutine(this.\u02BD\u02BC\u02B4\u02B9\u02C0\u02BE\u02B2\u02BC\u02BC\u02B2\u02B5());
 	}
 
-	// Token: 0x17000040 RID: 64
-	// (get) Token: 0x060003C8 RID: 968 RVA: 0x00007F1A File Offset: 0x0000611A
-	// (set) Token: 0x060003E1 RID: 993 RVA: 0x00007F11 File Offset: 0x00006111
 	public \u02BB\u02B3\u02BF\u02BC\u02B5\u02B7\u02BA\u02B9\u02C0\u02B8\u02BE \u02BF\u02B8\u02BA\u02BB\u02BC\u02B5\u02BE\u02B7\u02C1\u02BA\u02BC { get; private set; }
 
-	// Token: 0x060003C9 RID: 969 RVA: 0x00007F22 File Offset: 0x00006122
 	public bool \u02C1\u02BA\u02BD\u02B5\u02C1\u02BF\u02B2\u02B2\u02B5\u02B4\u02B3()
 	{
 		return this.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9 < this.\u02BA\u02BF\u02B5\u02B4\u02B7\u02B8\u02B3\u02B6\u02B7\u02BE\u02BB;
 	}
 
-	// Token: 0x060003CA RID: 970 RVA: 0x00007F32 File Offset: 0x00006132
 	private IEnumerator \u02B4\u02B4\u02C0\u02BC\u02BD\u02BB\u02B7\u02B4\u02B8\u02B4\u02B5()
 	{
 		if (this.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9 < 0.0 || GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4 || this.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9 < this.\u02BA\u02BF\u02B5\u02B4\u02B7\u02B8\u02B3\u02B6\u02B7\u02BE\u02BB)
@@ -761,7 +730,6 @@ public class GameManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060003CB RID: 971 RVA: 0x00007F41 File Offset: 0x00006141
 	public void \u02B4\u02BC\u02B7\u02BE\u02BF\u02B6\u02C1\u02B2\u02BA\u02B4\u02B6()
 	{
 		if (this.\u02B4\u02B5\u02B3\u02BB\u02B9\u02BD\u02B5\u02B4\u02B9\u02BC\u02BC != null)
@@ -771,7 +739,6 @@ public class GameManager : MonoBehaviour
 		BassAudioManager.Instance.\u02B7\u02BB\u02B6\u02C0\u02BE\u02B5\u02B8\u02C0\u02B3\u02C0\u02BD();
 	}
 
-	// Token: 0x060003CC RID: 972 RVA: 0x00007F61 File Offset: 0x00006161
 	public void \u02BB\u02BD\u02B2\u02B4\u02B8\u02C1\u02B8\u02B7\u02BD\u02BD\u02C1()
 	{
 		BassAudioManager.Instance.\u02BD\u02C1\u02B5\u02B5\u02B7\u02C0\u02BE\u02B4\u02BF\u02B7\u02BF();
@@ -780,7 +747,6 @@ public class GameManager : MonoBehaviour
 		FadeBehaviour.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BB\u02B2\u02BF\u02B4\u02BA\u02B3\u02C1\u02B7\u02B6\u02B5\u02BE("SelectPad", 602f);
 	}
 
-	// Token: 0x060003CD RID: 973 RVA: 0x00007F91 File Offset: 0x00006191
 	private void \u02B8\u02B9\u02BE\u02BC\u02B7\u02BA\u02B5\u02BC\u02BA\u02B5\u02B8(ControllerStatusChangedEventArgs \u02B9\u02BE\u02BF\u02B9\u02BF\u02BA\u02B9\u02BD\u02B7\u02BB\u02B5)
 	{
 		if (!this.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5)
@@ -789,7 +755,6 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060003CE RID: 974 RVA: 0x0002E138 File Offset: 0x0002C338
 	public void \u02B6\u02B4\u02B8\u02B9\u02BC\u02B5\u02B8\u02B4\u02B3\u02BB\u02B6()
 	{
 		foreach (BasePlayer basePlayer in this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD)
@@ -801,13 +766,11 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060003CF RID: 975 RVA: 0x00007FA2 File Offset: 0x000061A2
 	private void \u02B8\u02BF\u02BD\u02C1\u02B8\u02B9\u02C0\u02B5\u02BA\u02BF\u02B5()
 	{
 		BassAudioManager.Instance.\u02B6\u02BA\u02BD\u02B4\u02BB\u02B2\u02BE\u02B9\u02BF\u02B5\u02C0(this.\u02BB\u02BD\u02BB\u02B3\u02BD\u02BD\u02B4\u02B6\u02B7\u02BC\u02BA);
 	}
 
-	// Token: 0x060003D0 RID: 976 RVA: 0x00007F41 File Offset: 0x00006141
 	public void \u02C0\u02BF\u02BC\u02B5\u02B7\u02B2\u02B8\u02BC\u02B7\u02B9\u02B7()
 	{
 		if (this.\u02B4\u02B5\u02B3\u02BB\u02B9\u02BD\u02B5\u02B4\u02B9\u02BC\u02BC != null)
@@ -817,7 +780,6 @@ public class GameManager : MonoBehaviour
 		BassAudioManager.Instance.\u02B7\u02BB\u02B6\u02C0\u02BE\u02B5\u02B8\u02C0\u02B3\u02C0\u02BD();
 	}
 
-	// Token: 0x060003D1 RID: 977 RVA: 0x0002E198 File Offset: 0x0002C398
 	public GameManager()
 	{
 		this.\u02BC\u02C1\u02B8\u02B9\u02BD\u02BA\u02C0\u02BA\u02C1\u02BE\u02BB = new \u02B4\u02B6\u02BA\u02C0\u02C0\u02BA\u02B9\u02B4\u02BF\u02B9\u02B7();
@@ -829,7 +791,6 @@ public class GameManager : MonoBehaviour
 		GameManager.instance = this;
 	}
 
-	// Token: 0x060003D2 RID: 978 RVA: 0x0002E1EC File Offset: 0x0002C3EC
 	private float \u02B2\u02B6\u02B6\u02C1\u02B2\u02B2\u02B4\u02B6\u02B4\u02C0\u02BB()
 	{
 		float num = 0f;
@@ -845,7 +806,6 @@ public class GameManager : MonoBehaviour
 		return num / getFloatPercent;
 	}
 
-	// Token: 0x060003D3 RID: 979 RVA: 0x0002E25C File Offset: 0x0002C45C
 	private int \u02B2\u02B7\u02B7\u02B6\u02B6\u02B2\u02B7\u02BB\u02B9\u02BE\u02BF(IEnumerable<Note> \u02B9\u02BF\u02BC\u02B9\u02C0\u02BF\u02B3\u02B3\u02B2\u02B5\u02BF)
 	{
 		int num = 0;
@@ -862,7 +822,6 @@ public class GameManager : MonoBehaviour
 		return num;
 	}
 
-	// Token: 0x060003D4 RID: 980 RVA: 0x00007FB4 File Offset: 0x000061B4
 	private void OnApplicationFocus(bool \u02BE\u02BE\u02B5\u02C0\u02B7\u02B3\u02B5\u02B7\u02BF\u02B8\u02BA)
 	{
 		if (\u02BE\u02BE\u02B5\u02C0\u02B7\u02B3\u02B5\u02B7\u02BF\u02B8\u02BA || !SettingsController.\u02B3\u02BD\u02BB\u02B7\u02B5\u02B7\u02BD\u02B4\u02B4\u02BD\u02B3.GetBoolValue || this.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5)
@@ -875,7 +834,6 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060003D5 RID: 981 RVA: 0x0002E2AC File Offset: 0x0002C4AC
 	public void \u02B7\u02BB\u02B6\u02C0\u02BE\u02B5\u02B8\u02C0\u02B3\u02C0\u02BD(\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02C0\u02B3\u02B5\u02B5\u02B5\u02C1\u02B7\u02BD\u02BD\u02B9\u02B3)
 	{
 		if (this.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5)
@@ -935,8 +893,6 @@ public class GameManager : MonoBehaviour
 		this.\u02BA\u02B2\u02B5\u02B2\u02B6\u02BF\u02B7\u02B6\u02BF\u02C0\u02B7 = BassAudioManager.Instance.\u02B4\u02B4\u02B3\u02B6\u02BA\u02B4\u02BE\u02B2\u02B8\u02B6\u02C0();
 	}
 
-	// Token: 0x1700003F RID: 63
-	// (get) Token: 0x060003D6 RID: 982 RVA: 0x00007F22 File Offset: 0x00006122
 	public bool \u02B2\u02B5\u02B8\u02C0\u02B4\u02B2\u02B2\u02BD\u02B2\u02B3\u02C1
 	{
 		get
@@ -945,7 +901,6 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060003D7 RID: 983 RVA: 0x0002E3F8 File Offset: 0x0002C5F8
 	private void \u02B3\u02B7\u02BA\u02BC\u02BA\u02B2\u02C1\u02B3\u02BB\u02BC\u02BE()
 	{
 		GameObject[] array = GameObject.FindGameObjectsWithTag("Player");
@@ -1089,7 +1044,6 @@ public class GameManager : MonoBehaviour
 		this.\u02BC\u02BF\u02B5\u02B5\u02C0\u02BF\u02BC\u02C0\u02B5\u02B4\u02BE = true;
 	}
 
-	// Token: 0x060003D8 RID: 984 RVA: 0x00007FDD File Offset: 0x000061DD
 	private IEnumerator Start()
 	{
 		this.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5 = true;
@@ -1144,13 +1098,11 @@ public class GameManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060003D9 RID: 985 RVA: 0x00007FA2 File Offset: 0x000061A2
 	private void \u02B4\u02B7\u02B4\u02B6\u02B6\u02BB\u02BC\u02BD\u02B7\u02C0\u02B4()
 	{
 		BassAudioManager.Instance.\u02B6\u02BA\u02BD\u02B4\u02BB\u02B2\u02BE\u02B9\u02BF\u02B5\u02C0(this.\u02BB\u02BD\u02BB\u02B3\u02BD\u02BD\u02B4\u02B6\u02B7\u02BC\u02BA);
 	}
 
-	// Token: 0x060003DA RID: 986 RVA: 0x0002E8E0 File Offset: 0x0002CAE0
 	public void \u02B8\u02B5\u02B9\u02BB\u02B4\u02B2\u02BE\u02BC\u02B4\u02BD\u02B8(int \u02C0\u02B4\u02BC\u02BA\u02B4\u02C1\u02BF\u02B3\u02B7\u02B6\u02B6, int \u02C0\u02BC\u02B9\u02BC\u02BC\u02C1\u02BB\u02B9\u02B7\u02B2\u02B2, bool \u02B8\u02B5\u02BA\u02C0\u02BA\u02BE\u02BF\u02BE\u02BB\u02BC\u02C0)
 	{
 		this.\u02C1\u02BD\u02B7\u02B4\u02BF\u02B3\u02C0\u02BA\u02B6\u02B4\u02C1 = \u02C0\u02B4\u02BC\u02BA\u02B4\u02C1\u02BF\u02B3\u02B7\u02B6\u02B6;
@@ -1238,7 +1190,6 @@ public class GameManager : MonoBehaviour
 		this.\u02B2\u02B7\u02B8\u02B3\u02BE\u02C0\u02B4\u02C0\u02B5\u02BB\u02B7 = num2;
 	}
 
-	// Token: 0x060003DB RID: 987 RVA: 0x0002EC00 File Offset: 0x0002CE00
 	public void \u02B9\u02C0\u02B4\u02B4\u02C0\u02B2\u02BC\u02BA\u02BB\u02B6\u02B9(int \u02C0\u02B4\u02BC\u02BA\u02B4\u02C1\u02BF\u02B3\u02B7\u02B6\u02B6, int \u02C0\u02BC\u02B9\u02BC\u02BC\u02C1\u02BB\u02B9\u02B7\u02B2\u02B2, bool \u02B8\u02B5\u02BA\u02C0\u02BA\u02BE\u02BF\u02BE\u02BB\u02BC\u02C0)
 	{
 		this.\u02C1\u02BD\u02B7\u02B4\u02BF\u02B3\u02C0\u02BA\u02B6\u02B4\u02C1 = \u02C0\u02B4\u02BC\u02BA\u02B4\u02C1\u02BF\u02B3\u02B7\u02B6\u02B6;
@@ -1326,7 +1277,6 @@ public class GameManager : MonoBehaviour
 		this.\u02B2\u02B7\u02B8\u02B3\u02BE\u02C0\u02B4\u02C0\u02B5\u02BB\u02B7 = num2;
 	}
 
-	// Token: 0x060003DC RID: 988 RVA: 0x00007F41 File Offset: 0x00006141
 	public void \u02BB\u02BF\u02B5\u02BD\u02B5\u02B2\u02C0\u02BF\u02B8\u02BB\u02B8()
 	{
 		if (this.\u02B4\u02B5\u02B3\u02BB\u02B9\u02BD\u02B5\u02B4\u02B9\u02BC\u02BC != null)
@@ -1336,7 +1286,6 @@ public class GameManager : MonoBehaviour
 		BassAudioManager.Instance.\u02B7\u02BB\u02B6\u02C0\u02BE\u02B5\u02B8\u02C0\u02B3\u02C0\u02BD();
 	}
 
-	// Token: 0x060003DD RID: 989 RVA: 0x0002EF20 File Offset: 0x0002D120
 	private void \u02B6\u02C0\u02C1\u02BD\u02C0\u02B3\u02B5\u02B2\u02B2\u02B2\u02BB()
 	{
 		foreach (BasePlayer basePlayer in this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD)
@@ -1348,7 +1297,6 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060003DE RID: 990 RVA: 0x00007FEC File Offset: 0x000061EC
 	public float \u02B6\u02BD\u02BF\u02B2\u02B5\u02BA\u02BC\u02BA\u02B9\u02B5\u02B2()
 	{
 		if (!this.\u02C0\u02B4\u02B5\u02B4\u02BA\u02B2\u02BB\u02BB\u02BB\u02B8\u02B8)
@@ -1358,7 +1306,6 @@ public class GameManager : MonoBehaviour
 		return (float)(this.\u02BA\u02BC\u02B2\u02BE\u02B7\u02C0\u02BD\u02B7\u02B2\u02B9\u02BF - this.\u02BB\u02B4\u02B6\u02BC\u02BD\u02B5\u02C1\u02B3\u02BC\u02B3\u02BA) / (float)this.\u02C0\u02B2\u02B8\u02BC\u02BD\u02B6\u02B4\u02B8\u02B4\u02B6\u02BC;
 	}
 
-	// Token: 0x060003DF RID: 991 RVA: 0x0002EF58 File Offset: 0x0002D158
 	public Vector3 \u02BA\u02B7\u02B6\u02B6\u02B4\u02B6\u02B2\u02B9\u02BD\u02BD\u02C1()
 	{
 		switch (this.\u02C1\u02B3\u02C0\u02BF\u02BC\u02B5\u02B5\u02B2\u02B9\u02B5\u02BB)
@@ -1387,7 +1334,6 @@ public class GameManager : MonoBehaviour
 		return SettingsController.\u02BF\u02BC\u02B2\u02B5\u02C0\u02B5\u02B4\u02C0\u02B3\u02B3\u02BF.\u02B2\u02BC\u02B8\u02B9\u02B4\u02BA\u02B8\u02B4\u02B3\u02B3\u02BE;
 	}
 
-	// Token: 0x060003E0 RID: 992 RVA: 0x00007E8E File Offset: 0x0000608E
 	public void \u02B4\u02BD\u02BF\u02BD\u02BB\u02BC\u02C0\u02BC\u02BA\u02B5\u02B4(int \u02C0\u02B4\u02BC\u02BA\u02B4\u02C1\u02BF\u02B3\u02B7\u02B6\u02B6)
 	{
 		if (this.\u02B4\u02B5\u02B3\u02BB\u02B9\u02BD\u02B5\u02B4\u02B9\u02BC\u02BC != null)
@@ -1397,15 +1343,12 @@ public class GameManager : MonoBehaviour
 		this.\u02B4\u02B5\u02B3\u02BB\u02B9\u02BD\u02B5\u02B4\u02B9\u02BC\u02BC = base.StartCoroutine(this.\u02B7\u02BA\u02B9\u02B3\u02B3\u02B3\u02BC\u02B5\u02BC\u02B9\u02B2(\u02C0\u02B4\u02BC\u02BA\u02B4\u02C1\u02BF\u02B3\u02B7\u02B6\u02B6));
 	}
 
-	// Token: 0x060003E2 RID: 994 RVA: 0x00008012 File Offset: 0x00006212
 	private void \u02C1\u02B5\u02BD\u02B4\u02B6\u02BA\u02BE\u02B3\u02BA\u02BF\u02B9()
 	{
 		BassAudioManager.Instance.\u02B9\u02BB\u02C0\u02B3\u02BF\u02B8\u02BE\u02BF\u02B3\u02BC\u02B5((float)this.\u02BA\u02B2\u02B5\u02B2\u02B6\u02BF\u02B7\u02B6\u02BF\u02C0\u02B7);
 		this.\u02BF\u02BF\u02BB\u02B4\u02C1\u02BB\u02B3\u02B8\u02C1\u02BD\u02B9 = base.StartCoroutine(this.\u02BD\u02B7\u02B2\u02BE\u02B7\u02BD\u02C1\u02BE\u02C1\u02B9\u02B7());
 	}
 
-	// Token: 0x17000041 RID: 65
-	// (get) Token: 0x060003E3 RID: 995 RVA: 0x00008037 File Offset: 0x00006237
 	public \u02B5\u02B9\u02C1\u02C0\u02B7\u02BD\u02BE\u02B2\u02C1\u02B2\u02B6 \u02B5\u02B9\u02C1\u02C0\u02B7\u02BD\u02BE\u02B2\u02C1\u02B2\u02B6
 	{
 		get
@@ -1414,7 +1357,6 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060003E4 RID: 996 RVA: 0x0002F04C File Offset: 0x0002D24C
 	private void Update()
 	{
 		if (!this.\u02BB\u02B8\u02B2\u02BC\u02B4\u02B4\u02BE\u02B6\u02BC\u02B4\u02B4)
@@ -1514,7 +1456,6 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060003E5 RID: 997 RVA: 0x00008044 File Offset: 0x00006244
 	private IEnumerator \u02B3\u02BB\u02BF\u02B4\u02B9\u02BA\u02B5\u02B5\u02BE\u02BB\u02BE()
 	{
 		GameManager.\u02BC\u02B9\u02B2\u02C1\u02B3\u02BB\u02BD\u02BD\u02B7\u02B2\u02BD u02BC_u02B9_u02B2_u02C1_u02B3_u02BB_u02BD_u02BD_u02B7_u02B2_u02BD = new GameManager.\u02BC\u02B9\u02B2\u02C1\u02B3\u02BB\u02BD\u02BD\u02B7\u02B2\u02BD(1);
@@ -1522,7 +1463,6 @@ public class GameManager : MonoBehaviour
 		return u02BC_u02B9_u02B2_u02C1_u02B3_u02BB_u02BD_u02BD_u02B7_u02B2_u02BD;
 	}
 
-	// Token: 0x060003E6 RID: 998 RVA: 0x00008053 File Offset: 0x00006253
 	private IEnumerator \u02BE\u02B3\u02B8\u02B4\u02BB\u02B3\u02BE\u02B4\u02BA\u02C0\u02BA()
 	{
 		if (this.\u02B4\u02BC\u02BF\u02BC\u02BA\u02B9\u02B8\u02B2\u02BD\u02BE\u02BD != null)
@@ -1610,7 +1550,6 @@ public class GameManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060003E7 RID: 999 RVA: 0x00008062 File Offset: 0x00006262
 	public void \u02BA\u02B9\u02BA\u02B8\u02BD\u02BE\u02B2\u02BD\u02B3\u02B4\u02BA()
 	{
 		BassAudioManager.Instance.\u02BD\u02C1\u02B5\u02B5\u02B7\u02C0\u02BE\u02B4\u02BF\u02B7\u02BF();
@@ -1619,7 +1558,6 @@ public class GameManager : MonoBehaviour
 		FadeBehaviour.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BB\u02B2\u02BF\u02B4\u02BA\u02B3\u02C1\u02B7\u02B6\u02B5\u02BE("EndOfSong", 0f);
 	}
 
-	// Token: 0x060003E8 RID: 1000 RVA: 0x0002F3B8 File Offset: 0x0002D5B8
 	public void \u02BC\u02B4\u02B9\u02BC\u02B8\u02B6\u02B5\u02BE\u02C0\u02BA\u02B6()
 	{
 		foreach (BasePlayer basePlayer in this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD)
@@ -1632,7 +1570,6 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060003E9 RID: 1001 RVA: 0x0002F41C File Offset: 0x0002D61C
 	private void \u02BF\u02BB\u02B7\u02B3\u02B6\u02BD\u02BC\u02B9\u02C0\u02C1\u02BB()
 	{
 		if (this.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9 <= 0.0)
@@ -1643,207 +1580,144 @@ public class GameManager : MonoBehaviour
 		this.\u02C0\u02B2\u02B8\u02BC\u02BD\u02B6\u02B4\u02B8\u02B4\u02B6\u02BC = (int)(this.\u02B4\u02BC\u02BF\u02BC\u02BA\u02B9\u02B8\u02B2\u02BD\u02BE\u02BD.\u02C0\u02B3\u02C1\u02BB\u02B5\u02BA\u02BB\u02B3\u02C1\u02B8\u02BD * 4f / u02C0_u02B8_u02BC_u02B9_u02BD_u02BA_u02B8_u02C0_u02B7_u02BD_u02B.\u02B2\u02B2\u02C0\u02B5\u02BC\u02BF\u02B3\u02B8\u02BE\u02BE\u02B4 * u02C0_u02B8_u02BC_u02B9_u02BD_u02BA_u02B8_u02C0_u02B7_u02BD_u02B.\u02B6\u02B6\u02C1\u02BF\u02B7\u02BE\u02B9\u02B8\u02B4\u02B7\u02B2) * 8;
 	}
 
-	// Token: 0x040002B7 RID: 695
 	public NoteAnimator \u02B3\u02BB\u02BE\u02BF\u02BA\u02BC\u02B5\u02C0\u02BB\u02BE\u02BD;
 
-	// Token: 0x040002B8 RID: 696
 	[HideInInspector]
 	public GlobalVariables \u02B7\u02BA\u02B3\u02BE\u02B3\u02BF\u02B6\u02B5\u02C0\u02C1\u02C0;
 
-	// Token: 0x040002B9 RID: 697
 	[SerializeField]
 	public PracticeUI practiceUI;
 
-	// Token: 0x040002BA RID: 698
 	[SerializeField]
 	private MusicVideo musicVideo;
 
-	// Token: 0x040002BB RID: 699
 	[SerializeField]
 	private StarProgress starProgress;
 
-	// Token: 0x040002BC RID: 700
 	public LyricDisplay \u02B3\u02BC\u02B6\u02C0\u02BF\u02B5\u02C1\u02B4\u02BA\u02BA\u02C1;
 
-	// Token: 0x040002BD RID: 701
 	public double \u02B7\u02BE\u02C0\u02B2\u02B8\u02C0\u02BA\u02C1\u02BB\u02B2\u02BC;
 
-	// Token: 0x040002BE RID: 702
 	[HideInInspector]
 	public BasePlayer[] \u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD;
 
-	// Token: 0x040002BF RID: 703
 	private float \u02BF\u02BB\u02BD\u02BC\u02B9\u02B8\u02C0\u02B6\u02B2\u02B6\u02B2;
 
-	// Token: 0x040002C0 RID: 704
 	public float \u02C0\u02BE\u02C1\u02BD\u02C0\u02BC\u02BB\u02B4\u02C1\u02B3\u02B9;
 
-	// Token: 0x040002C1 RID: 705
 	public float \u02BB\u02B3\u02B4\u02B5\u02BA\u02B3\u02BE\u02C1\u02B7\u02B7\u02BF;
 
-	// Token: 0x040002C2 RID: 706
 	public float \u02B5\u02B2\u02B5\u02B2\u02B7\u02B4\u02B6\u02BF\u02BE\u02B6\u02BB;
 
-	// Token: 0x040002C3 RID: 707
 	public double \u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9;
 
-	// Token: 0x040002C4 RID: 708
 	public double \u02B7\u02B4\u02BA\u02B5\u02B5\u02B8\u02BE\u02B5\u02B3\u02B5\u02BB;
 
-	// Token: 0x040002C5 RID: 709
 	public double \u02BA\u02C1\u02BE\u02C0\u02BF\u02B2\u02B9\u02BC\u02B4\u02C1\u02B4;
 
-	// Token: 0x040002C6 RID: 710
 	public double \u02BA\u02BF\u02B5\u02B4\u02B7\u02B8\u02B3\u02B6\u02B7\u02BE\u02BB;
 
-	// Token: 0x040002C7 RID: 711
 	[SerializeField]
 	private Image backgroundImage;
 
-	// Token: 0x040002C8 RID: 712
 	[HideInInspector]
 	public bool \u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5;
 
-	// Token: 0x040002C9 RID: 713
 	[HideInInspector]
 	public bool \u02BB\u02B7\u02B2\u02B2\u02BE\u02BD\u02B5\u02BC\u02C1\u02C1\u02C0;
 
-	// Token: 0x040002CA RID: 714
 	[SerializeField]
 	private GameObject FPSText;
 
-	// Token: 0x040002CB RID: 715
 	public \u02B7\u02BD\u02BB\u02BB\u02BF\u02B5\u02C0\u02C1\u02BD\u02B3\u02B6 \u02B4\u02BC\u02BF\u02BC\u02BA\u02B9\u02B8\u02B2\u02BD\u02BE\u02BD;
 
-	// Token: 0x040002CC RID: 716
 	public \u02B4\u02B6\u02BA\u02C0\u02C0\u02BA\u02B9\u02B4\u02BF\u02B9\u02B7 \u02BC\u02C1\u02B8\u02B9\u02BD\u02BA\u02C0\u02BA\u02C1\u02BE\u02BB;
 
-	// Token: 0x040002CD RID: 717
 	public ScoreManager \u02C0\u02BC\u02BA\u02B3\u02B9\u02B8\u02B8\u02B3\u02C0\u02C0\u02B3;
 
-	// Token: 0x040002CE RID: 718
 	public bool \u02C0\u02B4\u02B5\u02B4\u02BA\u02B2\u02BB\u02BB\u02BB\u02B8\u02B8;
 
-	// Token: 0x040002CF RID: 719
 	private bool \u02C0\u02BC\u02B4\u02B2\u02B6\u02B2\u02B4\u02B8\u02BA\u02B2\u02C0;
 
-	// Token: 0x040002D0 RID: 720
 	private bool \u02BC\u02C1\u02BB\u02BA\u02C0\u02BA\u02B8\u02B4\u02B6\u02B4\u02B6;
 
-	// Token: 0x040002D1 RID: 721
 	private int \u02C0\u02B2\u02B8\u02BC\u02BD\u02B6\u02B4\u02B8\u02B4\u02B6\u02BC;
 
-	// Token: 0x040002D2 RID: 722
 	private int \u02BF\u02C1\u02C1\u02BE\u02B8\u02B4\u02B8\u02BF\u02B6\u02BD\u02BA;
 
-	// Token: 0x040002D3 RID: 723
 	private int \u02C1\u02B7\u02B4\u02B2\u02BB\u02BF\u02B8\u02B4\u02B3\u02BD\u02BF;
 
-	// Token: 0x040002D4 RID: 724
 	public uint \u02BA\u02BC\u02B2\u02BE\u02B7\u02C0\u02BD\u02B7\u02B2\u02B9\u02BF;
 
-	// Token: 0x040002D5 RID: 725
 	private uint \u02BB\u02B4\u02B6\u02BC\u02BD\u02B5\u02C1\u02B3\u02BC\u02B3\u02BA;
 
-	// Token: 0x040002D6 RID: 726
 	public uint \u02BB\u02B8\u02B4\u02B3\u02B9\u02BC\u02B9\u02B7\u02B2\u02B9\u02B9;
 
-	// Token: 0x040002D7 RID: 727
 	private int \u02BE\u02BC\u02BE\u02C1\u02B9\u02BF\u02BB\u02C1\u02B7\u02B4\u02BC;
 
-	// Token: 0x040002D8 RID: 728
 	public int \u02C1\u02BD\u02B7\u02B4\u02BF\u02B3\u02C0\u02BA\u02B6\u02B4\u02C1;
 
-	// Token: 0x040002D9 RID: 729
 	private int \u02BB\u02BA\u02BF\u02B4\u02C1\u02BA\u02B6\u02B9\u02BF\u02C1\u02B3;
 
-	// Token: 0x040002DA RID: 730
 	public double \u02B8\u02BE\u02BB\u02B7\u02BC\u02B4\u02BA\u02B5\u02B6\u02BF\u02BC;
 
-	// Token: 0x040002DB RID: 731
 	private float \u02C1\u02BB\u02B7\u02B5\u02C1\u02B3\u02BF\u02B3\u02BA\u02B8\u02B7;
 
-	// Token: 0x040002DC RID: 732
 	private float \u02BB\u02BD\u02BB\u02B3\u02BD\u02BD\u02B4\u02B6\u02B7\u02BC\u02BA;
 
-	// Token: 0x040002DD RID: 733
 	public uint \u02B7\u02C0\u02BD\u02BF\u02BA\u02BF\u02BC\u02B6\u02B4\u02B9\u02BD;
 
-	// Token: 0x040002DE RID: 734
 	public bool \u02BF\u02B3\u02C1\u02B2\u02BA\u02B4\u02B8\u02BF\u02BD\u02C0\u02B8;
 
-	// Token: 0x040002DF RID: 735
 	public uint \u02B6\u02BB\u02B9\u02B3\u02B5\u02BD\u02BF\u02BD\u02B5\u02B7\u02B8;
 
-	// Token: 0x040002E0 RID: 736
 	private bool \u02B2\u02BD\u02BB\u02B6\u02B5\u02B9\u02B9\u02B2\u02BA\u02C0\u02BA;
 
-	// Token: 0x040002E1 RID: 737
 	private HashSet<Instrument> \u02B5\u02B6\u02B6\u02B5\u02B9\u02BC\u02B7\u02BF\u02B8\u02B8\u02C0;
 
-	// Token: 0x040002E2 RID: 738
 	private HashSet<Difficulty> \u02BF\u02B6\u02BE\u02C1\u02C1\u02B9\u02BA\u02B5\u02BB\u02B3\u02BD;
 
-	// Token: 0x040002E3 RID: 739
 	private double \u02BA\u02B2\u02B5\u02B2\u02B6\u02BF\u02B7\u02B6\u02BF\u02C0\u02B7;
 
-	// Token: 0x040002E4 RID: 740
 	public int \u02B6\u02B5\u02B4\u02B2\u02B9\u02B6\u02B8\u02B6\u02B9\u02B7\u02B6;
 
-	// Token: 0x040002E5 RID: 741
 	public uint \u02BF\u02B6\u02BA\u02C0\u02C0\u02BC\u02B4\u02B9\u02BB\u02B3\u02BB;
 
-	// Token: 0x040002E6 RID: 742
 	public uint \u02B2\u02B7\u02B8\u02B3\u02BE\u02C0\u02B4\u02C0\u02B5\u02BB\u02B7;
 
-	// Token: 0x040002E7 RID: 743
 	[HideInInspector]
 	public int \u02BB\u02BA\u02B4\u02BE\u02B7\u02B9\u02C1\u02B5\u02B6\u02B8\u02BC;
 
-	// Token: 0x040002E8 RID: 744
 	[SerializeField]
 	private GameObject pauseMenu;
 
-	// Token: 0x040002E9 RID: 745
 	public GameObject \u02B5\u02BA\u02B4\u02BA\u02B6\u02C1\u02BB\u02BE\u02B6\u02BC\u02BE;
 
-	// Token: 0x040002EA RID: 746
 	private Coroutine \u02BF\u02BF\u02BB\u02B4\u02C1\u02BB\u02B3\u02B8\u02C1\u02BD\u02B9;
 
-	// Token: 0x040002EB RID: 747
 	[HideInInspector]
 	public bool[] \u02B6\u02B7\u02BF\u02C0\u02B6\u02B7\u02B2\u02BE\u02C1\u02B7\u02C0;
 
-	// Token: 0x040002EC RID: 748
 	private bool \u02BB\u02B8\u02B2\u02BC\u02B4\u02B4\u02BE\u02B6\u02BC\u02B4\u02B4;
 
-	// Token: 0x040002ED RID: 749
 	[HideInInspector]
 	public bool \u02BC\u02BF\u02B5\u02B5\u02C0\u02BF\u02BC\u02C0\u02B5\u02B4\u02BE;
 
-	// Token: 0x040002EE RID: 750
 	[HideInInspector]
 	public BasePlayer _basePlayer;
 
-	// Token: 0x040002F0 RID: 752
 	private int \u02B5\u02B4\u02B9\u02C1\u02BC\u02C0\u02B4\u02B4\u02BC\u02B6\u02B3;
 
-	// Token: 0x040002F1 RID: 753
 	public int \u02B4\u02B9\u02B4\u02B8\u02B5\u02B5\u02BB\u02B3\u02BE\u02B2\u02B4;
 
-	// Token: 0x040002F2 RID: 754
 	private Coroutine \u02B4\u02B5\u02B3\u02BB\u02B9\u02BD\u02B5\u02B4\u02B9\u02BC\u02BC;
 
-	// Token: 0x040002F3 RID: 755
 	[HideInInspector]
 	public int \u02C1\u02B3\u02C0\u02BF\u02BC\u02B5\u02B5\u02B2\u02B9\u02B5\u02BB;
 
-	// Token: 0x040002F4 RID: 756
 	private int \u02B2\u02BE\u02BD\u02C1\u02BA\u02C1\u02B8\u02B8\u02B4\u02B6\u02B6;
 
-	// Token: 0x040002F5 RID: 757
 	private int \u02B3\u02B7\u02BB\u02B4\u02BC\u02B3\u02B5\u02B9\u02BD\u02B3\u02B2;
 
-	// Token: 0x040002F6 RID: 758
 	public static GameManager instance;
 }

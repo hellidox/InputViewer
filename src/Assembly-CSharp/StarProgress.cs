@@ -1,12 +1,10 @@
-﻿using System;
+using System;
 using System.Linq;
 using StrikeCore;
 using UnityEngine;
 
-// Token: 0x020001FD RID: 509
 public class StarProgress : MonoBehaviour
 {
-	// Token: 0x060016DF RID: 5855 RVA: 0x000AECCC File Offset: 0x000ACECC
 	public void \u02B5\u02BB\u02B9\u02B7\u02B9\u02BA\u02BD\u02BF\u02B6\u02B4\u02BE()
 	{
 		this.\u02B7\u02BE\u02B3\u02C1\u02BE\u02B9\u02B9\u02BF\u02BE\u02BA\u02B3 = 0;
@@ -15,7 +13,6 @@ public class StarProgress : MonoBehaviour
 		this.\u02B8\u02B3\u02C1\u02B7\u02BA\u02B9\u02BA\u02BA\u02BA\u02B2\u02C1.sprite = (this.\u02B7\u02C0\u02BA\u02BF\u02BB\u02C1\u02C0\u02BD\u02B7\u02BB\u02B3.sprite = null);
 	}
 
-	// Token: 0x060016E0 RID: 5856 RVA: 0x000AED08 File Offset: 0x000ACF08
 	public void \u02BD\u02B2\u02BA\u02C1\u02BD\u02B2\u02C0\u02B6\u02B7\u02BF\u02B5(int \u02B3\u02C0\u02BB\u02B3\u02B7\u02BB\u02BE\u02B8\u02B6\u02B6\u02B8)
 	{
 		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
@@ -30,7 +27,6 @@ public class StarProgress : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060016E1 RID: 5857 RVA: 0x000AED68 File Offset: 0x000ACF68
 	public void \u02C0\u02B4\u02BA\u02B9\u02B2\u02BD\u02B9\u02BD\u02B4\u02B8\u02BA()
 	{
 		this.\u02B7\u02BE\u02B3\u02C1\u02BE\u02B9\u02B9\u02BF\u02BE\u02BA\u02B3 = 1;
@@ -39,7 +35,6 @@ public class StarProgress : MonoBehaviour
 		this.\u02B8\u02B3\u02C1\u02B7\u02BA\u02B9\u02BA\u02BA\u02BA\u02B2\u02C1.sprite = (this.\u02B7\u02C0\u02BA\u02BF\u02BB\u02C1\u02C0\u02BD\u02B7\u02BB\u02B3.sprite = null);
 	}
 
-	// Token: 0x060016E2 RID: 5858 RVA: 0x000AEDA4 File Offset: 0x000ACFA4
 	public void \u02BE\u02B7\u02B4\u02BC\u02C1\u02B3\u02BB\u02B2\u02B4\u02BF\u02B2()
 	{
 		this.\u02B7\u02BE\u02B3\u02C1\u02BE\u02B9\u02B9\u02BF\u02BE\u02BA\u02B3 = 0;
@@ -48,7 +43,6 @@ public class StarProgress : MonoBehaviour
 		this.\u02B8\u02B3\u02C1\u02B7\u02BA\u02B9\u02BA\u02BA\u02BA\u02B2\u02C1.sprite = (this.\u02B7\u02C0\u02BA\u02BF\u02BB\u02C1\u02C0\u02BD\u02B7\u02BB\u02B3.sprite = null);
 	}
 
-	// Token: 0x060016E3 RID: 5859 RVA: 0x000AEDE0 File Offset: 0x000ACFE0
 	public void \u02B5\u02C0\u02BD\u02B3\u02BA\u02C0\u02BB\u02BA\u02BE\u02B9\u02BE()
 	{
 		this.\u02B7\u02BE\u02B3\u02C1\u02BE\u02B9\u02B9\u02BF\u02BE\u02BA\u02B3 = 0;
@@ -57,7 +51,6 @@ public class StarProgress : MonoBehaviour
 		this.\u02B8\u02B3\u02C1\u02B7\u02BA\u02B9\u02BA\u02BA\u02BA\u02B2\u02C1.sprite = (this.\u02B7\u02C0\u02BA\u02BF\u02BB\u02C1\u02C0\u02BD\u02B7\u02BB\u02B3.sprite = null);
 	}
 
-	// Token: 0x060016E4 RID: 5860 RVA: 0x000AEE1C File Offset: 0x000AD01C
 	public void \u02B4\u02BC\u02BA\u02B2\u02B2\u02B4\u02BC\u02C0\u02BC\u02B2\u02BD(int \u02B3\u02C0\u02BB\u02B3\u02B7\u02BB\u02BE\u02B8\u02B6\u02B6\u02B8)
 	{
 		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
@@ -72,7 +65,6 @@ public class StarProgress : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060016E5 RID: 5861 RVA: 0x000AEE7C File Offset: 0x000AD07C
 	public void Start()
 	{
 		this.sr = this.\u02B8\u02BB\u02B2\u02BE\u02B2\u02BA\u02BE\u02B9\u02C1\u02B3\u02B2.gameObject.GetComponent<SpriteRenderer>();
@@ -88,7 +80,6 @@ public class StarProgress : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060016E6 RID: 5862 RVA: 0x000AEF44 File Offset: 0x000AD144
 	public void \u02BF\u02BA\u02B5\u02B8\u02B5\u02BF\u02B2\u02BF\u02B3\u02BC\u02BA()
 	{
 		this.\u02B8\u02B3\u02C1\u02B7\u02BA\u02B9\u02BA\u02BA\u02BA\u02B2\u02C1.sprite = (this.\u02B7\u02C0\u02BA\u02BF\u02BB\u02C1\u02C0\u02BD\u02B7\u02BB\u02B3.sprite = null);
@@ -100,7 +91,6 @@ public class StarProgress : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060016E7 RID: 5863 RVA: 0x000AEDE0 File Offset: 0x000ACFE0
 	public void Reset()
 	{
 		this.\u02B7\u02BE\u02B3\u02C1\u02BE\u02B9\u02B9\u02BF\u02BE\u02BA\u02B3 = 0;
@@ -109,7 +99,6 @@ public class StarProgress : MonoBehaviour
 		this.\u02B8\u02B3\u02C1\u02B7\u02BA\u02B9\u02BA\u02BA\u02BA\u02B2\u02C1.sprite = (this.\u02B7\u02C0\u02BA\u02BF\u02BB\u02C1\u02C0\u02BD\u02B7\u02BB\u02B3.sprite = null);
 	}
 
-	// Token: 0x060016E8 RID: 5864 RVA: 0x000AEFB4 File Offset: 0x000AD1B4
 	public void \u02BD\u02BA\u02B5\u02B9\u02C1\u02BE\u02BA\u02BF\u02B9\u02B7\u02B8(int \u02B3\u02C0\u02BB\u02B3\u02B7\u02BB\u02BE\u02B8\u02B6\u02B6\u02B8)
 	{
 		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
@@ -124,7 +113,6 @@ public class StarProgress : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060016E9 RID: 5865 RVA: 0x000AF014 File Offset: 0x000AD214
 	public void \u02BA\u02BD\u02B8\u02BA\u02BE\u02C0\u02B2\u02BE\u02B9\u02B2\u02BB(int \u02BC\u02BC\u02C1\u02B4\u02BF\u02B8\u02BF\u02B2\u02BA\u02B3\u02B5)
 	{
 		this.ticker += Time.deltaTime;
@@ -195,7 +183,6 @@ public class StarProgress : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060016EB RID: 5867 RVA: 0x000AEF44 File Offset: 0x000AD144
 	public void \u02B4\u02BA\u02BE\u02BB\u02B5\u02BB\u02C1\u02B2\u02B4\u02B2\u02BF()
 	{
 		this.\u02B8\u02B3\u02C1\u02B7\u02BA\u02B9\u02BA\u02BA\u02BA\u02B2\u02C1.sprite = (this.\u02B7\u02C0\u02BA\u02BF\u02BB\u02C1\u02C0\u02BD\u02B7\u02BB\u02B3.sprite = null);
@@ -207,7 +194,6 @@ public class StarProgress : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060016EC RID: 5868 RVA: 0x000AEDA4 File Offset: 0x000ACFA4
 	public void \u02B6\u02BE\u02B4\u02BD\u02B5\u02B9\u02BF\u02B5\u02BE\u02BA\u02BA()
 	{
 		this.\u02B7\u02BE\u02B3\u02C1\u02BE\u02B9\u02B9\u02BF\u02BE\u02BA\u02B3 = 0;
@@ -216,7 +202,6 @@ public class StarProgress : MonoBehaviour
 		this.\u02B8\u02B3\u02C1\u02B7\u02BA\u02B9\u02BA\u02BA\u02BA\u02B2\u02C1.sprite = (this.\u02B7\u02C0\u02BA\u02BF\u02BB\u02C1\u02C0\u02BD\u02B7\u02BB\u02B3.sprite = null);
 	}
 
-	// Token: 0x060016ED RID: 5869 RVA: 0x000AF290 File Offset: 0x000AD490
 	public void \u02BE\u02BF\u02BA\u02B7\u02BA\u02BF\u02B8\u02BB\u02BC\u02BF\u02C0(int \u02BC\u02BC\u02C1\u02B4\u02BF\u02B8\u02BF\u02B2\u02BA\u02B3\u02B5)
 	{
 		if (this.\u02BE\u02B2\u02BA\u02B3\u02BD\u02BD\u02BF\u02BA\u02B7\u02B4\u02B2 == null)
@@ -266,7 +251,6 @@ public class StarProgress : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060016EE RID: 5870 RVA: 0x000AF444 File Offset: 0x000AD644
 	public StarProgress()
 	{
 		this.\u02BE\u02B2\u02BA\u02B3\u02BD\u02BD\u02BF\u02BA\u02B7\u02B4\u02B2 = new int[9];
@@ -278,7 +262,6 @@ public class StarProgress : MonoBehaviour
 		this.\u02BF\u02BD\u02BF\u02B7\u02B3\u02B3\u02BB\u02B3\u02B7\u02BF\u02BB = -1;
 	}
 
-	// Token: 0x060016EF RID: 5871 RVA: 0x000AF4A0 File Offset: 0x000AD6A0
 	public void \u02B8\u02B2\u02C1\u02B8\u02BB\u02BA\u02B7\u02B7\u02BD\u02C1\u02BC(int \u02B3\u02C0\u02BB\u02B3\u02B7\u02BB\u02BE\u02B8\u02B6\u02B6\u02B8)
 	{
 		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
@@ -293,79 +276,54 @@ public class StarProgress : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04001085 RID: 4229
 	public Transform \u02B8\u02BB\u02B2\u02BE\u02B2\u02BA\u02BE\u02B9\u02C1\u02B3\u02B2;
 
-	// Token: 0x04001086 RID: 4230
 	public Transform \u02C1\u02BE\u02B8\u02B3\u02B3\u02BD\u02B6\u02BB\u02BA\u02BD\u02B6;
 
-	// Token: 0x04001087 RID: 4231
 	public SpriteRenderer \u02B8\u02B3\u02C1\u02B7\u02BA\u02B9\u02BA\u02BA\u02BA\u02B2\u02C1;
 
-	// Token: 0x04001088 RID: 4232
 	public SpriteRenderer \u02B7\u02C0\u02BA\u02BF\u02BB\u02C1\u02C0\u02BD\u02B7\u02BB\u02B3;
 
-	// Token: 0x04001089 RID: 4233
 	public Sprite[] \u02BC\u02BA\u02B3\u02B8\u02BD\u02B6\u02BB\u02BC\u02B6\u02B9\u02B7;
 
-	// Token: 0x0400108A RID: 4234
 	[SerializeField]
 	private ParticleSystem starParticles;
 
-	// Token: 0x0400108B RID: 4235
 	private int[] \u02BE\u02B2\u02BA\u02B3\u02BD\u02BD\u02BF\u02BA\u02B7\u02B4\u02B2;
 
-	// Token: 0x0400108C RID: 4236
 	private int \u02B7\u02BE\u02B3\u02C1\u02BE\u02B9\u02B9\u02BF\u02BE\u02BA\u02B3;
 
-	// Token: 0x0400108D RID: 4237
 	private int \u02BF\u02B3\u02B6\u02BF\u02B9\u02B4\u02B9\u02BF\u02C0\u02BE\u02C1;
 
-	// Token: 0x0400108E RID: 4238
 	private int \u02BD\u02B7\u02B3\u02C0\u02BC\u02BC\u02B7\u02B3\u02BE\u02BD\u02B2;
 
-	// Token: 0x0400108F RID: 4239
 	private int \u02B5\u02B4\u02BA\u02BC\u02B3\u02C1\u02B8\u02B3\u02BB\u02BB\u02C1;
 
-	// Token: 0x04001090 RID: 4240
 	private int \u02B8\u02B3\u02B3\u02B2\u02B7\u02B2\u02C0\u02B6\u02BA\u02BE\u02BC;
 
-	// Token: 0x04001091 RID: 4241
 	private float \u02BE\u02B4\u02BB\u02BE\u02BC\u02C0\u02B3\u02BB\u02B7\u02B5\u02B4;
 
-	// Token: 0x04001092 RID: 4242
 	private float \u02B7\u02B4\u02C1\u02C1\u02BC\u02B2\u02BC\u02BD\u02B8\u02BF\u02BC;
 
-	// Token: 0x04001093 RID: 4243
 	private float \u02B7\u02B2\u02B3\u02B2\u02BD\u02BC\u02BD\u02B4\u02B6\u02BE\u02BD;
 
-	// Token: 0x04001094 RID: 4244
 	private float \u02C0\u02B7\u02B2\u02BE\u02B9\u02BF\u02C0\u02BB\u02C0\u02BA\u02BA;
 
-	// Token: 0x04001095 RID: 4245
 	private float \u02C1\u02C1\u02B2\u02B8\u02B4\u02B3\u02B2\u02B9\u02B4\u02BD\u02C1;
 
-	// Token: 0x04001096 RID: 4246
 	private float \u02BA\u02B4\u02B5\u02BE\u02B8\u02BD\u02B3\u02C1\u02B5\u02B2\u02BD;
 
-	// Token: 0x04001097 RID: 4247
 	private int \u02BF\u02BD\u02BF\u02B7\u02B3\u02B3\u02BB\u02B3\u02B7\u02BF\u02BB;
 
-	// Token: 0x04001098 RID: 4248
 	public static readonly float[] \u02B3\u02B3\u02B5\u02B7\u02BA\u02B3\u02BD\u02C0\u02BD\u02B8\u02C1 = new float[] { 0.1f, 0.5f, 1f, 2f, 2.8f, 3.6f, 4.4f, 5.2f, 6f }.Select((float x) => x *= 1f).ToArray<float>();
 
-	// Token: 0x04001099 RID: 4249
 	private ParticleSystem.EmissionModule v;
 
-	// Token: 0x0400109A RID: 4250
 	private SpriteRenderer sr;
 
-	// Token: 0x0400109B RID: 4251
 	private float ticker;
 
-	// Token: 0x0400109C RID: 4252
 	private string lastColor;
 
-	// Token: 0x0400109D RID: 4253
 	private Color origColor;
 }

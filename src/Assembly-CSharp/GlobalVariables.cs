@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -16,10 +16,8 @@ using UnityEngine.Rendering;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
-// Token: 0x02000067 RID: 103
 public class GlobalVariables : MonoBehaviour
 {
-	// Token: 0x06000424 RID: 1060 RVA: 0x0003010C File Offset: 0x0002E30C
 	public void \u02BD\u02BB\u02BE\u02BF\u02B4\u02BE\u02B9\u02B3\u02BF\u02B8\u02B9()
 	{
 		this.\u02B3\u02B9\u02BC\u02B7\u02BA\u02B9\u02BA\u02B2\u02B4\u02B7\u02B3 = new List<HighwayData>();
@@ -97,7 +95,6 @@ public class GlobalVariables : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000425 RID: 1061 RVA: 0x000303E0 File Offset: 0x0002E5E0
 	public static Texture2D \u02C0\u02C0\u02B9\u02C1\u02B6\u02C1\u02C1\u02BA\u02BA\u02B9\u02B5(byte[] \u02BD\u02BD\u02BF\u02BF\u02BE\u02B2\u02B5\u02BD\u02BC\u02B7\u02C0, bool \u02B7\u02B6\u02B4\u02B9\u02B8\u02B9\u02B2\u02BA\u02B5\u02B3\u02BC = false)
 	{
 		if (\u02BD\u02BD\u02BF\u02BF\u02BE\u02B2\u02B5\u02BD\u02BC\u02B7\u02C0 == null)
@@ -124,7 +121,6 @@ public class GlobalVariables : MonoBehaviour
 		return texture2D;
 	}
 
-	// Token: 0x06000426 RID: 1062 RVA: 0x00030454 File Offset: 0x0002E654
 	public Instrument \u02BA\u02BB\u02B6\u02B2\u02BF\u02C0\u02BF\u02B3\u02B8\u02B3\u02BE()
 	{
 		byte b = 0;
@@ -145,13 +141,11 @@ public class GlobalVariables : MonoBehaviour
 		return instrument;
 	}
 
-	// Token: 0x06000427 RID: 1063 RVA: 0x00008183 File Offset: 0x00006383
 	public void \u02B9\u02BB\u02BE\u02B6\u02BE\u02C0\u02B5\u02B9\u02B9\u02B8\u02B8(bool \u02B4\u02B6\u02B9\u02B8\u02B8\u02B7\u02B8\u02BA\u02C1\u02B6\u02BE = false)
 	{
 		base.StartCoroutine(this.\u02B3\u02B2\u02BD\u02BD\u02BD\u02BB\u02BC\u02B2\u02BB\u02BF\u02B5(\u02B4\u02B6\u02B9\u02B8\u02B8\u02B7\u02B8\u02BA\u02C1\u02B6\u02BE));
 	}
 
-	// Token: 0x06000428 RID: 1064 RVA: 0x000304D0 File Offset: 0x0002E6D0
 	private void \u02C0\u02B5\u02B3\u02B7\u02B9\u02BC\u02B4\u02C0\u02B7\u02B2\u02BA(string \u02B5\u02BF\u02B4\u02C1\u02BE\u02B7\u02C0\u02B9\u02C1\u02B8\u02BC)
 	{
 		if (!__FIXME_clon_util.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(\u02B5\u02BF\u02B4\u02C1\u02BE\u02B7\u02C0\u02B9\u02C1\u02B8\u02BC))
@@ -176,7 +170,6 @@ public class GlobalVariables : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000429 RID: 1065 RVA: 0x00030554 File Offset: 0x0002E754
 	public FullScreenMode \u02B8\u02B6\u02BD\u02BC\u02BB\u02BD\u02BB\u02B8\u02C0\u02C0\u02C1()
 	{
 		switch (SettingsController.\u02BD\u02BF\u02B7\u02B9\u02B6\u02B8\u02BB\u02BA\u02B7\u02B8\u02B3.CurrentValue)
@@ -192,7 +185,6 @@ public class GlobalVariables : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600042A RID: 1066 RVA: 0x00030588 File Offset: 0x0002E788
 	public void \u02B7\u02BE\u02C0\u02B2\u02C1\u02C0\u02B6\u02BB\u02B7\u02B4\u02B3()
 	{
 		this.\u02B3\u02B9\u02BC\u02B7\u02BA\u02B9\u02BA\u02B2\u02B4\u02B7\u02B3 = new List<HighwayData>();
@@ -266,7 +258,6 @@ public class GlobalVariables : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600042B RID: 1067 RVA: 0x00030864 File Offset: 0x0002EA64
 	public void \u02B2\u02BE\u02BE\u02B6\u02B5\u02BB\u02C0\u02C0\u02B6\u02C1\u02B8(bool \u02C1\u02BB\u02B2\u02B7\u02BD\u02B9\u02BF\u02C0\u02B6\u02C0\u02B3)
 	{
 		QualitySettings.vSyncCount = (SettingsController.\u02B3\u02B2\u02BD\u02C1\u02B2\u02B4\u02B5\u02B3\u02C1\u02B2\u02B6 ? 0 : 0);
@@ -283,7 +274,6 @@ public class GlobalVariables : MonoBehaviour
 		Application.targetFrameRate = SettingsController.fpsCap.CurrentValue;
 	}
 
-	// Token: 0x0600042C RID: 1068 RVA: 0x000308C4 File Offset: 0x0002EAC4
 	public void \u02BC\u02B2\u02BA\u02C1\u02C0\u02BF\u02B8\u02C0\u02B6\u02BA\u02B2(bool \u02BF\u02BC\u02BE\u02B2\u02B4\u02B3\u02BC\u02BF\u02BF\u02B8\u02B8 = false)
 	{
 		ThumbnailCache.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BC\u02BF\u02B2\u02B6\u02B6\u02B2\u02B5\u02BF\u02BF\u02BB\u02B5();
@@ -321,7 +311,6 @@ public class GlobalVariables : MonoBehaviour
 		base.StartCoroutine(ThumbnailCache.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B5\u02BF\u02B4\u02BF\u02B6\u02B6\u02BE\u02B5\u02C0\u02B4\u02B9(list.ToArray(), array));
 	}
 
-	// Token: 0x0600042D RID: 1069 RVA: 0x00008193 File Offset: 0x00006393
 	public static Texture2D \u02C0\u02B8\u02C1\u02B5\u02B4\u02B8\u02B6\u02B6\u02BB\u02BC\u02B5(string \u02B5\u02BF\u02B4\u02C1\u02BE\u02B7\u02C0\u02B9\u02C1\u02B8\u02BC)
 	{
 		if (!File.Exists(\u02B5\u02BF\u02B4\u02C1\u02BE\u02B7\u02C0\u02B9\u02C1\u02B8\u02BC))
@@ -331,13 +320,11 @@ public class GlobalVariables : MonoBehaviour
 		return GlobalVariables.\u02C0\u02C0\u02B9\u02C1\u02B6\u02C1\u02C1\u02BA\u02BA\u02B9\u02B5(File.ReadAllBytes(\u02B5\u02BF\u02B4\u02C1\u02BE\u02B7\u02C0\u02B9\u02C1\u02B8\u02BC), false);
 	}
 
-	// Token: 0x0600042E RID: 1070 RVA: 0x000081AB File Offset: 0x000063AB
 	public void \u02B9\u02BC\u02BB\u02BC\u02C1\u02C0\u02B4\u02B9\u02BC\u02BC\u02C0(bool \u02B4\u02B6\u02B9\u02B8\u02B8\u02B7\u02B8\u02BA\u02C1\u02B6\u02BE = false)
 	{
 		base.StartCoroutine(this.\u02B9\u02C1\u02BB\u02B8\u02BA\u02BC\u02BA\u02BC\u02B8\u02B5\u02B2(\u02B4\u02B6\u02B9\u02B8\u02B8\u02B7\u02B8\u02BA\u02C1\u02B6\u02BE));
 	}
 
-	// Token: 0x0600042F RID: 1071 RVA: 0x00030A14 File Offset: 0x0002EC14
 	public Texture2D \u02BC\u02B3\u02C1\u02C0\u02B6\u02B2\u02BE\u02B7\u02C1\u02BF\u02B5(int \u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5, bool \u02BE\u02C1\u02B2\u02C1\u02B7\u02BC\u02B8\u02B7\u02B5\u02B3\u02B9 = false)
 	{
 		HighwayData highwayData = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B3\u02B9\u02BC\u02B7\u02BA\u02B9\u02BA\u02B2\u02B4\u02B7\u02B3[\u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5];
@@ -377,13 +364,11 @@ public class GlobalVariables : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x06000430 RID: 1072 RVA: 0x000081BB File Offset: 0x000063BB
 	private static string \u02C1\u02BF\u02B3\u02B6\u02B9\u02BE\u02BB\u02BA\u02B3\u02B5\u02B7(string \u02BD\u02BD\u02BF\u02BF\u02BE\u02B2\u02B5\u02BD\u02BC\u02B7\u02C0)
 	{
 		return \u02C1\u02B2\u02B8\u02B9\u02C0\u02BC\u02B9\u02B9\u02B6\u02B2\u02B3.\u02B6\u02B3\u02BD\u02BB\u02BE\u02B7\u02BF\u02BC\u02B2\u02BE\u02B8(SHA1.Create().ComputeHash(Encoding.ASCII.GetBytes(\u02BD\u02BD\u02BF\u02BF\u02BE\u02B2\u02B5\u02BD\u02BC\u02B7\u02C0)));
 	}
 
-	// Token: 0x06000431 RID: 1073 RVA: 0x00030AC0 File Offset: 0x0002ECC0
 	private void Update()
 	{
 		if ((Time.frameCount & 15) == 1)
@@ -417,7 +402,6 @@ public class GlobalVariables : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000432 RID: 1074 RVA: 0x00030B58 File Offset: 0x0002ED58
 	public static Texture2D \u02B3\u02BE\u02B9\u02BE\u02B2\u02C0\u02BB\u02B8\u02B9\u02B5\u02B5(byte[] \u02BD\u02BD\u02BF\u02BF\u02BE\u02B2\u02B5\u02BD\u02BC\u02B7\u02C0, bool \u02B7\u02B6\u02B4\u02B9\u02B8\u02B9\u02B2\u02BA\u02B5\u02B3\u02BC = false)
 	{
 		if (\u02BD\u02BD\u02BF\u02BF\u02BE\u02B2\u02B5\u02BD\u02BC\u02B7\u02C0 == null)
@@ -444,7 +428,6 @@ public class GlobalVariables : MonoBehaviour
 		return texture2D;
 	}
 
-	// Token: 0x06000433 RID: 1075 RVA: 0x00030BCC File Offset: 0x0002EDCC
 	public void \u02BC\u02BE\u02B5\u02BC\u02B6\u02B5\u02BA\u02BD\u02B6\u02B5\u02B8(bool \u02BF\u02BC\u02BE\u02B2\u02B4\u02B3\u02BC\u02BF\u02BF\u02B8\u02B8 = false)
 	{
 		this.\u02B7\u02B4\u02BB\u02C0\u02B5\u02B6\u02B6\u02B9\u02B9\u02B3\u02C0(this.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8);
@@ -461,7 +444,6 @@ public class GlobalVariables : MonoBehaviour
 		this.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE.\u02B4\u02C0\u02B4\u02B6\u02BC\u02BE\u02BE\u02B8\u02BA\u02BC\u02B7();
 	}
 
-	// Token: 0x06000434 RID: 1076 RVA: 0x00030C2C File Offset: 0x0002EE2C
 	public static Sprite \u02BA\u02B7\u02B4\u02B5\u02B2\u02BC\u02B9\u02B5\u02B9\u02BE\u02B8(Texture2D \u02B7\u02BE\u02BF\u02B4\u02B2\u02B4\u02BA\u02BE\u02BC\u02B8\u02B9)
 	{
 		if (\u02B7\u02BE\u02BF\u02B4\u02B2\u02B4\u02BA\u02BE\u02BC\u02B8\u02B9 == null)
@@ -472,7 +454,6 @@ public class GlobalVariables : MonoBehaviour
 		return Sprite.Create(\u02B7\u02BE\u02BF\u02B4\u02B2\u02B4\u02BA\u02BE\u02BC\u02B8\u02B9, new Rect(0f, 0f, (float)\u02B7\u02BE\u02BF\u02B4\u02B2\u02B4\u02BA\u02BE\u02BC\u02B8\u02B9.width, (float)\u02B7\u02BE\u02BF\u02B4\u02B2\u02B4\u02BA\u02BE\u02BC\u02B8\u02B9.height), new Vector2(0f, 0f), 100f, 0U, SpriteMeshType.FullRect);
 	}
 
-	// Token: 0x06000435 RID: 1077 RVA: 0x00030C84 File Offset: 0x0002EE84
 	private void \u02B2\u02B9\u02C1\u02C1\u02B2\u02B3\u02C1\u02BF\u02BC\u02BB\u02C1()
 	{
 		this.\u02B4\u02B6\u02C1\u02BD\u02BA\u02BE\u02C1\u02B9\u02B2\u02BD\u02B9 = "{0:N0}";
@@ -526,7 +507,6 @@ public class GlobalVariables : MonoBehaviour
 		this.\u02B9\u02BE\u02B5\u02B9\u02C1\u02BB\u02B6\u02BD\u02BC\u02C1\u02B5 = true;
 	}
 
-	// Token: 0x06000436 RID: 1078 RVA: 0x00030E08 File Offset: 0x0002F008
 	private void Start()
 	{
 		this.\u02B4\u02B6\u02C1\u02BD\u02BA\u02BE\u02C1\u02B9\u02B2\u02BD\u02B9 = ".mp4|.avi|.webm|.vp8|.ogv|.mpeg";
@@ -580,7 +560,6 @@ public class GlobalVariables : MonoBehaviour
 		this.\u02B9\u02BE\u02B5\u02B9\u02C1\u02BB\u02B6\u02BD\u02BC\u02C1\u02B5 = true;
 	}
 
-	// Token: 0x06000437 RID: 1079 RVA: 0x000081D7 File Offset: 0x000063D7
 	private IEnumerator \u02B9\u02C1\u02BB\u02B8\u02BA\u02BC\u02BA\u02BC\u02B8\u02B5\u02B2(bool \u02B4\u02B6\u02B9\u02B8\u02B8\u02B7\u02B8\u02BA\u02C1\u02B6\u02BE = false)
 	{
 		GlobalVariables.\u02BD\u02BA\u02BF\u02BE\u02BD\u02B2\u02B9\u02B7\u02B6\u02B7\u02C0 u02BD_u02BA_u02BF_u02BE_u02BD_u02B2_u02B9_u02B7_u02B6_u02B7_u02C = new GlobalVariables.\u02BD\u02BA\u02BF\u02BE\u02BD\u02B2\u02B9\u02B7\u02B6\u02B7\u02C0(1);
@@ -589,7 +568,6 @@ public class GlobalVariables : MonoBehaviour
 		return u02BD_u02BA_u02BF_u02BE_u02BD_u02B2_u02B9_u02B7_u02B6_u02B7_u02C;
 	}
 
-	// Token: 0x06000438 RID: 1080 RVA: 0x000081ED File Offset: 0x000063ED
 	public void \u02B6\u02BC\u02B4\u02B9\u02B7\u02B4\u02BE\u02BF\u02B4\u02BE\u02B4(bool \u02C1\u02BB\u02B2\u02B7\u02BD\u02B9\u02BF\u02C0\u02B6\u02C0\u02B3)
 	{
 		if ((Time.frameCount & 255) == 0)
@@ -599,7 +577,6 @@ public class GlobalVariables : MonoBehaviour
 		Application.targetFrameRate = SettingsController.fpsCap * OnDemandRendering.renderFrameInterval;
 	}
 
-	// Token: 0x06000439 RID: 1081 RVA: 0x00030F8C File Offset: 0x0002F18C
 	private void Awake()
 	{
 		GlobalVariables.LoadStats();
@@ -626,7 +603,6 @@ public class GlobalVariables : MonoBehaviour
 		this.\u02B5\u02B3\u02B3\u02BB\u02BA\u02BB\u02C0\u02BE\u02B2\u02B5\u02B9();
 	}
 
-	// Token: 0x0600043A RID: 1082 RVA: 0x00031054 File Offset: 0x0002F254
 	private string \u02C0\u02BA\u02BA\u02C1\u02B6\u02B5\u02B4\u02BC\u02BF\u02BC\u02BA()
 	{
 		return StringUtils.StripTags(SettingsController.\u02BC\u02B4\u02B2\u02B2\u02B6\u02B3\u02BB\u02B8\u02B2\u02C1\u02B3.CurrentValue.Replace("%a", this.\u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1.Artist.\u02C1\u02B4\u02BF\u02C1\u02BE\u02B9\u02B6\u02B7\u02B5\u02B7\u02B5).Replace("%s", this.\u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1.Name.\u02C1\u02B4\u02BF\u02C1\u02BE\u02B9\u02B6\u02B7\u02B5\u02B7\u02B5 + (SettingsController.\u02B3\u02B7\u02B4\u02BA\u02B3\u02B9\u02B7\u02BE\u02B2\u02B7\u02BE.IsPresetValue ? "" : (" (" + SettingsController.\u02B3\u02B7\u02B4\u02BA\u02B3\u02B9\u02B7\u02BE\u02B2\u02B7\u02BE.GetPercentString + ")"))).Replace("%n", Environment.NewLine)
@@ -638,7 +614,6 @@ public class GlobalVariables : MonoBehaviour
 			.Replace("%l", this.\u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1.songLength.ToString()), false);
 	}
 
-	// Token: 0x0600043B RID: 1083 RVA: 0x00031184 File Offset: 0x0002F384
 	public void \u02B4\u02C0\u02BD\u02B5\u02B3\u02B3\u02C0\u02B7\u02B6\u02B2\u02BB()
 	{
 		this.\u02B3\u02B4\u02B5\u02B9\u02B8\u02BC\u02BC\u02B8\u02C0\u02B5\u02B9.Clear();
@@ -678,7 +653,6 @@ public class GlobalVariables : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600043C RID: 1084 RVA: 0x000312BC File Offset: 0x0002F4BC
 	public int \u02B3\u02B3\u02B4\u02B2\u02BA\u02BB\u02B8\u02C1\u02B3\u02BE\u02B5(string \u02BF\u02B4\u02C1\u02BC\u02BC\u02B2\u02BC\u02BB\u02BA\u02B2\u02B6)
 	{
 		if (\u02BF\u02B4\u02C1\u02BC\u02BC\u02B2\u02BC\u02BB\u02BA\u02B2\u02B6 == "clientnostart")
@@ -695,7 +669,6 @@ public class GlobalVariables : MonoBehaviour
 		return 0;
 	}
 
-	// Token: 0x0600043D RID: 1085 RVA: 0x0003130C File Offset: 0x0002F50C
 	public static Texture2D \u02B4\u02B7\u02BF\u02BC\u02B4\u02B2\u02BF\u02B8\u02BF\u02BF\u02BE(string \u02C0\u02C1\u02BC\u02C1\u02B8\u02B2\u02BA\u02B4\u02B5\u02B6\u02B5, params string[] \u02C0\u02BF\u02BA\u02B7\u02C0\u02C0\u02B2\u02BA\u02B3\u02B7\u02BB)
 	{
 		foreach (string text in \u02C0\u02BF\u02BA\u02B7\u02C0\u02C0\u02B2\u02BA\u02B3\u02B7\u02BB)
@@ -713,7 +686,6 @@ public class GlobalVariables : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x0600043E RID: 1086 RVA: 0x00031354 File Offset: 0x0002F554
 	private string \u02C1\u02C1\u02C1\u02B9\u02BA\u02B4\u02B9\u02B4\u02B6\u02B9\u02BA()
 	{
 		return StringUtils.StripTags(SettingsController.\u02BC\u02B4\u02B2\u02B2\u02B6\u02B3\u02BB\u02B8\u02B2\u02C1\u02B3.CurrentValue.Replace("Export Current Song", this.\u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1.Artist.\u02C1\u02B4\u02BF\u02C1\u02BE\u02B9\u02B6\u02B7\u02B5\u02B7\u02B5).Replace("charter", this.\u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1.Name.\u02C1\u02B4\u02BF\u02C1\u02BE\u02B9\u02B6\u02B7\u02B5\u02B7\u02B5 + (SettingsController.\u02B3\u02B7\u02B4\u02BA\u02B3\u02B9\u02B7\u02BE\u02B2\u02B7\u02BE.IsPresetValue ? "DoubleGuitar" : ("song" + SettingsController.\u02B3\u02B7\u02B4\u02BA\u02B3\u02B9\u02B7\u02BE\u02B2\u02B7\u02BE.GetPercentString + "Random"))).Replace("Flames", Environment.NewLine)
@@ -725,7 +697,6 @@ public class GlobalVariables : MonoBehaviour
 			.Replace("6 Fret Bass Guitar", this.\u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1.songLength.ToString()), true);
 	}
 
-	// Token: 0x0600043F RID: 1087 RVA: 0x00031484 File Offset: 0x0002F684
 	public bool \u02B4\u02BC\u02BA\u02B4\u02B5\u02B5\u02BD\u02BC\u02C1\u02B9\u02BA()
 	{
 		if (this.\u02BC\u02C0\u02B5\u02BD\u02B2\u02BC\u02BA\u02BC\u02B9\u02B6\u02B6[SettingsController.\u02B7\u02B3\u02BF\u02BF\u02B4\u02B8\u02C0\u02BB\u02BB\u02BF\u02BE.CurrentValue] == \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B2\u02B9\u02B4\u02BC\u02BE\u02B8\u02B8\u02B9\u02B3\u02B2\u02B5)
@@ -751,7 +722,6 @@ public class GlobalVariables : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x06000440 RID: 1088 RVA: 0x00031528 File Offset: 0x0002F728
 	public void \u02BB\u02C1\u02BC\u02BE\u02B3\u02C1\u02B5\u02B3\u02BA\u02B8\u02BB()
 	{
 		string text = Path.Combine(this.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8, "Image Backgrounds");
@@ -766,7 +736,6 @@ public class GlobalVariables : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000441 RID: 1089 RVA: 0x0003158C File Offset: 0x0002F78C
 	public void \u02BD\u02B5\u02B4\u02B2\u02BA\u02B5\u02BD\u02BF\u02BE\u02BC\u02BB(bool \u02B3\u02BC\u02B6\u02B5\u02B4\u02B9\u02B4\u02BD\u02B8\u02B9\u02B6)
 	{
 		if (!SettingsController.\u02BA\u02BF\u02BF\u02B7\u02B4\u02B6\u02BD\u02BC\u02BE\u02B5\u02BA)
@@ -793,7 +762,6 @@ public class GlobalVariables : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000442 RID: 1090 RVA: 0x00031620 File Offset: 0x0002F820
 	public bool \u02B4\u02B5\u02B7\u02B4\u02B3\u02B8\u02BE\u02C0\u02B5\u02B4\u02B4()
 	{
 		foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in this.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
@@ -806,7 +774,6 @@ public class GlobalVariables : MonoBehaviour
 		return false;
 	}
 
-	// Token: 0x06000443 RID: 1091 RVA: 0x00031684 File Offset: 0x0002F884
 	public void \u02BE\u02C0\u02BB\u02B6\u02B5\u02BA\u02B7\u02B3\u02B5\u02B3\u02C1()
 	{
 		string text = Path.Combine(this.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8, "Video Backgrounds");
@@ -820,7 +787,6 @@ public class GlobalVariables : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000444 RID: 1092 RVA: 0x000316D8 File Offset: 0x0002F8D8
 	public void \u02B8\u02B8\u02B9\u02B9\u02B2\u02B2\u02B9\u02B8\u02B5\u02C1\u02B6()
 	{
 		string text = Path.Combine(this.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8, "no_fail");
@@ -834,8 +800,6 @@ public class GlobalVariables : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000050 RID: 80
-	// (get) Token: 0x06000445 RID: 1093 RVA: 0x00008212 File Offset: 0x00006412
 	public bool \u02B7\u02B7\u02B9\u02B6\u02B6\u02B8\u02C1\u02BA\u02BA\u02C0\u02B8
 	{
 		get
@@ -844,7 +808,6 @@ public class GlobalVariables : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000446 RID: 1094 RVA: 0x0003172C File Offset: 0x0002F92C
 	private string \u02B9\u02C0\u02BA\u02BA\u02BD\u02C0\u02C0\u02BC\u02C1\u02C0\u02B4()
 	{
 		return StringUtils.StripTags(SettingsController.\u02BC\u02B4\u02B2\u02B2\u02B6\u02B3\u02BB\u02B8\u02B2\u02C1\u02B3.CurrentValue.Replace("B: 00:00:00", this.\u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1.Artist.\u02C1\u02B4\u02BF\u02C1\u02BE\u02B9\u02B6\u02B7\u02B5\u02B7\u02B5).Replace("Press <color=\"green\">Green</color> to continue.", this.\u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1.Name.\u02B2\u02B2\u02B6\u02BA\u02C1\u02C1\u02BE\u02B2\u02B3\u02BF\u02BA() + (SettingsController.\u02B3\u02B7\u02B4\u02BA\u02B3\u02B9\u02B7\u02BE\u02B2\u02B7\u02BE.IsPresetValue ? "songs" : (" " + SettingsController.\u02B3\u02B7\u02B4\u02BA\u02B3\u02B9\u02B7\u02BE\u02B2\u02B7\u02BE.GetPercentString + "%b"))).Replace("Language", Environment.NewLine)
@@ -856,7 +819,6 @@ public class GlobalVariables : MonoBehaviour
 			.Replace(" + ", this.\u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1.songLength.ToString()), true);
 	}
 
-	// Token: 0x06000447 RID: 1095 RVA: 0x00008232 File Offset: 0x00006432
 	private IEnumerator \u02B3\u02B2\u02BD\u02BD\u02BD\u02BB\u02BC\u02B2\u02BB\u02BF\u02B5(bool \u02B4\u02B6\u02B9\u02B8\u02B8\u02B7\u02B8\u02BA\u02C1\u02B6\u02BE = false)
 	{
 		GlobalVariables.\u02BB\u02B5\u02BE\u02BA\u02B2\u02B7\u02B3\u02BE\u02B3\u02B2\u02BB u02BB_u02B5_u02BE_u02BA_u02B2_u02B7_u02B3_u02BE_u02B3_u02B2_u02BB = new GlobalVariables.\u02BB\u02B5\u02BE\u02BA\u02B2\u02B7\u02B3\u02BE\u02B3\u02B2\u02BB();
@@ -892,7 +854,6 @@ public class GlobalVariables : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06000448 RID: 1096 RVA: 0x0003185C File Offset: 0x0002FA5C
 	public void \u02B7\u02B4\u02BB\u02C0\u02B5\u02B6\u02B6\u02B9\u02B9\u02B3\u02C0(string \u02B7\u02BD\u02BB\u02C0\u02BB\u02B4\u02B3\u02B6\u02B5\u02BA\u02C1)
 	{
 		if (this.\u02C1\u02B8\u02B7\u02B9\u02B6\u02BD\u02B8\u02B9\u02C1\u02C1\u02B3 == null)
@@ -916,7 +877,6 @@ public class GlobalVariables : MonoBehaviour
 		this.\u02C0\u02B5\u02B3\u02B7\u02B9\u02BC\u02B4\u02C0\u02B7\u02B2\u02BA(text2);
 	}
 
-	// Token: 0x0600044A RID: 1098 RVA: 0x00031914 File Offset: 0x0002FB14
 	private void \u02B5\u02B3\u02B3\u02BB\u02BA\u02BB\u02C0\u02BE\u02B2\u02B5\u02B9()
 	{
 		this.\u02BC\u02C0\u02B5\u02BD\u02B2\u02BC\u02BA\u02BC\u02B9\u02B6\u02B6 = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B2\u02BE\u02BF\u02BD\u02BB\u02B7\u02C0\u02BD\u02B4\u02BE\u02BA.\u02B6\u02BB\u02BC\u02BD\u02C1\u02B3\u02B9\u02B3\u02B3\u02BC\u02B3.Keys.ToArray<string>();
@@ -932,7 +892,6 @@ public class GlobalVariables : MonoBehaviour
 		PlayerPrefs.SetInt("triedGraphicsSwitch", 0);
 	}
 
-	// Token: 0x0600044B RID: 1099 RVA: 0x00031620 File Offset: 0x0002F820
 	public bool \u02BA\u02B3\u02BE\u02B6\u02BF\u02B3\u02BB\u02C1\u02B6\u02C1\u02BF()
 	{
 		foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in this.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
@@ -945,7 +904,6 @@ public class GlobalVariables : MonoBehaviour
 		return false;
 	}
 
-	// Token: 0x0600044C RID: 1100 RVA: 0x000319A4 File Offset: 0x0002FBA4
 	public int \u02BA\u02C0\u02C1\u02B9\u02B4\u02BB\u02B9\u02B2\u02C0\u02B4\u02B5(string \u02BF\u02B4\u02C1\u02BC\u02BC\u02B2\u02BC\u02BB\u02BA\u02B2\u02B6)
 	{
 		if (\u02BF\u02B4\u02C1\u02BC\u02BC\u02B2\u02BC\u02BB\u02BA\u02B2\u02B6 == "Random")
@@ -962,20 +920,17 @@ public class GlobalVariables : MonoBehaviour
 		return 0;
 	}
 
-	// Token: 0x0600044E RID: 1102 RVA: 0x00008284 File Offset: 0x00006484
 	private void OnApplicationQuit()
 	{
 		GlobalVariables.SaveStats();
 	}
 
-	// Token: 0x0600044F RID: 1103 RVA: 0x0000828B File Offset: 0x0000648B
 	public static void SaveStats()
 	{
 		PlayerPrefs.SetInt("Playtime", GlobalVariables.playTime);
 		PlayerPrefs.SetString("Points", GlobalVariables.totalPoints.ToString());
 	}
 
-	// Token: 0x06000450 RID: 1104 RVA: 0x000082B0 File Offset: 0x000064B0
 	public static void LoadStats()
 	{
 		GlobalVariables.playTime = PlayerPrefs.GetInt("Playtime", 0);
@@ -985,233 +940,159 @@ public class GlobalVariables : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04000321 RID: 801
 	public object \u02B7\u02C1\u02BF\u02BD\u02B5\u02BE\u02C1\u02BE\u02B8\u02BF\u02B7;
 
-	// Token: 0x04000322 RID: 802
 	public SongEntry \u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1;
 
-	// Token: 0x04000323 RID: 803
 	public \u02B5\u02B4\u02BA\u02C1\u02B5\u02BD\u02BE\u02B9\u02B8\u02B9\u02C0 \u02B8\u02B2\u02B9\u02B4\u02B2\u02B7\u02B4\u02B3\u02B9\u02B6\u02BF;
 
-	// Token: 0x04000324 RID: 804
 	public List<\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6> \u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF;
 
-	// Token: 0x04000325 RID: 805
 	public \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02B4\u02B8\u02BE\u02C1\u02B8\u02B7\u02B4\u02BA\u02BF\u02B7\u02BE;
 
-	// Token: 0x04000326 RID: 806
 	[NonSerialized]
 	public string[] \u02B6\u02B8\u02B9\u02C1\u02BB\u02BE\u02B2\u02BF\u02BD\u02B4\u02BB;
 
-	// Token: 0x04000327 RID: 807
 	public GameMode \u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1;
 
-	// Token: 0x04000328 RID: 808
 	public int \u02BB\u02B4\u02BD\u02B2\u02BC\u02B7\u02C0\u02C1\u02B8\u02B4\u02BD;
 
-	// Token: 0x04000329 RID: 809
 	public int \u02B5\u02B8\u02B8\u02B6\u02BC\u02BC\u02B6\u02BA\u02B7\u02BE\u02B7;
 
-	// Token: 0x0400032A RID: 810
 	public int \u02B9\u02B7\u02BE\u02BF\u02B4\u02C1\u02BC\u02B2\u02BC\u02B8\u02B4;
 
-	// Token: 0x0400032B RID: 811
 	public string \u02B4\u02B3\u02B7\u02BC\u02B5\u02B3\u02B8\u02BB\u02BE\u02B5\u02B3;
 
-	// Token: 0x0400032C RID: 812
 	public string \u02B5\u02BF\u02BD\u02B8\u02B7\u02B3\u02BC\u02B6\u02B4\u02BB\u02B5;
 
-	// Token: 0x0400032D RID: 813
 	public bool \u02BE\u02B8\u02B9\u02BA\u02BB\u02C1\u02BB\u02B9\u02BE\u02C1\u02B9;
 
-	// Token: 0x0400032E RID: 814
 	public bool \u02C1\u02BA\u02BB\u02B8\u02B9\u02C0\u02BD\u02B5\u02B4\u02B6\u02B3;
 
-	// Token: 0x0400032F RID: 815
 	public bool \u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4;
 
-	// Token: 0x04000330 RID: 816
 	public bool \u02BC\u02B6\u02BA\u02BF\u02B2\u02C1\u02B3\u02B5\u02B2\u02B5\u02B6;
 
-	// Token: 0x04000331 RID: 817
 	public bool \u02B9\u02B4\u02BC\u02B8\u02B7\u02C0\u02BB\u02B9\u02B9\u02B5\u02C0;
 
-	// Token: 0x04000332 RID: 818
 	public bool \u02B6\u02BC\u02B3\u02BB\u02B2\u02B6\u02BA\u02BB\u02BA\u02BC\u02BD;
 
-	// Token: 0x04000333 RID: 819
 	public bool \u02BF\u02B6\u02B4\u02BB\u02BC\u02BF\u02B7\u02B9\u02BF\u02C0\u02B5;
 
-	// Token: 0x04000334 RID: 820
 	public bool \u02B6\u02B5\u02BE\u02C1\u02B9\u02B2\u02B4\u02B7\u02BA\u02C1\u02BA;
 
-	// Token: 0x04000335 RID: 821
 	public bool \u02B3\u02B9\u02B8\u02B6\u02C1\u02B4\u02C1\u02B2\u02C1\u02B5\u02C0;
 
-	// Token: 0x04000336 RID: 822
 	public bool \u02BA\u02C0\u02B4\u02B6\u02BE\u02B4\u02BA\u02BF\u02B5\u02BD\u02B2;
 
-	// Token: 0x04000337 RID: 823
 	public \u02BD\u02B9\u02B2\u02B5\u02BD\u02BC\u02BE\u02BE\u02BE\u02B7\u02B2 \u02BB\u02BA\u02C1\u02B8\u02BA\u02C0\u02BD\u02BE\u02B7\u02B7\u02BA;
 
-	// Token: 0x04000338 RID: 824
 	public static bool \u02B3\u02B9\u02BD\u02BA\u02B7\u02B6\u02BC\u02C0\u02BC\u02B3\u02BC;
 
-	// Token: 0x04000339 RID: 825
 	public static GlobalVariables \u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7;
 
-	// Token: 0x0400033A RID: 826
 	public static bool \u02B4\u02B8\u02BB\u02B6\u02B8\u02B6\u02BA\u02BA\u02B3\u02B3\u02B6;
 
-	// Token: 0x0400033B RID: 827
 	public string[] \u02B9\u02BB\u02B2\u02B8\u02B3\u02B7\u02B3\u02B2\u02BD\u02B9\u02BF;
 
-	// Token: 0x0400033C RID: 828
 	public string[] \u02B7\u02B9\u02BD\u02BC\u02B7\u02B6\u02B2\u02B2\u02BC\u02BB\u02BB;
 
-	// Token: 0x0400033D RID: 829
 	public string[] \u02BC\u02C0\u02B5\u02BD\u02B2\u02BC\u02BA\u02BC\u02B9\u02B6\u02B6;
 
-	// Token: 0x0400033E RID: 830
 	public List<string> \u02B3\u02B4\u02B5\u02B9\u02B8\u02BC\u02BC\u02B8\u02C0\u02B5\u02B9 = new List<string>();
 
-	// Token: 0x0400033F RID: 831
 	public string[] \u02C0\u02C0\u02B6\u02BD\u02BE\u02C1\u02B3\u02BF\u02BE\u02B3\u02C1;
 
-	// Token: 0x04000340 RID: 832
 	public string[] \u02B4\u02B6\u02BF\u02B8\u02B3\u02B5\u02BF\u02B9\u02C1\u02BC\u02B6;
 
-	// Token: 0x04000341 RID: 833
 	public string[] \u02B5\u02B7\u02B5\u02B4\u02BB\u02B4\u02B5\u02B4\u02C1\u02B6\u02BE;
 
-	// Token: 0x04000342 RID: 834
 	public bool \u02B9\u02BE\u02B5\u02B9\u02C1\u02BB\u02B6\u02BD\u02BC\u02C1\u02B5;
 
-	// Token: 0x04000343 RID: 835
 	private Text \u02B2\u02B8\u02C1\u02B7\u02BB\u02BC\u02C1\u02B8\u02B5\u02B4\u02B5;
 
-	// Token: 0x04000344 RID: 836
 	public string \u02BB\u02BA\u02B5\u02BC\u02BD\u02C0\u02B2\u02B7\u02BC\u02B4\u02B9;
 
-	// Token: 0x04000345 RID: 837
 	public Dictionary<string, Sprite> \u02C1\u02B8\u02B7\u02B9\u02B6\u02BD\u02B8\u02B9\u02C1\u02C1\u02B3;
 
-	// Token: 0x04000346 RID: 838
 	public List<HighwayData> \u02B3\u02B9\u02BC\u02B7\u02BA\u02B9\u02BA\u02B2\u02B4\u02B7\u02B3;
 
-	// Token: 0x04000347 RID: 839
 	public string \u02C0\u02BD\u02B8\u02B9\u02BA\u02B6\u02B4\u02BB\u02B2\u02B6\u02B3;
 
-	// Token: 0x04000348 RID: 840
 	public string \u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8;
 
-	// Token: 0x04000349 RID: 841
 	public bool \u02BC\u02BC\u02B5\u02B3\u02BE\u02BD\u02BA\u02B7\u02BF\u02B2\u02BD;
 
-	// Token: 0x0400034A RID: 842
 	public float \u02B8\u02BE\u02BA\u02B9\u02C0\u02BD\u02B2\u02B9\u02C1\u02C0\u02B8 = 22f;
 
-	// Token: 0x0400034B RID: 843
 	public bool \u02BE\u02BE\u02C1\u02B4\u02B4\u02B6\u02BA\u02BB\u02C1\u02BE\u02BB;
 
-	// Token: 0x0400034C RID: 844
 	public Sprite[] \u02B4\u02BC\u02B6\u02B2\u02BE\u02BB\u02B3\u02BA\u02BD\u02B6\u02B2;
 
-	// Token: 0x0400034D RID: 845
 	public Sprite[] \u02B2\u02B5\u02C0\u02B7\u02B3\u02B6\u02C0\u02BD\u02B2\u02B5\u02B6;
 
-	// Token: 0x0400034E RID: 846
 	public Sprite[] \u02B9\u02BD\u02B9\u02B8\u02B3\u02C0\u02B7\u02B4\u02BA\u02BE\u02B5;
 
-	// Token: 0x0400034F RID: 847
 	public Sprite[] \u02B8\u02BE\u02C1\u02B2\u02B6\u02C0\u02BE\u02B6\u02C0\u02C0\u02B5;
 
-	// Token: 0x04000350 RID: 848
 	public string \u02B4\u02B6\u02C1\u02BD\u02BA\u02BE\u02C1\u02B9\u02B2\u02BD\u02B9;
 
-	// Token: 0x04000351 RID: 849
 	public \u02B7\u02BE\u02BA\u02BE\u02BA\u02B2\u02BF\u02B2\u02C0\u02B2\u02C0 \u02C1\u02B7\u02BD\u02B7\u02B7\u02BD\u02B6\u02B4\u02BA\u02B2\u02BA;
 
-	// Token: 0x04000352 RID: 850
 	public ColorManager \u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE;
 
-	// Token: 0x04000353 RID: 851
 	public bool \u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3;
 
-	// Token: 0x04000354 RID: 852
 	public string \u02B5\u02BB\u02B7\u02BB\u02B8\u02B5\u02B9\u02BA\u02B3\u02B8\u02BA;
 
-	// Token: 0x04000355 RID: 853
 	private FullScreenMode \u02B3\u02C0\u02BD\u02BB\u02BC\u02BF\u02B7\u02B7\u02B9\u02B4\u02BA;
 
-	// Token: 0x04000356 RID: 854
 	public Action \u02B6\u02B3\u02B7\u02B5\u02BB\u02BD\u02B3\u02B9\u02BD\u02B2\u02B7;
 
-	// Token: 0x04000357 RID: 855
 	private List<string> \u02B7\u02BC\u02C0\u02B5\u02BF\u02B5\u02B6\u02B6\u02BB\u02B2\u02BA = new List<string>();
 
-	// Token: 0x04000358 RID: 856
 	private List<string> \u02B6\u02BD\u02BD\u02BC\u02C1\u02BE\u02B4\u02B9\u02BD\u02BF\u02BE = new List<string>();
 
-	// Token: 0x04000359 RID: 857
 	public static bool FCmode;
 
-	// Token: 0x0400035A RID: 858
 	public static bool fpslock = true;
 
-	// Token: 0x0400035B RID: 859
 	public static int misses;
 
-	// Token: 0x0400035C RID: 860
 	public static string IVVersion;
 
-	// Token: 0x0400035D RID: 861
 	public static bool disableFPSFix;
 
-	// Token: 0x0400035E RID: 862
 	public static bool SPRainbowEnabled;
 
-	// Token: 0x0400035F RID: 863
 	public static bool swr;
 
-	// Token: 0x04000360 RID: 864
 	public static int progress;
 
-	// Token: 0x04000361 RID: 865
 	public static bool deafened;
 
-	// Token: 0x04000362 RID: 866
 	public static bool hasReset;
 
-	// Token: 0x04000363 RID: 867
 	public static byte[] courte;
 
-	// Token: 0x04000364 RID: 868
 	public static int playTime;
 
-	// Token: 0x04000365 RID: 869
 	public static long totalPoints;
 
-	// Token: 0x02000068 RID: 104
 	[Serializable]
 	private class InternalHighwayJsonData
 	{
-		// Token: 0x04000366 RID: 870
 		public string[] highways;
 	}
 
-	// Token: 0x02000069 RID: 105
 	[CompilerGenerated]
 	private sealed class \u02BB\u02B5\u02BE\u02BA\u02B2\u02B7\u02B3\u02BE\u02B3\u02B2\u02BB
 	{
-		// Token: 0x06000453 RID: 1107 RVA: 0x000082E4 File Offset: 0x000064E4
 		internal void \u02B7\u02BD\u02B8\u02B6\u02C0\u02C0\u02BB\u02B2\u02B4\u02BE\u02B7()
 		{
 			Settings.Commit(this.forceAll);
 		}
 
-		// Token: 0x04000367 RID: 871
 		public bool forceAll;
 	}
 }

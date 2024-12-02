@@ -1,13 +1,11 @@
-﻿using System;
+using System;
 using DiscordRPC;
 using DiscordRPC.Logging;
 using DiscordRPC.Message;
 using UnityEngine;
 
-// Token: 0x02000044 RID: 68
 public class DiscordController : MonoBehaviour
 {
-	// Token: 0x060002A7 RID: 679 RVA: 0x000277E0 File Offset: 0x000259E0
 	public void \u02B5\u02BE\u02BA\u02B2\u02BD\u02BB\u02B9\u02BE\u02BA\u02B2\u02B3()
 	{
 		\u02BD\u02B7\u02B6\u02B5\u02B6\u02C0\u02B9\u02C1\u02BB\u02B6\u02B4 u02BD_u02B7_u02B6_u02B5_u02B6_u02C0_u02B9_u02C1_u02BB_u02B6_u02B = new \u02BD\u02B7\u02B6\u02B5\u02B6\u02C0\u02B9\u02C1\u02BB\u02B6\u02B4
@@ -23,7 +21,6 @@ public class DiscordController : MonoBehaviour
 		DiscordController.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 = this;
 	}
 
-	// Token: 0x060002A8 RID: 680 RVA: 0x00007202 File Offset: 0x00005402
 	public void \u02B7\u02BF\u02B3\u02BF\u02B3\u02BE\u02B2\u02BA\u02C0\u02BA\u02B7(SongEntry \u02BA\u02B4\u02B8\u02BA\u02C1\u02B7\u02BF\u02BD\u02B5\u02BE\u02BA)
 	{
 		this.\u02BE\u02B7\u02BA\u02BF\u02B2\u02B8\u02BD\u02B8\u02BF\u02B2\u02BC();
@@ -32,7 +29,6 @@ public class DiscordController : MonoBehaviour
 		this.\u02B4\u02B9\u02B5\u02BD\u02B7\u02BD\u02B8\u02B2\u02B4\u02B4\u02BD();
 	}
 
-	// Token: 0x060002A9 RID: 681 RVA: 0x0000723D File Offset: 0x0000543D
 	private void \u02B3\u02B4\u02B7\u02C1\u02BD\u02BA\u02BC\u02B2\u02B6\u02BF\u02BD()
 	{
 		if (this.\u02C0\u02BB\u02BE\u02BD\u02B9\u02B3\u02BD\u02B8\u02BF\u02C1\u02BC == null)
@@ -43,7 +39,6 @@ public class DiscordController : MonoBehaviour
 		this.\u02C0\u02BB\u02BE\u02BD\u02B9\u02B3\u02BD\u02B8\u02BF\u02C1\u02BC.Dispose();
 	}
 
-	// Token: 0x060002AA RID: 682 RVA: 0x00027874 File Offset: 0x00025A74
 	public void \u02BC\u02B9\u02BF\u02C0\u02B5\u02B4\u02B4\u02BD\u02B4\u02B5\u02B4(bool \u02BB\u02BD\u02BD\u02BC\u02B8\u02BE\u02B9\u02B9\u02BB\u02BE\u02BA, bool \u02C1\u02B6\u02B9\u02B2\u02B4\u02B5\u02B7\u02B6\u02C0\u02BE\u02B4, SongEntry \u02BA\u02B4\u02B8\u02BA\u02C1\u02B7\u02BF\u02BD\u02B5\u02BE\u02BA, \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7)
 	{
 		this.\u02BE\u02B7\u02BA\u02BF\u02B2\u02B8\u02BD\u02B8\u02BF\u02B2\u02BC();
@@ -84,7 +79,6 @@ public class DiscordController : MonoBehaviour
 		this.\u02B7\u02B6\u02BF\u02B2\u02BE\u02BD\u02B7\u02BA\u02B3\u02B2\u02B5();
 	}
 
-	// Token: 0x060002AB RID: 683 RVA: 0x0000725E File Offset: 0x0000545E
 	public void \u02C1\u02B4\u02B9\u02B2\u02B4\u02BE\u02BC\u02BE\u02C0\u02C1\u02C1(SongEntry \u02BA\u02B4\u02B8\u02BA\u02C1\u02B7\u02BF\u02BD\u02B5\u02BE\u02BA)
 	{
 		this.\u02C0\u02BA\u02B6\u02C0\u02B7\u02B7\u02B9\u02BB\u02BA\u02C1\u02BD();
@@ -93,7 +87,6 @@ public class DiscordController : MonoBehaviour
 		this.\u02B7\u02B6\u02BF\u02B2\u02BE\u02BD\u02B7\u02BA\u02B3\u02B2\u02B5();
 	}
 
-	// Token: 0x060002AC RID: 684 RVA: 0x00007299 File Offset: 0x00005499
 	public void \u02C0\u02BA\u02B6\u02C0\u02B7\u02B7\u02B9\u02BB\u02BA\u02C1\u02BD()
 	{
 		this.\u02B7\u02BD\u02B5\u02B6\u02BE\u02B6\u02B9\u02C1\u02C0\u02BD\u02BB = string.Empty;
@@ -102,7 +95,6 @@ public class DiscordController : MonoBehaviour
 		this.\u02BD\u02B2\u02BC\u02BD\u02C0\u02B3\u02BA\u02B2\u02C1\u02B5\u02BC = string.Empty;
 	}
 
-	// Token: 0x060002AD RID: 685 RVA: 0x000072C7 File Offset: 0x000054C7
 	public void \u02B8\u02BD\u02BF\u02B9\u02B9\u02BE\u02B8\u02BE\u02BC\u02B3\u02BF()
 	{
 		this.\u02BE\u02B7\u02BA\u02BF\u02B2\u02B8\u02BD\u02B8\u02BF\u02B2\u02BC();
@@ -110,7 +102,6 @@ public class DiscordController : MonoBehaviour
 		this.\u02BF\u02BF\u02B3\u02BC\u02BA\u02BA\u02B2\u02B5\u02B9\u02BE\u02B5();
 	}
 
-	// Token: 0x060002AE RID: 686 RVA: 0x00027980 File Offset: 0x00025B80
 	public void \u02C0\u02BC\u02BB\u02B2\u02BC\u02B7\u02B8\u02B7\u02BE\u02C0\u02C0()
 	{
 		this.\u02BE\u02B7\u02BA\u02BF\u02B2\u02B8\u02BD\u02B8\u02BF\u02B2\u02BC();
@@ -120,7 +111,6 @@ public class DiscordController : MonoBehaviour
 		this.\u02B7\u02B6\u02BF\u02B2\u02BE\u02BD\u02B7\u02BA\u02B3\u02B2\u02B5();
 	}
 
-	// Token: 0x060002AF RID: 687 RVA: 0x00007299 File Offset: 0x00005499
 	public void \u02BE\u02B7\u02BA\u02BF\u02B2\u02B8\u02BD\u02B8\u02BF\u02B2\u02BC()
 	{
 		this.\u02B7\u02BD\u02B5\u02B6\u02BE\u02B6\u02B9\u02C1\u02C0\u02BD\u02BB = string.Empty;
@@ -129,7 +119,6 @@ public class DiscordController : MonoBehaviour
 		this.\u02BD\u02B2\u02BC\u02BD\u02C0\u02B3\u02BA\u02B2\u02C1\u02B5\u02BC = string.Empty;
 	}
 
-	// Token: 0x060002B0 RID: 688 RVA: 0x000072E0 File Offset: 0x000054E0
 	public void \u02B3\u02BF\u02BA\u02B3\u02C1\u02BB\u02BA\u02B5\u02BD\u02B7\u02B7(SongEntry \u02BA\u02B4\u02B8\u02BA\u02C1\u02B7\u02BF\u02BD\u02B5\u02BE\u02BA)
 	{
 		this.\u02C0\u02BA\u02B6\u02C0\u02B7\u02B7\u02B9\u02BB\u02BA\u02C1\u02BD();
@@ -138,7 +127,6 @@ public class DiscordController : MonoBehaviour
 		this.\u02B4\u02B9\u02B5\u02BD\u02B7\u02BD\u02B8\u02B2\u02B4\u02B4\u02BD();
 	}
 
-	// Token: 0x060002B1 RID: 689 RVA: 0x00007316 File Offset: 0x00005516
 	public void \u02C1\u02B6\u02B4\u02B2\u02C0\u02BC\u02B5\u02BD\u02C0\u02BB\u02C1(object \u02BA\u02C1\u02BE\u02B2\u02B6\u02B2\u02BF\u02BE\u02B8\u02BD\u02B8, CloseMessage \u02B9\u02BE\u02BF\u02B9\u02BF\u02BA\u02B9\u02BD\u02B7\u02BB\u02B5)
 	{
 		this.\u02B8\u02BF\u02BA\u02B8\u02B4\u02BC\u02B2\u02BF\u02B3\u02BE\u02BD = false;
@@ -146,7 +134,6 @@ public class DiscordController : MonoBehaviour
 		Debug.Log("DiscordRPC: is now offline");
 	}
 
-	// Token: 0x060002B2 RID: 690 RVA: 0x00027A1C File Offset: 0x00025C1C
 	public void \u02B7\u02B3\u02B8\u02BC\u02B2\u02B9\u02B6\u02BF\u02B9\u02B3\u02C0()
 	{
 		this.\u02C0\u02BA\u02B6\u02C0\u02B7\u02B7\u02B9\u02BB\u02BA\u02C1\u02BD();
@@ -156,7 +143,6 @@ public class DiscordController : MonoBehaviour
 		this.\u02BF\u02BF\u02B3\u02BC\u02BA\u02BA\u02B2\u02B5\u02B9\u02BE\u02B5();
 	}
 
-	// Token: 0x060002B3 RID: 691 RVA: 0x00007334 File Offset: 0x00005534
 	private string \u02BE\u02B5\u02B8\u02B9\u02B9\u02B9\u02B7\u02BF\u02BB\u02B4\u02C1(string \u02B4\u02BB\u02B9\u02B9\u02B5\u02BD\u02BD\u02B7\u02BA\u02B6\u02B2)
 	{
 		if (\u02B4\u02BB\u02B9\u02B9\u02B5\u02BD\u02BD\u02B7\u02BA\u02B6\u02B2.Length >= 106)
@@ -166,8 +152,6 @@ public class DiscordController : MonoBehaviour
 		return \u02B4\u02BB\u02B9\u02B9\u02B5\u02BD\u02BD\u02B7\u02BA\u02B6\u02B2;
 	}
 
-	// Token: 0x17000023 RID: 35
-	// (get) Token: 0x060002B4 RID: 692 RVA: 0x00007354 File Offset: 0x00005554
 	public bool \u02C0\u02B9\u02B7\u02BE\u02B9\u02B8\u02BF\u02B5\u02BD\u02BC\u02C0
 	{
 		get
@@ -176,7 +160,6 @@ public class DiscordController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060002B5 RID: 693 RVA: 0x00027AB8 File Offset: 0x00025CB8
 	private void \u02BF\u02BF\u02B3\u02BC\u02BA\u02BA\u02B2\u02B5\u02B9\u02BE\u02B5()
 	{
 		if (!this.\u02C0\u02B9\u02B7\u02BE\u02B9\u02B8\u02BF\u02B5\u02BD\u02BC\u02C0)
@@ -188,7 +171,6 @@ public class DiscordController : MonoBehaviour
 		this.\u02C0\u02BB\u02BE\u02BD\u02B9\u02B3\u02BD\u02B8\u02BF\u02C1\u02BC.UpdateSmallAsset(this.\u02B2\u02B2\u02BA\u02C0\u02C1\u02B4\u02BF\u02B7\u02C0\u02C0\u02B3, this.\u02BD\u02B2\u02BC\u02BD\u02C0\u02B3\u02BA\u02B2\u02C1\u02B5\u02BC);
 	}
 
-	// Token: 0x060002B6 RID: 694 RVA: 0x00007366 File Offset: 0x00005566
 	public void \u02C1\u02BB\u02BB\u02BF\u02BC\u02BC\u02BF\u02BD\u02BE\u02B6\u02BB(object \u02BA\u02C1\u02BE\u02B2\u02B6\u02B2\u02BF\u02BE\u02B8\u02BD\u02B8, ErrorMessage \u02B9\u02BE\u02BF\u02B9\u02BF\u02BA\u02B9\u02BD\u02B7\u02BB\u02B5)
 	{
 		this.\u02B8\u02BF\u02BA\u02B8\u02B4\u02BC\u02B2\u02BF\u02B3\u02BE\u02BD = false;
@@ -196,7 +178,6 @@ public class DiscordController : MonoBehaviour
 		Debug.Log("clientnostart");
 	}
 
-	// Token: 0x060002B7 RID: 695 RVA: 0x00007384 File Offset: 0x00005584
 	public void \u02B4\u02B2\u02BB\u02C1\u02B5\u02B9\u02B8\u02B5\u02B8\u02BA\u02B5()
 	{
 		this.\u02BE\u02B7\u02BA\u02BF\u02B2\u02B8\u02BD\u02B8\u02BF\u02B2\u02BC();
@@ -204,7 +185,6 @@ public class DiscordController : MonoBehaviour
 		this.\u02B7\u02B6\u02BF\u02B2\u02BE\u02BD\u02B7\u02BA\u02B3\u02B2\u02B5();
 	}
 
-	// Token: 0x060002B8 RID: 696 RVA: 0x0000739D File Offset: 0x0000559D
 	public void \u02C1\u02BE\u02B9\u02C1\u02B5\u02B8\u02C1\u02B5\u02B6\u02BA\u02B6(object \u02BA\u02C1\u02BE\u02B2\u02B6\u02B2\u02BF\u02BE\u02B8\u02BD\u02B8, ReadyMessage \u02B9\u02BE\u02BF\u02B9\u02BF\u02BA\u02B9\u02BD\u02B7\u02BB\u02B5)
 	{
 		this.\u02B8\u02BF\u02BA\u02B8\u02B4\u02BC\u02B2\u02BF\u02B3\u02BE\u02BD = false;
@@ -213,7 +193,6 @@ public class DiscordController : MonoBehaviour
 		this.\u02B4\u02B9\u02B5\u02BD\u02B7\u02BD\u02B8\u02B2\u02B4\u02B4\u02BD();
 	}
 
-	// Token: 0x060002B9 RID: 697 RVA: 0x000073CE File Offset: 0x000055CE
 	public DiscordController()
 	{
 		this.\u02B7\u02BC\u02C1\u02BF\u02BB\u02BC\u02B3\u02B6\u02B8\u02BC\u02B9 = "378347429537251328";
@@ -221,7 +200,6 @@ public class DiscordController : MonoBehaviour
 		this.\u02B8\u02B7\u02B7\u02BB\u02BD\u02BF\u02BC\u02B3\u02B4\u02C0\u02B3 = "Clone Hero. Clone Hero. Clone Hero. Clone H";
 	}
 
-	// Token: 0x060002BA RID: 698 RVA: 0x000073F7 File Offset: 0x000055F7
 	public void \u02B7\u02B7\u02BF\u02B3\u02B4\u02BA\u02B3\u02BA\u02C0\u02B9\u02B4(object \u02BA\u02C1\u02BE\u02B2\u02B6\u02B2\u02BF\u02BE\u02B8\u02BD\u02B8, ErrorMessage \u02B9\u02BE\u02BF\u02B9\u02BF\u02BA\u02B9\u02BD\u02B7\u02BB\u02B5)
 	{
 		this.\u02B8\u02BF\u02BA\u02B8\u02B4\u02BC\u02B2\u02BF\u02B3\u02BE\u02BD = false;
@@ -229,7 +207,6 @@ public class DiscordController : MonoBehaviour
 		Debug.Log("DiscordRPC: is now offline due to error");
 	}
 
-	// Token: 0x060002BB RID: 699 RVA: 0x00027B0C File Offset: 0x00025D0C
 	public void \u02BB\u02B6\u02C0\u02C0\u02B8\u02B7\u02BA\u02C1\u02B3\u02BB\u02B2()
 	{
 		this.\u02BE\u02B7\u02BA\u02BF\u02B2\u02B8\u02BD\u02B8\u02BF\u02B2\u02BC();
@@ -239,7 +216,6 @@ public class DiscordController : MonoBehaviour
 		this.\u02B7\u02B6\u02BF\u02B2\u02BE\u02BD\u02B7\u02BA\u02B3\u02B2\u02B5();
 	}
 
-	// Token: 0x060002BC RID: 700 RVA: 0x00007415 File Offset: 0x00005615
 	public void \u02BC\u02B4\u02BB\u02B9\u02B4\u02BE\u02B6\u02B8\u02B6\u02BD\u02B8()
 	{
 		this.\u02BE\u02B7\u02BA\u02BF\u02B2\u02B8\u02BD\u02B8\u02BF\u02B2\u02BC();
@@ -248,7 +224,6 @@ public class DiscordController : MonoBehaviour
 		this.\u02B4\u02B9\u02B5\u02BD\u02B7\u02BD\u02B8\u02B2\u02B4\u02B4\u02BD();
 	}
 
-	// Token: 0x060002BD RID: 701 RVA: 0x00027AB8 File Offset: 0x00025CB8
 	private void \u02B7\u02B6\u02BF\u02B2\u02BE\u02BD\u02B7\u02BA\u02B3\u02B2\u02B5()
 	{
 		if (!this.\u02C0\u02B9\u02B7\u02BE\u02B9\u02B8\u02BF\u02B5\u02BD\u02BC\u02C0)
@@ -260,7 +235,6 @@ public class DiscordController : MonoBehaviour
 		this.\u02C0\u02BB\u02BE\u02BD\u02B9\u02B3\u02BD\u02B8\u02BF\u02C1\u02BC.UpdateSmallAsset(this.\u02B2\u02B2\u02BA\u02C0\u02C1\u02B4\u02BF\u02B7\u02C0\u02C0\u02B3, this.\u02BD\u02B2\u02BC\u02BD\u02C0\u02B3\u02BA\u02B2\u02C1\u02B5\u02BC);
 	}
 
-	// Token: 0x060002BE RID: 702 RVA: 0x0000744C File Offset: 0x0000564C
 	public void \u02B6\u02C1\u02B9\u02B5\u02BE\u02BD\u02B5\u02B7\u02C1\u02BB\u02B3()
 	{
 		this.\u02BE\u02B7\u02BA\u02BF\u02B2\u02B8\u02BD\u02B8\u02BF\u02B2\u02BC();
@@ -269,7 +243,6 @@ public class DiscordController : MonoBehaviour
 		this.\u02B7\u02B6\u02BF\u02B2\u02BE\u02BD\u02B7\u02BA\u02B3\u02B2\u02B5();
 	}
 
-	// Token: 0x060002BF RID: 703 RVA: 0x00027BA8 File Offset: 0x00025DA8
 	public void \u02B8\u02C1\u02BE\u02B4\u02C1\u02B4\u02B7\u02B7\u02B7\u02B9\u02B6()
 	{
 		this.\u02BE\u02B7\u02BA\u02BF\u02B2\u02B8\u02BD\u02B8\u02BF\u02B2\u02BC();
@@ -279,7 +252,6 @@ public class DiscordController : MonoBehaviour
 		this.\u02BF\u02BF\u02B3\u02BC\u02BA\u02BA\u02B2\u02B5\u02B9\u02BE\u02B5();
 	}
 
-	// Token: 0x060002C0 RID: 704 RVA: 0x00007483 File Offset: 0x00005683
 	private string \u02B8\u02B7\u02BC\u02C0\u02B7\u02BF\u02B7\u02B8\u02C1\u02BC\u02BB(string \u02B4\u02BB\u02B9\u02B9\u02B5\u02BD\u02BD\u02B7\u02BA\u02B6\u02B2)
 	{
 		if (\u02B4\u02BB\u02B9\u02B9\u02B5\u02BD\u02BD\u02B7\u02BA\u02B6\u02B2.Length >= -5)
@@ -289,7 +261,6 @@ public class DiscordController : MonoBehaviour
 		return \u02B4\u02BB\u02B9\u02B9\u02B5\u02BD\u02BD\u02B7\u02BA\u02B6\u02B2;
 	}
 
-	// Token: 0x060002C1 RID: 705 RVA: 0x00027AB8 File Offset: 0x00025CB8
 	private void \u02B4\u02B9\u02B5\u02BD\u02B7\u02BD\u02B8\u02B2\u02B4\u02B4\u02BD()
 	{
 		if (!this.\u02C0\u02B9\u02B7\u02BE\u02B9\u02B8\u02BF\u02B5\u02BD\u02BC\u02C0)
@@ -301,7 +272,6 @@ public class DiscordController : MonoBehaviour
 		this.\u02C0\u02BB\u02BE\u02BD\u02B9\u02B3\u02BD\u02B8\u02BF\u02C1\u02BC.UpdateSmallAsset(this.\u02B2\u02B2\u02BA\u02C0\u02C1\u02B4\u02BF\u02B7\u02C0\u02C0\u02B3, this.\u02BD\u02B2\u02BC\u02BD\u02C0\u02B3\u02BA\u02B2\u02C1\u02B5\u02BC);
 	}
 
-	// Token: 0x060002C2 RID: 706 RVA: 0x000074A4 File Offset: 0x000056A4
 	private string \u02BC\u02BF\u02BF\u02B6\u02B6\u02C0\u02B8\u02B2\u02BC\u02BF\u02B6(string \u02B4\u02BB\u02B9\u02B9\u02B5\u02BD\u02BD\u02B7\u02BA\u02B6\u02B2)
 	{
 		if (\u02B4\u02BB\u02B9\u02B9\u02B5\u02BD\u02BD\u02B7\u02BA\u02B6\u02B2.Length >= 64)
@@ -311,7 +281,6 @@ public class DiscordController : MonoBehaviour
 		return \u02B4\u02BB\u02B9\u02B9\u02B5\u02BD\u02BD\u02B7\u02BA\u02B6\u02B2;
 	}
 
-	// Token: 0x060002C3 RID: 707 RVA: 0x000074C5 File Offset: 0x000056C5
 	public void \u02B5\u02BE\u02B3\u02C1\u02C1\u02B3\u02B5\u02B3\u02B6\u02B6\u02BE(object \u02BA\u02C1\u02BE\u02B2\u02B6\u02B2\u02BF\u02BE\u02B8\u02BD\u02B8, ErrorMessage \u02B9\u02BE\u02BF\u02B9\u02BF\u02BA\u02B9\u02BD\u02B7\u02BB\u02B5)
 	{
 		this.\u02B8\u02BF\u02BA\u02B8\u02B4\u02BC\u02B2\u02BF\u02B3\u02BE\u02BD = true;
@@ -319,7 +288,6 @@ public class DiscordController : MonoBehaviour
 		Debug.Log("Moving bad score file to ");
 	}
 
-	// Token: 0x060002C4 RID: 708 RVA: 0x000074E3 File Offset: 0x000056E3
 	public void \u02B4\u02BF\u02B5\u02C1\u02B7\u02C1\u02B5\u02B6\u02BC\u02C0\u02B3(SongEntry \u02BA\u02B4\u02B8\u02BA\u02C1\u02B7\u02BF\u02BD\u02B5\u02BE\u02BA)
 	{
 		this.\u02BE\u02B7\u02BA\u02BF\u02B2\u02B8\u02BD\u02B8\u02BF\u02B2\u02BC();
@@ -328,7 +296,6 @@ public class DiscordController : MonoBehaviour
 		this.\u02B7\u02B6\u02BF\u02B2\u02BE\u02BD\u02B7\u02BA\u02B3\u02B2\u02B5();
 	}
 
-	// Token: 0x060002C5 RID: 709 RVA: 0x0000723D File Offset: 0x0000543D
 	private void OnDisable()
 	{
 		if (this.\u02C0\u02BB\u02BE\u02BD\u02B9\u02B3\u02BD\u02B8\u02BF\u02C1\u02BC == null)
@@ -339,7 +306,6 @@ public class DiscordController : MonoBehaviour
 		this.\u02C0\u02BB\u02BE\u02BD\u02B9\u02B3\u02BD\u02B8\u02BF\u02C1\u02BC.Dispose();
 	}
 
-	// Token: 0x060002C6 RID: 710 RVA: 0x00027C44 File Offset: 0x00025E44
 	public void \u02B3\u02C0\u02BC\u02BE\u02B3\u02B4\u02BA\u02B3\u02B9\u02BA\u02BD(object \u02BA\u02C1\u02BE\u02B2\u02B6\u02B2\u02BF\u02BE\u02B8\u02BD\u02B8, ReadyMessage \u02B9\u02BE\u02BF\u02B9\u02BF\u02BA\u02B9\u02BD\u02B7\u02BB\u02B5)
 	{
 		cUtilityClass.WriteKeyValue("uid", \u02B9\u02BE\u02BF\u02B9\u02BF\u02BA\u02B9\u02BD\u02B7\u02BB\u02B5.User.ID.ToString(), false);
@@ -349,33 +315,23 @@ public class DiscordController : MonoBehaviour
 		this.\u02B7\u02B6\u02BF\u02B2\u02BE\u02BD\u02B7\u02BA\u02B3\u02B2\u02B5();
 	}
 
-	// Token: 0x040001C7 RID: 455
 	public string \u02B7\u02BC\u02C1\u02BF\u02BB\u02BC\u02B3\u02B6\u02B8\u02BC\u02B9;
 
-	// Token: 0x040001C8 RID: 456
 	public static DiscordController \u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7;
 
-	// Token: 0x040001C9 RID: 457
 	private DiscordRpcClient \u02C0\u02BB\u02BE\u02BD\u02B9\u02B3\u02BD\u02B8\u02BF\u02C1\u02BC;
 
-	// Token: 0x040001CA RID: 458
 	private string \u02B7\u02BD\u02B5\u02B6\u02BE\u02B6\u02B9\u02C1\u02C0\u02BD\u02BB;
 
-	// Token: 0x040001CB RID: 459
 	private string \u02B8\u02B7\u02B8\u02BD\u02B4\u02B8\u02BD\u02C0\u02B9\u02BB\u02B8;
 
-	// Token: 0x040001CC RID: 460
 	private string \u02B6\u02C1\u02B6\u02BD\u02B5\u02BB\u02B3\u02B8\u02B9\u02B3\u02BA;
 
-	// Token: 0x040001CD RID: 461
 	private string \u02B8\u02B7\u02B7\u02BB\u02BD\u02BF\u02BC\u02B3\u02B4\u02C0\u02B3;
 
-	// Token: 0x040001CE RID: 462
 	private string \u02B2\u02B2\u02BA\u02C0\u02C1\u02B4\u02BF\u02B7\u02C0\u02C0\u02B3;
 
-	// Token: 0x040001CF RID: 463
 	private string \u02BD\u02B2\u02BC\u02BD\u02C0\u02B3\u02BA\u02B2\u02C1\u02B5\u02BC;
 
-	// Token: 0x040001D0 RID: 464
 	private bool \u02B8\u02BF\u02BA\u02B8\u02B4\u02BC\u02B2\u02BF\u02B3\u02BE\u02BD;
 }

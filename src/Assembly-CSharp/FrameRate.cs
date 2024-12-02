@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Globalization;
 using System.Linq;
 using System.Reflection;
@@ -9,17 +9,14 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-// Token: 0x02000043 RID: 67
 public class FrameRate : MonoBehaviour
 {
-	// Token: 0x0600029E RID: 670 RVA: 0x000071B0 File Offset: 0x000053B0
 	private void \u02BC\u02BC\u02B3\u02B2\u02C0\u02B6\u02B8\u02BA\u02BD\u02B9\u02B6()
 	{
 		this.textDisplay = base.GetComponent<TextMeshProUGUI>();
 		this.timer1 = this.const1;
 	}
 
-	// Token: 0x0600029F RID: 671 RVA: 0x000265D8 File Offset: 0x000247D8
 	private void Start()
 	{
 		this.startTime = (double)Time.realtimeSinceStartup;
@@ -43,21 +40,18 @@ public class FrameRate : MonoBehaviour
 		this.underHighwayTextBuilder = ZString.CreateStringBuilder();
 	}
 
-	// Token: 0x060002A0 RID: 672 RVA: 0x000071CA File Offset: 0x000053CA
 	public FrameRate()
 	{
 		this.const1 = 0.5f;
 		this.counter1 = 60;
 	}
 
-	// Token: 0x060002A1 RID: 673 RVA: 0x000071B0 File Offset: 0x000053B0
 	private void \u02BF\u02BA\u02B5\u02B8\u02B5\u02BF\u02B2\u02BF\u02B3\u02BC\u02BA()
 	{
 		this.textDisplay = base.GetComponent<TextMeshProUGUI>();
 		this.timer1 = this.const1;
 	}
 
-	// Token: 0x060002A2 RID: 674 RVA: 0x000266DC File Offset: 0x000248DC
 	private void Update()
 	{
 		if (this.startctr == -1)
@@ -567,14 +561,12 @@ public class FrameRate : MonoBehaviour
 		this.startctr = -1;
 	}
 
-	// Token: 0x060002A3 RID: 675 RVA: 0x000071B0 File Offset: 0x000053B0
 	private void \u02C0\u02BE\u02B2\u02BE\u02C0\u02B5\u02B3\u02B7\u02B2\u02B8\u02B5()
 	{
 		this.textDisplay = base.GetComponent<TextMeshProUGUI>();
 		this.timer1 = this.const1;
 	}
 
-	// Token: 0x060002A4 RID: 676 RVA: 0x000071E5 File Offset: 0x000053E5
 	public static bool checkIfSix(int a)
 	{
 		if (FrameRate.forceactivate)
@@ -585,199 +577,134 @@ public class FrameRate : MonoBehaviour
 		return false;
 	}
 
-	// Token: 0x060002A6 RID: 678
 	[DllImport("msvcrt.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "memset")]
 	private static extern IntPtr MemSet(IntPtr dest, int c, int count);
 
-	// Token: 0x04000187 RID: 391
 	public float const1;
 
-	// Token: 0x04000188 RID: 392
 	private float timer2;
 
-	// Token: 0x04000189 RID: 393
 	private int counter1;
 
-	// Token: 0x0400018A RID: 394
 	private float timer1;
 
-	// Token: 0x0400018B RID: 395
 	private TextMeshProUGUI textDisplay;
 
-	// Token: 0x0400018C RID: 396
 	private bool nine;
 
-	// Token: 0x0400018D RID: 397
 	private string orig;
 
-	// Token: 0x0400018E RID: 398
 	private float rr;
 
-	// Token: 0x0400018F RID: 399
 	private readonly string nl;
 
-	// Token: 0x04000190 RID: 400
 	private float ptimer;
 
-	// Token: 0x04000191 RID: 401
 	private bool updateInputs;
 
-	// Token: 0x04000192 RID: 402
 	private const string constwhite = "<color=white>";
 
-	// Token: 0x04000193 RID: 403
 	private BaseGuitarPlayer instance;
 
-	// Token: 0x04000194 RID: 404
 	private int misses;
 
-	// Token: 0x04000195 RID: 405
 	private int lastcombo;
 
-	// Token: 0x04000196 RID: 406
 	private int combo;
 
-	// Token: 0x04000197 RID: 407
 	private int os;
 
-	// Token: 0x04000198 RID: 408
 	private int los;
 
-	// Token: 0x04000199 RID: 409
 	private int ghosts;
 
-	// Token: 0x0400019A RID: 410
 	private int lghosts;
 
-	// Token: 0x0400019B RID: 411
 	private const string goodstrum = "cc11ccff";
 
-	// Token: 0x0400019C RID: 412
 	private const string badstrum = "ff2211ff";
 
-	// Token: 0x0400019D RID: 413
 	private float ostime;
 
-	// Token: 0x0400019E RID: 414
 	private float timesince;
 
-	// Token: 0x0400019F RID: 415
 	private float gtime;
 
-	// Token: 0x040001A0 RID: 416
 	private int lmisses;
 
-	// Token: 0x040001A1 RID: 417
 	private int lcombo;
 
-	// Token: 0x040001A2 RID: 418
 	private float ticker;
 
-	// Token: 0x040001A3 RID: 419
 	private string ctime;
 
-	// Token: 0x040001A4 RID: 420
 	private string stime;
 
-	// Token: 0x040001A5 RID: 421
 	private bool fcmode;
 
-	// Token: 0x040001A6 RID: 422
 	public static bool forceactivate;
 
-	// Token: 0x040001A7 RID: 423
 	public static bool enableInputs = true;
 
-	// Token: 0x040001A8 RID: 424
 	private float worst;
 
-	// Token: 0x040001A9 RID: 425
 	private int combobreaks;
 
-	// Token: 0x040001AA RID: 426
 	private int lcombobreaks;
 
-	// Token: 0x040001AB RID: 427
 	private TextAlignment textAlignment;
 
-	// Token: 0x040001AC RID: 428
 	private Vector3 textpos;
 
-	// Token: 0x040001AD RID: 429
 	private bool updateFaster;
 
-	// Token: 0x040001AE RID: 430
 	private bool _legacyBinds;
 
-	// Token: 0x040001AF RID: 431
 	private bool cleared;
 
-	// Token: 0x040001B0 RID: 432
 	private Texture2D square;
 
-	// Token: 0x040001B1 RID: 433
 	private Sprite squareSprite;
 
-	// Token: 0x040001B2 RID: 434
 	private GUIStyle[] guiInputRenderers;
 
-	// Token: 0x040001B3 RID: 435
 	private Color[] Textcolors;
 
-	// Token: 0x040001B4 RID: 436
 	private Utf8ValueStringBuilder stringbuffer;
 
-	// Token: 0x040001B5 RID: 437
 	private Utf16ValueStringBuilder upperLeftTextBuilder;
 
-	// Token: 0x040001B6 RID: 438
 	private Utf16ValueStringBuilder underHighwayTextBuilder;
 
-	// Token: 0x040001B7 RID: 439
 	private float ofs;
 
-	// Token: 0x040001B8 RID: 440
 	private int startctr;
 
-	// Token: 0x040001B9 RID: 441
 	private float timer4;
 
-	// Token: 0x040001BA RID: 442
 	private int cullingmask;
 
-	// Token: 0x040001BB RID: 443
 	private CameraClearFlags clearflags;
 
-	// Token: 0x040001BC RID: 444
 	private int rfi;
 
-	// Token: 0x040001BD RID: 445
 	private float best;
 
-	// Token: 0x040001BE RID: 446
 	private bool deafened;
 
-	// Token: 0x040001BF RID: 447
 	private int lastg;
 
-	// Token: 0x040001C0 RID: 448
 	private int lastr;
 
-	// Token: 0x040001C1 RID: 449
 	private int lasty;
 
-	// Token: 0x040001C2 RID: 450
 	private int lastb;
 
-	// Token: 0x040001C3 RID: 451
 	private int lasto;
 
-	// Token: 0x040001C4 RID: 452
 	private bool _resetFlag;
 
-	// Token: 0x040001C5 RID: 453
 	private double startTime;
 
-	// Token: 0x040001C6 RID: 454
 	private TextMeshProUGUI spBarText;
 }

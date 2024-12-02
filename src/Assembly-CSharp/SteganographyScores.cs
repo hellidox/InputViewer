@@ -1,17 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x02000365 RID: 869
 internal class SteganographyScores
 {
-	// Token: 0x06001FDE RID: 8158 RVA: 0x00007CFD File Offset: 0x00005EFD
 	private static bool BitFromByte(byte b, int bitNumber)
 	{
 		return ((int)b & (1 << bitNumber)) != 0;
 	}
 
-	// Token: 0x06001FDF RID: 8159 RVA: 0x000D6994 File Offset: 0x000D4B94
 	private static byte[] PackBitsInByteArray(bool[] bits)
 	{
 		List<byte> list = new List<byte>();
@@ -40,7 +37,6 @@ internal class SteganographyScores
 		return list.ToArray();
 	}
 
-	// Token: 0x06001FE0 RID: 8160 RVA: 0x0002BB28 File Offset: 0x00029D28
 	private static byte GetByte(byte[] array, int accumBits)
 	{
 		int num = accumBits / 8;
@@ -51,7 +47,6 @@ internal class SteganographyScores
 		return array[num];
 	}
 
-	// Token: 0x06001FE1 RID: 8161 RVA: 0x000D69FC File Offset: 0x000D4BFC
 	public static void EmbedBytes(PayloadData dataPayload, ref Color32[] pixels)
 	{
 		byte[] array = Helper.EncodeReedSoloman(dataPayload.BuildPayload());
@@ -77,7 +72,6 @@ internal class SteganographyScores
 		}
 	}
 
-	// Token: 0x06001FE2 RID: 8162 RVA: 0x000D6B08 File Offset: 0x000D4D08
 	public static PayloadData ExtractBytes(Color32[] pixels)
 	{
 		List<bool> list = new List<bool>();

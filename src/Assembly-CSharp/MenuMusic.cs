@@ -1,12 +1,10 @@
-﻿using System;
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x02000023 RID: 35
 public class MenuMusic : MonoBehaviour
 {
-	// Token: 0x0600014E RID: 334 RVA: 0x00006882 File Offset: 0x00004A82
 	private IEnumerator \u02C1\u02B6\u02B5\u02C0\u02B7\u02B2\u02B2\u02B9\u02B2\u02BE\u02B9()
 	{
 		if (\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02BD\u02BD\u02B6\u02B3\u02B2\u02B6\u02BB\u02BF\u02BE\u02B6\u02B4 == null || \u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02BD\u02BD\u02B6\u02B3\u02B2\u02B6\u02BB\u02BF\u02BE\u02B6\u02B4.Count == 0)
@@ -42,7 +40,6 @@ public class MenuMusic : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x0600014F RID: 335 RVA: 0x0001F3AC File Offset: 0x0001D5AC
 	public void \u02B2\u02B3\u02B5\u02BC\u02BB\u02B3\u02BF\u02BA\u02B6\u02B5\u02B9()
 	{
 		if (BassAudioManager.Instance.\u02C1\u02B2\u02C1\u02BA\u02BA\u02C1\u02BA\u02B4\u02BD\u02C0\u02BE == null || BassAudioManager.Instance.\u02C1\u02B2\u02C1\u02BA\u02BA\u02C1\u02BA\u02B4\u02BD\u02C0\u02BE.folderPath == null || BassAudioManager.Instance.\u02C1\u02B2\u02C1\u02BA\u02BA\u02C1\u02BA\u02B4\u02BD\u02C0\u02BE.folderPath == string.Empty || !this.\u02B4\u02B2\u02BA\u02B6\u02BC\u02BE\u02BB\u02B5\u02B2\u02BE\u02B8)
@@ -75,7 +72,6 @@ public class MenuMusic : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000151 RID: 337 RVA: 0x00006891 File Offset: 0x00004A91
 	private IEnumerator \u02B9\u02B5\u02B3\u02B8\u02B7\u02B3\u02B2\u02B6\u02B7\u02B6\u02B6()
 	{
 		MenuMusic.\u02B6\u02B7\u02BA\u02B5\u02B4\u02B9\u02B7\u02BD\u02B5\u02B3\u02B2 u02B6_u02B7_u02BA_u02B5_u02B4_u02B9_u02B7_u02BD_u02B5_u02B3_u02B = new MenuMusic.\u02B6\u02B7\u02BA\u02B5\u02B4\u02B9\u02B7\u02BD\u02B5\u02B3\u02B2(1);
@@ -83,7 +79,6 @@ public class MenuMusic : MonoBehaviour
 		return u02B6_u02B7_u02BA_u02B5_u02B4_u02B9_u02B7_u02BD_u02B5_u02B3_u02B;
 	}
 
-	// Token: 0x06000152 RID: 338 RVA: 0x000068A0 File Offset: 0x00004AA0
 	public void \u02B9\u02BF\u02B3\u02C1\u02B9\u02B2\u02B9\u02BA\u02B8\u02B5\u02B9()
 	{
 		if (this.\u02B4\u02B2\u02BA\u02B6\u02BC\u02BE\u02BB\u02B5\u02B2\u02BE\u02B8)
@@ -97,7 +92,6 @@ public class MenuMusic : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000153 RID: 339 RVA: 0x0001F4EC File Offset: 0x0001D6EC
 	public void \u02C0\u02BC\u02B5\u02B7\u02B4\u02B4\u02B6\u02BF\u02BF\u02B6\u02C1()
 	{
 		if (BassAudioManager.Instance.\u02C1\u02B2\u02C1\u02BA\u02BA\u02C1\u02BA\u02B4\u02BD\u02C0\u02BE == null || BassAudioManager.Instance.\u02C1\u02B2\u02C1\u02BA\u02BA\u02C1\u02BA\u02B4\u02BD\u02C0\u02BE.folderPath == null || BassAudioManager.Instance.\u02C1\u02B2\u02C1\u02BA\u02BA\u02C1\u02BA\u02B4\u02BD\u02C0\u02BE.folderPath == string.Empty || !this.\u02B4\u02B2\u02BA\u02B6\u02BC\u02BE\u02BB\u02B5\u02B2\u02BE\u02B8)
@@ -130,7 +124,6 @@ public class MenuMusic : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000154 RID: 340 RVA: 0x00006891 File Offset: 0x00004A91
 	private IEnumerator \u02B7\u02C1\u02BC\u02B6\u02BC\u02BA\u02BA\u02B6\u02B5\u02B4\u02C1()
 	{
 		MenuMusic.\u02B6\u02B7\u02BA\u02B5\u02B4\u02B9\u02B7\u02BD\u02B5\u02B3\u02B2 u02B6_u02B7_u02BA_u02B5_u02B4_u02B9_u02B7_u02BD_u02B5_u02B3_u02B = new MenuMusic.\u02B6\u02B7\u02BA\u02B5\u02B4\u02B9\u02B7\u02BD\u02B5\u02B3\u02B2(1);
@@ -138,7 +131,6 @@ public class MenuMusic : MonoBehaviour
 		return u02B6_u02B7_u02BA_u02B5_u02B4_u02B9_u02B7_u02BD_u02B5_u02B3_u02B;
 	}
 
-	// Token: 0x06000155 RID: 341 RVA: 0x000068D1 File Offset: 0x00004AD1
 	private void OnApplicationFocus(bool \u02BE\u02BE\u02B5\u02C0\u02B7\u02B3\u02B5\u02B7\u02BF\u02B8\u02BA)
 	{
 		if (SettingsController.\u02BB\u02B7\u02BA\u02BC\u02B2\u02B8\u02B9\u02BC\u02C0\u02B5\u02B6 && SettingsController.\u02B3\u02BD\u02BB\u02B7\u02B5\u02B7\u02BD\u02B4\u02B4\u02BD\u02B3 && this.\u02B4\u02B2\u02BA\u02B6\u02BC\u02BE\u02BB\u02B5\u02B2\u02BE\u02B8)
@@ -152,7 +144,6 @@ public class MenuMusic : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000156 RID: 342 RVA: 0x00006907 File Offset: 0x00004B07
 	private void \u02B2\u02B2\u02BC\u02B2\u02C1\u02BD\u02B8\u02B3\u02B4\u02B2\u02BC(bool \u02BE\u02BE\u02B5\u02C0\u02B7\u02B3\u02B5\u02B7\u02BF\u02B8\u02BA)
 	{
 		if (SettingsController.\u02BB\u02B7\u02BA\u02BC\u02B2\u02B8\u02B9\u02BC\u02C0\u02B5\u02B6 && SettingsController.\u02B3\u02BD\u02BB\u02B7\u02B5\u02B7\u02BD\u02B4\u02B4\u02BD\u02B3 && this.\u02B4\u02B2\u02BA\u02B6\u02BC\u02BE\u02BB\u02B5\u02B2\u02BE\u02B8)
@@ -166,7 +157,6 @@ public class MenuMusic : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000157 RID: 343 RVA: 0x0001F62C File Offset: 0x0001D82C
 	public void OnEnable()
 	{
 		if (SettingsController.\u02B3\u02B2\u02B5\u02B8\u02B8\u02BD\u02BF\u02B6\u02B3\u02C1\u02BF.GetCurrentVolume > 0 && \u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02BD\u02BD\u02B6\u02B3\u02B2\u02B6\u02BB\u02BF\u02BE\u02B6\u02B4 != null && BassAudioManager.Instance.\u02C1\u02B2\u02C1\u02BA\u02BA\u02C1\u02BA\u02B4\u02BD\u02C0\u02BE == null)
@@ -176,7 +166,6 @@ public class MenuMusic : MonoBehaviour
 		base.Invoke("ʵʲʵʽˁʻʵʺʺʻʹ", 0.001f);
 	}
 
-	// Token: 0x06000158 RID: 344 RVA: 0x0001F67C File Offset: 0x0001D87C
 	public void \u02B3\u02BE\u02B8\u02B5\u02C0\u02B8\u02BF\u02C0\u02B3\u02B7\u02B7(bool \u02C1\u02BA\u02BD\u02B6\u02B7\u02B4\u02B3\u02C0\u02B2\u02B2\u02B4)
 	{
 		if (\u02C1\u02BA\u02BD\u02B6\u02B7\u02B4\u02B3\u02C0\u02B2\u02B2\u02B4)
@@ -196,7 +185,6 @@ public class MenuMusic : MonoBehaviour
 		BassAudioManager.Instance.\u02C1\u02B2\u02C1\u02BA\u02BA\u02C1\u02BA\u02B4\u02BD\u02C0\u02BE = null;
 	}
 
-	// Token: 0x06000159 RID: 345 RVA: 0x0001F6D4 File Offset: 0x0001D8D4
 	public void \u02C0\u02B7\u02B3\u02BF\u02B9\u02B3\u02BB\u02C1\u02BB\u02BA\u02BF()
 	{
 		if (SettingsController.\u02B3\u02B2\u02B5\u02B8\u02B8\u02BD\u02BF\u02B6\u02B3\u02C1\u02BF.GetCurrentVolume > 1 && \u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02BD\u02BD\u02B6\u02B3\u02B2\u02B6\u02BB\u02BF\u02BE\u02B6\u02B4 != null && BassAudioManager.Instance.\u02C1\u02B2\u02C1\u02BA\u02BA\u02C1\u02BA\u02B4\u02BD\u02C0\u02BE == null)
@@ -206,7 +194,6 @@ public class MenuMusic : MonoBehaviour
 		base.Invoke("Export Current Song", 851f);
 	}
 
-	// Token: 0x0600015A RID: 346 RVA: 0x0000693D File Offset: 0x00004B3D
 	private void \u02B6\u02B9\u02BB\u02C1\u02B2\u02BE\u02BE\u02BB\u02B9\u02BB\u02BC(bool \u02BE\u02BE\u02B5\u02C0\u02B7\u02B3\u02B5\u02B7\u02BF\u02B8\u02BA)
 	{
 		if (SettingsController.\u02BB\u02B7\u02BA\u02BC\u02B2\u02B8\u02B9\u02BC\u02C0\u02B5\u02B6 && SettingsController.\u02B3\u02BD\u02BB\u02B7\u02B5\u02B7\u02BD\u02B4\u02B4\u02BD\u02B3 && this.\u02B4\u02B2\u02BA\u02B6\u02BC\u02BE\u02BB\u02B5\u02B2\u02BE\u02B8)
@@ -220,7 +207,6 @@ public class MenuMusic : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600015B RID: 347 RVA: 0x00006973 File Offset: 0x00004B73
 	public void \u02BA\u02B9\u02BF\u02B2\u02B6\u02C1\u02B8\u02BF\u02C0\u02B9\u02B7()
 	{
 		if (this.\u02B4\u02B2\u02BA\u02B6\u02BC\u02BE\u02BB\u02B5\u02B2\u02BE\u02B8)
@@ -234,7 +220,6 @@ public class MenuMusic : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600015C RID: 348 RVA: 0x000069A4 File Offset: 0x00004BA4
 	private void \u02B2\u02BE\u02B8\u02B9\u02C1\u02BE\u02BA\u02B8\u02B9\u02B2\u02B8(bool \u02BE\u02BE\u02B5\u02C0\u02B7\u02B3\u02B5\u02B7\u02BF\u02B8\u02BA)
 	{
 		if (SettingsController.\u02BB\u02B7\u02BA\u02BC\u02B2\u02B8\u02B9\u02BC\u02C0\u02B5\u02B6 && SettingsController.\u02B3\u02BD\u02BB\u02B7\u02B5\u02B7\u02BD\u02B4\u02B4\u02BD\u02B3 && this.\u02B4\u02B2\u02BA\u02B6\u02BC\u02BE\u02BB\u02B5\u02B2\u02BE\u02B8)
@@ -248,7 +233,6 @@ public class MenuMusic : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600015D RID: 349 RVA: 0x00006891 File Offset: 0x00004A91
 	private IEnumerator \u02BF\u02B2\u02BB\u02B4\u02BD\u02C1\u02B3\u02B4\u02B9\u02B2\u02B6()
 	{
 		MenuMusic.\u02B6\u02B7\u02BA\u02B5\u02B4\u02B9\u02B7\u02BD\u02B5\u02B3\u02B2 u02B6_u02B7_u02BA_u02B5_u02B4_u02B9_u02B7_u02BD_u02B5_u02B3_u02B = new MenuMusic.\u02B6\u02B7\u02BA\u02B5\u02B4\u02B9\u02B7\u02BD\u02B5\u02B3\u02B2(1);
@@ -256,7 +240,6 @@ public class MenuMusic : MonoBehaviour
 		return u02B6_u02B7_u02BA_u02B5_u02B4_u02B9_u02B7_u02BD_u02B5_u02B3_u02B;
 	}
 
-	// Token: 0x0600015E RID: 350 RVA: 0x0001F724 File Offset: 0x0001D924
 	public void \u02B5\u02B2\u02B5\u02BD\u02C1\u02BB\u02B5\u02BA\u02BA\u02BB\u02B9()
 	{
 		if (BassAudioManager.Instance.\u02C1\u02B2\u02C1\u02BA\u02BA\u02C1\u02BA\u02B4\u02BD\u02C0\u02BE == null || BassAudioManager.Instance.\u02C1\u02B2\u02C1\u02BA\u02BA\u02C1\u02BA\u02B4\u02BD\u02C0\u02BE.folderPath == null || BassAudioManager.Instance.\u02C1\u02B2\u02C1\u02BA\u02BA\u02C1\u02BA\u02B4\u02BD\u02C0\u02BE.folderPath == string.Empty || !this.\u02B4\u02B2\u02BA\u02B6\u02BC\u02BE\u02BB\u02B5\u02B2\u02BE\u02B8)
@@ -283,35 +266,26 @@ public class MenuMusic : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04000095 RID: 149
 	public bool \u02B4\u02B2\u02BA\u02B6\u02BC\u02BE\u02BB\u02B5\u02B2\u02BE\u02B8;
 
-	// Token: 0x04000096 RID: 150
 	private Coroutine \u02B6\u02C0\u02BE\u02B6\u02BB\u02B9\u02BC\u02B5\u02BE\u02B2\u02B7;
 
-	// Token: 0x04000097 RID: 151
 	public GameObject \u02BE\u02BD\u02B6\u02B5\u02B3\u02BF\u02B4\u02BC\u02B6\u02B6\u02B3;
 
-	// Token: 0x04000098 RID: 152
 	public RawImage \u02BC\u02C0\u02B7\u02B7\u02B5\u02B9\u02B9\u02C1\u02BB\u02B5\u02B3;
 
-	// Token: 0x04000099 RID: 153
 	[SerializeField]
 	private ScrollingText nameText;
 
-	// Token: 0x0400009A RID: 154
 	[SerializeField]
 	private ScrollingText artistText;
 
-	// Token: 0x0400009B RID: 155
 	[SerializeField]
 	private ScrollingText yearText;
 
-	// Token: 0x0400009C RID: 156
 	[SerializeField]
 	private SongScan songScan;
 
-	// Token: 0x0400009D RID: 157
 	[SerializeField]
 	private Texture defaultAlbumArt;
 }

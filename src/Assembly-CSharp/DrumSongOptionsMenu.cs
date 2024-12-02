@@ -1,17 +1,14 @@
-﻿using System;
+using System;
 using UnityEngine;
 
-// Token: 0x02000088 RID: 136
 public class DrumSongOptionsMenu : BaseMenu
 {
-	// Token: 0x060005A1 RID: 1441 RVA: 0x00008D18 File Offset: 0x00006F18
 	public void \u02C1\u02B8\u02BB\u02BF\u02BC\u02BF\u02C1\u02BB\u02B3\u02BF\u02BD()
 	{
 		this.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(0, false);
 		base.gameObject.SetActive(false);
 	}
 
-	// Token: 0x060005A2 RID: 1442 RVA: 0x00036B0C File Offset: 0x00034D0C
 	protected virtual void \u02B5\u02B9\u02B7\u02B7\u02B6\u02B5\u02BC\u02BA\u02B4\u02B2\u02B4()
 	{
 		string[] menuStrings = this.menuStrings;
@@ -31,7 +28,6 @@ public class DrumSongOptionsMenu : BaseMenu
 		base.Update();
 	}
 
-	// Token: 0x060005A3 RID: 1443 RVA: 0x00036B0C File Offset: 0x00034D0C
 	protected override void Update()
 	{
 		string[] menuStrings = this.menuStrings;
@@ -51,7 +47,6 @@ public class DrumSongOptionsMenu : BaseMenu
 		base.Update();
 	}
 
-	// Token: 0x060005A4 RID: 1444 RVA: 0x00036B70 File Offset: 0x00034D70
 	public virtual void \u02B8\u02C1\u02B2\u02C0\u02B8\u02B6\u02C1\u02B4\u02B9\u02B8\u02BF()
 	{
 		base.\u02B7\u02B6\u02BC\u02BC\u02B3\u02BA\u02BE\u02C0\u02BF\u02B9\u02C1();
@@ -199,7 +194,6 @@ public class DrumSongOptionsMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x060005A5 RID: 1445 RVA: 0x00036DDC File Offset: 0x00034FDC
 	public virtual void \u02BF\u02B4\u02BE\u02BC\u02B9\u02BE\u02BD\u02B7\u02C0\u02C1\u02C0()
 	{
 		base.\u02B7\u02B6\u02BC\u02BC\u02B3\u02BA\u02BE\u02C0\u02BF\u02B9\u02C1();
@@ -347,7 +341,6 @@ public class DrumSongOptionsMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x060005A6 RID: 1446 RVA: 0x00037048 File Offset: 0x00035248
 	protected virtual void \u02C1\u02B8\u02B5\u02BD\u02BD\u02C0\u02BB\u02B4\u02BD\u02B8\u02B3()
 	{
 		string[] menuStrings = this.menuStrings;
@@ -367,20 +360,17 @@ public class DrumSongOptionsMenu : BaseMenu
 		base.Update();
 	}
 
-	// Token: 0x060005A7 RID: 1447 RVA: 0x00008D44 File Offset: 0x00006F44
 	public virtual void \u02B5\u02B4\u02BE\u02B6\u02BC\u02BC\u02C0\u02BC\u02B5\u02BC\u02BF()
 	{
 		base.gameObject.SetActive(false);
 	}
 
-	// Token: 0x060005A8 RID: 1448 RVA: 0x00008D2E File Offset: 0x00006F2E
 	public void \u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD()
 	{
 		this.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(0, true);
 		base.gameObject.SetActive(true);
 	}
 
-	// Token: 0x060005A9 RID: 1449 RVA: 0x000370AC File Offset: 0x000352AC
 	public override void \u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3()
 	{
 		base.\u02B7\u02B6\u02BC\u02BC\u02B3\u02BA\u02BE\u02C0\u02BF\u02B9\u02C1();
@@ -528,7 +518,6 @@ public class DrumSongOptionsMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x060005AA RID: 1450 RVA: 0x00036B0C File Offset: 0x00034D0C
 	protected virtual void \u02BD\u02B8\u02BD\u02B5\u02B6\u02B3\u02BF\u02B3\u02C1\u02B8\u02C1()
 	{
 		string[] menuStrings = this.menuStrings;
@@ -548,20 +537,17 @@ public class DrumSongOptionsMenu : BaseMenu
 		base.Update();
 	}
 
-	// Token: 0x060005AB RID: 1451 RVA: 0x00008D60 File Offset: 0x00006F60
 	public void \u02B5\u02C0\u02C0\u02B2\u02B6\u02B4\u02BB\u02BF\u02BF\u02BC\u02B2()
 	{
 		this.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(1, false);
 		base.gameObject.SetActive(false);
 	}
 
-	// Token: 0x060005AC RID: 1452 RVA: 0x00008D44 File Offset: 0x00006F44
 	public override void \u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8()
 	{
 		base.gameObject.SetActive(false);
 	}
 
-	// Token: 0x060005AE RID: 1454 RVA: 0x00037318 File Offset: 0x00035518
 	public virtual void \u02C0\u02BE\u02B9\u02B5\u02B6\u02C1\u02B5\u02C0\u02BE\u02B8\u02C1()
 	{
 		base.\u02B7\u02B6\u02BC\u02BC\u02B3\u02BA\u02BE\u02C0\u02BF\u02B9\u02C1();
@@ -709,7 +695,6 @@ public class DrumSongOptionsMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x060005AF RID: 1455 RVA: 0x00037584 File Offset: 0x00035784
 	public virtual void \u02BD\u02B3\u02B9\u02BD\u02B3\u02BE\u02B4\u02B9\u02BB\u02BE\u02B9()
 	{
 		base.\u02B7\u02B6\u02BC\u02BC\u02B3\u02BA\u02BE\u02C0\u02BF\u02B9\u02C1();
@@ -857,19 +842,15 @@ public class DrumSongOptionsMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x04000415 RID: 1045
 	[SerializeField]
 	private SongSelect songSelect;
 
-	// Token: 0x04000416 RID: 1046
 	[SerializeField]
 	private SetlistMenu setlistMenu;
 
-	// Token: 0x04000417 RID: 1047
 	[SerializeField]
 	private string[] songlistMenuStrings;
 
-	// Token: 0x04000418 RID: 1048
 	[SerializeField]
 	private string[] setlistMenuStrings;
 }

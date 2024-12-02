@@ -1,11 +1,9 @@
-﻿using System;
+using System;
 using UnityEngine;
 
-// Token: 0x020001BF RID: 447
 [RequireComponent(typeof(BasePlayer))]
 public class BeatRenderer : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\u02B9\u02C0\u02B8\u02B4\u02BC
 {
-	// Token: 0x060013BC RID: 5052 RVA: 0x00010607 File Offset: 0x0000E807
 	private float \u02B9\u02B6\u02B8\u02BE\u02C1\u02B8\u02B9\u02B2\u02B7\u02C0\u02B4(\u02BB\u02B4\u02B4\u02B8\u02BE\u02B9\u02C1\u02B8\u02BA\u02BD\u02B7 \u02B7\u02BF\u02B6\u02B4\u02BA\u02BF\u02C0\u02BB\u02BA\u02B4\u02B4)
 	{
 		if (\u02B7\u02BF\u02B6\u02B4\u02BA\u02BF\u02C0\u02BB\u02BA\u02B4\u02B4 == \u02BB\u02B4\u02B4\u02B8\u02BE\u02B9\u02C1\u02B8\u02BA\u02BD\u02B7.MEASURE)
@@ -23,7 +21,6 @@ public class BeatRenderer : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\
 		return 766f;
 	}
 
-	// Token: 0x060013BD RID: 5053 RVA: 0x0009EBA0 File Offset: 0x0009CDA0
 	public void \u02BC\u02BC\u02BD\u02BF\u02B2\u02B6\u02C1\u02C0\u02B2\u02BE\u02B6()
 	{
 		int i = 0;
@@ -73,7 +70,6 @@ public class BeatRenderer : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\
 		}
 	}
 
-	// Token: 0x060013BE RID: 5054 RVA: 0x0009ED14 File Offset: 0x0009CF14
 	private void \u02BF\u02B3\u02C0\u02B6\u02B5\u02B9\u02C0\u02B6\u02C1\u02B9\u02B3()
 	{
 		this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = base.GetComponent<BasePlayer>();
@@ -101,7 +97,6 @@ public class BeatRenderer : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\
 		}
 	}
 
-	// Token: 0x060013BF RID: 5055 RVA: 0x0009EE18 File Offset: 0x0009D018
 	private void \u02B3\u02BF\u02C1\u02B4\u02B3\u02B5\u02B6\u02B7\u02B4\u02B9\u02C0()
 	{
 		this.\u02BD\u02BC\u02BE\u02BA\u02C1\u02C0\u02B4\u02B5\u02BB\u02C0\u02BB = new GameObject[this.\u02B7\u02B4\u02B2\u02BE\u02C0\u02B8\u02B4\u02B7\u02B2\u02BF\u02C1];
@@ -119,8 +114,6 @@ public class BeatRenderer : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\
 		}
 	}
 
-	// Token: 0x1700020F RID: 527
-	// (get) Token: 0x060013C0 RID: 5056 RVA: 0x0000DD39 File Offset: 0x0000BF39
 	public \u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3 \u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3
 	{
 		get
@@ -129,7 +122,6 @@ public class BeatRenderer : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\
 		}
 	}
 
-	// Token: 0x060013C1 RID: 5057 RVA: 0x0009EF10 File Offset: 0x0009D110
 	public void \u02B6\u02B6\u02BD\u02C0\u02BD\u02B3\u02B2\u02BC\u02C0\u02BE\u02BB()
 	{
 		int i = 0;
@@ -179,20 +171,17 @@ public class BeatRenderer : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\
 		}
 	}
 
-	// Token: 0x060013C2 RID: 5058 RVA: 0x00010640 File Offset: 0x0000E840
 	public void \u02BF\u02B2\u02B6\u02B6\u02BD\u02C0\u02BE\u02B6\u02B6\u02BA\u02B8(float \u02B3\u02BD\u02BE\u02BB\u02BB\u02B9\u02B2\u02B9\u02BC\u02BB\u02BF, float \u02C1\u02B8\u02B7\u02B5\u02B2\u02BA\u02BC\u02B2\u02B7\u02B2\u02BC, float \u02B2\u02BA\u02BD\u02B8\u02C1\u02B3\u02B8\u02BF\u02B5\u02B9\u02BA, float \u02B3\u02BD\u02B6\u02B8\u02B3\u02BE\u02B3\u02C0\u02B3\u02C1\u02B4)
 	{
 		this.\u02B7\u02B5\u02B5\u02C1\u02B7\u02B5\u02BE\u02BA\u02BF\u02BE\u02C0 = \u02C1\u02B8\u02B7\u02B5\u02B2\u02BA\u02BC\u02B2\u02B7\u02B2\u02BC;
 		this.\u02BB\u02C0\u02BF\u02C0\u02B4\u02B9\u02B4\u02B7\u02B5\u02BF\u02BE = \u02B3\u02BD\u02BE\u02BB\u02BB\u02B9\u02B2\u02B9\u02BC\u02BB\u02BF;
 	}
 
-	// Token: 0x060013C3 RID: 5059 RVA: 0x00010650 File Offset: 0x0000E850
 	public void \u02C1\u02B8\u02B5\u02BD\u02BD\u02C0\u02BB\u02B4\u02BD\u02B8\u02B3()
 	{
 		this.\u02B8\u02BB\u02BE\u02B5\u02BA\u02BE\u02B7\u02B3\u02BC\u02B5\u02B3();
 	}
 
-	// Token: 0x060013C4 RID: 5060 RVA: 0x0009F084 File Offset: 0x0009D284
 	public void \u02BF\u02B2\u02B7\u02B9\u02BD\u02BE\u02C1\u02B5\u02BF\u02B7\u02B8()
 	{
 		int i = 0;
@@ -242,7 +231,6 @@ public class BeatRenderer : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\
 		}
 	}
 
-	// Token: 0x060013C5 RID: 5061 RVA: 0x0009F1F8 File Offset: 0x0009D3F8
 	private void \u02BE\u02B2\u02B5\u02B6\u02BB\u02B6\u02BD\u02C1\u02B3\u02BE\u02C0()
 	{
 		this.\u02BD\u02BC\u02BE\u02BA\u02C1\u02C0\u02B4\u02B5\u02BB\u02C0\u02BB = new GameObject[this.\u02B7\u02B4\u02B2\u02BE\u02C0\u02B8\u02B4\u02B7\u02B2\u02BF\u02C1];
@@ -260,26 +248,22 @@ public class BeatRenderer : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\
 		}
 	}
 
-	// Token: 0x060013C6 RID: 5062 RVA: 0x00010658 File Offset: 0x0000E858
 	public \u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3 \u02B3\u02B5\u02BE\u02BA\u02B4\u02BE\u02BB\u02B3\u02B6\u02B9\u02B8()
 	{
 		return (\u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3)3;
 	}
 
-	// Token: 0x060013C7 RID: 5063 RVA: 0x0000D554 File Offset: 0x0000B754
 	public \u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3 \u02B7\u02B3\u02B9\u02B9\u02BF\u02C0\u02B7\u02B5\u02C0\u02C0\u02B9()
 	{
 		return \u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3.Notes;
 	}
 
-	// Token: 0x060013C8 RID: 5064 RVA: 0x00010640 File Offset: 0x0000E840
 	public void \u02BD\u02BC\u02BA\u02B9\u02B9\u02BD\u02BA\u02BC\u02B9\u02B8\u02B6(float \u02B3\u02BD\u02BE\u02BB\u02BB\u02B9\u02B2\u02B9\u02BC\u02BB\u02BF, float \u02C1\u02B8\u02B7\u02B5\u02B2\u02BA\u02BC\u02B2\u02B7\u02B2\u02BC, float \u02B2\u02BA\u02BD\u02B8\u02C1\u02B3\u02B8\u02BF\u02B5\u02B9\u02BA, float \u02B3\u02BD\u02B6\u02B8\u02B3\u02BE\u02B3\u02C0\u02B3\u02C1\u02B4)
 	{
 		this.\u02B7\u02B5\u02B5\u02C1\u02B7\u02B5\u02BE\u02BA\u02BF\u02BE\u02C0 = \u02C1\u02B8\u02B7\u02B5\u02B2\u02BA\u02BC\u02B2\u02B7\u02B2\u02BC;
 		this.\u02BB\u02C0\u02BF\u02C0\u02B4\u02B9\u02B4\u02B7\u02B5\u02BF\u02BE = \u02B3\u02BD\u02BE\u02BB\u02BB\u02B9\u02B2\u02B9\u02BC\u02BB\u02BF;
 	}
 
-	// Token: 0x060013C9 RID: 5065 RVA: 0x0009F2F0 File Offset: 0x0009D4F0
 	private void \u02BE\u02C0\u02BC\u02B6\u02B5\u02BB\u02C0\u02B4\u02C0\u02B7\u02BC()
 	{
 		this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = base.GetComponent<BasePlayer>();
@@ -307,14 +291,12 @@ public class BeatRenderer : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\
 		}
 	}
 
-	// Token: 0x060013CA RID: 5066 RVA: 0x0001065B File Offset: 0x0000E85B
 	public void \u02B2\u02B3\u02B3\u02B6\u02B2\u02B7\u02B7\u02BA\u02C1\u02BD\u02C1()
 	{
 		this.\u02B2\u02B9\u02B2\u02C1\u02C1\u02BA\u02C1\u02C1\u02B2\u02BD\u02B5 = 0;
 		this.\u02BF\u02B3\u02C0\u02B6\u02B5\u02B9\u02C0\u02B6\u02C1\u02B9\u02B3();
 	}
 
-	// Token: 0x060013CB RID: 5067 RVA: 0x0001066A File Offset: 0x0000E86A
 	private float \u02BC\u02B7\u02B3\u02B9\u02C1\u02B3\u02C1\u02BF\u02B7\u02B3\u02B9(\u02BB\u02B4\u02B4\u02B8\u02BE\u02B9\u02C1\u02B8\u02BA\u02BD\u02B7 \u02B7\u02BF\u02B6\u02B4\u02BA\u02BF\u02C0\u02BB\u02BA\u02B4\u02B4)
 	{
 		if (\u02B7\u02BF\u02B6\u02B4\u02BA\u02BF\u02C0\u02BB\u02BA\u02B4\u02B4 == \u02BB\u02B4\u02B4\u02B8\u02BE\u02B9\u02C1\u02B8\u02BA\u02BD\u02B7.BEAT_STRONG)
@@ -332,7 +314,6 @@ public class BeatRenderer : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\
 		return 1422f;
 	}
 
-	// Token: 0x060013CC RID: 5068 RVA: 0x000106A3 File Offset: 0x0000E8A3
 	private float \u02C1\u02C0\u02C0\u02BC\u02C0\u02B5\u02B7\u02BC\u02B9\u02B5\u02BD(\u02BB\u02B4\u02B4\u02B8\u02BE\u02B9\u02C1\u02B8\u02BA\u02BD\u02B7 \u02B7\u02BF\u02B6\u02B4\u02BA\u02BF\u02C0\u02BB\u02BA\u02B4\u02B4)
 	{
 		if (\u02B7\u02BF\u02B6\u02B4\u02BA\u02BF\u02C0\u02BB\u02BA\u02B4\u02B4 == \u02BB\u02B4\u02B4\u02B8\u02BE\u02B9\u02C1\u02B8\u02BA\u02BD\u02B7.MEASURE)
@@ -350,20 +331,17 @@ public class BeatRenderer : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\
 		return 459f;
 	}
 
-	// Token: 0x060013CD RID: 5069 RVA: 0x00010640 File Offset: 0x0000E840
 	public void \u02C0\u02B6\u02B4\u02B4\u02B5\u02B3\u02B6\u02B7\u02B4\u02B5\u02B8(float \u02B3\u02BD\u02BE\u02BB\u02BB\u02B9\u02B2\u02B9\u02BC\u02BB\u02BF, float \u02C1\u02B8\u02B7\u02B5\u02B2\u02BA\u02BC\u02B2\u02B7\u02B2\u02BC, float \u02B2\u02BA\u02BD\u02B8\u02C1\u02B3\u02B8\u02BF\u02B5\u02B9\u02BA, float \u02B3\u02BD\u02B6\u02B8\u02B3\u02BE\u02B3\u02C0\u02B3\u02C1\u02B4)
 	{
 		this.\u02B7\u02B5\u02B5\u02C1\u02B7\u02B5\u02BE\u02BA\u02BF\u02BE\u02C0 = \u02C1\u02B8\u02B7\u02B5\u02B2\u02BA\u02BC\u02B2\u02B7\u02B2\u02BC;
 		this.\u02BB\u02C0\u02BF\u02C0\u02B4\u02B9\u02B4\u02B7\u02B5\u02BF\u02BE = \u02B3\u02BD\u02BE\u02BB\u02BB\u02B9\u02B2\u02B9\u02BC\u02BB\u02BF;
 	}
 
-	// Token: 0x060013CE RID: 5070 RVA: 0x000106DC File Offset: 0x0000E8DC
 	public void Update()
 	{
 		this.\u02BC\u02BC\u02BD\u02BF\u02B2\u02B6\u02C1\u02C0\u02B2\u02BE\u02B6();
 	}
 
-	// Token: 0x060013CF RID: 5071 RVA: 0x000106E4 File Offset: 0x0000E8E4
 	public void Reset()
 	{
 		if (!base.enabled)
@@ -374,7 +352,6 @@ public class BeatRenderer : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\
 		this.\u02BE\u02C0\u02BC\u02B6\u02B5\u02BB\u02C0\u02B4\u02C0\u02B7\u02BC();
 	}
 
-	// Token: 0x060013D0 RID: 5072 RVA: 0x0009F3F4 File Offset: 0x0009D5F4
 	private void \u02B8\u02B4\u02B4\u02C0\u02B9\u02B2\u02BA\u02B2\u02B8\u02B5\u02B3()
 	{
 		this.\u02BD\u02BC\u02BE\u02BA\u02C1\u02C0\u02B4\u02B5\u02BB\u02C0\u02BB = new GameObject[this.\u02B7\u02B4\u02B2\u02BE\u02C0\u02B8\u02B4\u02B7\u02B2\u02BF\u02C1];
@@ -392,7 +369,6 @@ public class BeatRenderer : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\
 		}
 	}
 
-	// Token: 0x060013D1 RID: 5073 RVA: 0x0009F4EC File Offset: 0x0009D6EC
 	public void Start()
 	{
 		this.\u02BB\u02B6\u02BD\u02BA\u02BC\u02B2\u02B8\u02BB\u02C0\u02BD\u02BE = base.GetComponent<TrackFadeManager>();
@@ -409,7 +385,6 @@ public class BeatRenderer : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\
 		this.\u02BB\u02B6\u02BD\u02BA\u02BC\u02B2\u02B8\u02BB\u02C0\u02BD\u02BE.\u02B2\u02B7\u02BE\u02B2\u02C1\u02B4\u02B6\u02B7\u02BE\u02BD\u02B8(this);
 	}
 
-	// Token: 0x060013D2 RID: 5074 RVA: 0x0009F594 File Offset: 0x0009D794
 	private void \u02B4\u02BA\u02BF\u02C1\u02C1\u02B4\u02BE\u02BC\u02B9\u02B5\u02C0()
 	{
 		this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = base.GetComponent<BasePlayer>();
@@ -437,7 +412,6 @@ public class BeatRenderer : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\
 		}
 	}
 
-	// Token: 0x060013D3 RID: 5075 RVA: 0x0009F698 File Offset: 0x0009D898
 	public void OnDisable()
 	{
 		if (this.\u02BD\u02BC\u02BE\u02BA\u02C1\u02C0\u02B4\u02B5\u02BB\u02C0\u02BB == null)
@@ -451,13 +425,11 @@ public class BeatRenderer : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\
 		}
 	}
 
-	// Token: 0x060013D4 RID: 5076 RVA: 0x000106FC File Offset: 0x0000E8FC
 	public \u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3 \u02BB\u02C1\u02B6\u02BA\u02B3\u02B2\u02C0\u02BC\u02B9\u02BD\u02C0()
 	{
 		return (\u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3)4;
 	}
 
-	// Token: 0x060013D5 RID: 5077 RVA: 0x0009F6CC File Offset: 0x0009D8CC
 	public void \u02BB\u02B6\u02BE\u02BA\u02B5\u02B6\u02BA\u02BD\u02B8\u02C1\u02BD()
 	{
 		int i = 0;
@@ -507,13 +479,11 @@ public class BeatRenderer : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\
 		}
 	}
 
-	// Token: 0x060013D6 RID: 5078 RVA: 0x000106FF File Offset: 0x0000E8FF
 	public void \u02BA\u02BA\u02C0\u02BA\u02BC\u02B9\u02B5\u02BE\u02BA\u02C0\u02BD()
 	{
 		this.\u02BB\u02B6\u02BE\u02BA\u02B5\u02B6\u02BA\u02BD\u02B8\u02C1\u02BD();
 	}
 
-	// Token: 0x060013D7 RID: 5079 RVA: 0x0009F840 File Offset: 0x0009DA40
 	public void \u02B2\u02B5\u02B8\u02C1\u02BD\u02C0\u02BC\u02BE\u02BE\u02BA\u02B6()
 	{
 		if (this.\u02BD\u02BC\u02BE\u02BA\u02C1\u02C0\u02B4\u02B5\u02BB\u02C0\u02BB == null)
@@ -527,7 +497,6 @@ public class BeatRenderer : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\
 		}
 	}
 
-	// Token: 0x060013D9 RID: 5081 RVA: 0x0009F908 File Offset: 0x0009DB08
 	public void \u02B8\u02BB\u02BE\u02B5\u02BA\u02BE\u02B7\u02B3\u02BC\u02B5\u02B3()
 	{
 		int i = 1;
@@ -577,7 +546,6 @@ public class BeatRenderer : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\
 		}
 	}
 
-	// Token: 0x060013DA RID: 5082 RVA: 0x00010707 File Offset: 0x0000E907
 	private float \u02B5\u02BB\u02B2\u02BA\u02BD\u02BB\u02B8\u02B2\u02C1\u02B2\u02BA(\u02BB\u02B4\u02B4\u02B8\u02BE\u02B9\u02C1\u02B8\u02BA\u02BD\u02B7 \u02B7\u02BF\u02B6\u02B4\u02BA\u02BF\u02C0\u02BB\u02BA\u02B4\u02B4)
 	{
 		if (\u02B7\u02BF\u02B6\u02B4\u02BA\u02BF\u02C0\u02BB\u02BA\u02B4\u02B4 == \u02BB\u02B4\u02B4\u02B8\u02BE\u02B9\u02C1\u02B8\u02BA\u02BD\u02B7.BEAT_STRONG)
@@ -595,75 +563,52 @@ public class BeatRenderer : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\
 		return 1f;
 	}
 
-	// Token: 0x060013DB RID: 5083 RVA: 0x00010740 File Offset: 0x0000E940
 	\u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3 \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\u02B9\u02C0\u02B8\u02B4\u02BC.\u02BA\u02BA\u02B7\u02B9\u02B9\u02B5\u02C1\u02C1\u02B2\u02B7\u02BA()
 	{
 		return this.\u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3;
 	}
 
-	// Token: 0x04000EC5 RID: 3781
 	private GameManager \u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD;
 
-	// Token: 0x04000EC6 RID: 3782
 	private \u02B5\u02B9\u02C1\u02C0\u02B7\u02BD\u02BE\u02B2\u02C1\u02B2\u02B6 \u02B3\u02BC\u02B3\u02B6\u02BD\u02B6\u02B4\u02B5\u02B6\u02B7\u02BB;
 
-	// Token: 0x04000EC7 RID: 3783
 	protected int \u02B7\u02B4\u02B2\u02BE\u02C0\u02B8\u02B4\u02B7\u02B2\u02BF\u02C1 = 200;
 
-	// Token: 0x04000EC8 RID: 3784
 	protected int \u02B2\u02B9\u02B2\u02C1\u02C1\u02BA\u02C1\u02C1\u02B2\u02BD\u02B5;
 
-	// Token: 0x04000EC9 RID: 3785
 	protected Transform[] \u02B8\u02B5\u02B5\u02BB\u02B8\u02BE\u02BF\u02BF\u02B2\u02BD\u02C1;
 
-	// Token: 0x04000ECA RID: 3786
 	protected SpriteRenderer[] \u02B3\u02B6\u02BB\u02BE\u02C1\u02BD\u02BF\u02C1\u02C1\u02BC\u02BC;
 
-	// Token: 0x04000ECB RID: 3787
 	protected GameObject[] \u02BD\u02BC\u02BE\u02BA\u02C1\u02C0\u02B4\u02B5\u02BB\u02C0\u02BB;
 
-	// Token: 0x04000ECC RID: 3788
 	private float \u02B7\u02B5\u02B5\u02C1\u02B7\u02B5\u02BE\u02BA\u02BF\u02BE\u02C0;
 
-	// Token: 0x04000ECD RID: 3789
 	private float \u02BB\u02C0\u02BF\u02C0\u02B4\u02B9\u02B4\u02B7\u02B5\u02BF\u02BE;
 
-	// Token: 0x04000ECE RID: 3790
 	public float \u02BA\u02BF\u02B4\u02B8\u02B8\u02B4\u02BA\u02C0\u02B5\u02BB\u02BD;
 
-	// Token: 0x04000ECF RID: 3791
 	private float \u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4;
 
-	// Token: 0x04000ED0 RID: 3792
 	private const float \u02B7\u02BD\u02BA\u02BE\u02BE\u02B9\u02BF\u02B2\u02B5\u02B6\u02B6 = 2.2f;
 
-	// Token: 0x04000ED1 RID: 3793
 	private const float \u02B6\u02B9\u02B8\u02B7\u02BC\u02BC\u02B5\u02B3\u02C0\u02BA\u02B5 = 1.1f;
 
-	// Token: 0x04000ED2 RID: 3794
 	private const float \u02B2\u02BD\u02B8\u02B2\u02B3\u02C0\u02B3\u02B2\u02B6\u02BE\u02BB = 0.55f;
 
-	// Token: 0x04000ED3 RID: 3795
 	public float \u02B4\u02B2\u02BB\u02B4\u02C1\u02B3\u02B2\u02B2\u02B2\u02B7\u02B7 = 1f;
 
-	// Token: 0x04000ED4 RID: 3796
 	public float \u02B9\u02BA\u02B9\u02B7\u02BC\u02BA\u02B2\u02BB\u02BC\u02C0\u02B8 = 0.0125f;
 
-	// Token: 0x04000ED5 RID: 3797
 	private int \u02BE\u02B9\u02BD\u02BB\u02B5\u02BD\u02BF\u02C0\u02B3\u02BB\u02B4;
 
-	// Token: 0x04000ED6 RID: 3798
 	private TrackFadeManager \u02BB\u02B6\u02BD\u02BA\u02BC\u02B2\u02B8\u02BB\u02C0\u02BD\u02BE;
 
-	// Token: 0x04000ED7 RID: 3799
 	private BasePlayer \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7;
 
-	// Token: 0x04000ED8 RID: 3800
 	private readonly Color \u02B5\u02BD\u02B6\u02BA\u02B7\u02C0\u02B5\u02B3\u02B5\u02BE\u02BD = new Color(1f, 1f, 1f, 1f);
 
-	// Token: 0x04000ED9 RID: 3801
 	private readonly Color \u02BE\u02B2\u02B3\u02BD\u02C1\u02BF\u02C0\u02BA\u02B3\u02B9\u02C0 = new Color(1f, 1f, 1f, 0.7f);
 
-	// Token: 0x04000EDA RID: 3802
 	private readonly Color \u02B8\u02C0\u02B4\u02BF\u02BD\u02BA\u02B8\u02BF\u02C0\u02BC\u02BE = new Color(1f, 1f, 1f, 0.4f);
 }

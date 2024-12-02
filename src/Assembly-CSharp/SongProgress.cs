@@ -1,11 +1,9 @@
-﻿using System;
+using System;
 using StrikeCore;
 using UnityEngine;
 
-// Token: 0x020001FA RID: 506
 public class SongProgress : MonoBehaviour
 {
-	// Token: 0x060016AB RID: 5803 RVA: 0x00011BC6 File Offset: 0x0000FDC6
 	private void \u02B4\u02BC\u02BE\u02BF\u02B4\u02B5\u02BF\u02B7\u02BA\u02BA\u02BB()
 	{
 		this.\u02B4\u02B9\u02BB\u02BB\u02B2\u02C1\u02BF\u02B7\u02BA\u02B7\u02B5.localScale = this.\u02BA\u02B9\u02B6\u02C1\u02B2\u02B7\u02B7\u02B9\u02BA\u02BA\u02B8;
@@ -13,7 +11,6 @@ public class SongProgress : MonoBehaviour
 		this.\u02B6\u02B3\u02B2\u02B6\u02C1\u02B8\u02B8\u02B8\u02B7\u02C1\u02B4.localPosition = this.\u02BC\u02C0\u02BE\u02B2\u02BA\u02C0\u02BE\u02BE\u02B7\u02B9\u02B9;
 	}
 
-	// Token: 0x060016AC RID: 5804 RVA: 0x000ADF58 File Offset: 0x000AC158
 	private void \u02B6\u02B4\u02B5\u02B9\u02BE\u02B5\u02B3\u02B7\u02C0\u02BE\u02B3()
 	{
 		if (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9 < 1763.0)
@@ -36,7 +33,6 @@ public class SongProgress : MonoBehaviour
 		this.\u02B6\u02B3\u02B2\u02B6\u02C1\u02B8\u02B8\u02B8\u02B7\u02C1\u02B4.localPosition = this.\u02BC\u02C0\u02BE\u02B2\u02BA\u02C0\u02BE\u02BE\u02B7\u02B9\u02B9;
 	}
 
-	// Token: 0x060016AD RID: 5805 RVA: 0x00011BC6 File Offset: 0x0000FDC6
 	private void \u02B3\u02BB\u02BF\u02B4\u02B9\u02BA\u02B5\u02B5\u02BE\u02BB\u02BE()
 	{
 		this.\u02B4\u02B9\u02BB\u02BB\u02B2\u02C1\u02BF\u02B7\u02BA\u02B7\u02B5.localScale = this.\u02BA\u02B9\u02B6\u02C1\u02B2\u02B7\u02B7\u02B9\u02BA\u02BA\u02B8;
@@ -44,14 +40,12 @@ public class SongProgress : MonoBehaviour
 		this.\u02B6\u02B3\u02B2\u02B6\u02C1\u02B8\u02B8\u02B8\u02B7\u02C1\u02B4.localPosition = this.\u02BC\u02C0\u02BE\u02B2\u02BA\u02C0\u02BE\u02BE\u02B7\u02B9\u02B9;
 	}
 
-	// Token: 0x060016AE RID: 5806 RVA: 0x000AE03C File Offset: 0x000AC23C
 	private void \u02BC\u02BE\u02B2\u02B8\u02C0\u02B6\u02B2\u02B3\u02B6\u02B4\u02BF()
 	{
 		GameObject gameObject = GameObject.Find("g");
 		this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = gameObject.GetComponent<GameManager>();
 	}
 
-	// Token: 0x060016AF RID: 5807 RVA: 0x000AE060 File Offset: 0x000AC260
 	private void \u02BE\u02B6\u02BF\u02B7\u02BD\u02B3\u02B9\u02B6\u02B8\u02BC\u02B6()
 	{
 		if (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9 < 583.0)
@@ -74,7 +68,6 @@ public class SongProgress : MonoBehaviour
 		this.\u02B6\u02B3\u02B2\u02B6\u02C1\u02B8\u02B8\u02B8\u02B7\u02C1\u02B4.localPosition = this.\u02BC\u02C0\u02BE\u02B2\u02BA\u02C0\u02BE\u02BE\u02B7\u02B9\u02B9;
 	}
 
-	// Token: 0x060016B0 RID: 5808 RVA: 0x000AE144 File Offset: 0x000AC344
 	private void Start()
 	{
 		this.sr = this.\u02B4\u02B9\u02BB\u02BB\u02B2\u02C1\u02BF\u02B7\u02BA\u02B7\u02B5.gameObject.GetComponent<SpriteRenderer>();
@@ -85,7 +78,6 @@ public class SongProgress : MonoBehaviour
 		this.\u02B6\u02B3\u02B2\u02B6\u02C1\u02B8\u02B8\u02B8\u02B7\u02C1\u02B4.localPosition = this.\u02BC\u02C0\u02BE\u02B2\u02BA\u02C0\u02BE\u02BE\u02B7\u02B9\u02B9;
 	}
 
-	// Token: 0x060016B1 RID: 5809 RVA: 0x000AE1E0 File Offset: 0x000AC3E0
 	private void \u02B6\u02B9\u02BF\u02BB\u02B2\u02BE\u02BC\u02BF\u02BF\u02B4\u02C0()
 	{
 		if (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9 < 1347.0)
@@ -108,7 +100,6 @@ public class SongProgress : MonoBehaviour
 		this.\u02B6\u02B3\u02B2\u02B6\u02C1\u02B8\u02B8\u02B8\u02B7\u02C1\u02B4.localPosition = this.\u02BC\u02C0\u02BE\u02B2\u02BA\u02C0\u02BE\u02BE\u02B7\u02B9\u02B9;
 	}
 
-	// Token: 0x060016B2 RID: 5810 RVA: 0x000AE2C4 File Offset: 0x000AC4C4
 	private void \u02BA\u02B3\u02B6\u02B9\u02BE\u02C0\u02C1\u02BA\u02BD\u02B9\u02BC()
 	{
 		if (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9 < 1741.0)
@@ -131,7 +122,6 @@ public class SongProgress : MonoBehaviour
 		this.\u02B6\u02B3\u02B2\u02B6\u02C1\u02B8\u02B8\u02B8\u02B7\u02C1\u02B4.localPosition = this.\u02BC\u02C0\u02BE\u02B2\u02BA\u02C0\u02BE\u02BE\u02B7\u02B9\u02B9;
 	}
 
-	// Token: 0x060016B3 RID: 5811 RVA: 0x000AE3A8 File Offset: 0x000AC5A8
 	private void \u02BE\u02BD\u02C1\u02BA\u02C1\u02B6\u02B8\u02BB\u02BA\u02C0\u02BE()
 	{
 		if (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9 < 1467.0)
@@ -154,7 +144,6 @@ public class SongProgress : MonoBehaviour
 		this.\u02B6\u02B3\u02B2\u02B6\u02C1\u02B8\u02B8\u02B8\u02B7\u02C1\u02B4.localPosition = this.\u02BC\u02C0\u02BE\u02B2\u02BA\u02C0\u02BE\u02BE\u02B7\u02B9\u02B9;
 	}
 
-	// Token: 0x060016B4 RID: 5812 RVA: 0x000AE48C File Offset: 0x000AC68C
 	private void \u02B4\u02B8\u02B6\u02B7\u02B5\u02B6\u02BB\u02B4\u02B4\u02B9\u02B7()
 	{
 		if (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9 < 1559.0)
@@ -177,7 +166,6 @@ public class SongProgress : MonoBehaviour
 		this.\u02B6\u02B3\u02B2\u02B6\u02C1\u02B8\u02B8\u02B8\u02B7\u02C1\u02B4.localPosition = this.\u02BC\u02C0\u02BE\u02B2\u02BA\u02C0\u02BE\u02BE\u02B7\u02B9\u02B9;
 	}
 
-	// Token: 0x060016B5 RID: 5813 RVA: 0x000AE570 File Offset: 0x000AC770
 	private void \u02B4\u02B4\u02BE\u02C1\u02B8\u02B7\u02B7\u02BD\u02B5\u02B7\u02BB()
 	{
 		if (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9 < 253.0)
@@ -200,7 +188,6 @@ public class SongProgress : MonoBehaviour
 		this.\u02B6\u02B3\u02B2\u02B6\u02C1\u02B8\u02B8\u02B8\u02B7\u02C1\u02B4.localPosition = this.\u02BC\u02C0\u02BE\u02B2\u02BA\u02C0\u02BE\u02BE\u02B7\u02B9\u02B9;
 	}
 
-	// Token: 0x060016B6 RID: 5814 RVA: 0x00011BC6 File Offset: 0x0000FDC6
 	private void \u02B5\u02C0\u02BE\u02B8\u02B9\u02B2\u02BD\u02C0\u02BF\u02B3\u02BD()
 	{
 		this.\u02B4\u02B9\u02BB\u02BB\u02B2\u02C1\u02BF\u02B7\u02BA\u02B7\u02B5.localScale = this.\u02BA\u02B9\u02B6\u02C1\u02B2\u02B7\u02B7\u02B9\u02BA\u02BA\u02B8;
@@ -208,14 +195,12 @@ public class SongProgress : MonoBehaviour
 		this.\u02B6\u02B3\u02B2\u02B6\u02C1\u02B8\u02B8\u02B8\u02B7\u02C1\u02B4.localPosition = this.\u02BC\u02C0\u02BE\u02B2\u02BA\u02C0\u02BE\u02BE\u02B7\u02B9\u02B9;
 	}
 
-	// Token: 0x060016B7 RID: 5815 RVA: 0x000AE654 File Offset: 0x000AC854
 	private void \u02B2\u02BF\u02B3\u02B6\u02B5\u02B4\u02BC\u02C0\u02C0\u02C0\u02BC()
 	{
 		GameObject gameObject = GameObject.Find("cache_file");
 		this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = gameObject.GetComponent<GameManager>();
 	}
 
-	// Token: 0x060016B8 RID: 5816 RVA: 0x00011BC6 File Offset: 0x0000FDC6
 	private void \u02C0\u02BE\u02B2\u02BE\u02C0\u02B5\u02B3\u02B7\u02B2\u02B8\u02B5()
 	{
 		this.\u02B4\u02B9\u02BB\u02BB\u02B2\u02C1\u02BF\u02B7\u02BA\u02B7\u02B5.localScale = this.\u02BA\u02B9\u02B6\u02C1\u02B2\u02B7\u02B7\u02B9\u02BA\u02BA\u02B8;
@@ -223,7 +208,6 @@ public class SongProgress : MonoBehaviour
 		this.\u02B6\u02B3\u02B2\u02B6\u02C1\u02B8\u02B8\u02B8\u02B7\u02C1\u02B4.localPosition = this.\u02BC\u02C0\u02BE\u02B2\u02BA\u02C0\u02BE\u02BE\u02B7\u02B9\u02B9;
 	}
 
-	// Token: 0x060016B9 RID: 5817 RVA: 0x00011BC6 File Offset: 0x0000FDC6
 	private void \u02B4\u02B2\u02B5\u02BA\u02B4\u02C0\u02BC\u02BB\u02C1\u02B9\u02BD()
 	{
 		this.\u02B4\u02B9\u02BB\u02BB\u02B2\u02C1\u02BF\u02B7\u02BA\u02B7\u02B5.localScale = this.\u02BA\u02B9\u02B6\u02C1\u02B2\u02B7\u02B7\u02B9\u02BA\u02BA\u02B8;
@@ -231,7 +215,6 @@ public class SongProgress : MonoBehaviour
 		this.\u02B6\u02B3\u02B2\u02B6\u02C1\u02B8\u02B8\u02B8\u02B7\u02C1\u02B4.localPosition = this.\u02BC\u02C0\u02BE\u02B2\u02BA\u02C0\u02BE\u02BE\u02B7\u02B9\u02B9;
 	}
 
-	// Token: 0x060016BA RID: 5818 RVA: 0x00011BC6 File Offset: 0x0000FDC6
 	private void \u02B6\u02B6\u02B4\u02BB\u02B7\u02C1\u02C0\u02B6\u02B7\u02BD\u02B5()
 	{
 		this.\u02B4\u02B9\u02BB\u02BB\u02B2\u02C1\u02BF\u02B7\u02BA\u02B7\u02B5.localScale = this.\u02BA\u02B9\u02B6\u02C1\u02B2\u02B7\u02B7\u02B9\u02BA\u02BA\u02B8;
@@ -239,7 +222,6 @@ public class SongProgress : MonoBehaviour
 		this.\u02B6\u02B3\u02B2\u02B6\u02C1\u02B8\u02B8\u02B8\u02B7\u02C1\u02B4.localPosition = this.\u02BC\u02C0\u02BE\u02B2\u02BA\u02C0\u02BE\u02BE\u02B7\u02B9\u02B9;
 	}
 
-	// Token: 0x060016BB RID: 5819 RVA: 0x00011BC6 File Offset: 0x0000FDC6
 	private void \u02B8\u02B4\u02B9\u02B6\u02BA\u02C0\u02B8\u02C0\u02C0\u02B2\u02B4()
 	{
 		this.\u02B4\u02B9\u02BB\u02BB\u02B2\u02C1\u02BF\u02B7\u02BA\u02B7\u02B5.localScale = this.\u02BA\u02B9\u02B6\u02C1\u02B2\u02B7\u02B7\u02B9\u02BA\u02BA\u02B8;
@@ -247,14 +229,12 @@ public class SongProgress : MonoBehaviour
 		this.\u02B6\u02B3\u02B2\u02B6\u02C1\u02B8\u02B8\u02B8\u02B7\u02C1\u02B4.localPosition = this.\u02BC\u02C0\u02BE\u02B2\u02BA\u02C0\u02BE\u02BE\u02B7\u02B9\u02B9;
 	}
 
-	// Token: 0x060016BC RID: 5820 RVA: 0x000AE678 File Offset: 0x000AC878
 	private void OnEnable()
 	{
 		GameObject gameObject = GameObject.Find("Game Manager");
 		this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = gameObject.GetComponent<GameManager>();
 	}
 
-	// Token: 0x060016BD RID: 5821 RVA: 0x000AE69C File Offset: 0x000AC89C
 	private void \u02B4\u02B4\u02B8\u02BF\u02B9\u02B9\u02B8\u02B6\u02B9\u02B5\u02B2()
 	{
 		if (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9 < 674.0)
@@ -277,14 +257,12 @@ public class SongProgress : MonoBehaviour
 		this.\u02B6\u02B3\u02B2\u02B6\u02C1\u02B8\u02B8\u02B8\u02B7\u02C1\u02B4.localPosition = this.\u02BC\u02C0\u02BE\u02B2\u02BA\u02C0\u02BE\u02BE\u02B7\u02B9\u02B9;
 	}
 
-	// Token: 0x060016BE RID: 5822 RVA: 0x000AE780 File Offset: 0x000AC980
 	private void \u02B8\u02B2\u02BB\u02BF\u02BF\u02BF\u02C0\u02BE\u02BD\u02B9\u02B8()
 	{
 		GameObject gameObject = GameObject.Find("}");
 		this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = gameObject.GetComponent<GameManager>();
 	}
 
-	// Token: 0x060016BF RID: 5823 RVA: 0x00011BC6 File Offset: 0x0000FDC6
 	private void \u02C0\u02BC\u02BC\u02BD\u02B8\u02BD\u02BE\u02B6\u02BE\u02BB\u02BB()
 	{
 		this.\u02B4\u02B9\u02BB\u02BB\u02B2\u02C1\u02BF\u02B7\u02BA\u02B7\u02B5.localScale = this.\u02BA\u02B9\u02B6\u02C1\u02B2\u02B7\u02B7\u02B9\u02BA\u02BA\u02B8;
@@ -292,7 +270,6 @@ public class SongProgress : MonoBehaviour
 		this.\u02B6\u02B3\u02B2\u02B6\u02C1\u02B8\u02B8\u02B8\u02B7\u02C1\u02B4.localPosition = this.\u02BC\u02C0\u02BE\u02B2\u02BA\u02C0\u02BE\u02BE\u02B7\u02B9\u02B9;
 	}
 
-	// Token: 0x060016C1 RID: 5825 RVA: 0x000AE80C File Offset: 0x000ACA0C
 	private void FixedUpdate()
 	{
 		this.ticker++;
@@ -337,46 +314,32 @@ public class SongProgress : MonoBehaviour
 		this.\u02B6\u02B3\u02B2\u02B6\u02C1\u02B8\u02B8\u02B8\u02B7\u02C1\u02B4.localPosition = this.\u02BC\u02C0\u02BE\u02B2\u02BA\u02C0\u02BE\u02BE\u02B7\u02B9\u02B9;
 	}
 
-	// Token: 0x0400106D RID: 4205
 	private GameManager \u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD;
 
-	// Token: 0x0400106E RID: 4206
 	public Transform \u02B4\u02B9\u02BB\u02BB\u02B2\u02C1\u02BF\u02B7\u02BA\u02B7\u02B5;
 
-	// Token: 0x0400106F RID: 4207
 	public Transform \u02B6\u02B3\u02B2\u02B6\u02C1\u02B8\u02B8\u02B8\u02B7\u02C1\u02B4;
 
-	// Token: 0x04001070 RID: 4208
 	private float \u02B7\u02B4\u02C1\u02C1\u02BC\u02B2\u02BC\u02BD\u02B8\u02BF\u02BC = 1.06f;
 
-	// Token: 0x04001071 RID: 4209
 	private float \u02B7\u02B2\u02B3\u02B2\u02BD\u02BC\u02BD\u02B4\u02B6\u02BE\u02BD = 1.655f;
 
-	// Token: 0x04001072 RID: 4210
 	private Vector3 \u02BC\u02C0\u02BE\u02B2\u02BA\u02C0\u02BE\u02BE\u02B7\u02B9\u02B9 = new Vector3(1.06f, -0.148f, 0f);
 
-	// Token: 0x04001073 RID: 4211
 	private Vector3 \u02BA\u02B9\u02B6\u02C1\u02B2\u02B7\u02B7\u02B9\u02BA\u02BA\u02B8 = new Vector3(0f, 0.1f, 1f);
 
-	// Token: 0x04001074 RID: 4212
 	private float \u02B5\u02B2\u02BA\u02BB\u02BA\u02B2\u02BE\u02B2\u02BD\u02C1\u02B8 = 3.71f;
 
-	// Token: 0x04001075 RID: 4213
 	[SerializeField]
 	public PracticeUI practiceUI;
 
-	// Token: 0x04001076 RID: 4214
 	private bool deafened;
 
-	// Token: 0x04001077 RID: 4215
 	private SpriteRenderer sr;
 
-	// Token: 0x04001078 RID: 4216
 	private int ticker;
 
-	// Token: 0x04001079 RID: 4217
 	private string lastColor;
 
-	// Token: 0x0400107A RID: 4218
 	private Color origColor;
 }

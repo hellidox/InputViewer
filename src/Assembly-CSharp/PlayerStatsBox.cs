@@ -1,13 +1,11 @@
-﻿using System;
+using System;
 using StrikeCore;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x02000048 RID: 72
 public class PlayerStatsBox : BaseMenu
 {
-	// Token: 0x060002EF RID: 751 RVA: 0x00028CE4 File Offset: 0x00026EE4
 	public override void \u02C1\u02B3\u02BC\u02B6\u02BD\u02B6\u02BF\u02B7\u02BB\u02B5\u02BB()
 	{
 		if (this.\u02BC\u02BF\u02B4\u02BE\u02B2\u02B6\u02B7\u02B5\u02BD\u02BC\u02B6)
@@ -44,7 +42,6 @@ public class PlayerStatsBox : BaseMenu
 		}
 	}
 
-	// Token: 0x060002F0 RID: 752 RVA: 0x0000774D File Offset: 0x0000594D
 	public void \u02B2\u02B3\u02B7\u02C1\u02B4\u02BE\u02C1\u02B2\u02C1\u02BC\u02B2()
 	{
 		this.\u02B6\u02C0\u02C1\u02BB\u02B8\u02B7\u02B9\u02C1\u02B2\u02BC\u02B6("Ready");
@@ -54,7 +51,6 @@ public class PlayerStatsBox : BaseMenu
 		}
 	}
 
-	// Token: 0x060002F1 RID: 753 RVA: 0x00028D74 File Offset: 0x00026F74
 	private void \u02B8\u02C1\u02B9\u02BC\u02B6\u02B9\u02B3\u02B5\u02B7\u02BF\u02BD()
 	{
 		if (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[this.\u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7].\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
@@ -79,7 +75,6 @@ public class PlayerStatsBox : BaseMenu
 		}
 	}
 
-	// Token: 0x060002F2 RID: 754 RVA: 0x00028E64 File Offset: 0x00027064
 	private void \u02BD\u02C0\u02B9\u02BF\u02C0\u02B6\u02BD\u02B7\u02BD\u02B6\u02B2()
 	{
 		\u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0 u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6;
@@ -119,7 +114,6 @@ public class PlayerStatsBox : BaseMenu
 		this.statsNameTexts[15].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Solo Bonus");
 	}
 
-	// Token: 0x060002F3 RID: 755 RVA: 0x00029124 File Offset: 0x00027324
 	private void \u02B6\u02BB\u02B6\u02B4\u02BB\u02B8\u02B4\u02BC\u02BD\u02B3\u02C1()
 	{
 		if (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[this.\u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7].\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
@@ -144,7 +138,6 @@ public class PlayerStatsBox : BaseMenu
 		}
 	}
 
-	// Token: 0x060002F4 RID: 756 RVA: 0x00029214 File Offset: 0x00027414
 	private void Awake()
 	{
 		if (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[this.\u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7].\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
@@ -169,7 +162,6 @@ public class PlayerStatsBox : BaseMenu
 		}
 	}
 
-	// Token: 0x060002F5 RID: 757 RVA: 0x00029304 File Offset: 0x00027504
 	private void \u02B3\u02B7\u02B2\u02BF\u02B5\u02B7\u02B4\u02B4\u02C0\u02BD\u02B9()
 	{
 		bool flag = this.\u02BB\u02B3\u02C0\u02BC\u02BF\u02BD\u02B9\u02B2\u02BC\u02BE\u02B7 != 0 && this.\u02BC\u02BF\u02B4\u02BE\u02B2\u02B6\u02B7\u02B5\u02BD\u02BC\u02B6;
@@ -194,7 +186,6 @@ public class PlayerStatsBox : BaseMenu
 		}
 	}
 
-	// Token: 0x060002F6 RID: 758 RVA: 0x00029438 File Offset: 0x00027638
 	private void \u02B6\u02B3\u02BF\u02BB\u02B5\u02BF\u02B5\u02C0\u02BB\u02B9\u02BD()
 	{
 		int num = this.\u02C0\u02B4\u02BC\u02BA\u02B4\u02C1\u02BF\u02B3\u02B7\u02B6\u02B6;
@@ -222,7 +213,6 @@ public class PlayerStatsBox : BaseMenu
 		}
 	}
 
-	// Token: 0x060002F7 RID: 759 RVA: 0x000295B4 File Offset: 0x000277B4
 	protected override void Update()
 	{
 		this.\u02BE\u02B2\u02BA\u02BF\u02BE\u02B8\u02B9\u02BF\u02C0\u02BE\u02B4();
@@ -238,7 +228,6 @@ public class PlayerStatsBox : BaseMenu
 		this.\u02B4\u02BE\u02B5\u02B5\u02BF\u02B8\u02BC\u02B4\u02BE\u02B8\u02C1();
 	}
 
-	// Token: 0x060002F8 RID: 760 RVA: 0x0002961C File Offset: 0x0002781C
 	private void \u02B9\u02B5\u02BA\u02BF\u02BF\u02BF\u02B7\u02B9\u02BD\u02B6\u02BF()
 	{
 		Instrument instrument = this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4.playerInfo.instrument;
@@ -279,7 +268,6 @@ public class PlayerStatsBox : BaseMenu
 		}
 	}
 
-	// Token: 0x060002F9 RID: 761 RVA: 0x00029804 File Offset: 0x00027A04
 	protected override void OnEnable()
 	{
 		float num = (float)Mathf.Clamp(this.\u02BB\u02B3\u02C0\u02BC\u02BF\u02BD\u02B9\u02B2\u02BC\u02BE\u02B7, 0, 3) * this.scrollPageAmount;
@@ -288,7 +276,6 @@ public class PlayerStatsBox : BaseMenu
 		base.OnEnable();
 	}
 
-	// Token: 0x060002FA RID: 762 RVA: 0x00029860 File Offset: 0x00027A60
 	private void \u02B7\u02B6\u02B7\u02C1\u02B7\u02BB\u02BB\u02B8\u02B6\u02B2\u02B9()
 	{
 		for (int i = 0; i < this.menuOptions.Length; i++)
@@ -298,8 +285,6 @@ public class PlayerStatsBox : BaseMenu
 		this.selectionTransform.localPosition = new Vector2(0f, (float)(25 - this.\u02B9\u02BA\u02B9\u02C1\u02B6\u02BB\u02C0\u02B3\u02B7\u02B8\u02B2 * 50));
 	}
 
-	// Token: 0x17000029 RID: 41
-	// (get) Token: 0x060002FB RID: 763 RVA: 0x0000776C File Offset: 0x0000596C
 	public bool \u02BC\u02BF\u02B4\u02BE\u02B2\u02B6\u02B7\u02B5\u02BD\u02BC\u02B6
 	{
 		get
@@ -308,7 +293,6 @@ public class PlayerStatsBox : BaseMenu
 		}
 	}
 
-	// Token: 0x060002FC RID: 764 RVA: 0x000298CC File Offset: 0x00027ACC
 	public override void \u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3()
 	{
 		if (this.\u02BE\u02BA\u02BD\u02B5\u02BE\u02C0\u02B7\u02B3\u02BA\u02B4\u02BD == PlayerStatsBox.\u02B5\u02B7\u02BB\u02B5\u02B3\u02B2\u02BA\u02B7\u02B8\u02B9\u02C1.Ready)
@@ -373,7 +357,6 @@ public class PlayerStatsBox : BaseMenu
 		}
 	}
 
-	// Token: 0x060002FD RID: 765 RVA: 0x000299C4 File Offset: 0x00027BC4
 	private void \u02C0\u02B9\u02BB\u02BC\u02BF\u02B5\u02C0\u02B3\u02B5\u02BD\u02BC(bool \u02BF\u02BB\u02B8\u02B8\u02B4\u02B4\u02B6\u02C0\u02BD\u02B7\u02C1)
 	{
 		if (CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BA\u02B8\u02B6\u02BB\u02B5\u02B2\u02B8\u02B6\u02BB\u02BB && this.\u02BE\u02BA\u02BD\u02B5\u02BE\u02C0\u02B7\u02B3\u02BA\u02B4\u02BD == PlayerStatsBox.\u02B5\u02B7\u02BB\u02B5\u02B3\u02B2\u02BA\u02B7\u02B8\u02B9\u02C1.Ready && !\u02BF\u02BB\u02B8\u02B8\u02B4\u02B4\u02B6\u02C0\u02BD\u02B7\u02C1)
@@ -408,14 +391,12 @@ public class PlayerStatsBox : BaseMenu
 		this.\u02B7\u02B6\u02B7\u02C1\u02B7\u02BB\u02BB\u02B8\u02B6\u02B2\u02B9();
 	}
 
-	// Token: 0x060002FE RID: 766 RVA: 0x00007777 File Offset: 0x00005977
 	private void \u02B9\u02B7\u02B3\u02BD\u02B3\u02B6\u02B9\u02B3\u02BF\u02B8\u02B7()
 	{
 		this.menuObject.SetActive(false);
 		this.\u02B2\u02BF\u02BD\u02C0\u02B3\u02BD\u02BA\u02B5\u02BF\u02B8\u02B3 = false;
 	}
 
-	// Token: 0x060002FF RID: 767 RVA: 0x00029B0C File Offset: 0x00027D0C
 	private void \u02BA\u02B4\u02B2\u02BD\u02B4\u02C0\u02BF\u02BD\u02BA\u02BB\u02B9()
 	{
 		int i = 0;
@@ -434,7 +415,6 @@ public class PlayerStatsBox : BaseMenu
 		}
 	}
 
-	// Token: 0x06000300 RID: 768 RVA: 0x00029BAC File Offset: 0x00027DAC
 	public void \u02B6\u02C0\u02C1\u02BB\u02B8\u02B7\u02B9\u02C1\u02B2\u02BC\u02B6(string \u02BB\u02B2\u02BD\u02B9\u02B9\u02B6\u02C0\u02B5\u02B8\u02BA\u02BF)
 	{
 		this.\u02BB\u02B3\u02C0\u02BC\u02BF\u02BD\u02B9\u02B2\u02BC\u02BE\u02B7 = 4;
@@ -449,7 +429,6 @@ public class PlayerStatsBox : BaseMenu
 		this.\u02B6\u02C1\u02BF\u02C0\u02B8\u02BF\u02BE\u02BF\u02B8\u02B2\u02B8();
 	}
 
-	// Token: 0x06000301 RID: 769 RVA: 0x00029C0C File Offset: 0x00027E0C
 	private void \u02B7\u02B7\u02BC\u02B4\u02BD\u02BE\u02C0\u02B8\u02B3\u02B2\u02B2()
 	{
 		if (this.\u02B7\u02BF\u02BD\u02B7\u02B4\u02B9\u02B2\u02C1\u02BA\u02B3\u02BE)
@@ -465,7 +444,6 @@ public class PlayerStatsBox : BaseMenu
 		}
 	}
 
-	// Token: 0x06000302 RID: 770 RVA: 0x00029C70 File Offset: 0x00027E70
 	private void \u02B5\u02B8\u02BD\u02BA\u02BF\u02BB\u02B5\u02B4\u02BE\u02BA\u02B3()
 	{
 		\u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0 u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C0\u02B4\u02BE\u02B9\u02C1\u02B8\u02B2\u02B3\u02BE\u02BD\u02B9();
@@ -505,7 +483,6 @@ public class PlayerStatsBox : BaseMenu
 		this.statsNameTexts[-18].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD("Artist - Album");
 	}
 
-	// Token: 0x06000303 RID: 771 RVA: 0x00029F30 File Offset: 0x00028130
 	public virtual void \u02B8\u02B3\u02B9\u02BD\u02BF\u02BE\u02BE\u02B2\u02BB\u02BE\u02C0()
 	{
 		this.\u02BA\u02B8\u02B2\u02C1\u02BF\u02C0\u02BD\u02C0\u02B4\u02B4\u02B2 = false;
@@ -528,7 +505,6 @@ public class PlayerStatsBox : BaseMenu
 		}
 	}
 
-	// Token: 0x06000304 RID: 772 RVA: 0x00029F9C File Offset: 0x0002819C
 	protected virtual void \u02B4\u02BA\u02BE\u02BB\u02B5\u02BB\u02C1\u02B2\u02B4\u02B2\u02BF()
 	{
 		this.scrollTransform.localPosition = Vector2.zero;
@@ -543,7 +519,6 @@ public class PlayerStatsBox : BaseMenu
 		this.\u02B6\u02B2\u02BF\u02B6\u02B8\u02BD\u02C1\u02BB\u02BC\u02B3\u02B4 = ((num > this.\u02B7\u02B7\u02B4\u02B2\u02BF\u02C0\u02BE\u02B6\u02C0\u02B8\u02B5) ? (num - this.\u02B7\u02B7\u02B4\u02B2\u02BF\u02C0\u02BE\u02B6\u02C0\u02B8\u02B5) : 1);
 	}
 
-	// Token: 0x06000305 RID: 773 RVA: 0x0002A01C File Offset: 0x0002821C
 	protected override void Start()
 	{
 		this.scrollTransform.localPosition = Vector2.zero;
@@ -558,7 +533,6 @@ public class PlayerStatsBox : BaseMenu
 		this.\u02B6\u02B2\u02BF\u02B6\u02B8\u02BD\u02C1\u02BB\u02BC\u02B3\u02B4 = ((num > this.\u02B7\u02B7\u02B4\u02B2\u02BF\u02C0\u02BE\u02B6\u02C0\u02B8\u02B5) ? (num - this.\u02B7\u02B7\u02B4\u02B2\u02BF\u02C0\u02BE\u02B6\u02C0\u02B8\u02B5) : 0);
 	}
 
-	// Token: 0x06000306 RID: 774 RVA: 0x0002A09C File Offset: 0x0002829C
 	private void \u02B8\u02BA\u02BC\u02B4\u02B4\u02B9\u02BA\u02BC\u02B3\u02BD\u02BE()
 	{
 		int i = 1;
@@ -577,7 +551,6 @@ public class PlayerStatsBox : BaseMenu
 		}
 	}
 
-	// Token: 0x06000307 RID: 775 RVA: 0x0002A13C File Offset: 0x0002833C
 	private void \u02BE\u02B2\u02BA\u02BF\u02BE\u02B8\u02B9\u02BF\u02C0\u02BE\u02B4()
 	{
 		bool flag = this.\u02BB\u02B3\u02C0\u02BC\u02BF\u02BD\u02B9\u02B2\u02BC\u02BE\u02B7 != 0 && !this.\u02BC\u02BF\u02B4\u02BE\u02B2\u02B6\u02B7\u02B5\u02BD\u02BC\u02B6;
@@ -602,7 +575,6 @@ public class PlayerStatsBox : BaseMenu
 		}
 	}
 
-	// Token: 0x06000308 RID: 776 RVA: 0x0002A270 File Offset: 0x00028470
 	private void \u02B6\u02C1\u02BF\u02C0\u02B8\u02BF\u02BE\u02BF\u02B8\u02B2\u02B8()
 	{
 		if (this.\u02BB\u02B3\u02C0\u02BC\u02BF\u02BD\u02B9\u02B2\u02BC\u02BE\u02B7 == this.\u02B9\u02B5\u02B4\u02B9\u02BF\u02B6\u02B5\u02C1\u02BB\u02B3\u02B3)
@@ -617,7 +589,6 @@ public class PlayerStatsBox : BaseMenu
 		this.\u02BE\u02BD\u02B4\u02B4\u02B9\u02BF\u02BE\u02B9\u02B6\u02BB\u02BA.y = (float)this.\u02BB\u02B3\u02C0\u02BC\u02BF\u02BD\u02B9\u02B2\u02BC\u02BE\u02B7 * this.scrollPageAmount;
 	}
 
-	// Token: 0x06000309 RID: 777 RVA: 0x0000778C File Offset: 0x0000598C
 	public virtual void \u02C0\u02B6\u02B8\u02B4\u02BA\u02BB\u02BC\u02BD\u02BC\u02BE\u02B2(byte \u02C0\u02B4\u02B4\u02BC\u02BD\u02B2\u02C1\u02C0\u02C1\u02B4\u02C1)
 	{
 		if (this.playerSelectionMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
@@ -628,7 +599,6 @@ public class PlayerStatsBox : BaseMenu
 		base.\u02BF\u02B6\u02BB\u02B4\u02B9\u02BD\u02B9\u02BE\u02BE\u02BE\u02B4(\u02C0\u02B4\u02B4\u02BC\u02BD\u02B2\u02C1\u02C0\u02C1\u02B4\u02C1);
 	}
 
-	// Token: 0x0600030A RID: 778 RVA: 0x0002A2DC File Offset: 0x000284DC
 	private void \u02B4\u02BE\u02B5\u02B5\u02BF\u02B8\u02BC\u02B4\u02BE\u02B8\u02C1()
 	{
 		if (this.\u02B7\u02BF\u02BD\u02B7\u02B4\u02B9\u02B2\u02C1\u02BA\u02B3\u02BE)
@@ -644,7 +614,6 @@ public class PlayerStatsBox : BaseMenu
 		}
 	}
 
-	// Token: 0x0600030B RID: 779 RVA: 0x000077AF File Offset: 0x000059AF
 	public override void \u02B8\u02B9\u02C0\u02BA\u02C0\u02C0\u02B7\u02BE\u02B5\u02B2\u02B7(byte \u02C0\u02B4\u02B4\u02BC\u02BD\u02B2\u02C1\u02C0\u02C1\u02B4\u02C1)
 	{
 		if (this.playerSelectionMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
@@ -655,7 +624,6 @@ public class PlayerStatsBox : BaseMenu
 		base.\u02B8\u02B9\u02C0\u02BA\u02C0\u02C0\u02B7\u02BE\u02B5\u02B2\u02B7(\u02C0\u02B4\u02B4\u02BC\u02BD\u02B2\u02C1\u02C0\u02C1\u02B4\u02C1);
 	}
 
-	// Token: 0x0600030C RID: 780 RVA: 0x0002A340 File Offset: 0x00028540
 	public virtual void \u02BF\u02C0\u02C1\u02BD\u02B4\u02B7\u02BD\u02B3\u02B3\u02BD\u02C0()
 	{
 		this.\u02BA\u02B8\u02B2\u02C1\u02BF\u02C0\u02BD\u02C0\u02B4\u02B4\u02B2 = false;
@@ -678,7 +646,6 @@ public class PlayerStatsBox : BaseMenu
 		}
 	}
 
-	// Token: 0x0600030D RID: 781 RVA: 0x000077D2 File Offset: 0x000059D2
 	public void \u02B5\u02BF\u02B4\u02B2\u02C0\u02BE\u02BF\u02C1\u02C0\u02BD\u02B6()
 	{
 		this.\u02B2\u02B3\u02B7\u02C1\u02B4\u02BE\u02C1\u02B2\u02C1\u02BC\u02B2();
@@ -686,7 +653,6 @@ public class PlayerStatsBox : BaseMenu
 		this.playerSelectionMenu.gameObject.SetActive(false);
 	}
 
-	// Token: 0x0600030E RID: 782 RVA: 0x0002A3AC File Offset: 0x000285AC
 	public override void \u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8()
 	{
 		this.\u02BA\u02B8\u02B2\u02C1\u02BF\u02C0\u02BD\u02C0\u02B4\u02B4\u02B2 = true;
@@ -709,7 +675,6 @@ public class PlayerStatsBox : BaseMenu
 		}
 	}
 
-	// Token: 0x06000310 RID: 784 RVA: 0x0002A418 File Offset: 0x00028618
 	public virtual void \u02BC\u02C0\u02B9\u02BF\u02C1\u02C0\u02B5\u02B7\u02BD\u02BD\u02B6()
 	{
 		if (this.\u02BC\u02BF\u02B4\u02BE\u02B2\u02B6\u02B7\u02B5\u02BD\u02BC\u02B6)
@@ -746,7 +711,6 @@ public class PlayerStatsBox : BaseMenu
 		}
 	}
 
-	// Token: 0x06000311 RID: 785 RVA: 0x0002A4A8 File Offset: 0x000286A8
 	private void \u02B4\u02C1\u02BE\u02B9\u02B2\u02B8\u02B4\u02B3\u02BB\u02B6\u02B4()
 	{
 		int i = 1;
@@ -765,7 +729,6 @@ public class PlayerStatsBox : BaseMenu
 		}
 	}
 
-	// Token: 0x06000312 RID: 786 RVA: 0x0002A548 File Offset: 0x00028748
 	private void \u02BB\u02B3\u02BC\u02B7\u02B8\u02B7\u02BB\u02BF\u02BA\u02B8\u02B8()
 	{
 		this.statsValueTexts[0].text = string.Format("{0:N0}", this.\u02B6\u02B7\u02BF\u02BB\u02C1\u02C0\u02B2\u02B2\u02BE\u02B5\u02B5.totalNotes);
@@ -798,7 +761,6 @@ public class PlayerStatsBox : BaseMenu
 		this.statsValueTexts[15].text = string.Format("{0:N0}", this.\u02B6\u02B7\u02BF\u02BB\u02C1\u02C0\u02B2\u02B2\u02BE\u02B5\u02B5.soloScore);
 	}
 
-	// Token: 0x06000313 RID: 787 RVA: 0x0002A8FC File Offset: 0x00028AFC
 	public override void \u02B7\u02BA\u02C0\u02B8\u02BE\u02BA\u02BD\u02B4\u02BB\u02B3\u02B6()
 	{
 		if (this.\u02BC\u02BF\u02B4\u02BE\u02B2\u02B6\u02B7\u02B5\u02BD\u02BC\u02B6)
@@ -834,205 +796,144 @@ public class PlayerStatsBox : BaseMenu
 		}
 	}
 
-	// Token: 0x040001FD RID: 509
 	public TextMeshProUGUI \u02BB\u02C0\u02B6\u02B5\u02BE\u02B9\u02BC\u02B9\u02B7\u02BB\u02BD;
 
-	// Token: 0x040001FE RID: 510
 	public TextMeshProUGUI \u02BA\u02B7\u02B5\u02BA\u02B9\u02B3\u02C1\u02B2\u02BB\u02B4\u02B4;
 
-	// Token: 0x040001FF RID: 511
 	public TextMeshProUGUI \u02B5\u02BD\u02C0\u02C1\u02BF\u02BF\u02B7\u02BF\u02B6\u02C1\u02BA;
 
-	// Token: 0x04000200 RID: 512
 	public TextMeshProUGUI \u02BD\u02B7\u02B2\u02BA\u02BF\u02B7\u02BF\u02B7\u02BF\u02BD\u02B9;
 
-	// Token: 0x04000201 RID: 513
 	public TextMeshProUGUI \u02BC\u02BC\u02C1\u02B4\u02BF\u02B8\u02BF\u02B2\u02BA\u02B3\u02B5;
 
-	// Token: 0x04000202 RID: 514
 	public GameObject[] \u02B4\u02C0\u02BB\u02B6\u02B5\u02B6\u02BE\u02B2\u02B8\u02BE\u02B9;
 
-	// Token: 0x04000203 RID: 515
 	public Image \u02B7\u02BB\u02BA\u02BC\u02B4\u02B6\u02B4\u02B3\u02BD\u02BA\u02BF;
 
-	// Token: 0x04000204 RID: 516
 	public Image \u02B2\u02B3\u02C0\u02BB\u02BF\u02BD\u02B4\u02B3\u02B5\u02B3\u02B9;
 
-	// Token: 0x04000205 RID: 517
 	public Sprite[] \u02B2\u02B7\u02B7\u02BE\u02C1\u02BB\u02B8\u02B6\u02B5\u02B5\u02B9;
 
-	// Token: 0x04000206 RID: 518
 	[Header("Header Texts")]
 	[SerializeField]
 	private TextMeshProUGUI[] headerTexts;
 
-	// Token: 0x04000207 RID: 519
 	[Header("Stats Texts")]
 	[SerializeField]
 	private TextMeshProUGUI[] statsNameTexts;
 
-	// Token: 0x04000208 RID: 520
 	[SerializeField]
 	private TextMeshProUGUI[] statsValueTexts;
 
-	// Token: 0x04000209 RID: 521
 	[Header("Menu Objects")]
 	[SerializeField]
 	private GameObject modifierElement;
 
-	// Token: 0x0400020A RID: 522
 	[SerializeField]
 	private Transform scrollTransform;
 
-	// Token: 0x0400020B RID: 523
 	[SerializeField]
 	private Transform modifierGroupTransform;
 
-	// Token: 0x0400020C RID: 524
 	[SerializeField]
 	private DrumEndOfSongOptionsMenu drumsOptionsMenu;
 
-	// Token: 0x0400020D RID: 525
 	[SerializeField]
 	private TextMeshProUGUI finishText;
 
-	// Token: 0x0400020E RID: 526
 	[SerializeField]
 	private TextMeshProUGUI menuText;
 
-	// Token: 0x0400020F RID: 527
 	[SerializeField]
 	private TextMeshProUGUI notSupportedText;
 
-	// Token: 0x04000210 RID: 528
 	[SerializeField]
 	private TextMeshProUGUI[] menuOptions;
 
-	// Token: 0x04000211 RID: 529
 	[SerializeField]
 	private GameObject menuObject;
 
-	// Token: 0x04000212 RID: 530
 	[SerializeField]
 	private PlayerSelectionMenu playerSelectionMenu;
 
-	// Token: 0x04000213 RID: 531
 	[SerializeField]
 	private GameObject statsMenu;
 
-	// Token: 0x04000214 RID: 532
 	public int \u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7;
 
-	// Token: 0x04000215 RID: 533
 	[SerializeField]
 	private float scrollPageAmount;
 
-	// Token: 0x04000216 RID: 534
 	[SerializeField]
 	private float scrollTime;
 
-	// Token: 0x04000217 RID: 535
 	private float \u02B5\u02B4\u02BE\u02BC\u02B3\u02B5\u02B4\u02BE\u02C0\u02B7\u02BD;
 
-	// Token: 0x04000218 RID: 536
 	private float \u02C0\u02B8\u02B7\u02BE\u02BC\u02C1\u02B2\u02BF\u02BA\u02B5\u02B4;
 
-	// Token: 0x04000219 RID: 537
 	private bool \u02B7\u02BF\u02BD\u02B7\u02B4\u02B9\u02B2\u02C1\u02BA\u02B3\u02BE;
 
-	// Token: 0x0400021A RID: 538
 	private bool \u02B6\u02B9\u02B7\u02B6\u02B9\u02B2\u02BE\u02BE\u02BE\u02B2\u02B5;
 
-	// Token: 0x0400021B RID: 539
 	private bool \u02BB\u02B7\u02B7\u02B5\u02B2\u02BA\u02B9\u02C1\u02B2\u02BF\u02BD;
 
-	// Token: 0x0400021C RID: 540
 	private bool \u02B2\u02BF\u02BD\u02C0\u02B3\u02BD\u02BA\u02B5\u02BF\u02B8\u02B3;
 
-	// Token: 0x0400021D RID: 541
 	private bool \u02BC\u02BE\u02C1\u02B8\u02BE\u02C1\u02BE\u02BF\u02BC\u02BC\u02BA;
 
-	// Token: 0x0400021E RID: 542
 	private bool \u02BA\u02BD\u02BD\u02BB\u02BB\u02BA\u02B2\u02B6\u02BA\u02BA\u02C1;
 
-	// Token: 0x0400021F RID: 543
 	private Vector3 \u02BE\u02BD\u02B4\u02B4\u02B9\u02BF\u02BE\u02B9\u02B6\u02BB\u02BA;
 
-	// Token: 0x04000220 RID: 544
 	private Vector3 \u02C0\u02BB\u02BE\u02BF\u02B6\u02B9\u02B3\u02B5\u02C0\u02BB\u02BA;
 
-	// Token: 0x04000221 RID: 545
 	private int \u02B9\u02B5\u02B4\u02B9\u02BF\u02B6\u02B5\u02C1\u02BB\u02B3\u02B3;
 
-	// Token: 0x04000222 RID: 546
 	private int \u02C0\u02B4\u02BC\u02BA\u02B4\u02C1\u02BF\u02B3\u02B7\u02B6\u02B6 = -1;
 
-	// Token: 0x04000223 RID: 547
 	private int \u02B6\u02B2\u02BF\u02B6\u02B8\u02BD\u02C1\u02BB\u02BC\u02B3\u02B4;
 
-	// Token: 0x04000224 RID: 548
 	private int \u02B7\u02B7\u02B4\u02B2\u02BF\u02C0\u02BE\u02B6\u02C0\u02B8\u02B5;
 
-	// Token: 0x04000225 RID: 549
 	private int \u02B9\u02BA\u02B9\u02C1\u02B6\u02BB\u02C0\u02B3\u02B7\u02B8\u02B2;
 
-	// Token: 0x04000226 RID: 550
 	private int \u02BC\u02BA\u02BC\u02B6\u02BA\u02B5\u02B6\u02BB\u02C1\u02BF\u02B7;
 
-	// Token: 0x04000227 RID: 551
 	private PlayerStats \u02B6\u02B7\u02BF\u02BB\u02C1\u02C0\u02B2\u02B2\u02BE\u02B5\u02B5;
 
-	// Token: 0x04000228 RID: 552
 	public Image[] \u02BB\u02BD\u02C1\u02C0\u02C1\u02BF\u02B5\u02B6\u02BF\u02C1\u02C1;
 
-	// Token: 0x04000229 RID: 553
 	public ScrollingText[] \u02B3\u02BE\u02B5\u02BF\u02C1\u02BC\u02B7\u02B5\u02BC\u02BB\u02BB;
 
-	// Token: 0x0400022A RID: 554
 	public TextMeshProUGUI[] \u02B6\u02B9\u02C1\u02BA\u02B8\u02BD\u02BF\u02BC\u02B9\u02BB\u02B3;
 
-	// Token: 0x0400022B RID: 555
 	public TextMeshProUGUI[] \u02B6\u02B6\u02B3\u02B5\u02BE\u02B5\u02BD\u02C0\u02B3\u02C1\u02B9;
 
-	// Token: 0x0400022C RID: 556
 	[SerializeField]
 	private Image[] guitarDisabledBG;
 
-	// Token: 0x0400022D RID: 557
 	private PlayerStatsBox.\u02B5\u02B7\u02BB\u02B5\u02B3\u02B2\u02BA\u02B7\u02B8\u02B9\u02C1 \u02BE\u02BA\u02BD\u02B5\u02BE\u02C0\u02B7\u02B3\u02BA\u02B4\u02BD;
 
-	// Token: 0x0400022E RID: 558
 	private float \u02B2\u02BE\u02B5\u02BE\u02B5\u02BF\u02B8\u02B2\u02BD\u02B7\u02BD = 0.35f;
 
-	// Token: 0x0400022F RID: 559
 	private float \u02B4\u02BB\u02B6\u02B9\u02B4\u02B9\u02B7\u02BF\u02B6\u02B3\u02B7 = 0.5f;
 
-	// Token: 0x04000230 RID: 560
 	private bool \u02C0\u02BD\u02C0\u02C1\u02BA\u02BA\u02B7\u02B4\u02B8\u02B8\u02C0 = true;
 
-	// Token: 0x04000231 RID: 561
 	private float \u02B4\u02BA\u02C0\u02B5\u02B9\u02B4\u02BC\u02B7\u02B8\u02BE\u02B2;
 
-	// Token: 0x04000232 RID: 562
 	[SerializeField]
 	private Image scrollArrowUp;
 
-	// Token: 0x04000233 RID: 563
 	[SerializeField]
 	private Image scrollArrowDown;
 
-	// Token: 0x02000049 RID: 73
 	public enum \u02B5\u02B7\u02BB\u02B5\u02B3\u02B2\u02BA\u02B7\u02B8\u02B9\u02C1
 	{
-		// Token: 0x04000235 RID: 565
 		Ready,
-		// Token: 0x04000236 RID: 566
 		Quitting,
-		// Token: 0x04000237 RID: 567
 		Readying,
-		// Token: 0x04000238 RID: 568
 		ChangingPlayer,
-		// Token: 0x04000239 RID: 569
 		NotReady
 	}
 }

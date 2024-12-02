@@ -1,19 +1,16 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Linq;
 using StrikeCore;
 using UnityEngine;
 
-// Token: 0x0200005B RID: 91
 public static class SettingsController
 {
-	// Token: 0x060003A3 RID: 931 RVA: 0x00007DAB File Offset: 0x00005FAB
 	public static string \u02BE\u02BF\u02BE\u02BB\u02B3\u02B8\u02B9\u02BD\u02B9\u02B4\u02BC()
 	{
 		return Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "settings.ini");
 	}
 
-	// Token: 0x060003A4 RID: 932 RVA: 0x0002BEC4 File Offset: 0x0002A0C4
 	[SettingsInit]
 	[Preserve]
 	public static void \u02BA\u02B7\u02BB\u02B2\u02B4\u02BA\u02B7\u02BA\u02BA\u02B6\u02B4()
@@ -120,210 +117,141 @@ public static class SettingsController
 		\u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B8\u02C0\u02B9\u02B9\u02B4\u02B7\u02BD\u02BE\u02B7\u02BC\u02B2(array[SettingsController.\u02B7\u02B3\u02BF\u02BF\u02B4\u02B8\u02C0\u02BB\u02BB\u02BF\u02BE.CurrentValue]);
 	}
 
-	// Token: 0x0400026B RID: 619
 	public static bool \u02BB\u02B7\u02BA\u02BC\u02B2\u02B8\u02B9\u02BC\u02C0\u02B5\u02B6;
 
-	// Token: 0x0400026C RID: 620
 	public static GameSetting \u02B3\u02B8\u02B6\u02C1\u02B2\u02B2\u02B5\u02C1\u02B6\u02B5\u02C0;
 
-	// Token: 0x0400026D RID: 621
 	public static GameSetting \u02B3\u02B7\u02B4\u02BA\u02B3\u02B9\u02B7\u02BE\u02B2\u02B7\u02BE;
 
-	// Token: 0x0400026E RID: 622
 	public static GameSetting \u02B7\u02B2\u02BB\u02BA\u02BD\u02B3\u02BA\u02BA\u02BE\u02B9\u02B4;
 
-	// Token: 0x0400026F RID: 623
 	public static GameSetting \u02BE\u02C0\u02BA\u02B7\u02B9\u02C0\u02B6\u02BE\u02C1\u02B8\u02BB;
 
-	// Token: 0x04000270 RID: 624
 	public static GameSetting fpsCap;
 
-	// Token: 0x04000271 RID: 625
 	public static GameSetting \u02BC\u02BA\u02BE\u02BB\u02B7\u02BE\u02BD\u02BE\u02BC\u02B2\u02B7;
 
-	// Token: 0x04000272 RID: 626
 	public static GameSetting \u02B9\u02BD\u02B9\u02B4\u02B9\u02BB\u02B3\u02BA\u02BF\u02C0\u02B5;
 
-	// Token: 0x04000273 RID: 627
 	public static GameSetting \u02B8\u02BD\u02BF\u02B7\u02BF\u02B7\u02BC\u02C1\u02B2\u02C0\u02BB;
 
-	// Token: 0x04000274 RID: 628
 	public static GameSetting \u02BD\u02BA\u02B3\u02B7\u02C0\u02C1\u02BB\u02B4\u02B9\u02BB\u02B3;
 
-	// Token: 0x04000275 RID: 629
 	public static GameSetting \u02BE\u02BE\u02C0\u02BA\u02B8\u02B3\u02B4\u02C0\u02BD\u02B7\u02B8;
 
-	// Token: 0x04000276 RID: 630
 	public static GameSetting[] \u02BC\u02B3\u02B6\u02BB\u02BA\u02B8\u02B8\u02BE\u02BF\u02B2\u02B7;
 
-	// Token: 0x04000277 RID: 631
 	public static GameSetting \u02C1\u02C1\u02B3\u02BD\u02B7\u02C1\u02B9\u02BB\u02B5\u02B4\u02BB;
 
-	// Token: 0x04000278 RID: 632
 	public static GameSetting \u02C1\u02BD\u02C0\u02B7\u02B3\u02C0\u02B7\u02B2\u02BF\u02BC\u02B7;
 
-	// Token: 0x04000279 RID: 633
 	public static GameSetting \u02B3\u02B2\u02B5\u02B8\u02B8\u02BD\u02BF\u02B6\u02B3\u02C1\u02BF;
 
-	// Token: 0x0400027A RID: 634
 	public static GameSetting \u02B8\u02B7\u02BF\u02B4\u02B3\u02BB\u02B6\u02BB\u02B7\u02B2\u02BD;
 
-	// Token: 0x0400027B RID: 635
 	public static GameSetting \u02B8\u02C1\u02B8\u02BC\u02B9\u02B2\u02BB\u02BB\u02B8\u02BD\u02B5;
 
-	// Token: 0x0400027C RID: 636
 	public static GameSetting \u02B9\u02B3\u02BD\u02B5\u02BB\u02C1\u02BE\u02B2\u02B3\u02B3\u02BB;
 
-	// Token: 0x0400027D RID: 637
 	public static GameSetting \u02BF\u02BD\u02B2\u02BE\u02BC\u02B5\u02B6\u02B5\u02B6\u02B9\u02BD;
 
-	// Token: 0x0400027E RID: 638
 	public static GameSetting \u02BC\u02BA\u02BE\u02B9\u02B5\u02BD\u02C1\u02B8\u02B7\u02C0\u02B8;
 
-	// Token: 0x0400027F RID: 639
 	public static GameSetting \u02B3\u02B2\u02B9\u02C0\u02B3\u02BC\u02B4\u02BD\u02B3\u02C1\u02BC;
 
-	// Token: 0x04000280 RID: 640
 	public static GameSetting \u02B7\u02BE\u02C1\u02BD\u02BD\u02C0\u02B4\u02BA\u02BC\u02B6\u02B9;
 
-	// Token: 0x04000281 RID: 641
 	public static GameSetting \u02B7\u02B9\u02BF\u02BD\u02B9\u02B5\u02C0\u02BA\u02BC\u02BD\u02BE;
 
-	// Token: 0x04000282 RID: 642
 	public static GameSetting \u02BA\u02BF\u02BF\u02B7\u02B4\u02B6\u02BD\u02BC\u02BE\u02B5\u02BA;
 
-	// Token: 0x04000283 RID: 643
 	public static GameSetting \u02BB\u02C0\u02B7\u02B8\u02B3\u02BE\u02B7\u02BB\u02BA\u02B8\u02BA;
 
-	// Token: 0x04000284 RID: 644
 	public static GameSetting \u02C1\u02BF\u02B3\u02BF\u02C1\u02BC\u02BC\u02BA\u02BF\u02BD\u02BE;
 
-	// Token: 0x04000285 RID: 645
 	public static GameSetting \u02C0\u02B6\u02BC\u02BF\u02BF\u02C0\u02BF\u02BC\u02B4\u02B3\u02BC;
 
-	// Token: 0x04000286 RID: 646
 	public static GameSetting \u02B3\u02B2\u02BD\u02C1\u02B2\u02B4\u02B5\u02B3\u02C1\u02B2\u02B6;
 
-	// Token: 0x04000287 RID: 647
 	public static GameSetting msaaLevel;
 
-	// Token: 0x04000288 RID: 648
 	public static GameSetting \u02BB\u02B5\u02BA\u02B6\u02BE\u02BA\u02B6\u02BD\u02B3\u02B9\u02BF;
 
-	// Token: 0x04000289 RID: 649
 	public static GameSetting \u02B7\u02B2\u02BA\u02B5\u02BC\u02C0\u02B8\u02C0\u02BC\u02BD\u02B9;
 
-	// Token: 0x0400028A RID: 650
 	public static GameSetting \u02B6\u02C0\u02BC\u02BE\u02B2\u02B6\u02B8\u02B9\u02B2\u02B9\u02B2;
 
-	// Token: 0x0400028B RID: 651
 	public static GameSetting \u02B8\u02B5\u02BB\u02BB\u02BF\u02BD\u02B9\u02B9\u02B7\u02B2\u02C0;
 
-	// Token: 0x0400028C RID: 652
 	public static GameSetting \u02B5\u02B9\u02BB\u02BB\u02BA\u02B3\u02B9\u02B2\u02B5\u02BD\u02BB;
 
-	// Token: 0x0400028D RID: 653
 	public static GameSetting \u02B6\u02BB\u02B2\u02B6\u02B7\u02BF\u02B6\u02B8\u02B8\u02B2\u02B2;
 
-	// Token: 0x0400028E RID: 654
 	public static GameSetting \u02BE\u02B7\u02B8\u02B7\u02B3\u02B5\u02BF\u02BD\u02B6\u02B2\u02B5;
 
-	// Token: 0x0400028F RID: 655
 	public static GameSetting \u02B3\u02BD\u02BB\u02B7\u02B5\u02B7\u02BD\u02B4\u02B4\u02BD\u02B3;
 
-	// Token: 0x04000290 RID: 656
 	public static GameSetting \u02BF\u02BF\u02BB\u02BF\u02B2\u02BE\u02B5\u02BD\u02C0\u02B4\u02B9;
 
-	// Token: 0x04000291 RID: 657
 	public static GameSetting \u02B8\u02B6\u02B5\u02BB\u02C0\u02BA\u02B7\u02B4\u02B9\u02B8\u02BA;
 
-	// Token: 0x04000292 RID: 658
 	public static GameSetting \u02BD\u02BF\u02B7\u02B9\u02B6\u02B8\u02BB\u02BA\u02B7\u02B8\u02B3;
 
-	// Token: 0x04000293 RID: 659
 	public static GameSetting \u02B8\u02B3\u02B7\u02C0\u02B5\u02BA\u02BC\u02BA\u02BE\u02BA\u02B3;
 
-	// Token: 0x04000294 RID: 660
 	public static GameSetting \u02B7\u02BD\u02BC\u02BE\u02B3\u02B2\u02C0\u02BA\u02B7\u02C1\u02B2;
 
-	// Token: 0x04000295 RID: 661
 	public static GameSetting \u02C1\u02B3\u02BA\u02B9\u02B4\u02B3\u02BB\u02B6\u02BC\u02BC\u02BB;
 
-	// Token: 0x04000296 RID: 662
 	public static GameSetting \u02C1\u02B6\u02B5\u02C1\u02B7\u02BE\u02B5\u02B9\u02B9\u02BB\u02C1;
 
-	// Token: 0x04000297 RID: 663
 	public static GameSetting \u02C1\u02BF\u02BC\u02B4\u02BE\u02B7\u02BD\u02BC\u02B5\u02BC\u02B7;
 
-	// Token: 0x04000298 RID: 664
 	public static GameSetting \u02BE\u02B6\u02BA\u02C0\u02B9\u02B6\u02B2\u02BB\u02B3\u02B3\u02BA;
 
-	// Token: 0x04000299 RID: 665
 	public static GameSetting \u02B3\u02B9\u02C1\u02BF\u02B2\u02B2\u02B6\u02BF\u02B4\u02B4\u02B2;
 
-	// Token: 0x0400029A RID: 666
 	public static GameSetting \u02C1\u02BF\u02C0\u02BF\u02B8\u02B8\u02C0\u02C0\u02B3\u02B3\u02BB;
 
-	// Token: 0x0400029B RID: 667
 	public static GameSetting \u02B7\u02B9\u02B4\u02C1\u02B9\u02BC\u02B8\u02BD\u02BE\u02B5\u02B8;
 
-	// Token: 0x0400029C RID: 668
 	public static GameSetting \u02BC\u02B6\u02BD\u02B5\u02B4\u02C0\u02B2\u02B8\u02B7\u02BC\u02B6;
 
-	// Token: 0x0400029D RID: 669
 	public static GameSetting \u02B4\u02B5\u02BE\u02B6\u02BC\u02B7\u02BB\u02B5\u02B7\u02BF\u02C0;
 
-	// Token: 0x0400029E RID: 670
 	public static GameSetting \u02B7\u02B2\u02C1\u02BA\u02BE\u02BC\u02B2\u02BB\u02BC\u02B2\u02B9;
 
-	// Token: 0x0400029F RID: 671
 	public static GameSetting \u02B7\u02B3\u02BF\u02BF\u02B4\u02B8\u02C0\u02BB\u02BB\u02BF\u02BE;
 
-	// Token: 0x040002A0 RID: 672
 	public static GameSetting \u02BF\u02C0\u02B4\u02B3\u02BB\u02B8\u02BA\u02BE\u02B3\u02B5\u02B2;
 
-	// Token: 0x040002A1 RID: 673
 	public static GameSetting \u02BD\u02C1\u02B5\u02B3\u02BA\u02BC\u02B9\u02B8\u02B7\u02B8\u02C0;
 
-	// Token: 0x040002A2 RID: 674
 	public static GameSetting \u02BD\u02B3\u02B7\u02B5\u02B5\u02BD\u02B5\u02B8\u02BD\u02C1\u02C1;
 
-	// Token: 0x040002A3 RID: 675
 	public static GameSetting \u02B2\u02C1\u02BD\u02C1\u02B4\u02B4\u02B2\u02BA\u02B6\u02B8\u02B4;
 
-	// Token: 0x040002A4 RID: 676
 	public static GameSetting \u02C0\u02BB\u02C1\u02BB\u02B8\u02BC\u02BB\u02C1\u02BA\u02C0\u02BF;
 
-	// Token: 0x040002A5 RID: 677
 	public static GameSetting \u02B5\u02B7\u02B2\u02BB\u02BE\u02B8\u02BC\u02BA\u02B6\u02B5\u02C1;
 
-	// Token: 0x040002A6 RID: 678
 	public static GameSetting \u02B3\u02B6\u02BB\u02BF\u02BD\u02BF\u02C0\u02B3\u02C1\u02BB\u02B8;
 
-	// Token: 0x040002A7 RID: 679
 	public static StringArrayGameSetting \u02B2\u02BB\u02BF\u02BC\u02B9\u02BF\u02B2\u02BA\u02B4\u02BC\u02B4;
 
-	// Token: 0x040002A8 RID: 680
 	public static StringArrayGameSetting \u02B4\u02B3\u02B3\u02B7\u02C1\u02BE\u02BC\u02B9\u02B4\u02BC\u02BB;
 
-	// Token: 0x040002A9 RID: 681
 	public static \u02B7\u02BF\u02C0\u02B9\u02B4\u02BB\u02B6\u02BB\u02BC\u02C1\u02C1 \u02BF\u02BC\u02B2\u02B5\u02C0\u02B5\u02B4\u02C0\u02B3\u02B3\u02BF;
 
-	// Token: 0x040002AA RID: 682
 	public static StringGameSetting \u02BC\u02B4\u02B2\u02B2\u02B6\u02B3\u02BB\u02B8\u02B2\u02C1\u02B3;
 
-	// Token: 0x040002AB RID: 683
 	public static StringGameSetting \u02B8\u02BB\u02B9\u02B5\u02B3\u02B7\u02B9\u02BE\u02BC\u02BA\u02B9;
 
-	// Token: 0x040002AC RID: 684
 	public static GameSetting \u02B8\u02C1\u02B3\u02C0\u02B7\u02B6\u02BE\u02B4\u02B4\u02BF\u02B3;
 
-	// Token: 0x040002AD RID: 685
 	public static GameSetting \u02BE\u02B2\u02B6\u02B7\u02B3\u02BB\u02B2\u02B8\u02BC\u02B7\u02BF;
 
-	// Token: 0x040002AE RID: 686
 	public static GameSetting \u02BA\u02BE\u02B7\u02B7\u02BE\u02B4\u02BE\u02C1\u02B6\u02BD\u02B7;
 
-	// Token: 0x040002AF RID: 687
 	public static GameSetting \u02BB\u02B7\u02BC\u02C1\u02B5\u02B5\u02B3\u02B4\u02BF\u02B9\u02BB;
 }

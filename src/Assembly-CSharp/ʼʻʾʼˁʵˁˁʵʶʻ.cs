@@ -1,10 +1,7 @@
-﻿using System;
+using System;
 
-// Token: 0x02000133 RID: 307
 public abstract class \u02BC\u02BB\u02BE\u02BC\u02C1\u02B5\u02C1\u02C1\u02B5\u02B6\u02BB : \u02B6\u02B9\u02BF\u02B6\u02B8\u02C0\u02B5\u02B8\u02B9\u02B4\u02BD
 {
-	// Token: 0x1700013E RID: 318
-	// (get) Token: 0x06000D69 RID: 3433 RVA: 0x0000D222 File Offset: 0x0000B422
 	protected override \u02B2\u02BF\u02BE\u02B2\u02C1\u02BE\u02B8\u02BB\u02B4\u02BB\u02BD \u02BC\u02B3\u02B2\u02B9\u02B8\u02B8\u02B2\u02BD\u02BB\u02BF\u02B7
 	{
 		get

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Text;
@@ -7,10 +7,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.TextCore.LowLevel;
 
-// Token: 0x02000173 RID: 371
 public class LyricDisplay : MonoBehaviour
 {
-	// Token: 0x060010D7 RID: 4311 RVA: 0x0008ADE0 File Offset: 0x00088FE0
 	public void \u02B9\u02BF\u02BF\u02B8\u02B4\u02B8\u02BA\u02B8\u02B9\u02B6\u02BC(GameManager \u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD)
 	{
 		this.Reset();
@@ -55,7 +53,6 @@ public class LyricDisplay : MonoBehaviour
 		this.fadePhraseDisplay.UpdateFontAsset();
 	}
 
-	// Token: 0x060010D8 RID: 4312 RVA: 0x0008AF50 File Offset: 0x00089150
 	private void \u02B7\u02B8\u02BC\u02C0\u02B9\u02C1\u02B3\u02C1\u02BD\u02C1\u02B9()
 	{
 		if (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B7\u02BA\u02B3\u02BE\u02B3\u02BF\u02B6\u02B5\u02C0\u02C1\u02C0.\u02BB\u02B4\u02BD\u02B2\u02BC\u02B7\u02C0\u02C1\u02B8\u02B4\u02BD > 2)
@@ -77,7 +74,6 @@ public class LyricDisplay : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060010D9 RID: 4313 RVA: 0x0008B050 File Offset: 0x00089250
 	public void \u02BD\u02B9\u02BF\u02BC\u02B8\u02C1\u02BA\u02BA\u02B2\u02B6\u02BB(TMP_FontAsset \u02BD\u02C0\u02BB\u02BE\u02BF\u02B4\u02BC\u02B8\u02BA\u02B9\u02C0)
 	{
 		Material material = new Material(Shader.Find("Video Offset"));
@@ -91,7 +87,6 @@ public class LyricDisplay : MonoBehaviour
 		\u02BD\u02C0\u02BB\u02BE\u02BF\u02B4\u02BC\u02B8\u02BA\u02B9\u02C0.material = material;
 	}
 
-	// Token: 0x060010DA RID: 4314 RVA: 0x0008B0EC File Offset: 0x000892EC
 	private TMP_FontAsset \u02BA\u02BD\u02B8\u02B5\u02BB\u02B6\u02B8\u02B8\u02B7\u02BA\u02B2(Font \u02BF\u02B2\u02C0\u02C0\u02BA\u02BF\u02B4\u02BF\u02C1\u02B9\u02B7, uint[] \u02BC\u02B9\u02B3\u02B6\u02BF\u02BA\u02BD\u02BA\u02BE\u02B2\u02B6, out uint[] \u02C1\u02BB\u02BF\u02B5\u02BA\u02B9\u02B7\u02BE\u02B5\u02B3\u02B5)
 	{
 		TMP_FontAsset tmp_FontAsset = TMP_FontAsset.CreateFontAsset(\u02BF\u02B2\u02C0\u02C0\u02BA\u02BF\u02B4\u02BF\u02C1\u02B9\u02B7, 24, 29, (GlyphRenderMode)(-121), -119, 67, AtlasPopulationMode.Static, false);
@@ -123,7 +118,6 @@ public class LyricDisplay : MonoBehaviour
 		return tmp_FontAsset;
 	}
 
-	// Token: 0x060010DB RID: 4315 RVA: 0x0008B1E8 File Offset: 0x000893E8
 	private void \u02BB\u02B5\u02BA\u02BB\u02BF\u02B9\u02BE\u02B9\u02BB\u02B8\u02BF(double \u02BF\u02B4\u02B3\u02BF\u02BB\u02B4\u02B9\u02BD\u02B3\u02B9\u02B7)
 	{
 		for (int i = 1; i < this.\u02BB\u02B3\u02C1\u02BC\u02B6\u02B5\u02B2\u02B7\u02C0\u02B6\u02BB.Count; i++)
@@ -139,7 +133,6 @@ public class LyricDisplay : MonoBehaviour
 		this.\u02B8\u02B9\u02BF\u02BB\u02B2\u02B8\u02BE\u02B8\u02B3\u02BB\u02B5 = this.\u02BC\u02B9\u02C0\u02BD\u02B2\u02BC\u02BD\u02B7\u02B7\u02BC\u02BD - 1;
 	}
 
-	// Token: 0x060010DC RID: 4316 RVA: 0x0008B254 File Offset: 0x00089454
 	private void \u02BE\u02BD\u02BC\u02B4\u02B7\u02BA\u02C0\u02C0\u02BF\u02B6\u02BF()
 	{
 		if (this.\u02B6\u02BA\u02C0\u02B9\u02B8\u02BA\u02B9\u02BD\u02BF\u02B2\u02BC || this.\u02B8\u02B9\u02BF\u02BB\u02B2\u02B8\u02BE\u02B8\u02B3\u02BB\u02B5 == 0)
@@ -160,7 +153,6 @@ public class LyricDisplay : MonoBehaviour
 		this.currentPhraseBgFader.\u02C0\u02B9\u02BE\u02BC\u02C1\u02C1\u02C0\u02B3\u02B2\u02C0\u02BD(this.currentPhraseBgFader.\u02B6\u02B9\u02C1\u02C0\u02B7\u02B2\u02B5\u02C1\u02C0\u02B6\u02B6, this.currentPhraseBgFader.\u02BC\u02BC\u02BE\u02C1\u02C1\u02B9\u02BE\u02BA\u02B6\u02B7\u02B9, this.\u02BA\u02B5\u02B5\u02B8\u02BC\u02BC\u02B2\u02BB\u02B2\u02B9\u02BA * 0.7f);
 	}
 
-	// Token: 0x060010DD RID: 4317 RVA: 0x0008B3A0 File Offset: 0x000895A0
 	private void \u02B3\u02B3\u02BA\u02C0\u02BA\u02B5\u02BE\u02B8\u02B7\u02BD\u02B9()
 	{
 		this.\u02B5\u02BD\u02B8\u02B8\u02BF\u02BF\u02BA\u02B7\u02B2\u02B6\u02B2 = false;
@@ -237,7 +229,6 @@ public class LyricDisplay : MonoBehaviour
 		this.nextPhraseBgFader.\u02BE\u02BC\u02B8\u02B4\u02BE\u02B4\u02BF\u02BD\u02B9\u02B8\u02B6(this.nextPhraseBgFader.\u02B6\u02B9\u02C1\u02C0\u02B7\u02B2\u02B5\u02C1\u02C0\u02B6\u02B6, 1385f, this.\u02BA\u02B5\u02B5\u02B8\u02BC\u02BC\u02B2\u02BB\u02B2\u02B9\u02BA);
 	}
 
-	// Token: 0x060010DE RID: 4318 RVA: 0x0008B704 File Offset: 0x00089904
 	public void Reset()
 	{
 		this.\u02B6\u02BA\u02C0\u02B9\u02B8\u02BA\u02B9\u02BD\u02BF\u02B2\u02BC = false;
@@ -262,7 +253,6 @@ public class LyricDisplay : MonoBehaviour
 		this.\u02BF\u02B3\u02B9\u02B9\u02BD\u02BC\u02B9\u02B7\u02C1\u02C0\u02BD = 0.35f;
 	}
 
-	// Token: 0x060010E0 RID: 4320 RVA: 0x0008B92C File Offset: 0x00089B2C
 	private TMP_FontAsset \u02B9\u02BF\u02B4\u02B2\u02B5\u02C1\u02BC\u02B6\u02C1\u02B6\u02BD(Font \u02BF\u02B2\u02C0\u02C0\u02BA\u02BF\u02B4\u02BF\u02C1\u02B9\u02B7, uint[] \u02BC\u02B9\u02B3\u02B6\u02BF\u02BA\u02BD\u02BA\u02BE\u02B2\u02B6, out uint[] \u02C1\u02BB\u02BF\u02B5\u02BA\u02B9\u02B7\u02BE\u02B5\u02B3\u02B5)
 	{
 		TMP_FontAsset tmp_FontAsset = TMP_FontAsset.CreateFontAsset(\u02BF\u02B2\u02C0\u02C0\u02BA\u02BF\u02B4\u02BF\u02C1\u02B9\u02B7, 90, 9, GlyphRenderMode.SDFAA, 1024, 1024, AtlasPopulationMode.Dynamic, true);
@@ -294,7 +284,6 @@ public class LyricDisplay : MonoBehaviour
 		return tmp_FontAsset;
 	}
 
-	// Token: 0x060010E1 RID: 4321 RVA: 0x0008BA28 File Offset: 0x00089C28
 	private void \u02BF\u02B5\u02BD\u02BB\u02C0\u02B6\u02B4\u02BD\u02C0\u02B6\u02BC()
 	{
 		this.fadePhraseDisplay.text = this.currentPhraseDisplay.text;
@@ -307,7 +296,6 @@ public class LyricDisplay : MonoBehaviour
 		this.nextPhraseBgFader.\u02C0\u02B9\u02BE\u02BC\u02C1\u02C1\u02C0\u02B3\u02B2\u02C0\u02BD(this.nextPhraseBgFader.\u02B6\u02B9\u02C1\u02C0\u02B7\u02B2\u02B5\u02C1\u02C0\u02B6\u02B6, 0f, this.\u02BA\u02B5\u02B5\u02B8\u02BC\u02BC\u02B2\u02BB\u02B2\u02B9\u02BA);
 	}
 
-	// Token: 0x060010E2 RID: 4322 RVA: 0x0008BAF4 File Offset: 0x00089CF4
 	private void Update()
 	{
 		if (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD == null || this.\u02BB\u02B3\u02C1\u02BC\u02B6\u02B5\u02B2\u02B7\u02C0\u02B6\u02BB.Count == 0)
@@ -380,7 +368,6 @@ public class LyricDisplay : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060010E3 RID: 4323 RVA: 0x0008BE18 File Offset: 0x0008A018
 	private void \u02B5\u02B4\u02B7\u02BB\u02B4\u02BE\u02BA\u02BE\u02B9\u02BF\u02B5()
 	{
 		this.\u02B5\u02BD\u02B8\u02B8\u02BF\u02BF\u02BA\u02B7\u02B2\u02B6\u02B2 = false;
@@ -457,7 +444,6 @@ public class LyricDisplay : MonoBehaviour
 		this.nextPhraseBgFader.\u02C0\u02B9\u02BE\u02BC\u02C1\u02C1\u02C0\u02B3\u02B2\u02C0\u02BD(this.nextPhraseBgFader.\u02B6\u02B9\u02C1\u02C0\u02B7\u02B2\u02B5\u02C1\u02C0\u02B6\u02B6, 0f, this.\u02BA\u02B5\u02B5\u02B8\u02BC\u02BC\u02B2\u02BB\u02B2\u02B9\u02BA);
 	}
 
-	// Token: 0x060010E4 RID: 4324 RVA: 0x0008C17C File Offset: 0x0008A37C
 	private void \u02B4\u02B9\u02B8\u02BF\u02B5\u02BC\u02B8\u02BE\u02BB\u02B8\u02BD()
 	{
 		for (int i = 0; i < this.\u02BB\u02B3\u02C1\u02BC\u02B6\u02B5\u02B2\u02B7\u02C0\u02B6\u02BB.Count; i++)
@@ -601,7 +587,6 @@ public class LyricDisplay : MonoBehaviour
 		this.\u02B8\u02B9\u02BF\u02BB\u02B2\u02B8\u02BE\u02B8\u02B3\u02BB\u02B5 = -1;
 	}
 
-	// Token: 0x060010E5 RID: 4325 RVA: 0x0008C508 File Offset: 0x0008A708
 	private void \u02C0\u02B5\u02BC\u02B5\u02BB\u02C0\u02BB\u02C0\u02B7\u02C1\u02B8()
 	{
 		if (this.\u02B6\u02BA\u02C0\u02B9\u02B8\u02BA\u02B9\u02BD\u02BF\u02B2\u02BC || this.\u02B8\u02B9\u02BF\u02BB\u02B2\u02B8\u02BE\u02B8\u02B3\u02BB\u02B5 == 0)
@@ -622,7 +607,6 @@ public class LyricDisplay : MonoBehaviour
 		this.currentPhraseBgFader.\u02BE\u02BC\u02B8\u02B4\u02BE\u02B4\u02BF\u02BD\u02B9\u02B8\u02B6(this.currentPhraseBgFader.\u02BF\u02BE\u02B2\u02B9\u02BB\u02B3\u02B8\u02B2\u02BA\u02B8\u02C0(), this.currentPhraseBgFader.\u02BC\u02BC\u02BE\u02C1\u02C1\u02B9\u02BE\u02BA\u02B6\u02B7\u02B9, this.\u02BA\u02B5\u02B5\u02B8\u02BC\u02BC\u02B2\u02BB\u02B2\u02B9\u02BA * 1350f);
 	}
 
-	// Token: 0x060010E6 RID: 4326 RVA: 0x0008C654 File Offset: 0x0008A854
 	private void \u02BC\u02BD\u02BD\u02B6\u02C0\u02B5\u02B7\u02B2\u02B9\u02BC\u02B6(double \u02BF\u02B4\u02B3\u02BF\u02BB\u02B4\u02B9\u02BD\u02B3\u02B9\u02B7)
 	{
 		for (int i = 0; i < this.\u02BB\u02B3\u02C1\u02BC\u02B6\u02B5\u02B2\u02B7\u02C0\u02B6\u02BB.Count; i++)
@@ -638,7 +622,6 @@ public class LyricDisplay : MonoBehaviour
 		this.\u02B8\u02B9\u02BF\u02BB\u02B2\u02B8\u02BE\u02B8\u02B3\u02BB\u02B5 = this.\u02BC\u02B9\u02C0\u02BD\u02B2\u02BC\u02BD\u02B7\u02B7\u02BC\u02BD - 1;
 	}
 
-	// Token: 0x060010E7 RID: 4327 RVA: 0x0008C6C0 File Offset: 0x0008A8C0
 	private void \u02B9\u02B8\u02B9\u02C0\u02B6\u02BC\u02C0\u02BB\u02B9\u02BF\u02B9()
 	{
 		this.fadePhraseDisplay.text = this.currentPhraseDisplay.text;
@@ -651,7 +634,6 @@ public class LyricDisplay : MonoBehaviour
 		this.nextPhraseBgFader.\u02BD\u02BB\u02B3\u02B4\u02B2\u02B6\u02B4\u02BB\u02C0\u02BA\u02C0(this.nextPhraseBgFader.\u02B6\u02B9\u02C1\u02C0\u02B7\u02B2\u02B5\u02C1\u02C0\u02B6\u02B6, 1999f, this.\u02BA\u02B5\u02B5\u02B8\u02BC\u02BC\u02B2\u02BB\u02B2\u02B9\u02BA);
 	}
 
-	// Token: 0x060010E8 RID: 4328 RVA: 0x0008C78C File Offset: 0x0008A98C
 	private void \u02B8\u02B8\u02BF\u02B7\u02B4\u02C1\u02B5\u02BF\u02B5\u02BF\u02BE()
 	{
 		for (int i = 0; i < this.\u02BB\u02B3\u02C1\u02BC\u02B6\u02B5\u02B2\u02B7\u02C0\u02B6\u02BB.Count; i += 0)
@@ -795,7 +777,6 @@ public class LyricDisplay : MonoBehaviour
 		this.\u02B8\u02B9\u02BF\u02BB\u02B2\u02B8\u02BE\u02B8\u02B3\u02BB\u02B5 = -1;
 	}
 
-	// Token: 0x060010E9 RID: 4329 RVA: 0x0008CB18 File Offset: 0x0008AD18
 	private void \u02C1\u02B2\u02BF\u02B5\u02BD\u02BE\u02C1\u02BB\u02B9\u02C0\u02BF(double \u02BF\u02B4\u02B3\u02BF\u02BB\u02B4\u02B9\u02BD\u02B3\u02B9\u02B7)
 	{
 		for (int i = 0; i < this.\u02BB\u02B3\u02C1\u02BC\u02B6\u02B5\u02B2\u02B7\u02C0\u02B6\u02BB.Count; i += 0)
@@ -811,7 +792,6 @@ public class LyricDisplay : MonoBehaviour
 		this.\u02B8\u02B9\u02BF\u02BB\u02B2\u02B8\u02BE\u02B8\u02B3\u02BB\u02B5 = this.\u02BC\u02B9\u02C0\u02BD\u02B2\u02BC\u02BD\u02B7\u02B7\u02BC\u02BD - 0;
 	}
 
-	// Token: 0x060010EA RID: 4330 RVA: 0x0008CB84 File Offset: 0x0008AD84
 	private void \u02C0\u02BB\u02B6\u02B9\u02B3\u02B4\u02B3\u02B7\u02BD\u02B8\u02C0()
 	{
 		if (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD == null || this.\u02BB\u02B3\u02C1\u02BC\u02B6\u02B5\u02B2\u02B7\u02C0\u02B6\u02BB.Count == 0)
@@ -884,7 +864,6 @@ public class LyricDisplay : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060010EB RID: 4331 RVA: 0x0008CEA8 File Offset: 0x0008B0A8
 	public void \u02B2\u02B7\u02BB\u02B5\u02BB\u02B3\u02BF\u02B3\u02BE\u02B2\u02B9(TMP_FontAsset \u02BD\u02C0\u02BB\u02BE\u02BF\u02B4\u02BC\u02B8\u02BA\u02B9\u02C0)
 	{
 		Material material = new Material(Shader.Find("TextMeshPro/Distance Field"));
@@ -898,7 +877,6 @@ public class LyricDisplay : MonoBehaviour
 		\u02BD\u02C0\u02BB\u02BE\u02BF\u02B4\u02BC\u02B8\u02BA\u02B9\u02C0.material = material;
 	}
 
-	// Token: 0x060010EC RID: 4332 RVA: 0x0008CF44 File Offset: 0x0008B144
 	private void \u02B5\u02BF\u02BE\u02B5\u02B3\u02B5\u02BD\u02BC\u02BB\u02B6\u02C0()
 	{
 		this.\u02B5\u02BD\u02B8\u02B8\u02BF\u02BF\u02BA\u02B7\u02B2\u02B6\u02B2 = true;
@@ -975,7 +953,6 @@ public class LyricDisplay : MonoBehaviour
 		this.nextPhraseBgFader.\u02BE\u02BC\u02B8\u02B4\u02BE\u02B4\u02BF\u02BD\u02B9\u02B8\u02B6(this.nextPhraseBgFader.\u02B6\u02B9\u02C1\u02C0\u02B7\u02B2\u02B5\u02C1\u02C0\u02B6\u02B6, 1209f, this.\u02BA\u02B5\u02B5\u02B8\u02BC\u02BC\u02B2\u02BB\u02B2\u02B9\u02BA);
 	}
 
-	// Token: 0x060010ED RID: 4333 RVA: 0x0008D2A8 File Offset: 0x0008B4A8
 	private void \u02BA\u02B2\u02B2\u02C0\u02C0\u02B5\u02BB\u02B3\u02C0\u02BB\u02BA()
 	{
 		for (int i = 1; i < this.\u02BB\u02B3\u02C1\u02BC\u02B6\u02B5\u02B2\u02B7\u02C0\u02B6\u02BB.Count; i++)
@@ -1119,7 +1096,6 @@ public class LyricDisplay : MonoBehaviour
 		this.\u02B8\u02B9\u02BF\u02BB\u02B2\u02B8\u02BE\u02B8\u02B3\u02BB\u02B5 = -1;
 	}
 
-	// Token: 0x060010EE RID: 4334 RVA: 0x0008D634 File Offset: 0x0008B834
 	private void \u02B7\u02B9\u02B5\u02BD\u02BB\u02BB\u02BD\u02B4\u02BF\u02BD\u02B2()
 	{
 		if (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B7\u02BA\u02B3\u02BE\u02B3\u02BF\u02B6\u02B5\u02C0\u02C1\u02C0.\u02BB\u02B4\u02BD\u02B2\u02BC\u02B7\u02C0\u02C1\u02B8\u02B4\u02BD > 1)
@@ -1141,7 +1117,6 @@ public class LyricDisplay : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060010EF RID: 4335 RVA: 0x0000F1FD File Offset: 0x0000D3FD
 	private IEnumerable<uint> \u02B7\u02BF\u02B4\u02B6\u02B9\u02B3\u02B7\u02B3\u02BB\u02BB\u02C0()
 	{
 		foreach (\u02B4\u02C1\u02B2\u02B6\u02C1\u02B7\u02B4\u02C1\u02BD\u02C1\u02B6 u02B4_u02C1_u02B2_u02B6_u02C1_u02B7_u02B4_u02C1_u02BD_u02C1_u02B in this.\u02BB\u02B3\u02C1\u02BC\u02B6\u02B5\u02B2\u02B7\u02C0\u02B6\u02BB)
@@ -1157,7 +1132,6 @@ public class LyricDisplay : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060010F0 RID: 4336 RVA: 0x0008D734 File Offset: 0x0008B934
 	public void \u02B7\u02B8\u02B2\u02B6\u02BE\u02B5\u02B9\u02C0\u02B2\u02BB\u02B7(GameManager \u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD)
 	{
 		this.Reset();
@@ -1204,7 +1178,6 @@ public class LyricDisplay : MonoBehaviour
 		this.fadePhraseDisplay.UpdateFontAsset();
 	}
 
-	// Token: 0x060010F1 RID: 4337 RVA: 0x0008D8A4 File Offset: 0x0008BAA4
 	public void \u02BF\u02B2\u02B3\u02BB\u02BA\u02C1\u02B5\u02B7\u02BC\u02B9\u02B7(TMP_FontAsset \u02BD\u02C0\u02BB\u02BE\u02BF\u02B4\u02BC\u02B8\u02BA\u02B9\u02C0)
 	{
 		Material material = new Material(Shader.Find(""));
@@ -1218,7 +1191,6 @@ public class LyricDisplay : MonoBehaviour
 		\u02BD\u02C0\u02BB\u02BE\u02BF\u02B4\u02BC\u02B8\u02BA\u02B9\u02C0.material = material;
 	}
 
-	// Token: 0x060010F2 RID: 4338 RVA: 0x0008D940 File Offset: 0x0008BB40
 	private void \u02BE\u02BB\u02B6\u02B5\u02BB\u02B9\u02BB\u02B9\u02B2\u02BE\u02BD()
 	{
 		for (int i = 1; i < this.\u02BB\u02B3\u02C1\u02BC\u02B6\u02B5\u02B2\u02B7\u02C0\u02B6\u02BB.Count; i += 0)
@@ -1362,7 +1334,6 @@ public class LyricDisplay : MonoBehaviour
 		this.\u02B8\u02B9\u02BF\u02BB\u02B2\u02B8\u02BE\u02B8\u02B3\u02BB\u02B5 = -1;
 	}
 
-	// Token: 0x060010F3 RID: 4339 RVA: 0x0008DCCC File Offset: 0x0008BECC
 	private TMP_FontAsset \u02BE\u02BB\u02C1\u02BF\u02C1\u02BE\u02BC\u02B9\u02B8\u02C1\u02B9(Font \u02BF\u02B2\u02C0\u02C0\u02BA\u02BF\u02B4\u02BF\u02C1\u02B9\u02B7, uint[] \u02BC\u02B9\u02B3\u02B6\u02BF\u02BA\u02BD\u02BA\u02BE\u02B2\u02B6, out uint[] \u02C1\u02BB\u02BF\u02B5\u02BA\u02B9\u02B7\u02BE\u02B5\u02B3\u02B5)
 	{
 		TMP_FontAsset tmp_FontAsset = TMP_FontAsset.CreateFontAsset(\u02BF\u02B2\u02C0\u02C0\u02BA\u02BF\u02B4\u02BF\u02C1\u02B9\u02B7, -94, 10, (GlyphRenderMode)(-121), 134, -184, AtlasPopulationMode.Static, true);
@@ -1394,125 +1365,88 @@ public class LyricDisplay : MonoBehaviour
 		return tmp_FontAsset;
 	}
 
-	// Token: 0x04000CD7 RID: 3287
 	private GameManager \u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD;
 
-	// Token: 0x04000CD8 RID: 3288
 	private int \u02B8\u02B9\u02BF\u02BB\u02B2\u02B8\u02BE\u02B8\u02B3\u02BB\u02B5 = -1;
 
-	// Token: 0x04000CD9 RID: 3289
 	private int \u02BC\u02B9\u02C0\u02BD\u02B2\u02BC\u02BD\u02B7\u02B7\u02BC\u02BD;
 
-	// Token: 0x04000CDA RID: 3290
 	private int \u02B4\u02B9\u02B3\u02B7\u02BF\u02B7\u02BF\u02B5\u02BE\u02B4\u02B6;
 
-	// Token: 0x04000CDB RID: 3291
 	[SerializeField]
 	private TextMeshProUGUI currentPhraseDisplay;
 
-	// Token: 0x04000CDC RID: 3292
 	[SerializeField]
 	private TextMeshProUGUI nextPhraseDisplay;
 
-	// Token: 0x04000CDD RID: 3293
 	[SerializeField]
 	private TextMeshProUGUI fadePhraseDisplay;
 
-	// Token: 0x04000CDE RID: 3294
 	[SerializeField]
 	private Font[] fonts;
 
-	// Token: 0x04000CDF RID: 3295
 	[SerializeField]
 	private LyricAnimator currentPhraseAnimator;
 
-	// Token: 0x04000CE0 RID: 3296
 	[SerializeField]
 	private LyricAnimator fadeAnimator;
 
-	// Token: 0x04000CE1 RID: 3297
 	[SerializeField]
 	private LyricAnimator nextPhraseAnimator;
 
-	// Token: 0x04000CE2 RID: 3298
 	[SerializeField]
 	private ImageFader currentPhraseBgFader;
 
-	// Token: 0x04000CE3 RID: 3299
 	[SerializeField]
 	private ImageFader nextPhraseBgFader;
 
-	// Token: 0x04000CE4 RID: 3300
 	[SerializeField]
 	private Material fontMaterial;
 
-	// Token: 0x04000CE5 RID: 3301
 	private TMP_FontAsset \u02BB\u02B6\u02B2\u02BE\u02B4\u02BB\u02B3\u02BA\u02BC\u02BE\u02B3;
 
-	// Token: 0x04000CE6 RID: 3302
 	private int \u02BA\u02B6\u02BF\u02BB\u02BF\u02C0\u02C1\u02BB\u02B4\u02C0\u02BF;
 
-	// Token: 0x04000CE7 RID: 3303
 	private string \u02BD\u02BC\u02BB\u02B3\u02BF\u02C0\u02BF\u02B7\u02B3\u02C0\u02B7 = "</color>";
 
-	// Token: 0x04000CE8 RID: 3304
 	private string \u02C0\u02B5\u02BB\u02B6\u02BC\u02B5\u02BD\u02BA\u02B8\u02BC\u02B8 = "<color=#FFA300>";
 
-	// Token: 0x04000CE9 RID: 3305
 	private Vector2 \u02BC\u02BB\u02B7\u02B3\u02BE\u02BA\u02BC\u02C0\u02BF\u02B4\u02B6 = new Vector2(0f, -191.5f);
 
-	// Token: 0x04000CEA RID: 3306
 	private Vector2 \u02B8\u02B8\u02B9\u02B2\u02C0\u02B8\u02B9\u02BA\u02C0\u02BA\u02B3 = new Vector2(0f, -135.5f);
 
-	// Token: 0x04000CEB RID: 3307
 	private Vector2 \u02B6\u02B7\u02C1\u02C1\u02B7\u02BE\u02C0\u02BE\u02B5\u02B6\u02BB = new Vector2(0f, -87f);
 
-	// Token: 0x04000CEC RID: 3308
 	private WaitForEndOfFrame \u02B2\u02B3\u02BA\u02B6\u02B5\u02B3\u02B9\u02B2\u02C0\u02C0\u02BA = new WaitForEndOfFrame();
 
-	// Token: 0x04000CED RID: 3309
 	private bool \u02B6\u02BA\u02C0\u02B9\u02B8\u02BA\u02B9\u02BD\u02BF\u02B2\u02BC;
 
-	// Token: 0x04000CEE RID: 3310
 	private bool \u02B5\u02BD\u02B8\u02B8\u02BF\u02BF\u02BA\u02B7\u02B2\u02B6\u02B2;
 
-	// Token: 0x04000CEF RID: 3311
 	private const float \u02BF\u02B7\u02B2\u02B4\u02B6\u02BD\u02B4\u02B2\u02B2\u02B7\u02B6 = 0.5f;
 
-	// Token: 0x04000CF0 RID: 3312
 	private const float \u02B4\u02B5\u02B4\u02B6\u02B8\u02BC\u02BB\u02BF\u02BF\u02B4\u02B8 = 0.1f;
 
-	// Token: 0x04000CF1 RID: 3313
 	private const float \u02BD\u02B2\u02B8\u02B5\u02BC\u02BA\u02B8\u02B6\u02B7\u02BA\u02BA = 0.4f;
 
-	// Token: 0x04000CF2 RID: 3314
 	private const float \u02BF\u02B7\u02B7\u02B3\u02B4\u02B7\u02BE\u02B6\u02B2\u02BF\u02B5 = 2.5f;
 
-	// Token: 0x04000CF3 RID: 3315
 	private float \u02BA\u02B5\u02B5\u02B8\u02BC\u02BC\u02B2\u02BB\u02B2\u02B9\u02BA = 0.2f;
 
-	// Token: 0x04000CF4 RID: 3316
 	private double \u02B5\u02C0\u02B7\u02B2\u02BA\u02BB\u02BB\u02BE\u02B4\u02B9\u02B6;
 
-	// Token: 0x04000CF5 RID: 3317
 	private const float \u02BD\u02B3\u02BB\u02B4\u02B2\u02BA\u02BD\u02BF\u02BD\u02BB\u02B8 = 0.35f;
 
-	// Token: 0x04000CF6 RID: 3318
 	private float \u02BF\u02B3\u02B9\u02B9\u02BD\u02BC\u02B9\u02B7\u02C1\u02C0\u02BD;
 
-	// Token: 0x04000CF7 RID: 3319
 	private bool \u02BC\u02B8\u02C0\u02B9\u02B2\u02B3\u02B4\u02BC\u02BC\u02BF\u02B4;
 
-	// Token: 0x04000CF8 RID: 3320
 	private List<\u02B4\u02C1\u02B2\u02B6\u02C1\u02B7\u02B4\u02C1\u02BD\u02C1\u02B6> \u02BB\u02B3\u02C1\u02BC\u02B6\u02B5\u02B2\u02B7\u02C0\u02B6\u02BB;
 
-	// Token: 0x04000CF9 RID: 3321
 	private \u02B4\u02C1\u02B2\u02B6\u02C1\u02B7\u02B4\u02C1\u02BD\u02C1\u02B6 \u02B3\u02B4\u02B9\u02B4\u02B3\u02B6\u02B6\u02C0\u02B2\u02B9\u02BC;
 
-	// Token: 0x04000CFA RID: 3322
 	private \u02B4\u02C1\u02B2\u02B6\u02C1\u02B7\u02B4\u02C1\u02BD\u02C1\u02B6 \u02BF\u02B6\u02B5\u02B6\u02BE\u02B9\u02BC\u02B3\u02BB\u02BD\u02B2;
 
-	// Token: 0x04000CFB RID: 3323
 	private HashSet<string> \u02B5\u02BD\u02B6\u02BF\u02C0\u02B8\u02BC\u02BF\u02B2\u02B4\u02BE = new HashSet<string>
 	{
 		"i", "b", "s", "u", "sup", "sub", "br", "voffset", "lowercase", "uppercase",

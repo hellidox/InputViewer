@@ -1,16 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 namespace Rewired.UI.ControlMapper
 {
-	// Token: 0x020002CC RID: 716
 	[AddComponentMenu("")]
 	public class UIControlSet : MonoBehaviour
 	{
-		// Token: 0x17000405 RID: 1029
-		// (get) Token: 0x06001EDA RID: 7898 RVA: 0x000D48D4 File Offset: 0x000D2AD4
 		private Dictionary<int, UIControl> controls
 		{
 			get
@@ -24,7 +21,6 @@ namespace Rewired.UI.ControlMapper
 			}
 		}
 
-		// Token: 0x06001EDB RID: 7899 RVA: 0x00017406 File Offset: 0x00015606
 		public void SetTitle(string text)
 		{
 			if (this.title == null)
@@ -34,7 +30,6 @@ namespace Rewired.UI.ControlMapper
 			this.title.text = text;
 		}
 
-		// Token: 0x06001EDC RID: 7900 RVA: 0x000D48FC File Offset: 0x000D2AFC
 		public T GetControl<T>(int uniqueId) where T : UIControl
 		{
 			UIControl uicontrol;
@@ -42,7 +37,6 @@ namespace Rewired.UI.ControlMapper
 			return uicontrol as T;
 		}
 
-		// Token: 0x06001EDD RID: 7901 RVA: 0x000D4924 File Offset: 0x000D2B24
 		public UISliderControl CreateSlider(GameObject prefab, Sprite icon, float minValue, float maxValue, Action<int, float> valueChangedCallback, Action<int> cancelCallback)
 		{
 			GameObject gameObject = global::UnityEngine.Object.Instantiate<GameObject>(prefab);
@@ -81,11 +75,9 @@ namespace Rewired.UI.ControlMapper
 			return control;
 		}
 
-		// Token: 0x0400152C RID: 5420
 		[SerializeField]
 		private TMP_Text title;
 
-		// Token: 0x0400152D RID: 5421
 		private Dictionary<int, UIControl> _controls;
 	}
 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.IO;
 using System.Runtime.CompilerServices;
@@ -10,16 +10,13 @@ using UnityEngine;
 using UnityEngine.Experimental.Rendering;
 using UnityEngine.UI;
 
-// Token: 0x02000113 RID: 275
 public class SongSelect : BaseMenu
 {
-	// Token: 0x06000BC7 RID: 3015 RVA: 0x0000C03F File Offset: 0x0000A23F
 	public void \u02BB\u02BF\u02BF\u02C1\u02B6\u02BF\u02B3\u02BD\u02B7\u02BA\u02C1(bool \u02B4\u02B9\u02B9\u02B2\u02B7\u02B9\u02C0\u02C1\u02BD\u02C0\u02B5)
 	{
 		this.sectionBrowser.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD(\u02B4\u02B9\u02B9\u02B2\u02B7\u02B9\u02C0\u02C1\u02BD\u02C0\u02B5);
 	}
 
-	// Token: 0x06000BC8 RID: 3016 RVA: 0x00068FFC File Offset: 0x000671FC
 	protected override void OnDisable()
 	{
 		base.OnDisable();
@@ -37,7 +34,6 @@ public class SongSelect : BaseMenu
 		}
 	}
 
-	// Token: 0x06000BC9 RID: 3017 RVA: 0x0006906C File Offset: 0x0006726C
 	private string \u02BF\u02B3\u02BE\u02B5\u02B2\u02BA\u02B9\u02B9\u02C1\u02B7\u02BB(int \u02B6\u02C0\u02BF\u02B7\u02B4\u02BB\u02B6\u02C1\u02B6\u02BF\u02BF)
 	{
 		string text;
@@ -56,14 +52,12 @@ public class SongSelect : BaseMenu
 		return text.Replace("%count%", string.Format("{0}", \u02B6\u02C0\u02BF\u02B7\u02B4\u02BB\u02B6\u02C1\u02B6\u02BF\u02BF)).ToUpper();
 	}
 
-	// Token: 0x06000BCA RID: 3018 RVA: 0x0000C04D File Offset: 0x0000A24D
 	public void \u02C0\u02B7\u02BC\u02B4\u02B7\u02C1\u02BF\u02B3\u02B5\u02B4\u02C1()
 	{
 		this.songSelectSearch.\u02BF\u02C0\u02B9\u02C0\u02BB\u02BD\u02B9\u02B7\u02B3\u02B4\u02B3 = true;
 		this.songSelectSearch.gameObject.SetActive(true);
 	}
 
-	// Token: 0x06000BCB RID: 3019 RVA: 0x0000C06C File Offset: 0x0000A26C
 	private IEnumerator \u02C1\u02BE\u02B7\u02B8\u02B9\u02B2\u02B7\u02BA\u02BC\u02BC\u02BF()
 	{
 		double u02B9_u02BE_u02B9_u02B8_u02B2_u02B2_u02BE_u02BC_u02B5_u02B9_u02BC = BassAudioManager.Instance.\u02B9\u02BE\u02B9\u02B8\u02B2\u02B2\u02BE\u02BC\u02B5\u02B9\u02BC;
@@ -89,25 +83,21 @@ public class SongSelect : BaseMenu
 		yield break;
 	}
 
-	// Token: 0x06000BCC RID: 3020 RVA: 0x0000C03F File Offset: 0x0000A23F
 	public void \u02B2\u02B3\u02BF\u02C1\u02B9\u02B6\u02BC\u02BF\u02B7\u02BD\u02B7(bool \u02B4\u02B9\u02B9\u02B2\u02B7\u02B9\u02C0\u02C1\u02BD\u02C0\u02B5)
 	{
 		this.sectionBrowser.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD(\u02B4\u02B9\u02B9\u02B2\u02B7\u02B9\u02C0\u02C1\u02BD\u02C0\u02B5);
 	}
 
-	// Token: 0x06000BCD RID: 3021 RVA: 0x0000C07B File Offset: 0x0000A27B
 	public void \u02B3\u02C1\u02C0\u02B2\u02B9\u02BB\u02B6\u02B6\u02B4\u02C0\u02BB()
 	{
 		this.speedText.text = string.Format("{0}: {1}%", \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Song Speed"), SettingsController.\u02B3\u02B7\u02B4\u02BA\u02B3\u02B9\u02B7\u02BE\u02B2\u02B7\u02BE.CurrentValue);
 	}
 
-	// Token: 0x06000BCE RID: 3022 RVA: 0x0000C0B0 File Offset: 0x0000A2B0
 	public void \u02BA\u02C1\u02B4\u02BB\u02BC\u02BF\u02BF\u02C1\u02B3\u02C0\u02B3(bool \u02B4\u02B9\u02B9\u02B2\u02B7\u02B9\u02C0\u02C1\u02BD\u02C0\u02B5)
 	{
 		this.sectionBrowser.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD(\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02BE\u02BC\u02BF\u02B6\u02B5\u02BF\u02B6\u02B2\u02B6\u02BE\u02B4(base.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC, 0), \u02B4\u02B9\u02B9\u02B2\u02B7\u02B9\u02C0\u02C1\u02BD\u02C0\u02B5);
 	}
 
-	// Token: 0x06000BCF RID: 3023 RVA: 0x00069104 File Offset: 0x00067304
 	public void \u02B3\u02B8\u02B2\u02BF\u02C0\u02B6\u02C1\u02BD\u02B3\u02B8\u02B9(string \u02BE\u02BA\u02BD\u02BB\u02B8\u02BE\u02B4\u02BB\u02C1\u02BD\u02B2)
 	{
 		object obj = \u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02BE\u02B3\u02BE\u02BF\u02B3\u02C1\u02B3\u02BF\u02BE\u02B3\u02B7(base.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC);
@@ -125,7 +115,6 @@ public class SongSelect : BaseMenu
 		this.\u02B7\u02C0\u02BB\u02B6\u02B3\u02C0\u02B9\u02BF\u02B5\u02C0\u02B6 = (this.\u02C0\u02C1\u02B6\u02BF\u02BF\u02B2\u02B5\u02C0\u02BB\u02BA\u02C1 = false);
 	}
 
-	// Token: 0x06000BD0 RID: 3024 RVA: 0x0006915C File Offset: 0x0006735C
 	private string \u02B7\u02B7\u02BB\u02BB\u02B4\u02B7\u02B5\u02B5\u02BF\u02B9\u02B9()
 	{
 		string text = Path.Combine(this.\u02BD\u02B6\u02BD\u02C0\u02C1\u02BE\u02BF\u02BB\u02BD\u02B8\u02BD.folderPath, "album.jpg");
@@ -146,7 +135,6 @@ public class SongSelect : BaseMenu
 		return null;
 	}
 
-	// Token: 0x06000BD1 RID: 3025 RVA: 0x000691CC File Offset: 0x000673CC
 	public void \u02BA\u02B9\u02B3\u02B4\u02B4\u02BC\u02C0\u02C1\u02B6\u02BC\u02B6(Func<SongEntry, bool> \u02C0\u02BF\u02B5\u02B2\u02BB\u02BE\u02B3\u02B8\u02B2\u02BD\u02B8, string \u02C1\u02BC\u02C0\u02B7\u02BE\u02B7\u02BF\u02BA\u02BD\u02BD\u02B7)
 	{
 		SongSelect.\u02B2\u02B6\u02BF\u02C0\u02BC\u02C0\u02B6\u02B4\u02B8\u02BA\u02BF u02B2_u02B6_u02BF_u02C0_u02BC_u02C0_u02B6_u02B4_u02B8_u02BA_u02BF = new SongSelect.\u02B2\u02B6\u02BF\u02C0\u02BC\u02C0\u02B6\u02B4\u02B8\u02BA\u02BF();
@@ -155,26 +143,22 @@ public class SongSelect : BaseMenu
 		this.\u02B2\u02B8\u02B6\u02BF\u02C0\u02C1\u02B3\u02B8\u02C0\u02B5\u02BB(new Action(u02B2_u02B6_u02BF_u02C0_u02BC_u02C0_u02B6_u02B4_u02B8_u02BA_u02BF.\u02BD\u02C1\u02B5\u02B7\u02C0\u02BB\u02BB\u02B7\u02BD\u02BD\u02BE));
 	}
 
-	// Token: 0x06000BD2 RID: 3026 RVA: 0x0000C0CA File Offset: 0x0000A2CA
 	public void \u02C0\u02B6\u02BC\u02B2\u02B6\u02BF\u02B6\u02BA\u02B6\u02B8\u02BC(SongEntry \u02B4\u02BC\u02BF\u02BC\u02BA\u02B9\u02B8\u02B2\u02BD\u02BE\u02BD)
 	{
 		this.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B6\u02B5\u02B4\u02BD\u02B7\u02B4\u02B9\u02B8\u02B8\u02B5\u02BF(\u02B4\u02BC\u02BF\u02BC\u02BA\u02B9\u02B8\u02B2\u02BD\u02BE\u02BD), true);
 	}
 
-	// Token: 0x06000BD3 RID: 3027 RVA: 0x0000C04D File Offset: 0x0000A24D
 	public void \u02BC\u02B3\u02C0\u02BA\u02B3\u02B3\u02B5\u02BA\u02BE\u02B5\u02BE()
 	{
 		this.songSelectSearch.\u02BF\u02C0\u02B9\u02C0\u02BB\u02BD\u02B9\u02B7\u02B3\u02B4\u02B3 = true;
 		this.songSelectSearch.gameObject.SetActive(true);
 	}
 
-	// Token: 0x06000BD4 RID: 3028 RVA: 0x0000C0D9 File Offset: 0x0000A2D9
 	public void \u02B7\u02BD\u02BD\u02B9\u02B5\u02C0\u02B8\u02BA\u02C0\u02C1\u02B6(SongEntry \u02B4\u02BC\u02BF\u02BC\u02BA\u02B9\u02B8\u02B2\u02BD\u02BE\u02BD)
 	{
 		this.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B6\u02B5\u02B4\u02BD\u02B7\u02B4\u02B9\u02B8\u02B8\u02B5\u02BF(\u02B4\u02BC\u02BF\u02BC\u02BA\u02B9\u02B8\u02B2\u02BD\u02BE\u02BD), false);
 	}
 
-	// Token: 0x06000BD5 RID: 3029 RVA: 0x0000C0E8 File Offset: 0x0000A2E8
 	private IEnumerator \u02B9\u02B8\u02B6\u02B9\u02BD\u02B7\u02BB\u02BE\u02B6\u02BA\u02C0()
 	{
 		BassAudioManager.Instance.\u02C1\u02B3\u02B2\u02BB\u02B7\u02B8\u02BD\u02BC\u02BF\u02BC\u02C0(null);
@@ -193,7 +177,6 @@ public class SongSelect : BaseMenu
 		yield break;
 	}
 
-	// Token: 0x06000BD6 RID: 3030 RVA: 0x00069200 File Offset: 0x00067400
 	public override void \u02C1\u02B6\u02BD\u02BC\u02BC\u02B3\u02BF\u02BF\u02C0\u02C1\u02BC()
 	{
 		if (this.\u02C1\u02B5\u02B9\u02B4\u02B9\u02B5\u02BC\u02B3\u02B4\u02C0\u02BF)
@@ -226,7 +209,6 @@ public class SongSelect : BaseMenu
 		}
 	}
 
-	// Token: 0x06000BD7 RID: 3031 RVA: 0x000692C0 File Offset: 0x000674C0
 	public virtual void \u02BD\u02B9\u02B2\u02B5\u02B8\u02B2\u02B4\u02BE\u02C1\u02BF\u02B7()
 	{
 		int num = 1;
@@ -272,7 +254,6 @@ public class SongSelect : BaseMenu
 		}
 	}
 
-	// Token: 0x06000BD8 RID: 3032 RVA: 0x0006949C File Offset: 0x0006769C
 	public void \u02B3\u02BE\u02B6\u02BC\u02B7\u02BD\u02BC\u02C1\u02BB\u02B4\u02B7(string \u02C1\u02BC\u02C0\u02B7\u02BE\u02B7\u02BF\u02BA\u02BD\u02BD\u02B7)
 	{
 		SongSelect.\u02B4\u02C0\u02C1\u02C1\u02B5\u02BA\u02C1\u02B9\u02BE\u02B5\u02BA u02B4_u02C0_u02C1_u02C1_u02B5_u02BA_u02C1_u02B9_u02BE_u02B5_u02BA = new SongSelect.\u02B4\u02C0\u02C1\u02C1\u02B5\u02BA\u02C1\u02B9\u02BE\u02B5\u02BA();
@@ -280,7 +261,6 @@ public class SongSelect : BaseMenu
 		this.\u02B2\u02B8\u02B6\u02BF\u02C0\u02C1\u02B3\u02B8\u02C0\u02B5\u02BB(new Action(u02B4_u02C0_u02C1_u02C1_u02B5_u02BA_u02C1_u02B9_u02BE_u02B5_u02BA.\u02B5\u02BA\u02B4\u02BB\u02BC\u02B3\u02BB\u02B2\u02B6\u02B5\u02B3));
 	}
 
-	// Token: 0x06000BD9 RID: 3033 RVA: 0x0000C0F7 File Offset: 0x0000A2F7
 	public void \u02B5\u02B6\u02BF\u02C1\u02B5\u02BD\u02BB\u02B6\u02C1\u02B7\u02C1(TextMeshProUGUI[] \u02BC\u02BA\u02BD\u02B2\u02BD\u02BA\u02BE\u02C1\u02C0\u02B5\u02C1, TextMeshProUGUI[] \u02B9\u02BB\u02B3\u02C1\u02B2\u02C1\u02B9\u02C0\u02BF\u02BD\u02C0, ScrollingText[] \u02B6\u02BD\u02BB\u02B5\u02B4\u02B4\u02B3\u02BF\u02BF\u02BC\u02BE, ScrollingText[] \u02BF\u02B4\u02BA\u02BE\u02B3\u02BE\u02BB\u02BA\u02B3\u02C0\u02B3, Image[] \u02B7\u02B7\u02B7\u02B4\u02BD\u02B6\u02C0\u02B2\u02B8\u02B3\u02B4, TextMeshProUGUI[] \u02BA\u02B4\u02BD\u02B7\u02B2\u02B9\u02BF\u02B9\u02B4\u02BE\u02BF, Image[] \u02BD\u02BD\u02C0\u02BE\u02B3\u02C0\u02B7\u02BE\u02BB\u02BF\u02BB)
 	{
 		this.\u02BC\u02BA\u02BD\u02B2\u02BD\u02BA\u02BE\u02C1\u02C0\u02B5\u02C1 = \u02BC\u02BA\u02BD\u02B2\u02BD\u02BA\u02BE\u02C1\u02C0\u02B5\u02C1;
@@ -293,13 +273,11 @@ public class SongSelect : BaseMenu
 		this.\u02BA\u02BD\u02B3\u02BC\u02B8\u02BB\u02B8\u02BA\u02B5\u02C0\u02C0();
 	}
 
-	// Token: 0x06000BDA RID: 3034 RVA: 0x0000C0CA File Offset: 0x0000A2CA
 	public void \u02BC\u02C1\u02C0\u02BE\u02BD\u02BD\u02B2\u02BB\u02B9\u02B9\u02BF(SongEntry \u02B4\u02BC\u02BF\u02BC\u02BA\u02B9\u02B8\u02B2\u02BD\u02BE\u02BD)
 	{
 		this.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B6\u02B5\u02B4\u02BD\u02B7\u02B4\u02B9\u02B8\u02B8\u02B5\u02BF(\u02B4\u02BC\u02BF\u02BC\u02BA\u02B9\u02B8\u02B2\u02BD\u02BE\u02BD), true);
 	}
 
-	// Token: 0x06000BDB RID: 3035 RVA: 0x000694C8 File Offset: 0x000676C8
 	private void \u02C0\u02BA\u02B4\u02C1\u02B5\u02B9\u02B6\u02C0\u02B8\u02B9\u02B9()
 	{
 		this.difficultyScroll.\u02C0\u02B4\u02BA\u02B9\u02B2\u02BD\u02B9\u02BD\u02B4\u02B8\u02BA();
@@ -324,13 +302,11 @@ public class SongSelect : BaseMenu
 		}
 	}
 
-	// Token: 0x06000BDC RID: 3036 RVA: 0x0000C134 File Offset: 0x0000A334
 	public void \u02BD\u02B6\u02C0\u02BC\u02BA\u02BA\u02B4\u02BE\u02C1\u02B8\u02BB()
 	{
 		this.\u02B3\u02B8\u02B2\u02BF\u02C0\u02B6\u02C1\u02BD\u02B3\u02B8\u02B9(null);
 	}
 
-	// Token: 0x06000BDD RID: 3037 RVA: 0x0000C13D File Offset: 0x0000A33D
 	public override void \u02BF\u02BB\u02BC\u02BC\u02B8\u02C1\u02B9\u02BC\u02B6\u02BA\u02B6()
 	{
 		if (this.\u02B9\u02B4\u02BE\u02B3\u02B5\u02BD\u02BB\u02BD\u02BC\u02B2\u02C0)
@@ -341,7 +317,6 @@ public class SongSelect : BaseMenu
 		this.\u02BD\u02B6\u02C0\u02BC\u02BA\u02BA\u02B4\u02BE\u02C1\u02B8\u02BB();
 	}
 
-	// Token: 0x06000BDE RID: 3038 RVA: 0x000695A0 File Offset: 0x000677A0
 	public override void \u02BF\u02B7\u02BF\u02BF\u02B4\u02B2\u02BF\u02B7\u02BA\u02BA\u02B2()
 	{
 		int num = 0;
@@ -387,7 +362,6 @@ public class SongSelect : BaseMenu
 		}
 	}
 
-	// Token: 0x06000BDF RID: 3039 RVA: 0x0006977C File Offset: 0x0006797C
 	public override void \u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8()
 	{
 		if (CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BA\u02B8\u02B6\u02BB\u02B5\u02B2\u02B8\u02B6\u02BB\u02BB)
@@ -411,32 +385,27 @@ public class SongSelect : BaseMenu
 		base.\u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8();
 	}
 
-	// Token: 0x06000BE0 RID: 3040 RVA: 0x0000C155 File Offset: 0x0000A355
 	private void Awake()
 	{
 		this.\u02B9\u02BC\u02BE\u02BD\u02B7\u02BE\u02C0\u02C0\u02B5\u02BF\u02BB = true;
 	}
 
-	// Token: 0x06000BE1 RID: 3041 RVA: 0x0000C15E File Offset: 0x0000A35E
 	public void \u02B6\u02B3\u02B4\u02B6\u02C1\u02B4\u02C0\u02BA\u02BA\u02C1\u02C0(bool \u02B8\u02B2\u02B7\u02BB\u02BA\u02C0\u02BF\u02C1\u02B2\u02B6\u02BC)
 	{
 		this.sectionBrowser.gameObject.SetActive(\u02B8\u02B2\u02B7\u02BB\u02BA\u02C0\u02BF\u02C1\u02B2\u02B6\u02BC);
 	}
 
-	// Token: 0x06000BE2 RID: 3042 RVA: 0x0000C171 File Offset: 0x0000A371
 	public override void \u02BA\u02C0\u02C1\u02B2\u02B2\u02B9\u02B2\u02BF\u02B8\u02BE\u02BC()
 	{
 		this.\u02BA\u02C1\u02B4\u02BB\u02BC\u02BF\u02BF\u02C1\u02B3\u02C0\u02B3(false);
 	}
 
-	// Token: 0x06000BE3 RID: 3043 RVA: 0x0000C17A File Offset: 0x0000A37A
 	public override void \u02BC\u02B7\u02BF\u02BD\u02B4\u02BE\u02C0\u02B4\u02BE\u02B7\u02B9()
 	{
 		this.songOptions.gameObject.SetActive(true);
 		base.\u02B7\u02B6\u02BC\u02BC\u02B3\u02BA\u02BE\u02C0\u02BF\u02B9\u02C1();
 	}
 
-	// Token: 0x06000BE4 RID: 3044 RVA: 0x0006949C File Offset: 0x0006769C
 	public void \u02B6\u02BD\u02C1\u02B8\u02C1\u02B6\u02B6\u02BA\u02B3\u02BE\u02B8(string \u02C1\u02BC\u02C0\u02B7\u02BE\u02B7\u02BF\u02BA\u02BD\u02BD\u02B7)
 	{
 		SongSelect.\u02B4\u02C0\u02C1\u02C1\u02B5\u02BA\u02C1\u02B9\u02BE\u02B5\u02BA u02B4_u02C0_u02C1_u02C1_u02B5_u02BA_u02C1_u02B9_u02BE_u02B5_u02BA = new SongSelect.\u02B4\u02C0\u02C1\u02C1\u02B5\u02BA\u02C1\u02B9\u02BE\u02B5\u02BA();
@@ -444,7 +413,6 @@ public class SongSelect : BaseMenu
 		this.\u02B2\u02B8\u02B6\u02BF\u02C0\u02C1\u02B3\u02B8\u02C0\u02B5\u02BB(new Action(u02B4_u02C0_u02C1_u02C1_u02B5_u02BA_u02C1_u02B9_u02BE_u02B5_u02BA.\u02B5\u02BA\u02B4\u02BB\u02BC\u02B3\u02BB\u02B2\u02B6\u02B5\u02B3));
 	}
 
-	// Token: 0x06000BE5 RID: 3045 RVA: 0x0000C193 File Offset: 0x0000A393
 	private IEnumerator \u02C1\u02BC\u02B8\u02BA\u02B4\u02C1\u02B3\u02C1\u02B6\u02B4\u02B7()
 	{
 		SongSelect.\u02B2\u02B4\u02B5\u02BD\u02BA\u02B6\u02BE\u02B2\u02B2\u02BE\u02B9 u02B2_u02B4_u02B5_u02BD_u02BA_u02B6_u02BE_u02B2_u02B2_u02BE_u02B = new SongSelect.\u02B2\u02B4\u02B5\u02BD\u02BA\u02B6\u02BE\u02B2\u02B2\u02BE\u02B9();
@@ -500,7 +468,6 @@ public class SongSelect : BaseMenu
 		yield break;
 	}
 
-	// Token: 0x06000BE6 RID: 3046 RVA: 0x00069818 File Offset: 0x00067A18
 	private void \u02BA\u02B7\u02B9\u02B9\u02BD\u02BD\u02BE\u02B9\u02BF\u02BC\u02C0()
 	{
 		this.difficultyScroll.Reset();
@@ -525,13 +492,11 @@ public class SongSelect : BaseMenu
 		}
 	}
 
-	// Token: 0x06000BE7 RID: 3047 RVA: 0x0000C1A2 File Offset: 0x0000A3A2
 	public void \u02BD\u02BA\u02B2\u02C0\u02BC\u02B9\u02B7\u02B9\u02B9\u02B5\u02BF()
 	{
 		this.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02BA\u02B5\u02B6\u02B8\u02BD\u02BF\u02B7\u02B4\u02BF\u02B2\u02BB(base.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC), true);
 	}
 
-	// Token: 0x06000BE8 RID: 3048 RVA: 0x000698F0 File Offset: 0x00067AF0
 	[CompilerGenerated]
 	internal static bool \u02BA\u02BE\u02BF\u02BE\u02BC\u02BF\u02BB\u02BE\u02B9\u02BA\u02B4(Task \u02C1\u02C1\u02B2\u02BA\u02BF\u02B6\u02BB\u02BE\u02B6\u02BC\u02B5)
 	{
@@ -545,20 +510,17 @@ public class SongSelect : BaseMenu
 		return true;
 	}
 
-	// Token: 0x06000BE9 RID: 3049 RVA: 0x0000C1B6 File Offset: 0x0000A3B6
 	public override void \u02B5\u02BF\u02B2\u02B4\u02BB\u02B5\u02B9\u02B4\u02BC\u02BB\u02C1()
 	{
 		this.\u02BF\u02BA\u02BE\u02BC\u02B4\u02C0\u02B3\u02BC\u02B6\u02B3\u02C0();
 	}
 
-	// Token: 0x06000BEA RID: 3050 RVA: 0x0000C04D File Offset: 0x0000A24D
 	public void \u02B8\u02B5\u02BE\u02B7\u02B2\u02BF\u02B3\u02B3\u02BA\u02BF\u02BC()
 	{
 		this.songSelectSearch.\u02BF\u02C0\u02B9\u02C0\u02BB\u02BD\u02B9\u02B7\u02B3\u02B4\u02B3 = true;
 		this.songSelectSearch.gameObject.SetActive(true);
 	}
 
-	// Token: 0x06000BEB RID: 3051 RVA: 0x00069920 File Offset: 0x00067B20
 	protected override void OnEnable()
 	{
 		this.songCountText.text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Songs") + ": ";
@@ -594,7 +556,6 @@ public class SongSelect : BaseMenu
 		this.\u02B4\u02C1\u02B6\u02B5\u02B4\u02B7\u02BC\u02BE\u02C1\u02B6\u02B6 = true;
 	}
 
-	// Token: 0x06000BEC RID: 3052 RVA: 0x0000C0E8 File Offset: 0x0000A2E8
 	private IEnumerator \u02BF\u02B7\u02B6\u02B8\u02BF\u02BE\u02B7\u02B5\u02BF\u02BE\u02BA()
 	{
 		BassAudioManager.Instance.\u02C1\u02B3\u02B2\u02BB\u02B7\u02B8\u02BD\u02BC\u02BF\u02BC\u02C0(null);
@@ -613,7 +574,6 @@ public class SongSelect : BaseMenu
 		yield break;
 	}
 
-	// Token: 0x06000BED RID: 3053 RVA: 0x00069A38 File Offset: 0x00067C38
 	protected virtual void \u02B7\u02B8\u02BD\u02C0\u02B2\u02B4\u02B7\u02C0\u02BC\u02BE\u02B3()
 	{
 		int num = \u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B6\u02BB\u02B3\u02B7\u02BB\u02B3\u02C1\u02B9\u02BF\u02C0\u02BF(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02C1\u02BF\u02BD\u02B5\u02BE\u02C1\u02BE\u02B8\u02BF\u02B7);
@@ -629,7 +589,6 @@ public class SongSelect : BaseMenu
 		DiscordController.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02B4\u02B9\u02B2\u02B4\u02BE\u02BC\u02BE\u02C0\u02C1\u02C1(this.\u02BD\u02B6\u02BD\u02C0\u02C1\u02BE\u02BF\u02BB\u02BD\u02B8\u02BD);
 	}
 
-	// Token: 0x06000BEE RID: 3054 RVA: 0x0000C1BE File Offset: 0x0000A3BE
 	public override void \u02B7\u02BA\u02C0\u02B8\u02BE\u02BA\u02BD\u02B4\u02BB\u02B3\u02B6()
 	{
 		if (!\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B7\u02BD\u02C1\u02C0\u02B4\u02B7\u02BE\u02BF\u02BD\u02B7\u02B7)
@@ -640,7 +599,6 @@ public class SongSelect : BaseMenu
 		base.\u02B7\u02BA\u02C0\u02B8\u02BE\u02BA\u02BD\u02B4\u02BB\u02B3\u02B6();
 	}
 
-	// Token: 0x06000BEF RID: 3055 RVA: 0x0000C1D4 File Offset: 0x0000A3D4
 	public void \u02B7\u02BE\u02B8\u02B7\u02B9\u02BA\u02B3\u02B6\u02B4\u02B7\u02B8()
 	{
 		if (\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02BD\u02BD\u02B6\u02B3\u02B2\u02B6\u02BB\u02BF\u02BE\u02B6\u02B4.Count == 0)
@@ -653,7 +611,6 @@ public class SongSelect : BaseMenu
 		this.\u02BA\u02BD\u02B3\u02BC\u02B8\u02BB\u02B8\u02BA\u02B5\u02C0\u02C0();
 	}
 
-	// Token: 0x06000BF1 RID: 3057 RVA: 0x0000C1FD File Offset: 0x0000A3FD
 	private void \u02B7\u02B6\u02B2\u02BD\u02C0\u02B4\u02B2\u02B4\u02BC\u02C1\u02BF()
 	{
 		if (this.setlistMenu.\u02B7\u02BD\u02C1\u02C0\u02BA\u02BE\u02BC\u02B3\u02B6\u02B9\u02BB)
@@ -662,19 +619,16 @@ public class SongSelect : BaseMenu
 		}
 	}
 
-	// Token: 0x06000BF2 RID: 3058 RVA: 0x0000C218 File Offset: 0x0000A418
 	public void \u02BF\u02B5\u02BE\u02BD\u02B8\u02BF\u02B4\u02B6\u02BB\u02B6\u02BD()
 	{
 		this.\u02B2\u02B8\u02B6\u02BF\u02C0\u02C1\u02B3\u02B8\u02C0\u02B5\u02BB(new Action(SongSelect.<>c.<>9.\u02BB\u02BF\u02BB\u02C1\u02B8\u02B8\u02BB\u02C0\u02BE\u02B9\u02BE));
 	}
 
-	// Token: 0x06000BF3 RID: 3059 RVA: 0x0000C23F File Offset: 0x0000A43F
 	public void \u02C0\u02C0\u02BA\u02BD\u02B8\u02B7\u02B8\u02B5\u02C1\u02B2\u02B9(bool \u02B4\u02B9\u02B9\u02B2\u02B7\u02B9\u02C0\u02C1\u02BD\u02C0\u02B5)
 	{
 		this.sectionBrowser.\u02BF\u02BB\u02B6\u02C0\u02B8\u02BE\u02B9\u02B4\u02C1\u02B5\u02BD(\u02B4\u02B9\u02B9\u02B2\u02B7\u02B9\u02C0\u02C1\u02BD\u02C0\u02B5);
 	}
 
-	// Token: 0x06000BF4 RID: 3060 RVA: 0x00069B58 File Offset: 0x00067D58
 	public void \u02BD\u02B7\u02B2\u02BE\u02B7\u02BD\u02C1\u02BE\u02C1\u02B9\u02B7()
 	{
 		GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B9\u02B7\u02BE\u02BF\u02B4\u02C1\u02BC\u02B2\u02BC\u02B8\u02B4 = SettingsController.\u02B3\u02B7\u02B4\u02BA\u02B3\u02B9\u02B7\u02BE\u02B2\u02B7\u02BE.CurrentValue;
@@ -696,7 +650,6 @@ public class SongSelect : BaseMenu
 		base.gameObject.SetActive(false);
 	}
 
-	// Token: 0x06000BF5 RID: 3061 RVA: 0x0000C193 File Offset: 0x0000A393
 	private IEnumerator \u02B2\u02C1\u02BD\u02B2\u02BE\u02B9\u02B7\u02B2\u02BA\u02C0\u02B5()
 	{
 		u02B2_u02B4_u02B5_u02BD_u02BA_u02B6_u02BE_u02B2_u02B2_u02BE_u02B = new SongSelect.\u02B2\u02B4\u02B5\u02BD\u02BA\u02B6\u02BE\u02B2\u02B2\u02BE\u02B9();
@@ -752,7 +705,6 @@ public class SongSelect : BaseMenu
 		yield break;
 	}
 
-	// Token: 0x06000BF6 RID: 3062 RVA: 0x0000C24D File Offset: 0x0000A44D
 	public override void \u02C1\u02B3\u02BC\u02B6\u02BD\u02B6\u02BF\u02B7\u02BB\u02B5\u02BB()
 	{
 		if (!\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B7\u02BD\u02C1\u02C0\u02B4\u02B7\u02BE\u02BF\u02BD\u02B7\u02B7)
@@ -763,9 +715,6 @@ public class SongSelect : BaseMenu
 		base.\u02C1\u02B3\u02BC\u02B6\u02BD\u02B6\u02BF\u02B7\u02BB\u02B5\u02BB();
 	}
 
-	// Token: 0x1700011B RID: 283
-	// (get) Token: 0x06000BFE RID: 3070 RVA: 0x0000C29F File Offset: 0x0000A49F
-	// (set) Token: 0x06000BF7 RID: 3063 RVA: 0x0000C263 File Offset: 0x0000A463
 	public Instrument? \u02C0\u02BE\u02B5\u02B2\u02B7\u02B7\u02C0\u02BD\u02BA\u02B3\u02BB
 	{
 		get
@@ -780,7 +729,6 @@ public class SongSelect : BaseMenu
 		}
 	}
 
-	// Token: 0x06000BF8 RID: 3064 RVA: 0x00069C20 File Offset: 0x00067E20
 	public void \u02BF\u02BA\u02BE\u02BC\u02B4\u02C0\u02B3\u02BC\u02B6\u02B3\u02C0()
 	{
 		Instrument instrument = this.\u02C0\u02BE\u02B5\u02B2\u02B7\u02B7\u02C0\u02BD\u02BA\u02B3\u02BB ?? GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BA\u02BB\u02B6\u02B2\u02BF\u02C0\u02BF\u02B3\u02B8\u02B3\u02BE();
@@ -788,7 +736,6 @@ public class SongSelect : BaseMenu
 		this.scorePanel.\u02B9\u02BF\u02BF\u02B8\u02B4\u02B8\u02BA\u02B8\u02B9\u02B6\u02BC(this.\u02BD\u02B6\u02BD\u02C0\u02C1\u02BE\u02BF\u02BB\u02BD\u02B8\u02BD, this.\u02BD\u02B6\u02BD\u02C0\u02C1\u02BE\u02BF\u02BB\u02BD\u02B8\u02BD.scores.\u02BC\u02BB\u02B9\u02B5\u02B5\u02BB\u02B8\u02B9\u02B9\u02BC\u02BC(instrument), instrument);
 	}
 
-	// Token: 0x06000BF9 RID: 3065 RVA: 0x00069C88 File Offset: 0x00067E88
 	private void \u02BD\u02B6\u02BF\u02BF\u02B4\u02BB\u02B2\u02BD\u02BE\u02B8\u02C1()
 	{
 		Instrument instrument = this.\u02C0\u02BE\u02B5\u02B2\u02B7\u02B7\u02C0\u02BD\u02BA\u02B3\u02BB ?? GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BA\u02BB\u02B6\u02B2\u02BF\u02C0\u02BF\u02B3\u02B8\u02B3\u02BE();
@@ -818,7 +765,6 @@ public class SongSelect : BaseMenu
 		this.starsContainer.SetActive(false);
 	}
 
-	// Token: 0x06000BFA RID: 3066 RVA: 0x0000C279 File Offset: 0x0000A479
 	public virtual void \u02B4\u02B9\u02BA\u02BF\u02B7\u02B6\u02BE\u02B5\u02BA\u02B8\u02B9()
 	{
 		if (this.\u02B9\u02B4\u02BE\u02B3\u02B5\u02BD\u02BB\u02BD\u02BC\u02B2\u02C0)
@@ -829,7 +775,6 @@ public class SongSelect : BaseMenu
 		this.\u02BD\u02B6\u02C0\u02BC\u02BA\u02BA\u02B4\u02BE\u02C1\u02B8\u02BB();
 	}
 
-	// Token: 0x06000BFB RID: 3067 RVA: 0x00069E38 File Offset: 0x00068038
 	protected override void \u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8()
 	{
 		int num = \u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02BE\u02BC\u02BF\u02B6\u02B5\u02BF\u02B6\u02B2\u02B6\u02BE\u02B4(this.\u02BB\u02B3\u02C0\u02BC\u02BF\u02BD\u02B9\u02B2\u02BC\u02BE\u02B7, 0);
@@ -948,13 +893,11 @@ public class SongSelect : BaseMenu
 		this.gameIcon.sprite = this.defaultGameIcon;
 	}
 
-	// Token: 0x06000BFC RID: 3068 RVA: 0x0000C291 File Offset: 0x0000A491
 	public void \u02BF\u02BA\u02B2\u02BA\u02B2\u02B9\u02B8\u02BA\u02B6\u02BB\u02C1(bool \u02B4\u02B9\u02B9\u02B2\u02B7\u02B9\u02C0\u02C1\u02BD\u02C0\u02B5)
 	{
 		this.sectionBrowser.\u02B7\u02C0\u02B7\u02B2\u02C0\u02BA\u02BC\u02BE\u02B9\u02B6\u02C1(\u02B4\u02B9\u02B9\u02B2\u02B7\u02B9\u02C0\u02C1\u02BD\u02C0\u02B5);
 	}
 
-	// Token: 0x06000BFD RID: 3069 RVA: 0x0006A410 File Offset: 0x00068610
 	public void \u02BC\u02BA\u02B5\u02B6\u02BA\u02BC\u02B9\u02B7\u02B4\u02BA\u02BB()
 	{
 		this.onlineMenu.SetActive(true);
@@ -965,7 +908,6 @@ public class SongSelect : BaseMenu
 		\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B6\u02BE\u02B5\u02B9\u02BA\u02BA\u02B4\u02B5\u02BD\u02C0\u02B6("Available");
 	}
 
-	// Token: 0x06000BFF RID: 3071 RVA: 0x0000C2A7 File Offset: 0x0000A4A7
 	public override void \u02B8\u02BF\u02B4\u02B2\u02BE\u02B5\u02BC\u02B2\u02B5\u02BD\u02B8()
 	{
 		if (!base.gameObject.activeSelf)
@@ -975,7 +917,6 @@ public class SongSelect : BaseMenu
 		this.\u02B5\u02BD\u02BB\u02BA\u02BD\u02C1\u02BC\u02BF\u02BF\u02B9\u02B9();
 	}
 
-	// Token: 0x06000C00 RID: 3072 RVA: 0x0006A460 File Offset: 0x00068660
 	private string \u02C0\u02BD\u02BD\u02BD\u02B9\u02B2\u02BF\u02BC\u02C1\u02B7\u02B8()
 	{
 		string text = Path.Combine(this.\u02BD\u02B6\u02BD\u02C0\u02C1\u02BE\u02BF\u02BB\u02BD\u02B8\u02BD.folderPath, "Metal");
@@ -996,7 +937,6 @@ public class SongSelect : BaseMenu
 		return null;
 	}
 
-	// Token: 0x06000C01 RID: 3073 RVA: 0x0006A4D0 File Offset: 0x000686D0
 	public override void \u02BA\u02BD\u02B3\u02BC\u02B8\u02BB\u02B8\u02BA\u02B5\u02C0\u02C0()
 	{
 		this.\u02C0\u02B8\u02B3\u02B7\u02B3\u02BA\u02BB\u02B4\u02B4\u02BF\u02B5 = this.textObjects.Length;
@@ -1027,7 +967,6 @@ public class SongSelect : BaseMenu
 		}
 	}
 
-	// Token: 0x06000C02 RID: 3074 RVA: 0x0006A57C File Offset: 0x0006877C
 	protected override void Update()
 	{
 		if (this.scorePanel.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 || this.songSelectSearch.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 || this.sectionBrowser.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 || this.songOptions.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 || this.confirmMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 || this.drumSongOptionsMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
@@ -1037,14 +976,12 @@ public class SongSelect : BaseMenu
 		base.Update();
 	}
 
-	// Token: 0x06000C03 RID: 3075 RVA: 0x0000C2BD File Offset: 0x0000A4BD
 	public void \u02B5\u02BD\u02BB\u02BA\u02BD\u02C1\u02BC\u02BF\u02BF\u02B9\u02B9()
 	{
 		this.songSelectSearch.\u02BF\u02C0\u02B9\u02C0\u02BB\u02BD\u02B9\u02B7\u02B3\u02B4\u02B3 = false;
 		this.songSelectSearch.gameObject.SetActive(true);
 	}
 
-	// Token: 0x06000C04 RID: 3076 RVA: 0x0006A5E0 File Offset: 0x000687E0
 	public override void \u02B8\u02B6\u02BB\u02C0\u02BA\u02B2\u02BC\u02BF\u02BF\u02BC\u02C1()
 	{
 		if (CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BA\u02B8\u02B6\u02BB\u02B5\u02B2\u02B8\u02B6\u02BB\u02BB)
@@ -1061,7 +998,6 @@ public class SongSelect : BaseMenu
 		}
 	}
 
-	// Token: 0x06000C05 RID: 3077 RVA: 0x0000C2DC File Offset: 0x0000A4DC
 	public override void \u02B6\u02BE\u02B5\u02C1\u02B6\u02B6\u02B5\u02B3\u02BE\u02B4\u02B7()
 	{
 		if (this.\u02BE\u02BE\u02BA\u02B8\u02B2\u02B4\u02BF\u02B3\u02B3\u02BE\u02B8.playerInfo.\u02B4\u02B3\u02B9\u02BD\u02BF\u02B8\u02B3\u02B4\u02BB\u02B5\u02B3)
@@ -1072,14 +1008,12 @@ public class SongSelect : BaseMenu
 		this.\u02BD\u02BA\u02B2\u02C0\u02BC\u02B9\u02B7\u02B9\u02B9\u02B5\u02BF();
 	}
 
-	// Token: 0x06000C06 RID: 3078 RVA: 0x0000C302 File Offset: 0x0000A502
 	public override void \u02BA\u02BB\u02B7\u02B6\u02B2\u02B2\u02B8\u02BB\u02B2\u02BB\u02B7()
 	{
 		this.\u02B9\u02B4\u02BE\u02B3\u02B5\u02BD\u02BB\u02BD\u02BC\u02B2\u02C0 = true;
 		this.\u02BB\u02BF\u02BF\u02C1\u02B6\u02BF\u02B3\u02BD\u02B7\u02BA\u02C1(false);
 	}
 
-	// Token: 0x06000C07 RID: 3079 RVA: 0x0006A634 File Offset: 0x00068834
 	public void \u02B2\u02B8\u02B6\u02BF\u02C0\u02C1\u02B3\u02B8\u02C0\u02B5\u02BB(Action \u02B6\u02B4\u02BC\u02B3\u02B8\u02B3\u02B6\u02BE\u02BE\u02B7\u02B2)
 	{
 		object obj = \u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02BE\u02B3\u02BE\u02BF\u02B3\u02C1\u02B3\u02BF\u02BE\u02B3\u02B7(base.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC);
@@ -1094,7 +1028,6 @@ public class SongSelect : BaseMenu
 		this.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(-1, true);
 	}
 
-	// Token: 0x06000C08 RID: 3080 RVA: 0x0006A684 File Offset: 0x00068884
 	public void \u02B7\u02C1\u02BA\u02B9\u02BB\u02B7\u02B2\u02B6\u02C0\u02B6\u02BA(string \u02B5\u02B5\u02BB\u02B5\u02BF\u02B9\u02BD\u02B9\u02C0\u02C0\u02B2)
 	{
 		object obj = \u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02BE\u02B3\u02BE\u02BF\u02B3\u02C1\u02B3\u02BF\u02BE\u02B3\u02B7(base.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC);
@@ -1109,7 +1042,6 @@ public class SongSelect : BaseMenu
 		this.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(0, true);
 	}
 
-	// Token: 0x06000C09 RID: 3081 RVA: 0x0006A6D4 File Offset: 0x000688D4
 	private string \u02C0\u02B8\u02B3\u02C0\u02BC\u02C1\u02BA\u02C0\u02BF\u02BB\u02B4(int \u02BD\u02B9\u02B8\u02B2\u02C1\u02B4\u02B8\u02C0\u02B3\u02BB\u02BC)
 	{
 		if (\u02BD\u02B9\u02B8\u02B2\u02C1\u02B4\u02B8\u02C0\u02B3\u02BB\u02BC == 0)
@@ -1120,7 +1052,6 @@ public class SongSelect : BaseMenu
 		return string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Hours, timeSpan.Minutes, timeSpan.Seconds);
 	}
 
-	// Token: 0x06000C0A RID: 3082 RVA: 0x0006A72C File Offset: 0x0006892C
 	public override void \u02B2\u02B2\u02B9\u02B2\u02B8\u02BB\u02B7\u02B6\u02B3\u02C1\u02B5()
 	{
 		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
@@ -1166,7 +1097,6 @@ public class SongSelect : BaseMenu
 		}
 	}
 
-	// Token: 0x06000C0B RID: 3083 RVA: 0x0006A858 File Offset: 0x00068A58
 	protected override void Start()
 	{
 		int num = \u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B6\u02BB\u02B3\u02B7\u02BB\u02B3\u02C1\u02B9\u02BF\u02C0\u02BF(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02C1\u02BF\u02BD\u02B5\u02BE\u02C1\u02BE\u02B8\u02BF\u02B7);
@@ -1182,250 +1112,178 @@ public class SongSelect : BaseMenu
 		DiscordController.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BF\u02B5\u02C1\u02B7\u02C1\u02B5\u02B6\u02BC\u02C0\u02B3(this.\u02BD\u02B6\u02BD\u02C0\u02C1\u02BE\u02BF\u02BB\u02BD\u02B8\u02BD);
 	}
 
-	// Token: 0x04000866 RID: 2150
 	public SongListAdder \u02BE\u02C0\u02BF\u02B7\u02B3\u02BC\u02C1\u02B6\u02B7\u02B4\u02B4;
 
-	// Token: 0x04000867 RID: 2151
 	public Image[] \u02B7\u02BA\u02B3\u02B2\u02B7\u02B8\u02BB\u02BA\u02BE\u02C0\u02B2;
 
-	// Token: 0x04000868 RID: 2152
 	public SongSelectPanel[] \u02C0\u02B7\u02BA\u02BF\u02BB\u02B6\u02B6\u02B4\u02B6\u02BD\u02B6;
 
-	// Token: 0x04000869 RID: 2153
 	public SongEntry \u02BD\u02B6\u02BD\u02C0\u02C1\u02BE\u02BF\u02BB\u02BD\u02B8\u02BD;
 
-	// Token: 0x0400086A RID: 2154
 	[SerializeField]
 	private GameObject mainMenu;
 
-	// Token: 0x0400086B RID: 2155
 	[SerializeField]
 	private GameObject playerSelection;
 
-	// Token: 0x0400086C RID: 2156
 	[SerializeField]
 	private GameObject onlineMenu;
 
-	// Token: 0x0400086D RID: 2157
 	[SerializeField]
 	private ConfirmationMenu confirmMenu;
 
-	// Token: 0x0400086E RID: 2158
 	[SerializeField]
 	private SongSelectSearch songSelectSearch;
 
-	// Token: 0x0400086F RID: 2159
 	[SerializeField]
 	private SectionBrowser sectionBrowser;
 
-	// Token: 0x04000870 RID: 2160
 	[SerializeField]
 	private SongOptions songOptions;
 
-	// Token: 0x04000871 RID: 2161
 	[SerializeField]
 	private SetlistMenu setlistMenu;
 
-	// Token: 0x04000872 RID: 2162
 	[SerializeField]
 	private DrumSongOptionsMenu drumSongOptionsMenu;
 
-	// Token: 0x04000873 RID: 2163
 	[SerializeField]
 	private TextMeshProUGUI speedText;
 
-	// Token: 0x04000874 RID: 2164
 	[SerializeField]
 	private TextMeshProUGUI songCountText;
 
-	// Token: 0x04000875 RID: 2165
 	[SerializeField]
 	private TextMeshProUGUI artistNameText;
 
-	// Token: 0x04000876 RID: 2166
 	[SerializeField]
 	private TextMeshProUGUI albumNameText;
 
-	// Token: 0x04000877 RID: 2167
 	[SerializeField]
 	private TextMeshProUGUI yearText;
 
-	// Token: 0x04000878 RID: 2168
 	[SerializeField]
 	private TextMeshProUGUI genreText;
 
-	// Token: 0x04000879 RID: 2169
 	[SerializeField]
 	private TextMeshProUGUI songLengthText;
 
-	// Token: 0x0400087A RID: 2170
 	[SerializeField]
 	private TextMeshProUGUI charterNameText;
 
-	// Token: 0x0400087B RID: 2171
 	[SerializeField]
 	private Image loadImage;
 
-	// Token: 0x0400087C RID: 2172
 	[SerializeField]
 	private RawImage albumImage;
 
-	// Token: 0x0400087D RID: 2173
 	[SerializeField]
 	private Image gameIcon;
 
-	// Token: 0x0400087E RID: 2174
 	[SerializeField]
 	private Slider setlistScrollBar;
 
-	// Token: 0x0400087F RID: 2175
 	[SerializeField]
 	private DifficultyDisplay[] difficultyIcons;
 
-	// Token: 0x04000880 RID: 2176
 	[SerializeField]
 	private ScrollingRect difficultyScroll;
 
-	// Token: 0x04000881 RID: 2177
 	[SerializeField]
 	private TextMeshProUGUI lyricDisplay;
 
-	// Token: 0x04000882 RID: 2178
 	private IEnumerator \u02B2\u02BC\u02B7\u02B3\u02B7\u02B5\u02BB\u02BF\u02C0\u02BE\u02BC;
 
-	// Token: 0x04000883 RID: 2179
 	private Coroutine \u02B5\u02C0\u02B4\u02B7\u02BB\u02BB\u02BD\u02B2\u02B4\u02BF\u02BE;
 
-	// Token: 0x04000884 RID: 2180
 	[SerializeField]
 	private Sprite defaultAlbumArt;
 
-	// Token: 0x04000885 RID: 2181
 	[SerializeField]
 	private Sprite defaultGameIcon;
 
-	// Token: 0x04000886 RID: 2182
 	[SerializeField]
 	private ScoringPanel scorePanel;
 
-	// Token: 0x04000887 RID: 2183
 	private int \u02B6\u02B5\u02B7\u02BD\u02B4\u02BA\u02B6\u02B9\u02B2\u02B3\u02B4;
 
-	// Token: 0x04000888 RID: 2184
 	private Color \u02BD\u02C1\u02B8\u02BE\u02B8\u02B2\u02B4\u02B2\u02BB\u02B8\u02B8 = new Color(1f, 1f, 1f, 0.5f);
 
-	// Token: 0x04000889 RID: 2185
 	private TextMeshProUGUI[] \u02BC\u02BA\u02BD\u02B2\u02BD\u02BA\u02BE\u02C1\u02C0\u02B5\u02C1;
 
-	// Token: 0x0400088A RID: 2186
 	private TextMeshProUGUI[] \u02BA\u02B4\u02BD\u02B7\u02B2\u02B9\u02BF\u02B9\u02B4\u02BE\u02BF;
 
-	// Token: 0x0400088B RID: 2187
 	private TextMeshProUGUI[] \u02B9\u02BB\u02B3\u02C1\u02B2\u02C1\u02B9\u02C0\u02BF\u02BD\u02C0;
 
-	// Token: 0x0400088C RID: 2188
 	private ScrollingText[] \u02B6\u02BD\u02BB\u02B5\u02B4\u02B4\u02B3\u02BF\u02BF\u02BC\u02BE;
 
-	// Token: 0x0400088D RID: 2189
 	private ScrollingText[] \u02BF\u02B4\u02BA\u02BE\u02B3\u02BE\u02BB\u02BA\u02B3\u02C0\u02B3;
 
-	// Token: 0x0400088E RID: 2190
 	private Image[] \u02B7\u02B7\u02B7\u02B4\u02BD\u02B6\u02C0\u02B2\u02B8\u02B3\u02B4;
 
-	// Token: 0x0400088F RID: 2191
 	private Image[] \u02BD\u02BD\u02C0\u02BE\u02B3\u02C0\u02B7\u02BE\u02BB\u02BF\u02BB;
 
-	// Token: 0x04000890 RID: 2192
 	public GameObject[] \u02BB\u02B2\u02BE\u02C0\u02B3\u02B9\u02B8\u02B5\u02B2\u02B3\u02B8;
 
-	// Token: 0x04000891 RID: 2193
 	public TextMeshProUGUI \u02B5\u02B2\u02C0\u02B3\u02B2\u02BC\u02B3\u02B4\u02BC\u02B4\u02C1;
 
-	// Token: 0x04000892 RID: 2194
 	public TextMeshProUGUI \u02B8\u02BC\u02BA\u02BA\u02BC\u02C1\u02B8\u02BB\u02B7\u02C1\u02C0;
 
-	// Token: 0x04000893 RID: 2195
 	public TextMeshProUGUI \u02B5\u02C1\u02BA\u02B3\u02B2\u02BE\u02C0\u02B6\u02B5\u02BB\u02B6;
 
-	// Token: 0x04000894 RID: 2196
 	[SerializeField]
 	private GameObject starsBackground;
 
-	// Token: 0x04000895 RID: 2197
 	[SerializeField]
 	private GameObject starsContainer;
 
-	// Token: 0x04000896 RID: 2198
 	[HideInInspector]
 	public bool \u02C1\u02B5\u02B9\u02B4\u02B9\u02B5\u02BC\u02B3\u02B4\u02C0\u02BF;
 
-	// Token: 0x04000897 RID: 2199
 	private bool \u02B4\u02C1\u02B6\u02B5\u02B4\u02B7\u02BC\u02BE\u02C1\u02B6\u02B6;
 
-	// Token: 0x04000898 RID: 2200
 	private bool \u02B9\u02B4\u02BE\u02B3\u02B5\u02BD\u02BB\u02BD\u02BC\u02B2\u02C0;
 
-	// Token: 0x04000899 RID: 2201
 	private Instrument? \u02BD\u02B6\u02B8\u02C1\u02B3\u02BE\u02B7\u02BA\u02B4\u02BF\u02C0;
 
-	// Token: 0x0400089A RID: 2202
 	private Texture2D \u02BB\u02B6\u02B8\u02BA\u02BB\u02BB\u02B3\u02B9\u02BE\u02C0\u02C1;
 
-	// Token: 0x0400089B RID: 2203
 	private Task \u02B3\u02B3\u02B6\u02B4\u02BE\u02BA\u02BC\u02B6\u02BC\u02BC\u02BD = Task.CompletedTask;
 
-	// Token: 0x0400089C RID: 2204
 	private Color32 \u02BA\u02B5\u02BA\u02B2\u02B5\u02B4\u02B3\u02B9\u02BB\u02B7\u02BE = new Color32(27, 27, 27, 200);
 
-	// Token: 0x0400089D RID: 2205
 	private Color32 \u02C0\u02BA\u02BA\u02BC\u02B6\u02B3\u02B5\u02BB\u02B2\u02BE\u02B4 = new Color32(27, 27, 27, byte.MaxValue);
 
-	// Token: 0x0400089E RID: 2206
 	private Color32 \u02B5\u02BB\u02C0\u02B8\u02C0\u02B8\u02BF\u02B8\u02B3\u02B9\u02C0 = new Color32(27, 27, 27, 128);
 
-	// Token: 0x0400089F RID: 2207
 	private Color32 \u02BC\u02B7\u02BB\u02B3\u02BB\u02BE\u02B5\u02B2\u02B2\u02B4\u02B5 = new Color32(208, 212, 214, byte.MaxValue);
 
-	// Token: 0x040008A0 RID: 2208
 	private Color32 \u02B3\u02B4\u02C1\u02B4\u02BF\u02B7\u02B4\u02B9\u02B3\u02B4\u02BA = new Color32(byte.MaxValue, byte.MaxValue, byte.MaxValue, 146);
 
-	// Token: 0x040008A1 RID: 2209
 	private Color32 \u02B9\u02B9\u02C1\u02BA\u02BD\u02B7\u02B2\u02B4\u02B4\u02BB\u02BA = new Color32(87, 87, 87, byte.MaxValue);
 
-	// Token: 0x040008A2 RID: 2210
 	public Sprite \u02B3\u02B9\u02BD\u02BE\u02B8\u02BF\u02B3\u02B3\u02B3\u02BC\u02C0;
 
-	// Token: 0x040008A3 RID: 2211
 	public Sprite \u02B5\u02C1\u02B5\u02B6\u02B4\u02B8\u02BC\u02BB\u02B9\u02BF\u02B7;
 
-	// Token: 0x040008A4 RID: 2212
 	public TMP_FontAsset \u02B3\u02BE\u02B4\u02B5\u02BE\u02B2\u02B4\u02C1\u02C0\u02B2\u02B4;
 
-	// Token: 0x040008A5 RID: 2213
 	public TMP_FontAsset \u02BB\u02B4\u02B5\u02BD\u02BD\u02BF\u02BC\u02BC\u02B6\u02BE\u02B9;
 
-	// Token: 0x040008A6 RID: 2214
 	public TMP_FontAsset \u02B4\u02B8\u02B3\u02BF\u02BF\u02B3\u02BC\u02B7\u02BD\u02B2\u02B6;
 
-	// Token: 0x040008A7 RID: 2215
 	public TMP_FontAsset \u02BE\u02BC\u02BB\u02B7\u02BA\u02B2\u02B3\u02B9\u02B3\u02B6\u02C0;
 
-	// Token: 0x02000114 RID: 276
 	private enum \u02B4\u02B5\u02BA\u02C0\u02BA\u02B3\u02B9\u02C1\u02B8\u02BE\u02BE
 	{
-		// Token: 0x040008A9 RID: 2217
 		Loading,
-		// Token: 0x040008AA RID: 2218
 		Loaded,
-		// Token: 0x040008AB RID: 2219
 		Error
 	}
 
-	// Token: 0x02000117 RID: 279
 	[CompilerGenerated]
 	private sealed class \u02B2\u02B4\u02B5\u02BD\u02BA\u02B6\u02BE\u02B2\u02B2\u02BE\u02B9
 	{
-		// Token: 0x06000C19 RID: 3097 RVA: 0x0006AA9C File Offset: 0x00068C9C
 		internal void \u02B9\u02BD\u02BB\u02BA\u02BA\u02C0\u02B4\u02C0\u02BF\u02B8\u02B2()
 		{
 			try
@@ -1447,47 +1305,36 @@ public class SongSelect : BaseMenu
 			}
 		}
 
-		// Token: 0x040008B3 RID: 2227
 		public SongSelect <>4__this;
 
-		// Token: 0x040008B4 RID: 2228
 		public NativeArray<Color32> nativeTextureData;
 
-		// Token: 0x040008B5 RID: 2229
 		public string albumArt;
 
-		// Token: 0x040008B6 RID: 2230
 		public SongSelect.\u02B4\u02B5\u02BA\u02C0\u02BA\u02B3\u02B9\u02C1\u02B8\u02BE\u02BE state;
 	}
 
-	// Token: 0x02000119 RID: 281
 	[CompilerGenerated]
 	private sealed class \u02B4\u02C0\u02C1\u02C1\u02B5\u02BA\u02C1\u02B9\u02BE\u02B5\u02BA
 	{
-		// Token: 0x06000C21 RID: 3105 RVA: 0x0000C357 File Offset: 0x0000A557
 		internal void \u02B5\u02BA\u02B4\u02BB\u02BC\u02B3\u02BB\u02B2\u02B6\u02B5\u02B3()
 		{
 			\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B6\u02BD\u02C1\u02B8\u02C1\u02B6\u02B6\u02BA\u02B3\u02BE\u02B8(this.tag);
 		}
 
-		// Token: 0x040008BC RID: 2236
 		public string tag;
 	}
 
-	// Token: 0x0200011A RID: 282
 	[CompilerGenerated]
 	private sealed class \u02B2\u02B6\u02BF\u02C0\u02BC\u02C0\u02B6\u02B4\u02B8\u02BA\u02BF
 	{
-		// Token: 0x06000C23 RID: 3107 RVA: 0x0000C364 File Offset: 0x0000A564
 		internal void \u02BD\u02C1\u02B5\u02B7\u02C0\u02BB\u02BB\u02B7\u02BD\u02BD\u02BE()
 		{
 			\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02BA\u02B9\u02B3\u02B4\u02B4\u02BC\u02C0\u02C1\u02B6\u02BC\u02B6(this.filterFunc, this.tag, false);
 		}
 
-		// Token: 0x040008BD RID: 2237
 		public Func<SongEntry, bool> filterFunc;
 
-		// Token: 0x040008BE RID: 2238
 		public string tag;
 	}
 }

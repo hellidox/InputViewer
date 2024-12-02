@@ -1,13 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using StrikeCore;
 using UnityEngine;
 
-// Token: 0x02000376 RID: 886
 public class ScreenshotReader
 {
-	// Token: 0x0600203A RID: 8250 RVA: 0x000D7B30 File Offset: 0x000D5D30
 	public void WriteDataToFile(BinaryReader reader)
 	{
 		string text = Path.Combine(Application.persistentDataPath, "screenshotInfo.txt");
@@ -85,14 +83,12 @@ public class ScreenshotReader
 		File.WriteAllText(text, text2);
 	}
 
-	// Token: 0x0600203B RID: 8251 RVA: 0x00018CD9 File Offset: 0x00016ED9
 	public ScreenshotReader()
 	{
 		this.formatVersion = 6;
 		this.playerData = new List<PlayerStatsData>(4);
 	}
 
-	// Token: 0x0600203C RID: 8252 RVA: 0x000D7EE0 File Offset: 0x000D60E0
 	public string ParseData(BinaryReader reader)
 	{
 		int num = reader.ReadInt32();
@@ -169,48 +165,33 @@ public class ScreenshotReader
 		return text;
 	}
 
-	// Token: 0x0400198D RID: 6541
 	private int formatVersion;
 
-	// Token: 0x0400198E RID: 6542
 	private string chartMD5hash;
 
-	// Token: 0x0400198F RID: 6543
 	private string songName;
 
-	// Token: 0x04001990 RID: 6544
 	private string artistName;
 
-	// Token: 0x04001991 RID: 6545
 	private string charterName;
 
-	// Token: 0x04001992 RID: 6546
 	private int songSpeed;
 
-	// Token: 0x04001993 RID: 6547
 	private DateTime scoreTimestamp;
 
-	// Token: 0x04001994 RID: 6548
 	private int bandScore;
 
-	// Token: 0x04001995 RID: 6549
 	private int bandStars;
 
-	// Token: 0x04001996 RID: 6550
 	private int playerCount;
 
-	// Token: 0x04001997 RID: 6551
 	private List<PlayerStatsData> playerData;
 
-	// Token: 0x04001998 RID: 6552
 	private string outputPath;
 
-	// Token: 0x04001999 RID: 6553
 	public string lastScreenshot;
 
-	// Token: 0x0400199A RID: 6554
 	public string gameVersion;
 
-	// Token: 0x0400199B RID: 6555
 	public GameMode gameMode;
 }

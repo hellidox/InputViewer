@@ -1,17 +1,14 @@
-﻿using System;
+using System;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x02000172 RID: 370
 public class LyricAnimator : MonoBehaviour
 {
-	// Token: 0x060010BB RID: 4283 RVA: 0x0000F0CC File Offset: 0x0000D2CC
 	private void \u02BB\u02BE\u02B6\u02B4\u02B9\u02BE\u02BD\u02BA\u02C0\u02BA\u02B6()
 	{
 		this.textElement.alpha = Mathf.Lerp(this.\u02B4\u02B3\u02BF\u02B3\u02BF\u02B6\u02BE\u02B5\u02B3\u02B2\u02BE, this.\u02BD\u02B3\u02B6\u02C0\u02B6\u02B9\u02B2\u02B7\u02B6\u02B3\u02BD, this.\u02B3\u02B2\u02BF\u02BA\u02B6\u02B8\u02BA\u02BE\u02B2\u02C0\u02B8 / this.\u02BB\u02B3\u02BD\u02B4\u02B5\u02B4\u02B2\u02BF\u02C1\u02BB\u02BE);
 	}
 
-	// Token: 0x060010BC RID: 4284 RVA: 0x0008A9E4 File Offset: 0x00088BE4
 	private void \u02B3\u02BE\u02BD\u02B4\u02BA\u02B8\u02B9\u02C0\u02B6\u02BC\u02B6()
 	{
 		if (this.\u02B3\u02B2\u02BF\u02BA\u02B6\u02B8\u02BA\u02BE\u02B2\u02C0\u02B8 / this.\u02BB\u02B3\u02BD\u02B4\u02B5\u02B4\u02B2\u02BF\u02C1\u02BB\u02BE > this.\u02B7\u02B3\u02B7\u02B8\u02BC\u02BF\u02BB\u02BA\u02BE\u02C1\u02C1)
@@ -26,7 +23,6 @@ public class LyricAnimator : MonoBehaviour
 		this.\u02B5\u02B8\u02BC\u02B5\u02B8\u02B8\u02B7\u02BF\u02BD\u02B6\u02C1.localScale = new Vector3(this.\u02B7\u02BF\u02B8\u02B8\u02BD\u02B9\u02BB\u02BD\u02B9\u02BC\u02B8, this.\u02B7\u02BF\u02B8\u02B8\u02BD\u02B9\u02BB\u02BD\u02B9\u02BC\u02B8, this.\u02B7\u02BF\u02B8\u02B8\u02BD\u02B9\u02BB\u02BD\u02B9\u02BC\u02B8);
 	}
 
-	// Token: 0x060010BD RID: 4285 RVA: 0x0008AA70 File Offset: 0x00088C70
 	public void \u02BE\u02B8\u02BD\u02B4\u02B4\u02C1\u02C0\u02BB\u02B5\u02BC\u02B7()
 	{
 		this.\u02B3\u02B2\u02BF\u02BA\u02B6\u02B8\u02BA\u02BE\u02B2\u02C0\u02B8 = 0f;
@@ -39,7 +35,6 @@ public class LyricAnimator : MonoBehaviour
 		this.\u02B7\u02B8\u02BA\u02B8\u02C1\u02C0\u02B6\u02B9\u02B3\u02B9\u02BB = false;
 	}
 
-	// Token: 0x060010BE RID: 4286 RVA: 0x0000F0F7 File Offset: 0x0000D2F7
 	public void \u02BE\u02B3\u02B9\u02B8\u02C0\u02BC\u02BC\u02C1\u02BA\u02BA\u02C1(Vector2 \u02B7\u02B3\u02B6\u02C1\u02B6\u02B5\u02BE\u02B6\u02BD\u02B8\u02B4, Vector2 \u02B5\u02BE\u02B9\u02C0\u02B4\u02B6\u02B3\u02B8\u02BA\u02C1\u02B2)
 	{
 		this.\u02B9\u02B3\u02BA\u02B8\u02C0\u02BC\u02B2\u02BE\u02C1\u02B3\u02B6 = \u02B7\u02B3\u02B6\u02C1\u02B6\u02B5\u02BE\u02B6\u02BD\u02B8\u02B4;
@@ -47,7 +42,6 @@ public class LyricAnimator : MonoBehaviour
 		this.\u02B8\u02B4\u02B2\u02BE\u02B3\u02BB\u02BB\u02B8\u02B9\u02C1\u02B6 = true;
 	}
 
-	// Token: 0x060010BF RID: 4287 RVA: 0x0008AACC File Offset: 0x00088CCC
 	public void \u02BF\u02BA\u02C1\u02BB\u02B6\u02BF\u02B2\u02B3\u02C0\u02BD\u02B5()
 	{
 		if (this.\u02BB\u02B3\u02BD\u02B4\u02B5\u02B4\u02B2\u02BF\u02C1\u02BB\u02BE > 334f)
@@ -84,7 +78,6 @@ public class LyricAnimator : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060010C0 RID: 4288 RVA: 0x0008AB98 File Offset: 0x00088D98
 	public void \u02BF\u02B3\u02B6\u02B4\u02B4\u02BF\u02B4\u02B6\u02B8\u02B9\u02BE()
 	{
 		if (this.\u02BB\u02B3\u02BD\u02B4\u02B5\u02B4\u02B2\u02BF\u02C1\u02BB\u02BE > 0f)
@@ -121,7 +114,6 @@ public class LyricAnimator : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060010C1 RID: 4289 RVA: 0x0000F10E File Offset: 0x0000D30E
 	public void \u02B5\u02B8\u02B3\u02BD\u02B3\u02B5\u02BD\u02B9\u02B8\u02B5\u02BB()
 	{
 		this.\u02BE\u02B8\u02BD\u02B4\u02B4\u02C1\u02C0\u02BB\u02B5\u02BC\u02B7();
@@ -130,7 +122,6 @@ public class LyricAnimator : MonoBehaviour
 		this.textElement.alpha = this.\u02BB\u02B4\u02B3\u02BB\u02BE\u02BD\u02BA\u02BD\u02BF\u02BF\u02B9;
 	}
 
-	// Token: 0x060010C2 RID: 4290 RVA: 0x0008AC64 File Offset: 0x00088E64
 	private void \u02BB\u02B3\u02B4\u02B4\u02B5\u02B7\u02BD\u02BE\u02B5\u02B9\u02BF()
 	{
 		this.\u02B5\u02B8\u02BC\u02B5\u02B8\u02B8\u02B7\u02BF\u02BD\u02B6\u02C1 = this.textElement.rectTransform;
@@ -139,7 +130,6 @@ public class LyricAnimator : MonoBehaviour
 		this.\u02BB\u02B4\u02B3\u02BB\u02BE\u02BD\u02BA\u02BD\u02BF\u02BF\u02B9 = this.textElement.alpha;
 	}
 
-	// Token: 0x060010C4 RID: 4292 RVA: 0x0008AC64 File Offset: 0x00088E64
 	private void \u02BC\u02B5\u02BD\u02BD\u02B8\u02C0\u02B7\u02B8\u02B5\u02B9\u02B5()
 	{
 		this.\u02B5\u02B8\u02BC\u02B5\u02B8\u02B8\u02B7\u02BF\u02BD\u02B6\u02C1 = this.textElement.rectTransform;
@@ -148,7 +138,6 @@ public class LyricAnimator : MonoBehaviour
 		this.\u02BB\u02B4\u02B3\u02BB\u02BE\u02BD\u02BA\u02BD\u02BF\u02BF\u02B9 = this.textElement.alpha;
 	}
 
-	// Token: 0x060010C5 RID: 4293 RVA: 0x0008AC64 File Offset: 0x00088E64
 	private void \u02B5\u02B7\u02B5\u02BF\u02B8\u02BD\u02BE\u02B7\u02B8\u02B4\u02B8()
 	{
 		this.\u02B5\u02B8\u02BC\u02B5\u02B8\u02B8\u02B7\u02BF\u02BD\u02B6\u02C1 = this.textElement.rectTransform;
@@ -157,7 +146,6 @@ public class LyricAnimator : MonoBehaviour
 		this.\u02BB\u02B4\u02B3\u02BB\u02BE\u02BD\u02BA\u02BD\u02BF\u02BF\u02B9 = this.textElement.alpha;
 	}
 
-	// Token: 0x060010C6 RID: 4294 RVA: 0x0000F149 File Offset: 0x0000D349
 	public void \u02BE\u02B5\u02B9\u02BE\u02BF\u02C1\u02BE\u02BF\u02C0\u02B9\u02BE(float \u02B2\u02B9\u02BD\u02B4\u02BE\u02C0\u02BF\u02B7\u02C1\u02C1\u02C1, float \u02B6\u02C1\u02B8\u02B8\u02B9\u02B8\u02B9\u02B3\u02B3\u02BF\u02C0, float \u02C1\u02B7\u02BB\u02C1\u02B3\u02B9\u02BF\u02B5\u02B4\u02B2\u02BE)
 	{
 		this.\u02BE\u02B6\u02B8\u02BE\u02B8\u02BF\u02B4\u02B5\u02BC\u02B9\u02B8 = true;
@@ -166,7 +154,6 @@ public class LyricAnimator : MonoBehaviour
 		this.\u02B7\u02B3\u02B7\u02B8\u02BC\u02BF\u02BB\u02BA\u02BE\u02C1\u02C1 = \u02B2\u02B9\u02BD\u02B4\u02BE\u02C0\u02BF\u02B7\u02C1\u02C1\u02C1;
 	}
 
-	// Token: 0x060010C7 RID: 4295 RVA: 0x0008A9E4 File Offset: 0x00088BE4
 	private void \u02B4\u02B8\u02B4\u02BF\u02C0\u02B6\u02B6\u02BB\u02B6\u02BD\u02BE()
 	{
 		if (this.\u02B3\u02B2\u02BF\u02BA\u02B6\u02B8\u02BA\u02BE\u02B2\u02C0\u02B8 / this.\u02BB\u02B3\u02BD\u02B4\u02B5\u02B4\u02B2\u02BF\u02C1\u02BB\u02BE > this.\u02B7\u02B3\u02B7\u02B8\u02BC\u02BF\u02BB\u02BA\u02BE\u02C1\u02C1)
@@ -181,19 +168,16 @@ public class LyricAnimator : MonoBehaviour
 		this.\u02B5\u02B8\u02BC\u02B5\u02B8\u02B8\u02B7\u02BF\u02BD\u02B6\u02C1.localScale = new Vector3(this.\u02B7\u02BF\u02B8\u02B8\u02BD\u02B9\u02BB\u02BD\u02B9\u02BC\u02B8, this.\u02B7\u02BF\u02B8\u02B8\u02BD\u02B9\u02BB\u02BD\u02B9\u02BC\u02B8, this.\u02B7\u02BF\u02B8\u02B8\u02BD\u02B9\u02BB\u02BD\u02B9\u02BC\u02B8);
 	}
 
-	// Token: 0x060010C8 RID: 4296 RVA: 0x0000F167 File Offset: 0x0000D367
 	private void \u02BE\u02BD\u02B8\u02B8\u02B9\u02BA\u02BA\u02BA\u02B4\u02B2\u02B4()
 	{
 		this.\u02BB\u02B3\u02B4\u02B4\u02B5\u02B7\u02BD\u02BE\u02B5\u02B9\u02BF();
 	}
 
-	// Token: 0x060010C9 RID: 4297 RVA: 0x0000F16F File Offset: 0x0000D36F
 	private void \u02B7\u02BB\u02B4\u02C0\u02B4\u02B6\u02B6\u02B8\u02B9\u02BC\u02C1()
 	{
 		this.\u02B5\u02B8\u02BC\u02B5\u02B8\u02B8\u02B7\u02BF\u02BD\u02B6\u02C1.anchoredPosition = Vector2.Lerp(this.\u02B9\u02B3\u02BA\u02B8\u02C0\u02BC\u02B2\u02BE\u02C1\u02B3\u02B6, this.\u02B6\u02B7\u02C1\u02C1\u02B7\u02BE\u02C0\u02BE\u02B5\u02B6\u02BB, this.\u02B3\u02B2\u02BF\u02BA\u02B6\u02B8\u02BA\u02BE\u02B2\u02C0\u02B8 / this.\u02BB\u02B3\u02BD\u02B4\u02B5\u02B4\u02B2\u02BF\u02C1\u02BB\u02BE);
 	}
 
-	// Token: 0x060010CA RID: 4298 RVA: 0x0000F19A File Offset: 0x0000D39A
 	public void \u02C1\u02BB\u02B8\u02B6\u02B3\u02B2\u02C0\u02B8\u02BF\u02BD\u02BF(float \u02C0\u02BD\u02BA\u02C1\u02B8\u02B3\u02BC\u02B5\u02B9\u02B8\u02BF, float \u02B4\u02BB\u02B6\u02BD\u02B2\u02BB\u02B3\u02BB\u02C0\u02B2\u02BF)
 	{
 		this.\u02B4\u02B3\u02BF\u02B3\u02BF\u02B6\u02BE\u02B5\u02B3\u02B2\u02BE = \u02C0\u02BD\u02BA\u02C1\u02B8\u02B3\u02BC\u02B5\u02B9\u02B8\u02BF;
@@ -201,13 +185,11 @@ public class LyricAnimator : MonoBehaviour
 		this.\u02B7\u02B8\u02BA\u02B8\u02C1\u02C0\u02B6\u02B9\u02B3\u02B9\u02BB = true;
 	}
 
-	// Token: 0x060010CB RID: 4299 RVA: 0x0000F0CC File Offset: 0x0000D2CC
 	private void \u02BE\u02BD\u02BD\u02BB\u02B5\u02B2\u02B6\u02B5\u02B6\u02BA\u02B4()
 	{
 		this.textElement.alpha = Mathf.Lerp(this.\u02B4\u02B3\u02BF\u02B3\u02BF\u02B6\u02BE\u02B5\u02B3\u02B2\u02BE, this.\u02BD\u02B3\u02B6\u02C0\u02B6\u02B9\u02B2\u02B7\u02B6\u02B3\u02BD, this.\u02B3\u02B2\u02BF\u02BA\u02B6\u02B8\u02BA\u02BE\u02B2\u02C0\u02B8 / this.\u02BB\u02B3\u02BD\u02B4\u02B5\u02B4\u02B2\u02BF\u02C1\u02BB\u02BE);
 	}
 
-	// Token: 0x060010CC RID: 4300 RVA: 0x0008ACB8 File Offset: 0x00088EB8
 	public void \u02B6\u02B5\u02BF\u02B6\u02BB\u02BE\u02BE\u02BE\u02B4\u02BC\u02B6()
 	{
 		if (this.\u02BB\u02B3\u02BD\u02B4\u02B5\u02B4\u02B2\u02BF\u02C1\u02BB\u02BE > 869f)
@@ -244,7 +226,6 @@ public class LyricAnimator : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060010CD RID: 4301 RVA: 0x0008AC64 File Offset: 0x00088E64
 	private void \u02BE\u02C1\u02BA\u02BC\u02C0\u02BD\u02BC\u02B5\u02BF\u02B3\u02B2()
 	{
 		this.\u02B5\u02B8\u02BC\u02B5\u02B8\u02B8\u02B7\u02BF\u02BD\u02B6\u02C1 = this.textElement.rectTransform;
@@ -253,7 +234,6 @@ public class LyricAnimator : MonoBehaviour
 		this.\u02BB\u02B4\u02B3\u02BB\u02BE\u02BD\u02BA\u02BD\u02BF\u02BF\u02B9 = this.textElement.alpha;
 	}
 
-	// Token: 0x060010CE RID: 4302 RVA: 0x0000F1B1 File Offset: 0x0000D3B1
 	public void \u02BF\u02BA\u02B8\u02B4\u02B5\u02B7\u02B6\u02BE\u02BB\u02B3\u02C1()
 	{
 		this.\u02BD\u02C0\u02BF\u02BA\u02BA\u02B3\u02B5\u02BE\u02C1\u02B5\u02B6();
@@ -262,7 +242,6 @@ public class LyricAnimator : MonoBehaviour
 		this.textElement.alpha = this.\u02BB\u02B4\u02B3\u02BB\u02BE\u02BD\u02BA\u02BD\u02BF\u02BF\u02B9;
 	}
 
-	// Token: 0x060010CF RID: 4303 RVA: 0x0008AD84 File Offset: 0x00088F84
 	public void \u02BD\u02C0\u02BF\u02BA\u02BA\u02B3\u02B5\u02BE\u02C1\u02B5\u02B6()
 	{
 		this.\u02B3\u02B2\u02BF\u02BA\u02B6\u02B8\u02BA\u02BE\u02B2\u02C0\u02B8 = 1808f;
@@ -275,25 +254,21 @@ public class LyricAnimator : MonoBehaviour
 		this.\u02B7\u02B8\u02BA\u02B8\u02C1\u02C0\u02B6\u02B9\u02B3\u02B9\u02BB = true;
 	}
 
-	// Token: 0x060010D0 RID: 4304 RVA: 0x0000F16F File Offset: 0x0000D36F
 	private void \u02BD\u02BB\u02BC\u02B9\u02BD\u02B9\u02B6\u02B5\u02C1\u02BC\u02B4()
 	{
 		this.\u02B5\u02B8\u02BC\u02B5\u02B8\u02B8\u02B7\u02BF\u02BD\u02B6\u02C1.anchoredPosition = Vector2.Lerp(this.\u02B9\u02B3\u02BA\u02B8\u02C0\u02BC\u02B2\u02BE\u02C1\u02B3\u02B6, this.\u02B6\u02B7\u02C1\u02C1\u02B7\u02BE\u02C0\u02BE\u02B5\u02B6\u02BB, this.\u02B3\u02B2\u02BF\u02BA\u02B6\u02B8\u02BA\u02BE\u02B2\u02C0\u02B8 / this.\u02BB\u02B3\u02BD\u02B4\u02B5\u02B4\u02B2\u02BF\u02C1\u02BB\u02BE);
 	}
 
-	// Token: 0x060010D1 RID: 4305 RVA: 0x0000F0CC File Offset: 0x0000D2CC
 	private void \u02BE\u02B4\u02BC\u02BB\u02BD\u02BA\u02BD\u02C1\u02C0\u02B8\u02B9()
 	{
 		this.textElement.alpha = Mathf.Lerp(this.\u02B4\u02B3\u02BF\u02B3\u02BF\u02B6\u02BE\u02B5\u02B3\u02B2\u02BE, this.\u02BD\u02B3\u02B6\u02C0\u02B6\u02B9\u02B2\u02B7\u02B6\u02B3\u02BD, this.\u02B3\u02B2\u02BF\u02BA\u02B6\u02B8\u02BA\u02BE\u02B2\u02C0\u02B8 / this.\u02BB\u02B3\u02BD\u02B4\u02B5\u02B4\u02B2\u02BF\u02C1\u02BB\u02BE);
 	}
 
-	// Token: 0x060010D2 RID: 4306 RVA: 0x0000F1EC File Offset: 0x0000D3EC
 	public void \u02B6\u02B5\u02B2\u02B9\u02C1\u02B6\u02B7\u02BE\u02B3\u02BA\u02B4(float \u02B2\u02B6\u02B9\u02B8\u02BF\u02BD\u02BF\u02BA\u02B9\u02C1\u02B5)
 	{
 		this.\u02BB\u02B3\u02BD\u02B4\u02B5\u02B4\u02B2\u02BF\u02C1\u02BB\u02BE = \u02B2\u02B6\u02B9\u02B8\u02BF\u02BD\u02BF\u02BA\u02B9\u02C1\u02B5;
 	}
 
-	// Token: 0x060010D3 RID: 4307 RVA: 0x0008A9E4 File Offset: 0x00088BE4
 	private void \u02B4\u02C0\u02B3\u02B2\u02B3\u02BF\u02B6\u02B7\u02B4\u02B7\u02B8()
 	{
 		if (this.\u02B3\u02B2\u02BF\u02BA\u02B6\u02B8\u02BA\u02BE\u02B2\u02C0\u02B8 / this.\u02BB\u02B3\u02BD\u02B4\u02B5\u02B4\u02B2\u02BF\u02C1\u02BB\u02BE > this.\u02B7\u02B3\u02B7\u02B8\u02BC\u02BF\u02BB\u02BA\u02BE\u02C1\u02C1)
@@ -308,7 +283,6 @@ public class LyricAnimator : MonoBehaviour
 		this.\u02B5\u02B8\u02BC\u02B5\u02B8\u02B8\u02B7\u02BF\u02BD\u02B6\u02C1.localScale = new Vector3(this.\u02B7\u02BF\u02B8\u02B8\u02BD\u02B9\u02BB\u02BD\u02B9\u02BC\u02B8, this.\u02B7\u02BF\u02B8\u02B8\u02BD\u02B9\u02BB\u02BD\u02B9\u02BC\u02B8, this.\u02B7\u02BF\u02B8\u02B8\u02BD\u02B9\u02BB\u02BD\u02B9\u02BC\u02B8);
 	}
 
-	// Token: 0x060010D4 RID: 4308 RVA: 0x0008AC64 File Offset: 0x00088E64
 	private void \u02B3\u02C1\u02BD\u02B9\u02B6\u02B2\u02B6\u02B9\u02B8\u02BD\u02B9()
 	{
 		this.\u02B5\u02B8\u02BC\u02B5\u02B8\u02B8\u02B7\u02BF\u02BD\u02B6\u02C1 = this.textElement.rectTransform;
@@ -317,13 +291,11 @@ public class LyricAnimator : MonoBehaviour
 		this.\u02BB\u02B4\u02B3\u02BB\u02BE\u02BD\u02BA\u02BD\u02BF\u02BF\u02B9 = this.textElement.alpha;
 	}
 
-	// Token: 0x060010D5 RID: 4309 RVA: 0x0000F1F5 File Offset: 0x0000D3F5
 	private void Awake()
 	{
 		this.\u02B3\u02C1\u02BD\u02B9\u02B6\u02B2\u02B6\u02B9\u02B8\u02BD\u02B9();
 	}
 
-	// Token: 0x060010D6 RID: 4310 RVA: 0x0000F10E File Offset: 0x0000D30E
 	public void \u02BD\u02BC\u02BC\u02BF\u02C0\u02B2\u02BB\u02BB\u02B8\u02BE\u02B2()
 	{
 		this.\u02BE\u02B8\u02BD\u02B4\u02B4\u02C1\u02C0\u02BB\u02B5\u02BC\u02B7();
@@ -332,58 +304,40 @@ public class LyricAnimator : MonoBehaviour
 		this.textElement.alpha = this.\u02BB\u02B4\u02B3\u02BB\u02BE\u02BD\u02BA\u02BD\u02BF\u02BF\u02B9;
 	}
 
-	// Token: 0x04000CC5 RID: 3269
 	private float \u02B3\u02B2\u02BF\u02BA\u02B6\u02B8\u02BA\u02BE\u02B2\u02C0\u02B8;
 
-	// Token: 0x04000CC6 RID: 3270
 	private float \u02BB\u02B3\u02BD\u02B4\u02B5\u02B4\u02B2\u02BF\u02C1\u02BB\u02BE;
 
-	// Token: 0x04000CC7 RID: 3271
 	private float \u02B4\u02B3\u02BF\u02B3\u02BF\u02B6\u02BE\u02B5\u02B3\u02B2\u02BE;
 
-	// Token: 0x04000CC8 RID: 3272
 	private float \u02BD\u02B3\u02B6\u02C0\u02B6\u02B9\u02B2\u02B7\u02B6\u02B3\u02BD;
 
-	// Token: 0x04000CC9 RID: 3273
 	[SerializeField]
 	private TextMeshProUGUI textElement;
 
-	// Token: 0x04000CCA RID: 3274
 	private float \u02B7\u02BF\u02B8\u02B8\u02BD\u02B9\u02BB\u02BD\u02B9\u02BC\u02B8;
 
-	// Token: 0x04000CCB RID: 3275
 	private float \u02B5\u02C1\u02C0\u02B5\u02B4\u02C1\u02B4\u02BA\u02BD\u02B9\u02B3;
 
-	// Token: 0x04000CCC RID: 3276
 	private float \u02B7\u02B3\u02B7\u02B8\u02BC\u02BF\u02BB\u02BA\u02BE\u02C1\u02C1;
 
-	// Token: 0x04000CCD RID: 3277
 	private RectTransform \u02B5\u02B8\u02BC\u02B5\u02B8\u02B8\u02B7\u02BF\u02BD\u02B6\u02C1;
 
-	// Token: 0x04000CCE RID: 3278
 	private Vector2 \u02B9\u02B3\u02BA\u02B8\u02C0\u02BC\u02B2\u02BE\u02C1\u02B3\u02B6;
 
-	// Token: 0x04000CCF RID: 3279
 	private Vector2 \u02B6\u02B7\u02C1\u02C1\u02B7\u02BE\u02C0\u02BE\u02B5\u02B6\u02BB;
 
-	// Token: 0x04000CD0 RID: 3280
 	private bool \u02B8\u02B4\u02B2\u02BE\u02B3\u02BB\u02BB\u02B8\u02B9\u02C1\u02B6;
 
-	// Token: 0x04000CD1 RID: 3281
 	private bool \u02B7\u02B8\u02BA\u02B8\u02C1\u02C0\u02B6\u02B9\u02B3\u02B9\u02BB;
 
-	// Token: 0x04000CD2 RID: 3282
 	private bool \u02BE\u02B6\u02B8\u02BE\u02B8\u02BF\u02B4\u02B5\u02BC\u02B9\u02B8;
 
-	// Token: 0x04000CD3 RID: 3283
 	private MaterialPropertyBlock \u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2;
 
-	// Token: 0x04000CD4 RID: 3284
 	private Vector3 \u02C1\u02BD\u02BC\u02BE\u02BC\u02B9\u02C0\u02B3\u02B8\u02B3\u02B8;
 
-	// Token: 0x04000CD5 RID: 3285
 	private Vector2 \u02B2\u02BF\u02BD\u02B2\u02B4\u02C0\u02B2\u02B7\u02B6\u02B6\u02BE;
 
-	// Token: 0x04000CD6 RID: 3286
 	private float \u02BB\u02B4\u02B3\u02BB\u02BE\u02BD\u02BA\u02BD\u02BF\u02BF\u02B9;
 }

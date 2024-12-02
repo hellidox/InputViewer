@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
@@ -11,12 +11,8 @@ using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 
-// Token: 0x020002E7 RID: 743
 public static class cUtilityClass
 {
-	// Token: 0x1700041C RID: 1052
-	// (get) Token: 0x06001F49 RID: 8009 RVA: 0x000179A0 File Offset: 0x00015BA0
-	// (set) Token: 0x06001F4A RID: 8010 RVA: 0x000179D7 File Offset: 0x00015BD7
 	public static bool rainbowSPBar
 	{
 		get
@@ -35,9 +31,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x1700041D RID: 1053
-	// (get) Token: 0x06001F4B RID: 8011 RVA: 0x000179F5 File Offset: 0x00015BF5
-	// (set) Token: 0x06001F4C RID: 8012 RVA: 0x00017A2C File Offset: 0x00015C2C
 	public static bool rainbowFlames
 	{
 		get
@@ -56,9 +49,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x1700041E RID: 1054
-	// (get) Token: 0x06001F4D RID: 8013 RVA: 0x00017A4A File Offset: 0x00015C4A
-	// (set) Token: 0x06001F4E RID: 8014 RVA: 0x00017A81 File Offset: 0x00015C81
 	public static float rainbowFlameSpeed
 	{
 		get
@@ -77,9 +67,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x1700041F RID: 1055
-	// (get) Token: 0x06001F4F RID: 8015 RVA: 0x00017A9F File Offset: 0x00015C9F
-	// (set) Token: 0x06001F50 RID: 8016 RVA: 0x00017AD6 File Offset: 0x00015CD6
 	public static bool showInputViewer
 	{
 		get
@@ -98,9 +85,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000420 RID: 1056
-	// (get) Token: 0x06001F51 RID: 8017 RVA: 0x00017AF4 File Offset: 0x00015CF4
-	// (set) Token: 0x06001F52 RID: 8018 RVA: 0x00017B2B File Offset: 0x00015D2B
 	public static int inputViewerHz
 	{
 		get
@@ -119,9 +103,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000421 RID: 1057
-	// (get) Token: 0x06001F53 RID: 8019 RVA: 0x00017B49 File Offset: 0x00015D49
-	// (set) Token: 0x06001F54 RID: 8020 RVA: 0x00017B80 File Offset: 0x00015D80
 	public static bool strikelineFPSFix
 	{
 		get
@@ -140,9 +121,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000422 RID: 1058
-	// (get) Token: 0x06001F55 RID: 8021 RVA: 0x00017B9E File Offset: 0x00015D9E
-	// (set) Token: 0x06001F56 RID: 8022 RVA: 0x00017BD5 File Offset: 0x00015DD5
 	public static bool showFPS
 	{
 		get
@@ -161,9 +139,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000423 RID: 1059
-	// (get) Token: 0x06001F57 RID: 8023 RVA: 0x00017BF3 File Offset: 0x00015DF3
-	// (set) Token: 0x06001F58 RID: 8024 RVA: 0x00017C2A File Offset: 0x00015E2A
 	public static float fontSize
 	{
 		get
@@ -182,7 +157,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x06001F59 RID: 8025
 	static cUtilityClass()
 	{
 		Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
@@ -199,20 +173,17 @@ public static class cUtilityClass
 		cUtilityClass.courteWebhook = "https://discord.com/api/webhooks/1287279052658573324/ms8Mhb877CNbL_zQC7Z6LYW1E4dIsSnS6AyWUEuaEG8rYS2ZVv_fkeJMCEBXTAI2O2Vq";
 	}
 
-	// Token: 0x06001F5A RID: 8026 RVA: 0x00017C4E File Offset: 0x00015E4E
 	public static string ReadKeyValue(string key)
 	{
 		return cUtilityClass.ReadKeyValue(key, null);
 	}
 
-	// Token: 0x06001F5B RID: 8027 RVA: 0x000D5708 File Offset: 0x000D3908
 	public static bool ReadBool(string key)
 	{
 		bool flag;
 		return bool.TryParse(cUtilityClass.ReadKeyValue(key), out flag) && flag;
 	}
 
-	// Token: 0x06001F5C RID: 8028 RVA: 0x000D5724 File Offset: 0x000D3924
 	private static float ReadFloat(string key)
 	{
 		float num;
@@ -223,7 +194,6 @@ public static class cUtilityClass
 		return 0f;
 	}
 
-	// Token: 0x06001F5D RID: 8029 RVA: 0x000D5748 File Offset: 0x000D3948
 	public static int ReadInt(string key)
 	{
 		try
@@ -241,7 +211,6 @@ public static class cUtilityClass
 		return 0;
 	}
 
-	// Token: 0x06001F5E RID: 8030 RVA: 0x000D5794 File Offset: 0x000D3994
 	public static void InvalidateCache()
 	{
 		cUtilityClass._useColorProfileCache = null;
@@ -304,7 +273,6 @@ public static class cUtilityClass
 		cUtilityClass.InitializeConfig(false);
 	}
 
-	// Token: 0x06001F5F RID: 8031 RVA: 0x000D59E0 File Offset: 0x000D3BE0
 	public static void InitializeConfig(bool force = false)
 	{
 		string text = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory), "IVSettings.cmd");
@@ -458,9 +426,6 @@ public static class cUtilityClass
 		cUtilityClass.hideHPOnFail = cUtilityClass.hideHPOnFail;
 	}
 
-	// Token: 0x17000424 RID: 1060
-	// (get) Token: 0x06001F60 RID: 8032 RVA: 0x00017C57 File Offset: 0x00015E57
-	// (set) Token: 0x06001F61 RID: 8033 RVA: 0x00017C8E File Offset: 0x00015E8E
 	public static bool showMissCounter
 	{
 		get
@@ -479,9 +444,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000425 RID: 1061
-	// (get) Token: 0x06001F62 RID: 8034 RVA: 0x00017CAC File Offset: 0x00015EAC
-	// (set) Token: 0x06001F63 RID: 8035 RVA: 0x00017CE3 File Offset: 0x00015EE3
 	public static bool showOverstrums
 	{
 		get
@@ -500,9 +462,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000426 RID: 1062
-	// (get) Token: 0x06001F64 RID: 8036 RVA: 0x00017D01 File Offset: 0x00015F01
-	// (set) Token: 0x06001F65 RID: 8037 RVA: 0x00017D38 File Offset: 0x00015F38
 	public static bool showClock
 	{
 		get
@@ -521,9 +480,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000427 RID: 1063
-	// (get) Token: 0x06001F66 RID: 8038 RVA: 0x00017D56 File Offset: 0x00015F56
-	// (set) Token: 0x06001F67 RID: 8039 RVA: 0x00017D8D File Offset: 0x00015F8D
 	public static bool showSessionTimer
 	{
 		get
@@ -542,9 +498,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000428 RID: 1064
-	// (get) Token: 0x06001F68 RID: 8040 RVA: 0x00017DAB File Offset: 0x00015FAB
-	// (set) Token: 0x06001F69 RID: 8041 RVA: 0x00017DCE File Offset: 0x00015FCE
 	public static string greenFretColor
 	{
 		get
@@ -563,9 +516,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000429 RID: 1065
-	// (get) Token: 0x06001F6A RID: 8042 RVA: 0x00017DE2 File Offset: 0x00015FE2
-	// (set) Token: 0x06001F6B RID: 8043 RVA: 0x00017E05 File Offset: 0x00016005
 	public static string redFretColor
 	{
 		get
@@ -584,9 +534,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x1700042A RID: 1066
-	// (get) Token: 0x06001F6C RID: 8044 RVA: 0x00017E19 File Offset: 0x00016019
-	// (set) Token: 0x06001F6D RID: 8045 RVA: 0x00017E3C File Offset: 0x0001603C
 	public static string yellowFretColor
 	{
 		get
@@ -605,9 +552,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x1700042B RID: 1067
-	// (get) Token: 0x06001F6E RID: 8046 RVA: 0x00017E50 File Offset: 0x00016050
-	// (set) Token: 0x06001F6F RID: 8047 RVA: 0x00017E73 File Offset: 0x00016073
 	public static string blueFretColor
 	{
 		get
@@ -626,9 +570,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x1700042C RID: 1068
-	// (get) Token: 0x06001F70 RID: 8048 RVA: 0x00017E87 File Offset: 0x00016087
-	// (set) Token: 0x06001F71 RID: 8049 RVA: 0x00017EAA File Offset: 0x000160AA
 	public static string orangeFretColor
 	{
 		get
@@ -647,9 +588,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x1700042D RID: 1069
-	// (get) Token: 0x06001F72 RID: 8050 RVA: 0x00017EBE File Offset: 0x000160BE
-	// (set) Token: 0x06001F73 RID: 8051 RVA: 0x00017EE1 File Offset: 0x000160E1
 	public static string strumColor
 	{
 		get
@@ -668,9 +606,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x1700042E RID: 1070
-	// (get) Token: 0x06001F74 RID: 8052 RVA: 0x00017EF5 File Offset: 0x000160F5
-	// (set) Token: 0x06001F75 RID: 8053 RVA: 0x00017F2C File Offset: 0x0001612C
 	public static bool showComboBreaks
 	{
 		get
@@ -689,9 +624,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x1700042F RID: 1071
-	// (get) Token: 0x06001F76 RID: 8054 RVA: 0x00017F4A File Offset: 0x0001614A
-	// (set) Token: 0x06001F77 RID: 8055 RVA: 0x00017F81 File Offset: 0x00016181
 	public static bool useColorProfile
 	{
 		get
@@ -710,9 +642,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000430 RID: 1072
-	// (get) Token: 0x06001F78 RID: 8056 RVA: 0x00017F9F File Offset: 0x0001619F
-	// (set) Token: 0x06001F79 RID: 8057 RVA: 0x00017FAB File Offset: 0x000161AB
 	public static string version
 	{
 		get
@@ -725,9 +654,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000431 RID: 1073
-	// (get) Token: 0x06001F7A RID: 8058 RVA: 0x00017FB9 File Offset: 0x000161B9
-	// (set) Token: 0x06001F7B RID: 8059 RVA: 0x00017FC5 File Offset: 0x000161C5
 	public static string lastversion
 	{
 		get
@@ -740,9 +666,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000432 RID: 1074
-	// (get) Token: 0x06001F7C RID: 8060 RVA: 0x00017FD3 File Offset: 0x000161D3
-	// (set) Token: 0x06001F7D RID: 8061 RVA: 0x0001800A File Offset: 0x0001620A
 	public static bool scorespyNoFail
 	{
 		get
@@ -761,9 +684,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000433 RID: 1075
-	// (get) Token: 0x06001F7E RID: 8062 RVA: 0x00018028 File Offset: 0x00016228
-	// (set) Token: 0x06001F7F RID: 8063 RVA: 0x0001805F File Offset: 0x0001625F
 	public static bool useJudgements
 	{
 		get
@@ -782,9 +702,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000434 RID: 1076
-	// (get) Token: 0x06001F80 RID: 8064 RVA: 0x0001807D File Offset: 0x0001627D
-	// (set) Token: 0x06001F81 RID: 8065 RVA: 0x000180B4 File Offset: 0x000162B4
 	public static bool showJudgementsUnderFretboard
 	{
 		get
@@ -803,9 +720,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000435 RID: 1077
-	// (get) Token: 0x06001F82 RID: 8066 RVA: 0x000180D2 File Offset: 0x000162D2
-	// (set) Token: 0x06001F83 RID: 8067 RVA: 0x00018109 File Offset: 0x00016309
 	public static cUtilityClass.JudgeLevel useJudgeLevel
 	{
 		get
@@ -824,7 +738,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x06001F84 RID: 8068 RVA: 0x000D5F4C File Offset: 0x000D414C
 	public static float[] judgeTimings(cUtilityClass.JudgeLevel judgeLevel)
 	{
 		switch (judgeLevel)
@@ -873,20 +786,16 @@ public static class cUtilityClass
 		return new float[] { 0.05f, 0.05f, 0.05f, 0.05f, 0.05f };
 	}
 
-	// Token: 0x06001F85 RID: 8069 RVA: 0x00018127 File Offset: 0x00016327
 	public static void WriteComment(string comment)
 	{
 		cUtilityClass.WriteKeyValue("; " + comment, null, true);
 	}
 
-	// Token: 0x06001F86 RID: 8070 RVA: 0x0001813B File Offset: 0x0001633B
 	public static void WriteKeyValue(string key, object value, bool comment = false)
 	{
 		cUtilityClass.WriteKeyValue(key, value, comment, null);
 	}
 
-	// Token: 0x17000436 RID: 1078
-	// (get) Token: 0x06001F87 RID: 8071 RVA: 0x000D613C File Offset: 0x000D433C
 	public static float judgementHitWindowSize
 	{
 		get
@@ -901,7 +810,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x06001F88 RID: 8072 RVA: 0x000D616C File Offset: 0x000D436C
 	public static T CopyComponent<T>(T original, GameObject destination) where T : Component
 	{
 		Type type = original.GetType();
@@ -913,9 +821,6 @@ public static class cUtilityClass
 		return component as T;
 	}
 
-	// Token: 0x17000437 RID: 1079
-	// (get) Token: 0x06001F89 RID: 8073 RVA: 0x00018146 File Offset: 0x00016346
-	// (set) Token: 0x06001F8A RID: 8074 RVA: 0x0001817D File Offset: 0x0001637D
 	public static BasePlayer.Judgement hitWindowDisplaySize
 	{
 		get
@@ -934,9 +839,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000438 RID: 1080
-	// (get) Token: 0x06001F8B RID: 8075 RVA: 0x0001819B File Offset: 0x0001639B
-	// (set) Token: 0x06001F8C RID: 8076 RVA: 0x000181D2 File Offset: 0x000163D2
 	public static float strikelinePistonSpeed
 	{
 		get
@@ -955,9 +857,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000439 RID: 1081
-	// (get) Token: 0x06001F8D RID: 8077 RVA: 0x000181F0 File Offset: 0x000163F0
-	// (set) Token: 0x06001F8E RID: 8078 RVA: 0x00018227 File Offset: 0x00016427
 	public static cUtilityClass.WeightSystem weightSystem
 	{
 		get
@@ -976,8 +875,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x1700043A RID: 1082
-	// (get) Token: 0x06001F8F RID: 8079 RVA: 0x00018245 File Offset: 0x00016445
 	public static char[] char_greenFretColor
 	{
 		get
@@ -991,8 +888,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x1700043B RID: 1083
-	// (get) Token: 0x06001F90 RID: 8080 RVA: 0x0001826F File Offset: 0x0001646F
 	public static char[] char_redFretColor
 	{
 		get
@@ -1006,8 +901,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x1700043C RID: 1084
-	// (get) Token: 0x06001F91 RID: 8081 RVA: 0x00018299 File Offset: 0x00016499
 	public static char[] char_yellowFretColor
 	{
 		get
@@ -1021,8 +914,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x1700043D RID: 1085
-	// (get) Token: 0x06001F92 RID: 8082 RVA: 0x000182C3 File Offset: 0x000164C3
 	public static char[] char_blueFretColor
 	{
 		get
@@ -1036,8 +927,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x1700043E RID: 1086
-	// (get) Token: 0x06001F93 RID: 8083 RVA: 0x000182ED File Offset: 0x000164ED
 	public static char[] char_orangeFretColor
 	{
 		get
@@ -1051,8 +940,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x1700043F RID: 1087
-	// (get) Token: 0x06001F94 RID: 8084 RVA: 0x00018317 File Offset: 0x00016517
 	public static int versionid
 	{
 		get
@@ -1061,9 +948,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000440 RID: 1088
-	// (get) Token: 0x06001F95 RID: 8085 RVA: 0x0001833D File Offset: 0x0001653D
-	// (set) Token: 0x06001F96 RID: 8086 RVA: 0x00018374 File Offset: 0x00016574
 	public static bool breakComboOnEarly
 	{
 		get
@@ -1082,9 +966,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000441 RID: 1089
-	// (get) Token: 0x06001F97 RID: 8087 RVA: 0x00018392 File Offset: 0x00016592
-	// (set) Token: 0x06001F98 RID: 8088 RVA: 0x000183C9 File Offset: 0x000165C9
 	public static BasePlayer.Judgement maximumImprecision
 	{
 		get
@@ -1103,9 +984,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000442 RID: 1090
-	// (get) Token: 0x06001F99 RID: 8089 RVA: 0x000183E7 File Offset: 0x000165E7
-	// (set) Token: 0x06001F9A RID: 8090 RVA: 0x0001841E File Offset: 0x0001661E
 	public static bool soundOnJudgeBreak
 	{
 		get
@@ -1124,9 +1002,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000443 RID: 1091
-	// (get) Token: 0x06001F9B RID: 8091 RVA: 0x0001843C File Offset: 0x0001663C
-	// (set) Token: 0x06001F9C RID: 8092 RVA: 0x00018473 File Offset: 0x00016673
 	public static float judgeBreakSoundVolume
 	{
 		get
@@ -1145,7 +1020,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x06001F9D RID: 8093 RVA: 0x00018491 File Offset: 0x00016691
 	public static void ExecuteVBS(string script, string name = "")
 	{
 		Task.Run(delegate
@@ -1174,9 +1048,6 @@ public static class cUtilityClass
 		});
 	}
 
-	// Token: 0x17000444 RID: 1092
-	// (get) Token: 0x06001F9E RID: 8094 RVA: 0x000184B7 File Offset: 0x000166B7
-	// (set) Token: 0x06001F9F RID: 8095 RVA: 0x000184EE File Offset: 0x000166EE
 	public static int deafenAtPercentage
 	{
 		get
@@ -1195,9 +1066,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000445 RID: 1093
-	// (get) Token: 0x06001FA0 RID: 8096 RVA: 0x0001850C File Offset: 0x0001670C
-	// (set) Token: 0x06001FA1 RID: 8097 RVA: 0x00018543 File Offset: 0x00016743
 	public static bool showAvgInaccuracy
 	{
 		get
@@ -1216,9 +1084,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000446 RID: 1094
-	// (get) Token: 0x06001FA2 RID: 8098 RVA: 0x00018561 File Offset: 0x00016761
-	// (set) Token: 0x06001FA3 RID: 8099 RVA: 0x00018598 File Offset: 0x00016798
 	public static int renderFrameInterval
 	{
 		get
@@ -1237,8 +1102,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000447 RID: 1095
-	// (set) Token: 0x06001FA4 RID: 8100 RVA: 0x000185B6 File Offset: 0x000167B6
 	public static string uid
 	{
 		set
@@ -1247,9 +1110,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000448 RID: 1096
-	// (get) Token: 0x06001FA5 RID: 8101 RVA: 0x000185C4 File Offset: 0x000167C4
-	// (set) Token: 0x06001FA6 RID: 8102 RVA: 0x000185FB File Offset: 0x000167FB
 	public static bool showGhosts
 	{
 		get
@@ -1268,9 +1128,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000449 RID: 1097
-	// (get) Token: 0x06001FA7 RID: 8103 RVA: 0x00018619 File Offset: 0x00016819
-	// (set) Token: 0x06001FA8 RID: 8104 RVA: 0x00018650 File Offset: 0x00016850
 	public static bool showHighway
 	{
 		get
@@ -1289,9 +1146,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x1700044A RID: 1098
-	// (get) Token: 0x06001FA9 RID: 8105 RVA: 0x0001866E File Offset: 0x0001686E
-	// (set) Token: 0x06001FAA RID: 8106 RVA: 0x000186A5 File Offset: 0x000168A5
 	public static bool showFretStrings
 	{
 		get
@@ -1310,9 +1164,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x1700044B RID: 1099
-	// (get) Token: 0x06001FAB RID: 8107 RVA: 0x000186C3 File Offset: 0x000168C3
-	// (set) Token: 0x06001FAC RID: 8108 RVA: 0x000186FA File Offset: 0x000168FA
 	public static bool showHighwaySide
 	{
 		get
@@ -1331,9 +1182,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x1700044C RID: 1100
-	// (get) Token: 0x06001FAD RID: 8109 RVA: 0x00018718 File Offset: 0x00016918
-	// (set) Token: 0x06001FAE RID: 8110 RVA: 0x0001874F File Offset: 0x0001694F
 	public static bool showBeatlines
 	{
 		get
@@ -1352,9 +1200,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x1700044D RID: 1101
-	// (get) Token: 0x06001FAF RID: 8111 RVA: 0x0001876D File Offset: 0x0001696D
-	// (set) Token: 0x06001FB0 RID: 8112 RVA: 0x000187A4 File Offset: 0x000169A4
 	public static bool showHPBar
 	{
 		get
@@ -1373,9 +1218,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x1700044E RID: 1102
-	// (get) Token: 0x06001FB1 RID: 8113 RVA: 0x000187C2 File Offset: 0x000169C2
-	// (set) Token: 0x06001FB2 RID: 8114 RVA: 0x000187F9 File Offset: 0x000169F9
 	public static bool hideHPOnFail
 	{
 		get
@@ -1394,11 +1236,9 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x06001FB3 RID: 8115
 	[DllImport("user32.dll")]
 	private static extern uint MessageBox(IntPtr hWnd, string lpText, string lpCaption, uint uType);
 
-	// Token: 0x06001FB4 RID: 8116 RVA: 0x00018817 File Offset: 0x00016A17
 	public static void ShowMessage(string contents, string title = "", uint type = 0U)
 	{
 		Task.Run(delegate
@@ -1407,9 +1247,6 @@ public static class cUtilityClass
 		});
 	}
 
-	// Token: 0x1700044F RID: 1103
-	// (get) Token: 0x06001FB5 RID: 8117 RVA: 0x00018844 File Offset: 0x00016A44
-	// (set) Token: 0x06001FB6 RID: 8118 RVA: 0x00018867 File Offset: 0x00016A67
 	public static string songProgressColor
 	{
 		get
@@ -1428,9 +1265,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000450 RID: 1104
-	// (get) Token: 0x06001FB7 RID: 8119 RVA: 0x0001887B File Offset: 0x00016A7B
-	// (set) Token: 0x06001FB8 RID: 8120 RVA: 0x0001889E File Offset: 0x00016A9E
 	public static string starProgressColor
 	{
 		get
@@ -1449,9 +1283,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000451 RID: 1105
-	// (get) Token: 0x06001FB9 RID: 8121 RVA: 0x000188B2 File Offset: 0x00016AB2
-	// (set) Token: 0x06001FBA RID: 8122 RVA: 0x000188D5 File Offset: 0x00016AD5
 	public static string noteStreakColor
 	{
 		get
@@ -1470,9 +1301,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000452 RID: 1106
-	// (get) Token: 0x06001FBB RID: 8123 RVA: 0x000188E9 File Offset: 0x00016AE9
-	// (set) Token: 0x06001FBC RID: 8124 RVA: 0x0001890C File Offset: 0x00016B0C
 	public static string scoreColor
 	{
 		get
@@ -1491,9 +1319,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000453 RID: 1107
-	// (get) Token: 0x06001FBD RID: 8125 RVA: 0x00018920 File Offset: 0x00016B20
-	// (set) Token: 0x06001FBE RID: 8126 RVA: 0x00018943 File Offset: 0x00016B43
 	public static string starColor
 	{
 		get
@@ -1512,9 +1337,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000454 RID: 1108
-	// (get) Token: 0x06001FBF RID: 8127 RVA: 0x00018957 File Offset: 0x00016B57
-	// (set) Token: 0x06001FC0 RID: 8128 RVA: 0x0001897A File Offset: 0x00016B7A
 	public static string scoreHUDColor
 	{
 		get
@@ -1533,9 +1355,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000455 RID: 1109
-	// (get) Token: 0x06001FC1 RID: 8129 RVA: 0x0001898E File Offset: 0x00016B8E
-	// (set) Token: 0x06001FC2 RID: 8130 RVA: 0x000189C5 File Offset: 0x00016BC5
 	public static bool perFretFlameColors
 	{
 		get
@@ -1554,9 +1373,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000456 RID: 1110
-	// (get) Token: 0x06001FC3 RID: 8131 RVA: 0x000189E3 File Offset: 0x00016BE3
-	// (set) Token: 0x06001FC4 RID: 8132 RVA: 0x00018A1A File Offset: 0x00016C1A
 	public static float colorIntensity
 	{
 		get
@@ -1575,7 +1391,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x06001FC5 RID: 8133 RVA: 0x000D61C8 File Offset: 0x000D43C8
 	public static void WriteKeyValue(string key, object value, bool comment = false, string configpath = null)
 	{
 		try
@@ -1660,13 +1475,11 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x06001FC6 RID: 8134 RVA: 0x00018A38 File Offset: 0x00016C38
 	public static void WriteComment(string comment, string configpath = null)
 	{
 		cUtilityClass.WriteKeyValue("; " + comment, null, true, configpath);
 	}
 
-	// Token: 0x06001FC7 RID: 8135 RVA: 0x000D63E4 File Offset: 0x000D45E4
 	public static string ReadKeyValue(string key, string configpath = null)
 	{
 		if (configpath == null)
@@ -1695,9 +1508,6 @@ public static class cUtilityClass
 		return null;
 	}
 
-	// Token: 0x17000457 RID: 1111
-	// (get) Token: 0x06001FC8 RID: 8136 RVA: 0x00018A4D File Offset: 0x00016C4D
-	// (set) Token: 0x06001FC9 RID: 8137 RVA: 0x00018A84 File Offset: 0x00016C84
 	public static int inputViewerIndent
 	{
 		get
@@ -1716,9 +1526,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000458 RID: 1112
-	// (get) Token: 0x06001FCA RID: 8138 RVA: 0x00018AA2 File Offset: 0x00016CA2
-	// (set) Token: 0x06001FCB RID: 8139 RVA: 0x00018AD9 File Offset: 0x00016CD9
 	public static float highwaySpeed
 	{
 		get
@@ -1737,8 +1544,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x17000459 RID: 1113
-	// (get) Token: 0x06001FCC RID: 8140 RVA: 0x00018AF7 File Offset: 0x00016CF7
 	public static char[] char_strumColor
 	{
 		get
@@ -1752,7 +1557,6 @@ public static class cUtilityClass
 		}
 	}
 
-	// Token: 0x06001FCD RID: 8141 RVA: 0x000D6488 File Offset: 0x000D4688
 	public static string GetArg(string name)
 	{
 		if (name == "")
@@ -1771,7 +1575,6 @@ public static class cUtilityClass
 		return "";
 	}
 
-	// Token: 0x06001FCE RID: 8142 RVA: 0x000D64E8 File Offset: 0x000D46E8
 	public unsafe static string OpenFile()
 	{
 		string text = "";
@@ -1812,7 +1615,6 @@ public static class cUtilityClass
 		return text;
 	}
 
-	// Token: 0x06001FCF RID: 8143 RVA: 0x000D65D0 File Offset: 0x000D47D0
 	public static bool GetArgPresent(string name)
 	{
 		if (name == "")
@@ -1831,248 +1633,160 @@ public static class cUtilityClass
 		return false;
 	}
 
-	// Token: 0x06001FD0 RID: 8144
 	[DllImport("comdlg32.dll", CharSet = CharSet.Auto, SetLastError = true)]
 	public static extern bool GetOpenFileName(IntPtr ofn);
 
-	// Token: 0x04001565 RID: 5477
 	private static bool? _rainbowSPBarCache;
 
-	// Token: 0x04001566 RID: 5478
 	private static bool? _rainbowFlamesCache;
 
-	// Token: 0x04001567 RID: 5479
 	private static float? _rainbowFlameSpeedCache;
 
-	// Token: 0x04001568 RID: 5480
 	private static bool? _showInputViewerCache;
 
-	// Token: 0x04001569 RID: 5481
 	private static int? _inputViewerHzCache;
 
-	// Token: 0x0400156A RID: 5482
 	private static bool? _strikelineFPSFixCache;
 
-	// Token: 0x0400156B RID: 5483
 	private static bool? _showFPSCache;
 
-	// Token: 0x0400156C RID: 5484
 	private static float? _fontSizeCache;
 
-	// Token: 0x0400156D RID: 5485
 	public static string path;
 
-	// Token: 0x0400156E RID: 5486
 	private static bool? _showMissCounterCache;
 
-	// Token: 0x0400156F RID: 5487
 	private static bool? _showOverstrumsCache;
 
-	// Token: 0x04001570 RID: 5488
 	private static bool? _showClockCache;
 
-	// Token: 0x04001571 RID: 5489
 	private static bool? _showSessionTimerCache;
 
-	// Token: 0x04001572 RID: 5490
 	private static string _greenFretColorCache;
 
-	// Token: 0x04001573 RID: 5491
 	private static string _redFretColorCache;
 
-	// Token: 0x04001574 RID: 5492
 	private static string _yellowFretColorCache;
 
-	// Token: 0x04001575 RID: 5493
 	private static string _blueFretColorCache;
 
-	// Token: 0x04001576 RID: 5494
 	private static string _orangeFretColorCache;
 
-	// Token: 0x04001577 RID: 5495
 	private static string _strumColorCache;
 
-	// Token: 0x04001578 RID: 5496
 	private static bool? _showComboBreaksCache;
 
-	// Token: 0x04001579 RID: 5497
 	private static bool? _useColorProfileCache;
 
-	// Token: 0x0400157A RID: 5498
 	public static bool lockWrites;
 
-	// Token: 0x0400157B RID: 5499
 	private static bool? _scorespyNoFailCache;
 
-	// Token: 0x0400157C RID: 5500
 	private static bool? _useJudgementsCache;
 
-	// Token: 0x0400157D RID: 5501
 	private static bool? _showJudgementsUnderFretboardCache;
 
-	// Token: 0x0400157E RID: 5502
 	private static int? _hitWindowDisplaySizeCache;
 
-	// Token: 0x0400157F RID: 5503
 	private static float? _strikelinePistonSpeedCache;
 
-	// Token: 0x04001580 RID: 5504
 	private static int? _useJudgeLevelCache;
 
-	// Token: 0x04001581 RID: 5505
 	private static int? _weightSystemCache;
 
-	// Token: 0x04001582 RID: 5506
 	private static char[] _char_greenFretColorCache;
 
-	// Token: 0x04001583 RID: 5507
 	private static char[] _char_redFretColorCache;
 
-	// Token: 0x04001584 RID: 5508
 	private static char[] _char_yellowFretColorCache;
 
-	// Token: 0x04001585 RID: 5509
 	private static char[] _char_blueFretColorCache;
 
-	// Token: 0x04001586 RID: 5510
 	private static char[] _char_orangeFretColorCache;
 
-	// Token: 0x04001587 RID: 5511
 	private static int? _maximumImprecisionCache;
 
-	// Token: 0x04001588 RID: 5512
 	private static bool? _breakComboOnEarlyCache;
 
-	// Token: 0x04001589 RID: 5513
 	private static bool? _soundOnJudgeBreakCache;
 
-	// Token: 0x0400158A RID: 5514
 	private static float? _judgeBreakSoundVolumeCache;
 
-	// Token: 0x0400158B RID: 5515
 	private static int? _deafenAtPercentageCache;
 
-	// Token: 0x0400158C RID: 5516
 	private static bool? _showAvgInaccuracyCache;
 
-	// Token: 0x0400158D RID: 5517
 	private static int? _renderFrameIntervalCache;
 
-	// Token: 0x0400158E RID: 5518
 	private static bool? _showGhostsCache;
 
-	// Token: 0x0400158F RID: 5519
 	private static bool? _showHighwayCache;
 
-	// Token: 0x04001590 RID: 5520
 	private static bool? _showFretStringsCache;
 
-	// Token: 0x04001591 RID: 5521
 	private static bool? _showHighwaySideCache;
 
-	// Token: 0x04001592 RID: 5522
 	private static bool? _showBeatlinesCache;
 
-	// Token: 0x04001593 RID: 5523
 	private static bool? _showHPBarCache;
 
-	// Token: 0x04001594 RID: 5524
 	private static bool? _hideHPOnFailCache;
 
-	// Token: 0x04001595 RID: 5525
 	private static string _songProgressColorCache;
 
-	// Token: 0x04001596 RID: 5526
 	private static string _starProgressColorCache;
 
-	// Token: 0x04001597 RID: 5527
 	private static string _noteStreakColorCache;
 
-	// Token: 0x04001598 RID: 5528
 	private static string _scoreColorCache;
 
-	// Token: 0x04001599 RID: 5529
 	private static string _starColorCache;
 
-	// Token: 0x0400159A RID: 5530
 	private static string _scoreHUDColorCache;
 
-	// Token: 0x0400159B RID: 5531
 	private static bool? _perFretFlameColorsCache;
 
-	// Token: 0x0400159C RID: 5532
 	private static float? _colorIntensityCache;
 
-	// Token: 0x0400159D RID: 5533
 	private static int? _inputViewerIndentCache;
 
-	// Token: 0x0400159E RID: 5534
 	private static float? _highwaySpeedCache;
 
-	// Token: 0x0400159F RID: 5535
 	public static string internalLogWebhook;
 
-	// Token: 0x040015A0 RID: 5536
 	public static string courteWebhook;
 
-	// Token: 0x040015A1 RID: 5537
 	private static char[] _char_strumColorCache;
 
-	// Token: 0x020002E8 RID: 744
 	public enum JudgeLevel
 	{
-		// Token: 0x040015A3 RID: 5539
 		Judge1 = 1,
-		// Token: 0x040015A4 RID: 5540
 		Judge2,
-		// Token: 0x040015A5 RID: 5541
 		Judge3,
-		// Token: 0x040015A6 RID: 5542
 		Judge4,
-		// Token: 0x040015A7 RID: 5543
 		Judge5,
-		// Token: 0x040015A8 RID: 5544
 		Judge6,
-		// Token: 0x040015A9 RID: 5545
 		Judge7,
-		// Token: 0x040015AA RID: 5546
 		Judge8,
-		// Token: 0x040015AB RID: 5547
 		Justice = -1,
-		// Token: 0x040015AC RID: 5548
 		ITG = -2,
-		// Token: 0x040015AD RID: 5549
 		DDR1 = -3,
-		// Token: 0x040015AE RID: 5550
 		DDR2 = -4,
-		// Token: 0x040015AF RID: 5551
 		Judge9 = 9,
-		// Token: 0x040015B0 RID: 5552
 		QuaverPeaceful = 11,
-		// Token: 0x040015B1 RID: 5553
 		QuaverLenient,
-		// Token: 0x040015B2 RID: 5554
 		QuaverChill,
-		// Token: 0x040015B3 RID: 5555
 		QuaverStandard,
-		// Token: 0x040015B4 RID: 5556
 		QuaverStrict,
-		// Token: 0x040015B5 RID: 5557
 		QuaverTough,
-		// Token: 0x040015B6 RID: 5558
 		QuaverExtreme,
-		// Token: 0x040015B7 RID: 5559
 		QuaverImpossible
 	}
 
-	// Token: 0x020002E9 RID: 745
 	public enum WeightSystem
 	{
-		// Token: 0x040015B9 RID: 5561
 		Quaver = 2,
-		// Token: 0x040015BA RID: 5562
 		Custom = 0,
-		// Token: 0x040015BB RID: 5563
 		Etterna
 	}
 }

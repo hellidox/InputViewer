@@ -1,13 +1,11 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x02000179 RID: 377
 public class SoloCounter : MonoBehaviour
 {
-	// Token: 0x0600114D RID: 4429 RVA: 0x000905F4 File Offset: 0x0008E7F4
 	public void \u02C1\u02BD\u02B3\u02B7\u02BE\u02C0\u02BE\u02B4\u02BD\u02B3\u02BF(\u02B7\u02BD\u02BB\u02BB\u02BF\u02B5\u02C0\u02C1\u02BD\u02B3\u02B6 \u02B4\u02BC\u02BF\u02BC\u02BA\u02B9\u02B8\u02B2\u02BD\u02BE\u02BD)
 	{
 		if (!this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerStuff.\u02BD\u02BC\u02B8\u02B5\u02B5\u02B2\u02C0\u02C1\u02B3\u02C0\u02B4)
@@ -16,7 +14,6 @@ public class SoloCounter : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600114E RID: 4430 RVA: 0x00090670 File Offset: 0x0008E870
 	public void \u02BA\u02C1\u02C0\u02B9\u02BE\u02C0\u02BC\u02BA\u02B7\u02B8\u02C1()
 	{
 		this.\u02BB\u02B5\u02BD\u02BB\u02C1\u02C1\u02C1\u02BF\u02BC\u02B7\u02B3 = true;
@@ -70,7 +67,6 @@ public class SoloCounter : MonoBehaviour
 		this.\u02BB\u02B7\u02B6\u02B2\u02C0\u02C1\u02B5\u02B5\u02B2\u02B6\u02BC.localScale = this.\u02B2\u02BE\u02B2\u02B2\u02B7\u02C0\u02B4\u02BB\u02B9\u02BA\u02B9;
 	}
 
-	// Token: 0x0600114F RID: 4431 RVA: 0x00090800 File Offset: 0x0008EA00
 	private void \u02B2\u02BD\u02BC\u02BC\u02B3\u02C1\u02BA\u02B5\u02B7\u02B6\u02BC()
 	{
 		if (SoloCounter.\u02B4\u02B9\u02B4\u02BC\u02BC\u02B9\u02B6\u02C0\u02B5\u02B8\u02B2 != null)
@@ -89,7 +85,6 @@ public class SoloCounter : MonoBehaviour
 		SoloCounter.\u02B4\u02B9\u02B4\u02BC\u02BC\u02B9\u02B6\u02C0\u02B5\u02B8\u02B2[8] = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("soloPointsText");
 	}
 
-	// Token: 0x06001150 RID: 4432 RVA: 0x000908E8 File Offset: 0x0008EAE8
 	private void Awake()
 	{
 		this.Solo_HUD.enabled = false;
@@ -99,7 +94,6 @@ public class SoloCounter : MonoBehaviour
 		this.\u02B2\u02BD\u02BC\u02BC\u02B3\u02C1\u02BA\u02B5\u02B7\u02B6\u02BC();
 	}
 
-	// Token: 0x06001151 RID: 4433 RVA: 0x00090940 File Offset: 0x0008EB40
 	public void \u02BA\u02B9\u02B4\u02C1\u02B5\u02B2\u02BF\u02B3\u02BC\u02BF\u02B6()
 	{
 		if (this.\u02BB\u02B5\u02BD\u02BB\u02C1\u02C1\u02C1\u02BF\u02BC\u02B7\u02B3)
@@ -127,7 +121,6 @@ public class SoloCounter : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001152 RID: 4434 RVA: 0x0000F3DD File Offset: 0x0000D5DD
 	private IEnumerator \u02B8\u02B2\u02B3\u02C0\u02B9\u02B4\u02BB\u02C1\u02B4\u02B7\u02B6()
 	{
 		while (!this.\u02BB\u02B5\u02BD\u02BB\u02C1\u02C1\u02C1\u02BF\u02BC\u02B7\u02B3 || this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9 < (double)this.\u02B8\u02B9\u02B3\u02B7\u02B3\u02B9\u02B3\u02BF\u02B5\u02BF\u02BC)
@@ -155,7 +148,6 @@ public class SoloCounter : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06001153 RID: 4435 RVA: 0x0000F3DD File Offset: 0x0000D5DD
 	private IEnumerator \u02BF\u02BA\u02BD\u02BA\u02BC\u02B7\u02BE\u02B4\u02BA\u02BB\u02B2()
 	{
 		while (!this.\u02BB\u02B5\u02BD\u02BB\u02C1\u02C1\u02C1\u02BF\u02BC\u02B7\u02B3 || this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9 < (double)this.\u02B8\u02B9\u02B3\u02B7\u02B3\u02B9\u02B3\u02BF\u02B5\u02BF\u02BC)
@@ -183,7 +175,6 @@ public class SoloCounter : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06001154 RID: 4436 RVA: 0x00090A28 File Offset: 0x0008EC28
 	public void \u02BA\u02B8\u02B3\u02B7\u02B2\u02BE\u02B9\u02B5\u02BD\u02BF\u02BC()
 	{
 		this.Solo_HUD.enabled = true;
@@ -201,7 +192,6 @@ public class SoloCounter : MonoBehaviour
 		this.\u02BF\u02BB\u02B6\u02C1\u02B2\u02BF\u02C1\u02C1\u02B6\u02C1\u02B6 = base.StartCoroutine(this.\u02BA\u02B6\u02BE\u02B4\u02BD\u02C1\u02C1\u02BF\u02BD\u02BE\u02B5());
 	}
 
-	// Token: 0x06001155 RID: 4437 RVA: 0x0000F3DD File Offset: 0x0000D5DD
 	private IEnumerator \u02BA\u02B6\u02BE\u02B4\u02BD\u02C1\u02C1\u02BF\u02BD\u02BE\u02B5()
 	{
 		while (!this.\u02BB\u02B5\u02BD\u02BB\u02C1\u02C1\u02C1\u02BF\u02BC\u02B7\u02B3 || this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9 < (double)this.\u02B8\u02B9\u02B3\u02B7\u02B3\u02B9\u02B3\u02BF\u02B5\u02BF\u02BC)
@@ -229,7 +219,6 @@ public class SoloCounter : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06001156 RID: 4438 RVA: 0x00090AC4 File Offset: 0x0008ECC4
 	public void \u02BF\u02B8\u02B2\u02C1\u02BC\u02B9\u02C1\u02BC\u02BA\u02C0\u02BA()
 	{
 		this.Solo_HUD.enabled = false;
@@ -249,7 +238,6 @@ public class SoloCounter : MonoBehaviour
 		this.\u02BF\u02BB\u02B6\u02C1\u02B2\u02BF\u02C1\u02C1\u02B6\u02C1\u02B6 = base.StartCoroutine(this.\u02BF\u02BA\u02BD\u02BA\u02BC\u02B7\u02BE\u02B4\u02BA\u02BB\u02B2());
 	}
 
-	// Token: 0x06001157 RID: 4439 RVA: 0x00090B58 File Offset: 0x0008ED58
 	public void \u02B8\u02B4\u02B4\u02BD\u02BE\u02B7\u02B2\u02B7\u02B9\u02B5\u02BA()
 	{
 		if (this.\u02BB\u02B5\u02BD\u02BB\u02C1\u02C1\u02C1\u02BF\u02BC\u02B7\u02B3)
@@ -277,7 +265,6 @@ public class SoloCounter : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001159 RID: 4441 RVA: 0x00090CA0 File Offset: 0x0008EEA0
 	public void \u02B9\u02B4\u02B7\u02C0\u02B7\u02BC\u02B9\u02BE\u02B4\u02C0\u02B5()
 	{
 		this.Solo_HUD.enabled = true;
@@ -297,7 +284,6 @@ public class SoloCounter : MonoBehaviour
 		this.\u02BF\u02BB\u02B6\u02C1\u02B2\u02BF\u02C1\u02C1\u02B6\u02C1\u02B6 = base.StartCoroutine(this.\u02BA\u02B6\u02BE\u02B4\u02BD\u02C1\u02C1\u02BF\u02BD\u02BE\u02B5());
 	}
 
-	// Token: 0x0600115A RID: 4442 RVA: 0x00090D34 File Offset: 0x0008EF34
 	private void \u02B2\u02B7\u02B5\u02C0\u02B4\u02B3\u02B8\u02B3\u02C0\u02BD\u02B5()
 	{
 		if (CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02BB\u02B7\u02B6\u02B9\u02B5\u02BC\u02B2\u02BB\u02B2\u02BD() && !this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerStuff.\u02B8\u02C0\u02BB\u02C0\u02BB\u02BB\u02BE\u02B3\u02BD\u02B2\u02B6())
@@ -313,7 +299,6 @@ public class SoloCounter : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600115B RID: 4443 RVA: 0x00090DF0 File Offset: 0x0008EFF0
 	public void \u02C1\u02BA\u02B8\u02BF\u02BD\u02BC\u02B8\u02B4\u02BA\u02B9\u02C1()
 	{
 		this.\u02BB\u02B5\u02BD\u02BB\u02C1\u02C1\u02C1\u02BF\u02BC\u02B7\u02B3 = true;
@@ -367,7 +352,6 @@ public class SoloCounter : MonoBehaviour
 		this.\u02BB\u02B7\u02B6\u02B2\u02C0\u02C1\u02B5\u02B5\u02B2\u02B6\u02BC.localScale = this.\u02B2\u02BE\u02B2\u02B2\u02B7\u02C0\u02B4\u02BB\u02B9\u02BA\u02B9;
 	}
 
-	// Token: 0x0600115C RID: 4444 RVA: 0x00090F80 File Offset: 0x0008F180
 	public void \u02C0\u02BE\u02B8\u02B4\u02B3\u02C0\u02C0\u02C0\u02B7\u02C1\u02B6()
 	{
 		this.\u02BB\u02B5\u02BD\u02BB\u02C1\u02C1\u02C1\u02BF\u02BC\u02B7\u02B3 = false;
@@ -421,7 +405,6 @@ public class SoloCounter : MonoBehaviour
 		this.\u02BB\u02B7\u02B6\u02B2\u02C0\u02C1\u02B5\u02B5\u02B2\u02B6\u02BC.localScale = this.\u02B2\u02BE\u02B2\u02B2\u02B7\u02C0\u02B4\u02BB\u02B9\u02BA\u02B9;
 	}
 
-	// Token: 0x0600115D RID: 4445 RVA: 0x00091110 File Offset: 0x0008F310
 	private void Start()
 	{
 		if (CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BA\u02B8\u02B6\u02BB\u02B5\u02B2\u02B8\u02B6\u02BB\u02BB && !this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerStuff.\u02BD\u02BC\u02B8\u02B5\u02B5\u02B2\u02C0\u02C1\u02B3\u02C0\u02B4)
@@ -437,7 +420,6 @@ public class SoloCounter : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600115E RID: 4446 RVA: 0x000911CC File Offset: 0x0008F3CC
 	public void \u02BC\u02BE\u02BC\u02BB\u02BF\u02B8\u02BD\u02BF\u02B2\u02B5\u02BA(\u02BC\u02B6\u02BB\u02B9\u02BE\u02B7\u02BB\u02B7\u02BE\u02C1\u02B8 \u02BB\u02B3\u02B2\u02B2\u02B3\u02BF\u02B6\u02B9\u02BD\u02B5\u02BC)
 	{
 		if (this.\u02BB\u02B5\u02BD\u02BB\u02C1\u02C1\u02C1\u02BF\u02BC\u02B7\u02B3)
@@ -456,7 +438,6 @@ public class SoloCounter : MonoBehaviour
 		this.\u02C1\u02BA\u02B8\u02BF\u02BD\u02BC\u02B8\u02B4\u02BA\u02B9\u02C1();
 	}
 
-	// Token: 0x0600115F RID: 4447 RVA: 0x0000F3DD File Offset: 0x0000D5DD
 	private IEnumerator \u02B2\u02BA\u02B4\u02BE\u02BF\u02BE\u02BD\u02B9\u02B4\u02B3\u02B4()
 	{
 		while (!this.\u02BB\u02B5\u02BD\u02BB\u02C1\u02C1\u02C1\u02BF\u02BC\u02B7\u02B3 || this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9 < (double)this.\u02B8\u02B9\u02B3\u02B7\u02B3\u02B9\u02B3\u02BF\u02B5\u02BF\u02BC)
@@ -484,7 +465,6 @@ public class SoloCounter : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06001160 RID: 4448 RVA: 0x000911CC File Offset: 0x0008F3CC
 	public void \u02B3\u02B2\u02B3\u02B6\u02C1\u02B2\u02C1\u02BF\u02B2\u02B7\u02BB(\u02BC\u02B6\u02BB\u02B9\u02BE\u02B7\u02BB\u02B7\u02BE\u02C1\u02B8 \u02BB\u02B3\u02B2\u02B2\u02B3\u02BF\u02B6\u02B9\u02BD\u02B5\u02BC)
 	{
 		if (this.\u02BB\u02B5\u02BD\u02BB\u02C1\u02C1\u02C1\u02BF\u02BC\u02B7\u02B3)
@@ -503,7 +483,6 @@ public class SoloCounter : MonoBehaviour
 		this.\u02C1\u02BA\u02B8\u02BF\u02BD\u02BC\u02B8\u02B4\u02BA\u02B9\u02C1();
 	}
 
-	// Token: 0x06001161 RID: 4449 RVA: 0x0009122C File Offset: 0x0008F42C
 	public void \u02C0\u02C1\u02B3\u02BF\u02B7\u02BC\u02B9\u02B4\u02BE\u02BB\u02B3()
 	{
 		this.Solo_HUD.enabled = true;
@@ -523,7 +502,6 @@ public class SoloCounter : MonoBehaviour
 		this.\u02BF\u02BB\u02B6\u02C1\u02B2\u02BF\u02C1\u02C1\u02B6\u02C1\u02B6 = base.StartCoroutine(this.\u02BF\u02BA\u02BD\u02BA\u02BC\u02B7\u02BE\u02B4\u02BA\u02BB\u02B2());
 	}
 
-	// Token: 0x06001162 RID: 4450 RVA: 0x000912C0 File Offset: 0x0008F4C0
 	public void \u02C0\u02B4\u02B5\u02B3\u02B5\u02BE\u02B8\u02C1\u02B8\u02BC\u02B2(\u02BC\u02B6\u02BB\u02B9\u02BE\u02B7\u02BB\u02B7\u02BE\u02C1\u02B8 \u02BB\u02B3\u02B2\u02B2\u02B3\u02BF\u02B6\u02B9\u02BD\u02B5\u02BC)
 	{
 		if (this.\u02BB\u02B5\u02BD\u02BB\u02C1\u02C1\u02C1\u02BF\u02BC\u02B7\u02B3)
@@ -542,7 +520,6 @@ public class SoloCounter : MonoBehaviour
 		this.\u02C0\u02BE\u02B8\u02B4\u02B3\u02C0\u02C0\u02C0\u02B7\u02C1\u02B6();
 	}
 
-	// Token: 0x06001163 RID: 4451 RVA: 0x0000F3EC File Offset: 0x0000D5EC
 	public void Reset()
 	{
 		if (this.\u02BF\u02BB\u02B6\u02C1\u02B2\u02BF\u02C1\u02C1\u02B6\u02C1\u02B6 != null)
@@ -554,7 +531,6 @@ public class SoloCounter : MonoBehaviour
 		this.\u02B6\u02B5\u02BD\u02BB\u02B5\u02B7\u02C0\u02B7\u02B8\u02C0\u02B8 = 0;
 	}
 
-	// Token: 0x06001164 RID: 4452 RVA: 0x00091320 File Offset: 0x0008F520
 	public void \u02C1\u02BC\u02B2\u02B4\u02C0\u02BB\u02B8\u02B7\u02BF\u02B2\u02BD()
 	{
 		if (this.\u02BB\u02B5\u02BD\u02BB\u02C1\u02C1\u02C1\u02BF\u02BC\u02B7\u02B3)
@@ -582,7 +558,6 @@ public class SoloCounter : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001165 RID: 4453 RVA: 0x00091408 File Offset: 0x0008F608
 	public void \u02BD\u02B7\u02BD\u02BA\u02B7\u02B5\u02BE\u02BA\u02C1\u02BF\u02BC(\u02B7\u02BD\u02BB\u02BB\u02BF\u02B5\u02C0\u02C1\u02BD\u02B3\u02B6 \u02B4\u02BC\u02BF\u02BC\u02BA\u02B9\u02B8\u02B2\u02BD\u02BE\u02BD)
 	{
 		if (!this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerStuff.\u02B8\u02C0\u02BB\u02C0\u02BB\u02BB\u02BE\u02B3\u02BD\u02B2\u02B6())
@@ -591,7 +566,6 @@ public class SoloCounter : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001166 RID: 4454 RVA: 0x00091484 File Offset: 0x0008F684
 	public void \u02C1\u02B2\u02B9\u02B2\u02B3\u02BA\u02B8\u02B6\u02BE\u02B4\u02BB()
 	{
 		this.Solo_HUD.enabled = true;
@@ -611,82 +585,57 @@ public class SoloCounter : MonoBehaviour
 		this.\u02BF\u02BB\u02B6\u02C1\u02B2\u02BF\u02C1\u02C1\u02B6\u02C1\u02B6 = base.StartCoroutine(this.\u02BF\u02BA\u02BD\u02BA\u02BC\u02B7\u02BE\u02B4\u02BA\u02BB\u02B2());
 	}
 
-	// Token: 0x04000D2A RID: 3370
 	public GameManager \u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD;
 
-	// Token: 0x04000D2B RID: 3371
 	[SerializeField]
 	private Text textObject;
 
-	// Token: 0x04000D2C RID: 3372
 	private RectTransform \u02BB\u02B7\u02B6\u02B2\u02C0\u02C1\u02B5\u02B5\u02B2\u02B6\u02BC;
 
-	// Token: 0x04000D2D RID: 3373
 	[SerializeField]
 	private Image Solo_HUD;
 
-	// Token: 0x04000D2E RID: 3374
 	public BasePlayer \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7;
 
-	// Token: 0x04000D2F RID: 3375
 	public List<\u02B2\u02BF\u02C1\u02B4\u02B3\u02BD\u02B7\u02BF\u02B3\u02BF\u02C0> \u02B3\u02B5\u02BF\u02BE\u02BA\u02B6\u02B9\u02BE\u02BD\u02BA\u02BB;
 
-	// Token: 0x04000D30 RID: 3376
 	[HideInInspector]
 	public int \u02BD\u02B7\u02B2\u02BA\u02BF\u02B7\u02BF\u02B7\u02BF\u02BD\u02B9;
 
-	// Token: 0x04000D31 RID: 3377
 	private int \u02C0\u02B6\u02B2\u02BD\u02B6\u02B4\u02C1\u02B4\u02C0\u02B2\u02B5;
 
-	// Token: 0x04000D32 RID: 3378
 	private int \u02BA\u02B8\u02C0\u02B5\u02BE\u02B6\u02B5\u02BB\u02BD\u02B7\u02B2;
 
-	// Token: 0x04000D33 RID: 3379
 	private int \u02BA\u02B7\u02BD\u02B2\u02B5\u02BA\u02B6\u02C1\u02BC\u02BC\u02C0;
 
-	// Token: 0x04000D34 RID: 3380
 	private int \u02B6\u02B5\u02BD\u02BB\u02B5\u02B7\u02C0\u02B7\u02B8\u02C0\u02B8;
 
-	// Token: 0x04000D35 RID: 3381
 	private float \u02B8\u02B9\u02B3\u02B7\u02B3\u02B9\u02B3\u02BF\u02B5\u02BF\u02BC;
 
-	// Token: 0x04000D36 RID: 3382
 	private bool \u02BB\u02B5\u02BD\u02BB\u02C1\u02C1\u02C1\u02BF\u02BC\u02B7\u02B3 = true;
 
-	// Token: 0x04000D37 RID: 3383
 	private bool \u02BB\u02B6\u02B6\u02B8\u02B8\u02C0\u02B3\u02BD\u02B8\u02B8\u02B8;
 
-	// Token: 0x04000D38 RID: 3384
 	private bool \u02B2\u02C0\u02B2\u02BD\u02B4\u02B9\u02BF\u02C0\u02B9\u02BC\u02B9;
 
-	// Token: 0x04000D39 RID: 3385
 	private Vector2 \u02BC\u02BC\u02BB\u02B9\u02BB\u02B6\u02B4\u02B5\u02BA\u02BF\u02BB;
 
-	// Token: 0x04000D3A RID: 3386
 	private Vector2 \u02B2\u02BE\u02B2\u02B2\u02B7\u02C0\u02B4\u02BB\u02B9\u02BA\u02B9 = new Vector2(0.7f, 0.7f);
 
-	// Token: 0x04000D3B RID: 3387
 	private Coroutine \u02BF\u02BB\u02B6\u02C1\u02B2\u02BF\u02C1\u02C1\u02B6\u02C1\u02B6;
 
-	// Token: 0x04000D3C RID: 3388
 	private WaitForSeconds \u02BE\u02B2\u02B6\u02B7\u02B8\u02B9\u02B3\u02B7\u02BC\u02B4\u02BD = new WaitForSeconds(0.032f);
 
-	// Token: 0x04000D3D RID: 3389
 	private WaitForSeconds \u02BC\u02C0\u02B4\u02BA\u02BA\u02B7\u02BD\u02C0\u02B7\u02BF\u02B5 = new WaitForSeconds(0.1f);
 
-	// Token: 0x04000D3E RID: 3390
 	private WaitForSeconds \u02B3\u02BE\u02BC\u02B5\u02BF\u02C1\u02B5\u02B8\u02BA\u02C1\u02C0 = new WaitForSeconds(1.5f);
 
-	// Token: 0x04000D3F RID: 3391
 	private string \u02C1\u02C0\u02BA\u02B4\u02C0\u02B2\u02B8\u02BE\u02B6\u02B4\u02B2;
 
-	// Token: 0x04000D40 RID: 3392
 	private int \u02B4\u02B5\u02BE\u02C0\u02C1\u02B7\u02BA\u02B9\u02BA\u02B3\u02B8;
 
-	// Token: 0x04000D41 RID: 3393
 	private static string[] \u02B4\u02B9\u02B4\u02BC\u02BC\u02B9\u02B6\u02C0\u02B5\u02B8\u02B2;
 
-	// Token: 0x04000D42 RID: 3394
 	[HideInInspector]
 	public \u02BC\u02B8\u02BA\u02B3\u02BD\u02BF\u02BD\u02BE\u02BD\u02C0\u02BC \u02B9\u02BF\u02BB\u02BD\u02B3\u02BD\u02BE\u02B2\u02B4\u02C1\u02BD;
 }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Rewired.Integration.UnityUI;
 using Rewired.Utils;
@@ -8,12 +8,9 @@ using UnityEngine.UI;
 
 namespace Rewired.UI.ControlMapper
 {
-	// Token: 0x02000282 RID: 642
 	[AddComponentMenu("")]
 	public class CalibrationWindow : Window
 	{
-		// Token: 0x170002CF RID: 719
-		// (get) Token: 0x06001AF7 RID: 6903 RVA: 0x000144AB File Offset: 0x000126AB
 		private bool axisSelected
 		{
 			get
@@ -22,8 +19,6 @@ namespace Rewired.UI.ControlMapper
 			}
 		}
 
-		// Token: 0x170002D0 RID: 720
-		// (get) Token: 0x06001AF8 RID: 6904 RVA: 0x000144DB File Offset: 0x000126DB
 		private AxisCalibration axisCalibration
 		{
 			get
@@ -36,7 +31,6 @@ namespace Rewired.UI.ControlMapper
 			}
 		}
 
-		// Token: 0x06001AF9 RID: 6905 RVA: 0x000CA698 File Offset: 0x000C8898
 		public override void Initialize(int id, Func<int, bool> isFocusedCallback)
 		{
 			if (this.rightContentContainer == null || this.valueDisplayGroup == null || this.calibratedValueMarker == null || this.rawValueMarker == null || this.calibratedZeroMarker == null || this.deadzoneArea == null || this.deadzoneSlider == null || this.sensitivitySlider == null || this.zeroSlider == null || this.invertToggle == null || this.axisScrollAreaContent == null || this.doneButton == null || this.calibrateButton == null || this.axisButtonPrefab == null || this.doneButtonLabel == null || this.cancelButtonLabel == null || this.defaultButtonLabel == null || this.deadzoneSliderLabel == null || this.zeroSliderLabel == null || this.sensitivitySliderLabel == null || this.invertToggleLabel == null || this.calibrateButtonLabel == null)
@@ -57,7 +51,6 @@ namespace Rewired.UI.ControlMapper
 			base.Initialize(id, isFocusedCallback);
 		}
 
-		// Token: 0x06001AFA RID: 6906 RVA: 0x000CA8D0 File Offset: 0x000C8AD0
 		public void SetJoystick(int playerId, Joystick joystick)
 		{
 			if (!base.initialized)
@@ -111,7 +104,6 @@ namespace Rewired.UI.ControlMapper
 			this.Redraw();
 		}
 
-		// Token: 0x06001AFB RID: 6907 RVA: 0x000144FD File Offset: 0x000126FD
 		public void SetButtonCallback(CalibrationWindow.ButtonIdentifier buttonIdentifier, Action<int> callback)
 		{
 			if (!base.initialized)
@@ -130,7 +122,6 @@ namespace Rewired.UI.ControlMapper
 			this.buttonCallbacks.Add((int)buttonIdentifier, callback);
 		}
 
-		// Token: 0x06001AFC RID: 6908 RVA: 0x000CAAE4 File Offset: 0x000C8CE4
 		public override void Cancel()
 		{
 			if (!base.initialized)
@@ -153,7 +144,6 @@ namespace Rewired.UI.ControlMapper
 			action(base.id);
 		}
 
-		// Token: 0x06001AFD RID: 6909 RVA: 0x00014535 File Offset: 0x00012735
 		protected override void Update()
 		{
 			if (!base.initialized)
@@ -164,7 +154,6 @@ namespace Rewired.UI.ControlMapper
 			this.UpdateDisplay();
 		}
 
-		// Token: 0x06001AFE RID: 6910 RVA: 0x000CAB44 File Offset: 0x000C8D44
 		public void OnDone()
 		{
 			if (!base.initialized)
@@ -179,13 +168,11 @@ namespace Rewired.UI.ControlMapper
 			action(base.id);
 		}
 
-		// Token: 0x06001AFF RID: 6911 RVA: 0x0001454C File Offset: 0x0001274C
 		public void OnCancel()
 		{
 			this.Cancel();
 		}
 
-		// Token: 0x06001B00 RID: 6912 RVA: 0x00014554 File Offset: 0x00012754
 		public void OnRestoreDefault()
 		{
 			if (!base.initialized)
@@ -201,7 +188,6 @@ namespace Rewired.UI.ControlMapper
 			this.Redraw();
 		}
 
-		// Token: 0x06001B01 RID: 6913 RVA: 0x000CAB78 File Offset: 0x000C8D78
 		public void OnCalibrate()
 		{
 			if (!base.initialized)
@@ -216,7 +202,6 @@ namespace Rewired.UI.ControlMapper
 			action(this.selectedAxis);
 		}
 
-		// Token: 0x06001B02 RID: 6914 RVA: 0x00014584 File Offset: 0x00012784
 		public void OnInvert(bool state)
 		{
 			if (!base.initialized)
@@ -230,7 +215,6 @@ namespace Rewired.UI.ControlMapper
 			this.axisCalibration.invert = state;
 		}
 
-		// Token: 0x06001B03 RID: 6915 RVA: 0x000145A4 File Offset: 0x000127A4
 		public void OnZeroValueChange(float value)
 		{
 			if (!base.initialized)
@@ -245,7 +229,6 @@ namespace Rewired.UI.ControlMapper
 			this.RedrawCalibratedZero();
 		}
 
-		// Token: 0x06001B04 RID: 6916 RVA: 0x000145CA File Offset: 0x000127CA
 		public void OnZeroCancel()
 		{
 			if (!base.initialized)
@@ -261,7 +244,6 @@ namespace Rewired.UI.ControlMapper
 			this.RefreshControls();
 		}
 
-		// Token: 0x06001B05 RID: 6917 RVA: 0x000CABAC File Offset: 0x000C8DAC
 		public void OnDeadzoneValueChange(float value)
 		{
 			if (!base.initialized)
@@ -280,7 +262,6 @@ namespace Rewired.UI.ControlMapper
 			this.RedrawDeadzone();
 		}
 
-		// Token: 0x06001B06 RID: 6918 RVA: 0x00014600 File Offset: 0x00012800
 		public void OnDeadzoneCancel()
 		{
 			if (!base.initialized)
@@ -296,7 +277,6 @@ namespace Rewired.UI.ControlMapper
 			this.RefreshControls();
 		}
 
-		// Token: 0x06001B07 RID: 6919 RVA: 0x00014636 File Offset: 0x00012836
 		public void OnSensitivityValueChange(float value)
 		{
 			if (!base.initialized)
@@ -310,7 +290,6 @@ namespace Rewired.UI.ControlMapper
 			this.SetSensitivity(this.axisCalibration, value);
 		}
 
-		// Token: 0x06001B08 RID: 6920 RVA: 0x00014657 File Offset: 0x00012857
 		public void OnSensitivityCancel(float value)
 		{
 			if (!base.initialized)
@@ -325,13 +304,11 @@ namespace Rewired.UI.ControlMapper
 			this.RefreshControls();
 		}
 
-		// Token: 0x06001B09 RID: 6921 RVA: 0x00014687 File Offset: 0x00012887
 		public void OnAxisScrollRectScroll(Vector2 pos)
 		{
 			bool initialized = base.initialized;
 		}
 
-		// Token: 0x06001B0A RID: 6922 RVA: 0x00014690 File Offset: 0x00012890
 		private void OnAxisSelected(int axisIndex, Button button)
 		{
 			if (!base.initialized)
@@ -347,20 +324,17 @@ namespace Rewired.UI.ControlMapper
 			this.Redraw();
 		}
 
-		// Token: 0x06001B0B RID: 6923 RVA: 0x000146B7 File Offset: 0x000128B7
 		private void UpdateDisplay()
 		{
 			this.RedrawValueMarkers();
 		}
 
-		// Token: 0x06001B0C RID: 6924 RVA: 0x000146BF File Offset: 0x000128BF
 		private void Redraw()
 		{
 			this.RedrawCalibratedZero();
 			this.RedrawValueMarkers();
 		}
 
-		// Token: 0x06001B0D RID: 6925 RVA: 0x000CAC04 File Offset: 0x000C8E04
 		private void RefreshControls()
 		{
 			if (!this.axisSelected)
@@ -377,7 +351,6 @@ namespace Rewired.UI.ControlMapper
 			this.invertToggle.isOn = this.axisCalibration.invert;
 		}
 
-		// Token: 0x06001B0E RID: 6926 RVA: 0x000CACB0 File Offset: 0x000C8EB0
 		private void RedrawDeadzone()
 		{
 			if (!this.axisSelected)
@@ -389,7 +362,6 @@ namespace Rewired.UI.ControlMapper
 			this.deadzoneArea.anchoredPosition = new Vector2(this.axisCalibration.calibratedZero * -this.deadzoneArea.parent.localPosition.x, this.deadzoneArea.anchoredPosition.y);
 		}
 
-		// Token: 0x06001B0F RID: 6927 RVA: 0x000CAD3C File Offset: 0x000C8F3C
 		private void RedrawCalibratedZero()
 		{
 			if (!this.axisSelected)
@@ -400,7 +372,6 @@ namespace Rewired.UI.ControlMapper
 			this.RedrawDeadzone();
 		}
 
-		// Token: 0x06001B10 RID: 6928 RVA: 0x000CAD9C File Offset: 0x000C8F9C
 		private void RedrawValueMarkers()
 		{
 			if (!this.axisSelected)
@@ -415,7 +386,6 @@ namespace Rewired.UI.ControlMapper
 			this.rawValueMarker.anchoredPosition = new Vector2(this.displayAreaWidth * 0.5f * num, this.rawValueMarker.anchoredPosition.y);
 		}
 
-		// Token: 0x06001B11 RID: 6929 RVA: 0x000CAE8C File Offset: 0x000C908C
 		private void SelectAxis(int index)
 		{
 			if (index < 0 || index >= this.axisButtons.Count)
@@ -440,7 +410,6 @@ namespace Rewired.UI.ControlMapper
 			this.SetMinSensitivity();
 		}
 
-		// Token: 0x06001B12 RID: 6930 RVA: 0x000146CD File Offset: 0x000128CD
 		public override void TakeInputFocus()
 		{
 			base.TakeInputFocus();
@@ -452,7 +421,6 @@ namespace Rewired.UI.ControlMapper
 			this.Redraw();
 		}
 
-		// Token: 0x06001B13 RID: 6931 RVA: 0x000CAF30 File Offset: 0x000C9130
 		private void SetMinSensitivity()
 		{
 			if (!this.axisSelected)
@@ -474,7 +442,6 @@ namespace Rewired.UI.ControlMapper
 			}
 		}
 
-		// Token: 0x06001B14 RID: 6932 RVA: 0x000CAFB8 File Offset: 0x000C91B8
 		private bool IsMenuAxis(int actionId, int axisIndex)
 		{
 			if (this.rewiredStandaloneInputModule == null)
@@ -510,7 +477,6 @@ namespace Rewired.UI.ControlMapper
 			return false;
 		}
 
-		// Token: 0x06001B15 RID: 6933 RVA: 0x000CB088 File Offset: 0x000C9288
 		private void GetAxisButtonDeadZone(int playerId, int actionId, ref float value)
 		{
 			InputAction action = ReInput.mapping.GetAction(actionId);
@@ -527,7 +493,6 @@ namespace Rewired.UI.ControlMapper
 			value = inputBehavior.buttonDeadZone + 0.1f;
 		}
 
-		// Token: 0x06001B16 RID: 6934 RVA: 0x000146F6 File Offset: 0x000128F6
 		private float GetSliderSensitivity(AxisCalibration axisCalibration)
 		{
 			if (axisCalibration.sensitivityType == AxisSensitivityType.Multiplier)
@@ -541,7 +506,6 @@ namespace Rewired.UI.ControlMapper
 			return axisCalibration.sensitivity;
 		}
 
-		// Token: 0x06001B17 RID: 6935 RVA: 0x000CB0CC File Offset: 0x000C92CC
 		public void SetSensitivity(AxisCalibration axisCalibration, float sliderValue)
 		{
 			if (axisCalibration.sensitivityType == AxisSensitivityType.Multiplier)
@@ -564,7 +528,6 @@ namespace Rewired.UI.ControlMapper
 			}
 		}
 
-		// Token: 0x06001B18 RID: 6936 RVA: 0x000CB140 File Offset: 0x000C9340
 		private static float ProcessPowerValue(float value, float minValue, float maxValue)
 		{
 			value = Mathf.Clamp(value, minValue, maxValue);
@@ -579,146 +542,105 @@ namespace Rewired.UI.ControlMapper
 			return value;
 		}
 
-		// Token: 0x0400130A RID: 4874
 		private const float minSensitivityOtherAxes = 0.1f;
 
-		// Token: 0x0400130B RID: 4875
 		private const float maxDeadzone = 0.8f;
 
-		// Token: 0x0400130C RID: 4876
 		[SerializeField]
 		private RectTransform rightContentContainer;
 
-		// Token: 0x0400130D RID: 4877
 		[SerializeField]
 		private RectTransform valueDisplayGroup;
 
-		// Token: 0x0400130E RID: 4878
 		[SerializeField]
 		private RectTransform calibratedValueMarker;
 
-		// Token: 0x0400130F RID: 4879
 		[SerializeField]
 		private RectTransform rawValueMarker;
 
-		// Token: 0x04001310 RID: 4880
 		[SerializeField]
 		private RectTransform calibratedZeroMarker;
 
-		// Token: 0x04001311 RID: 4881
 		[SerializeField]
 		private RectTransform deadzoneArea;
 
-		// Token: 0x04001312 RID: 4882
 		[SerializeField]
 		private Slider deadzoneSlider;
 
-		// Token: 0x04001313 RID: 4883
 		[SerializeField]
 		private Slider zeroSlider;
 
-		// Token: 0x04001314 RID: 4884
 		[SerializeField]
 		private Slider sensitivitySlider;
 
-		// Token: 0x04001315 RID: 4885
 		[SerializeField]
 		private Toggle invertToggle;
 
-		// Token: 0x04001316 RID: 4886
 		[SerializeField]
 		private RectTransform axisScrollAreaContent;
 
-		// Token: 0x04001317 RID: 4887
 		[SerializeField]
 		private Button doneButton;
 
-		// Token: 0x04001318 RID: 4888
 		[SerializeField]
 		private Button calibrateButton;
 
-		// Token: 0x04001319 RID: 4889
 		[SerializeField]
 		private TMP_Text doneButtonLabel;
 
-		// Token: 0x0400131A RID: 4890
 		[SerializeField]
 		private TMP_Text cancelButtonLabel;
 
-		// Token: 0x0400131B RID: 4891
 		[SerializeField]
 		private TMP_Text defaultButtonLabel;
 
-		// Token: 0x0400131C RID: 4892
 		[SerializeField]
 		private TMP_Text deadzoneSliderLabel;
 
-		// Token: 0x0400131D RID: 4893
 		[SerializeField]
 		private TMP_Text zeroSliderLabel;
 
-		// Token: 0x0400131E RID: 4894
 		[SerializeField]
 		private TMP_Text sensitivitySliderLabel;
 
-		// Token: 0x0400131F RID: 4895
 		[SerializeField]
 		private TMP_Text invertToggleLabel;
 
-		// Token: 0x04001320 RID: 4896
 		[SerializeField]
 		private TMP_Text calibrateButtonLabel;
 
-		// Token: 0x04001321 RID: 4897
 		[SerializeField]
 		private GameObject axisButtonPrefab;
 
-		// Token: 0x04001322 RID: 4898
 		private Joystick joystick;
 
-		// Token: 0x04001323 RID: 4899
 		private string origCalibrationData;
 
-		// Token: 0x04001324 RID: 4900
 		private int selectedAxis = -1;
 
-		// Token: 0x04001325 RID: 4901
 		private AxisCalibrationData origSelectedAxisCalibrationData;
 
-		// Token: 0x04001326 RID: 4902
 		private float displayAreaWidth;
 
-		// Token: 0x04001327 RID: 4903
 		private List<Button> axisButtons;
 
-		// Token: 0x04001328 RID: 4904
 		private Dictionary<int, Action<int>> buttonCallbacks;
 
-		// Token: 0x04001329 RID: 4905
 		private int playerId;
 
-		// Token: 0x0400132A RID: 4906
 		private RewiredStandaloneInputModule rewiredStandaloneInputModule;
 
-		// Token: 0x0400132B RID: 4907
 		private int menuHorizActionId = -1;
 
-		// Token: 0x0400132C RID: 4908
 		private int menuVertActionId = -1;
 
-		// Token: 0x0400132D RID: 4909
 		private float minSensitivity;
 
-		// Token: 0x02000283 RID: 643
 		public enum ButtonIdentifier
 		{
-			// Token: 0x0400132F RID: 4911
 			Done,
-			// Token: 0x04001330 RID: 4912
 			Cancel,
-			// Token: 0x04001331 RID: 4913
 			Default,
-			// Token: 0x04001332 RID: 4914
 			Calibrate
 		}
 	}

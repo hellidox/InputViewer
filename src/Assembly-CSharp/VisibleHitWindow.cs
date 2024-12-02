@@ -1,10 +1,8 @@
-﻿using System;
+using System;
 using UnityEngine;
 
-// Token: 0x02000217 RID: 535
 public class VisibleHitWindow : MonoBehaviour
 {
-	// Token: 0x060017F8 RID: 6136 RVA: 0x000B28EC File Offset: 0x000B0AEC
 	private void \u02B2\u02B7\u02B5\u02C0\u02B4\u02B3\u02B8\u02B3\u02C0\u02BD\u02B5()
 	{
 		this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB = base.transform;
@@ -20,7 +18,6 @@ public class VisibleHitWindow : MonoBehaviour
 		this.\u02B2\u02B6\u02C1\u02B8\u02B3\u02B5\u02B7\u02B5\u02B6\u02B9\u02C0();
 	}
 
-	// Token: 0x060017F9 RID: 6137 RVA: 0x000B2978 File Offset: 0x000B0B78
 	private void \u02B2\u02BB\u02B6\u02B5\u02B9\u02B8\u02B2\u02B3\u02BF\u02C1\u02BF()
 	{
 		this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB = base.transform;
@@ -36,7 +33,6 @@ public class VisibleHitWindow : MonoBehaviour
 		this.Update();
 	}
 
-	// Token: 0x060017FA RID: 6138 RVA: 0x000B2A04 File Offset: 0x000B0C04
 	private void Start()
 	{
 		this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB = base.transform;
@@ -52,7 +48,6 @@ public class VisibleHitWindow : MonoBehaviour
 		this.Update();
 	}
 
-	// Token: 0x060017FB RID: 6139 RVA: 0x000B2A90 File Offset: 0x000B0C90
 	private void \u02BD\u02B7\u02BD\u02BF\u02BE\u02B9\u02B6\u02C0\u02B4\u02B7\u02BF()
 	{
 		this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.localScale = new Vector3(this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.localScale.x, this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.\u02B2\u02B3\u02BF\u02C1\u02BF\u02BB\u02C1\u02C0\u02C1\u02B6\u02BF * (float)this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4);
@@ -60,7 +55,6 @@ public class VisibleHitWindow : MonoBehaviour
 		this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.localPosition = new Vector3(440f, 330f, num * (float)this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4 + this.\u02BB\u02B6\u02BC\u02BC\u02B8\u02BA\u02BF\u02C0\u02BD\u02C0\u02B4);
 	}
 
-	// Token: 0x060017FC RID: 6140 RVA: 0x000B2B14 File Offset: 0x000B0D14
 	private void \u02C0\u02BC\u02BC\u02BD\u02B8\u02BD\u02BE\u02B6\u02BE\u02BB\u02BB()
 	{
 		this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB = base.transform;
@@ -76,7 +70,6 @@ public class VisibleHitWindow : MonoBehaviour
 		this.\u02C0\u02B5\u02BC\u02B3\u02B3\u02B7\u02B9\u02B2\u02C0\u02BC\u02BB();
 	}
 
-	// Token: 0x060017FE RID: 6142 RVA: 0x000B2BA0 File Offset: 0x000B0DA0
 	private void \u02C0\u02B5\u02BC\u02B3\u02B3\u02B7\u02B9\u02B2\u02C0\u02BC\u02BB()
 	{
 		this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.localScale = new Vector3(this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.localScale.x, this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.\u02B2\u02B3\u02BF\u02C1\u02BF\u02BB\u02C1\u02C0\u02C1\u02B6\u02BF * (float)this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4);
@@ -84,7 +77,6 @@ public class VisibleHitWindow : MonoBehaviour
 		this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.localPosition = new Vector3(1740f, 1861f, num * (float)this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4 + this.\u02BB\u02B6\u02BC\u02BC\u02B8\u02BA\u02BF\u02C0\u02BD\u02C0\u02B4);
 	}
 
-	// Token: 0x060017FF RID: 6143 RVA: 0x000B2C24 File Offset: 0x000B0E24
 	private void \u02B9\u02B5\u02B2\u02BB\u02B5\u02B3\u02B9\u02BC\u02BF\u02B5\u02BA()
 	{
 		this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.localScale = new Vector3(this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.localScale.x, this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.\u02B2\u02B3\u02BF\u02C1\u02BF\u02BB\u02C1\u02C0\u02C1\u02B6\u02BF * (float)this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4);
@@ -92,7 +84,6 @@ public class VisibleHitWindow : MonoBehaviour
 		this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.localPosition = new Vector3(954f, 893f, num * (float)this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4 + this.\u02BB\u02B6\u02BC\u02BC\u02B8\u02BA\u02BF\u02C0\u02BD\u02C0\u02B4);
 	}
 
-	// Token: 0x06001800 RID: 6144 RVA: 0x000B2CA8 File Offset: 0x000B0EA8
 	private void \u02B3\u02BB\u02BF\u02B4\u02B9\u02BA\u02B5\u02B5\u02BE\u02BB\u02BE()
 	{
 		this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB = base.transform;
@@ -108,7 +99,6 @@ public class VisibleHitWindow : MonoBehaviour
 		this.\u02BD\u02B7\u02BD\u02BF\u02BE\u02B9\u02B6\u02C0\u02B4\u02B7\u02BF();
 	}
 
-	// Token: 0x06001801 RID: 6145 RVA: 0x000B2978 File Offset: 0x000B0B78
 	private void \u02B6\u02B6\u02B4\u02BB\u02B7\u02C1\u02C0\u02B6\u02B7\u02BD\u02B5()
 	{
 		this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB = base.transform;
@@ -124,7 +114,6 @@ public class VisibleHitWindow : MonoBehaviour
 		this.Update();
 	}
 
-	// Token: 0x06001802 RID: 6146 RVA: 0x000B2D34 File Offset: 0x000B0F34
 	private void \u02BF\u02BA\u02B5\u02B8\u02B5\u02BF\u02B2\u02BF\u02B3\u02BC\u02BA()
 	{
 		this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB = base.transform;
@@ -140,7 +129,6 @@ public class VisibleHitWindow : MonoBehaviour
 		this.\u02BB\u02BF\u02BA\u02BC\u02B8\u02B7\u02B4\u02B5\u02B7\u02B9\u02C1();
 	}
 
-	// Token: 0x06001803 RID: 6147 RVA: 0x000B2DC0 File Offset: 0x000B0FC0
 	private void \u02BC\u02BC\u02B3\u02B2\u02C0\u02B6\u02B8\u02BA\u02BD\u02B9\u02B6()
 	{
 		this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB = base.transform;
@@ -156,7 +144,6 @@ public class VisibleHitWindow : MonoBehaviour
 		this.\u02BE\u02B2\u02B3\u02BB\u02BE\u02BB\u02B7\u02BF\u02B5\u02B7\u02B8();
 	}
 
-	// Token: 0x06001804 RID: 6148 RVA: 0x000B2E4C File Offset: 0x000B104C
 	private void \u02B4\u02B2\u02B5\u02BA\u02B4\u02C0\u02BC\u02BB\u02C1\u02B9\u02BD()
 	{
 		this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB = base.transform;
@@ -172,7 +159,6 @@ public class VisibleHitWindow : MonoBehaviour
 		this.\u02C0\u02B5\u02BC\u02B3\u02B3\u02B7\u02B9\u02B2\u02C0\u02BC\u02BB();
 	}
 
-	// Token: 0x06001805 RID: 6149 RVA: 0x000B2ED8 File Offset: 0x000B10D8
 	private void \u02B5\u02C0\u02BE\u02B8\u02B9\u02B2\u02BD\u02C0\u02BF\u02B3\u02BD()
 	{
 		this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB = base.transform;
@@ -188,7 +174,6 @@ public class VisibleHitWindow : MonoBehaviour
 		this.\u02B9\u02B5\u02B2\u02BB\u02B5\u02B3\u02B9\u02BC\u02BF\u02B5\u02BA();
 	}
 
-	// Token: 0x06001806 RID: 6150 RVA: 0x000B2F64 File Offset: 0x000B1164
 	private void \u02B2\u02B6\u02C1\u02B8\u02B3\u02B5\u02B7\u02B5\u02B6\u02B9\u02C0()
 	{
 		this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.localScale = new Vector3(this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.localScale.x, this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.\u02B2\u02B3\u02BF\u02C1\u02BF\u02BB\u02C1\u02C0\u02C1\u02B6\u02BF * (float)this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4);
@@ -196,7 +181,6 @@ public class VisibleHitWindow : MonoBehaviour
 		this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.localPosition = new Vector3(1983f, 1258f, num * (float)this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4 + this.\u02BB\u02B6\u02BC\u02BC\u02B8\u02BA\u02BF\u02C0\u02BD\u02C0\u02B4);
 	}
 
-	// Token: 0x06001807 RID: 6151 RVA: 0x000B2FE8 File Offset: 0x000B11E8
 	private void \u02BB\u02BF\u02BA\u02BC\u02B8\u02B7\u02B4\u02B5\u02B7\u02B9\u02C1()
 	{
 		this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.localScale = new Vector3(this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.localScale.x, this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.\u02B2\u02B3\u02BF\u02C1\u02BF\u02BB\u02C1\u02C0\u02C1\u02B6\u02BF * (float)this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4);
@@ -204,7 +188,6 @@ public class VisibleHitWindow : MonoBehaviour
 		this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.localPosition = new Vector3(1500f, 858f, num * (float)this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4 + this.\u02BB\u02B6\u02BC\u02BC\u02B8\u02BA\u02BF\u02C0\u02BD\u02C0\u02B4);
 	}
 
-	// Token: 0x06001808 RID: 6152 RVA: 0x000B306C File Offset: 0x000B126C
 	private void \u02C0\u02BE\u02B2\u02BE\u02C0\u02B5\u02B3\u02B7\u02B2\u02B8\u02B5()
 	{
 		this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB = base.transform;
@@ -220,7 +203,6 @@ public class VisibleHitWindow : MonoBehaviour
 		this.\u02BD\u02B7\u02BD\u02BF\u02BE\u02B9\u02B6\u02C0\u02B4\u02B7\u02BF();
 	}
 
-	// Token: 0x06001809 RID: 6153 RVA: 0x000B30F8 File Offset: 0x000B12F8
 	private void Update()
 	{
 		this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.localScale = new Vector3(this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.localScale.x, Mathf.Min(cUtilityClass.judgementHitWindowSize, 0.07f) * 2f * (float)this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4);
@@ -228,7 +210,6 @@ public class VisibleHitWindow : MonoBehaviour
 		this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.localPosition = new Vector3(0f, 0f, num * (float)this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4 + this.\u02BB\u02B6\u02BC\u02BC\u02B8\u02BA\u02BF\u02C0\u02BD\u02C0\u02B4);
 	}
 
-	// Token: 0x0600180A RID: 6154 RVA: 0x000B2A04 File Offset: 0x000B0C04
 	private void \u02B4\u02BC\u02BE\u02BF\u02B4\u02B5\u02BF\u02B7\u02BA\u02BA\u02BB()
 	{
 		this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB = base.transform;
@@ -244,7 +225,6 @@ public class VisibleHitWindow : MonoBehaviour
 		this.Update();
 	}
 
-	// Token: 0x0600180B RID: 6155 RVA: 0x000B3188 File Offset: 0x000B1388
 	private void \u02BE\u02B2\u02B3\u02BB\u02BE\u02BB\u02B7\u02BF\u02B5\u02B7\u02B8()
 	{
 		this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.localScale = new Vector3(this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.localScale.x, this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.\u02B2\u02B3\u02BF\u02C1\u02BF\u02BB\u02C1\u02C0\u02C1\u02B6\u02BF * (float)this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4);
@@ -252,7 +232,6 @@ public class VisibleHitWindow : MonoBehaviour
 		this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.localPosition = new Vector3(299f, 26f, num * (float)this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4 + this.\u02BB\u02B6\u02BC\u02BC\u02B8\u02BA\u02BF\u02C0\u02BD\u02C0\u02B4);
 	}
 
-	// Token: 0x0600180C RID: 6156 RVA: 0x000B2E4C File Offset: 0x000B104C
 	private void \u02B2\u02B9\u02C1\u02C1\u02B2\u02B3\u02C1\u02BF\u02BC\u02BB\u02C1()
 	{
 		this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB = base.transform;
@@ -268,21 +247,15 @@ public class VisibleHitWindow : MonoBehaviour
 		this.\u02C0\u02B5\u02BC\u02B3\u02B3\u02B7\u02B9\u02B2\u02C0\u02BC\u02BB();
 	}
 
-	// Token: 0x04001109 RID: 4361
 	private Transform \u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB;
 
-	// Token: 0x0400110A RID: 4362
 	public float \u02BB\u02B6\u02BC\u02BC\u02B8\u02BA\u02BF\u02C0\u02BD\u02C0\u02B4;
 
-	// Token: 0x0400110B RID: 4363
 	private BasePlayer \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7;
 
-	// Token: 0x0400110C RID: 4364
 	private GameManager \u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD;
 
-	// Token: 0x0400110D RID: 4365
 	private int \u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4;
 
-	// Token: 0x0400110E RID: 4366
 	private SpriteRenderer[] windows;
 }

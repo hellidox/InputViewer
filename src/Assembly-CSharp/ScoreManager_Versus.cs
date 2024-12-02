@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using StrikeCore;
@@ -6,10 +6,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x020001F1 RID: 497
 public class ScoreManager_Versus : MonoBehaviour
 {
-	// Token: 0x06001624 RID: 5668 RVA: 0x000116CD File Offset: 0x0000F8CD
 	private void \u02B5\u02BD\u02BD\u02BE\u02B9\u02BD\u02B2\u02C1\u02C1\u02B3\u02B6()
 	{
 		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 == null)
@@ -22,7 +20,6 @@ public class ScoreManager_Versus : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001625 RID: 5669 RVA: 0x000116FD File Offset: 0x0000F8FD
 	private void \u02BF\u02B2\u02C1\u02C1\u02B6\u02BE\u02B3\u02BD\u02B8\u02B3\u02BE()
 	{
 		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 == null)
@@ -35,7 +32,6 @@ public class ScoreManager_Versus : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001626 RID: 5670 RVA: 0x000AB154 File Offset: 0x000A9354
 	private void \u02BE\u02BF\u02BA\u02B2\u02B5\u02B8\u02B5\u02B3\u02B5\u02B6\u02B9()
 	{
 		this.\u02BC\u02C1\u02BF\u02BD\u02BD\u02BE\u02BE\u02B9\u02BC\u02B9\u02B6.Sort(new Comparison<BasePlayer>(ScoreManager_Versus.<>c.<>9.\u02B3\u02B6\u02BD\u02BE\u02C1\u02B6\u02B4\u02BA\u02BA\u02B7\u02BD));
@@ -60,7 +56,6 @@ public class ScoreManager_Versus : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001628 RID: 5672 RVA: 0x000116FD File Offset: 0x0000F8FD
 	private void \u02BE\u02B6\u02B9\u02B2\u02C1\u02B9\u02B8\u02B6\u02B4\u02B3\u02B3()
 	{
 		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 == null)
@@ -73,7 +68,6 @@ public class ScoreManager_Versus : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001629 RID: 5673 RVA: 0x0001172D File Offset: 0x0000F92D
 	private IEnumerator Start()
 	{
 		base.enabled = false;
@@ -115,7 +109,6 @@ public class ScoreManager_Versus : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x0600162A RID: 5674 RVA: 0x000AB2E4 File Offset: 0x000A94E4
 	private void \u02BB\u02BD\u02C0\u02C1\u02C0\u02B3\u02B9\u02B6\u02BE\u02BF\u02BB()
 	{
 		this.\u02BC\u02C1\u02BF\u02BD\u02BD\u02BE\u02BE\u02B9\u02BC\u02B9\u02B6.Sort(new Comparison<BasePlayer>(ScoreManager_Versus.<>c.<>9.\u02B3\u02B6\u02BD\u02BE\u02C1\u02B6\u02B4\u02BA\u02BA\u02B7\u02BD));
@@ -140,7 +133,6 @@ public class ScoreManager_Versus : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600162B RID: 5675 RVA: 0x0001173C File Offset: 0x0000F93C
 	private IEnumerator \u02B6\u02B6\u02B4\u02BB\u02B7\u02C1\u02C0\u02B6\u02B7\u02BD\u02B5()
 	{
 		ScoreManager_Versus.\u02B3\u02B7\u02BA\u02B6\u02C0\u02B9\u02BE\u02BF\u02B5\u02C0\u02BB u02B3_u02B7_u02BA_u02B6_u02C0_u02B9_u02BE_u02BF_u02B5_u02C0_u02BB = new ScoreManager_Versus.\u02B3\u02B7\u02BA\u02B6\u02C0\u02B9\u02BE\u02BF\u02B5\u02C0\u02BB(1);
@@ -148,7 +140,6 @@ public class ScoreManager_Versus : MonoBehaviour
 		return u02B3_u02B7_u02BA_u02B6_u02C0_u02B9_u02BE_u02BF_u02B5_u02C0_u02BB;
 	}
 
-	// Token: 0x0600162C RID: 5676 RVA: 0x000AB474 File Offset: 0x000A9674
 	private void \u02B4\u02BA\u02B7\u02B3\u02BE\u02BE\u02B7\u02B9\u02BC\u02BB\u02B5()
 	{
 		this.\u02BC\u02C1\u02BF\u02BD\u02BD\u02BE\u02BE\u02B9\u02BC\u02B9\u02B6.Sort(new Comparison<BasePlayer>(ScoreManager_Versus.<>c.<>9.\u02B3\u02B6\u02BD\u02BE\u02C1\u02B6\u02B4\u02BA\u02BA\u02B7\u02BD));
@@ -173,14 +164,12 @@ public class ScoreManager_Versus : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600162D RID: 5677 RVA: 0x0001174B File Offset: 0x0000F94B
 	public void \u02B3\u02B4\u02B8\u02BB\u02B2\u02B2\u02BB\u02BE\u02B9\u02B6\u02B8(int \u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7)
 	{
 		this.\u02BC\u02C1\u02BF\u02BD\u02BD\u02BE\u02BE\u02B9\u02BC\u02B9\u02B6.Remove(this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[\u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7]);
 		this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[\u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7] = null;
 	}
 
-	// Token: 0x0600162E RID: 5678 RVA: 0x0001176A File Offset: 0x0000F96A
 	private void Awake()
 	{
 		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 == null)
@@ -193,7 +182,6 @@ public class ScoreManager_Versus : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600162F RID: 5679 RVA: 0x000AB604 File Offset: 0x000A9804
 	private void \u02BE\u02BD\u02C1\u02BA\u02C1\u02B6\u02B8\u02BB\u02BA\u02C0\u02BE()
 	{
 		this.\u02BC\u02C1\u02BF\u02BD\u02BD\u02BE\u02BE\u02B9\u02BC\u02B9\u02B6.Sort(new Comparison<BasePlayer>(ScoreManager_Versus.<>c.<>9.\u02B3\u02B6\u02BD\u02BE\u02C1\u02B6\u02B4\u02BA\u02BA\u02B7\u02BD));
@@ -218,7 +206,6 @@ public class ScoreManager_Versus : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001630 RID: 5680 RVA: 0x0001172D File Offset: 0x0000F92D
 	private IEnumerator \u02B3\u02BB\u02BF\u02B4\u02B9\u02BA\u02B5\u02B5\u02BE\u02BB\u02BE()
 	{
 		base.enabled = false;
@@ -260,7 +247,6 @@ public class ScoreManager_Versus : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06001631 RID: 5681 RVA: 0x000AB794 File Offset: 0x000A9994
 	private void FixedUpdate()
 	{
 		this.\u02BC\u02C1\u02BF\u02BD\u02BD\u02BE\u02BE\u02B9\u02BC\u02B9\u02B6.Sort(new Comparison<BasePlayer>(ScoreManager_Versus.<>c.<>9.\u02B3\u02B6\u02BD\u02BE\u02C1\u02B6\u02B4\u02BA\u02BA\u02B7\u02BD));
@@ -285,7 +271,6 @@ public class ScoreManager_Versus : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001632 RID: 5682 RVA: 0x0001172D File Offset: 0x0000F92D
 	private IEnumerator \u02BE\u02B8\u02B4\u02BC\u02B7\u02B7\u02BE\u02BC\u02B5\u02BC\u02BF()
 	{
 		base.enabled = false;
@@ -327,30 +312,21 @@ public class ScoreManager_Versus : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x04001032 RID: 4146
 	private BasePlayer[] \u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD;
 
-	// Token: 0x04001033 RID: 4147
 	private TextMeshProUGUI[] \u02B7\u02BE\u02BF\u02B6\u02C0\u02B9\u02BB\u02B5\u02B9\u02BB\u02BD;
 
-	// Token: 0x04001034 RID: 4148
 	private TextMeshProUGUI[] \u02B2\u02BB\u02B9\u02B5\u02C1\u02C1\u02C1\u02B6\u02B8\u02B3\u02B2;
 
-	// Token: 0x04001035 RID: 4149
 	private TextMeshProUGUI[] \u02B9\u02BF\u02B8\u02BD\u02BA\u02B8\u02B9\u02BE\u02BD\u02BC\u02BB;
 
-	// Token: 0x04001036 RID: 4150
 	private TextMeshProUGUI[] \u02BE\u02B3\u02B4\u02B7\u02BA\u02B7\u02BF\u02B4\u02BF\u02C1\u02C1;
 
-	// Token: 0x04001037 RID: 4151
 	private Image[] \u02B6\u02BA\u02B7\u02BB\u02B2\u02B6\u02B4\u02BE\u02BF\u02B2\u02B6;
 
-	// Token: 0x04001038 RID: 4152
 	private Transform[] \u02B2\u02BC\u02BE\u02B2\u02B7\u02B5\u02C1\u02B5\u02C1\u02B4\u02BB;
 
-	// Token: 0x04001039 RID: 4153
 	private List<BasePlayer> \u02BC\u02C1\u02BF\u02BD\u02BD\u02BE\u02BE\u02B9\u02BC\u02B9\u02B6;
 
-	// Token: 0x0400103A RID: 4154
 	private GameManager \u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD;
 }

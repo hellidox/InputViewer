@@ -1,9 +1,6 @@
-﻿using System;
+using System;
 
-// Token: 0x02000143 RID: 323
 public interface \u02C0\u02C1\u02B8\u02BF\u02BB\u02BB\u02B9\u02BC\u02B9\u02BD\u02B7
 {
-	// Token: 0x17000151 RID: 337
-	// (set) Token: 0x06000E73 RID: 3699
 	\u02BB\u02B9\u02B2\u02B3\u02B4\u02B3\u02BF\u02C0\u02B4\u02B8\u02B9 \u02B7\u02B9\u02BA\u02B6\u02B3\u02B4\u02B5\u02C1\u02B4\u02B9\u02B6 { set; }
 }

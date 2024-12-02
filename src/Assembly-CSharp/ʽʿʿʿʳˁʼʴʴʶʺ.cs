@@ -1,10 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
-// Token: 0x02000241 RID: 577
 public static class \u02BD\u02BF\u02BF\u02BF\u02B3\u02C1\u02BC\u02B4\u02B4\u02B6\u02BA
 {
-	// Token: 0x040011FD RID: 4605
 	public static Dictionary<string, string> \u02BB\u02C0\u02B8\u02B4\u02B5\u02B7\u02B7\u02BE\u02B3\u02B9\u02C0 = new Dictionary<string, string>
 	{
 		{ "a", "A section" },

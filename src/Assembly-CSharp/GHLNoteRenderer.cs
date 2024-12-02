@@ -1,16 +1,13 @@
-﻿using System;
+using System;
 using UnityEngine;
 
-// Token: 0x02000140 RID: 320
 public class GHLNoteRenderer : GuitarNoteRenderer
 {
-	// Token: 0x06000E20 RID: 3616 RVA: 0x0000D9B2 File Offset: 0x0000BBB2
 	protected virtual void \u02BE\u02C0\u02B7\u02B6\u02B5\u02B3\u02B7\u02BB\u02BA\u02B3\u02B4()
 	{
 		base.\u02BE\u02BD\u02BB\u02B8\u02B5\u02BF\u02BE\u02B6\u02BD\u02B9\u02BD();
 	}
 
-	// Token: 0x06000E21 RID: 3617 RVA: 0x0000D9BA File Offset: 0x0000BBBA
 	protected virtual int \u02B4\u02C0\u02B2\u02BF\u02BC\u02B3\u02BD\u02B8\u02B3\u02BB\u02B8(ushort \u02BF\u02BB\u02BB\u02BB\u02B6\u02B4\u02B8\u02BE\u02C0\u02C1\u02B9)
 	{
 		if (\u02BF\u02BB\u02BB\u02BB\u02B6\u02B4\u02B8\u02BE\u02C0\u02C1\u02B9 <= 1)
@@ -49,13 +46,11 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 		return 1;
 	}
 
-	// Token: 0x06000E22 RID: 3618 RVA: 0x0000D9B2 File Offset: 0x0000BBB2
 	protected override void \u02BE\u02BD\u02BB\u02B8\u02B5\u02BF\u02BE\u02B6\u02BD\u02B9\u02BD()
 	{
 		base.\u02BE\u02BD\u02BB\u02B8\u02B5\u02BF\u02BE\u02B6\u02BD\u02B9\u02BD();
 	}
 
-	// Token: 0x06000E23 RID: 3619 RVA: 0x00076340 File Offset: 0x00074540
 	protected virtual void \u02BB\u02BF\u02BA\u02BC\u02B8\u02B7\u02B4\u02B5\u02B7\u02B9\u02C1()
 	{
 		if (this.basePlayer.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0 == null)
@@ -222,20 +217,17 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 		BaseNoteRenderer.\u02B3\u02B3\u02C1\u02B8\u02BA\u02B8\u02BF\u02BB\u02B2\u02BD\u02BC(this.\u02BE\u02B4\u02B2\u02BD\u02B6\u02BC\u02BF\u02BC\u02C1\u02B2\u02B5, num3);
 	}
 
-	// Token: 0x06000E24 RID: 3620 RVA: 0x0000D9B2 File Offset: 0x0000BBB2
 	protected virtual void \u02B2\u02B6\u02B4\u02BC\u02C1\u02B2\u02BB\u02B2\u02B6\u02B2\u02BC()
 	{
 		base.\u02BE\u02BD\u02BB\u02B8\u02B5\u02BF\u02BE\u02B6\u02BD\u02B9\u02BD();
 	}
 
-	// Token: 0x06000E25 RID: 3621 RVA: 0x0000D9F8 File Offset: 0x0000BBF8
 	protected virtual void \u02B4\u02B2\u02B5\u02BA\u02B4\u02C0\u02BC\u02BB\u02C1\u02B9\u02BD()
 	{
 		base.Start();
 		this.\u02B9\u02B6\u02B8\u02BB\u02BD\u02BB\u02BC\u02B4\u02BC\u02BB\u02BA = new MaterialPropertyBlock();
 	}
 
-	// Token: 0x06000E26 RID: 3622 RVA: 0x000769B0 File Offset: 0x00074BB0
 	protected virtual Color \u02BE\u02B3\u02BA\u02B6\u02BA\u02BC\u02B8\u02BA\u02BD\u02BD\u02B8(ushort \u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB)
 	{
 		if (\u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB <= 1)
@@ -272,7 +264,6 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 		return Color.white;
 	}
 
-	// Token: 0x06000E27 RID: 3623 RVA: 0x00076A38 File Offset: 0x00074C38
 	protected virtual Color \u02B3\u02B3\u02C0\u02BC\u02B4\u02BC\u02BA\u02B9\u02B8\u02BE\u02BD(ushort \u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB)
 	{
 		if (\u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB <= 7)
@@ -309,7 +300,6 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 		return Color.white;
 	}
 
-	// Token: 0x06000E28 RID: 3624 RVA: 0x00076AC0 File Offset: 0x00074CC0
 	protected override Color \u02B3\u02B7\u02B2\u02BC\u02B4\u02B3\u02B9\u02B4\u02B3\u02BF\u02BE(ushort \u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB)
 	{
 		if (\u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB <= 5)
@@ -346,20 +336,17 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 		return Color.white;
 	}
 
-	// Token: 0x06000E29 RID: 3625 RVA: 0x0000D9B2 File Offset: 0x0000BBB2
 	protected virtual void \u02BA\u02B6\u02BF\u02B9\u02C0\u02BE\u02BB\u02B9\u02B8\u02BB\u02BE()
 	{
 		base.\u02BE\u02BD\u02BB\u02B8\u02B5\u02BF\u02BE\u02B6\u02BD\u02B9\u02BD();
 	}
 
-	// Token: 0x06000E2A RID: 3626 RVA: 0x0000DA0B File Offset: 0x0000BC0B
 	protected virtual void \u02C0\u02BC\u02BC\u02BD\u02B8\u02BD\u02BE\u02B6\u02BE\u02BB\u02BB()
 	{
 		base.\u02B2\u02C1\u02BB\u02B5\u02BF\u02B3\u02B5\u02B3\u02BA\u02BD\u02C1();
 		this.\u02B9\u02B6\u02B8\u02BB\u02BD\u02BB\u02BC\u02B4\u02BC\u02BB\u02BA = new MaterialPropertyBlock();
 	}
 
-	// Token: 0x06000E2B RID: 3627 RVA: 0x0000DA1E File Offset: 0x0000BC1E
 	protected override int \u02C1\u02B7\u02C0\u02B7\u02B9\u02B2\u02B2\u02BF\u02BC\u02C0\u02BF(ushort \u02BF\u02BB\u02BB\u02BB\u02B6\u02B4\u02B8\u02BE\u02C0\u02C1\u02B9)
 	{
 		if (\u02BF\u02BB\u02BB\u02BB\u02B6\u02B4\u02B8\u02BE\u02C0\u02C1\u02B9 <= 8)
@@ -398,14 +385,12 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 		return 1;
 	}
 
-	// Token: 0x06000E2C RID: 3628 RVA: 0x0000DA0B File Offset: 0x0000BC0B
 	protected virtual void \u02B8\u02B4\u02B9\u02B6\u02BA\u02C0\u02B8\u02C0\u02C0\u02B2\u02B4()
 	{
 		base.\u02B2\u02C1\u02BB\u02B5\u02BF\u02B3\u02B5\u02B3\u02BA\u02BD\u02C1();
 		this.\u02B9\u02B6\u02B8\u02BB\u02BD\u02BB\u02BC\u02B4\u02BC\u02BB\u02BA = new MaterialPropertyBlock();
 	}
 
-	// Token: 0x06000E2D RID: 3629 RVA: 0x00076B48 File Offset: 0x00074D48
 	protected virtual Color \u02BA\u02B2\u02BF\u02C0\u02BE\u02BF\u02B5\u02BF\u02B7\u02BE\u02B4(ushort \u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB)
 	{
 		if (\u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB <= 5)
@@ -442,7 +427,6 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 		return Color.white;
 	}
 
-	// Token: 0x06000E2E RID: 3630 RVA: 0x00076BD0 File Offset: 0x00074DD0
 	protected override Color \u02C1\u02B7\u02BF\u02BF\u02B2\u02BD\u02BD\u02B8\u02C1\u02B2\u02C0(ushort \u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB)
 	{
 		if (\u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB <= 8)
@@ -479,7 +463,6 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 		return Color.white;
 	}
 
-	// Token: 0x06000E2F RID: 3631 RVA: 0x00076C58 File Offset: 0x00074E58
 	protected virtual void \u02BC\u02B6\u02B8\u02BA\u02B2\u02B4\u02B7\u02B3\u02C0\u02B8\u02B7()
 	{
 		if (this.basePlayer.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0 == null)
@@ -646,14 +629,12 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 		BaseNoteRenderer.\u02B3\u02B3\u02C1\u02B8\u02BA\u02B8\u02BF\u02BB\u02B2\u02BD\u02BC(this.\u02BE\u02B4\u02B2\u02BD\u02B6\u02BC\u02BF\u02BC\u02C1\u02B2\u02B5, num3);
 	}
 
-	// Token: 0x06000E30 RID: 3632 RVA: 0x0000DA0B File Offset: 0x0000BC0B
 	protected virtual void \u02B4\u02BC\u02BE\u02BF\u02B4\u02B5\u02BF\u02B7\u02BA\u02BA\u02BB()
 	{
 		base.\u02B2\u02C1\u02BB\u02B5\u02BF\u02B3\u02B5\u02B3\u02BA\u02BD\u02C1();
 		this.\u02B9\u02B6\u02B8\u02BB\u02BD\u02BB\u02BC\u02B4\u02BC\u02BB\u02BA = new MaterialPropertyBlock();
 	}
 
-	// Token: 0x06000E31 RID: 3633 RVA: 0x0000DA5C File Offset: 0x0000BC5C
 	protected virtual int \u02B4\u02BC\u02BE\u02C0\u02BF\u02B6\u02C1\u02B5\u02BB\u02C0\u02BF(ushort \u02BF\u02BB\u02BB\u02BB\u02B6\u02B4\u02B8\u02BE\u02C0\u02C1\u02B9)
 	{
 		if (\u02BF\u02BB\u02BB\u02BB\u02B6\u02B4\u02B8\u02BE\u02C0\u02C1\u02B9 <= 6)
@@ -692,7 +673,6 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 		return 1;
 	}
 
-	// Token: 0x06000E32 RID: 3634 RVA: 0x0000DA9A File Offset: 0x0000BC9A
 	protected override int \u02B9\u02B7\u02B6\u02B9\u02B8\u02B5\u02B2\u02B7\u02BC\u02BA\u02BE(ushort \u02BF\u02BB\u02BB\u02BB\u02B6\u02B4\u02B8\u02BE\u02C0\u02C1\u02B9)
 	{
 		if (\u02BF\u02BB\u02BB\u02BB\u02B6\u02B4\u02B8\u02BE\u02C0\u02C1\u02B9 <= 0)
@@ -731,7 +711,6 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 		return 0;
 	}
 
-	// Token: 0x06000E34 RID: 3636 RVA: 0x000772C8 File Offset: 0x000754C8
 	protected virtual Color \u02B3\u02BA\u02BF\u02B8\u02BC\u02BF\u02B8\u02BF\u02BB\u02B9\u02BA(ushort \u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB)
 	{
 		if (\u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB <= 0)
@@ -768,7 +747,6 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 		return Color.white;
 	}
 
-	// Token: 0x06000E35 RID: 3637 RVA: 0x00077350 File Offset: 0x00075550
 	protected override void Update()
 	{
 		if (this.basePlayer.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0 == null)
@@ -935,21 +913,18 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 		BaseNoteRenderer.\u02B3\u02B3\u02C1\u02B8\u02BA\u02B8\u02BF\u02BB\u02B2\u02BD\u02BC(this.\u02BE\u02B4\u02B2\u02BD\u02B6\u02BC\u02BF\u02BC\u02C1\u02B2\u02B5, num3);
 	}
 
-	// Token: 0x06000E36 RID: 3638 RVA: 0x0000D9F8 File Offset: 0x0000BBF8
 	protected virtual void \u02B7\u02B8\u02BD\u02C0\u02B2\u02B4\u02B7\u02C0\u02BC\u02BE\u02B3()
 	{
 		base.Start();
 		this.\u02B9\u02B6\u02B8\u02BB\u02BD\u02BB\u02BC\u02B4\u02BC\u02BB\u02BA = new MaterialPropertyBlock();
 	}
 
-	// Token: 0x06000E37 RID: 3639 RVA: 0x0000D9F8 File Offset: 0x0000BBF8
 	protected override void Start()
 	{
 		base.Start();
 		this.\u02B9\u02B6\u02B8\u02BB\u02BD\u02BB\u02BC\u02B4\u02BC\u02BB\u02BA = new MaterialPropertyBlock();
 	}
 
-	// Token: 0x06000E38 RID: 3640 RVA: 0x000779C0 File Offset: 0x00075BC0
 	protected virtual Color \u02BF\u02B2\u02BF\u02B9\u02B3\u02B4\u02BB\u02B6\u02BA\u02BC\u02BA(ushort \u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB)
 	{
 		if (\u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB <= 4)
@@ -986,7 +961,6 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 		return Color.white;
 	}
 
-	// Token: 0x06000E39 RID: 3641 RVA: 0x00077A48 File Offset: 0x00075C48
 	protected virtual void \u02B9\u02B5\u02B2\u02BB\u02B5\u02B3\u02B9\u02BC\u02BF\u02B5\u02BA()
 	{
 		if (this.basePlayer.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0 == null)

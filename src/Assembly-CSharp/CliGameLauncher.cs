@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -7,10 +7,8 @@ using StrikeCore;
 using UnityEngine;
 using UnityEngine.Events;
 
-// Token: 0x0200003F RID: 63
 public class CliGameLauncher : MonoBehaviour
 {
-	// Token: 0x06000264 RID: 612 RVA: 0x00007146 File Offset: 0x00005346
 	public IEnumerator \u02BD\u02BE\u02B9\u02BA\u02B8\u02B9\u02BB\u02B5\u02B8\u02B4\u02B8()
 	{
 		global::UnityEngine.Object.Instantiate<GameObject>(this.globalVariablesPrefab);
@@ -56,7 +54,6 @@ public class CliGameLauncher : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06000265 RID: 613 RVA: 0x00024B30 File Offset: 0x00022D30
 	private string \u02C1\u02BB\u02BB\u02BC\u02BA\u02BE\u02B2\u02B2\u02BE\u02C0\u02B7(string \u02B5\u02BF\u02B4\u02C1\u02BE\u02B7\u02C0\u02B9\u02C1\u02B8\u02BC)
 	{
 		switch (this.\u02BA\u02B6\u02B4\u02BE\u02B5\u02BB\u02B6\u02B8\u02B4\u02B4\u02BE)
@@ -74,7 +71,6 @@ public class CliGameLauncher : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000266 RID: 614 RVA: 0x00024B90 File Offset: 0x00022D90
 	public void \u02C0\u02BD\u02BF\u02B5\u02B8\u02B7\u02B2\u02B5\u02B6\u02B8\u02B3()
 	{
 		GlobalVariables u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7;
@@ -108,7 +104,6 @@ public class CliGameLauncher : MonoBehaviour
 		base.enabled = false;
 	}
 
-	// Token: 0x06000267 RID: 615 RVA: 0x00024C70 File Offset: 0x00022E70
 	public bool \u02BB\u02B4\u02C1\u02B6\u02C1\u02BE\u02B4\u02C1\u02B6\u02B2\u02B2()
 	{
 		this.\u02BB\u02B9\u02BE\u02B5\u02C0\u02BD\u02C0\u02B5\u02B3\u02B2\u02C1 = base.GetComponent<UnpackingScene>();
@@ -125,7 +120,6 @@ public class CliGameLauncher : MonoBehaviour
 		return this.\u02B4\u02B6\u02B2\u02BB\u02B3\u02B5\u02B3\u02BD\u02B2\u02B3\u02BF(array);
 	}
 
-	// Token: 0x06000268 RID: 616 RVA: 0x00024CC8 File Offset: 0x00022EC8
 	public void \u02C1\u02B2\u02B6\u02B6\u02B4\u02C0\u02BB\u02BA\u02B6\u02B4\u02BD()
 	{
 		GlobalVariables u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7;
@@ -159,7 +153,6 @@ public class CliGameLauncher : MonoBehaviour
 		base.enabled = true;
 	}
 
-	// Token: 0x06000269 RID: 617 RVA: 0x00024DA8 File Offset: 0x00022FA8
 	private ValueTuple<Instrument, Difficulty> \u02B4\u02BE\u02B9\u02B6\u02BA\u02C1\u02BC\u02B3\u02BC\u02BE\u02B9(string \u02BD\u02BD\u02BF\u02BF\u02BE\u02B2\u02B5\u02BD\u02BC\u02B7\u02C0)
 	{
 		string[] array = \u02BD\u02BD\u02BF\u02BF\u02BE\u02B2\u02B5\u02BD\u02BC\u02B7\u02C0.Split(',', StringSplitOptions.None);
@@ -299,7 +292,6 @@ public class CliGameLauncher : MonoBehaviour
 		return new ValueTuple<Instrument, Difficulty>(instrument, difficulty);
 	}
 
-	// Token: 0x0600026A RID: 618 RVA: 0x00024FC0 File Offset: 0x000231C0
 	private string \u02B5\u02B6\u02BD\u02BC\u02C0\u02BD\u02B2\u02B9\u02BB\u02B6\u02B3(Instrument \u02BD\u02BD\u02BB\u02B5\u02BA\u02BE\u02B9\u02B8\u02BB\u02B9\u02B4)
 	{
 		switch (\u02BD\u02BD\u02BB\u02B5\u02BA\u02BE\u02B9\u02B8\u02BB\u02B9\u02B4)
@@ -330,7 +322,6 @@ public class CliGameLauncher : MonoBehaviour
 		return "Unknown";
 	}
 
-	// Token: 0x0600026B RID: 619 RVA: 0x00007155 File Offset: 0x00005355
 	public IEnumerator \u02B3\u02B8\u02B9\u02B3\u02B8\u02B3\u02BF\u02C0\u02C1\u02B8\u02BB()
 	{
 		CliGameLauncher.\u02BA\u02B5\u02BB\u02BD\u02B2\u02B2\u02B9\u02BC\u02BE\u02B5\u02BC u02BA_u02B5_u02BB_u02BD_u02B2_u02B2_u02B9_u02BC_u02BE_u02B5_u02BC = new CliGameLauncher.\u02BA\u02B5\u02BB\u02BD\u02B2\u02B2\u02B9\u02BC\u02BE\u02B5\u02BC(1);
@@ -338,7 +329,6 @@ public class CliGameLauncher : MonoBehaviour
 		return u02BA_u02B5_u02BB_u02BD_u02B2_u02B2_u02B9_u02BC_u02BE_u02B5_u02BC;
 	}
 
-	// Token: 0x0600026C RID: 620 RVA: 0x0002504C File Offset: 0x0002324C
 	public bool \u02B7\u02BC\u02BB\u02BE\u02B5\u02B5\u02B4\u02B6\u02B7\u02B4\u02B2()
 	{
 		this.\u02BB\u02B9\u02BE\u02B5\u02C0\u02BD\u02C0\u02B5\u02B3\u02B2\u02C1 = base.GetComponent<UnpackingScene>();
@@ -355,7 +345,6 @@ public class CliGameLauncher : MonoBehaviour
 		return !this.\u02B4\u02B6\u02B2\u02BB\u02B3\u02B5\u02B3\u02BD\u02B2\u02B3\u02BF(array) || true;
 	}
 
-	// Token: 0x0600026D RID: 621 RVA: 0x00024C70 File Offset: 0x00022E70
 	public bool \u02B8\u02B4\u02BE\u02B7\u02B3\u02B3\u02BC\u02BF\u02BE\u02B6\u02B4()
 	{
 		this.\u02BB\u02B9\u02BE\u02B5\u02C0\u02BD\u02C0\u02B5\u02B3\u02B2\u02C1 = base.GetComponent<UnpackingScene>();
@@ -372,7 +361,6 @@ public class CliGameLauncher : MonoBehaviour
 		return this.\u02B4\u02B6\u02B2\u02BB\u02B3\u02B5\u02B3\u02BD\u02B2\u02B3\u02BF(array);
 	}
 
-	// Token: 0x0600026E RID: 622 RVA: 0x000250A4 File Offset: 0x000232A4
 	public bool \u02B6\u02B7\u02B6\u02B2\u02BD\u02BC\u02BC\u02BE\u02BF\u02B5\u02B5(int \u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5)
 	{
 		ValueTuple<Instrument, Difficulty> valueTuple = this.\u02BA\u02B5\u02BE\u02C1\u02BA\u02B6\u02B2\u02B4\u02B8\u02B3\u02B3[\u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5];
@@ -428,7 +416,6 @@ public class CliGameLauncher : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x0600026F RID: 623 RVA: 0x00007146 File Offset: 0x00005346
 	public IEnumerator \u02B2\u02B6\u02B9\u02BE\u02B6\u02BC\u02BA\u02B2\u02BF\u02BC\u02B5()
 	{
 		global::UnityEngine.Object.Instantiate<GameObject>(this.globalVariablesPrefab);
@@ -474,7 +461,6 @@ public class CliGameLauncher : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06000270 RID: 624 RVA: 0x00025268 File Offset: 0x00023468
 	private bool \u02B4\u02B6\u02B2\u02BB\u02B3\u02B5\u02B3\u02BD\u02B2\u02B3\u02BF(string[] \u02B9\u02BE\u02BF\u02B9\u02BF\u02BA\u02B9\u02BD\u02B7\u02BB\u02B5)
 	{
 		bool flag = false;
@@ -586,7 +572,6 @@ public class CliGameLauncher : MonoBehaviour
 		return flag;
 	}
 
-	// Token: 0x06000271 RID: 625 RVA: 0x00025448 File Offset: 0x00023648
 	private ValueTuple<Instrument, Difficulty> \u02BA\u02BA\u02BC\u02BF\u02B3\u02C1\u02BE\u02B7\u02C1\u02B2\u02B7(string \u02BD\u02BD\u02BF\u02BF\u02BE\u02B2\u02B5\u02BD\u02BC\u02B7\u02C0)
 	{
 		string[] array = \u02BD\u02BD\u02BF\u02BF\u02BE\u02B2\u02B5\u02BD\u02BC\u02B7\u02C0.Split('$', StringSplitOptions.RemoveEmptyEntries);
@@ -726,7 +711,6 @@ public class CliGameLauncher : MonoBehaviour
 		return new ValueTuple<Instrument, Difficulty>(instrument, difficulty);
 	}
 
-	// Token: 0x06000272 RID: 626 RVA: 0x00025660 File Offset: 0x00023860
 	public bool \u02B6\u02BF\u02B9\u02BA\u02BA\u02B7\u02BF\u02BA\u02B9\u02B7\u02B4(int \u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5)
 	{
 		ValueTuple<Instrument, Difficulty> valueTuple = this.\u02BA\u02B5\u02BE\u02C1\u02BA\u02B6\u02B2\u02B4\u02B8\u02B3\u02B3[\u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5];
@@ -782,7 +766,6 @@ public class CliGameLauncher : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x06000274 RID: 628 RVA: 0x00025824 File Offset: 0x00023A24
 	public void \u02B5\u02C0\u02B5\u02B9\u02B2\u02B3\u02B9\u02B2\u02BA\u02B2\u02B3()
 	{
 		GlobalVariables u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7;
@@ -816,7 +799,6 @@ public class CliGameLauncher : MonoBehaviour
 		base.enabled = false;
 	}
 
-	// Token: 0x06000275 RID: 629 RVA: 0x00025904 File Offset: 0x00023B04
 	private string \u02B3\u02B6\u02B5\u02B7\u02C0\u02B3\u02B3\u02B4\u02B4\u02B7\u02BD(string \u02B5\u02BF\u02B4\u02C1\u02BE\u02B7\u02C0\u02B9\u02C1\u02B8\u02BC)
 	{
 		switch (this.\u02BA\u02B6\u02B4\u02BE\u02B5\u02BB\u02B6\u02B8\u02B4\u02B4\u02BE)
@@ -834,7 +816,6 @@ public class CliGameLauncher : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000276 RID: 630 RVA: 0x00025964 File Offset: 0x00023B64
 	private bool \u02B5\u02C0\u02C1\u02B3\u02BB\u02BE\u02BC\u02BB\u02B9\u02BC\u02B3()
 	{
 		if (!Directory.Exists(this.\u02B6\u02BB\u02BB\u02BC\u02C0\u02B5\u02BA\u02B6\u02B3\u02C0\u02B7))
@@ -874,7 +855,6 @@ public class CliGameLauncher : MonoBehaviour
 		return false;
 	}
 
-	// Token: 0x06000277 RID: 631 RVA: 0x00025A54 File Offset: 0x00023C54
 	private string \u02B2\u02B4\u02B4\u02C1\u02BE\u02BC\u02C0\u02B8\u02B9\u02BD\u02BC(Instrument \u02BD\u02BD\u02BB\u02B5\u02BA\u02BE\u02B9\u02B8\u02BB\u02B9\u02B4)
 	{
 		switch (\u02BD\u02BD\u02BB\u02B5\u02BA\u02BE\u02B9\u02B8\u02BB\u02B9\u02B4)
@@ -905,7 +885,6 @@ public class CliGameLauncher : MonoBehaviour
 		return "Quit";
 	}
 
-	// Token: 0x06000278 RID: 632 RVA: 0x00007146 File Offset: 0x00005346
 	public IEnumerator \u02B4\u02BB\u02B3\u02C0\u02B9\u02B5\u02BB\u02C0\u02B5\u02B4\u02BB()
 	{
 		global::UnityEngine.Object.Instantiate<GameObject>(this.globalVariablesPrefab);
@@ -951,7 +930,6 @@ public class CliGameLauncher : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06000279 RID: 633 RVA: 0x00025AE0 File Offset: 0x00023CE0
 	private string \u02BD\u02B6\u02B7\u02B3\u02BF\u02BD\u02B5\u02B2\u02BA\u02C1\u02BF(Instrument \u02BD\u02BD\u02BB\u02B5\u02BA\u02BE\u02B9\u02B8\u02BB\u02B9\u02B4)
 	{
 		switch (\u02BD\u02BD\u02BB\u02B5\u02BA\u02BE\u02B9\u02B8\u02BB\u02B9\u02B4)
@@ -982,7 +960,6 @@ public class CliGameLauncher : MonoBehaviour
 		return "This warning is primarily aimed at charters and users of those platforms. This doesn't necessarily result in any problems at this time.";
 	}
 
-	// Token: 0x0600027A RID: 634 RVA: 0x00007146 File Offset: 0x00005346
 	public IEnumerator \u02B8\u02B7\u02B6\u02B4\u02BA\u02BD\u02B7\u02BA\u02B2\u02BC\u02BA()
 	{
 		global::UnityEngine.Object.Instantiate<GameObject>(this.globalVariablesPrefab);
@@ -1028,63 +1005,43 @@ public class CliGameLauncher : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x0400016B RID: 363
 	private List<ValueTuple<Instrument, Difficulty>> \u02BA\u02B5\u02BE\u02C1\u02BA\u02B6\u02B2\u02B4\u02B8\u02B3\u02B3;
 
-	// Token: 0x0400016C RID: 364
 	private string \u02B6\u02BB\u02BB\u02BC\u02C0\u02B5\u02BA\u02B6\u02B3\u02C0\u02B7;
 
-	// Token: 0x0400016D RID: 365
 	private string \u02B8\u02B7\u02B5\u02B9\u02BC\u02BF\u02BC\u02BC\u02BC\u02BF\u02BF;
 
-	// Token: 0x0400016E RID: 366
 	private \u02B9\u02BA\u02BF\u02BB\u02B2\u02B9\u02BB\u02B9\u02B9\u02B5\u02B8 \u02C0\u02B6\u02C1\u02BB\u02B7\u02C1\u02BB\u02BA\u02B4\u02B8\u02BA;
 
-	// Token: 0x0400016F RID: 367
 	private SongEntry \u02B4\u02BC\u02BF\u02BC\u02BA\u02B9\u02B8\u02B2\u02BD\u02BE\u02BD;
 
-	// Token: 0x04000170 RID: 368
 	private bool \u02B2\u02C1\u02B5\u02BF\u02BD\u02B3\u02B9\u02B2\u02BD\u02BC\u02BC;
 
-	// Token: 0x04000171 RID: 369
 	private bool \u02BD\u02BF\u02BE\u02B5\u02B8\u02BD\u02BD\u02B3\u02B2\u02B7\u02BE;
 
-	// Token: 0x04000172 RID: 370
 	public string[] \u02BF\u02BF\u02B3\u02B4\u02BE\u02BE\u02B3\u02C1\u02B9\u02BD\u02B5;
 
-	// Token: 0x04000173 RID: 371
 	private int \u02C0\u02C1\u02B4\u02B6\u02B7\u02BC\u02C1\u02B3\u02BA\u02B4\u02B2;
 
-	// Token: 0x04000174 RID: 372
 	[SerializeField]
 	private GameObject globalVariablesPrefab;
 
-	// Token: 0x04000175 RID: 373
 	[SerializeField]
 	private GameObject rewiredInputManager;
 
-	// Token: 0x04000176 RID: 374
 	[SerializeField]
 	private GameObject netManager;
 
-	// Token: 0x04000177 RID: 375
 	private UnpackingScene \u02BB\u02B9\u02BE\u02B5\u02C0\u02BD\u02C0\u02B5\u02B3\u02B2\u02C1;
 
-	// Token: 0x04000178 RID: 376
 	private CliGameLauncher.\u02B8\u02BA\u02BD\u02B9\u02BF\u02B2\u02B4\u02B5\u02B9\u02C1\u02C0 \u02BA\u02B6\u02B4\u02BE\u02B5\u02BB\u02B6\u02B8\u02B4\u02B4\u02BE;
 
-	// Token: 0x02000040 RID: 64
 	private enum \u02B8\u02BA\u02BD\u02B9\u02BF\u02B2\u02B4\u02B5\u02B9\u02C1\u02C0
 	{
-		// Token: 0x0400017A RID: 378
 		None,
-		// Token: 0x0400017B RID: 379
 		DirectoryMissing,
-		// Token: 0x0400017C RID: 380
 		AudioFilesMissing,
-		// Token: 0x0400017D RID: 381
 		ChartFileMissing,
-		// Token: 0x0400017E RID: 382
 		MetadataMissing
 	}
 }

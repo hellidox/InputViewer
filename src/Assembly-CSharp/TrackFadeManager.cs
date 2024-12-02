@@ -1,11 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020001CC RID: 460
 public class TrackFadeManager : MonoBehaviour
 {
-	// Token: 0x06001448 RID: 5192 RVA: 0x000A140C File Offset: 0x0009F60C
 	public void \u02BA\u02B8\u02B7\u02B4\u02B7\u02B8\u02BC\u02BD\u02BF\u02B7\u02B7(\u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3 \u02BF\u02C0\u02BB\u02BB\u02BE\u02C0\u02B4\u02B3\u02C1\u02BF\u02B4, float \u02B3\u02BD\u02BE\u02BB\u02BB\u02B9\u02B2\u02B9\u02BC\u02BB\u02BF, float \u02C1\u02B8\u02B7\u02B5\u02B2\u02BA\u02BC\u02B2\u02B7\u02B2\u02BC, float \u02B2\u02BA\u02BD\u02B8\u02C1\u02B3\u02B8\u02BF\u02B5\u02B9\u02BA, float \u02B3\u02BD\u02B6\u02B8\u02B3\u02BE\u02B3\u02C0\u02B3\u02C1\u02B4)
 	{
 		foreach (\u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\u02B9\u02C0\u02B8\u02B4\u02BC u02B6_u02BB_u02BD_u02BB_u02BA_u02B6_u02B9_u02C0_u02B8_u02B4_u02BC in this.\u02B9\u02BB\u02B5\u02B4\u02B8\u02B2\u02B2\u02BE\u02BF\u02C0\u02B4)
@@ -17,7 +15,6 @@ public class TrackFadeManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001449 RID: 5193 RVA: 0x00010A95 File Offset: 0x0000EC95
 	public void \u02BD\u02B6\u02C1\u02BE\u02B5\u02C0\u02B4\u02B9\u02B4\u02B4\u02B9(float \u02C0\u02BB\u02C1\u02B9\u02BD\u02B3\u02B6\u02BE\u02B9\u02C1\u02C0)
 	{
 		if (\u02C0\u02BB\u02C1\u02B9\u02BD\u02B3\u02B6\u02BE\u02B9\u02C1\u02C0 >= 1996f)
@@ -26,7 +23,6 @@ public class TrackFadeManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600144A RID: 5194 RVA: 0x000A1470 File Offset: 0x0009F670
 	public void \u02BA\u02BA\u02C1\u02BF\u02B8\u02B2\u02B6\u02B2\u02B9\u02BA\u02C1(float \u02BA\u02B6\u02BA\u02BE\u02C1\u02BA\u02B6\u02BF\u02B2\u02B5\u02BD = 0f)
 	{
 		this.\u02B6\u02B9\u02BC\u02BC\u02B5\u02B2\u02BA\u02B6\u02B3\u02B3\u02B5 = this.near;
@@ -37,7 +33,6 @@ public class TrackFadeManager : MonoBehaviour
 		this.\u02C1\u02BD\u02C1\u02B8\u02B9\u02B6\u02C0\u02BB\u02BD\u02BC\u02BB(this.\u02B9\u02BC\u02B2\u02BC\u02C1\u02BF\u02B3\u02C0\u02B5\u02B4\u02B4, this.near, this.far, this.fadeDistance, this.fadeCloseDistance);
 	}
 
-	// Token: 0x0600144B RID: 5195 RVA: 0x000A140C File Offset: 0x0009F60C
 	public void \u02B7\u02BE\u02B4\u02B3\u02BB\u02B6\u02BB\u02BC\u02B2\u02BE\u02BE(\u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3 \u02BF\u02C0\u02BB\u02BB\u02BE\u02C0\u02B4\u02B3\u02C1\u02BF\u02B4, float \u02B3\u02BD\u02BE\u02BB\u02BB\u02B9\u02B2\u02B9\u02BC\u02BB\u02BF, float \u02C1\u02B8\u02B7\u02B5\u02B2\u02BA\u02BC\u02B2\u02B7\u02B2\u02BC, float \u02B2\u02BA\u02BD\u02B8\u02C1\u02B3\u02B8\u02BF\u02B5\u02B9\u02BA, float \u02B3\u02BD\u02B6\u02B8\u02B3\u02BE\u02B3\u02C0\u02B3\u02C1\u02B4)
 	{
 		foreach (\u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\u02B9\u02C0\u02B8\u02B4\u02BC u02B6_u02BB_u02BD_u02BB_u02BA_u02B6_u02B9_u02C0_u02B8_u02B4_u02BC in this.\u02B9\u02BB\u02B5\u02B4\u02B8\u02B2\u02B2\u02BE\u02BF\u02C0\u02B4)
@@ -49,7 +44,6 @@ public class TrackFadeManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600144C RID: 5196 RVA: 0x00010AA6 File Offset: 0x0000ECA6
 	private void \u02B6\u02B6\u02B4\u02BB\u02B7\u02C1\u02C0\u02B6\u02B7\u02BD\u02B5()
 	{
 		this.far *= this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerInfo.highwayLength.GetFloatPercent;
@@ -57,13 +51,11 @@ public class TrackFadeManager : MonoBehaviour
 		this.\u02B8\u02B3\u02B9\u02B4\u02BF\u02B5\u02BB\u02BA\u02BF\u02BD\u02B9(1527f);
 	}
 
-	// Token: 0x0600144D RID: 5197 RVA: 0x00010ADC File Offset: 0x0000ECDC
 	public void \u02B4\u02BD\u02C1\u02BE\u02B3\u02C1\u02BD\u02BA\u02BF\u02B6\u02B3(\u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\u02B9\u02C0\u02B8\u02B4\u02BC \u02B4\u02BF\u02BE\u02B3\u02BB\u02C1\u02C1\u02BF\u02BA\u02B6\u02BD)
 	{
 		this.\u02B9\u02BB\u02B5\u02B4\u02B8\u02B2\u02B2\u02BE\u02BF\u02C0\u02B4.Add(\u02B4\u02BF\u02BE\u02B3\u02BB\u02C1\u02C1\u02BF\u02BA\u02B6\u02BD);
 	}
 
-	// Token: 0x0600144E RID: 5198 RVA: 0x00010AEA File Offset: 0x0000ECEA
 	public void \u02B5\u02B9\u02BF\u02C1\u02B6\u02C1\u02B4\u02C1\u02B2\u02B6\u02B2(float \u02C0\u02BB\u02C1\u02B9\u02BD\u02B3\u02B6\u02BE\u02B9\u02C1\u02C0)
 	{
 		if (\u02C0\u02BB\u02C1\u02B9\u02BD\u02B3\u02B6\u02BE\u02B9\u02C1\u02C0 >= 630f)
@@ -72,7 +64,6 @@ public class TrackFadeManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600144F RID: 5199 RVA: 0x00010AFB File Offset: 0x0000ECFB
 	public void \u02B3\u02BA\u02B9\u02BB\u02BE\u02C0\u02BB\u02BB\u02BB\u02BC\u02BC(float \u02C0\u02BB\u02C1\u02B9\u02BD\u02B3\u02B6\u02BE\u02B9\u02C1\u02C0)
 	{
 		if (\u02C0\u02BB\u02C1\u02B9\u02BD\u02B3\u02B6\u02BE\u02B9\u02C1\u02C0 >= 0f)
@@ -81,7 +72,6 @@ public class TrackFadeManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001450 RID: 5200 RVA: 0x000A140C File Offset: 0x0009F60C
 	public void \u02C1\u02BD\u02C1\u02B8\u02B9\u02B6\u02C0\u02BB\u02BD\u02BC\u02BB(\u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3 \u02BF\u02C0\u02BB\u02BB\u02BE\u02C0\u02B4\u02B3\u02C1\u02BF\u02B4, float \u02B3\u02BD\u02BE\u02BB\u02BB\u02B9\u02B2\u02B9\u02BC\u02BB\u02BF, float \u02C1\u02B8\u02B7\u02B5\u02B2\u02BA\u02BC\u02B2\u02B7\u02B2\u02BC, float \u02B2\u02BA\u02BD\u02B8\u02C1\u02B3\u02B8\u02BF\u02B5\u02B9\u02BA, float \u02B3\u02BD\u02B6\u02B8\u02B3\u02BE\u02B3\u02C0\u02B3\u02C1\u02B4)
 	{
 		foreach (\u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\u02B9\u02C0\u02B8\u02B4\u02BC u02B6_u02BB_u02BD_u02BB_u02BA_u02B6_u02B9_u02C0_u02B8_u02B4_u02BC in this.\u02B9\u02BB\u02B5\u02B4\u02B8\u02B2\u02B2\u02BE\u02BF\u02C0\u02B4)
@@ -93,7 +83,6 @@ public class TrackFadeManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001451 RID: 5201 RVA: 0x000A140C File Offset: 0x0009F60C
 	public void \u02C0\u02BC\u02B5\u02B3\u02B5\u02B9\u02B7\u02C1\u02B7\u02B9\u02BD(\u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3 \u02BF\u02C0\u02BB\u02BB\u02BE\u02C0\u02B4\u02B3\u02C1\u02BF\u02B4, float \u02B3\u02BD\u02BE\u02BB\u02BB\u02B9\u02B2\u02B9\u02BC\u02BB\u02BF, float \u02C1\u02B8\u02B7\u02B5\u02B2\u02BA\u02BC\u02B2\u02B7\u02B2\u02BC, float \u02B2\u02BA\u02BD\u02B8\u02C1\u02B3\u02B8\u02BF\u02B5\u02B9\u02BA, float \u02B3\u02BD\u02B6\u02B8\u02B3\u02BE\u02B3\u02C0\u02B3\u02C1\u02B4)
 	{
 		foreach (\u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\u02B9\u02C0\u02B8\u02B4\u02BC u02B6_u02BB_u02BD_u02BB_u02BA_u02B6_u02B9_u02C0_u02B8_u02B4_u02BC in this.\u02B9\u02BB\u02B5\u02B4\u02B8\u02B2\u02B2\u02BE\u02BF\u02C0\u02B4)
@@ -105,7 +94,6 @@ public class TrackFadeManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001452 RID: 5202 RVA: 0x000A14D8 File Offset: 0x0009F6D8
 	public void \u02BB\u02BC\u02B7\u02BD\u02C1\u02B5\u02BC\u02B8\u02BC\u02B3\u02B6(float \u02BA\u02B6\u02BA\u02BE\u02C1\u02BA\u02B6\u02BF\u02B2\u02B5\u02BD = 0f)
 	{
 		this.\u02B6\u02B9\u02BC\u02BC\u02B5\u02B2\u02BA\u02B6\u02B3\u02B3\u02B5 = this.near;
@@ -116,13 +104,11 @@ public class TrackFadeManager : MonoBehaviour
 		this.\u02C0\u02BC\u02B5\u02B3\u02B5\u02B9\u02B7\u02C1\u02B7\u02B9\u02BD(this.\u02B9\u02BC\u02B2\u02BC\u02C1\u02BF\u02B3\u02C0\u02B5\u02B4\u02B4, this.near, this.far, this.fadeDistance, this.fadeCloseDistance);
 	}
 
-	// Token: 0x06001453 RID: 5203 RVA: 0x00010ADC File Offset: 0x0000ECDC
 	public void \u02B2\u02B7\u02BE\u02B2\u02C1\u02B4\u02B6\u02B7\u02BE\u02BD\u02B8(\u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\u02B9\u02C0\u02B8\u02B4\u02BC \u02B4\u02BF\u02BE\u02B3\u02BB\u02C1\u02C1\u02BF\u02BA\u02B6\u02BD)
 	{
 		this.\u02B9\u02BB\u02B5\u02B4\u02B8\u02B2\u02B2\u02BE\u02BF\u02C0\u02B4.Add(\u02B4\u02BF\u02BE\u02B3\u02BB\u02C1\u02C1\u02BF\u02BA\u02B6\u02BD);
 	}
 
-	// Token: 0x06001454 RID: 5204 RVA: 0x000A1540 File Offset: 0x0009F740
 	public void \u02C1\u02BD\u02BF\u02BF\u02BC\u02C1\u02B3\u02BE\u02BD\u02B8\u02BE(float \u02BA\u02B6\u02BA\u02BE\u02C1\u02BA\u02B6\u02BF\u02B2\u02B5\u02BD = 0f)
 	{
 		this.\u02B6\u02B9\u02BC\u02BC\u02B5\u02B2\u02BA\u02B6\u02B3\u02B3\u02B5 = this.near;
@@ -133,7 +119,6 @@ public class TrackFadeManager : MonoBehaviour
 		this.\u02BA\u02B8\u02B7\u02B4\u02B7\u02B8\u02BC\u02BD\u02BF\u02B7\u02B7(this.\u02B9\u02BC\u02B2\u02BC\u02C1\u02BF\u02B3\u02C0\u02B5\u02B4\u02B4, this.near, this.far, this.fadeDistance, this.fadeCloseDistance);
 	}
 
-	// Token: 0x06001455 RID: 5205 RVA: 0x000A14D8 File Offset: 0x0009F6D8
 	public void \u02B8\u02B3\u02B9\u02B4\u02BF\u02B5\u02BB\u02BA\u02BF\u02BD\u02B9(float \u02BA\u02B6\u02BA\u02BE\u02C1\u02BA\u02B6\u02BF\u02B2\u02B5\u02BD = 0f)
 	{
 		this.\u02B6\u02B9\u02BC\u02BC\u02B5\u02B2\u02BA\u02B6\u02B3\u02B3\u02B5 = this.near;
@@ -144,7 +129,6 @@ public class TrackFadeManager : MonoBehaviour
 		this.\u02C0\u02BC\u02B5\u02B3\u02B5\u02B9\u02B7\u02C1\u02B7\u02B9\u02BD(this.\u02B9\u02BC\u02B2\u02BC\u02C1\u02BF\u02B3\u02C0\u02B5\u02B4\u02B4, this.near, this.far, this.fadeDistance, this.fadeCloseDistance);
 	}
 
-	// Token: 0x06001456 RID: 5206 RVA: 0x000A15A8 File Offset: 0x0009F7A8
 	public void \u02B6\u02B7\u02BA\u02BC\u02BD\u02B3\u02B6\u02BA\u02B9\u02B8\u02B3(float \u02BA\u02B6\u02BA\u02BE\u02C1\u02BA\u02B6\u02BF\u02B2\u02B5\u02BD = 0f)
 	{
 		this.\u02B6\u02B9\u02BC\u02BC\u02B5\u02B2\u02BA\u02B6\u02B3\u02B3\u02B5 = this.near;
@@ -155,7 +139,6 @@ public class TrackFadeManager : MonoBehaviour
 		this.\u02B7\u02BE\u02B4\u02B3\u02BB\u02B6\u02BB\u02BC\u02B2\u02BE\u02BE(this.\u02B9\u02BC\u02B2\u02BC\u02C1\u02BF\u02B3\u02C0\u02B5\u02B4\u02B4, this.near, this.far, this.fadeDistance, this.fadeCloseDistance);
 	}
 
-	// Token: 0x06001457 RID: 5207 RVA: 0x000A140C File Offset: 0x0009F60C
 	public void \u02B4\u02BA\u02BD\u02B4\u02BE\u02BF\u02B2\u02BA\u02B7\u02B6\u02BA(\u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3 \u02BF\u02C0\u02BB\u02BB\u02BE\u02C0\u02B4\u02B3\u02C1\u02BF\u02B4, float \u02B3\u02BD\u02BE\u02BB\u02BB\u02B9\u02B2\u02B9\u02BC\u02BB\u02BF, float \u02C1\u02B8\u02B7\u02B5\u02B2\u02BA\u02BC\u02B2\u02B7\u02B2\u02BC, float \u02B2\u02BA\u02BD\u02B8\u02C1\u02B3\u02B8\u02BF\u02B5\u02B9\u02BA, float \u02B3\u02BD\u02B6\u02B8\u02B3\u02BE\u02B3\u02C0\u02B3\u02C1\u02B4)
 	{
 		foreach (\u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\u02B9\u02C0\u02B8\u02B4\u02BC u02B6_u02BB_u02BD_u02BB_u02BA_u02B6_u02B9_u02C0_u02B8_u02B4_u02BC in this.\u02B9\u02BB\u02B5\u02B4\u02B8\u02B2\u02B2\u02BE\u02BF\u02C0\u02B4)
@@ -167,7 +150,6 @@ public class TrackFadeManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001458 RID: 5208 RVA: 0x000A1610 File Offset: 0x0009F810
 	private void Update()
 	{
 		bool flag = false;
@@ -193,7 +175,6 @@ public class TrackFadeManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001459 RID: 5209 RVA: 0x00010B0C File Offset: 0x0000ED0C
 	private void Start()
 	{
 		this.far *= this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerInfo.highwayLength.GetFloatPercent;
@@ -201,7 +182,6 @@ public class TrackFadeManager : MonoBehaviour
 		this.\u02B8\u02B3\u02B9\u02B4\u02BF\u02B5\u02BB\u02BA\u02BF\u02BD\u02B9(0f);
 	}
 
-	// Token: 0x0600145A RID: 5210 RVA: 0x000A1670 File Offset: 0x0009F870
 	private void \u02B3\u02B2\u02BB\u02B3\u02B2\u02C1\u02C1\u02B3\u02B8\u02C1\u02B5()
 	{
 		bool flag = true;
@@ -227,7 +207,6 @@ public class TrackFadeManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600145B RID: 5211 RVA: 0x000A16D0 File Offset: 0x0009F8D0
 	private void \u02B6\u02B7\u02BD\u02B9\u02B6\u02BE\u02B5\u02B7\u02B8\u02C1\u02B4()
 	{
 		bool flag = false;
@@ -253,7 +232,6 @@ public class TrackFadeManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600145C RID: 5212 RVA: 0x000A1730 File Offset: 0x0009F930
 	private void \u02BD\u02B7\u02BD\u02BF\u02BE\u02B9\u02B6\u02C0\u02B4\u02B7\u02BF()
 	{
 		bool flag = false;
@@ -279,7 +257,6 @@ public class TrackFadeManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600145D RID: 5213 RVA: 0x000A15A8 File Offset: 0x0009F7A8
 	public void \u02BC\u02BA\u02BE\u02B3\u02BB\u02C1\u02B8\u02B7\u02BE\u02BA\u02B3(float \u02BA\u02B6\u02BA\u02BE\u02C1\u02BA\u02B6\u02BF\u02B2\u02B5\u02BD = 0f)
 	{
 		this.\u02B6\u02B9\u02BC\u02BC\u02B5\u02B2\u02BA\u02B6\u02B3\u02B3\u02B5 = this.near;
@@ -290,7 +267,6 @@ public class TrackFadeManager : MonoBehaviour
 		this.\u02B7\u02BE\u02B4\u02B3\u02BB\u02B6\u02BB\u02BC\u02B2\u02BE\u02BE(this.\u02B9\u02BC\u02B2\u02BC\u02C1\u02BF\u02B3\u02C0\u02B5\u02B4\u02B4, this.near, this.far, this.fadeDistance, this.fadeCloseDistance);
 	}
 
-	// Token: 0x0600145E RID: 5214 RVA: 0x000A1790 File Offset: 0x0009F990
 	private void \u02C1\u02B8\u02B5\u02BD\u02BD\u02C0\u02BB\u02B4\u02BD\u02B8\u02B3()
 	{
 		bool flag = false;
@@ -316,7 +292,6 @@ public class TrackFadeManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600145F RID: 5215 RVA: 0x000A17F0 File Offset: 0x0009F9F0
 	public void \u02C0\u02B8\u02C0\u02C1\u02BC\u02B7\u02B6\u02C0\u02BB\u02B2\u02BD(float \u02BA\u02B6\u02BA\u02BE\u02C1\u02BA\u02B6\u02BF\u02B2\u02B5\u02BD = 0f)
 	{
 		this.\u02B6\u02B9\u02BC\u02BC\u02B5\u02B2\u02BA\u02B6\u02B3\u02B3\u02B5 = this.near;
@@ -327,7 +302,6 @@ public class TrackFadeManager : MonoBehaviour
 		this.\u02B4\u02BA\u02BD\u02B4\u02BE\u02BF\u02B2\u02BA\u02B7\u02B6\u02BA(this.\u02B9\u02BC\u02B2\u02BC\u02C1\u02BF\u02B3\u02C0\u02B5\u02B4\u02B4, this.near, this.far, this.fadeDistance, this.fadeCloseDistance);
 	}
 
-	// Token: 0x06001461 RID: 5217 RVA: 0x00010B55 File Offset: 0x0000ED55
 	public void \u02C1\u02B3\u02B9\u02B8\u02BB\u02C0\u02BA\u02C1\u02B2\u02B4\u02BE(float \u02C0\u02BB\u02C1\u02B9\u02BD\u02B3\u02B6\u02BE\u02B9\u02C1\u02C0)
 	{
 		if (\u02C0\u02BB\u02C1\u02B9\u02BD\u02B3\u02B6\u02BE\u02B9\u02C1\u02C0 >= 734f)
@@ -336,41 +310,30 @@ public class TrackFadeManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04000F14 RID: 3860
 	[HideInInspector]
 	public \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7;
 
-	// Token: 0x04000F15 RID: 3861
 	[SerializeField]
 	public float near;
 
-	// Token: 0x04000F16 RID: 3862
 	private float \u02B6\u02B9\u02BC\u02BC\u02B5\u02B2\u02BA\u02B6\u02B3\u02B3\u02B5;
 
-	// Token: 0x04000F17 RID: 3863
 	[SerializeField]
 	public float far;
 
-	// Token: 0x04000F18 RID: 3864
 	private float \u02BF\u02BD\u02C0\u02BD\u02B6\u02BA\u02C0\u02B8\u02B9\u02BE\u02BD;
 
-	// Token: 0x04000F19 RID: 3865
 	[SerializeField]
 	private float fadeDistance;
 
-	// Token: 0x04000F1A RID: 3866
 	private float \u02B7\u02BD\u02BE\u02BC\u02B9\u02C1\u02B3\u02B9\u02BB\u02BA\u02C1;
 
-	// Token: 0x04000F1B RID: 3867
 	[SerializeField]
 	private float fadeCloseDistance;
 
-	// Token: 0x04000F1C RID: 3868
 	private float \u02BC\u02B6\u02B2\u02BF\u02B3\u02BE\u02B3\u02B6\u02BF\u02C0\u02B2;
 
-	// Token: 0x04000F1D RID: 3869
 	private List<\u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\u02B9\u02C0\u02B8\u02B4\u02BC> \u02B9\u02BB\u02B5\u02B4\u02B8\u02B2\u02B2\u02BE\u02BF\u02C0\u02B4 = new List<\u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\u02B9\u02C0\u02B8\u02B4\u02BC>();
 
-	// Token: 0x04000F1E RID: 3870
 	public \u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3 \u02B9\u02BC\u02B2\u02BC\u02C1\u02BF\u02B3\u02C0\u02B5\u02B4\u02B4;
 }

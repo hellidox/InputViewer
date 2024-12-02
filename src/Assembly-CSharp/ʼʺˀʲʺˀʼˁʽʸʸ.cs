@@ -1,18 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
-// Token: 0x0200022F RID: 559
 public abstract class \u02BC\u02BA\u02C0\u02B2\u02BA\u02C0\u02BC\u02C1\u02BD\u02B8\u02B8
 {
-	// Token: 0x060018B0 RID: 6320 RVA: 0x00012CC0 File Offset: 0x00010EC0
 	public \u02BC\u02BA\u02C0\u02B2\u02BA\u02C0\u02BC\u02C1\u02BD\u02B8\u02B8(uint \u02B4\u02BC\u02B5\u02B9\u02B8\u02BB\u02B4\u02BB\u02BE\u02BC\u02BC)
 	{
 		this.\u02B3\u02BF\u02B9\u02BA\u02B5\u02B9\u02B7\u02BC\u02BC\u02B8\u02B8 = \u02B4\u02BC\u02B5\u02B9\u02B8\u02BB\u02B4\u02BB\u02BE\u02BC\u02BC;
 	}
 
-	// Token: 0x17000265 RID: 613
-	// (get) Token: 0x060018B1 RID: 6321 RVA: 0x00012CCF File Offset: 0x00010ECF
 	public float \u02B2\u02B8\u02BA\u02BA\u02BC\u02B7\u02B5\u02B5\u02B6\u02B5\u02C1
 	{
 		get
@@ -21,7 +17,6 @@ public abstract class \u02BC\u02BA\u02C0\u02B2\u02BA\u02C0\u02BC\u02C1\u02BD\u02
 		}
 	}
 
-	// Token: 0x060018B2 RID: 6322 RVA: 0x000B5B38 File Offset: 0x000B3D38
 	public static int \u02B9\u02B6\u02BF\u02BF\u02B3\u02BC\u02BC\u02B2\u02BF\u02BF\u02BC<T>(uint \u02B3\u02BF\u02B9\u02BA\u02B5\u02B9\u02B7\u02BC\u02BC\u02B8\u02B8, IList<T> \u02C0\u02BE\u02B5\u02BE\u02BC\u02BC\u02BF\u02BE\u02B6\u02B6\u02BD) where T : \u02BC\u02BA\u02C0\u02B2\u02BA\u02C0\u02BC\u02C1\u02BD\u02B8\u02B8
 	{
 		int i = 0;
@@ -47,7 +42,6 @@ public abstract class \u02BC\u02BA\u02C0\u02B2\u02BA\u02C0\u02BC\u02C1\u02BD\u02
 		return num2;
 	}
 
-	// Token: 0x060018B3 RID: 6323 RVA: 0x000B5B94 File Offset: 0x000B3D94
 	[return: TupleElementNames(new string[] { "minIndex", "maxIndex" })]
 	public static ValueTuple<int, int> \u02B2\u02B4\u02BB\u02B4\u02BF\u02B2\u02B2\u02BB\u02BA\u02B9\u02B8<T>(uint \u02B3\u02BF\u02B9\u02BA\u02B5\u02B9\u02B7\u02BC\u02BC\u02B8\u02B8, List<T> \u02C0\u02BE\u02B5\u02BE\u02BC\u02BC\u02BF\u02BE\u02B6\u02B6\u02BD) where T : \u02BC\u02BA\u02C0\u02B2\u02BA\u02C0\u02BC\u02C1\u02BD\u02B8\u02B8
 	{
@@ -73,7 +67,6 @@ public abstract class \u02BC\u02BA\u02C0\u02B2\u02BA\u02C0\u02BC\u02C1\u02BD\u02
 		return new ValueTuple<int, int>(-1, -1);
 	}
 
-	// Token: 0x060018B4 RID: 6324 RVA: 0x000B5C40 File Offset: 0x000B3E40
 	[return: TupleElementNames(new string[] { "minIndex", "maxIndex" })]
 	public static ValueTuple<int, int> \u02BE\u02C1\u02B2\u02BB\u02B9\u02BD\u02B6\u02B9\u02B6\u02B2\u02B9<T>(IList<T> \u02B6\u02BF\u02BF\u02B8\u02B9\u02B5\u02BA\u02B5\u02B5\u02C1\u02BA, uint \u02B6\u02B4\u02B2\u02C0\u02BA\u02C1\u02B7\u02B8\u02B6\u02BD\u02B5, uint \u02B9\u02B2\u02BB\u02BE\u02B4\u02BF\u02BD\u02B6\u02BB\u02BF\u02B3) where T : \u02BC\u02BA\u02C0\u02B2\u02BA\u02C0\u02BC\u02C1\u02BD\u02B8\u02B8
 	{
@@ -122,13 +115,10 @@ public abstract class \u02BC\u02BA\u02C0\u02B2\u02BA\u02C0\u02BC\u02C1\u02BD\u02
 		return new ValueTuple<int, int>(num, num2 + 1);
 	}
 
-	// Token: 0x04001178 RID: 4472
 	[NonSerialized]
 	public \u02B7\u02BD\u02BB\u02BB\u02BF\u02B5\u02C0\u02C1\u02BD\u02B3\u02B6 \u02B4\u02BC\u02BF\u02BC\u02BA\u02B9\u02B8\u02B2\u02BD\u02BE\u02BD;
 
-	// Token: 0x04001179 RID: 4473
 	public uint \u02B3\u02BF\u02B9\u02BA\u02B5\u02B9\u02B7\u02BC\u02BC\u02B8\u02B8;
 
-	// Token: 0x0400117A RID: 4474
 	public const int \u02C1\u02B6\u02B3\u02BD\u02C0\u02BF\u02BA\u02B5\u02B4\u02BC\u02C1 = -1;
 }

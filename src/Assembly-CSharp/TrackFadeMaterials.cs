@@ -1,12 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x020001CD RID: 461
 [RequireComponent(typeof(TrackFadeManager))]
 public class TrackFadeMaterials : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\u02B9\u02C0\u02B8\u02B4\u02BC
 {
-	// Token: 0x06001462 RID: 5218 RVA: 0x000A1858 File Offset: 0x0009FA58
 	protected void \u02B5\u02BD\u02BD\u02BE\u02B9\u02BD\u02B2\u02C1\u02C1\u02B3\u02B6()
 	{
 		this.\u02BB\u02B6\u02BD\u02BA\u02BC\u02B2\u02B8\u02BB\u02C0\u02BD\u02BE = base.GetComponent<TrackFadeManager>();
@@ -20,19 +18,16 @@ public class TrackFadeMaterials : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\
 		this.\u02B3\u02BF\u02BA\u02BC\u02C0\u02BB\u02BB\u02BD\u02B9\u02B7\u02B4 = new List<SpriteRenderer>(135);
 	}
 
-	// Token: 0x06001463 RID: 5219 RVA: 0x0000DD39 File Offset: 0x0000BF39
 	public virtual \u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3 \u02BB\u02B5\u02C0\u02B4\u02B9\u02B7\u02B5\u02BB\u02B3\u02B4\u02B3()
 	{
 		return \u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3.Highway;
 	}
 
-	// Token: 0x06001464 RID: 5220 RVA: 0x00010B66 File Offset: 0x0000ED66
 	public virtual \u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3 \u02BC\u02BB\u02BE\u02C1\u02BB\u02B6\u02BF\u02BB\u02B2\u02B7\u02BD()
 	{
 		return (\u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3)7;
 	}
 
-	// Token: 0x06001465 RID: 5221 RVA: 0x000A18E4 File Offset: 0x0009FAE4
 	protected virtual void \u02B3\u02BD\u02B9\u02B8\u02BC\u02B3\u02B4\u02BF\u02B6\u02B6\u02C0()
 	{
 		if (this.\u02B3\u02BF\u02BA\u02BC\u02C0\u02BB\u02BB\u02BD\u02B9\u02B7\u02B4.Count == 0)
@@ -53,7 +48,6 @@ public class TrackFadeMaterials : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\
 		}
 	}
 
-	// Token: 0x06001466 RID: 5222 RVA: 0x000A19C8 File Offset: 0x0009FBC8
 	protected virtual void \u02C0\u02B6\u02B5\u02BE\u02B4\u02B4\u02BB\u02BA\u02B5\u02C0\u02BE()
 	{
 		this.\u02B3\u02BF\u02BA\u02BC\u02C0\u02BB\u02BB\u02BD\u02B9\u02B7\u02B4.Clear();
@@ -84,13 +78,11 @@ public class TrackFadeMaterials : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\
 		}
 	}
 
-	// Token: 0x06001467 RID: 5223 RVA: 0x000106FC File Offset: 0x0000E8FC
 	public virtual \u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3 \u02B6\u02BE\u02B6\u02B7\u02BB\u02B8\u02B3\u02BA\u02B7\u02B3\u02BE()
 	{
 		return (\u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3)4;
 	}
 
-	// Token: 0x06001469 RID: 5225 RVA: 0x00010B69 File Offset: 0x0000ED69
 	public void \u02C0\u02B6\u02B4\u02B4\u02B5\u02B3\u02B6\u02B7\u02B4\u02B5\u02B8(float \u02B3\u02BD\u02BE\u02BB\u02BB\u02B9\u02B2\u02B9\u02BC\u02BB\u02BF, float \u02C1\u02B8\u02B7\u02B5\u02B2\u02BA\u02BC\u02B2\u02B7\u02B2\u02BC, float \u02B2\u02BA\u02BD\u02B8\u02C1\u02B3\u02B8\u02BF\u02B5\u02B9\u02BA, float \u02B3\u02BD\u02B6\u02B8\u02B3\u02BE\u02B3\u02C0\u02B3\u02C1\u02B4)
 	{
 		this.\u02B2\u02BA\u02BD\u02B8\u02C1\u02B3\u02B8\u02BF\u02B5\u02B9\u02BA = \u02B2\u02BA\u02BD\u02B8\u02C1\u02B3\u02B8\u02BF\u02B5\u02B9\u02BA;
@@ -100,7 +92,6 @@ public class TrackFadeMaterials : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\
 		this.\u02B3\u02BD\u02B9\u02B8\u02BC\u02B3\u02B4\u02BF\u02B6\u02B6\u02C0();
 	}
 
-	// Token: 0x0600146A RID: 5226 RVA: 0x00010B8E File Offset: 0x0000ED8E
 	public void \u02BF\u02B2\u02B6\u02B6\u02BD\u02C0\u02BE\u02B6\u02B6\u02BA\u02B8(float \u02B3\u02BD\u02BE\u02BB\u02BB\u02B9\u02B2\u02B9\u02BC\u02BB\u02BF, float \u02C1\u02B8\u02B7\u02B5\u02B2\u02BA\u02BC\u02B2\u02B7\u02B2\u02BC, float \u02B2\u02BA\u02BD\u02B8\u02C1\u02B3\u02B8\u02BF\u02B5\u02B9\u02BA, float \u02B3\u02BD\u02B6\u02B8\u02B3\u02BE\u02B3\u02C0\u02B3\u02C1\u02B4)
 	{
 		this.\u02B2\u02BA\u02BD\u02B8\u02C1\u02B3\u02B8\u02BF\u02B5\u02B9\u02BA = \u02B2\u02BA\u02BD\u02B8\u02C1\u02B3\u02B8\u02BF\u02B5\u02B9\u02BA;
@@ -110,7 +101,6 @@ public class TrackFadeMaterials : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\
 		this.\u02BE\u02BB\u02C1\u02B4\u02BE\u02BA\u02B3\u02B6\u02BD\u02B6\u02C0();
 	}
 
-	// Token: 0x0600146B RID: 5227 RVA: 0x000A18E4 File Offset: 0x0009FAE4
 	protected virtual void \u02B7\u02BA\u02BF\u02BB\u02B8\u02B9\u02BF\u02B3\u02BC\u02BD\u02C0()
 	{
 		if (this.\u02B3\u02BF\u02BA\u02BC\u02C0\u02BB\u02BB\u02BD\u02B9\u02B7\u02B4.Count == 0)
@@ -131,7 +121,6 @@ public class TrackFadeMaterials : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\
 		}
 	}
 
-	// Token: 0x0600146C RID: 5228 RVA: 0x000A1A64 File Offset: 0x0009FC64
 	protected void \u02BD\u02BF\u02B6\u02B8\u02BB\u02B2\u02BF\u02C0\u02B5\u02B9\u02BC()
 	{
 		this.\u02BB\u02B6\u02BD\u02BA\u02BC\u02B2\u02B8\u02BB\u02C0\u02BD\u02BE = base.GetComponent<TrackFadeManager>();
@@ -145,14 +134,11 @@ public class TrackFadeMaterials : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\
 		this.\u02B3\u02BF\u02BA\u02BC\u02C0\u02BB\u02BB\u02BD\u02B9\u02B7\u02B4 = new List<SpriteRenderer>(-114);
 	}
 
-	// Token: 0x0600146D RID: 5229 RVA: 0x0000D554 File Offset: 0x0000B754
 	public virtual \u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3 \u02BD\u02B2\u02B3\u02B5\u02B7\u02B3\u02B6\u02BA\u02C0\u02B4\u02BE()
 	{
 		return \u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3.Notes;
 	}
 
-	// Token: 0x1700021F RID: 543
-	// (get) Token: 0x0600146E RID: 5230 RVA: 0x0000DD39 File Offset: 0x0000BF39
 	public virtual \u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3 \u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3
 	{
 		get
@@ -161,7 +147,6 @@ public class TrackFadeMaterials : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\
 		}
 	}
 
-	// Token: 0x0600146F RID: 5231 RVA: 0x000A1AF0 File Offset: 0x0009FCF0
 	protected void Awake()
 	{
 		this.\u02BB\u02B6\u02BD\u02BA\u02BC\u02B2\u02B8\u02BB\u02C0\u02BD\u02BE = base.GetComponent<TrackFadeManager>();
@@ -175,7 +160,6 @@ public class TrackFadeMaterials : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\
 		this.\u02B3\u02BF\u02BA\u02BC\u02C0\u02BB\u02BB\u02BD\u02B9\u02B7\u02B4 = new List<SpriteRenderer>(1000);
 	}
 
-	// Token: 0x06001470 RID: 5232 RVA: 0x000A1B7C File Offset: 0x0009FD7C
 	protected virtual void \u02BE\u02BB\u02C1\u02B4\u02BE\u02BA\u02B3\u02B6\u02BD\u02B6\u02C0()
 	{
 		if (this.\u02B3\u02BF\u02BA\u02BC\u02C0\u02BB\u02BB\u02BD\u02B9\u02B7\u02B4.Count == 0)
@@ -196,7 +180,6 @@ public class TrackFadeMaterials : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\
 		}
 	}
 
-	// Token: 0x06001471 RID: 5233 RVA: 0x000A1C60 File Offset: 0x0009FE60
 	protected virtual void \u02BF\u02B4\u02B3\u02BE\u02C1\u02C0\u02B8\u02BB\u02BB\u02B2\u02B9()
 	{
 		this.\u02B3\u02BF\u02BA\u02BC\u02C0\u02BB\u02BB\u02BD\u02B9\u02B7\u02B4.Clear();
@@ -225,40 +208,28 @@ public class TrackFadeMaterials : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\
 		}
 	}
 
-	// Token: 0x04000F1F RID: 3871
 	protected List<SpriteRenderer> \u02B3\u02BF\u02BA\u02BC\u02C0\u02BB\u02BB\u02BD\u02B9\u02B7\u02B4;
 
-	// Token: 0x04000F20 RID: 3872
 	[SerializeField]
 	protected Material[] supportedMaterials;
 
-	// Token: 0x04000F21 RID: 3873
 	protected float \u02B3\u02BD\u02BE\u02BB\u02BB\u02B9\u02B2\u02B9\u02BC\u02BB\u02BF;
 
-	// Token: 0x04000F22 RID: 3874
 	protected float \u02C1\u02B8\u02B7\u02B5\u02B2\u02BA\u02BC\u02B2\u02B7\u02B2\u02BC;
 
-	// Token: 0x04000F23 RID: 3875
 	protected float \u02B2\u02BA\u02BD\u02B8\u02C1\u02B3\u02B8\u02BF\u02B5\u02B9\u02BA;
 
-	// Token: 0x04000F24 RID: 3876
 	protected float \u02B3\u02BD\u02B6\u02B8\u02B3\u02BE\u02B3\u02C0\u02B3\u02C1\u02B4;
 
-	// Token: 0x04000F25 RID: 3877
 	protected TrackFadeManager \u02BB\u02B6\u02BD\u02BA\u02BC\u02B2\u02B8\u02BB\u02C0\u02BD\u02BE;
 
-	// Token: 0x04000F26 RID: 3878
 	protected int \u02BE\u02B3\u02B9\u02BB\u02B7\u02BB\u02C1\u02BF\u02B4\u02C0\u02BE;
 
-	// Token: 0x04000F27 RID: 3879
 	protected int \u02B7\u02B9\u02C0\u02BF\u02C1\u02C1\u02C0\u02BA\u02B6\u02B4\u02B4;
 
-	// Token: 0x04000F28 RID: 3880
 	protected int \u02BB\u02B8\u02C1\u02BF\u02B3\u02B2\u02BE\u02C0\u02BA\u02BA\u02C1;
 
-	// Token: 0x04000F29 RID: 3881
 	protected int \u02BB\u02BA\u02BD\u02B9\u02B3\u02BE\u02BC\u02BC\u02B4\u02BF\u02BE;
 
-	// Token: 0x04000F2A RID: 3882
 	protected MaterialPropertyBlock \u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2;
 }

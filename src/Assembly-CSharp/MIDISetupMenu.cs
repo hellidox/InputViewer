@@ -1,13 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using StrikeCore;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020000FE RID: 254
 public class MIDISetupMenu : BaseMenu
 {
-	// Token: 0x06000A5C RID: 2652 RVA: 0x0000B202 File Offset: 0x00009402
 	public override void \u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3()
 	{
 		if (this.\u02B7\u02B2\u02B7\u02BB\u02C1\u02BC\u02BE\u02BB\u02B3\u02BB\u02B3)
@@ -32,7 +30,6 @@ public class MIDISetupMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x06000A5D RID: 2653 RVA: 0x0005B5DC File Offset: 0x000597DC
 	public override void \u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8()
 	{
 		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != null)
@@ -85,7 +82,6 @@ public class MIDISetupMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x06000A5E RID: 2654 RVA: 0x0000B240 File Offset: 0x00009440
 	private void \u02B4\u02BD\u02B9\u02BE\u02B7\u02B6\u02BC\u02C0\u02BB\u02C0\u02BF()
 	{
 		base.enabled = false;
@@ -93,7 +89,6 @@ public class MIDISetupMenu : BaseMenu
 		Settings.Commit(false);
 	}
 
-	// Token: 0x06000A5F RID: 2655 RVA: 0x0005B698 File Offset: 0x00059898
 	private void \u02B7\u02B6\u02B4\u02BD\u02B3\u02B4\u02BB\u02B9\u02C0\u02B3\u02BA(bool \u02C1\u02B4\u02C0\u02BE\u02B6\u02B9\u02B7\u02B4\u02BE\u02B9\u02B2 = true)
 	{
 		if (this.\u02B4\u02B3\u02B5\u02BE\u02B5\u02B7\u02BB\u02B6\u02B5\u02B6\u02C1 != null)
@@ -120,7 +115,6 @@ public class MIDISetupMenu : BaseMenu
 		this.\u02B5\u02BF\u02BE\u02B5\u02B6\u02BE\u02B9\u02BB\u02C1\u02B6\u02BA = false;
 	}
 
-	// Token: 0x06000A60 RID: 2656 RVA: 0x0000B25B File Offset: 0x0000945B
 	private void \u02BA\u02B6\u02B4\u02B8\u02B6\u02B5\u02C0\u02B9\u02B7\u02B9\u02B3()
 	{
 		this.\u02BC\u02B6\u02C0\u02BC\u02BF\u02B4\u02C1\u02BD\u02C0\u02B9\u02C0++;
@@ -132,7 +126,6 @@ public class MIDISetupMenu : BaseMenu
 		this.\u02B4\u02BA\u02B9\u02BE\u02BC\u02B8\u02B5\u02BE\u02B9\u02B5\u02BA = false;
 	}
 
-	// Token: 0x06000A61 RID: 2657 RVA: 0x0005B7B0 File Offset: 0x000599B0
 	private void \u02BE\u02B5\u02BA\u02BA\u02B9\u02B9\u02BA\u02B3\u02B3\u02B4\u02BA(float \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5)
 	{
 		string text = "Available";
@@ -146,7 +139,6 @@ public class MIDISetupMenu : BaseMenu
 		this.textObjects[this.\u02B3\u02BF\u02BB\u02BB\u02B5\u02B7\u02B8\u02BE\u02B7\u02B3\u02B3].text = text + "Create Profile";
 	}
 
-	// Token: 0x06000A62 RID: 2658 RVA: 0x0000B297 File Offset: 0x00009497
 	protected virtual void \u02BD\u02C1\u02B7\u02B8\u02B3\u02B5\u02BC\u02B9\u02BC\u02B3\u02B7()
 	{
 		if (this.\u02BC\u02BC\u02BC\u02BE\u02BB\u02B5\u02C1\u02BD\u02BD\u02B8\u02BD || this.\u02B4\u02B8\u02C0\u02B9\u02B6\u02B2\u02B5\u02B7\u02BF\u02B4\u02BB)
@@ -157,7 +149,6 @@ public class MIDISetupMenu : BaseMenu
 		base.Update();
 	}
 
-	// Token: 0x06000A63 RID: 2659 RVA: 0x0000B2B6 File Offset: 0x000094B6
 	public void \u02BC\u02C1\u02B2\u02BE\u02B6\u02B8\u02BF\u02B6\u02B4\u02B8\u02B8(\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7)
 	{
 		base.\u02B8\u02BE\u02BD\u02BB\u02B2\u02B6\u02B3\u02BB\u02BB\u02C0\u02B8(\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7);
@@ -165,7 +156,6 @@ public class MIDISetupMenu : BaseMenu
 		base.OnEnable();
 	}
 
-	// Token: 0x06000A64 RID: 2660 RVA: 0x0005B838 File Offset: 0x00059A38
 	private void \u02B8\u02B9\u02BD\u02B3\u02B7\u02BB\u02B6\u02B8\u02B2\u02B7\u02BF()
 	{
 		this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
@@ -178,7 +168,6 @@ public class MIDISetupMenu : BaseMenu
 		this.\u02B2\u02BC\u02B9\u02B4\u02B8\u02B2\u02B3\u02B5\u02BC\u02B6\u02B6 = false;
 	}
 
-	// Token: 0x06000A65 RID: 2661 RVA: 0x0005B894 File Offset: 0x00059A94
 	private void \u02BB\u02BB\u02B7\u02B9\u02BF\u02BA\u02BA\u02C1\u02BA\u02B4\u02B2(bool \u02B6\u02B5\u02B9\u02B8\u02C0\u02BA\u02B9\u02B5\u02BD\u02C0\u02BA)
 	{
 		if (!\u02B6\u02B5\u02B9\u02B8\u02C0\u02BA\u02B9\u02B5\u02BD\u02C0\u02BA)
@@ -207,7 +196,6 @@ public class MIDISetupMenu : BaseMenu
 		this.\u02B5\u02BF\u02BE\u02B5\u02B6\u02BE\u02B9\u02BB\u02C1\u02B6\u02BA = false;
 	}
 
-	// Token: 0x06000A66 RID: 2662 RVA: 0x0000B2CB File Offset: 0x000094CB
 	private void \u02B9\u02B9\u02B2\u02B9\u02BF\u02BD\u02B4\u02BA\u02B4\u02BD\u02B4()
 	{
 		if (base.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC != this.menuStrings.Length - 0)
@@ -219,7 +207,6 @@ public class MIDISetupMenu : BaseMenu
 		this.\u02B9\u02B7\u02B7\u02B5\u02B2\u02BD\u02B3\u02BC\u02BF\u02C1\u02BC(this.\u02B8\u02B6\u02BD\u02BA\u02BF\u02BF\u02BD\u02B6\u02B3\u02BD\u02B4, true);
 	}
 
-	// Token: 0x06000A67 RID: 2663 RVA: 0x0000B300 File Offset: 0x00009500
 	private void \u02BB\u02B2\u02BF\u02BE\u02B8\u02B3\u02B7\u02B3\u02B4\u02BA\u02B8()
 	{
 		this.\u02B2\u02BC\u02B9\u02B4\u02B8\u02B2\u02B3\u02B5\u02BC\u02B6\u02B6 = false;
@@ -227,13 +214,11 @@ public class MIDISetupMenu : BaseMenu
 		this.\u02C1\u02BC\u02B5\u02B8\u02BB\u02C1\u02B2\u02B7\u02C0\u02BA\u02C1(false);
 	}
 
-	// Token: 0x06000A68 RID: 2664 RVA: 0x0000B32C File Offset: 0x0000952C
 	private void \u02B4\u02B6\u02C1\u02B9\u02B7\u02B6\u02B5\u02C1\u02B3\u02C0\u02C0(byte \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2)
 	{
 		this.DetectedNoteDisplay.text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Detected MIDI Note") + ": " + \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.ToString();
 	}
 
-	// Token: 0x06000A69 RID: 2665 RVA: 0x0000B359 File Offset: 0x00009559
 	public void \u02BC\u02B4\u02C0\u02BF\u02BF\u02B2\u02C1\u02BD\u02B6\u02BE\u02B3(\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7)
 	{
 		base.\u02B8\u02BE\u02BD\u02BB\u02B2\u02B6\u02B3\u02BB\u02BB\u02C0\u02B8(\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7);
@@ -241,7 +226,6 @@ public class MIDISetupMenu : BaseMenu
 		base.OnEnable();
 	}
 
-	// Token: 0x06000A6A RID: 2666 RVA: 0x0005B97C File Offset: 0x00059B7C
 	private void \u02BA\u02B3\u02B4\u02B2\u02B7\u02BD\u02B7\u02B4\u02B2\u02B6\u02B3(string \u02B3\u02BA\u02B5\u02BD\u02BB\u02BA\u02C1\u02BA\u02BD\u02B3\u02BE, bool \u02B8\u02B2\u02B7\u02BB\u02BA\u02C0\u02BF\u02C1\u02B2\u02B6\u02BC)
 	{
 		this.NoteDetectionPanel.gameObject.SetActive(\u02B8\u02B2\u02B7\u02BB\u02BA\u02C0\u02BF\u02C1\u02B2\u02B6\u02BC);
@@ -258,7 +242,6 @@ public class MIDISetupMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x06000A6B RID: 2667 RVA: 0x0000B297 File Offset: 0x00009497
 	protected virtual void \u02B2\u02B6\u02C1\u02B8\u02B3\u02B5\u02B7\u02B5\u02B6\u02B9\u02C0()
 	{
 		if (this.\u02BC\u02BC\u02BC\u02BE\u02BB\u02B5\u02C1\u02BD\u02BD\u02B8\u02BD || this.\u02B4\u02B8\u02C0\u02B9\u02B6\u02B2\u02B5\u02B7\u02BF\u02B4\u02BB)
@@ -269,7 +252,6 @@ public class MIDISetupMenu : BaseMenu
 		base.Update();
 	}
 
-	// Token: 0x06000A6C RID: 2668 RVA: 0x0000B36E File Offset: 0x0000956E
 	private void \u02BD\u02B7\u02B9\u02BC\u02B8\u02C0\u02B3\u02BC\u02BD\u02C0\u02BA()
 	{
 		base.enabled = true;
@@ -277,7 +259,6 @@ public class MIDISetupMenu : BaseMenu
 		Settings.Commit(true);
 	}
 
-	// Token: 0x06000A6D RID: 2669 RVA: 0x0000B389 File Offset: 0x00009589
 	private void \u02BE\u02BD\u02B6\u02B2\u02BC\u02B4\u02BD\u02B5\u02BC\u02C1\u02B5()
 	{
 		this.\u02BE\u02B6\u02B8\u02BF\u02BF\u02B9\u02B8\u02B3\u02B3\u02BF\u02B3 = false;
@@ -285,7 +266,6 @@ public class MIDISetupMenu : BaseMenu
 		this.\u02C1\u02BC\u02B5\u02B8\u02BB\u02C1\u02B2\u02B7\u02C0\u02BA\u02C1(false);
 	}
 
-	// Token: 0x06000A6E RID: 2670 RVA: 0x0005BA1C File Offset: 0x00059C1C
 	private void \u02C1\u02C1\u02BC\u02BE\u02BD\u02B4\u02B3\u02C1\u02B5\u02B4\u02B8()
 	{
 		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != null)
@@ -343,7 +323,6 @@ public class MIDISetupMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x06000A6F RID: 2671 RVA: 0x0005BBC0 File Offset: 0x00059DC0
 	private void \u02BC\u02B7\u02B3\u02BD\u02B4\u02BE\u02BB\u02B6\u02BC\u02BE\u02BD()
 	{
 		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != null)
@@ -401,14 +380,12 @@ public class MIDISetupMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x06000A70 RID: 2672 RVA: 0x0000B3B5 File Offset: 0x000095B5
 	private void \u02BA\u02BF\u02B3\u02BB\u02C0\u02B9\u02C0\u02C0\u02BC\u02B7\u02BF()
 	{
 		this.\u02B4\u02B3\u02B5\u02BE\u02B5\u02B7\u02BB\u02B6\u02B5\u02B6\u02C1.RemoveAt(this.\u02B9\u02BB\u02B6\u02BC\u02B3\u02C0\u02B3\u02B5\u02BF\u02BA\u02B7);
 		this.\u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8();
 	}
 
-	// Token: 0x06000A71 RID: 2673 RVA: 0x0000B240 File Offset: 0x00009440
 	private void \u02BC\u02BF\u02BC\u02BD\u02B6\u02C1\u02C1\u02B2\u02B5\u02C1\u02B3()
 	{
 		base.enabled = false;
@@ -416,7 +393,6 @@ public class MIDISetupMenu : BaseMenu
 		Settings.Commit(false);
 	}
 
-	// Token: 0x06000A72 RID: 2674 RVA: 0x0005BD64 File Offset: 0x00059F64
 	private void \u02BC\u02BB\u02B6\u02C0\u02B2\u02B8\u02B3\u02B7\u02BD\u02BE\u02B4(int \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5)
 	{
 		string text = "<noparse><";
@@ -430,7 +406,6 @@ public class MIDISetupMenu : BaseMenu
 		this.textObjects[this.\u02B3\u02BF\u02BB\u02BB\u02B5\u02B7\u02B8\u02BE\u02B7\u02B3\u02B3].text = text + "></noparse>";
 	}
 
-	// Token: 0x06000A73 RID: 2675 RVA: 0x0000B3CE File Offset: 0x000095CE
 	private void \u02B5\u02B3\u02B9\u02BB\u02B7\u02C0\u02C1\u02B2\u02BE\u02BF\u02BB()
 	{
 		if (base.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC != this.menuStrings.Length - 1)
@@ -442,7 +417,6 @@ public class MIDISetupMenu : BaseMenu
 		this.\u02B9\u02B7\u02B7\u02B5\u02B2\u02BD\u02B3\u02BC\u02BF\u02C1\u02BC(this.\u02B8\u02B6\u02BD\u02BA\u02BF\u02BF\u02BD\u02B6\u02B3\u02BD\u02B4, true);
 	}
 
-	// Token: 0x06000A74 RID: 2676 RVA: 0x0000B403 File Offset: 0x00009603
 	private void \u02BE\u02B6\u02BD\u02BB\u02B3\u02C0\u02B8\u02B7\u02B3\u02B2\u02BA()
 	{
 		base.enabled = true;
@@ -450,7 +424,6 @@ public class MIDISetupMenu : BaseMenu
 		Settings.Commit(false);
 	}
 
-	// Token: 0x06000A75 RID: 2677 RVA: 0x0005BDD8 File Offset: 0x00059FD8
 	private void \u02C1\u02BC\u02B5\u02B8\u02BB\u02C1\u02B2\u02B7\u02C0\u02BA\u02C1(bool \u02C1\u02B4\u02C0\u02BE\u02B6\u02B9\u02B7\u02B4\u02BE\u02B9\u02B2 = true)
 	{
 		if (this.\u02B4\u02B3\u02B5\u02BE\u02B5\u02B7\u02BB\u02B6\u02B5\u02B6\u02C1 != null)
@@ -478,13 +451,11 @@ public class MIDISetupMenu : BaseMenu
 		this.\u02B5\u02BF\u02BE\u02B5\u02B6\u02BE\u02B9\u02BB\u02C1\u02B6\u02BA = false;
 	}
 
-	// Token: 0x06000A76 RID: 2678 RVA: 0x0000B41E File Offset: 0x0000961E
 	private void \u02C1\u02B9\u02BD\u02B6\u02B8\u02B5\u02C0\u02B8\u02B6\u02B4\u02B3(byte \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2)
 	{
 		this.DetectedNoteDisplay.text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD("Double Notes") + "N/A" + \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.ToString();
 	}
 
-	// Token: 0x06000A77 RID: 2679 RVA: 0x0005BEF0 File Offset: 0x0005A0F0
 	private void \u02B9\u02B7\u02B7\u02B5\u02B2\u02BD\u02B3\u02BC\u02BF\u02C1\u02BC(string \u02B3\u02BA\u02B5\u02BD\u02BB\u02BA\u02C1\u02BA\u02BD\u02B3\u02BE, bool \u02B8\u02B2\u02B7\u02BB\u02BA\u02C0\u02BF\u02C1\u02B2\u02B6\u02BC)
 	{
 		this.NoteDetectionPanel.gameObject.SetActive(\u02B8\u02B2\u02B7\u02BB\u02BA\u02C0\u02BF\u02C1\u02B2\u02B6\u02BC);
@@ -501,7 +472,6 @@ public class MIDISetupMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x06000A78 RID: 2680 RVA: 0x0005BF90 File Offset: 0x0005A190
 	private void \u02BE\u02BB\u02B3\u02B3\u02B9\u02B6\u02B2\u02B2\u02BF\u02B4\u02B7()
 	{
 		string[] array = new string[5];
@@ -517,7 +487,6 @@ public class MIDISetupMenu : BaseMenu
 		MIDIInputManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B2\u02BE\u02B3\u02BB\u02BE\u02BF\u02B3\u02BF\u02BB\u02C0\u02B7(this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4, true);
 	}
 
-	// Token: 0x06000A79 RID: 2681 RVA: 0x0005C018 File Offset: 0x0005A218
 	private void \u02B3\u02BF\u02B8\u02BC\u02B6\u02B4\u02BA\u02BA\u02B8\u02BF\u02B9()
 	{
 		if (this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4.playerInfo.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA != -1)
@@ -536,7 +505,6 @@ public class MIDISetupMenu : BaseMenu
 		this.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(0, true);
 	}
 
-	// Token: 0x06000A7B RID: 2683 RVA: 0x0005C184 File Offset: 0x0005A384
 	public override void \u02C1\u02B3\u02BC\u02B6\u02BD\u02B6\u02BF\u02B7\u02BB\u02B5\u02BB()
 	{
 		if (this.\u02B7\u02B2\u02B7\u02BB\u02C1\u02BC\u02BE\u02BB\u02B3\u02BB\u02B3)
@@ -587,7 +555,6 @@ public class MIDISetupMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x06000A7C RID: 2684 RVA: 0x0005C228 File Offset: 0x0005A428
 	private void \u02B2\u02C1\u02C1\u02BE\u02B7\u02B9\u02B9\u02B7\u02BF\u02B8\u02BB(float \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5)
 	{
 		string text = "<noparse><";
@@ -601,7 +568,6 @@ public class MIDISetupMenu : BaseMenu
 		this.textObjects[this.\u02B3\u02BF\u02BB\u02BB\u02B5\u02B7\u02B8\u02BE\u02B7\u02B3\u02B3].text = text + "></noparse>";
 	}
 
-	// Token: 0x06000A7D RID: 2685 RVA: 0x0000B44B File Offset: 0x0000964B
 	private void \u02BC\u02B4\u02BE\u02BB\u02BA\u02B6\u02B8\u02B3\u02BA\u02BA\u02B9()
 	{
 		this.menuStrings = this.\u02B6\u02C1\u02BC\u02BE\u02B4\u02BE\u02B4\u02BA\u02BC\u02B3\u02C0;
@@ -613,7 +579,6 @@ public class MIDISetupMenu : BaseMenu
 		this.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(0, true);
 	}
 
-	// Token: 0x06000A7E RID: 2686 RVA: 0x0005C2B0 File Offset: 0x0005A4B0
 	private void \u02BA\u02BB\u02BD\u02B4\u02C1\u02C0\u02B3\u02BF\u02B3\u02C1\u02BE()
 	{
 		this.menuStrings = new string[]
@@ -630,7 +595,6 @@ public class MIDISetupMenu : BaseMenu
 		MIDIInputManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C0\u02C0\u02B3\u02BA\u02B6\u02C0\u02BC\u02BA\u02C0\u02B2\u02BE(this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4, false);
 	}
 
-	// Token: 0x06000A7F RID: 2687 RVA: 0x0005C338 File Offset: 0x0005A538
 	private void \u02B4\u02C0\u02B5\u02BB\u02BE\u02C1\u02B4\u02BC\u02BD\u02B3\u02B2()
 	{
 		if (this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4.playerInfo.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA != -1)
@@ -655,7 +619,6 @@ public class MIDISetupMenu : BaseMenu
 		this.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(0, true);
 	}
 
-	// Token: 0x06000A80 RID: 2688 RVA: 0x0005C3D4 File Offset: 0x0005A5D4
 	private void \u02BC\u02B5\u02B2\u02B6\u02BE\u02B3\u02B8\u02BA\u02B4\u02B6\u02BA()
 	{
 		if (base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0 == "Input Device")
@@ -675,7 +638,6 @@ public class MIDISetupMenu : BaseMenu
 		this.\u02BA\u02BB\u02B5\u02B6\u02B3\u02BD\u02BA\u02BC\u02B2\u02BB\u02B5();
 	}
 
-	// Token: 0x06000A81 RID: 2689 RVA: 0x0000B297 File Offset: 0x00009497
 	protected override void Update()
 	{
 		if (this.\u02BC\u02BC\u02BC\u02BE\u02BB\u02B5\u02C1\u02BD\u02BD\u02B8\u02BD || this.\u02B4\u02B8\u02C0\u02B9\u02B6\u02B2\u02B5\u02B7\u02BF\u02B4\u02BB)
@@ -686,7 +648,6 @@ public class MIDISetupMenu : BaseMenu
 		base.Update();
 	}
 
-	// Token: 0x06000A82 RID: 2690 RVA: 0x0005C448 File Offset: 0x0005A648
 	private void \u02C1\u02B2\u02B5\u02BF\u02BD\u02B4\u02B5\u02B9\u02B7\u02B4\u02BA()
 	{
 		if (base.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC == 1)
@@ -723,7 +684,6 @@ public class MIDISetupMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x06000A83 RID: 2691 RVA: 0x0005C4F0 File Offset: 0x0005A6F0
 	private void \u02BE\u02C1\u02B9\u02C1\u02B6\u02BE\u02B8\u02B2\u02B5\u02B2\u02B7()
 	{
 		if (this.\u02B9\u02C1\u02B4\u02B8\u02B8\u02B8\u02BE\u02B3\u02BE\u02C1\u02B9 > 0f)
@@ -805,7 +765,6 @@ public class MIDISetupMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x06000A84 RID: 2692 RVA: 0x0005C754 File Offset: 0x0005A954
 	public virtual void \u02B8\u02B8\u02B9\u02BA\u02BE\u02BE\u02C0\u02B5\u02BE\u02B4\u02B8()
 	{
 		if (this.\u02B7\u02B2\u02B7\u02BB\u02C1\u02BC\u02BE\u02BB\u02B3\u02BB\u02B3)
@@ -856,7 +815,6 @@ public class MIDISetupMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x06000A85 RID: 2693 RVA: 0x0005C7F8 File Offset: 0x0005A9F8
 	private void \u02BA\u02BB\u02B5\u02B6\u02B3\u02BD\u02BA\u02BC\u02B2\u02BB\u02B5()
 	{
 		string text = "<";
@@ -880,7 +838,6 @@ public class MIDISetupMenu : BaseMenu
 		this.textObjects[this.\u02B3\u02BF\u02BB\u02BB\u02B5\u02B7\u02B8\u02BE\u02B7\u02B3\u02B3].text = text + ">";
 	}
 
-	// Token: 0x06000A86 RID: 2694 RVA: 0x0005B838 File Offset: 0x00059A38
 	private void \u02C1\u02BC\u02C0\u02B5\u02BF\u02B2\u02B4\u02B6\u02B8\u02BE\u02BC()
 	{
 		this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
@@ -893,14 +850,12 @@ public class MIDISetupMenu : BaseMenu
 		this.\u02B2\u02BC\u02B9\u02B4\u02B8\u02B2\u02B3\u02B5\u02BC\u02B6\u02B6 = false;
 	}
 
-	// Token: 0x06000A87 RID: 2695 RVA: 0x0000B483 File Offset: 0x00009683
 	private void \u02B4\u02BD\u02B2\u02B2\u02C1\u02B4\u02BD\u02B8\u02C0\u02BD\u02BE()
 	{
 		this.\u02B8\u02B6\u02BD\u02BA\u02BF\u02BF\u02BD\u02B6\u02B3\u02BD\u02B4 = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
 		this.\u02BB\u02BB\u02B7\u02B9\u02BF\u02BA\u02BA\u02C1\u02BA\u02B4\u02B2(false);
 	}
 
-	// Token: 0x06000A88 RID: 2696 RVA: 0x0005C8AC File Offset: 0x0005AAAC
 	public override void \u02B7\u02BA\u02C0\u02B8\u02BE\u02BA\u02BD\u02B4\u02BB\u02B3\u02B6()
 	{
 		if (this.\u02B7\u02B2\u02B7\u02BB\u02C1\u02BC\u02BE\u02BB\u02B3\u02BB\u02B3)
@@ -951,7 +906,6 @@ public class MIDISetupMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x06000A89 RID: 2697 RVA: 0x0000B202 File Offset: 0x00009402
 	public virtual void \u02BA\u02B4\u02C0\u02B9\u02BF\u02B8\u02B7\u02B7\u02BA\u02BE\u02BB()
 	{
 		if (this.\u02B7\u02B2\u02B7\u02BB\u02C1\u02BC\u02BE\u02BB\u02B3\u02BB\u02B3)
@@ -976,7 +930,6 @@ public class MIDISetupMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x06000A8A RID: 2698 RVA: 0x0000B498 File Offset: 0x00009698
 	public virtual void \u02BB\u02C1\u02B3\u02BF\u02BB\u02BB\u02B4\u02BA\u02B7\u02B4\u02BD()
 	{
 		if (this.\u02B7\u02B2\u02B7\u02BB\u02C1\u02BC\u02BE\u02BB\u02B3\u02BB\u02B3)
@@ -1001,106 +954,73 @@ public class MIDISetupMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x040007A9 RID: 1961
 	private const string \u02BC\u02BA\u02B2\u02B6\u02B3\u02B5\u02C1\u02B5\u02B4\u02B4\u02B8 = "Input Device";
 
-	// Token: 0x040007AA RID: 1962
 	private const string \u02B6\u02BA\u02B9\u02B7\u02BD\u02BC\u02BC\u02BB\u02B8\u02B6\u02B9 = "Mappings";
 
-	// Token: 0x040007AB RID: 1963
 	private const string \u02BB\u02BE\u02B9\u02BA\u02B3\u02B6\u02BC\u02B5\u02B7\u02B4\u02BF = "Quick Setup";
 
-	// Token: 0x040007AC RID: 1964
 	private const string \u02B3\u02C1\u02BD\u02BE\u02B8\u02BF\u02B5\u02B3\u02BE\u02B9\u02B3 = "Dynamics Threshold";
 
-	// Token: 0x040007AD RID: 1965
 	private const string \u02BA\u02C1\u02BA\u02B7\u02BA\u02B8\u02BE\u02BC\u02BA\u02B3\u02BB = "Test Velocity";
 
-	// Token: 0x040007AE RID: 1966
 	private GameSetting \u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC;
 
-	// Token: 0x040007AF RID: 1967
 	private string[] \u02B6\u02C1\u02BC\u02BE\u02B4\u02BE\u02B4\u02BA\u02BC\u02B3\u02C0 = new string[] { "Red Pad", "Yellow Pad", "Blue Pad", "Green Pad", "Kick Pad", "Yellow Cymbal", "Blue Cymbal", "Green Cymbal", "Start", "Select" };
 
-	// Token: 0x040007B0 RID: 1968
 	private string[] \u02C1\u02B8\u02B3\u02B7\u02B8\u02B5\u02B5\u02BB\u02BC\u02C1\u02C1 = new string[] { "Red Pad", "Yellow Pad", "Blue Pad", "Green Pad", "Kick Pad", "Yellow Cymbal", "Blue Cymbal", "Green Cymbal" };
 
-	// Token: 0x040007B1 RID: 1969
 	private bool \u02B9\u02B8\u02B2\u02BE\u02BD\u02B4\u02BF\u02B5\u02BA\u02B6\u02B7;
 
-	// Token: 0x040007B2 RID: 1970
 	private bool \u02B4\u02BA\u02B9\u02BE\u02BC\u02B8\u02B5\u02BE\u02B9\u02B5\u02BA;
 
-	// Token: 0x040007B3 RID: 1971
 	private bool \u02B7\u02B2\u02B7\u02BB\u02C1\u02BC\u02BE\u02BB\u02B3\u02BB\u02B3 = true;
 
-	// Token: 0x040007B4 RID: 1972
 	private bool \u02B5\u02BF\u02BE\u02B5\u02B6\u02BE\u02B9\u02BB\u02C1\u02B6\u02BA;
 
-	// Token: 0x040007B5 RID: 1973
 	private bool \u02BE\u02B9\u02B6\u02BF\u02B5\u02B9\u02C0\u02B3\u02BE\u02B3\u02B5;
 
-	// Token: 0x040007B6 RID: 1974
 	private bool \u02B9\u02BC\u02C0\u02BE\u02C1\u02BC\u02BE\u02BA\u02BA\u02BC\u02BB;
 
-	// Token: 0x040007B7 RID: 1975
 	private bool \u02BC\u02BC\u02BC\u02BE\u02BB\u02B5\u02C1\u02BD\u02BD\u02B8\u02BD;
 
-	// Token: 0x040007B8 RID: 1976
 	private List<MIDIInputManager.\u02BF\u02B6\u02C0\u02BF\u02BA\u02B8\u02B5\u02BA\u02B8\u02BE\u02B3> \u02B4\u02B3\u02B5\u02BE\u02B5\u02B7\u02BB\u02B6\u02B5\u02B6\u02C1;
 
-	// Token: 0x040007B9 RID: 1977
 	private int \u02B9\u02BB\u02B6\u02BC\u02B3\u02C0\u02B3\u02B5\u02BF\u02BA\u02B7;
 
-	// Token: 0x040007BA RID: 1978
 	private string \u02B8\u02B6\u02BD\u02BA\u02BF\u02BF\u02BD\u02B6\u02B3\u02BD\u02B4 = "";
 
-	// Token: 0x040007BB RID: 1979
 	private bool \u02B2\u02BC\u02B9\u02B4\u02B8\u02B2\u02B3\u02B5\u02BC\u02B6\u02B6;
 
-	// Token: 0x040007BC RID: 1980
 	private byte \u02BD\u02BF\u02BE\u02BA\u02B9\u02BB\u02B9\u02B4\u02B2\u02BA\u02B8;
 
-	// Token: 0x040007BD RID: 1981
 	private int \u02BC\u02B6\u02C0\u02BC\u02BF\u02B4\u02C1\u02BD\u02C0\u02B9\u02C0;
 
-	// Token: 0x040007BE RID: 1982
 	private bool \u02B4\u02B8\u02C0\u02B9\u02B6\u02B2\u02B5\u02B7\u02BF\u02B4\u02BB;
 
-	// Token: 0x040007BF RID: 1983
 	private byte \u02B7\u02B9\u02B7\u02BB\u02B4\u02BA\u02B6\u02BF\u02BA\u02B8\u02B2;
 
-	// Token: 0x040007C0 RID: 1984
 	private int \u02B8\u02BD\u02C0\u02B8\u02B9\u02B6\u02B4\u02BB\u02C1\u02B7\u02B7;
 
-	// Token: 0x040007C1 RID: 1985
 	private bool \u02BE\u02B6\u02B8\u02BF\u02BF\u02B9\u02B8\u02B3\u02B3\u02BF\u02B3;
 
-	// Token: 0x040007C2 RID: 1986
 	private float \u02C0\u02B6\u02BB\u02BF\u02B4\u02BC\u02BA\u02B3\u02B2\u02BC\u02BC;
 
-	// Token: 0x040007C3 RID: 1987
 	[SerializeField]
 	private Transform NoteDetectionPanel;
 
-	// Token: 0x040007C4 RID: 1988
 	[SerializeField]
 	private TextMeshProUGUI NoteDetectionInstructions;
 
-	// Token: 0x040007C5 RID: 1989
 	[SerializeField]
 	private TextMeshProUGUI DetectedNoteDisplay;
 
-	// Token: 0x040007C6 RID: 1990
 	private string \u02B3\u02B9\u02B2\u02B7\u02B9\u02B2\u02B9\u02BB\u02B2\u02BE\u02B9;
 
-	// Token: 0x040007C7 RID: 1991
 	private float \u02B9\u02C1\u02B4\u02B8\u02B8\u02B8\u02BE\u02B3\u02BE\u02C1\u02B9;
 
-	// Token: 0x040007C8 RID: 1992
 	private MIDIInputManager.\u02B9\u02B4\u02B4\u02BF\u02B2\u02BA\u02B6\u02B7\u02B6\u02BD\u02B6 \u02BB\u02B4\u02BF\u02BD\u02B4\u02BC\u02B3\u02B8\u02BF\u02B4\u02C1;
 
-	// Token: 0x040007C9 RID: 1993
 	[SerializeField]
 	private PlayerProfileMenu profileMenu;
 }

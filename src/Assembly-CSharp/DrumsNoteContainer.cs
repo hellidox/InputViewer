@@ -1,31 +1,24 @@
-﻿using System;
+using System;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-// Token: 0x0200013D RID: 317
 [ExecuteAlways]
 public class DrumsNoteContainer : MonoBehaviour, \u02BF\u02BB\u02BF\u02B2\u02B6\u02C1\u02BC\u02BD\u02B3\u02BB\u02BB, \u02C0\u02C1\u02B8\u02BF\u02BB\u02BB\u02B9\u02BC\u02B9\u02BD\u02B7
 {
-	// Token: 0x1700014C RID: 332
-	// (get) Token: 0x06000DDC RID: 3548 RVA: 0x0000D7FD File Offset: 0x0000B9FD
-	// (set) Token: 0x06000DEA RID: 3562 RVA: 0x0000D89E File Offset: 0x0000BA9E
 	public Vector3 \u02B8\u02C0\u02BF\u02BE\u02BF\u02B9\u02BE\u02B3\u02BA\u02BF\u02B7 { get; set; }
 
-	// Token: 0x06000DDD RID: 3549 RVA: 0x0000D805 File Offset: 0x0000BA05
 	private void \u02B7\u02B8\u02BD\u02C0\u02B2\u02B4\u02B7\u02C0\u02BC\u02BE\u02B3()
 	{
 		this.\u02B7\u02B5\u02B8\u02BA\u02B9\u02BE\u02B4\u02BD\u02B7\u02BE\u02C0 = SortingLayer.NameToID("Camera");
 		this.\u02B2\u02B3\u02B8\u02BD\u02B3\u02B9\u02B3\u02B4\u02BF\u02B7\u02C0 = SortingLayer.NameToID("<b>0</b>");
 	}
 
-	// Token: 0x06000DDE RID: 3550 RVA: 0x0000D827 File Offset: 0x0000BA27
 	private void Start()
 	{
 		this.\u02B7\u02B5\u02B8\u02BA\u02B9\u02BE\u02B4\u02BD\u02B7\u02BE\u02C0 = SortingLayer.NameToID("Kick / Open Notes");
 		this.\u02B2\u02B3\u02B8\u02BD\u02B3\u02B9\u02B3\u02B4\u02BF\u02B7\u02C0 = SortingLayer.NameToID("Notes");
 	}
 
-	// Token: 0x06000DDF RID: 3551 RVA: 0x000708A4 File Offset: 0x0006EAA4
 	public void \u02C0\u02B5\u02B6\u02B2\u02B4\u02BB\u02B9\u02C0\u02BB\u02B9\u02BB(Vector3 \u02B3\u02BF\u02B9\u02BA\u02B5\u02B9\u02B7\u02BC\u02BC\u02B8\u02B8, int \u02BE\u02C1\u02BE\u02B8\u02BB\u02B8\u02B6\u02BE\u02C1\u02BB\u02B4, Note \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2, bool \u02C1\u02B8\u02B4\u02B5\u02B3\u02BE\u02BD\u02BF\u02B9\u02B7\u02BF, bool \u02BB\u02C0\u02BA\u02BA\u02B9\u02B3\u02BB\u02B5\u02C0\u02B6\u02B3 = false)
 	{
 		base.transform.localPosition = \u02B3\u02BF\u02B9\u02BA\u02B5\u02B9\u02B7\u02BC\u02BC\u02B8\u02B8;
@@ -268,19 +261,14 @@ public class DrumsNoteContainer : MonoBehaviour, \u02BF\u02BB\u02BF\u02B2\u02B6\
 		}
 	}
 
-	// Token: 0x1700014D RID: 333
-	// (get) Token: 0x06000DE8 RID: 3560 RVA: 0x0000D874 File Offset: 0x0000BA74
-	// (set) Token: 0x06000DE0 RID: 3552 RVA: 0x0000D849 File Offset: 0x0000BA49
 	public \u02BB\u02B9\u02B2\u02B3\u02B4\u02B3\u02BF\u02C0\u02B4\u02B8\u02B9 \u02B7\u02B9\u02BA\u02B6\u02B3\u02B4\u02B5\u02C1\u02B4\u02B9\u02B6 { get; set; }
 
-	// Token: 0x06000DE1 RID: 3553 RVA: 0x0000D852 File Offset: 0x0000BA52
 	private void \u02B5\u02B2\u02BF\u02BD\u02BB\u02BA\u02B2\u02BF\u02BD\u02BE\u02BE()
 	{
 		this.\u02B7\u02B5\u02B8\u02BA\u02B9\u02BE\u02B4\u02BD\u02B7\u02BE\u02C0 = SortingLayer.NameToID("\n");
 		this.\u02B2\u02B3\u02B8\u02BD\u02B3\u02B9\u02B3\u02B4\u02BF\u02B7\u02C0 = SortingLayer.NameToID("Pongers");
 	}
 
-	// Token: 0x06000DE2 RID: 3554 RVA: 0x000711FC File Offset: 0x0006F3FC
 	public void \u02BF\u02BC\u02B7\u02B2\u02B9\u02BA\u02BD\u02B6\u02C0\u02C0\u02BE(Vector3 \u02B3\u02BF\u02B9\u02BA\u02B5\u02B9\u02B7\u02BC\u02BC\u02B8\u02B8, int \u02BE\u02C1\u02BE\u02B8\u02BB\u02B8\u02B6\u02BE\u02C1\u02BB\u02B4, Note \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2, bool \u02C1\u02B8\u02B4\u02B5\u02B3\u02BE\u02BD\u02BF\u02B9\u02B7\u02BF, bool \u02BB\u02C0\u02BA\u02BA\u02B9\u02B3\u02BB\u02B5\u02C0\u02B6\u02B3 = false)
 	{
 		base.transform.localPosition = \u02B3\u02BF\u02B9\u02BA\u02B5\u02B9\u02B7\u02BC\u02BC\u02B8\u02B8;
@@ -523,32 +511,27 @@ public class DrumsNoteContainer : MonoBehaviour, \u02BF\u02BB\u02BF\u02B2\u02B6\
 		}
 	}
 
-	// Token: 0x06000DE3 RID: 3555 RVA: 0x0000D874 File Offset: 0x0000BA74
 	public \u02BB\u02B9\u02B2\u02B3\u02B4\u02B3\u02BF\u02C0\u02B4\u02B8\u02B9 \u02B2\u02BB\u02B7\u02BE\u02B8\u02BD\u02BC\u02B8\u02B6\u02B9\u02BC()
 	{
 		return this.<\u02BC\u02BD\u02B9\u02BE\u02BD\u02B5\u02C1\u02B3\u02B5\u02B9\u02BE>k__BackingField;
 	}
 
-	// Token: 0x06000DE4 RID: 3556 RVA: 0x0000D87C File Offset: 0x0000BA7C
 	private void \u02C0\u02BE\u02B2\u02BE\u02C0\u02B5\u02B3\u02B7\u02B2\u02B8\u02B5()
 	{
 		this.\u02B7\u02B5\u02B8\u02BA\u02B9\u02BE\u02B4\u02BD\u02B7\u02BE\u02C0 = SortingLayer.NameToID("#");
 		this.\u02B2\u02B3\u02B8\u02BD\u02B3\u02B9\u02B3\u02B4\u02BF\u02B7\u02C0 = SortingLayer.NameToID("{0:N0}");
 	}
 
-	// Token: 0x06000DE6 RID: 3558 RVA: 0x0000D874 File Offset: 0x0000BA74
 	public \u02BB\u02B9\u02B2\u02B3\u02B4\u02B3\u02BF\u02C0\u02B4\u02B8\u02B9 \u02BB\u02BA\u02B9\u02B7\u02B6\u02BB\u02BF\u02B7\u02C1\u02BB\u02B6()
 	{
 		return this.<\u02BC\u02BD\u02B9\u02BE\u02BD\u02B5\u02C1\u02B3\u02B5\u02B9\u02BE>k__BackingField;
 	}
 
-	// Token: 0x06000DE7 RID: 3559 RVA: 0x0000D874 File Offset: 0x0000BA74
 	public \u02BB\u02B9\u02B2\u02B3\u02B4\u02B3\u02BF\u02C0\u02B4\u02B8\u02B9 \u02C1\u02B6\u02BC\u02BC\u02B4\u02B2\u02BE\u02BC\u02B7\u02B2\u02BC()
 	{
 		return this.<\u02BC\u02BD\u02B9\u02BE\u02BD\u02B5\u02C1\u02B3\u02B5\u02B9\u02BE>k__BackingField;
 	}
 
-	// Token: 0x06000DE9 RID: 3561 RVA: 0x00071B54 File Offset: 0x0006FD54
 	public void \u02B6\u02BF\u02B6\u02B3\u02BB\u02B7\u02B8\u02C1\u02B9\u02B4\u02BB(Vector3 \u02B3\u02BF\u02B9\u02BA\u02B5\u02B9\u02B7\u02BC\u02BC\u02B8\u02B8, int \u02BE\u02C1\u02BE\u02B8\u02BB\u02B8\u02B6\u02BE\u02C1\u02BB\u02B4, Note \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2, bool \u02C1\u02B8\u02B4\u02B5\u02B3\u02BE\u02BD\u02BF\u02B9\u02B7\u02BF, bool \u02BB\u02C0\u02BA\u02BA\u02B9\u02B3\u02BB\u02B5\u02C0\u02B6\u02B3 = false)
 	{
 		base.transform.localPosition = \u02B3\u02BF\u02B9\u02BA\u02B5\u02B9\u02B7\u02BC\u02BC\u02B8\u02B8;
@@ -791,118 +774,81 @@ public class DrumsNoteContainer : MonoBehaviour, \u02BF\u02BB\u02BF\u02B2\u02B6\
 		}
 	}
 
-	// Token: 0x04000964 RID: 2404
 	public Sprite \u02BF\u02B6\u02B2\u02B4\u02B8\u02BF\u02B2\u02B7\u02B9\u02BD\u02B7;
 
-	// Token: 0x04000965 RID: 2405
 	public Sprite \u02BA\u02B8\u02B9\u02BD\u02B5\u02C0\u02BA\u02BB\u02BA\u02BD\u02BB;
 
-	// Token: 0x04000966 RID: 2406
 	public Sprite \u02C1\u02BA\u02BD\u02B4\u02C1\u02BA\u02BB\u02B8\u02B6\u02B3\u02C1;
 
-	// Token: 0x04000967 RID: 2407
 	public Sprite \u02B7\u02B8\u02BF\u02B5\u02B4\u02BA\u02B2\u02B9\u02B9\u02B6\u02BF;
 
-	// Token: 0x04000968 RID: 2408
 	public Sprite[] \u02B8\u02B8\u02BB\u02BA\u02BC\u02B4\u02B5\u02B8\u02B8\u02C0\u02BC;
 
-	// Token: 0x04000969 RID: 2409
 	public Sprite[] \u02B8\u02B5\u02B3\u02B4\u02C1\u02B2\u02BD\u02BF\u02B7\u02C0\u02C0;
 
-	// Token: 0x0400096A RID: 2410
 	public Sprite[] \u02C1\u02B3\u02B2\u02BE\u02B5\u02B5\u02BF\u02BF\u02C1\u02BB\u02B4;
 
-	// Token: 0x0400096B RID: 2411
 	public Sprite[] \u02B4\u02B9\u02B7\u02B6\u02B7\u02BB\u02BC\u02C0\u02B6\u02B4\u02B3;
 
-	// Token: 0x0400096C RID: 2412
 	public Sprite \u02BF\u02C0\u02B8\u02B2\u02B5\u02B7\u02C0\u02C1\u02B5\u02BE\u02B6;
 
-	// Token: 0x0400096D RID: 2413
 	public Sprite \u02C0\u02C1\u02B9\u02BC\u02B5\u02BC\u02B7\u02B5\u02B5\u02BD\u02B8;
 
-	// Token: 0x0400096E RID: 2414
 	public Sprite \u02B7\u02BA\u02BB\u02BA\u02BB\u02C1\u02BE\u02C0\u02B3\u02BA\u02B3;
 
-	// Token: 0x0400096F RID: 2415
 	public Sprite \u02BC\u02B2\u02B7\u02BA\u02BC\u02C1\u02BF\u02C1\u02BC\u02C1\u02B4;
 
-	// Token: 0x04000970 RID: 2416
 	public Sprite \u02BE\u02B6\u02B7\u02B8\u02C1\u02B7\u02B4\u02B5\u02C0\u02BE\u02C1;
 
-	// Token: 0x04000971 RID: 2417
 	public Sprite \u02BC\u02B4\u02B4\u02BF\u02B2\u02B8\u02B4\u02BD\u02B2\u02BA\u02BC;
 
-	// Token: 0x04000972 RID: 2418
 	public Sprite[] \u02BD\u02BE\u02BA\u02B9\u02B7\u02B2\u02B6\u02B2\u02B4\u02BF\u02BB;
 
-	// Token: 0x04000973 RID: 2419
 	public Sprite[] \u02BD\u02B3\u02BB\u02B5\u02B4\u02BD\u02B2\u02B4\u02B3\u02B4\u02BF;
 
-	// Token: 0x04000974 RID: 2420
 	public Sprite \u02BF\u02C0\u02B3\u02B6\u02B7\u02C0\u02BB\u02B8\u02BE\u02B4\u02B2;
 
-	// Token: 0x04000975 RID: 2421
 	public Sprite \u02BA\u02B3\u02B6\u02B2\u02BA\u02BE\u02BE\u02B7\u02BA\u02B2\u02BC;
 
-	// Token: 0x04000976 RID: 2422
 	public Sprite \u02B2\u02B8\u02B3\u02B7\u02B8\u02C0\u02B8\u02BE\u02BC\u02C1\u02BA;
 
-	// Token: 0x04000977 RID: 2423
 	public Sprite \u02B9\u02BE\u02B7\u02BE\u02B2\u02BC\u02B3\u02B3\u02B6\u02BC\u02B7;
 
-	// Token: 0x04000978 RID: 2424
 	public Sprite[] \u02BF\u02C1\u02B9\u02B2\u02B5\u02B2\u02BA\u02B3\u02BE\u02B4\u02B3;
 
-	// Token: 0x04000979 RID: 2425
 	public Sprite[] \u02B7\u02BC\u02BC\u02BB\u02B2\u02BE\u02B9\u02B2\u02B7\u02B9\u02B6;
 
-	// Token: 0x0400097A RID: 2426
 	public Sprite[] \u02B6\u02B4\u02BA\u02C1\u02B3\u02BB\u02BF\u02B9\u02B6\u02B8\u02B3;
 
-	// Token: 0x0400097B RID: 2427
 	public Sprite \u02B8\u02B8\u02BE\u02B9\u02C1\u02C0\u02BA\u02BD\u02BA\u02BF\u02BC;
 
-	// Token: 0x0400097C RID: 2428
 	public Sprite \u02B9\u02C0\u02B9\u02BB\u02B7\u02BD\u02B4\u02BD\u02C1\u02BC\u02BF;
 
-	// Token: 0x0400097D RID: 2429
 	public Sprite[] \u02B6\u02B6\u02B2\u02BE\u02BD\u02B6\u02B6\u02BC\u02B3\u02B2\u02B7;
 
-	// Token: 0x0400097E RID: 2430
 	public Sprite[] \u02B9\u02BC\u02B6\u02B2\u02BB\u02B5\u02B8\u02BA\u02BE\u02C0\u02BF;
 
-	// Token: 0x0400097F RID: 2431
 	public SortingGroup \u02B7\u02C0\u02B2\u02B5\u02B8\u02B9\u02BA\u02BB\u02BD\u02B4\u02C0;
 
-	// Token: 0x04000980 RID: 2432
 	public bool \u02BC\u02C0\u02B9\u02B6\u02B9\u02C0\u02B8\u02B6\u02BD\u02C1\u02BD;
 
-	// Token: 0x04000981 RID: 2433
 	[SerializeField]
 	protected SpriteRenderer Head;
 
-	// Token: 0x04000982 RID: 2434
 	[SerializeField]
 	protected SpriteRenderer Body;
 
-	// Token: 0x04000983 RID: 2435
 	[SerializeField]
 	protected SpriteRenderer Anim;
 
-	// Token: 0x04000984 RID: 2436
 	[SerializeField]
 	protected SpriteRenderer Overlay;
 
-	// Token: 0x04000985 RID: 2437
 	private int \u02B7\u02B5\u02B8\u02BA\u02B9\u02BE\u02B4\u02BD\u02B7\u02BE\u02C0;
 
-	// Token: 0x04000986 RID: 2438
 	private int \u02B2\u02B3\u02B8\u02BD\u02B3\u02B9\u02B3\u02B4\u02BF\u02B7\u02C0;
 
-	// Token: 0x04000989 RID: 2441
 	public bool \u02B4\u02B4\u02C0\u02B3\u02BB\u02BA\u02BB\u02BC\u02B6\u02BE\u02BF;
 
-	// Token: 0x0400098A RID: 2442
 	public bool \u02B5\u02C0\u02BE\u02C1\u02BD\u02BB\u02BD\u02BC\u02BC\u02BF\u02B4;
 }

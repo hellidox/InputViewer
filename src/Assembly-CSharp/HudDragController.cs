@@ -1,13 +1,11 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Linq;
 using StrikeCore;
 using UnityEngine;
 
-// Token: 0x0200006B RID: 107
 public class HudDragController : MonoBehaviour
 {
-	// Token: 0x0600045A RID: 1114 RVA: 0x00031AF0 File Offset: 0x0002FCF0
 	private Vector3 \u02B9\u02B3\u02BB\u02B5\u02BF\u02B3\u02B4\u02B7\u02C0\u02BD\u02BB(Vector3 \u02B3\u02C0\u02B9\u02BC\u02B9\u02BD\u02BE\u02B9\u02B7\u02B6\u02BC)
 	{
 		Ray ray = this.hudCamera.ScreenPointToRay(\u02B3\u02C0\u02B9\u02BC\u02B9\u02BD\u02BE\u02B9\u02B7\u02B6\u02BC);
@@ -17,7 +15,6 @@ public class HudDragController : MonoBehaviour
 		return vector - vector.z / vector2.z * vector2;
 	}
 
-	// Token: 0x0600045B RID: 1115 RVA: 0x00031AF0 File Offset: 0x0002FCF0
 	private Vector3 \u02BA\u02B4\u02BC\u02B3\u02BE\u02C1\u02B8\u02B9\u02B7\u02B4\u02B2(Vector3 \u02B3\u02C0\u02B9\u02BC\u02B9\u02BD\u02BE\u02B9\u02B7\u02B6\u02BC)
 	{
 		Ray ray = this.hudCamera.ScreenPointToRay(\u02B3\u02C0\u02B9\u02BC\u02B9\u02BD\u02BE\u02B9\u02B7\u02B6\u02BC);
@@ -27,7 +24,6 @@ public class HudDragController : MonoBehaviour
 		return vector - vector.z / vector2.z * vector2;
 	}
 
-	// Token: 0x0600045C RID: 1116 RVA: 0x00031B4C File Offset: 0x0002FD4C
 	private void \u02BD\u02B7\u02BD\u02BF\u02BE\u02B9\u02B6\u02C0\u02B4\u02B7\u02BF()
 	{
 		bool mouseButton = Input.GetMouseButton(1);
@@ -75,7 +71,6 @@ public class HudDragController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600045D RID: 1117 RVA: 0x00008308 File Offset: 0x00006508
 	private IEnumerator \u02BE\u02B8\u02B4\u02BC\u02B7\u02B7\u02BE\u02BC\u02B5\u02BC\u02BF()
 	{
 		while (!this.gameManager.\u02BC\u02BF\u02B5\u02B5\u02C0\u02BF\u02BC\u02C0\u02B5\u02B4\u02BE)
@@ -93,7 +88,6 @@ public class HudDragController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x0600045F RID: 1119 RVA: 0x00008317 File Offset: 0x00006517
 	private IEnumerator Start()
 	{
 		this.renderers = this.hud.gameObject.GetComponentsInChildren<SpriteRenderer>();
@@ -112,7 +106,6 @@ public class HudDragController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06000460 RID: 1120 RVA: 0x00031C74 File Offset: 0x0002FE74
 	private void \u02C1\u02B8\u02B5\u02BD\u02BD\u02C0\u02BB\u02B4\u02BD\u02B8\u02B3()
 	{
 		bool mouseButton = Input.GetMouseButton(0);
@@ -160,7 +153,6 @@ public class HudDragController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000461 RID: 1121 RVA: 0x00008308 File Offset: 0x00006508
 	private IEnumerator \u02B5\u02B2\u02BF\u02BD\u02BB\u02BA\u02B2\u02BF\u02BD\u02BE\u02BE()
 	{
 		while (!this.gameManager.\u02BC\u02BF\u02B5\u02B5\u02C0\u02BF\u02BC\u02C0\u02B5\u02B4\u02BE)
@@ -178,7 +170,6 @@ public class HudDragController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06000462 RID: 1122 RVA: 0x00031D9C File Offset: 0x0002FF9C
 	private void \u02C0\u02BE\u02B7\u02BF\u02B9\u02BB\u02C1\u02B2\u02B9\u02B7\u02B5()
 	{
 		bool mouseButton = Input.GetMouseButton(1);
@@ -226,7 +217,6 @@ public class HudDragController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000463 RID: 1123 RVA: 0x00031EC4 File Offset: 0x000300C4
 	private void \u02BD\u02B8\u02BD\u02B5\u02B6\u02B3\u02BF\u02B3\u02C1\u02B8\u02C1()
 	{
 		bool mouseButton = Input.GetMouseButton(1);
@@ -274,7 +264,6 @@ public class HudDragController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000464 RID: 1124 RVA: 0x00008308 File Offset: 0x00006508
 	private IEnumerator \u02B3\u02BB\u02BF\u02B4\u02B9\u02BA\u02B5\u02B5\u02BE\u02BB\u02BE()
 	{
 		while (!this.gameManager.\u02BC\u02BF\u02B5\u02B5\u02C0\u02BF\u02BC\u02C0\u02B5\u02B4\u02BE)
@@ -292,7 +281,6 @@ public class HudDragController : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06000465 RID: 1125 RVA: 0x00031FEC File Offset: 0x000301EC
 	private void Update()
 	{
 		SpriteRenderer[] array = this.renderers;
@@ -378,7 +366,6 @@ public class HudDragController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000466 RID: 1126 RVA: 0x00008326 File Offset: 0x00006526
 	private IEnumerator \u02B2\u02B9\u02C1\u02C1\u02B2\u02B3\u02C1\u02BF\u02BC\u02BB\u02C1()
 	{
 		HudDragController.\u02BF\u02BF\u02BF\u02BD\u02BA\u02BC\u02C0\u02BE\u02B6\u02B5\u02BD u02BF_u02BF_u02BF_u02BD_u02BA_u02BC_u02C0_u02BE_u02B6_u02B5_u02BD = new HudDragController.\u02BF\u02BF\u02BF\u02BD\u02BA\u02BC\u02C0\u02BE\u02B6\u02B5\u02BD(1);
@@ -386,7 +373,6 @@ public class HudDragController : MonoBehaviour
 		return u02BF_u02BF_u02BF_u02BD_u02BA_u02BC_u02C0_u02BE_u02B6_u02B5_u02BD;
 	}
 
-	// Token: 0x06000467 RID: 1127 RVA: 0x00031AF0 File Offset: 0x0002FCF0
 	private Vector3 \u02B9\u02BB\u02B2\u02BC\u02B4\u02B2\u02BE\u02BA\u02B9\u02C0\u02B4(Vector3 \u02B3\u02C0\u02B9\u02BC\u02B9\u02BD\u02BE\u02B9\u02B7\u02B6\u02BC)
 	{
 		Ray ray = this.hudCamera.ScreenPointToRay(\u02B3\u02C0\u02B9\u02BC\u02B9\u02BD\u02BE\u02B9\u02B7\u02B6\u02BC);
@@ -396,7 +382,6 @@ public class HudDragController : MonoBehaviour
 		return vector - vector.z / vector2.z * vector2;
 	}
 
-	// Token: 0x06000468 RID: 1128 RVA: 0x0003236C File Offset: 0x0003056C
 	private void \u02BB\u02B7\u02C0\u02B3\u02C1\u02BD\u02B9\u02B2\u02B4\u02BE\u02B6()
 	{
 		bool mouseButton = Input.GetMouseButton(1);
@@ -444,49 +429,35 @@ public class HudDragController : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0400036D RID: 877
 	private const int \u02BA\u02BC\u02B7\u02B6\u02B7\u02B2\u02C1\u02B2\u02C0\u02BA\u02B4 = 0;
 
-	// Token: 0x0400036E RID: 878
 	[SerializeField]
 	private RectTransform dragHandleRect;
 
-	// Token: 0x0400036F RID: 879
 	[SerializeField]
 	private Transform hud;
 
-	// Token: 0x04000370 RID: 880
 	[SerializeField]
 	private Camera hudCamera;
 
-	// Token: 0x04000371 RID: 881
 	[SerializeField]
 	private GameManager gameManager;
 
-	// Token: 0x04000372 RID: 882
 	private bool \u02B4\u02C0\u02B8\u02B3\u02B6\u02B7\u02C1\u02B9\u02C0\u02B9\u02B6;
 
-	// Token: 0x04000373 RID: 883
 	private bool \u02B6\u02B8\u02C1\u02C0\u02BC\u02B4\u02C0\u02C0\u02C1\u02BE\u02BF;
 
-	// Token: 0x04000374 RID: 884
 	private Vector3 \u02B3\u02B6\u02B9\u02B5\u02B5\u02B8\u02C1\u02B8\u02B9\u02C1\u02BC;
 
-	// Token: 0x04000375 RID: 885
 	private SpriteRenderer[] renderers;
 
-	// Token: 0x04000376 RID: 886
 	private bool logged;
 
-	// Token: 0x04000377 RID: 887
 	private SpriteRenderer[] bgRenderers;
 
-	// Token: 0x04000378 RID: 888
 	private SpriteRenderer[] BGSpriteRenderers;
 
-	// Token: 0x04000379 RID: 889
 	private float ticker;
 
-	// Token: 0x0400037A RID: 890
 	private SpriteRenderer[] starRenderers;
 }

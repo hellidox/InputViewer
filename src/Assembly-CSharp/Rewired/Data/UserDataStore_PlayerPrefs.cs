@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
@@ -7,12 +7,8 @@ using UnityEngine;
 
 namespace Rewired.Data
 {
-	// Token: 0x0200026E RID: 622
 	public class UserDataStore_PlayerPrefs : UserDataStore
 	{
-		// Token: 0x1700028E RID: 654
-		// (get) Token: 0x060019E3 RID: 6627 RVA: 0x00013899 File Offset: 0x00011A99
-		// (set) Token: 0x060019E4 RID: 6628 RVA: 0x000138A1 File Offset: 0x00011AA1
 		public bool IsEnabled
 		{
 			get
@@ -25,9 +21,6 @@ namespace Rewired.Data
 			}
 		}
 
-		// Token: 0x1700028F RID: 655
-		// (get) Token: 0x060019E5 RID: 6629 RVA: 0x000138AA File Offset: 0x00011AAA
-		// (set) Token: 0x060019E6 RID: 6630 RVA: 0x000138B2 File Offset: 0x00011AB2
 		public bool LoadDataOnStart
 		{
 			get
@@ -40,9 +33,6 @@ namespace Rewired.Data
 			}
 		}
 
-		// Token: 0x17000290 RID: 656
-		// (get) Token: 0x060019E7 RID: 6631 RVA: 0x000138BB File Offset: 0x00011ABB
-		// (set) Token: 0x060019E8 RID: 6632 RVA: 0x000138C3 File Offset: 0x00011AC3
 		public bool LoadJoystickAssignments
 		{
 			get
@@ -55,9 +45,6 @@ namespace Rewired.Data
 			}
 		}
 
-		// Token: 0x17000291 RID: 657
-		// (get) Token: 0x060019E9 RID: 6633 RVA: 0x000138CC File Offset: 0x00011ACC
-		// (set) Token: 0x060019EA RID: 6634 RVA: 0x000138D4 File Offset: 0x00011AD4
 		public bool LoadKeyboardAssignments
 		{
 			get
@@ -70,9 +57,6 @@ namespace Rewired.Data
 			}
 		}
 
-		// Token: 0x17000292 RID: 658
-		// (get) Token: 0x060019EB RID: 6635 RVA: 0x000138DD File Offset: 0x00011ADD
-		// (set) Token: 0x060019EC RID: 6636 RVA: 0x000138E5 File Offset: 0x00011AE5
 		public bool LoadMouseAssignments
 		{
 			get
@@ -85,9 +69,6 @@ namespace Rewired.Data
 			}
 		}
 
-		// Token: 0x17000293 RID: 659
-		// (get) Token: 0x060019ED RID: 6637 RVA: 0x000138EE File Offset: 0x00011AEE
-		// (set) Token: 0x060019EE RID: 6638 RVA: 0x000138F6 File Offset: 0x00011AF6
 		public string PlayerPrefsKeyPrefix
 		{
 			get
@@ -100,8 +81,6 @@ namespace Rewired.Data
 			}
 		}
 
-		// Token: 0x17000294 RID: 660
-		// (get) Token: 0x060019EF RID: 6639 RVA: 0x000138FF File Offset: 0x00011AFF
 		private string playerPrefsKey_controllerAssignments
 		{
 			get
@@ -110,8 +89,6 @@ namespace Rewired.Data
 			}
 		}
 
-		// Token: 0x17000295 RID: 661
-		// (get) Token: 0x060019F0 RID: 6640 RVA: 0x00013916 File Offset: 0x00011B16
 		private bool loadControllerAssignments
 		{
 			get
@@ -120,8 +97,6 @@ namespace Rewired.Data
 			}
 		}
 
-		// Token: 0x17000296 RID: 662
-		// (get) Token: 0x060019F1 RID: 6641 RVA: 0x000C6D74 File Offset: 0x000C4F74
 		private List<int> allActionIds
 		{
 			get
@@ -141,8 +116,6 @@ namespace Rewired.Data
 			}
 		}
 
-		// Token: 0x17000297 RID: 663
-		// (get) Token: 0x060019F2 RID: 6642 RVA: 0x000C6DCC File Offset: 0x000C4FCC
 		private string allActionIdsString
 		{
 			get
@@ -166,7 +139,6 @@ namespace Rewired.Data
 			}
 		}
 
-		// Token: 0x060019F3 RID: 6643 RVA: 0x00013930 File Offset: 0x00011B30
 		public override void Save()
 		{
 			if (!this.isEnabled)
@@ -177,7 +149,6 @@ namespace Rewired.Data
 			this.SaveAll();
 		}
 
-		// Token: 0x060019F4 RID: 6644 RVA: 0x0001394C File Offset: 0x00011B4C
 		public override void SaveControllerData(int playerId, ControllerType controllerType, int controllerId)
 		{
 			if (!this.isEnabled)
@@ -188,7 +159,6 @@ namespace Rewired.Data
 			this.SaveControllerDataNow(playerId, controllerType, controllerId);
 		}
 
-		// Token: 0x060019F5 RID: 6645 RVA: 0x0001396B File Offset: 0x00011B6B
 		public override void SaveControllerData(ControllerType controllerType, int controllerId)
 		{
 			if (!this.isEnabled)
@@ -199,7 +169,6 @@ namespace Rewired.Data
 			this.SaveControllerDataNow(controllerType, controllerId);
 		}
 
-		// Token: 0x060019F6 RID: 6646 RVA: 0x00013989 File Offset: 0x00011B89
 		public override void SavePlayerData(int playerId)
 		{
 			if (!this.isEnabled)
@@ -210,7 +179,6 @@ namespace Rewired.Data
 			this.SavePlayerDataNow(playerId);
 		}
 
-		// Token: 0x060019F7 RID: 6647 RVA: 0x000139A6 File Offset: 0x00011BA6
 		public override void SaveInputBehavior(int playerId, int behaviorId)
 		{
 			if (!this.isEnabled)
@@ -221,7 +189,6 @@ namespace Rewired.Data
 			this.SaveInputBehaviorNow(playerId, behaviorId);
 		}
 
-		// Token: 0x060019F8 RID: 6648 RVA: 0x000139C4 File Offset: 0x00011BC4
 		public override void Load()
 		{
 			if (!this.isEnabled)
@@ -232,7 +199,6 @@ namespace Rewired.Data
 			this.LoadAll();
 		}
 
-		// Token: 0x060019F9 RID: 6649 RVA: 0x000139E1 File Offset: 0x00011BE1
 		public override void LoadControllerData(int playerId, ControllerType controllerType, int controllerId)
 		{
 			if (!this.isEnabled)
@@ -243,7 +209,6 @@ namespace Rewired.Data
 			this.LoadControllerDataNow(playerId, controllerType, controllerId);
 		}
 
-		// Token: 0x060019FA RID: 6650 RVA: 0x00013A01 File Offset: 0x00011C01
 		public override void LoadControllerData(ControllerType controllerType, int controllerId)
 		{
 			if (!this.isEnabled)
@@ -254,7 +219,6 @@ namespace Rewired.Data
 			this.LoadControllerDataNow(controllerType, controllerId);
 		}
 
-		// Token: 0x060019FB RID: 6651 RVA: 0x00013A20 File Offset: 0x00011C20
 		public override void LoadPlayerData(int playerId)
 		{
 			if (!this.isEnabled)
@@ -265,7 +229,6 @@ namespace Rewired.Data
 			this.LoadPlayerDataNow(playerId);
 		}
 
-		// Token: 0x060019FC RID: 6652 RVA: 0x00013A3E File Offset: 0x00011C3E
 		public override void LoadInputBehavior(int playerId, int behaviorId)
 		{
 			if (!this.isEnabled)
@@ -276,7 +239,6 @@ namespace Rewired.Data
 			this.LoadInputBehaviorNow(playerId, behaviorId);
 		}
 
-		// Token: 0x060019FD RID: 6653 RVA: 0x00013A5D File Offset: 0x00011C5D
 		protected override void OnInitialize()
 		{
 			if (this.loadDataOnStart)
@@ -290,7 +252,6 @@ namespace Rewired.Data
 			}
 		}
 
-		// Token: 0x060019FE RID: 6654 RVA: 0x000C6E3C File Offset: 0x000C503C
 		protected override void OnControllerConnected(ControllerStatusChangedEventArgs args)
 		{
 			if (!this.isEnabled)
@@ -312,7 +273,6 @@ namespace Rewired.Data
 			}
 		}
 
-		// Token: 0x060019FF RID: 6655 RVA: 0x00013A90 File Offset: 0x00011C90
 		protected override void OnControllerPreDisconnect(ControllerStatusChangedEventArgs args)
 		{
 			if (!this.isEnabled)
@@ -325,7 +285,6 @@ namespace Rewired.Data
 			}
 		}
 
-		// Token: 0x06001A00 RID: 6656 RVA: 0x00013AB0 File Offset: 0x00011CB0
 		protected override void OnControllerDisconnected(ControllerStatusChangedEventArgs args)
 		{
 			if (!this.isEnabled)
@@ -338,7 +297,6 @@ namespace Rewired.Data
 			}
 		}
 
-		// Token: 0x06001A01 RID: 6657 RVA: 0x000C6EAC File Offset: 0x000C50AC
 		public override void SaveControllerMap(int playerId, ControllerMap controllerMap)
 		{
 			if (controllerMap == null)
@@ -353,7 +311,6 @@ namespace Rewired.Data
 			this.SaveControllerMap(player, controllerMap);
 		}
 
-		// Token: 0x06001A02 RID: 6658 RVA: 0x000C6ED8 File Offset: 0x000C50D8
 		public override ControllerMap LoadControllerMap(int playerId, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId)
 		{
 			Player player = ReInput.players.GetPlayer(playerId);
@@ -364,7 +321,6 @@ namespace Rewired.Data
 			return this.LoadControllerMap(player, controllerIdentifier, categoryId, layoutId);
 		}
 
-		// Token: 0x06001A03 RID: 6659 RVA: 0x000C6F04 File Offset: 0x000C5104
 		private int LoadAll()
 		{
 			int num = 0;
@@ -380,13 +336,11 @@ namespace Rewired.Data
 			return num + this.LoadAllJoystickCalibrationData();
 		}
 
-		// Token: 0x06001A04 RID: 6660 RVA: 0x00013ACA File Offset: 0x00011CCA
 		private int LoadPlayerDataNow(int playerId)
 		{
 			return this.LoadPlayerDataNow(ReInput.players.GetPlayer(playerId));
 		}
 
-		// Token: 0x06001A05 RID: 6661 RVA: 0x000C6F60 File Offset: 0x000C5160
 		private int LoadPlayerDataNow(Player player)
 		{
 			if (player == null)
@@ -405,7 +359,6 @@ namespace Rewired.Data
 			return num;
 		}
 
-		// Token: 0x06001A06 RID: 6662 RVA: 0x000C7008 File Offset: 0x000C5208
 		private int LoadAllJoystickCalibrationData()
 		{
 			int num = 0;
@@ -417,7 +370,6 @@ namespace Rewired.Data
 			return num;
 		}
 
-		// Token: 0x06001A07 RID: 6663 RVA: 0x00013ADD File Offset: 0x00011CDD
 		private int LoadJoystickCalibrationData(Joystick joystick)
 		{
 			if (joystick == null)
@@ -431,13 +383,11 @@ namespace Rewired.Data
 			return 1;
 		}
 
-		// Token: 0x06001A08 RID: 6664 RVA: 0x00013AF6 File Offset: 0x00011CF6
 		private int LoadJoystickCalibrationData(int joystickId)
 		{
 			return this.LoadJoystickCalibrationData(ReInput.controllers.GetJoystick(joystickId));
 		}
 
-		// Token: 0x06001A09 RID: 6665 RVA: 0x000C7044 File Offset: 0x000C5244
 		private int LoadJoystickData(int joystickId)
 		{
 			int num = 0;
@@ -454,7 +404,6 @@ namespace Rewired.Data
 			return num + this.LoadJoystickCalibrationData(joystickId);
 		}
 
-		// Token: 0x06001A0A RID: 6666 RVA: 0x00013B09 File Offset: 0x00011D09
 		private int LoadControllerDataNow(int playerId, ControllerType controllerType, int controllerId)
 		{
 			int num = 0 + this.LoadControllerMaps(playerId, controllerType, controllerId);
@@ -462,7 +411,6 @@ namespace Rewired.Data
 			return num + this.LoadControllerDataNow(controllerType, controllerId);
 		}
 
-		// Token: 0x06001A0B RID: 6667 RVA: 0x000C70B0 File Offset: 0x000C52B0
 		private int LoadControllerDataNow(ControllerType controllerType, int controllerId)
 		{
 			int num = 0;
@@ -473,7 +421,6 @@ namespace Rewired.Data
 			return num;
 		}
 
-		// Token: 0x06001A0C RID: 6668 RVA: 0x000C70D0 File Offset: 0x000C52D0
 		private int LoadControllerMaps(int playerId, ControllerType controllerType, int controllerId)
 		{
 			int num = 0;
@@ -509,7 +456,6 @@ namespace Rewired.Data
 			return num;
 		}
 
-		// Token: 0x06001A0D RID: 6669 RVA: 0x000C71A8 File Offset: 0x000C53A8
 		private ControllerMap LoadControllerMap(Player player, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId)
 		{
 			if (player == null)
@@ -531,7 +477,6 @@ namespace Rewired.Data
 			return controllerMap;
 		}
 
-		// Token: 0x06001A0E RID: 6670 RVA: 0x000C71FC File Offset: 0x000C53FC
 		private int LoadInputBehaviors(int playerId)
 		{
 			Player player = ReInput.players.GetPlayer(playerId);
@@ -548,7 +493,6 @@ namespace Rewired.Data
 			return num;
 		}
 
-		// Token: 0x06001A0F RID: 6671 RVA: 0x000C7250 File Offset: 0x000C5450
 		private int LoadInputBehaviorNow(int playerId, int behaviorId)
 		{
 			Player player = ReInput.players.GetPlayer(playerId);
@@ -564,7 +508,6 @@ namespace Rewired.Data
 			return this.LoadInputBehaviorNow(player, inputBehavior);
 		}
 
-		// Token: 0x06001A10 RID: 6672 RVA: 0x000C7288 File Offset: 0x000C5488
 		private int LoadInputBehaviorNow(Player player, InputBehavior inputBehavior)
 		{
 			if (player == null || inputBehavior == null)
@@ -583,7 +526,6 @@ namespace Rewired.Data
 			return 1;
 		}
 
-		// Token: 0x06001A11 RID: 6673 RVA: 0x000C72CC File Offset: 0x000C54CC
 		private bool LoadControllerAssignmentsNow()
 		{
 			try
@@ -608,7 +550,6 @@ namespace Rewired.Data
 			return true;
 		}
 
-		// Token: 0x06001A12 RID: 6674 RVA: 0x000C7328 File Offset: 0x000C5528
 		private bool LoadKeyboardAndMouseAssignmentsNow(UserDataStore_PlayerPrefs.ControllerAssignmentSaveInfo data)
 		{
 			try
@@ -639,7 +580,6 @@ namespace Rewired.Data
 			return true;
 		}
 
-		// Token: 0x06001A13 RID: 6675 RVA: 0x000C73F0 File Offset: 0x000C55F0
 		private bool LoadJoystickAssignmentsNow(UserDataStore_PlayerPrefs.ControllerAssignmentSaveInfo data)
 		{
 			try
@@ -741,7 +681,6 @@ namespace Rewired.Data
 			return true;
 		}
 
-		// Token: 0x06001A14 RID: 6676 RVA: 0x000C775C File Offset: 0x000C595C
 		private UserDataStore_PlayerPrefs.ControllerAssignmentSaveInfo LoadControllerAssignmentData()
 		{
 			UserDataStore_PlayerPrefs.ControllerAssignmentSaveInfo controllerAssignmentSaveInfo;
@@ -779,7 +718,6 @@ namespace Rewired.Data
 			return controllerAssignmentSaveInfo;
 		}
 
-		// Token: 0x06001A15 RID: 6677 RVA: 0x00013B26 File Offset: 0x00011D26
 		private IEnumerator LoadJoystickAssignmentsDeferred()
 		{
 			this.deferredJoystickAssignmentLoadPending = true;
@@ -794,7 +732,6 @@ namespace Rewired.Data
 			yield break;
 		}
 
-		// Token: 0x06001A16 RID: 6678 RVA: 0x000C77C4 File Offset: 0x000C59C4
 		private void SaveAll()
 		{
 			IList<Player> allPlayers = ReInput.players.AllPlayers;
@@ -810,14 +747,12 @@ namespace Rewired.Data
 			PlayerPrefs.Save();
 		}
 
-		// Token: 0x06001A17 RID: 6679 RVA: 0x00013B35 File Offset: 0x00011D35
 		private void SavePlayerDataNow(int playerId)
 		{
 			this.SavePlayerDataNow(ReInput.players.GetPlayer(playerId));
 			PlayerPrefs.Save();
 		}
 
-		// Token: 0x06001A18 RID: 6680 RVA: 0x000C7814 File Offset: 0x000C5A14
 		private void SavePlayerDataNow(Player player)
 		{
 			if (player == null)
@@ -829,7 +764,6 @@ namespace Rewired.Data
 			this.SaveControllerMaps(player, saveData);
 		}
 
-		// Token: 0x06001A19 RID: 6681 RVA: 0x000C7840 File Offset: 0x000C5A40
 		private void SaveAllJoystickCalibrationData()
 		{
 			IList<Joystick> joysticks = ReInput.controllers.Joysticks;
@@ -839,13 +773,11 @@ namespace Rewired.Data
 			}
 		}
 
-		// Token: 0x06001A1A RID: 6682 RVA: 0x00013B4D File Offset: 0x00011D4D
 		private void SaveJoystickCalibrationData(int joystickId)
 		{
 			this.SaveJoystickCalibrationData(ReInput.controllers.GetJoystick(joystickId));
 		}
 
-		// Token: 0x06001A1B RID: 6683 RVA: 0x000C7878 File Offset: 0x000C5A78
 		private void SaveJoystickCalibrationData(Joystick joystick)
 		{
 			if (joystick == null)
@@ -856,7 +788,6 @@ namespace Rewired.Data
 			PlayerPrefs.SetString(this.GetJoystickCalibrationMapPlayerPrefsKey(joystick), calibrationMapSaveData.map.ToXmlString());
 		}
 
-		// Token: 0x06001A1C RID: 6684 RVA: 0x000C78A8 File Offset: 0x000C5AA8
 		private void SaveJoystickData(int joystickId)
 		{
 			IList<Player> allPlayers = ReInput.players.AllPlayers;
@@ -871,7 +802,6 @@ namespace Rewired.Data
 			this.SaveJoystickCalibrationData(joystickId);
 		}
 
-		// Token: 0x06001A1D RID: 6685 RVA: 0x00013B60 File Offset: 0x00011D60
 		private void SaveControllerDataNow(int playerId, ControllerType controllerType, int controllerId)
 		{
 			this.SaveControllerMaps(playerId, controllerType, controllerId);
@@ -879,7 +809,6 @@ namespace Rewired.Data
 			PlayerPrefs.Save();
 		}
 
-		// Token: 0x06001A1E RID: 6686 RVA: 0x00013B78 File Offset: 0x00011D78
 		private void SaveControllerDataNow(ControllerType controllerType, int controllerId)
 		{
 			if (controllerType == ControllerType.Joystick)
@@ -889,7 +818,6 @@ namespace Rewired.Data
 			PlayerPrefs.Save();
 		}
 
-		// Token: 0x06001A1F RID: 6687 RVA: 0x000C7900 File Offset: 0x000C5B00
 		private void SaveControllerMaps(Player player, PlayerSaveData playerSaveData)
 		{
 			foreach (ControllerMapSaveData controllerMapSaveData in playerSaveData.AllControllerMapSaveData)
@@ -898,7 +826,6 @@ namespace Rewired.Data
 			}
 		}
 
-		// Token: 0x06001A20 RID: 6688 RVA: 0x000C7954 File Offset: 0x000C5B54
 		private void SaveControllerMaps(int playerId, ControllerType controllerType, int controllerId)
 		{
 			Player player = ReInput.players.GetPlayer(playerId);
@@ -921,14 +848,12 @@ namespace Rewired.Data
 			}
 		}
 
-		// Token: 0x06001A21 RID: 6689 RVA: 0x000C79B8 File Offset: 0x000C5BB8
 		private void SaveControllerMap(Player player, ControllerMap controllerMap)
 		{
 			PlayerPrefs.SetString(this.GetControllerMapPlayerPrefsKey(player, controllerMap.controller.identifier, controllerMap.categoryId, controllerMap.layoutId, 2), controllerMap.ToXmlString());
 			PlayerPrefs.SetString(this.GetControllerMapKnownActionIdsPlayerPrefsKey(player, controllerMap.controller.identifier, controllerMap.categoryId, controllerMap.layoutId, 2), this.allActionIdsString);
 		}
 
-		// Token: 0x06001A22 RID: 6690 RVA: 0x000C7A1C File Offset: 0x000C5C1C
 		private void SaveInputBehaviors(Player player, PlayerSaveData playerSaveData)
 		{
 			if (player == null)
@@ -942,7 +867,6 @@ namespace Rewired.Data
 			}
 		}
 
-		// Token: 0x06001A23 RID: 6691 RVA: 0x000C7A50 File Offset: 0x000C5C50
 		private void SaveInputBehaviorNow(int playerId, int behaviorId)
 		{
 			Player player = ReInput.players.GetPlayer(playerId);
@@ -959,7 +883,6 @@ namespace Rewired.Data
 			PlayerPrefs.Save();
 		}
 
-		// Token: 0x06001A24 RID: 6692 RVA: 0x00013B8A File Offset: 0x00011D8A
 		private void SaveInputBehaviorNow(Player player, InputBehavior inputBehavior)
 		{
 			if (player == null || inputBehavior == null)
@@ -969,7 +892,6 @@ namespace Rewired.Data
 			PlayerPrefs.SetString(this.GetInputBehaviorPlayerPrefsKey(player, inputBehavior.id), inputBehavior.ToXmlString());
 		}
 
-		// Token: 0x06001A25 RID: 6693 RVA: 0x000C7A8C File Offset: 0x000C5C8C
 		private bool SaveControllerAssignments()
 		{
 			try
@@ -1005,31 +927,26 @@ namespace Rewired.Data
 			return true;
 		}
 
-		// Token: 0x06001A26 RID: 6694 RVA: 0x00013BAB File Offset: 0x00011DAB
 		private bool ControllerAssignmentSaveDataExists()
 		{
 			return PlayerPrefs.HasKey(this.playerPrefsKey_controllerAssignments) && !string.IsNullOrEmpty(PlayerPrefs.GetString(this.playerPrefsKey_controllerAssignments));
 		}
 
-		// Token: 0x06001A27 RID: 6695 RVA: 0x00013BD1 File Offset: 0x00011DD1
 		private string GetBasePlayerPrefsKey(Player player)
 		{
 			return this.playerPrefsKeyPrefix + "|playerName=" + player.name;
 		}
 
-		// Token: 0x06001A28 RID: 6696 RVA: 0x00013BE9 File Offset: 0x00011DE9
 		private string GetControllerMapPlayerPrefsKey(Player player, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId, int ppKeyVersion)
 		{
 			return this.GetBasePlayerPrefsKey(player) + "|dataType=ControllerMap" + UserDataStore_PlayerPrefs.GetControllerMapPlayerPrefsKeyCommonSuffix(player, controllerIdentifier, categoryId, layoutId, ppKeyVersion);
 		}
 
-		// Token: 0x06001A29 RID: 6697 RVA: 0x00013C0D File Offset: 0x00011E0D
 		private string GetControllerMapKnownActionIdsPlayerPrefsKey(Player player, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId, int ppKeyVersion)
 		{
 			return this.GetBasePlayerPrefsKey(player) + "|dataType=ControllerMap_KnownActionIds" + UserDataStore_PlayerPrefs.GetControllerMapPlayerPrefsKeyCommonSuffix(player, controllerIdentifier, categoryId, layoutId, ppKeyVersion);
 		}
 
-		// Token: 0x06001A2A RID: 6698 RVA: 0x000C7BCC File Offset: 0x000C5DCC
 		private static string GetControllerMapPlayerPrefsKeyCommonSuffix(Player player, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId, int ppKeyVersion)
 		{
 			string text = "";
@@ -1073,19 +990,16 @@ namespace Rewired.Data
 			return text;
 		}
 
-		// Token: 0x06001A2B RID: 6699 RVA: 0x000C7D1C File Offset: 0x000C5F1C
 		private string GetJoystickCalibrationMapPlayerPrefsKey(Joystick joystick)
 		{
 			return this.playerPrefsKeyPrefix + "|dataType=CalibrationMap" + "|controllerType=" + joystick.type.ToString() + "|hardwareIdentifier=" + joystick.hardwareIdentifier + "|hardwareGuid=" + joystick.hardwareTypeGuid.ToString();
 		}
 
-		// Token: 0x06001A2C RID: 6700 RVA: 0x00013C31 File Offset: 0x00011E31
 		private string GetInputBehaviorPlayerPrefsKey(Player player, int inputBehaviorId)
 		{
 			return this.GetBasePlayerPrefsKey(player) + "|dataType=InputBehavior" + "|id=" + inputBehaviorId.ToString();
 		}
 
-		// Token: 0x06001A2D RID: 6701 RVA: 0x000C7D88 File Offset: 0x000C5F88
 		private string GetControllerMapXml(Player player, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId)
 		{
 			for (int i = 2; i >= 0; i--)
@@ -1099,7 +1013,6 @@ namespace Rewired.Data
 			return null;
 		}
 
-		// Token: 0x06001A2E RID: 6702 RVA: 0x000C7DC0 File Offset: 0x000C5FC0
 		private List<int> GetControllerMapKnownActionIds(Player player, ControllerIdentifier controllerIdentifier, int categoryId, int layoutId)
 		{
 			List<int> list = new List<int>();
@@ -1135,7 +1048,6 @@ namespace Rewired.Data
 			return list;
 		}
 
-		// Token: 0x06001A2F RID: 6703 RVA: 0x000C7E58 File Offset: 0x000C6058
 		private string GetJoystickCalibrationMapXml(Joystick joystick)
 		{
 			string joystickCalibrationMapPlayerPrefsKey = this.GetJoystickCalibrationMapPlayerPrefsKey(joystick);
@@ -1146,7 +1058,6 @@ namespace Rewired.Data
 			return PlayerPrefs.GetString(joystickCalibrationMapPlayerPrefsKey);
 		}
 
-		// Token: 0x06001A30 RID: 6704 RVA: 0x000C7E84 File Offset: 0x000C6084
 		private string GetInputBehaviorXml(Player player, int id)
 		{
 			string inputBehaviorPlayerPrefsKey = this.GetInputBehaviorPlayerPrefsKey(player, id);
@@ -1157,7 +1068,6 @@ namespace Rewired.Data
 			return PlayerPrefs.GetString(inputBehaviorPlayerPrefsKey);
 		}
 
-		// Token: 0x06001A31 RID: 6705 RVA: 0x000C7EB0 File Offset: 0x000C60B0
 		private void AddDefaultMappingsForNewActions(ControllerIdentifier controllerIdentifier, ControllerMap controllerMap, List<int> knownActionIds)
 		{
 			if (controllerMap == null || knownActionIds == null)
@@ -1195,7 +1105,6 @@ namespace Rewired.Data
 			}
 		}
 
-		// Token: 0x06001A32 RID: 6706 RVA: 0x000C7FEC File Offset: 0x000C61EC
 		private Joystick FindJoystickPrecise(UserDataStore_PlayerPrefs.ControllerAssignmentSaveInfo.JoystickInfo joystickInfo)
 		{
 			if (joystickInfo == null)
@@ -1217,7 +1126,6 @@ namespace Rewired.Data
 			return null;
 		}
 
-		// Token: 0x06001A33 RID: 6707 RVA: 0x000C8050 File Offset: 0x000C6250
 		private bool TryFindJoysticksImprecise(UserDataStore_PlayerPrefs.ControllerAssignmentSaveInfo.JoystickInfo joystickInfo, out List<Joystick> matches)
 		{
 			matches = null;
@@ -1244,7 +1152,6 @@ namespace Rewired.Data
 			return matches != null;
 		}
 
-		// Token: 0x06001A34 RID: 6708 RVA: 0x000C80C8 File Offset: 0x000C62C8
 		private static int GetDuplicateIndex(Player player, ControllerIdentifier controllerIdentifier)
 		{
 			Controller controller = ReInput.controllers.GetController(controllerIdentifier);
@@ -1282,7 +1189,6 @@ namespace Rewired.Data
 			return num;
 		}
 
-		// Token: 0x06001A35 RID: 6709 RVA: 0x000C8198 File Offset: 0x000C6398
 		private void RefreshLayoutManager(int playerId)
 		{
 			Player player = ReInput.players.GetPlayer(playerId);
@@ -1293,7 +1199,6 @@ namespace Rewired.Data
 			player.controllers.maps.layoutManager.Apply();
 		}
 
-		// Token: 0x06001A36 RID: 6710 RVA: 0x000C81CC File Offset: 0x000C63CC
 		private static Type GetControllerMapType(ControllerType controllerType)
 		{
 			switch (controllerType)
@@ -1314,88 +1219,65 @@ namespace Rewired.Data
 			}
 		}
 
-		// Token: 0x040012A3 RID: 4771
 		private const string thisScriptName = "UserDataStore_PlayerPrefs";
 
-		// Token: 0x040012A4 RID: 4772
 		private const string logPrefix = "Rewired: ";
 
-		// Token: 0x040012A5 RID: 4773
 		private const string editorLoadedMessage = "\n***IMPORTANT:*** Changes made to the Rewired Input Manager configuration after the last time XML data was saved WILL NOT be used because the loaded old saved data has overwritten these values. If you change something in the Rewired Input Manager such as a Joystick Map or Input Behavior settings, you will not see these changes reflected in the current configuration. Clear PlayerPrefs using the inspector option on the UserDataStore_PlayerPrefs component.";
 
-		// Token: 0x040012A6 RID: 4774
 		private const string playerPrefsKeySuffix_controllerAssignments = "ControllerAssignments";
 
-		// Token: 0x040012A7 RID: 4775
 		private const int controllerMapPPKeyVersion_original = 0;
 
-		// Token: 0x040012A8 RID: 4776
 		private const int controllerMapPPKeyVersion_includeDuplicateJoystickIndex = 1;
 
-		// Token: 0x040012A9 RID: 4777
 		private const int controllerMapPPKeyVersion_supportDisconnectedControllers = 2;
 
-		// Token: 0x040012AA RID: 4778
 		private const int controllerMapPPKeyVersion_includeFormatVersion = 2;
 
-		// Token: 0x040012AB RID: 4779
 		private const int controllerMapPPKeyVersion = 2;
 
-		// Token: 0x040012AC RID: 4780
 		[SerializeField]
 		[Tooltip("Should this script be used? If disabled, nothing will be saved or loaded.")]
 		private bool isEnabled = true;
 
-		// Token: 0x040012AD RID: 4781
 		[Tooltip("Should saved data be loaded on start?")]
 		[SerializeField]
 		private bool loadDataOnStart = true;
 
-		// Token: 0x040012AE RID: 4782
 		[Tooltip("Should Player Joystick assignments be saved and loaded? This is not totally reliable for all Joysticks on all platforms. Some platforms/input sources do not provide enough information to reliably save assignments from session to session and reboot to reboot.")]
 		[SerializeField]
 		private bool loadJoystickAssignments = true;
 
-		// Token: 0x040012AF RID: 4783
 		[Tooltip("Should Player Keyboard assignments be saved and loaded?")]
 		[SerializeField]
 		private bool loadKeyboardAssignments = true;
 
-		// Token: 0x040012B0 RID: 4784
 		[Tooltip("Should Player Mouse assignments be saved and loaded?")]
 		[SerializeField]
 		private bool loadMouseAssignments = true;
 
-		// Token: 0x040012B1 RID: 4785
 		[SerializeField]
 		[Tooltip("The PlayerPrefs key prefix. Change this to change how keys are stored in PlayerPrefs. Changing this will make saved data already stored with the old key no longer accessible.")]
 		private string playerPrefsKeyPrefix = "RewiredSaveData";
 
-		// Token: 0x040012B2 RID: 4786
 		[NonSerialized]
 		private bool allowImpreciseJoystickAssignmentMatching = true;
 
-		// Token: 0x040012B3 RID: 4787
 		[NonSerialized]
 		private bool deferredJoystickAssignmentLoadPending;
 
-		// Token: 0x040012B4 RID: 4788
 		[NonSerialized]
 		private bool wasJoystickEverDetected;
 
-		// Token: 0x040012B5 RID: 4789
 		[NonSerialized]
 		private List<int> __allActionIds;
 
-		// Token: 0x040012B6 RID: 4790
 		[NonSerialized]
 		private string __allActionIdsString;
 
-		// Token: 0x0200026F RID: 623
 		private class ControllerAssignmentSaveInfo
 		{
-			// Token: 0x17000298 RID: 664
-			// (get) Token: 0x06001A38 RID: 6712 RVA: 0x00013C92 File Offset: 0x00011E92
 			public int playerCount
 			{
 				get
@@ -1408,7 +1290,6 @@ namespace Rewired.Data
 				}
 			}
 
-			// Token: 0x06001A39 RID: 6713 RVA: 0x000C823C File Offset: 0x000C643C
 			public ControllerAssignmentSaveInfo(int playerCount)
 			{
 				this.players = new UserDataStore_PlayerPrefs.ControllerAssignmentSaveInfo.PlayerInfo[playerCount];
@@ -1418,7 +1299,6 @@ namespace Rewired.Data
 				}
 			}
 
-			// Token: 0x06001A3A RID: 6714 RVA: 0x000C8274 File Offset: 0x000C6474
 			public int IndexOfPlayer(int playerId)
 			{
 				for (int i = 0; i < this.playerCount; i++)
@@ -1431,20 +1311,15 @@ namespace Rewired.Data
 				return -1;
 			}
 
-			// Token: 0x06001A3B RID: 6715 RVA: 0x00013CA6 File Offset: 0x00011EA6
 			public bool ContainsPlayer(int playerId)
 			{
 				return this.IndexOfPlayer(playerId) >= 0;
 			}
 
-			// Token: 0x040012B7 RID: 4791
 			public UserDataStore_PlayerPrefs.ControllerAssignmentSaveInfo.PlayerInfo[] players;
 
-			// Token: 0x02000270 RID: 624
 			public class PlayerInfo
 			{
-				// Token: 0x17000299 RID: 665
-				// (get) Token: 0x06001A3C RID: 6716 RVA: 0x00013CB5 File Offset: 0x00011EB5
 				public int joystickCount
 				{
 					get
@@ -1457,37 +1332,27 @@ namespace Rewired.Data
 					}
 				}
 
-				// Token: 0x040012B8 RID: 4792
 				public int id;
 
-				// Token: 0x040012B9 RID: 4793
 				public bool hasKeyboard;
 
-				// Token: 0x040012BA RID: 4794
 				public bool hasMouse;
 
-				// Token: 0x040012BB RID: 4795
 				public UserDataStore_PlayerPrefs.ControllerAssignmentSaveInfo.JoystickInfo[] joysticks;
 			}
 
-			// Token: 0x02000271 RID: 625
 			public class JoystickInfo
 			{
-				// Token: 0x040012BC RID: 4796
 				public Guid instanceGuid;
 
-				// Token: 0x040012BD RID: 4797
 				public string hardwareIdentifier;
 
-				// Token: 0x040012BE RID: 4798
 				public int id;
 			}
 		}
 
-		// Token: 0x02000272 RID: 626
 		private class JoystickAssignmentHistoryInfo
 		{
-			// Token: 0x06001A3F RID: 6719 RVA: 0x00013CC9 File Offset: 0x00011EC9
 			public JoystickAssignmentHistoryInfo(Joystick joystick, int oldJoystickId)
 			{
 				if (joystick == null)
@@ -1498,10 +1363,8 @@ namespace Rewired.Data
 				this.oldJoystickId = oldJoystickId;
 			}
 
-			// Token: 0x040012BF RID: 4799
 			public readonly Joystick joystick;
 
-			// Token: 0x040012C0 RID: 4800
 			public readonly int oldJoystickId;
 		}
 	}

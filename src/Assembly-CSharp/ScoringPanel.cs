@@ -1,12 +1,10 @@
-﻿using System;
+using System;
 using StrikeCore;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x020000EC RID: 236
 public class ScoringPanel : MonoBehaviour
 {
-	// Token: 0x06000922 RID: 2338 RVA: 0x00051280 File Offset: 0x0004F480
 	private void \u02BB\u02BF\u02BA\u02BC\u02B8\u02B7\u02B4\u02B5\u02B7\u02B9\u02C1()
 	{
 		foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
@@ -22,7 +20,6 @@ public class ScoringPanel : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000923 RID: 2339 RVA: 0x00051338 File Offset: 0x0004F538
 	public void \u02B7\u02B9\u02C0\u02BF\u02BE\u02BD\u02BD\u02C0\u02B3\u02BE\u02B2(SongEntry \u02BA\u02B4\u02B8\u02BA\u02C1\u02B7\u02BF\u02BD\u02B5\u02BE\u02BA, \u02C0\u02B5\u02B3\u02B2\u02BA\u02BD\u02B5\u02C1\u02B9\u02BA\u02BC \u02B8\u02BE\u02BF\u02BA\u02B6\u02B2\u02BC\u02B4\u02C1\u02BE\u02BB, Instrument \u02B9\u02B9\u02BA\u02B2\u02BB\u02C1\u02C1\u02C1\u02BA\u02B9\u02B4)
 	{
 		this.highScoreTitle.text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02BA\u02B9\u02C1\u02B9\u02B2\u02BD\u02B2\u02BC\u02B7\u02BA\u02B8().\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0("diff_guitarghl") + "debug_fps";
@@ -50,7 +47,6 @@ public class ScoringPanel : MonoBehaviour
 		this.currentInstrument.text = \u02B9\u02BA\u02BF\u02BB\u02B2\u02B9\u02BB\u02B9\u02B9\u02B5\u02B8.\u02C1\u02B6\u02BD\u02B6\u02BE\u02BB\u02BC\u02B8\u02BF\u02B7\u02BF(\u02B8\u02BE\u02BF\u02BA\u02B6\u02B2\u02BC\u02B4\u02C1\u02BE\u02BB);
 	}
 
-	// Token: 0x06000924 RID: 2340 RVA: 0x00051514 File Offset: 0x0004F714
 	private void \u02C0\u02BE\u02B7\u02BF\u02B9\u02BB\u02C1\u02B2\u02B9\u02B7\u02B5()
 	{
 		foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
@@ -66,37 +62,31 @@ public class ScoringPanel : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000925 RID: 2341 RVA: 0x0000A59E File Offset: 0x0000879E
 	private void \u02B4\u02B7\u02C1\u02B8\u02B2\u02B9\u02B6\u02B2\u02B5\u02B7\u02B7()
 	{
 		this.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 = false;
 	}
 
-	// Token: 0x06000926 RID: 2342 RVA: 0x0000A5A7 File Offset: 0x000087A7
 	private void \u02B9\u02B7\u02C0\u02B7\u02C1\u02BA\u02BC\u02C0\u02C1\u02BD\u02B6()
 	{
 		this.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 = true;
 	}
 
-	// Token: 0x06000927 RID: 2343 RVA: 0x0000A5A7 File Offset: 0x000087A7
 	private void OnEnable()
 	{
 		this.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 = true;
 	}
 
-	// Token: 0x06000928 RID: 2344 RVA: 0x0000A59E File Offset: 0x0000879E
 	private void \u02C0\u02B7\u02B3\u02BF\u02B9\u02B3\u02BB\u02C1\u02BB\u02BA\u02BF()
 	{
 		this.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 = false;
 	}
 
-	// Token: 0x06000929 RID: 2345 RVA: 0x0000A59E File Offset: 0x0000879E
 	private void \u02B3\u02C1\u02B9\u02B7\u02B4\u02BF\u02BD\u02B9\u02BB\u02BE\u02B6()
 	{
 		this.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 = false;
 	}
 
-	// Token: 0x0600092A RID: 2346 RVA: 0x000515CC File Offset: 0x0004F7CC
 	private void Update()
 	{
 		foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
@@ -112,7 +102,6 @@ public class ScoringPanel : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600092B RID: 2347 RVA: 0x00051684 File Offset: 0x0004F884
 	public void \u02B4\u02BB\u02C1\u02B5\u02BF\u02B2\u02BF\u02BE\u02BE\u02B4\u02BB(SongEntry \u02BA\u02B4\u02B8\u02BA\u02C1\u02B7\u02BF\u02BD\u02B5\u02BE\u02BA, \u02C0\u02B5\u02B3\u02B2\u02BA\u02BD\u02B5\u02C1\u02B9\u02BA\u02BC \u02B8\u02BE\u02BF\u02BA\u02B6\u02B2\u02BC\u02B4\u02C1\u02BE\u02BB, Instrument \u02B9\u02B9\u02BA\u02B2\u02BB\u02C1\u02C1\u02C1\u02BA\u02B9\u02B4)
 	{
 		this.highScoreTitle.text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02B2\u02BE\u02BA\u02B7\u02B4\u02BA\u02BD\u02BE\u02B7\u02B8\u02BE().\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0("diff_rhythmghl") + "Menu Music";
@@ -140,7 +129,6 @@ public class ScoringPanel : MonoBehaviour
 		this.currentInstrument.text = \u02B9\u02BA\u02BF\u02BB\u02B2\u02B9\u02BB\u02B9\u02B9\u02B5\u02B8.\u02B4\u02C0\u02BF\u02B6\u02BC\u02BE\u02B6\u02C1\u02B4\u02BD\u02B7(\u02B8\u02BE\u02BF\u02BA\u02B6\u02B2\u02BC\u02B4\u02C1\u02BE\u02BB);
 	}
 
-	// Token: 0x0600092C RID: 2348 RVA: 0x00051860 File Offset: 0x0004FA60
 	private void \u02BC\u02B6\u02B8\u02BA\u02B2\u02B4\u02B7\u02B3\u02C0\u02B8\u02B7()
 	{
 		foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
@@ -156,7 +144,6 @@ public class ScoringPanel : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600092D RID: 2349 RVA: 0x00051918 File Offset: 0x0004FB18
 	private void \u02B2\u02B6\u02C1\u02B8\u02B3\u02B5\u02B7\u02B5\u02B6\u02B9\u02C0()
 	{
 		foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
@@ -172,25 +159,21 @@ public class ScoringPanel : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600092E RID: 2350 RVA: 0x0000A59E File Offset: 0x0000879E
 	private void \u02BC\u02BE\u02B2\u02B8\u02C0\u02B6\u02B2\u02B3\u02B6\u02B4\u02BF()
 	{
 		this.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 = false;
 	}
 
-	// Token: 0x0600092F RID: 2351 RVA: 0x0000A59E File Offset: 0x0000879E
 	private void \u02BA\u02B9\u02BF\u02BC\u02C1\u02B9\u02B7\u02B4\u02C1\u02BB\u02BB()
 	{
 		this.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 = false;
 	}
 
-	// Token: 0x06000930 RID: 2352 RVA: 0x0000A59E File Offset: 0x0000879E
 	private void OnDisable()
 	{
 		this.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 = false;
 	}
 
-	// Token: 0x06000931 RID: 2353 RVA: 0x000519D0 File Offset: 0x0004FBD0
 	public void \u02B5\u02C0\u02BA\u02B9\u02BF\u02B4\u02C0\u02B2\u02BD\u02BD\u02BB(SongEntry \u02BA\u02B4\u02B8\u02BA\u02C1\u02B7\u02BF\u02BD\u02B5\u02BE\u02BA, \u02C0\u02B5\u02B3\u02B2\u02BA\u02BD\u02B5\u02C1\u02B9\u02BA\u02BC \u02B8\u02BE\u02BF\u02BA\u02B6\u02B2\u02BC\u02B4\u02C1\u02BE\u02BB, Instrument \u02B9\u02B9\u02BA\u02B2\u02BB\u02C1\u02C1\u02C1\u02BA\u02B9\u02B4)
 	{
 		this.highScoreTitle.text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02BA\u02B9\u02C1\u02B9\u02B2\u02BD\u02B2\u02BC\u02B7\u02BA\u02B8().\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("") + ".webm";
@@ -218,7 +201,6 @@ public class ScoringPanel : MonoBehaviour
 		this.currentInstrument.text = \u02B9\u02BA\u02BF\u02BB\u02B2\u02B9\u02BB\u02B9\u02B9\u02B5\u02B8.\u02B4\u02C0\u02BF\u02B6\u02BC\u02BE\u02B6\u02C1\u02B4\u02BD\u02B7(\u02B8\u02BE\u02BF\u02BA\u02B6\u02B2\u02BC\u02B4\u02C1\u02BE\u02BB);
 	}
 
-	// Token: 0x06000932 RID: 2354 RVA: 0x00051BAC File Offset: 0x0004FDAC
 	public void \u02B9\u02BF\u02BF\u02B8\u02B4\u02B8\u02BA\u02B8\u02B9\u02B6\u02BC(SongEntry \u02BA\u02B4\u02B8\u02BA\u02C1\u02B7\u02BF\u02BD\u02B5\u02BE\u02BA, \u02C0\u02B5\u02B3\u02B2\u02BA\u02BD\u02B5\u02C1\u02B9\u02BA\u02BC \u02B8\u02BE\u02BF\u02BA\u02B6\u02B2\u02BC\u02B4\u02C1\u02BE\u02BB, Instrument \u02B9\u02B9\u02BA\u02B2\u02BB\u02C1\u02C1\u02C1\u02BA\u02B9\u02B4)
 	{
 		this.highScoreTitle.text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Current High Score") + ":";
@@ -246,7 +228,6 @@ public class ScoringPanel : MonoBehaviour
 		this.currentInstrument.text = \u02B9\u02BA\u02BF\u02BB\u02B2\u02B9\u02BB\u02B9\u02B9\u02B5\u02B8.\u02C1\u02B6\u02BD\u02B6\u02BE\u02BB\u02BC\u02B8\u02BF\u02B7\u02BF(\u02B8\u02BE\u02BF\u02BA\u02B6\u02B2\u02BC\u02B4\u02C1\u02BE\u02BB);
 	}
 
-	// Token: 0x06000933 RID: 2355 RVA: 0x00051D88 File Offset: 0x0004FF88
 	private void \u02B5\u02B9\u02B7\u02B7\u02B6\u02B5\u02BC\u02BA\u02B4\u02B2\u02B4()
 	{
 		foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
@@ -262,40 +243,31 @@ public class ScoringPanel : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000935 RID: 2357 RVA: 0x0000A59E File Offset: 0x0000879E
 	private void \u02B2\u02BF\u02B3\u02B6\u02B5\u02B4\u02BC\u02C0\u02C0\u02C0\u02BC()
 	{
 		this.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 = false;
 	}
 
-	// Token: 0x0400072A RID: 1834
 	[SerializeField]
 	private Text highScoreTitle;
 
-	// Token: 0x0400072B RID: 1835
 	[SerializeField]
 	private Text songTitle;
 
-	// Token: 0x0400072C RID: 1836
 	[SerializeField]
 	private Text currentScore;
 
-	// Token: 0x0400072D RID: 1837
 	[SerializeField]
 	private Text currentInstrument;
 
-	// Token: 0x0400072E RID: 1838
 	[SerializeField]
 	private Text currentModifiers;
 
-	// Token: 0x0400072F RID: 1839
 	[SerializeField]
 	private Text playCount;
 
-	// Token: 0x04000730 RID: 1840
 	[SerializeField]
 	private Text timeplayed;
 
-	// Token: 0x04000731 RID: 1841
 	public bool \u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8;
 }

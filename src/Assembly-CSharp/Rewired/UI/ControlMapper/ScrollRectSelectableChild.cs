@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Rewired.Utils;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -6,13 +6,10 @@ using UnityEngine.UI;
 
 namespace Rewired.UI.ControlMapper
 {
-	// Token: 0x020002BC RID: 700
 	[AddComponentMenu("")]
 	[RequireComponent(typeof(Selectable))]
 	public class ScrollRectSelectableChild : MonoBehaviour, ISelectHandler, IEventSystemHandler
 	{
-		// Token: 0x170003ED RID: 1005
-		// (get) Token: 0x06001E9D RID: 7837 RVA: 0x0001717D File Offset: 0x0001537D
 		private RectTransform parentScrollRectContentTransform
 		{
 			get
@@ -21,8 +18,6 @@ namespace Rewired.UI.ControlMapper
 			}
 		}
 
-		// Token: 0x170003EE RID: 1006
-		// (get) Token: 0x06001E9E RID: 7838 RVA: 0x000D3EA0 File Offset: 0x000D20A0
 		private Selectable selectable
 		{
 			get
@@ -36,8 +31,6 @@ namespace Rewired.UI.ControlMapper
 			}
 		}
 
-		// Token: 0x170003EF RID: 1007
-		// (get) Token: 0x06001E9F RID: 7839 RVA: 0x0001718A File Offset: 0x0001538A
 		private RectTransform rectTransform
 		{
 			get
@@ -46,7 +39,6 @@ namespace Rewired.UI.ControlMapper
 			}
 		}
 
-		// Token: 0x06001EA0 RID: 7840 RVA: 0x00017197 File Offset: 0x00015397
 		private void Start()
 		{
 			this.parentScrollRect = base.transform.GetComponentInParent<ScrollRect>();
@@ -57,7 +49,6 @@ namespace Rewired.UI.ControlMapper
 			}
 		}
 
-		// Token: 0x06001EA1 RID: 7841 RVA: 0x000D3EC8 File Offset: 0x000D20C8
 		public void OnSelect(BaseEventData eventData)
 		{
 			if (this.parentScrollRect == null)
@@ -98,16 +89,12 @@ namespace Rewired.UI.ControlMapper
 			this.parentScrollRectContentTransform.anchoredPosition = anchoredPosition;
 		}
 
-		// Token: 0x040014DA RID: 5338
 		public bool useCustomEdgePadding;
 
-		// Token: 0x040014DB RID: 5339
 		public float customEdgePadding = 50f;
 
-		// Token: 0x040014DC RID: 5340
 		private ScrollRect parentScrollRect;
 
-		// Token: 0x040014DD RID: 5341
 		private Selectable _selectable;
 	}
 }

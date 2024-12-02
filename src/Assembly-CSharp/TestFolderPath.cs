@@ -1,11 +1,9 @@
-﻿using System;
+using System;
 using System.IO;
 using UnityEngine;
 
-// Token: 0x0200021C RID: 540
 public class TestFolderPath : MonoBehaviour
 {
-	// Token: 0x0600185D RID: 6237 RVA: 0x000B3CC0 File Offset: 0x000B1EC0
 	private void \u02B7\u02BF\u02BC\u02C0\u02B5\u02BD\u02BF\u02BB\u02C1\u02BF\u02B2()
 	{
 		this.\u02B5\u02B2\u02C1\u02C1\u02B9\u02BE\u02BE\u02B4\u02C0\u02B2\u02B5 = new \u02B9\u02BE\u02B6\u02B2\u02BC\u02BC\u02B2\u02C0\u02B8\u02B4\u02BA();
@@ -13,7 +11,6 @@ public class TestFolderPath : MonoBehaviour
 		Debug.Log(File.Exists(this.\u02B5\u02B2\u02C1\u02C1\u02B9\u02BE\u02BE\u02B4\u02C0\u02B2\u02B5.\u02B9\u02BB\u02BD\u02BF\u02BC\u02BB\u02BD\u02BD\u02B3\u02C0\u02C0("Updated latency {0} for {1}")));
 	}
 
-	// Token: 0x0600185E RID: 6238 RVA: 0x000B3D18 File Offset: 0x000B1F18
 	private void \u02B5\u02BD\u02BD\u02BE\u02B9\u02BD\u02B2\u02C1\u02C1\u02B3\u02B6()
 	{
 		this.\u02B5\u02B2\u02C1\u02C1\u02B9\u02BE\u02BE\u02B4\u02C0\u02B2\u02B5 = new \u02B9\u02BE\u02B6\u02B2\u02BC\u02BC\u02B2\u02C0\u02B8\u02B4\u02BA();
@@ -21,7 +18,6 @@ public class TestFolderPath : MonoBehaviour
 		Debug.Log(File.Exists(this.\u02B5\u02B2\u02C1\u02C1\u02B9\u02BE\u02BE\u02B4\u02C0\u02B2\u02B5.\u02B9\u02BB\u02BD\u02BF\u02BC\u02BB\u02BD\u02BD\u02B3\u02C0\u02C0("Random")));
 	}
 
-	// Token: 0x0600185F RID: 6239 RVA: 0x000B3D70 File Offset: 0x000B1F70
 	private void \u02B3\u02B8\u02C1\u02BE\u02B7\u02C0\u02B8\u02B8\u02B3\u02B3\u02B7()
 	{
 		this.\u02B5\u02B2\u02C1\u02C1\u02B9\u02BE\u02BE\u02B4\u02C0\u02B2\u02B5 = new \u02B9\u02BE\u02B6\u02B2\u02BC\u02BC\u02B2\u02C0\u02B8\u02B4\u02BA();
@@ -29,7 +25,6 @@ public class TestFolderPath : MonoBehaviour
 		Debug.Log(File.Exists(this.\u02B5\u02B2\u02C1\u02C1\u02B9\u02BE\u02BE\u02B4\u02C0\u02B2\u02B5.\u02B9\u02BB\u02BD\u02BF\u02BC\u02BB\u02BD\u02BD\u02B3\u02C0\u02C0("name")));
 	}
 
-	// Token: 0x06001860 RID: 6240 RVA: 0x000B3DC8 File Offset: 0x000B1FC8
 	private void \u02BF\u02B2\u02C1\u02C1\u02B6\u02BE\u02B3\u02BD\u02B8\u02B3\u02BE()
 	{
 		this.\u02B5\u02B2\u02C1\u02C1\u02B9\u02BE\u02BE\u02B4\u02C0\u02B2\u02B5 = new \u02B9\u02BE\u02B6\u02B2\u02BC\u02BC\u02B2\u02C0\u02B8\u02B4\u02BA();
@@ -37,7 +32,6 @@ public class TestFolderPath : MonoBehaviour
 		Debug.Log(File.Exists(this.\u02B5\u02B2\u02C1\u02C1\u02B9\u02BE\u02BE\u02B4\u02C0\u02B2\u02B5.\u02B9\u02BB\u02BD\u02BF\u02BC\u02BB\u02BD\u02BD\u02B3\u02C0\u02C0("Hit any pad")));
 	}
 
-	// Token: 0x06001861 RID: 6241 RVA: 0x000B3E20 File Offset: 0x000B2020
 	private void \u02BE\u02BD\u02B8\u02B8\u02B9\u02BA\u02BA\u02BA\u02B4\u02B2\u02B4()
 	{
 		this.\u02B5\u02B2\u02C1\u02C1\u02B9\u02BE\u02BE\u02B4\u02C0\u02B2\u02B5 = new \u02B9\u02BE\u02B6\u02B2\u02BC\u02BC\u02B2\u02C0\u02B8\u02B4\u02BA();
@@ -45,7 +39,6 @@ public class TestFolderPath : MonoBehaviour
 		Debug.Log(File.Exists(this.\u02B5\u02B2\u02C1\u02C1\u02B9\u02BE\u02BE\u02B4\u02C0\u02B2\u02B5.\u02B9\u02BB\u02BD\u02BF\u02BC\u02BB\u02BD\u02BD\u02B3\u02C0\u02C0("stars")));
 	}
 
-	// Token: 0x06001862 RID: 6242 RVA: 0x000B3E78 File Offset: 0x000B2078
 	private void \u02BD\u02BF\u02B6\u02B8\u02BB\u02B2\u02BF\u02C0\u02B5\u02B9\u02BC()
 	{
 		this.\u02B5\u02B2\u02C1\u02C1\u02B9\u02BE\u02BE\u02B4\u02C0\u02B2\u02B5 = new \u02B9\u02BE\u02B6\u02B2\u02BC\u02BC\u02B2\u02C0\u02B8\u02B4\u02BA();
@@ -53,7 +46,6 @@ public class TestFolderPath : MonoBehaviour
 		Debug.Log(File.Exists(this.\u02B5\u02B2\u02C1\u02C1\u02B9\u02BE\u02BE\u02B4\u02C0\u02B2\u02B5.\u02B9\u02BB\u02BD\u02BF\u02BC\u02BB\u02BD\u02BD\u02B3\u02C0\u02C0("No Source")));
 	}
 
-	// Token: 0x06001863 RID: 6243 RVA: 0x000B3ED0 File Offset: 0x000B20D0
 	private void \u02B6\u02BB\u02B6\u02B4\u02BB\u02B8\u02B4\u02BC\u02BD\u02B3\u02C1()
 	{
 		this.\u02B5\u02B2\u02C1\u02C1\u02B9\u02BE\u02BE\u02B4\u02C0\u02B2\u02B5 = new \u02B9\u02BE\u02B6\u02B2\u02BC\u02BC\u02B2\u02C0\u02B8\u02B4\u02BA();
@@ -61,7 +53,6 @@ public class TestFolderPath : MonoBehaviour
 		Debug.Log(File.Exists(this.\u02B5\u02B2\u02C1\u02C1\u02B9\u02BE\u02BE\u02B4\u02C0\u02B2\u02B5.\u02B9\u02BB\u02BD\u02BF\u02BC\u02BB\u02BD\u02BD\u02B3\u02C0\u02C0("groupNotesMissed")));
 	}
 
-	// Token: 0x06001864 RID: 6244 RVA: 0x000B3F28 File Offset: 0x000B2128
 	private void \u02B8\u02C1\u02B9\u02BC\u02B6\u02B9\u02B3\u02B5\u02B7\u02BF\u02BD()
 	{
 		this.\u02B5\u02B2\u02C1\u02C1\u02B9\u02BE\u02BE\u02B4\u02C0\u02B2\u02B5 = new \u02B9\u02BE\u02B6\u02B2\u02BC\u02BC\u02B2\u02C0\u02B8\u02B4\u02BA();
@@ -69,7 +60,6 @@ public class TestFolderPath : MonoBehaviour
 		Debug.Log(File.Exists(this.\u02B5\u02B2\u02C1\u02C1\u02B9\u02BE\u02BE\u02B4\u02C0\u02B2\u02B5.\u02B9\u02BB\u02BD\u02BF\u02BC\u02BB\u02BD\u02BD\u02B3\u02C0\u02C0("Restart")));
 	}
 
-	// Token: 0x06001865 RID: 6245 RVA: 0x000B3F80 File Offset: 0x000B2180
 	private void \u02B5\u02B9\u02B5\u02B3\u02BF\u02C1\u02B7\u02BD\u02C0\u02B7\u02C0()
 	{
 		this.\u02B5\u02B2\u02C1\u02C1\u02B9\u02BE\u02BE\u02B4\u02C0\u02B2\u02B5 = new \u02B9\u02BE\u02B6\u02B2\u02BC\u02BC\u02B2\u02C0\u02B8\u02B4\u02BA();
@@ -77,7 +67,6 @@ public class TestFolderPath : MonoBehaviour
 		Debug.Log(File.Exists(this.\u02B5\u02B2\u02C1\u02C1\u02B9\u02BE\u02BE\u02B4\u02C0\u02B2\u02B5.\u02B9\u02BB\u02BD\u02BF\u02BC\u02BB\u02BD\u02BD\u02B3\u02C0\u02C0("int")));
 	}
 
-	// Token: 0x06001866 RID: 6246 RVA: 0x000B3FD8 File Offset: 0x000B21D8
 	private void \u02B4\u02C1\u02B6\u02BE\u02B3\u02B4\u02BD\u02B7\u02B6\u02C0\u02B9()
 	{
 		this.\u02B5\u02B2\u02C1\u02C1\u02B9\u02BE\u02BE\u02B4\u02C0\u02B2\u02B5 = new \u02B9\u02BE\u02B6\u02B2\u02BC\u02BC\u02B2\u02C0\u02B8\u02B4\u02BA();
@@ -85,7 +74,6 @@ public class TestFolderPath : MonoBehaviour
 		Debug.Log(File.Exists(this.\u02B5\u02B2\u02C1\u02C1\u02B9\u02BE\u02BE\u02B4\u02C0\u02B2\u02B5.\u02B9\u02BB\u02BD\u02BF\u02BC\u02BB\u02BD\u02BD\u02B3\u02C0\u02C0("Resolution")));
 	}
 
-	// Token: 0x06001867 RID: 6247 RVA: 0x000B4030 File Offset: 0x000B2230
 	private void Awake()
 	{
 		this.\u02B5\u02B2\u02C1\u02C1\u02B9\u02BE\u02BE\u02B4\u02C0\u02B2\u02B5 = new \u02B9\u02BE\u02B6\u02B2\u02BC\u02BC\u02B2\u02C0\u02B8\u02B4\u02BA();
@@ -93,7 +81,6 @@ public class TestFolderPath : MonoBehaviour
 		Debug.Log(File.Exists(this.\u02B5\u02B2\u02C1\u02C1\u02B9\u02BE\u02BE\u02B4\u02C0\u02B2\u02B5.\u02B9\u02BB\u02BD\u02BF\u02BC\u02BB\u02BD\u02BD\u02B3\u02C0\u02C0("Test File")));
 	}
 
-	// Token: 0x06001868 RID: 6248 RVA: 0x000B4088 File Offset: 0x000B2288
 	private void \u02BC\u02BC\u02B6\u02C0\u02BC\u02C1\u02B8\u02C1\u02C0\u02C1\u02BC()
 	{
 		this.\u02B5\u02B2\u02C1\u02C1\u02B9\u02BE\u02BE\u02B4\u02C0\u02B2\u02B5 = new \u02B9\u02BE\u02B6\u02B2\u02BC\u02BC\u02B2\u02C0\u02B8\u02B4\u02BA();
@@ -101,7 +88,6 @@ public class TestFolderPath : MonoBehaviour
 		Debug.Log(File.Exists(this.\u02B5\u02B2\u02C1\u02C1\u02B9\u02BE\u02BE\u02B4\u02C0\u02B2\u02B5.\u02B9\u02BB\u02BD\u02BF\u02BC\u02BB\u02BD\u02BD\u02B3\u02C0\u02C0("<b>{0}</b>/<b>{1}</b>")));
 	}
 
-	// Token: 0x0600186A RID: 6250 RVA: 0x000B40E0 File Offset: 0x000B22E0
 	private void \u02B8\u02BF\u02B8\u02B6\u02C0\u02C0\u02C1\u02BE\u02BC\u02B4\u02BC()
 	{
 		this.\u02B5\u02B2\u02C1\u02C1\u02B9\u02BE\u02BE\u02B4\u02C0\u02B2\u02B5 = new \u02B9\u02BE\u02B6\u02B2\u02BC\u02BC\u02B2\u02C0\u02B8\u02B4\u02BA();
@@ -109,7 +95,6 @@ public class TestFolderPath : MonoBehaviour
 		Debug.Log(File.Exists(this.\u02B5\u02B2\u02C1\u02C1\u02B9\u02BE\u02BE\u02B4\u02C0\u02B2\u02B5.\u02B9\u02BB\u02BD\u02BF\u02BC\u02BB\u02BD\u02BD\u02B3\u02C0\u02C0("Restart")));
 	}
 
-	// Token: 0x0600186B RID: 6251 RVA: 0x000B4138 File Offset: 0x000B2338
 	private void \u02BE\u02B6\u02B9\u02B2\u02C1\u02B9\u02B8\u02B6\u02B4\u02B3\u02B3()
 	{
 		this.\u02B5\u02B2\u02C1\u02C1\u02B9\u02BE\u02BE\u02B4\u02C0\u02B2\u02B5 = new \u02B9\u02BE\u02B6\u02B2\u02BC\u02BC\u02B2\u02C0\u02B8\u02B4\u02BA();
@@ -117,6 +102,5 @@ public class TestFolderPath : MonoBehaviour
 		Debug.Log(File.Exists(this.\u02B5\u02B2\u02C1\u02C1\u02B9\u02BE\u02BE\u02B4\u02C0\u02B2\u02B5.\u02B9\u02BB\u02BD\u02BF\u02BC\u02BB\u02BD\u02BD\u02B3\u02C0\u02C0("part guitar")));
 	}
 
-	// Token: 0x04001130 RID: 4400
 	private \u02C0\u02BD\u02B9\u02B8\u02B6\u02BB\u02B7\u02B8\u02B7\u02B4\u02B4 \u02B5\u02B2\u02C1\u02C1\u02B9\u02BE\u02BE\u02B4\u02C0\u02B2\u02B5;
 }

@@ -1,10 +1,8 @@
-﻿using System;
+using System;
 using System.Linq;
 
-// Token: 0x02000243 RID: 579
 public static class \u02B2\u02BB\u02BD\u02C0\u02B7\u02BB\u02B2\u02B4\u02B6\u02B2\u02C1
 {
-	// Token: 0x06001937 RID: 6455 RVA: 0x000C485C File Offset: 0x000C2A5C
 	public static \u02B2\u02BB\u02BD\u02C0\u02B7\u02BB\u02B2\u02B4\u02B6\u02B2\u02C1.\u02B3\u02B4\u02BE\u02BF\u02B9\u02BF\u02B4\u02C0\u02BD\u02BA\u02BA \u02B5\u02BC\u02B4\u02B8\u02B6\u02B2\u02BE\u02C0\u02B2\u02BF\u02BC(byte[] \u02BD\u02BD\u02BF\u02BF\u02BE\u02B2\u02B5\u02BD\u02BC\u02B7\u02C0)
 	{
 		if (\u02BD\u02BD\u02BF\u02BF\u02BE\u02B2\u02B5\u02BD\u02BC\u02B7\u02C0.Length == 8)
@@ -29,7 +27,6 @@ public static class \u02B2\u02BB\u02BD\u02C0\u02B7\u02BB\u02B2\u02B4\u02B6\u02B2
 		return default(\u02B2\u02BB\u02BD\u02C0\u02B7\u02BB\u02B2\u02B4\u02B6\u02B2\u02C1.\u02B3\u02B4\u02BE\u02BF\u02B9\u02BF\u02B4\u02C0\u02BD\u02BA\u02BA);
 	}
 
-	// Token: 0x06001938 RID: 6456 RVA: 0x000131A0 File Offset: 0x000113A0
 	// Note: this type is marked as 'beforefieldinit'.
 	static \u02B2\u02BB\u02BD\u02C0\u02B7\u02BB\u02B2\u02B4\u02B6\u02B2\u02C1()
 	{
@@ -39,25 +36,18 @@ public static class \u02B2\u02BB\u02BD\u02C0\u02B7\u02BB\u02B2\u02B4\u02B6\u02B2
 		\u02B2\u02BB\u02BD\u02C0\u02B7\u02BB\u02B2\u02B4\u02B6\u02B2\u02C1.\u02B9\u02C1\u02B6\u02BB\u02B3\u02BC\u02B6\u02BE\u02B8\u02B5\u02B8 = array;
 	}
 
-	// Token: 0x04001200 RID: 4608
 	private static readonly byte[] \u02B9\u02C1\u02B6\u02BB\u02B3\u02BC\u02B6\u02BE\u02B8\u02B5\u02B8;
 
-	// Token: 0x02000244 RID: 580
 	public struct \u02B3\u02B4\u02BE\u02BF\u02B9\u02BF\u02B4\u02C0\u02BD\u02BA\u02BA
 	{
-		// Token: 0x04001201 RID: 4609
 		public byte \u02B2\u02BE\u02B9\u02C1\u02BA\u02C1\u02BC\u02B9\u02B7\u02B7\u02B4;
 
-		// Token: 0x04001202 RID: 4610
 		public byte \u02BF\u02B8\u02BD\u02BA\u02BE\u02BD\u02B4\u02BB\u02BC\u02B2\u02BE;
 
-		// Token: 0x04001203 RID: 4611
 		public byte \u02BF\u02B9\u02B3\u02BC\u02BA\u02B2\u02B4\u02B4\u02BC\u02B3\u02B8;
 
-		// Token: 0x04001204 RID: 4612
 		public byte \u02C0\u02BA\u02B8\u02B9\u02B4\u02B8\u02BE\u02BA\u02BE\u02B6\u02B7;
 
-		// Token: 0x04001205 RID: 4613
 		public bool \u02C1\u02BA\u02BF\u02BE\u02B6\u02BB\u02BD\u02B6\u02B2\u02B9\u02B7;
 	}
 }

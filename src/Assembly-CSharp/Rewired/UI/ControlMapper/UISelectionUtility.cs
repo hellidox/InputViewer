@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Rewired.Utils;
 using UnityEngine;
@@ -6,10 +6,8 @@ using UnityEngine.UI;
 
 namespace Rewired.UI.ControlMapper
 {
-	// Token: 0x020002D2 RID: 722
 	public static class UISelectionUtility
 	{
-		// Token: 0x06001EF2 RID: 7922 RVA: 0x000D4B58 File Offset: 0x000D2D58
 		public static Selectable FindNextSelectable(Selectable selectable, Transform transform, Vector3 direction)
 		{
 			RectTransform rectTransform = transform as RectTransform;
@@ -79,7 +77,6 @@ namespace Rewired.UI.ControlMapper
 			return selectable3;
 		}
 
-		// Token: 0x0400153B RID: 5435
 		private static Selectable[] s_reusableAllSelectables = new Selectable[0];
 	}
 }

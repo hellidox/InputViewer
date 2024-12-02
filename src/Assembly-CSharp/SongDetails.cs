@@ -1,41 +1,34 @@
-﻿using System;
+using System;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020001F7 RID: 503
 public class SongDetails : MonoBehaviour
 {
-	// Token: 0x0600167D RID: 5757 RVA: 0x0001196F File Offset: 0x0000FB6F
 	public void \u02B2\u02B9\u02B3\u02B2\u02BB\u02B3\u02BA\u02BE\u02BA\u02B7\u02B5(bool \u02BE\u02BE\u02BF\u02B2\u02C0\u02B9\u02C0\u02B5\u02B4\u02BF\u02B2)
 	{
 		this.canvasFader.\u02C0\u02BC\u02B9\u02B8\u02C0\u02B5\u02C0\u02C0\u02B6\u02C1\u02BA(\u02BE\u02BE\u02BF\u02B2\u02C0\u02B9\u02C0\u02B5\u02B4\u02BF\u02B2);
 	}
 
-	// Token: 0x0600167E RID: 5758 RVA: 0x0001197D File Offset: 0x0000FB7D
 	public void \u02BB\u02B9\u02B8\u02BE\u02B3\u02B4\u02B9\u02B4\u02B9\u02BA\u02B7()
 	{
 		this.canvasFader.\u02C0\u02B5\u02B6\u02BF\u02B5\u02BF\u02B8\u02BE\u02B9\u02BA\u02BF(1597f);
 	}
 
-	// Token: 0x0600167F RID: 5759 RVA: 0x0001198F File Offset: 0x0000FB8F
 	public void \u02B8\u02B5\u02C0\u02BC\u02B5\u02BE\u02B2\u02B9\u02B8\u02C1\u02B6(bool \u02BE\u02BE\u02BF\u02B2\u02C0\u02B9\u02C0\u02B5\u02B4\u02BF\u02B2)
 	{
 		this.canvasFader.\u02BC\u02B7\u02B3\u02B7\u02B2\u02BB\u02B2\u02B9\u02C0\u02BE\u02B7(\u02BE\u02BE\u02BF\u02B2\u02C0\u02B9\u02C0\u02B5\u02B4\u02BF\u02B2);
 	}
 
-	// Token: 0x06001680 RID: 5760 RVA: 0x0001198F File Offset: 0x0000FB8F
 	public void \u02BC\u02B7\u02B3\u02B7\u02B2\u02BB\u02B2\u02B9\u02C0\u02BE\u02B7(bool \u02BE\u02BE\u02BF\u02B2\u02C0\u02B9\u02C0\u02B5\u02B4\u02BF\u02B2)
 	{
 		this.canvasFader.\u02BC\u02B7\u02B3\u02B7\u02B2\u02BB\u02B2\u02B9\u02C0\u02BE\u02B7(\u02BE\u02BE\u02BF\u02B2\u02C0\u02B9\u02C0\u02B5\u02B4\u02BF\u02B2);
 	}
 
-	// Token: 0x06001681 RID: 5761 RVA: 0x0001199D File Offset: 0x0000FB9D
 	public void \u02B2\u02BF\u02BA\u02B7\u02B7\u02B7\u02B7\u02B5\u02B5\u02BC\u02BA()
 	{
 		this.canvasFader.\u02BC\u02B7\u02BB\u02BD\u02B6\u02B9\u02BE\u02B8\u02B5\u02B7\u02BF(1670f);
 	}
 
-	// Token: 0x06001682 RID: 5762 RVA: 0x000119AF File Offset: 0x0000FBAF
 	public void \u02B4\u02B4\u02BB\u02B2\u02B8\u02B9\u02C1\u02C1\u02BB\u02BA\u02B7()
 	{
 		if (!this.canvasFader.\u02B3\u02B6\u02B7\u02B2\u02BC\u02BE\u02B6\u02BB\u02BB\u02BF\u02B6)
@@ -46,49 +39,41 @@ public class SongDetails : MonoBehaviour
 		this.canvasFader.\u02BB\u02BC\u02BA\u02BC\u02BC\u02BC\u02B4\u02C0\u02BB\u02B8\u02BA();
 	}
 
-	// Token: 0x06001683 RID: 5763 RVA: 0x000119D5 File Offset: 0x0000FBD5
 	public void \u02B5\u02BC\u02B8\u02B5\u02BC\u02BA\u02BC\u02B4\u02B4\u02BB\u02B6()
 	{
 		this.canvasFader.\u02C0\u02B5\u02B6\u02BF\u02B5\u02BF\u02B8\u02BE\u02B9\u02BA\u02BF(1501f);
 	}
 
-	// Token: 0x06001684 RID: 5764 RVA: 0x0001196F File Offset: 0x0000FB6F
 	public void \u02BA\u02BB\u02BA\u02B9\u02B3\u02B7\u02BF\u02BD\u02B4\u02B3\u02B4(bool \u02BE\u02BE\u02BF\u02B2\u02C0\u02B9\u02C0\u02B5\u02B4\u02BF\u02B2)
 	{
 		this.canvasFader.\u02C0\u02BC\u02B9\u02B8\u02C0\u02B5\u02C0\u02C0\u02B6\u02C1\u02BA(\u02BE\u02BE\u02BF\u02B2\u02C0\u02B9\u02C0\u02B5\u02B4\u02BF\u02B2);
 	}
 
-	// Token: 0x06001685 RID: 5765 RVA: 0x000119E7 File Offset: 0x0000FBE7
 	public void \u02BD\u02B4\u02BA\u02C0\u02B8\u02C0\u02B8\u02B7\u02B8\u02BD\u02BC()
 	{
 		this.canvasFader.\u02B8\u02BE\u02B8\u02BB\u02C1\u02BF\u02BF\u02B4\u02BC\u02BA\u02BC(1664f);
 	}
 
-	// Token: 0x06001686 RID: 5766 RVA: 0x000119F9 File Offset: 0x0000FBF9
 	public void \u02C1\u02C1\u02B7\u02BE\u02B9\u02BD\u02BD\u02B5\u02BA\u02B9\u02BF()
 	{
 		this.canvasFader.\u02BC\u02B7\u02BB\u02BD\u02B6\u02B9\u02BE\u02B8\u02B5\u02B7\u02BF(401f);
 	}
 
-	// Token: 0x06001687 RID: 5767 RVA: 0x0001196F File Offset: 0x0000FB6F
 	public void \u02B3\u02BD\u02B2\u02B4\u02BD\u02BB\u02C0\u02BD\u02BD\u02B5\u02BE(bool \u02BE\u02BE\u02BF\u02B2\u02C0\u02B9\u02C0\u02B5\u02B4\u02BF\u02B2)
 	{
 		this.canvasFader.\u02C0\u02BC\u02B9\u02B8\u02C0\u02B5\u02C0\u02C0\u02B6\u02C1\u02BA(\u02BE\u02BE\u02BF\u02B2\u02C0\u02B9\u02C0\u02B5\u02B4\u02BF\u02B2);
 	}
 
-	// Token: 0x06001688 RID: 5768 RVA: 0x00011A0B File Offset: 0x0000FC0B
 	public void \u02BF\u02C1\u02C1\u02BA\u02B3\u02BC\u02BB\u02C0\u02B2\u02C0\u02B7()
 	{
 		this.canvasFader.\u02BC\u02B7\u02BB\u02BD\u02B6\u02B9\u02BE\u02B8\u02B5\u02B7\u02BF(243f);
 	}
 
-	// Token: 0x06001689 RID: 5769 RVA: 0x00011A1D File Offset: 0x0000FC1D
 	public void \u02B9\u02B3\u02BA\u02B3\u02BF\u02C1\u02B2\u02B7\u02B5\u02B8\u02C1()
 	{
 		this.canvasFader.\u02BC\u02B7\u02BB\u02BD\u02B6\u02B9\u02BE\u02B8\u02B5\u02B7\u02BF(214f);
 	}
 
-	// Token: 0x0600168A RID: 5770 RVA: 0x00011A2F File Offset: 0x0000FC2F
 	public void \u02BC\u02B7\u02C1\u02BB\u02B4\u02BE\u02BD\u02B2\u02B4\u02B3\u02B2()
 	{
 		if (!this.canvasFader.\u02B3\u02B6\u02B7\u02B2\u02BC\u02BE\u02B6\u02BB\u02BB\u02BF\u02B6)
@@ -99,19 +84,16 @@ public class SongDetails : MonoBehaviour
 		this.canvasFader.\u02BB\u02BC\u02BA\u02BC\u02BC\u02BC\u02B4\u02C0\u02BB\u02B8\u02BA();
 	}
 
-	// Token: 0x0600168B RID: 5771 RVA: 0x0001196F File Offset: 0x0000FB6F
 	public void \u02B2\u02C1\u02BB\u02BA\u02BB\u02BF\u02C0\u02B8\u02BD\u02B4\u02BE(bool \u02BE\u02BE\u02BF\u02B2\u02C0\u02B9\u02C0\u02B5\u02B4\u02BF\u02B2)
 	{
 		this.canvasFader.\u02C0\u02BC\u02B9\u02B8\u02C0\u02B5\u02C0\u02C0\u02B6\u02C1\u02BA(\u02BE\u02BE\u02BF\u02B2\u02C0\u02B9\u02C0\u02B5\u02B4\u02BF\u02B2);
 	}
 
-	// Token: 0x0600168C RID: 5772 RVA: 0x00011A55 File Offset: 0x0000FC55
 	public void \u02BB\u02B5\u02B7\u02B6\u02BB\u02BF\u02B2\u02B2\u02C0\u02B4\u02C0()
 	{
 		this.canvasFader.\u02C0\u02B5\u02B6\u02BF\u02B5\u02BF\u02B8\u02BE\u02B9\u02BA\u02BF(0f);
 	}
 
-	// Token: 0x0600168D RID: 5773 RVA: 0x000AD79C File Offset: 0x000AB99C
 	private void \u02B4\u02BF\u02B6\u02BB\u02B2\u02B6\u02C1\u02B3\u02BC\u02B7\u02BE()
 	{
 		this.SongName.text = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1.Name.\u02C1\u02B4\u02BF\u02C1\u02BE\u02B9\u02B6\u02B7\u02B5\u02B7\u02B5 + (SettingsController.\u02B3\u02B7\u02B4\u02BA\u02B3\u02B9\u02B7\u02BE\u02B2\u02B7\u02BE.IsPresetValue ? "Show in File Explorer" : ("~" + SettingsController.\u02B3\u02B7\u02B4\u02BA\u02B3\u02B9\u02B7\u02BE\u02B2\u02B7\u02BE.GetPercentString + ""));
@@ -124,7 +106,6 @@ public class SongDetails : MonoBehaviour
 		this.canvasFader.\u02BC\u02B7\u02BB\u02BD\u02B6\u02B9\u02BE\u02B8\u02B5\u02B7\u02BF(1048f);
 	}
 
-	// Token: 0x0600168F RID: 5775 RVA: 0x000AD850 File Offset: 0x000ABA50
 	private void Start()
 	{
 		this.SongName.text = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1.Name.\u02C1\u02B4\u02BF\u02C1\u02BE\u02B9\u02B6\u02B7\u02B5\u02B7\u02B5 + (SettingsController.\u02B3\u02B7\u02B4\u02BA\u02B3\u02B9\u02B7\u02BE\u02B2\u02B7\u02BE.IsPresetValue ? "" : (" (" + SettingsController.\u02B3\u02B7\u02B4\u02BA\u02B3\u02B9\u02B7\u02BE\u02B2\u02B7\u02BE.GetPercentString + ")"));
@@ -137,7 +118,6 @@ public class SongDetails : MonoBehaviour
 		this.canvasFader.\u02B8\u02BE\u02B8\u02BB\u02C1\u02BF\u02BF\u02B4\u02BC\u02BA\u02BC(3f);
 	}
 
-	// Token: 0x06001690 RID: 5776 RVA: 0x000AD904 File Offset: 0x000ABB04
 	private void \u02B2\u02BB\u02B6\u02B4\u02BE\u02B8\u02B9\u02B2\u02B3\u02B6\u02C1()
 	{
 		this.SongName.text = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1.Name.\u02C1\u02B4\u02BF\u02C1\u02BE\u02B9\u02B6\u02B7\u02B5\u02B7\u02B5 + (SettingsController.\u02B3\u02B7\u02B4\u02BA\u02B3\u02B9\u02B7\u02BE\u02B2\u02B7\u02BE.IsPresetValue ? "News" : ("" + SettingsController.\u02B3\u02B7\u02B4\u02BA\u02B3\u02B9\u02B7\u02BE\u02B2\u02B7\u02BE.GetPercentString + "noplayerstospectate"));
@@ -150,7 +130,6 @@ public class SongDetails : MonoBehaviour
 		this.canvasFader.\u02B8\u02BE\u02B8\u02BB\u02C1\u02BF\u02BF\u02B4\u02BC\u02BA\u02BC(179f);
 	}
 
-	// Token: 0x06001691 RID: 5777 RVA: 0x00011A67 File Offset: 0x0000FC67
 	public void \u02B6\u02BE\u02B8\u02B5\u02B3\u02B6\u02BD\u02C1\u02C0\u02BE\u02B3()
 	{
 		if (!this.canvasFader.\u02B2\u02C1\u02B7\u02B7\u02B8\u02BE\u02B6\u02B7\u02C0\u02B8\u02BC())
@@ -161,7 +140,6 @@ public class SongDetails : MonoBehaviour
 		this.canvasFader.\u02BB\u02BC\u02BA\u02BC\u02BC\u02BC\u02B4\u02C0\u02BB\u02B8\u02BA();
 	}
 
-	// Token: 0x06001692 RID: 5778 RVA: 0x00011A8D File Offset: 0x0000FC8D
 	public void \u02B5\u02BE\u02BD\u02BA\u02BF\u02BC\u02B8\u02BB\u02B5\u02BF\u02BF()
 	{
 		if (!this.canvasFader.\u02B3\u02B6\u02B7\u02B2\u02BC\u02BE\u02B6\u02BB\u02BB\u02BF\u02B6)
@@ -172,27 +150,22 @@ public class SongDetails : MonoBehaviour
 		this.canvasFader.\u02BB\u02BC\u02BA\u02BC\u02BC\u02BC\u02B4\u02C0\u02BB\u02B8\u02BA();
 	}
 
-	// Token: 0x06001693 RID: 5779 RVA: 0x00011AB3 File Offset: 0x0000FCB3
 	public void \u02BB\u02C0\u02B4\u02BC\u02BA\u02B8\u02B9\u02BF\u02B4\u02B2\u02B4()
 	{
 		this.canvasFader.\u02C0\u02B5\u02B6\u02BF\u02B5\u02BF\u02B8\u02BE\u02B9\u02BA\u02BF(738f);
 	}
 
-	// Token: 0x06001694 RID: 5780 RVA: 0x00011AC5 File Offset: 0x0000FCC5
 	public void \u02B6\u02B8\u02BB\u02C0\u02B9\u02B3\u02B9\u02BE\u02C0\u02BD\u02BE()
 	{
 		this.canvasFader.\u02B8\u02BE\u02B8\u02BB\u02C1\u02BF\u02BF\u02B4\u02BC\u02BA\u02BC(0f);
 	}
 
-	// Token: 0x04001061 RID: 4193
 	[SerializeField]
 	private TextMeshProUGUI SongName;
 
-	// Token: 0x04001062 RID: 4194
 	[SerializeField]
 	private TextMeshProUGUI Artist;
 
-	// Token: 0x04001063 RID: 4195
 	[SerializeField]
 	private CanvasFader canvasFader;
 }

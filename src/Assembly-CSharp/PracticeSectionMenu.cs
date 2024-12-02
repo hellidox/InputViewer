@@ -1,12 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020000EA RID: 234
 public class PracticeSectionMenu : BaseMenu
 {
-	// Token: 0x060008F3 RID: 2291 RVA: 0x00050588 File Offset: 0x0004E788
 	protected override void \u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8()
 	{
 		int i = 0;
@@ -30,7 +28,6 @@ public class PracticeSectionMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x060008F4 RID: 2292 RVA: 0x0000A248 File Offset: 0x00008448
 	protected virtual void \u02C1\u02C1\u02BD\u02BA\u02BB\u02BE\u02BA\u02B7\u02B9\u02C1\u02BC()
 	{
 		if (this.gameManager)
@@ -41,14 +38,12 @@ public class PracticeSectionMenu : BaseMenu
 		base.OnDisable();
 	}
 
-	// Token: 0x060008F5 RID: 2293 RVA: 0x0000A274 File Offset: 0x00008474
 	public virtual void \u02B8\u02BE\u02B5\u02B7\u02B4\u02BE\u02BD\u02BB\u02B8\u02B6\u02BC()
 	{
 		base.\u02C1\u02B3\u02BC\u02B6\u02BD\u02B6\u02BF\u02B7\u02BB\u02B5\u02BB();
 		this.gameManager.\u02B4\u02BD\u02BF\u02BD\u02BB\u02BC\u02C0\u02BC\u02BA\u02B5\u02B4(base.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC);
 	}
 
-	// Token: 0x060008F6 RID: 2294 RVA: 0x000506CC File Offset: 0x0004E8CC
 	protected virtual void \u02BE\u02BC\u02B5\u02B5\u02B8\u02BA\u02BA\u02B7\u02B6\u02C1\u02B6()
 	{
 		int i = 1;
@@ -72,7 +67,6 @@ public class PracticeSectionMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x060008F7 RID: 2295 RVA: 0x0000A28D File Offset: 0x0000848D
 	protected virtual void \u02B7\u02B7\u02C1\u02B3\u02BB\u02C0\u02BE\u02C1\u02B4\u02BC\u02BC()
 	{
 		if (this.gameManager)
@@ -83,7 +77,6 @@ public class PracticeSectionMenu : BaseMenu
 		base.OnDisable();
 	}
 
-	// Token: 0x060008F8 RID: 2296 RVA: 0x00050810 File Offset: 0x0004EA10
 	public virtual void \u02B6\u02BC\u02BA\u02B5\u02B8\u02B2\u02BF\u02BA\u02BD\u02BC\u02BD()
 	{
 		if (this.\u02BF\u02BD\u02B9\u02B2\u02B7\u02BE\u02C0\u02BB\u02BE\u02BF\u02B4 == -1)
@@ -110,7 +103,6 @@ public class PracticeSectionMenu : BaseMenu
 		base.\u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8();
 	}
 
-	// Token: 0x060008F9 RID: 2297 RVA: 0x000508BC File Offset: 0x0004EABC
 	protected virtual void \u02B4\u02B2\u02B5\u02BA\u02B4\u02C0\u02BC\u02BB\u02C1\u02B9\u02BD()
 	{
 		this.\u02B4\u02BD\u02B7\u02B7\u02B6\u02BC\u02BB\u02B4\u02B3\u02B2\u02BD = this.gameManager.\u02B4\u02BC\u02BF\u02BC\u02BA\u02B9\u02B8\u02B2\u02BD\u02BE\u02BD.\u02B2\u02B5\u02B9\u02BC\u02B2\u02BE\u02BF\u02BC\u02B5\u02BD\u02C1;
@@ -124,7 +116,6 @@ public class PracticeSectionMenu : BaseMenu
 		base.Start();
 	}
 
-	// Token: 0x060008FA RID: 2298 RVA: 0x00050958 File Offset: 0x0004EB58
 	public virtual void \u02BE\u02B5\u02BA\u02B8\u02BF\u02B7\u02B8\u02BB\u02C0\u02BB\u02B8()
 	{
 		if (this.\u02BF\u02BD\u02B9\u02B2\u02B7\u02BE\u02C0\u02BB\u02BE\u02BF\u02B4 == -1)
@@ -151,14 +142,12 @@ public class PracticeSectionMenu : BaseMenu
 		base.\u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8();
 	}
 
-	// Token: 0x060008FB RID: 2299 RVA: 0x0000A2B9 File Offset: 0x000084B9
 	public virtual void \u02BD\u02B7\u02BE\u02BD\u02BF\u02BA\u02BD\u02C0\u02B9\u02BC\u02C1()
 	{
 		base.\u02C1\u02B3\u02BC\u02B6\u02BD\u02B6\u02BF\u02B7\u02BB\u02B5\u02BB();
 		this.gameManager.\u02B9\u02C0\u02BF\u02C1\u02B6\u02BA\u02C0\u02BB\u02BE\u02B4\u02B7(base.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC);
 	}
 
-	// Token: 0x060008FC RID: 2300 RVA: 0x0000A2D2 File Offset: 0x000084D2
 	protected override void OnDisable()
 	{
 		if (this.gameManager)
@@ -169,7 +158,6 @@ public class PracticeSectionMenu : BaseMenu
 		base.OnDisable();
 	}
 
-	// Token: 0x060008FD RID: 2301 RVA: 0x0000A2FE File Offset: 0x000084FE
 	protected virtual void \u02BD\u02B3\u02C0\u02B8\u02B8\u02B3\u02B6\u02B3\u02BF\u02BD\u02BE()
 	{
 		if (this.gameManager)
@@ -180,7 +168,6 @@ public class PracticeSectionMenu : BaseMenu
 		base.OnDisable();
 	}
 
-	// Token: 0x060008FE RID: 2302 RVA: 0x00050A04 File Offset: 0x0004EC04
 	protected override void Start()
 	{
 		this.\u02B4\u02BD\u02B7\u02B7\u02B6\u02BC\u02BB\u02B4\u02B3\u02B2\u02BD = this.gameManager.\u02B4\u02BC\u02BF\u02BC\u02BA\u02B9\u02B8\u02B2\u02BD\u02BE\u02BD.\u02B2\u02B5\u02B9\u02BC\u02B2\u02BE\u02BF\u02BC\u02B5\u02BD\u02C1;
@@ -194,7 +181,6 @@ public class PracticeSectionMenu : BaseMenu
 		base.Start();
 	}
 
-	// Token: 0x060008FF RID: 2303 RVA: 0x00050AA0 File Offset: 0x0004ECA0
 	protected virtual void \u02B8\u02B2\u02BB\u02BF\u02BF\u02BF\u02C0\u02BE\u02BD\u02B9\u02B8()
 	{
 		this.\u02BF\u02BD\u02B9\u02B2\u02B7\u02BE\u02C0\u02BB\u02BE\u02BF\u02B4 = -1;
@@ -214,7 +200,6 @@ public class PracticeSectionMenu : BaseMenu
 		base.OnEnable();
 	}
 
-	// Token: 0x06000900 RID: 2304 RVA: 0x00050BF0 File Offset: 0x0004EDF0
 	protected virtual void \u02BE\u02B3\u02BE\u02BF\u02BD\u02BD\u02BC\u02B3\u02B5\u02B8\u02BB()
 	{
 		int i = 0;
@@ -238,7 +223,6 @@ public class PracticeSectionMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x06000901 RID: 2305 RVA: 0x0000A2D2 File Offset: 0x000084D2
 	protected virtual void \u02C0\u02B7\u02BF\u02BC\u02C1\u02B4\u02B3\u02B9\u02C0\u02B3\u02B7()
 	{
 		if (this.gameManager)
@@ -249,7 +233,6 @@ public class PracticeSectionMenu : BaseMenu
 		base.OnDisable();
 	}
 
-	// Token: 0x06000902 RID: 2306 RVA: 0x00050D34 File Offset: 0x0004EF34
 	public virtual void \u02B4\u02B9\u02C0\u02BC\u02BA\u02BA\u02BD\u02C0\u02B4\u02B2\u02BA()
 	{
 		if (this.\u02BF\u02BD\u02B9\u02B2\u02B7\u02BE\u02C0\u02BB\u02BE\u02BF\u02B4 == -1)
@@ -274,7 +257,6 @@ public class PracticeSectionMenu : BaseMenu
 		base.\u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3();
 	}
 
-	// Token: 0x06000903 RID: 2307 RVA: 0x0000A2FE File Offset: 0x000084FE
 	protected virtual void \u02BB\u02BD\u02BE\u02B8\u02BF\u02BA\u02BC\u02BF\u02BF\u02B4\u02B3()
 	{
 		if (this.gameManager)
@@ -285,7 +267,6 @@ public class PracticeSectionMenu : BaseMenu
 		base.OnDisable();
 	}
 
-	// Token: 0x06000905 RID: 2309 RVA: 0x00050DEC File Offset: 0x0004EFEC
 	protected virtual void \u02BE\u02BA\u02BF\u02B7\u02B4\u02B4\u02B7\u02BA\u02BC\u02B5\u02BC()
 	{
 		int i = 0;
@@ -309,7 +290,6 @@ public class PracticeSectionMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x06000906 RID: 2310 RVA: 0x00050F30 File Offset: 0x0004F130
 	protected override void OnEnable()
 	{
 		this.\u02BF\u02BD\u02B9\u02B2\u02B7\u02BE\u02C0\u02BB\u02BE\u02BF\u02B4 = -1;
@@ -329,21 +309,18 @@ public class PracticeSectionMenu : BaseMenu
 		base.OnEnable();
 	}
 
-	// Token: 0x06000907 RID: 2311 RVA: 0x0000A339 File Offset: 0x00008539
 	public override void \u02B7\u02BA\u02C0\u02B8\u02BE\u02BA\u02BD\u02B4\u02BB\u02B3\u02B6()
 	{
 		base.\u02B7\u02BA\u02C0\u02B8\u02BE\u02BA\u02BD\u02B4\u02BB\u02B3\u02B6();
 		this.gameManager.\u02B4\u02BD\u02BF\u02BD\u02BB\u02BC\u02C0\u02BC\u02BA\u02B5\u02B4(base.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC);
 	}
 
-	// Token: 0x06000908 RID: 2312 RVA: 0x0000A339 File Offset: 0x00008539
 	public virtual void \u02B4\u02B4\u02B3\u02B5\u02B8\u02B2\u02BD\u02B8\u02BB\u02BC\u02B6()
 	{
 		base.\u02B7\u02BA\u02C0\u02B8\u02BE\u02BA\u02BD\u02B4\u02BB\u02B3\u02B6();
 		this.gameManager.\u02B4\u02BD\u02BF\u02BD\u02BB\u02BC\u02C0\u02BC\u02BA\u02B5\u02B4(base.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC);
 	}
 
-	// Token: 0x06000909 RID: 2313 RVA: 0x0000A352 File Offset: 0x00008552
 	protected override void Update()
 	{
 		base.Update();
@@ -351,7 +328,6 @@ public class PracticeSectionMenu : BaseMenu
 		this.gameManager.\u02B3\u02BB\u02BE\u02BF\u02BA\u02BC\u02B5\u02C0\u02BB\u02BE\u02BD.\u02B9\u02BC\u02BB\u02C0\u02B2\u02B4\u02BB\u02BA\u02B5\u02BE\u02BC();
 	}
 
-	// Token: 0x0600090A RID: 2314 RVA: 0x00051080 File Offset: 0x0004F280
 	public override void \u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3()
 	{
 		if (this.\u02BF\u02BD\u02B9\u02B2\u02B7\u02BE\u02C0\u02BB\u02BE\u02BF\u02B4 == -1)
@@ -376,7 +352,6 @@ public class PracticeSectionMenu : BaseMenu
 		base.\u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3();
 	}
 
-	// Token: 0x0600090B RID: 2315 RVA: 0x00051138 File Offset: 0x0004F338
 	protected virtual void \u02B3\u02BB\u02BF\u02B4\u02B9\u02BA\u02B5\u02B5\u02BE\u02BB\u02BE()
 	{
 		this.\u02B4\u02BD\u02B7\u02B7\u02B6\u02BC\u02BB\u02B4\u02B3\u02B2\u02BD = this.gameManager.\u02B4\u02BC\u02BF\u02BC\u02BA\u02B9\u02B8\u02B2\u02BD\u02BE\u02BD.\u02B2\u02B5\u02B9\u02BC\u02B2\u02BE\u02BF\u02BC\u02B5\u02BD\u02C1;
@@ -390,21 +365,18 @@ public class PracticeSectionMenu : BaseMenu
 		base.Start();
 	}
 
-	// Token: 0x0600090C RID: 2316 RVA: 0x0000A38B File Offset: 0x0000858B
 	public virtual void \u02B9\u02B4\u02B7\u02BB\u02B3\u02B2\u02B7\u02B2\u02B2\u02B2\u02B5()
 	{
 		base.\u02B7\u02BA\u02C0\u02B8\u02BE\u02BA\u02BD\u02B4\u02BB\u02B3\u02B6();
 		this.gameManager.\u02B9\u02C0\u02BF\u02C1\u02B6\u02BA\u02C0\u02BB\u02BE\u02B4\u02B7(base.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC);
 	}
 
-	// Token: 0x0600090D RID: 2317 RVA: 0x0000A274 File Offset: 0x00008474
 	public override void \u02C1\u02B3\u02BC\u02B6\u02BD\u02B6\u02BF\u02B7\u02BB\u02B5\u02BB()
 	{
 		base.\u02C1\u02B3\u02BC\u02B6\u02BD\u02B6\u02BF\u02B7\u02BB\u02B5\u02BB();
 		this.gameManager.\u02B4\u02BD\u02BF\u02BD\u02BB\u02BC\u02C0\u02BC\u02BA\u02B5\u02B4(base.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC);
 	}
 
-	// Token: 0x0600090E RID: 2318 RVA: 0x000511D4 File Offset: 0x0004F3D4
 	public override void \u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8()
 	{
 		if (this.\u02BF\u02BD\u02B9\u02B2\u02B7\u02BE\u02C0\u02BB\u02BE\u02BF\u02B4 == -1)
@@ -431,33 +403,25 @@ public class PracticeSectionMenu : BaseMenu
 		base.\u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8();
 	}
 
-	// Token: 0x0400071F RID: 1823
 	[SerializeField]
 	private GameManager gameManager;
 
-	// Token: 0x04000720 RID: 1824
 	private int \u02BF\u02BD\u02B9\u02B2\u02B7\u02BE\u02C0\u02BB\u02BE\u02BF\u02B4 = -1;
 
-	// Token: 0x04000721 RID: 1825
 	[SerializeField]
 	private PauseMenu pauseMenu;
 
-	// Token: 0x04000722 RID: 1826
 	[SerializeField]
 	private TextMeshProUGUI pausedText;
 
-	// Token: 0x04000723 RID: 1827
 	[SerializeField]
 	private ScrollingText[] textboxes;
 
-	// Token: 0x04000724 RID: 1828
 	[SerializeField]
 	private GameObject practiceHUD;
 
-	// Token: 0x04000725 RID: 1829
 	private List<\u02B8\u02BB\u02B2\u02B5\u02C1\u02C1\u02BB\u02B7\u02B3\u02B4\u02B6> \u02B4\u02BD\u02B7\u02B7\u02B6\u02BC\u02BB\u02B4\u02B3\u02B2\u02BD;
 
-	// Token: 0x04000726 RID: 1830
 	[SerializeField]
 	private Color selected;
 }

@@ -1,14 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using Rewired;
 using UnityEngine;
 using YamlDotNet.Serialization;
 
-// Token: 0x02000125 RID: 293
 public class MIDIInputManager : MonoBehaviour
 {
-	// Token: 0x06000C9E RID: 3230 RVA: 0x0006CB24 File Offset: 0x0006AD24
 	public void \u02BD\u02B6\u02B3\u02B4\u02B7\u02B8\u02B5\u02B5\u02B5\u02BB\u02BB(string \u02C1\u02B4\u02B4\u02B5\u02BA\u02B6\u02BE\u02B4\u02B9\u02B4\u02BA, double \u02B5\u02B5\u02B5\u02BC\u02BE\u02B6\u02B7\u02BB\u02BA\u02B2\u02B4, byte \u02BE\u02BE\u02BB\u02B3\u02B4\u02B2\u02BD\u02B4\u02B8\u02B6\u02B9, byte \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2, byte \u02B3\u02C0\u02BF\u02B5\u02BE\u02C1\u02B6\u02B6\u02B8\u02B4\u02BC)
 	{
 		for (int i = 0; i < this.\u02BF\u02B3\u02B6\u02BB\u02BB\u02B5\u02B5\u02B5\u02C1\u02B7\u02C0.Count; i++)
@@ -28,13 +26,11 @@ public class MIDIInputManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000C9F RID: 3231 RVA: 0x0000C81E File Offset: 0x0000AA1E
 	public string \u02B8\u02BE\u02B4\u02C0\u02C0\u02BC\u02BE\u02B8\u02BD\u02BE\u02B5()
 	{
 		return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Device in use by ");
 	}
 
-	// Token: 0x06000CA0 RID: 3232 RVA: 0x0006CBA0 File Offset: 0x0006ADA0
 	private void \u02BD\u02BA\u02B8\u02BE\u02BA\u02C0\u02BD\u02B2\u02B7\u02B4\u02B7()
 	{
 		for (int i = 1; i < this.\u02BF\u02B3\u02B6\u02BB\u02BB\u02B5\u02B5\u02B5\u02C1\u02B7\u02C0.Count; i += 0)
@@ -53,7 +49,6 @@ public class MIDIInputManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000CA1 RID: 3233 RVA: 0x0006CCA8 File Offset: 0x0006AEA8
 	public string \u02BD\u02BF\u02B8\u02C0\u02BF\u02BC\u02B8\u02B9\u02BE\u02BF\u02BD(\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4, int \u02BB\u02B3\u02C1\u02BC\u02BA\u02BB\u02BA\u02BF\u02BA\u02BD\u02BA)
 	{
 		string text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Device not available.");
@@ -70,13 +65,11 @@ public class MIDIInputManager : MonoBehaviour
 		return text2;
 	}
 
-	// Token: 0x06000CA2 RID: 3234 RVA: 0x0000C82F File Offset: 0x0000AA2F
 	public int \u02B6\u02BC\u02B2\u02B8\u02BE\u02BB\u02B8\u02BA\u02BB\u02C0\u02BB()
 	{
 		return this.\u02B9\u02BD\u02BF\u02BB\u02BF\u02BD\u02B8\u02BF\u02B7\u02B6\u02B5.\u02BD\u02BF\u02B2\u02B7\u02B5\u02B9\u02BA\u02BA\u02BD\u02BA\u02BE;
 	}
 
-	// Token: 0x06000CA3 RID: 3235 RVA: 0x0006CD10 File Offset: 0x0006AF10
 	private void \u02BE\u02BB\u02B9\u02B5\u02BE\u02C1\u02B3\u02B7\u02B2\u02B8\u02BF(MIDIInputManager.\u02BC\u02BB\u02B4\u02B3\u02BB\u02B3\u02C0\u02BA\u02B9\u02C0\u02B8 \u02B6\u02BA\u02B8\u02BC\u02C0\u02C0\u02BF\u02B3\u02B6\u02B3\u02C1, string \u02C1\u02B4\u02B4\u02B5\u02BA\u02B6\u02BE\u02B4\u02B9\u02B4\u02BA)
 	{
 		string text = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "MIDI Profiles", \u02C1\u02B4\u02B4\u02B5\u02BA\u02B6\u02BE\u02B4\u02B9\u02B4\u02BA + ".yaml");
@@ -95,7 +88,6 @@ public class MIDIInputManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000CA4 RID: 3236 RVA: 0x0006CD94 File Offset: 0x0006AF94
 	private void \u02B4\u02BA\u02BB\u02B9\u02BB\u02B7\u02C0\u02C1\u02B6\u02B8\u02B3()
 	{
 		this.\u02BD\u02BA\u02B8\u02BE\u02BA\u02C0\u02BD\u02B2\u02B7\u02B4\u02B7();
@@ -154,7 +146,6 @@ public class MIDIInputManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000CA5 RID: 3237 RVA: 0x0006CFAC File Offset: 0x0006B1AC
 	private MIDIInputManager.\u02BC\u02BB\u02B4\u02B3\u02BB\u02B3\u02C0\u02BA\u02B9\u02C0\u02B8 \u02BA\u02C0\u02B9\u02C0\u02BD\u02BC\u02B9\u02B5\u02BA\u02B6\u02BB(string \u02C1\u02B4\u02B4\u02B5\u02BA\u02B6\u02BE\u02B4\u02B9\u02B4\u02BA)
 	{
 		MIDIInputManager.\u02BC\u02BB\u02B4\u02B3\u02BB\u02B3\u02C0\u02BA\u02B9\u02C0\u02B8 u02BC_u02BB_u02B4_u02B3_u02BB_u02B3_u02C0_u02BA_u02B9_u02C0_u02B = default(MIDIInputManager.\u02BC\u02BB\u02B4\u02B3\u02BB\u02B3\u02C0\u02BA\u02B9\u02C0\u02B8);
@@ -183,7 +174,6 @@ public class MIDIInputManager : MonoBehaviour
 		return u02BC_u02BB_u02B4_u02B3_u02BB_u02B3_u02C0_u02BA_u02B9_u02C0_u02B;
 	}
 
-	// Token: 0x06000CA6 RID: 3238 RVA: 0x0006D07C File Offset: 0x0006B27C
 	private bool \u02B3\u02BE\u02B7\u02B4\u02B9\u02BF\u02B2\u02BA\u02BC\u02BE\u02BB(MIDIInputManager.\u02C0\u02B7\u02C1\u02BB\u02B5\u02B9\u02B9\u02BA\u02B2\u02B9\u02B2 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7, string \u02B9\u02BB\u02C0\u02B7\u02B5\u02B6\u02BF\u02B2\u02B8\u02BC\u02C0, MIDIInputManager.\u02B9\u02B4\u02B4\u02BF\u02B2\u02BA\u02B6\u02B7\u02B6\u02BD\u02B6 \u02BF\u02B8\u02BF\u02B4\u02B5\u02C0\u02B3\u02C1\u02BB\u02B2\u02B6)
 	{
 		if (\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.\u02BE\u02BC\u02B3\u02BC\u02BA\u02B7\u02C0\u02BB\u02B4\u02B2\u02B3.\u02BE\u02C0\u02B4\u02B9\u02BB\u02C0\u02B3\u02BE\u02B7\u02BC\u02B5() != \u02BF\u02B8\u02BF\u02B4\u02B5\u02C0\u02B3\u02C1\u02BB\u02B2\u02B6.\u02B6\u02B8\u02B3\u02B3\u02BD\u02B8\u02BC\u02BF\u02B7\u02BD\u02BB)
@@ -221,7 +211,6 @@ public class MIDIInputManager : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x06000CA7 RID: 3239 RVA: 0x0006D118 File Offset: 0x0006B318
 	private void \u02C0\u02B8\u02BE\u02BA\u02BD\u02B9\u02BA\u02B3\u02B8\u02BB\u02B8()
 	{
 		this.\u02B9\u02BD\u02BF\u02BB\u02BF\u02BD\u02B8\u02BF\u02B7\u02B6\u02B5.Dispose();
@@ -231,7 +220,6 @@ public class MIDIInputManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000CA8 RID: 3240 RVA: 0x0000C83C File Offset: 0x0000AA3C
 	private void \u02BF\u02B2\u02C1\u02C1\u02B6\u02BE\u02B3\u02BD\u02B8\u02B3\u02BE()
 	{
 		if (Application.platform == (RuntimePlatform)124)
@@ -250,13 +238,11 @@ public class MIDIInputManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000CA9 RID: 3241 RVA: 0x0000C873 File Offset: 0x0000AA73
 	private void \u02C1\u02B2\u02BB\u02C1\u02B7\u02B6\u02BD\u02B9\u02B5\u02C0\u02BE(\u02BD\u02B4\u02B4\u02B3\u02C0\u02B7\u02B6\u02BC\u02BF\u02BC\u02BE \u02BD\u02BC\u02B3\u02C0\u02B3\u02B7\u02BA\u02B2\u02B7\u02BF\u02BA)
 	{
 		\u02BD\u02BC\u02B3\u02C0\u02B3\u02B7\u02BA\u02B2\u02B7\u02BF\u02BA.Dispose();
 	}
 
-	// Token: 0x06000CAA RID: 3242 RVA: 0x0006D160 File Offset: 0x0006B360
 	private void \u02B7\u02BF\u02B7\u02BA\u02BB\u02BF\u02BE\u02BD\u02BE\u02BE\u02BA(MIDIInputManager.\u02BC\u02BB\u02B4\u02B3\u02BB\u02B3\u02C0\u02BA\u02B9\u02C0\u02B8 \u02B6\u02BA\u02B8\u02BC\u02C0\u02C0\u02BF\u02B3\u02B6\u02B3\u02C1, string \u02C1\u02B4\u02B4\u02B5\u02BA\u02B6\u02BE\u02B4\u02B9\u02B4\u02BA)
 	{
 		string text = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "This is permanent! Are you still sure?", \u02C1\u02B4\u02B4\u02B5\u02BA\u02B6\u02BE\u02B4\u02B9\u02B4\u02BA + "Options");
@@ -275,7 +261,6 @@ public class MIDIInputManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000CAB RID: 3243 RVA: 0x0006D1E4 File Offset: 0x0006B3E4
 	public \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02B2\u02B3\u02BE\u02BC\u02BB\u02B9\u02B9\u02BF\u02B6\u02B9\u02BB(string \u02C1\u02B4\u02B4\u02B5\u02BA\u02B6\u02BE\u02B4\u02B9\u02B4\u02BA)
 	{
 		for (int i = 0; i < this.\u02BF\u02B3\u02B6\u02BB\u02BB\u02B5\u02B5\u02B5\u02C1\u02B7\u02C0.Count; i++)
@@ -289,7 +274,6 @@ public class MIDIInputManager : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x06000CAC RID: 3244 RVA: 0x0006D230 File Offset: 0x0006B430
 	public void \u02B6\u02B7\u02B7\u02B5\u02BE\u02BA\u02BF\u02B6\u02B5\u02BF\u02B5(\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7)
 	{
 		for (int i = 1; i < this.\u02BF\u02B3\u02B6\u02BB\u02BB\u02B5\u02B5\u02B5\u02C1\u02B7\u02C0.Count; i++)
@@ -310,7 +294,6 @@ public class MIDIInputManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000CAD RID: 3245 RVA: 0x0006D2C8 File Offset: 0x0006B4C8
 	private void \u02BE\u02C0\u02BE\u02BF\u02BE\u02B8\u02B6\u02B5\u02BD\u02BF\u02B5()
 	{
 		for (int i = 0; i < this.\u02BF\u02B3\u02B6\u02BB\u02BB\u02B5\u02B5\u02B5\u02C1\u02B7\u02C0.Count; i++)
@@ -329,7 +312,6 @@ public class MIDIInputManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000CAE RID: 3246 RVA: 0x0006D3D0 File Offset: 0x0006B5D0
 	public \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BF\u02C0\u02B4\u02B2\u02BF\u02BB\u02BA\u02BB\u02B3\u02BB\u02BF(string \u02C1\u02B4\u02B4\u02B5\u02BA\u02B6\u02BE\u02B4\u02B9\u02B4\u02BA)
 	{
 		for (int i = 0; i < this.\u02BF\u02B3\u02B6\u02BB\u02BB\u02B5\u02B5\u02B5\u02C1\u02B7\u02C0.Count; i += 0)
@@ -343,7 +325,6 @@ public class MIDIInputManager : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x06000CAF RID: 3247 RVA: 0x0006D41C File Offset: 0x0006B61C
 	public void \u02B2\u02BE\u02B3\u02BB\u02BE\u02BF\u02B3\u02BF\u02BB\u02C0\u02B7(\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7, bool \u02B8\u02B2\u02B7\u02BB\u02BA\u02C0\u02BF\u02C1\u02B2\u02B6\u02BC)
 	{
 		for (int i = 1; i < this.\u02BF\u02B3\u02B6\u02BB\u02BB\u02B5\u02B5\u02B5\u02C1\u02B7\u02C0.Count; i += 0)
@@ -355,7 +336,6 @@ public class MIDIInputManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000CB0 RID: 3248 RVA: 0x0006D468 File Offset: 0x0006B668
 	public void \u02C0\u02C0\u02B3\u02BA\u02B6\u02C0\u02BC\u02BA\u02C0\u02B2\u02BE(\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7, bool \u02B8\u02B2\u02B7\u02BB\u02BA\u02C0\u02BF\u02C1\u02B2\u02B6\u02BC)
 	{
 		for (int i = 0; i < this.\u02BF\u02B3\u02B6\u02BB\u02BB\u02B5\u02B5\u02B5\u02C1\u02B7\u02C0.Count; i++)
@@ -367,7 +347,6 @@ public class MIDIInputManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000CB1 RID: 3249 RVA: 0x0006D4B4 File Offset: 0x0006B6B4
 	public void \u02B8\u02C0\u02B5\u02BE\u02BB\u02B3\u02B2\u02B8\u02B6\u02B8\u02BF(\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7)
 	{
 		for (int i = 0; i < this.\u02BF\u02B3\u02B6\u02BB\u02BB\u02B5\u02B5\u02B5\u02C1\u02B7\u02C0.Count; i++)
@@ -388,7 +367,6 @@ public class MIDIInputManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000CB2 RID: 3250 RVA: 0x0000C87B File Offset: 0x0000AA7B
 	private void Update()
 	{
 		if (this.\u02B7\u02B3\u02B6\u02B6\u02B7\u02B8\u02B8\u02B4\u02B7\u02B8\u02B2)
@@ -397,7 +375,6 @@ public class MIDIInputManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000CB3 RID: 3251 RVA: 0x0006D54C File Offset: 0x0006B74C
 	public void \u02B3\u02B2\u02BE\u02BF\u02BB\u02C0\u02BE\u02BD\u02B9\u02BC\u02BB(\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7, int \u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5)
 	{
 		if (\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerInfo.isRemotePlayer)
@@ -454,7 +431,6 @@ public class MIDIInputManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000CB4 RID: 3252 RVA: 0x0006D6A8 File Offset: 0x0006B8A8
 	private bool \u02BA\u02B7\u02B5\u02C1\u02C0\u02B4\u02BE\u02BF\u02BF\u02C0\u02BE(MIDIInputManager.\u02C0\u02B7\u02C1\u02BB\u02B5\u02B9\u02B9\u02BA\u02B2\u02B9\u02B2 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7, string \u02B9\u02BB\u02C0\u02B7\u02B5\u02B6\u02BF\u02B2\u02B8\u02BC\u02C0, MIDIInputManager.\u02B9\u02B4\u02B4\u02BF\u02B2\u02BA\u02B6\u02B7\u02B6\u02BD\u02B6 \u02BF\u02B8\u02BF\u02B4\u02B5\u02C0\u02B3\u02C1\u02BB\u02B2\u02B6)
 	{
 		if (\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.\u02BE\u02BC\u02B3\u02BC\u02BA\u02B7\u02C0\u02BB\u02B4\u02B2\u02B3.\u02BB\u02BF\u02B2\u02B8\u02B9\u02BC\u02C0\u02B8\u02C1\u02BB\u02B5 != \u02BF\u02B8\u02BF\u02B4\u02B5\u02C0\u02B3\u02C1\u02BB\u02B2\u02B6.\u02B6\u02B8\u02B3\u02B3\u02BD\u02B8\u02BC\u02BF\u02B7\u02BD\u02BB)
@@ -492,13 +468,11 @@ public class MIDIInputManager : MonoBehaviour
 		return false;
 	}
 
-	// Token: 0x06000CB5 RID: 3253 RVA: 0x0000C88B File Offset: 0x0000AA8B
 	public void OnApplicationQuit()
 	{
 		this.\u02C0\u02B8\u02BE\u02BA\u02BD\u02B9\u02BA\u02B3\u02B8\u02BB\u02B8();
 	}
 
-	// Token: 0x06000CB6 RID: 3254 RVA: 0x0006D744 File Offset: 0x0006B944
 	public MIDIInputManager.\u02B9\u02B4\u02B4\u02BF\u02B2\u02BA\u02B6\u02B7\u02B6\u02BD\u02B6 \u02BA\u02BC\u02B9\u02BC\u02BE\u02B2\u02B2\u02BE\u02C0\u02B2\u02B9(\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7)
 	{
 		for (int i = 0; i < this.\u02BF\u02B3\u02B6\u02BB\u02BB\u02B5\u02B5\u02B5\u02C1\u02B7\u02C0.Count; i++)
@@ -517,7 +491,6 @@ public class MIDIInputManager : MonoBehaviour
 		return default(MIDIInputManager.\u02B9\u02B4\u02B4\u02BF\u02B2\u02BA\u02B6\u02B7\u02B6\u02BD\u02B6);
 	}
 
-	// Token: 0x06000CB7 RID: 3255 RVA: 0x0006D7FC File Offset: 0x0006B9FC
 	private Dictionary<string, List<MIDIInputManager.\u02BF\u02B6\u02C0\u02BF\u02BA\u02B8\u02B5\u02BA\u02B8\u02BE\u02B3>> \u02C1\u02BC\u02B5\u02B6\u02B6\u02C0\u02B4\u02B6\u02BC\u02B2\u02BD()
 	{
 		return new Dictionary<string, List<MIDIInputManager.\u02BF\u02B6\u02C0\u02BF\u02BA\u02B8\u02B5\u02BA\u02B8\u02BE\u02B3>>
@@ -621,7 +594,6 @@ public class MIDIInputManager : MonoBehaviour
 		};
 	}
 
-	// Token: 0x06000CB8 RID: 3256 RVA: 0x0006D988 File Offset: 0x0006BB88
 	private MIDIInputManager.\u02BC\u02BB\u02B4\u02B3\u02BB\u02B3\u02C0\u02BA\u02B9\u02C0\u02B8 \u02BE\u02B2\u02BA\u02B2\u02BB\u02B6\u02B5\u02BE\u02BF\u02BD\u02BC(string \u02C1\u02B4\u02B4\u02B5\u02BA\u02B6\u02BE\u02B4\u02B9\u02B4\u02BA)
 	{
 		MIDIInputManager.\u02BC\u02BB\u02B4\u02B3\u02BB\u02B3\u02C0\u02BA\u02B9\u02C0\u02B8 u02BC_u02BB_u02B4_u02B3_u02BB_u02B3_u02C0_u02BA_u02B9_u02C0_u02B = default(MIDIInputManager.\u02BC\u02BB\u02B4\u02B3\u02BB\u02B3\u02C0\u02BA\u02B9\u02C0\u02B8);
@@ -650,7 +622,6 @@ public class MIDIInputManager : MonoBehaviour
 		return u02BC_u02BB_u02B4_u02B3_u02BB_u02B3_u02C0_u02BA_u02B9_u02C0_u02B;
 	}
 
-	// Token: 0x06000CB9 RID: 3257 RVA: 0x0006DA58 File Offset: 0x0006BC58
 	public void \u02B3\u02B7\u02BC\u02B2\u02B6\u02BB\u02BF\u02BA\u02B8\u02B3\u02C1(\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7, int \u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5)
 	{
 		if (\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerInfo.isRemotePlayer)
@@ -707,7 +678,6 @@ public class MIDIInputManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000CBA RID: 3258 RVA: 0x0000C893 File Offset: 0x0000AA93
 	private void Awake()
 	{
 		if (Application.platform == RuntimePlatform.Android)
@@ -726,7 +696,6 @@ public class MIDIInputManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000CBB RID: 3259 RVA: 0x0006D1E4 File Offset: 0x0006B3E4
 	public \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02B5\u02BE\u02B8\u02BF\u02BA\u02BA\u02C0\u02BF\u02B8\u02B8\u02B9(string \u02C1\u02B4\u02B4\u02B5\u02BA\u02B6\u02BE\u02B4\u02B9\u02B4\u02BA)
 	{
 		for (int i = 0; i < this.\u02BF\u02B3\u02B6\u02BB\u02BB\u02B5\u02B5\u02B5\u02C1\u02B7\u02C0.Count; i++)
@@ -740,7 +709,6 @@ public class MIDIInputManager : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x06000CBC RID: 3260 RVA: 0x0006DBB4 File Offset: 0x0006BDB4
 	public List<MIDIInputManager.\u02BF\u02B6\u02C0\u02BF\u02BA\u02B8\u02B5\u02BA\u02B8\u02BE\u02B3> \u02B2\u02BB\u02B4\u02B5\u02B6\u02C1\u02BB\u02BB\u02C1\u02B3\u02B5(\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7, string \u02B9\u02BB\u02C0\u02B7\u02B5\u02B6\u02BF\u02B2\u02B8\u02BC\u02C0)
 	{
 		for (int i = 0; i < this.\u02BF\u02B3\u02B6\u02BB\u02BB\u02B5\u02B5\u02B5\u02C1\u02B7\u02C0.Count; i++)
@@ -757,7 +725,6 @@ public class MIDIInputManager : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x06000CBD RID: 3261 RVA: 0x0006DC14 File Offset: 0x0006BE14
 	private void \u02C1\u02BA\u02B9\u02B3\u02B7\u02B7\u02B9\u02BF\u02BF\u02C0\u02BD()
 	{
 		if (!this.\u02B7\u02B3\u02B6\u02B6\u02B7\u02B8\u02B8\u02B4\u02B7\u02B8\u02B2 && this.\u02BF\u02B3\u02B6\u02BB\u02BB\u02B5\u02B5\u02B5\u02C1\u02B7\u02C0.Count == 0)
@@ -810,7 +777,6 @@ public class MIDIInputManager : MonoBehaviour
 		this.\u02B3\u02B3\u02B5\u02B7\u02B2\u02B8\u02B6\u02B3\u02C0\u02B6\u02B4 = num;
 	}
 
-	// Token: 0x06000CBE RID: 3262 RVA: 0x0006DDC4 File Offset: 0x0006BFC4
 	private void \u02B8\u02B2\u02C0\u02B8\u02B2\u02BB\u02C0\u02B6\u02B2\u02B2\u02B2()
 	{
 		this.\u02BE\u02C0\u02BE\u02BF\u02BE\u02B8\u02B6\u02B5\u02BD\u02BF\u02B5();
@@ -869,7 +835,6 @@ public class MIDIInputManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000CBF RID: 3263 RVA: 0x0006DFDC File Offset: 0x0006C1DC
 	private void \u02BA\u02BD\u02BA\u02B7\u02C1\u02BC\u02BD\u02BA\u02B5\u02BC\u02BB(MIDIInputManager.\u02BC\u02BB\u02B4\u02B3\u02BB\u02B3\u02C0\u02BA\u02B9\u02C0\u02B8 \u02B6\u02BA\u02B8\u02BC\u02C0\u02C0\u02BF\u02B3\u02B6\u02B3\u02C1, string \u02C1\u02B4\u02B4\u02B5\u02BA\u02B6\u02BE\u02B4\u02B9\u02B4\u02BA)
 	{
 		string text = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "#", \u02C1\u02B4\u02B4\u02B5\u02BA\u02B6\u02BE\u02B4\u02B9\u02B4\u02BA + "Show Bot Score");
@@ -888,14 +853,12 @@ public class MIDIInputManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000CC0 RID: 3264 RVA: 0x0000C8CA File Offset: 0x0000AACA
 	private void Start()
 	{
 		this.\u02B9\u02BD\u02BF\u02BB\u02BF\u02BD\u02B8\u02BF\u02B7\u02B6\u02B5 = new \u02B7\u02B4\u02B5\u02BB\u02C0\u02B7\u02B3\u02B9\u02BC\u02B4\u02BC(\u02B7\u02B4\u02B5\u02BB\u02C0\u02B7\u02B3\u02B9\u02BC\u02B4\u02BC.\u02B7\u02BB\u02B5\u02B2\u02BD\u02C0\u02C1\u02BB\u02BD\u02B8\u02B8.In);
 		this.\u02BD\u02B2\u02BB\u02BF\u02BF\u02B5\u02BC\u02B2\u02BF\u02BA\u02B3 = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "MIDI Profiles");
 	}
 
-	// Token: 0x06000CC1 RID: 3265 RVA: 0x0006E060 File Offset: 0x0006C260
 	public void \u02B2\u02BA\u02B8\u02BD\u02BC\u02BC\u02BF\u02B7\u02C0\u02BB\u02BE(\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7, string \u02B9\u02BB\u02C0\u02B7\u02B5\u02B6\u02BF\u02B2\u02B8\u02BC\u02C0, List<MIDIInputManager.\u02BF\u02B6\u02C0\u02BF\u02BA\u02B8\u02B5\u02BA\u02B8\u02BE\u02B3> \u02B3\u02B3\u02B9\u02B7\u02BA\u02BD\u02BA\u02BD\u02BD\u02B2\u02BF)
 	{
 		for (int i = 0; i < this.\u02BF\u02B3\u02B6\u02BB\u02BB\u02B5\u02B5\u02B5\u02C1\u02B7\u02C0.Count; i++)
@@ -912,7 +875,6 @@ public class MIDIInputManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000CC2 RID: 3266 RVA: 0x0006E0EC File Offset: 0x0006C2EC
 	public MIDIInputManager.\u02B9\u02B4\u02B4\u02BF\u02B2\u02BA\u02B6\u02B7\u02B6\u02BD\u02B6 \u02BB\u02BF\u02C0\u02C1\u02B3\u02B5\u02BB\u02BE\u02BE\u02BD\u02BE(\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7)
 	{
 		for (int i = 1; i < this.\u02BF\u02B3\u02B6\u02BB\u02BB\u02B5\u02B5\u02B5\u02C1\u02B7\u02C0.Count; i += 0)
@@ -931,7 +893,6 @@ public class MIDIInputManager : MonoBehaviour
 		return default(MIDIInputManager.\u02B9\u02B4\u02B4\u02BF\u02B2\u02BA\u02B6\u02B7\u02B6\u02BD\u02B6);
 	}
 
-	// Token: 0x06000CC3 RID: 3267 RVA: 0x0006D1E4 File Offset: 0x0006B3E4
 	public \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BD\u02B9\u02B3\u02C0\u02BE\u02B7\u02B7\u02BE\u02BA\u02B9\u02B5(string \u02C1\u02B4\u02B4\u02B5\u02BA\u02B6\u02BE\u02B4\u02B9\u02B4\u02BA)
 	{
 		for (int i = 0; i < this.\u02BF\u02B3\u02B6\u02BB\u02BB\u02B5\u02B5\u02B5\u02C1\u02B7\u02C0.Count; i++)
@@ -945,14 +906,12 @@ public class MIDIInputManager : MonoBehaviour
 		return null;
 	}
 
-	// Token: 0x06000CC4 RID: 3268 RVA: 0x0000C8ED File Offset: 0x0000AAED
 	private void \u02BF\u02BA\u02B5\u02B8\u02B5\u02BF\u02B2\u02BF\u02B3\u02BC\u02BA()
 	{
 		this.\u02B9\u02BD\u02BF\u02BB\u02BF\u02BD\u02B8\u02BF\u02B7\u02B6\u02B5 = new \u02B7\u02B4\u02B5\u02BB\u02C0\u02B7\u02B3\u02B9\u02BC\u02B4\u02BC(\u02B7\u02B4\u02B5\u02BB\u02C0\u02B7\u02B3\u02B9\u02BC\u02B4\u02BC.\u02B7\u02BB\u02B5\u02B2\u02BD\u02C0\u02C1\u02BB\u02BD\u02B8\u02B8.Out);
 		this.\u02BD\u02B2\u02BB\u02BF\u02BF\u02B5\u02BC\u02B2\u02BF\u02BA\u02B3 = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "{0}/{1}");
 	}
 
-	// Token: 0x06000CC5 RID: 3269 RVA: 0x0006E1A4 File Offset: 0x0006C3A4
 	private void \u02B6\u02B9\u02B7\u02B3\u02B9\u02B4\u02B4\u02B6\u02BA\u02B9\u02B6(MIDIInputManager.\u02C0\u02B7\u02C1\u02BB\u02B5\u02B9\u02B9\u02BA\u02B2\u02B9\u02B2 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7)
 	{
 		for (int i = 0; i < this.\u02BF\u02B3\u02B6\u02BB\u02BB\u02B5\u02B5\u02B5\u02C1\u02B7\u02C0.Count; i++)
@@ -965,161 +924,111 @@ public class MIDIInputManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040008E8 RID: 2280
 	public static MIDIInputManager \u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7;
 
-	// Token: 0x040008E9 RID: 2281
 	private \u02B7\u02B4\u02B5\u02BB\u02C0\u02B7\u02B3\u02B9\u02BC\u02B4\u02BC \u02B9\u02BD\u02BF\u02BB\u02BF\u02BD\u02B8\u02BF\u02B7\u02B6\u02B5;
 
-	// Token: 0x040008EA RID: 2282
 	private bool \u02B7\u02B3\u02B6\u02B6\u02B7\u02B8\u02B8\u02B4\u02B7\u02B8\u02B2;
 
-	// Token: 0x040008EB RID: 2283
 	private int \u02B3\u02B3\u02B5\u02B7\u02B2\u02B8\u02B6\u02B3\u02C0\u02B6\u02B4;
 
-	// Token: 0x040008EC RID: 2284
 	private List<MIDIInputManager.\u02C0\u02B7\u02C1\u02BB\u02B5\u02B9\u02B9\u02BA\u02B2\u02B9\u02B2> \u02BF\u02B3\u02B6\u02BB\u02BB\u02B5\u02B5\u02B5\u02C1\u02B7\u02C0 = new List<MIDIInputManager.\u02C0\u02B7\u02C1\u02BB\u02B5\u02B9\u02B9\u02BA\u02B2\u02B9\u02B2>();
 
-	// Token: 0x040008ED RID: 2285
 	public const string \u02B8\u02C0\u02BA\u02BB\u02B7\u02BB\u02BC\u02B5\u02B6\u02B6\u02C0 = "Green Pad";
 
-	// Token: 0x040008EE RID: 2286
 	public const string \u02BC\u02BC\u02BC\u02B9\u02BB\u02BB\u02B5\u02B9\u02BF\u02BC\u02BA = "Red Pad";
 
-	// Token: 0x040008EF RID: 2287
 	public const string \u02B7\u02BF\u02B8\u02BF\u02BA\u02B6\u02C0\u02BB\u02B9\u02BF\u02B5 = "Yellow Pad";
 
-	// Token: 0x040008F0 RID: 2288
 	public const string \u02B3\u02C0\u02BB\u02B5\u02C0\u02B7\u02B5\u02B8\u02B8\u02BE\u02B5 = "Blue Pad";
 
-	// Token: 0x040008F1 RID: 2289
 	public const string \u02B3\u02B8\u02C1\u02BE\u02B6\u02BB\u02B6\u02BA\u02B8\u02BB\u02BB = "Kick Pad";
 
-	// Token: 0x040008F2 RID: 2290
 	public const string \u02BE\u02BC\u02BE\u02C0\u02B7\u02B2\u02B8\u02BC\u02B7\u02B3\u02BD = "Yellow Cymbal";
 
-	// Token: 0x040008F3 RID: 2291
 	public const string \u02B9\u02B5\u02B5\u02C0\u02B7\u02BC\u02C1\u02BA\u02B8\u02C0\u02BD = "Blue Cymbal";
 
-	// Token: 0x040008F4 RID: 2292
 	public const string \u02B2\u02BA\u02BF\u02B7\u02B2\u02B5\u02B8\u02BB\u02B4\u02B5\u02BB = "Green Cymbal";
 
-	// Token: 0x040008F5 RID: 2293
 	public const string \u02B2\u02B3\u02B3\u02C1\u02B9\u02BB\u02B7\u02B9\u02BD\u02B6\u02B6 = "Start";
 
-	// Token: 0x040008F6 RID: 2294
 	public const string \u02BF\u02B4\u02B3\u02B5\u02B2\u02BA\u02B7\u02BB\u02BC\u02B3\u02B3 = "Select";
 
-	// Token: 0x040008F7 RID: 2295
 	private string \u02BD\u02B2\u02BB\u02BF\u02BF\u02B5\u02BC\u02B2\u02BF\u02BA\u02B3;
 
-	// Token: 0x02000126 RID: 294
 	public struct \u02B9\u02B4\u02B4\u02BF\u02B2\u02BA\u02B6\u02B7\u02B6\u02BD\u02B6
 	{
-		// Token: 0x040008F8 RID: 2296
 		public string \u02B6\u02B8\u02B3\u02B3\u02BD\u02B8\u02BC\u02BF\u02B7\u02BD\u02BB;
 
-		// Token: 0x040008F9 RID: 2297
 		public byte \u02B4\u02C0\u02C1\u02BB\u02B6\u02BE\u02BF\u02BA\u02B7\u02BD\u02BF;
 
-		// Token: 0x040008FA RID: 2298
 		public byte \u02BC\u02C0\u02B4\u02BE\u02B6\u02B7\u02B3\u02BF\u02B5\u02BE\u02C0;
 
-		// Token: 0x040008FB RID: 2299
 		public double \u02B2\u02B8\u02BA\u02BA\u02BC\u02B7\u02B5\u02B5\u02B6\u02B5\u02C1;
 	}
 
-	// Token: 0x02000127 RID: 295
 	private class \u02C0\u02B7\u02C1\u02BB\u02B5\u02B9\u02B9\u02BA\u02B2\u02B9\u02B2
 	{
-		// Token: 0x040008FC RID: 2300
 		public \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7;
 
-		// Token: 0x040008FD RID: 2301
 		public \u02BD\u02B4\u02B4\u02B3\u02C0\u02B7\u02B6\u02BC\u02BF\u02BC\u02BE \u02C0\u02B9\u02B4\u02B7\u02BD\u02BA\u02B2\u02B8\u02B5\u02B6\u02C1;
 
-		// Token: 0x040008FE RID: 2302
 		public MIDIInputManager.\u02BC\u02BB\u02B4\u02B3\u02BB\u02B3\u02C0\u02BA\u02B9\u02C0\u02B8 \u02BE\u02BC\u02B3\u02BC\u02BA\u02B7\u02C0\u02BB\u02B4\u02B2\u02B3;
 
-		// Token: 0x040008FF RID: 2303
 		public CustomController \u02BA\u02B6\u02BC\u02B6\u02B3\u02BF\u02B2\u02BD\u02B7\u02C1\u02B6;
 
-		// Token: 0x04000900 RID: 2304
 		public List<MIDIInputManager.\u02B9\u02B4\u02B4\u02BF\u02B2\u02BA\u02B6\u02B7\u02B6\u02BD\u02B6> \u02C1\u02BF\u02B7\u02BA\u02BD\u02C0\u02BF\u02BE\u02BB\u02BA\u02BC;
 
-		// Token: 0x04000901 RID: 2305
 		public bool \u02B7\u02B3\u02B6\u02B6\u02B7\u02B8\u02B8\u02B4\u02B7\u02B8\u02B2;
 	}
 
-	// Token: 0x02000128 RID: 296
 	public struct \u02BC\u02BB\u02B4\u02B3\u02BB\u02B3\u02C0\u02BA\u02B9\u02C0\u02B8
 	{
-		// Token: 0x17000127 RID: 295
-		// (get) Token: 0x06000CCA RID: 3274 RVA: 0x0000C92C File Offset: 0x0000AB2C
-		// (set) Token: 0x06000CC8 RID: 3272 RVA: 0x0000C923 File Offset: 0x0000AB23
 		[YamlMember(Alias = "Mappings", ApplyNamingConventions = false)]
 		public Dictionary<string, List<MIDIInputManager.\u02BF\u02B6\u02C0\u02BF\u02BA\u02B8\u02B5\u02BA\u02B8\u02BE\u02B3>> \u02C1\u02B6\u02B3\u02BD\u02B4\u02BC\u02BA\u02B3\u02B5\u02B5\u02C0 { readonly get; set; }
 
-		// Token: 0x06000CC9 RID: 3273 RVA: 0x0000C923 File Offset: 0x0000AB23
 		public void \u02BB\u02BD\u02C1\u02C1\u02B4\u02BA\u02B9\u02BD\u02B8\u02B4\u02C1(Dictionary<string, List<MIDIInputManager.\u02BF\u02B6\u02C0\u02BF\u02BA\u02B8\u02B5\u02BA\u02B8\u02BE\u02B3>> \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5)
 		{
 			this.<\u02B5\u02C0\u02B5\u02B5\u02B9\u02B9\u02B6\u02BB\u02C1\u02BC\u02BD>k__BackingField = \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5;
 		}
 
-		// Token: 0x17000126 RID: 294
-		// (get) Token: 0x06000CCF RID: 3279 RVA: 0x0000C93D File Offset: 0x0000AB3D
-		// (set) Token: 0x06000CCB RID: 3275 RVA: 0x0000C934 File Offset: 0x0000AB34
 		[YamlMember(Alias = "DeviceName", ApplyNamingConventions = false)]
 		public string \u02BB\u02BF\u02B2\u02B8\u02B9\u02BC\u02C0\u02B8\u02C1\u02BB\u02B5 { readonly get; set; }
 
-		// Token: 0x06000CCC RID: 3276 RVA: 0x0000C93D File Offset: 0x0000AB3D
 		public string \u02BE\u02C0\u02B4\u02B9\u02BB\u02C0\u02B3\u02BE\u02B7\u02BC\u02B5()
 		{
 			return this.<\u02B4\u02B5\u02B3\u02BC\u02B3\u02BD\u02BE\u02B7\u02BD\u02B8\u02B4>k__BackingField;
 		}
 
-		// Token: 0x06000CCD RID: 3277 RVA: 0x0000C92C File Offset: 0x0000AB2C
 		public Dictionary<string, List<MIDIInputManager.\u02BF\u02B6\u02C0\u02BF\u02BA\u02B8\u02B5\u02BA\u02B8\u02BE\u02B3>> \u02B2\u02B4\u02C0\u02B5\u02B7\u02BA\u02B2\u02B4\u02BD\u02BB\u02B9()
 		{
 			return this.<\u02B5\u02C0\u02B5\u02B5\u02B9\u02B9\u02B6\u02BB\u02C1\u02BC\u02BD>k__BackingField;
 		}
 
-		// Token: 0x06000CCE RID: 3278 RVA: 0x0000C934 File Offset: 0x0000AB34
 		public void \u02B6\u02B2\u02B6\u02B9\u02BF\u02BB\u02BD\u02B7\u02C1\u02BB\u02B9(string \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5)
 		{
 			this.<\u02B4\u02B5\u02B3\u02BC\u02B3\u02BD\u02BE\u02B7\u02BD\u02B8\u02B4>k__BackingField = \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5;
 		}
 	}
 
-	// Token: 0x02000129 RID: 297
 	public class \u02BF\u02B6\u02C0\u02BF\u02BA\u02B8\u02B5\u02BA\u02B8\u02BE\u02B3
 	{
-		// Token: 0x1700012A RID: 298
-		// (get) Token: 0x06000CD0 RID: 3280 RVA: 0x0000C945 File Offset: 0x0000AB45
-		// (set) Token: 0x06000CD2 RID: 3282 RVA: 0x0000C94D File Offset: 0x0000AB4D
 		[YamlMember(Alias = "OverHitThreshold", ApplyNamingConventions = false)]
 		public float \u02B7\u02B3\u02B2\u02BB\u02B9\u02C0\u02B9\u02B8\u02B8\u02BA\u02B6 { get; set; }
 
-		// Token: 0x06000CD3 RID: 3283 RVA: 0x0000C945 File Offset: 0x0000AB45
 		public float \u02B3\u02B9\u02BC\u02C1\u02B8\u02B5\u02BF\u02BC\u02BB\u02BA\u02BE()
 		{
 			return this.<\u02BA\u02B3\u02BB\u02B7\u02BB\u02B5\u02BD\u02C1\u02B9\u02BF\u02BE>k__BackingField;
 		}
 
-		// Token: 0x06000CD4 RID: 3284 RVA: 0x0000C956 File Offset: 0x0000AB56
 		public byte \u02B2\u02B3\u02C1\u02C1\u02B7\u02BD\u02B3\u02B8\u02C0\u02BA\u02BB()
 		{
 			return this.<\u02BB\u02B7\u02B2\u02B5\u02B2\u02C0\u02C0\u02B4\u02B4\u02BE\u02B9>k__BackingField;
 		}
 
-		// Token: 0x17000129 RID: 297
-		// (get) Token: 0x06000CD5 RID: 3285 RVA: 0x0000C95E File Offset: 0x0000AB5E
-		// (set) Token: 0x06000CD7 RID: 3287 RVA: 0x0000C976 File Offset: 0x0000AB76
 		[YamlMember(Alias = "Velocity", ApplyNamingConventions = false)]
 		public byte \u02BC\u02C0\u02B4\u02BE\u02B6\u02B7\u02B3\u02BF\u02B5\u02BE\u02C0 { get; set; }
 
-		// Token: 0x1700012B RID: 299
-		// (get) Token: 0x06000CD6 RID: 3286 RVA: 0x0000C966 File Offset: 0x0000AB66
 		internal double \u02BF\u02BF\u02BB\u02BE\u02C0\u02B9\u02BB\u02B2\u02B3\u02BB\u02C1
 		{
 			get
@@ -1128,13 +1037,9 @@ public class MIDIInputManager : MonoBehaviour
 			}
 		}
 
-		// Token: 0x17000128 RID: 296
-		// (get) Token: 0x06000CD9 RID: 3289 RVA: 0x0000C956 File Offset: 0x0000AB56
-		// (set) Token: 0x06000CD8 RID: 3288 RVA: 0x0000C97F File Offset: 0x0000AB7F
 		[YamlMember(Alias = "NoteNumber", ApplyNamingConventions = false)]
 		public byte \u02B4\u02C0\u02C1\u02BB\u02B6\u02BE\u02BF\u02BA\u02B7\u02BD\u02BF { get; set; }
 
-		// Token: 0x04000907 RID: 2311
 		internal double \u02B4\u02BF\u02BA\u02BE\u02BE\u02B3\u02C1\u02BB\u02B8\u02BC\u02B3;
 	}
 }

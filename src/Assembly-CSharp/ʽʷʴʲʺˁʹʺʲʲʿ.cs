@@ -1,37 +1,20 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using StrikeCore;
 using UnityEngine;
 
-// Token: 0x0200004A RID: 74
 public static class \u02BD\u02B7\u02B4\u02B2\u02BA\u02C1\u02B9\u02BA\u02B2\u02B2\u02BF
 {
-	// Token: 0x1700002A RID: 42
-	// (get) Token: 0x06000315 RID: 789 RVA: 0x0000782B File Offset: 0x00005A2B
-	// (set) Token: 0x06000314 RID: 788 RVA: 0x00007823 File Offset: 0x00005A23
 	public static int \u02B5\u02B7\u02B8\u02BB\u02BB\u02B5\u02BD\u02B4\u02B9\u02BD\u02BF { get; private set; }
 
-	// Token: 0x1700002B RID: 43
-	// (get) Token: 0x06000317 RID: 791 RVA: 0x0000783A File Offset: 0x00005A3A
-	// (set) Token: 0x06000316 RID: 790 RVA: 0x00007832 File Offset: 0x00005A32
 	public static int \u02C0\u02B7\u02C1\u02B6\u02B3\u02B9\u02B7\u02B9\u02BF\u02B4\u02B5 { get; private set; }
 
-	// Token: 0x1700002C RID: 44
-	// (get) Token: 0x06000319 RID: 793 RVA: 0x00007849 File Offset: 0x00005A49
-	// (set) Token: 0x06000318 RID: 792 RVA: 0x00007841 File Offset: 0x00005A41
 	public static int \u02B8\u02BC\u02BF\u02B9\u02C0\u02C1\u02BE\u02BB\u02BE\u02B3\u02B6 { get; private set; }
 
-	// Token: 0x1700002D RID: 45
-	// (get) Token: 0x0600031B RID: 795 RVA: 0x00007858 File Offset: 0x00005A58
-	// (set) Token: 0x0600031A RID: 794 RVA: 0x00007850 File Offset: 0x00005A50
 	public static string[] \u02BB\u02B3\u02C0\u02B9\u02B7\u02B4\u02BD\u02B7\u02BF\u02B9\u02C0 { get; private set; }
 
-	// Token: 0x1700002E RID: 46
-	// (get) Token: 0x0600031D RID: 797 RVA: 0x00007867 File Offset: 0x00005A67
-	// (set) Token: 0x0600031C RID: 796 RVA: 0x0000785F File Offset: 0x00005A5F
 	public static PlayerStats[] \u02B6\u02B7\u02BF\u02BB\u02C1\u02C0\u02B2\u02B2\u02BE\u02B5\u02B5 { get; private set; }
 
-	// Token: 0x0600031E RID: 798 RVA: 0x0002A9B0 File Offset: 0x00028BB0
 	public static int \u02BF\u02B6\u02C0\u02B5\u02BE\u02C0\u02B9\u02C0\u02B5\u02BD\u02C1(\u02BD\u02B7\u02B4\u02B2\u02BA\u02C1\u02B9\u02BA\u02B2\u02B2\u02BF.\u02B5\u02B2\u02BD\u02B9\u02BD\u02B7\u02B6\u02B4\u02B2\u02B8\u02B6 \u02BC\u02BB\u02BA\u02B2\u02B9\u02B7\u02BF\u02BC\u02BE\u02BC\u02BD)
 	{
 		int num = 0;
@@ -45,7 +28,6 @@ public static class \u02BD\u02B7\u02B4\u02B2\u02BA\u02C1\u02B9\u02BA\u02B2\u02B2
 		return num;
 	}
 
-	// Token: 0x0600031F RID: 799 RVA: 0x0002A9F0 File Offset: 0x00028BF0
 	public static int \u02BE\u02B4\u02B9\u02B5\u02B5\u02BD\u02BB\u02BC\u02B8\u02BB\u02BC(int \u02BC\u02BC\u02C1\u02B4\u02BF\u02B8\u02BF\u02B2\u02BA\u02B3\u02B5, int \u02B8\u02B3\u02B3\u02B2\u02B7\u02B2\u02C0\u02B6\u02BA\u02BE\u02BC)
 	{
 		int num = 0;
@@ -56,7 +38,6 @@ public static class \u02BD\u02B7\u02B4\u02B2\u02BA\u02C1\u02B9\u02BA\u02B2\u02B2
 		return num;
 	}
 
-	// Token: 0x06000320 RID: 800 RVA: 0x0002AA20 File Offset: 0x00028C20
 	public static bool \u02BA\u02BA\u02B5\u02B6\u02B8\u02BE\u02B4\u02B9\u02BF\u02B2\u02BC()
 	{
 		int num = 0;
@@ -70,7 +51,6 @@ public static class \u02BD\u02B7\u02B4\u02B2\u02BA\u02C1\u02B9\u02BA\u02B2\u02B2
 		return num == GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BB\u02B4\u02BD\u02B2\u02BC\u02B7\u02C0\u02C1\u02B8\u02B4\u02BD;
 	}
 
-	// Token: 0x06000321 RID: 801 RVA: 0x0002AA60 File Offset: 0x00028C60
 	public static byte \u02B5\u02BA\u02B8\u02B2\u02BD\u02B5\u02B5\u02B2\u02BD\u02B5\u02BE()
 	{
 		int num = 0;
@@ -86,7 +66,6 @@ public static class \u02BD\u02B7\u02B4\u02B2\u02BA\u02C1\u02B9\u02BA\u02B2\u02B2
 		return (byte)((float)num / (float)(num2 * 100) * 100f);
 	}
 
-	// Token: 0x06000322 RID: 802 RVA: 0x0002AABC File Offset: 0x00028CBC
 	private static void \u02C0\u02B3\u02B6\u02BC\u02C1\u02BB\u02B5\u02C1\u02C0\u02B7\u02BC()
 	{
 		if (\u02BD\u02B7\u02B4\u02B2\u02BA\u02C1\u02B9\u02BA\u02B2\u02B2\u02BF.\u02B6\u02B7\u02BF\u02BB\u02C1\u02C0\u02B2\u02B2\u02BE\u02B5\u02B5 == null)
@@ -99,7 +78,6 @@ public static class \u02BD\u02B7\u02B4\u02B2\u02BA\u02C1\u02B9\u02BA\u02B2\u02B2
 		}
 	}
 
-	// Token: 0x06000323 RID: 803 RVA: 0x0002AAFC File Offset: 0x00028CFC
 	public static void \u02B6\u02BC\u02B2\u02BA\u02B6\u02BC\u02BF\u02BE\u02B3\u02B6\u02BC(\u02BE\u02BC\u02C1\u02B7\u02BA\u02B5\u02B3\u02BA\u02B5\u02BD\u02C1 \u02B6\u02B5\u02B4\u02B7\u02BB\u02B3\u02C0\u02C0\u02B4\u02B2\u02BD)
 	{
 		\u02BD\u02B7\u02B4\u02B2\u02BA\u02C1\u02B9\u02BA\u02B2\u02B2\u02BF.\u02C0\u02B3\u02B6\u02BC\u02C1\u02BB\u02B5\u02C1\u02C0\u02B7\u02BC();
@@ -109,7 +87,6 @@ public static class \u02BD\u02B7\u02B4\u02B2\u02BA\u02C1\u02B9\u02BA\u02B2\u02B2
 		\u02BD\u02B7\u02B4\u02B2\u02BA\u02C1\u02B9\u02BA\u02B2\u02B2\u02BF.\u02B6\u02B7\u02BF\u02BB\u02C1\u02C0\u02B2\u02B2\u02BE\u02B5\u02B5[(int)\u02B6\u02B5\u02B4\u02B7\u02BB\u02B3\u02C0\u02C0\u02B4\u02B2\u02BD.\u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7].isRemotePlayer = true;
 	}
 
-	// Token: 0x06000324 RID: 804 RVA: 0x0002AB58 File Offset: 0x00028D58
 	public static void \u02B8\u02C0\u02BA\u02B6\u02BA\u02B9\u02B7\u02BB\u02B6\u02B8\u02BD(\u02B7\u02BD\u02BB\u02BB\u02BF\u02B5\u02C0\u02C1\u02BD\u02B3\u02B6 \u02B4\u02BC\u02BF\u02BC\u02BA\u02B9\u02B8\u02B2\u02BD\u02BE\u02BD, BasePlayer[] \u02B8\u02B9\u02B6\u02B7\u02C0\u02B2\u02B9\u02BF\u02C1\u02B5\u02BF)
 	{
 		List<\u02B8\u02BB\u02B2\u02B5\u02C1\u02C1\u02BB\u02B7\u02B3\u02B4\u02B6> list = \u02B4\u02BC\u02BF\u02BC\u02BA\u02B9\u02B8\u02B2\u02BD\u02BE\u02BD.\u02B2\u02B5\u02B9\u02BC\u02B2\u02BE\u02BF\u02BC\u02B5\u02BD\u02C1;
@@ -152,7 +129,6 @@ public static class \u02BD\u02B7\u02B4\u02B2\u02BA\u02C1\u02B9\u02BA\u02B2\u02B2
 		}
 	}
 
-	// Token: 0x06000325 RID: 805 RVA: 0x0002AD10 File Offset: 0x00028F10
 	public static void \u02B8\u02BD\u02BA\u02B5\u02BF\u02BE\u02BD\u02BB\u02BE\u02BF\u02C1()
 	{
 		int num = 0;
@@ -172,7 +148,6 @@ public static class \u02BD\u02B7\u02B4\u02B2\u02BA\u02C1\u02B9\u02BA\u02B2\u02B2
 		}
 	}
 
-	// Token: 0x06000326 RID: 806 RVA: 0x0002ADA8 File Offset: 0x00028FA8
 	public static void \u02B4\u02BC\u02BA\u02C0\u02C1\u02B9\u02BC\u02B8\u02B5\u02B9\u02B8()
 	{
 		int num = 0;
@@ -215,7 +190,5 @@ public static class \u02BD\u02B7\u02B4\u02B2\u02BA\u02C1\u02B9\u02BA\u02B2\u02B2
 		}
 	}
 
-	// Token: 0x0200004B RID: 75
-	// (Invoke) Token: 0x06000328 RID: 808
 	public delegate int \u02B5\u02B2\u02BD\u02B9\u02BD\u02B7\u02B6\u02B4\u02B2\u02B8\u02B6(PlayerStats \u02BE\u02B8\u02B4\u02B9\u02C1\u02B9\u02BF\u02BC\u02B9\u02C1\u02B2);
 }

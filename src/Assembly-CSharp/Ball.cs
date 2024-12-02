@@ -1,11 +1,9 @@
-﻿using System;
+using System;
 using System.Linq;
 using UnityEngine;
 
-// Token: 0x0200017C RID: 380
 public class Ball : MonoBehaviour
 {
-	// Token: 0x06001183 RID: 4483 RVA: 0x000920B8 File Offset: 0x000902B8
 	private void \u02B2\u02B9\u02C1\u02C1\u02B2\u02B3\u02C1\u02BF\u02BC\u02BB\u02C1()
 	{
 		this.\u02BE\u02C0\u02C0\u02BD\u02B3\u02BC\u02BC\u02BB\u02BD\u02BC\u02B5 = BassAudioManager.Instance != null && BassAudioManager.Instance.\u02B8\u02B8\u02B6\u02BF\u02BB\u02B9\u02B4\u02B4\u02B9\u02BA\u02BF;
@@ -16,7 +14,6 @@ public class Ball : MonoBehaviour
 		this.\u02B7\u02B4\u02C1\u02B4\u02BA\u02B4\u02BB\u02BC\u02B3\u02B7\u02C0();
 	}
 
-	// Token: 0x06001184 RID: 4484 RVA: 0x0009211C File Offset: 0x0009031C
 	private void \u02B2\u02BB\u02B6\u02B5\u02B9\u02B8\u02B2\u02B3\u02BF\u02C1\u02BF()
 	{
 		this.\u02BE\u02C0\u02C0\u02BD\u02B3\u02BC\u02BC\u02BB\u02BD\u02BC\u02B5 = BassAudioManager.Instance != null && BassAudioManager.Instance.\u02B8\u02B8\u02B6\u02BF\u02BB\u02B9\u02B4\u02B4\u02B9\u02BA\u02BF;
@@ -27,7 +24,6 @@ public class Ball : MonoBehaviour
 		this.\u02B8\u02B6\u02B4\u02B6\u02B4\u02B9\u02BE\u02BE\u02BC\u02B8\u02B4();
 	}
 
-	// Token: 0x06001185 RID: 4485 RVA: 0x00092180 File Offset: 0x00090380
 	private void \u02BB\u02B9\u02B8\u02C0\u02BF\u02BF\u02BD\u02B8\u02B7\u02C0\u02B4(Collision2D \u02B6\u02BF\u02B3\u02C0\u02B4\u02B5\u02C1\u02BE\u02B2\u02B3\u02B7)
 	{
 		if (\u02B6\u02BF\u02B3\u02C0\u02B4\u02B5\u02C1\u02BE\u02B2\u02B3\u02B7.collider.CompareTag("five_lane_drums"))
@@ -81,7 +77,6 @@ public class Ball : MonoBehaviour
 		this.\u02C1\u02B8\u02B2\u02B9\u02C1\u02C1\u02BE\u02B2\u02C1\u02BC\u02B9.velocity = this.\u02B3\u02B3\u02C0\u02BA\u02B5\u02B9\u02B2\u02B9\u02B7\u02BE\u02BB;
 	}
 
-	// Token: 0x06001186 RID: 4486 RVA: 0x0009238C File Offset: 0x0009058C
 	private void \u02B4\u02BE\u02B2\u02C0\u02B5\u02B7\u02C1\u02BC\u02B5\u02B8\u02B4()
 	{
 		int num = 0;
@@ -119,7 +114,6 @@ public class Ball : MonoBehaviour
 		this.\u02B5\u02C0\u02C1\u02B6\u02B6\u02BA\u02BD\u02BB\u02BB\u02B3\u02B7.offset = Vector2.zero;
 	}
 
-	// Token: 0x06001187 RID: 4487 RVA: 0x000920B8 File Offset: 0x000902B8
 	private void Start()
 	{
 		this.\u02BE\u02C0\u02C0\u02BD\u02B3\u02BC\u02BC\u02BB\u02BD\u02BC\u02B5 = BassAudioManager.Instance != null && BassAudioManager.Instance.\u02B8\u02B8\u02B6\u02BF\u02BB\u02B9\u02B4\u02B4\u02B9\u02BA\u02BF;
@@ -130,7 +124,6 @@ public class Ball : MonoBehaviour
 		this.\u02B7\u02B4\u02C1\u02B4\u02BA\u02B4\u02BB\u02BC\u02B3\u02B7\u02C0();
 	}
 
-	// Token: 0x06001188 RID: 4488 RVA: 0x000924CC File Offset: 0x000906CC
 	private void \u02C0\u02BC\u02BC\u02B3\u02BF\u02B3\u02B4\u02BE\u02B5\u02B2\u02BE(Collision2D \u02B6\u02BF\u02B3\u02C0\u02B4\u02B5\u02C1\u02BE\u02B2\u02B3\u02B7)
 	{
 		if (\u02B6\u02BF\u02B3\u02C0\u02B4\u02B5\u02C1\u02BE\u02B2\u02B3\u02B7.collider.CompareTag("Song"))
@@ -184,7 +177,6 @@ public class Ball : MonoBehaviour
 		this.\u02C1\u02B8\u02B2\u02B9\u02C1\u02C1\u02BE\u02B2\u02C1\u02BC\u02B9.velocity = this.\u02B3\u02B3\u02C0\u02BA\u02B5\u02B9\u02B2\u02B9\u02B7\u02BE\u02BB;
 	}
 
-	// Token: 0x06001189 RID: 4489 RVA: 0x000926D8 File Offset: 0x000908D8
 	private void \u02BB\u02BD\u02BB\u02B4\u02C1\u02BA\u02BC\u02B3\u02B7\u02B9\u02B8(Collision2D \u02B6\u02BF\u02B3\u02C0\u02B4\u02B5\u02C1\u02BE\u02B2\u02B3\u02B7)
 	{
 		if (\u02B6\u02BF\u02B3\u02C0\u02B4\u02B5\u02C1\u02BE\u02B2\u02B3\u02B7.collider.CompareTag("[{0}] {1}"))
@@ -238,7 +230,6 @@ public class Ball : MonoBehaviour
 		this.\u02C1\u02B8\u02B2\u02B9\u02C1\u02C1\u02BE\u02B2\u02C1\u02BC\u02B9.velocity = this.\u02B3\u02B3\u02C0\u02BA\u02B5\u02B9\u02B2\u02B9\u02B7\u02BE\u02BB;
 	}
 
-	// Token: 0x0600118A RID: 4490 RVA: 0x000928E4 File Offset: 0x00090AE4
 	private void \u02B8\u02B6\u02B4\u02B6\u02B4\u02B9\u02BE\u02BE\u02BC\u02B8\u02B4()
 	{
 		this.\u02B4\u02BE\u02B2\u02C0\u02B5\u02B7\u02C1\u02BC\u02B5\u02B8\u02B4();
@@ -250,7 +241,6 @@ public class Ball : MonoBehaviour
 		this.\u02B5\u02C1\u02B5\u02BF\u02B4\u02BE\u02C1\u02B5\u02BD\u02BC\u02BA = true;
 	}
 
-	// Token: 0x0600118B RID: 4491 RVA: 0x000929AC File Offset: 0x00090BAC
 	private void \u02C1\u02BE\u02BB\u02B2\u02B4\u02B9\u02BB\u02B4\u02C0\u02BC\u02B3()
 	{
 		int num = 0;
@@ -288,7 +278,6 @@ public class Ball : MonoBehaviour
 		this.\u02B5\u02C0\u02C1\u02B6\u02B6\u02BA\u02BD\u02BB\u02BB\u02B3\u02B7.offset = Vector2.zero;
 	}
 
-	// Token: 0x0600118D RID: 4493 RVA: 0x00092AEC File Offset: 0x00090CEC
 	private void OnCollisionEnter2D(Collision2D \u02B6\u02BF\u02B3\u02C0\u02B4\u02B5\u02C1\u02BE\u02B2\u02B3\u02B7)
 	{
 		if (\u02B6\u02BF\u02B3\u02C0\u02B4\u02B5\u02C1\u02BE\u02B2\u02B3\u02B7.collider.CompareTag("Player"))
@@ -342,7 +331,6 @@ public class Ball : MonoBehaviour
 		this.\u02C1\u02B8\u02B2\u02B9\u02C1\u02C1\u02BE\u02B2\u02C1\u02BC\u02B9.velocity = this.\u02B3\u02B3\u02C0\u02BA\u02B5\u02B9\u02B2\u02B9\u02B7\u02BE\u02BB;
 	}
 
-	// Token: 0x0600118E RID: 4494 RVA: 0x00092CF8 File Offset: 0x00090EF8
 	private void \u02B7\u02B4\u02C1\u02B4\u02BA\u02B4\u02BB\u02BC\u02B3\u02B7\u02C0()
 	{
 		this.\u02B4\u02BE\u02B2\u02C0\u02B5\u02B7\u02C1\u02BC\u02B5\u02B8\u02B4();
@@ -354,7 +342,6 @@ public class Ball : MonoBehaviour
 		this.\u02B5\u02C1\u02B5\u02BF\u02B4\u02BE\u02C1\u02B5\u02BD\u02BC\u02BA = false;
 	}
 
-	// Token: 0x0600118F RID: 4495 RVA: 0x00092DC0 File Offset: 0x00090FC0
 	private void \u02BE\u02C1\u02B2\u02BF\u02B5\u02C0\u02B5\u02BD\u02B3\u02B8\u02B2()
 	{
 		int num = 1;
@@ -392,7 +379,6 @@ public class Ball : MonoBehaviour
 		this.\u02B5\u02C0\u02C1\u02B6\u02B6\u02BA\u02BD\u02BB\u02BB\u02B3\u02B7.offset = Vector2.zero;
 	}
 
-	// Token: 0x06001190 RID: 4496 RVA: 0x0000F478 File Offset: 0x0000D678
 	private void Update()
 	{
 		if (this.\u02BE\u02B3\u02BB\u02BF\u02BC\u02C1\u02BC\u02C1\u02B2\u02BF\u02C0)
@@ -402,7 +388,6 @@ public class Ball : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001191 RID: 4497 RVA: 0x00092F00 File Offset: 0x00091100
 	private void \u02BC\u02BE\u02BB\u02B9\u02C0\u02B5\u02BE\u02BA\u02BF\u02B5\u02B9(Collision2D \u02B6\u02BF\u02B3\u02C0\u02B4\u02B5\u02C1\u02BE\u02B2\u02B3\u02B7)
 	{
 		if (\u02B6\u02BF\u02B3\u02C0\u02B4\u02B5\u02C1\u02BE\u02B2\u02B3\u02B7.collider.CompareTag("hasEasy"))
@@ -456,7 +441,6 @@ public class Ball : MonoBehaviour
 		this.\u02C1\u02B8\u02B2\u02B9\u02C1\u02C1\u02BE\u02B2\u02C1\u02BC\u02B9.velocity = this.\u02B3\u02B3\u02C0\u02BA\u02B5\u02B9\u02B2\u02B9\u02B7\u02BE\u02BB;
 	}
 
-	// Token: 0x06001192 RID: 4498 RVA: 0x0009211C File Offset: 0x0009031C
 	private void \u02BE\u02B8\u02B4\u02BC\u02B7\u02B7\u02BE\u02BC\u02B5\u02BC\u02BF()
 	{
 		this.\u02BE\u02C0\u02C0\u02BD\u02B3\u02BC\u02BC\u02BB\u02BD\u02BC\u02B5 = BassAudioManager.Instance != null && BassAudioManager.Instance.\u02B8\u02B8\u02B6\u02BF\u02BB\u02B9\u02B4\u02B4\u02B9\u02BA\u02BF;
@@ -467,7 +451,6 @@ public class Ball : MonoBehaviour
 		this.\u02B8\u02B6\u02B4\u02B6\u02B4\u02B9\u02BE\u02BE\u02BC\u02B8\u02B4();
 	}
 
-	// Token: 0x06001193 RID: 4499 RVA: 0x0000F4B0 File Offset: 0x0000D6B0
 	private void \u02B9\u02B5\u02B2\u02BB\u02B5\u02B3\u02B9\u02BC\u02BF\u02B5\u02BA()
 	{
 		if (this.\u02BE\u02B3\u02BB\u02BF\u02BC\u02C1\u02BC\u02C1\u02B2\u02BF\u02C0)
@@ -477,7 +460,6 @@ public class Ball : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001194 RID: 4500 RVA: 0x0009211C File Offset: 0x0009031C
 	private void \u02B4\u02BA\u02BE\u02BB\u02B5\u02BB\u02C1\u02B2\u02B4\u02B2\u02BF()
 	{
 		this.\u02BE\u02C0\u02C0\u02BD\u02B3\u02BC\u02BC\u02BB\u02BD\u02BC\u02B5 = BassAudioManager.Instance != null && BassAudioManager.Instance.\u02B8\u02B8\u02B6\u02BF\u02BB\u02B9\u02B4\u02B4\u02B9\u02BA\u02BF;
@@ -488,7 +470,6 @@ public class Ball : MonoBehaviour
 		this.\u02B8\u02B6\u02B4\u02B6\u02B4\u02B9\u02BE\u02BE\u02BC\u02B8\u02B4();
 	}
 
-	// Token: 0x06001195 RID: 4501 RVA: 0x0009310C File Offset: 0x0009130C
 	private void \u02BB\u02BB\u02BE\u02BA\u02C0\u02B4\u02B7\u02B3\u02C0\u02BF\u02BD()
 	{
 		this.\u02BF\u02B5\u02B8\u02B6\u02BC\u02BD\u02BE\u02B6\u02B5\u02BE\u02B2.enabled = false;
@@ -498,7 +479,6 @@ public class Ball : MonoBehaviour
 		this.\u02B8\u02C1\u02B3\u02BD\u02B9\u02BC\u02B6\u02B7\u02BA\u02B8\u02BE.color = \u02B7\u02C1\u02B6\u02B5\u02B8\u02BE\u02BE\u02BD\u02B8\u02BB\u02C1.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0[num];
 	}
 
-	// Token: 0x06001196 RID: 4502 RVA: 0x00093168 File Offset: 0x00091368
 	private void \u02B5\u02BB\u02B2\u02B4\u02B8\u02BA\u02BF\u02B8\u02B3\u02B8\u02B6()
 	{
 		int num = 1;
@@ -536,7 +516,6 @@ public class Ball : MonoBehaviour
 		this.\u02B5\u02C0\u02C1\u02B6\u02B6\u02BA\u02BD\u02BB\u02BB\u02B3\u02B7.offset = Vector2.zero;
 	}
 
-	// Token: 0x06001197 RID: 4503 RVA: 0x0009211C File Offset: 0x0009031C
 	private void \u02BC\u02BC\u02B3\u02B2\u02C0\u02B6\u02B8\u02BA\u02BD\u02B9\u02B6()
 	{
 		this.\u02BE\u02C0\u02C0\u02BD\u02B3\u02BC\u02BC\u02BB\u02BD\u02BC\u02B5 = BassAudioManager.Instance != null && BassAudioManager.Instance.\u02B8\u02B8\u02B6\u02BF\u02BB\u02B9\u02B4\u02B4\u02B9\u02BA\u02BF;
@@ -547,7 +526,6 @@ public class Ball : MonoBehaviour
 		this.\u02B8\u02B6\u02B4\u02B6\u02B4\u02B9\u02BE\u02BE\u02BC\u02B8\u02B4();
 	}
 
-	// Token: 0x06001198 RID: 4504 RVA: 0x000932A8 File Offset: 0x000914A8
 	private void \u02B2\u02B7\u02B5\u02C0\u02B4\u02B3\u02B8\u02B3\u02C0\u02BD\u02B5()
 	{
 		this.\u02BE\u02C0\u02C0\u02BD\u02B3\u02BC\u02BC\u02BB\u02BD\u02BC\u02B5 = !(BassAudioManager.Instance != null) || BassAudioManager.Instance.\u02B8\u02B8\u02B6\u02BF\u02BB\u02B9\u02B4\u02B4\u02B9\u02BA\u02BF;
@@ -558,63 +536,43 @@ public class Ball : MonoBehaviour
 		this.\u02B7\u02B4\u02C1\u02B4\u02BA\u02B4\u02BB\u02BC\u02B3\u02B7\u02C0();
 	}
 
-	// Token: 0x04000D53 RID: 3411
 	public PongersGame \u02C0\u02B9\u02BB\u02BE\u02B6\u02C1\u02B6\u02B7\u02B6\u02BA\u02B2;
 
-	// Token: 0x04000D54 RID: 3412
 	public float \u02B8\u02B9\u02B8\u02B7\u02C1\u02B8\u02B8\u02BB\u02B2\u02BA\u02B6;
 
-	// Token: 0x04000D55 RID: 3413
 	public float \u02C1\u02B2\u02BD\u02B2\u02B6\u02BD\u02C0\u02B5\u02BC\u02B9\u02B7;
 
-	// Token: 0x04000D56 RID: 3414
 	private Vector2 \u02B3\u02B3\u02C0\u02BA\u02B5\u02B9\u02B2\u02B9\u02B7\u02BE\u02BB;
 
-	// Token: 0x04000D57 RID: 3415
 	private float \u02C0\u02B2\u02BE\u02B8\u02B2\u02C1\u02B9\u02BC\u02B3\u02B9\u02BB;
 
-	// Token: 0x04000D58 RID: 3416
 	public float \u02BD\u02B5\u02B9\u02B6\u02BF\u02B9\u02B9\u02B4\u02B2\u02B4\u02BD;
 
-	// Token: 0x04000D59 RID: 3417
 	public float \u02C0\u02BA\u02BE\u02BE\u02B9\u02BE\u02B4\u02B7\u02B4\u02B6\u02BB;
 
-	// Token: 0x04000D5A RID: 3418
 	private Rigidbody2D \u02C1\u02B8\u02B2\u02B9\u02C1\u02C1\u02BE\u02B2\u02C1\u02BC\u02B9;
 
-	// Token: 0x04000D5B RID: 3419
 	public Sprite[] \u02BB\u02C1\u02C1\u02B5\u02B6\u02BB\u02B7\u02BD\u02BE\u02B2\u02BE;
 
-	// Token: 0x04000D5C RID: 3420
 	private bool \u02BE\u02B3\u02BB\u02BF\u02BC\u02C1\u02BC\u02C1\u02B2\u02BF\u02C0;
 
-	// Token: 0x04000D5D RID: 3421
 	private SpriteRenderer \u02BF\u02B5\u02B8\u02B6\u02BC\u02BD\u02BE\u02B6\u02B5\u02BE\u02B2;
 
-	// Token: 0x04000D5E RID: 3422
 	private Transform \u02C0\u02B6\u02B6\u02BC\u02BC\u02B5\u02BD\u02B7\u02B5\u02BC\u02B2;
 
-	// Token: 0x04000D5F RID: 3423
 	private CircleCollider2D \u02B5\u02C0\u02C1\u02B6\u02B6\u02BA\u02BD\u02BB\u02BB\u02B3\u02B7;
 
-	// Token: 0x04000D60 RID: 3424
 	private int \u02BC\u02B8\u02B6\u02B3\u02B3\u02BA\u02BD\u02BA\u02BD\u02BF\u02BC;
 
-	// Token: 0x04000D61 RID: 3425
 	public int \u02B9\u02BC\u02C0\u02BC\u02BA\u02C1\u02B9\u02B7\u02BE\u02B2\u02B9;
 
-	// Token: 0x04000D62 RID: 3426
 	public GameObject \u02BC\u02C0\u02C0\u02B8\u02B9\u02BC\u02BF\u02BE\u02C0\u02BA\u02B9;
 
-	// Token: 0x04000D63 RID: 3427
 	public SpriteRenderer \u02B8\u02C1\u02B3\u02BD\u02B9\u02BC\u02B6\u02B7\u02BA\u02B8\u02BE;
 
-	// Token: 0x04000D64 RID: 3428
 	public SpriteRenderer \u02BD\u02BF\u02BF\u02BE\u02B6\u02BB\u02BE\u02BF\u02C1\u02B2\u02BF;
 
-	// Token: 0x04000D65 RID: 3429
 	private bool \u02BE\u02C0\u02C0\u02BD\u02B3\u02BC\u02BC\u02BB\u02BD\u02BC\u02B5;
 
-	// Token: 0x04000D66 RID: 3430
 	private bool \u02B5\u02C1\u02B5\u02BF\u02B4\u02BE\u02C1\u02B5\u02BD\u02BC\u02BA = true;
 }

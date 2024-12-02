@@ -1,36 +1,28 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using StrikeCore;
 using UnityEngine;
 
-// Token: 0x02000042 RID: 66
 public class ColorManager : MonoBehaviour
 {
-	// Token: 0x06000281 RID: 641 RVA: 0x0000717B File Offset: 0x0000537B
 	private void \u02B9\u02B7\u02BB\u02B7\u02BF\u02B6\u02BE\u02B5\u02C1\u02B9\u02BF(List<ColorSettings> \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5)
 	{
 		this.<\u02B8\u02BF\u02B5\u02B2\u02B6\u02B2\u02B3\u02C0\u02C0\u02C1\u02BA>k__BackingField = \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5;
 	}
 
-	// Token: 0x17000021 RID: 33
-	// (get) Token: 0x06000282 RID: 642 RVA: 0x00007184 File Offset: 0x00005384
-	// (set) Token: 0x06000293 RID: 659 RVA: 0x0000717B File Offset: 0x0000537B
 	public List<ColorSettings> \u02BB\u02BF\u02BE\u02B8\u02B2\u02B7\u02BB\u02C0\u02BE\u02B2\u02B2 { get; private set; }
 
-	// Token: 0x06000283 RID: 643 RVA: 0x0000718C File Offset: 0x0000538C
 	private void \u02BB\u02BF\u02B6\u02B4\u02B4\u02B5\u02B9\u02B3\u02B9\u02B6\u02BD(List<string> \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5)
 	{
 		this.<\u02B8\u02BD\u02B8\u02BB\u02B5\u02B7\u02B8\u02B6\u02C1\u02B7\u02B5>k__BackingField = \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5;
 	}
 
-	// Token: 0x06000284 RID: 644 RVA: 0x0000718C File Offset: 0x0000538C
 	private void \u02BB\u02BB\u02B4\u02B5\u02BB\u02C1\u02C1\u02C0\u02B7\u02B5\u02B4(List<string> \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5)
 	{
 		this.<\u02B8\u02BD\u02B8\u02BB\u02B5\u02B7\u02B8\u02B6\u02C1\u02B7\u02B5>k__BackingField = \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5;
 	}
 
-	// Token: 0x06000285 RID: 645 RVA: 0x00025D24 File Offset: 0x00023F24
 	public void \u02B5\u02B3\u02BB\u02BF\u02B8\u02BB\u02B7\u02C0\u02C1\u02B6\u02BC()
 	{
 		foreach (string text in Directory.EnumerateFiles(this.\u02C0\u02BF\u02BD\u02B2\u02B5\u02BA\u02C1\u02C1\u02BD\u02C0\u02BB, "*.ini", SearchOption.AllDirectories))
@@ -51,24 +43,18 @@ public class ColorManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x17000022 RID: 34
-	// (get) Token: 0x06000286 RID: 646 RVA: 0x00007195 File Offset: 0x00005395
-	// (set) Token: 0x06000296 RID: 662 RVA: 0x0000718C File Offset: 0x0000538C
 	public List<string> \u02B8\u02B7\u02B3\u02BA\u02BB\u02BC\u02B3\u02B9\u02BF\u02BF\u02BD { get; private set; }
 
-	// Token: 0x06000287 RID: 647 RVA: 0x0000717B File Offset: 0x0000537B
 	private void \u02B7\u02C1\u02B5\u02C1\u02B9\u02B5\u02B7\u02BC\u02BC\u02BF\u02B3(List<ColorSettings> \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5)
 	{
 		this.<\u02B8\u02BF\u02B5\u02B2\u02B6\u02B2\u02B3\u02C0\u02C0\u02C1\u02BA>k__BackingField = \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5;
 	}
 
-	// Token: 0x06000288 RID: 648 RVA: 0x00007195 File Offset: 0x00005395
 	public List<string> \u02C0\u02C1\u02B7\u02BF\u02B8\u02B9\u02B8\u02BC\u02BD\u02C1\u02BC()
 	{
 		return this.<\u02B8\u02BD\u02B8\u02BB\u02B5\u02B7\u02B8\u02B6\u02C1\u02B7\u02B5>k__BackingField;
 	}
 
-	// Token: 0x06000289 RID: 649 RVA: 0x00025E14 File Offset: 0x00024014
 	public void \u02C1\u02BC\u02BE\u02BC\u02B7\u02BA\u02BF\u02B5\u02B5\u02B2\u02B2()
 	{
 		foreach (string text in Directory.EnumerateFiles(this.\u02C0\u02BF\u02BD\u02B2\u02B5\u02BA\u02C1\u02C1\u02BD\u02C0\u02BB, "Bad Argument", SearchOption.AllDirectories))
@@ -89,13 +75,11 @@ public class ColorManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x0600028A RID: 650 RVA: 0x00007184 File Offset: 0x00005384
 	public List<ColorSettings> \u02BC\u02BA\u02B7\u02B7\u02BE\u02B3\u02B5\u02C1\u02B5\u02B6\u02C0()
 	{
 		return this.<\u02B8\u02BF\u02B5\u02B2\u02B6\u02B2\u02B3\u02C0\u02C0\u02C1\u02BA>k__BackingField;
 	}
 
-	// Token: 0x0600028B RID: 651 RVA: 0x00025F04 File Offset: 0x00024104
 	public int \u02C0\u02BC\u02BE\u02C0\u02B7\u02B5\u02C0\u02B7\u02BA\u02B8\u02C1(string \u02BF\u02B4\u02C1\u02BC\u02BC\u02B2\u02BC\u02BB\u02BA\u02B2\u02B6)
 	{
 		int num = -1;
@@ -110,13 +94,11 @@ public class ColorManager : MonoBehaviour
 		return num;
 	}
 
-	// Token: 0x0600028C RID: 652 RVA: 0x0000718C File Offset: 0x0000538C
 	private void \u02BE\u02B6\u02B3\u02B2\u02BF\u02C1\u02B9\u02B8\u02C0\u02B2\u02BE(List<string> \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5)
 	{
 		this.<\u02B8\u02BD\u02B8\u02BB\u02B5\u02B7\u02B8\u02B6\u02C1\u02B7\u02B5>k__BackingField = \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5;
 	}
 
-	// Token: 0x0600028D RID: 653 RVA: 0x00025F44 File Offset: 0x00024144
 	public int \u02BB\u02B8\u02B6\u02BA\u02B4\u02BC\u02BB\u02B3\u02C0\u02B5\u02BF(string \u02BF\u02B4\u02C1\u02BC\u02BC\u02B2\u02BC\u02BB\u02BA\u02B2\u02B6)
 	{
 		int num = -1;
@@ -131,19 +113,16 @@ public class ColorManager : MonoBehaviour
 		return num;
 	}
 
-	// Token: 0x0600028E RID: 654 RVA: 0x00007195 File Offset: 0x00005395
 	public List<string> \u02B8\u02B7\u02BF\u02C1\u02B2\u02B8\u02B6\u02B4\u02B9\u02BF\u02BB()
 	{
 		return this.<\u02B8\u02BD\u02B8\u02BB\u02B5\u02B7\u02B8\u02B6\u02C1\u02B7\u02B5>k__BackingField;
 	}
 
-	// Token: 0x0600028F RID: 655 RVA: 0x00007184 File Offset: 0x00005384
 	public List<ColorSettings> \u02BC\u02BB\u02B9\u02BF\u02B7\u02C1\u02B4\u02BD\u02B3\u02B2\u02BA()
 	{
 		return this.<\u02B8\u02BF\u02B5\u02B2\u02B6\u02B2\u02B3\u02C0\u02C0\u02C1\u02BA>k__BackingField;
 	}
 
-	// Token: 0x06000290 RID: 656 RVA: 0x00025F84 File Offset: 0x00024184
 	public ColorSettings \u02B8\u02B6\u02BC\u02BF\u02C1\u02BC\u02C1\u02C1\u02B6\u02BD\u02B9(string \u02BF\u02B4\u02C1\u02BC\u02BC\u02B2\u02BC\u02BB\u02BA\u02B2\u02B6)
 	{
 		if (\u02BF\u02B4\u02C1\u02BC\u02BC\u02B2\u02BC\u02BB\u02BA\u02B2\u02B6 == "{0:N0}")
@@ -158,7 +137,6 @@ public class ColorManager : MonoBehaviour
 		return this.\u02C1\u02B7\u02C0\u02B3\u02BF\u02B2\u02BF\u02C0\u02B5\u02C1\u02B4()[num];
 	}
 
-	// Token: 0x06000291 RID: 657 RVA: 0x00025FC8 File Offset: 0x000241C8
 	public void \u02B3\u02B2\u02BD\u02B6\u02BA\u02B3\u02B2\u02B4\u02B7\u02BF\u02BA()
 	{
 		this.\u02C0\u02BF\u02BD\u02B2\u02B5\u02BA\u02C1\u02C1\u02BD\u02C0\u02BB = Path.Combine(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8, "GameColors_");
@@ -201,7 +179,6 @@ public class ColorManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000292 RID: 658 RVA: 0x000261A0 File Offset: 0x000243A0
 	public ColorSettings \u02C0\u02BB\u02B2\u02B6\u02B4\u02B3\u02BF\u02B2\u02B5\u02B8\u02BA(string \u02BF\u02B4\u02C1\u02BC\u02BC\u02B2\u02BC\u02BB\u02BA\u02B2\u02B6)
 	{
 		if (\u02BF\u02B4\u02C1\u02BC\u02BC\u02B2\u02BC\u02BB\u02BA\u02B2\u02B6 == "Random")
@@ -216,7 +193,6 @@ public class ColorManager : MonoBehaviour
 		return this.\u02BB\u02BF\u02BE\u02B8\u02B2\u02B7\u02BB\u02C0\u02BE\u02B2\u02B2[num];
 	}
 
-	// Token: 0x06000295 RID: 661 RVA: 0x000261E4 File Offset: 0x000243E4
 	public ColorSettings \u02BE\u02BA\u02B3\u02BC\u02BC\u02B6\u02C0\u02C1\u02B7\u02BE\u02B9(string \u02BF\u02B4\u02C1\u02BC\u02BC\u02B2\u02BC\u02BB\u02BA\u02B2\u02B6)
 	{
 		if (\u02BF\u02B4\u02C1\u02BC\u02BC\u02B2\u02BC\u02BB\u02BA\u02B2\u02B6 == "yyyyMMddHHmmss")
@@ -231,13 +207,11 @@ public class ColorManager : MonoBehaviour
 		return this.\u02BC\u02BB\u02B9\u02BF\u02B7\u02C1\u02B4\u02BD\u02B3\u02B2\u02BA()[num];
 	}
 
-	// Token: 0x06000297 RID: 663 RVA: 0x00007184 File Offset: 0x00005384
 	public List<ColorSettings> \u02C1\u02B7\u02C0\u02B3\u02BF\u02B2\u02BF\u02C0\u02B5\u02C1\u02B4()
 	{
 		return this.<\u02B8\u02BF\u02B5\u02B2\u02B6\u02B2\u02B3\u02C0\u02C0\u02C1\u02BA>k__BackingField;
 	}
 
-	// Token: 0x06000298 RID: 664 RVA: 0x00026228 File Offset: 0x00024428
 	public void \u02B4\u02C0\u02B4\u02B6\u02BC\u02BE\u02BE\u02B8\u02BA\u02BC\u02B7()
 	{
 		this.\u02C0\u02BF\u02BD\u02B2\u02B5\u02BA\u02C1\u02C1\u02BD\u02C0\u02BB = Path.Combine(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8, "Colors");
@@ -280,31 +254,26 @@ public class ColorManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000299 RID: 665 RVA: 0x0000718C File Offset: 0x0000538C
 	private void \u02B9\u02BD\u02B9\u02B4\u02BA\u02B7\u02B8\u02C1\u02C1\u02B7\u02B8(List<string> \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5)
 	{
 		this.<\u02B8\u02BD\u02B8\u02BB\u02B5\u02B7\u02B8\u02B6\u02C1\u02B7\u02B5>k__BackingField = \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5;
 	}
 
-	// Token: 0x0600029A RID: 666 RVA: 0x0000718C File Offset: 0x0000538C
 	private void \u02B5\u02B6\u02B4\u02B2\u02B2\u02B7\u02B9\u02B5\u02BB\u02C0\u02B2(List<string> \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5)
 	{
 		this.<\u02B8\u02BD\u02B8\u02BB\u02B5\u02B7\u02B8\u02B6\u02C1\u02B7\u02B5>k__BackingField = \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5;
 	}
 
-	// Token: 0x0600029B RID: 667 RVA: 0x00007195 File Offset: 0x00005395
 	public List<string> \u02C0\u02BA\u02B8\u02BC\u02B6\u02B7\u02BD\u02B3\u02B4\u02B3\u02BC()
 	{
 		return this.<\u02B8\u02BD\u02B8\u02BB\u02B5\u02B7\u02B8\u02B6\u02C1\u02B7\u02B5>k__BackingField;
 	}
 
-	// Token: 0x0600029C RID: 668 RVA: 0x00007184 File Offset: 0x00005384
 	public List<ColorSettings> \u02B5\u02B6\u02BC\u02BF\u02B8\u02C1\u02B9\u02BE\u02B3\u02C0\u02B9()
 	{
 		return this.<\u02B8\u02BF\u02B5\u02B2\u02B6\u02B2\u02B3\u02C0\u02C0\u02C1\u02BA>k__BackingField;
 	}
 
-	// Token: 0x0600029D RID: 669 RVA: 0x00026400 File Offset: 0x00024600
 	public void \u02BB\u02B4\u02B7\u02B9\u02BD\u02B8\u02B3\u02BA\u02B2\u02BF\u02B8()
 	{
 		this.\u02C0\u02BF\u02BD\u02B2\u02B5\u02BA\u02C1\u02C1\u02BD\u02C0\u02BB = Path.Combine(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8, "Dynamics");
@@ -347,12 +316,9 @@ public class ColorManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x04000182 RID: 386
 	private string \u02C0\u02BF\u02BD\u02B2\u02B5\u02BA\u02C1\u02C1\u02BD\u02C0\u02BB;
 
-	// Token: 0x04000183 RID: 387
 	private ColorSettings \u02B5\u02B9\u02BD\u02C1\u02B5\u02B8\u02B5\u02BD\u02BA\u02B7\u02B3;
 
-	// Token: 0x04000184 RID: 388
 	public string \u02B3\u02B3\u02B2\u02B5\u02BB\u02B3\u02BF\u02C0\u02C1\u02BF\u02C0 = "DefaultColors";
 }

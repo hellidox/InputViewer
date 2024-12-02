@@ -1,12 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace ErrorCorrection
 {
-	// Token: 0x0200036A RID: 874
 	public sealed class Encoder
 	{
-		// Token: 0x06002001 RID: 8193 RVA: 0x000D6E38 File Offset: 0x000D5038
 		public Encoder(int fieldSize, int messageSymbols, int paritySymbols, int fieldGenPoly)
 		{
 			if (fieldSize - 1 != messageSymbols + paritySymbols)
@@ -22,13 +20,8 @@ namespace ErrorCorrection
 			this.modulusResult = new int[paritySymbols];
 		}
 
-		// Token: 0x17000466 RID: 1126
-		// (get) Token: 0x06002002 RID: 8194 RVA: 0x00018BBC File Offset: 0x00016DBC
-		// (set) Token: 0x06002003 RID: 8195 RVA: 0x00018BC4 File Offset: 0x00016DC4
 		public int BlockSize { get; private set; }
 
-		// Token: 0x17000467 RID: 1127
-		// (get) Token: 0x06002004 RID: 8196 RVA: 0x00018BCD File Offset: 0x00016DCD
 		public int MessageSize
 		{
 			get
@@ -37,7 +30,6 @@ namespace ErrorCorrection
 			}
 		}
 
-		// Token: 0x06002005 RID: 8197 RVA: 0x000D6EA4 File Offset: 0x000D50A4
 		private int[] BuildCodeGenPoly()
 		{
 			int num = this.fieldSize - this.messageSymbols - 1;
@@ -58,7 +50,6 @@ namespace ErrorCorrection
 			return array;
 		}
 
-		// Token: 0x06002006 RID: 8198 RVA: 0x000D6F24 File Offset: 0x000D5124
 		public void Encode(int[] message)
 		{
 			int[] array = this.modulusResult;
@@ -88,22 +79,16 @@ namespace ErrorCorrection
 			}
 		}
 
-		// Token: 0x04001919 RID: 6425
 		private readonly int fieldSize;
 
-		// Token: 0x0400191A RID: 6426
 		private readonly int messageSymbols;
 
-		// Token: 0x0400191B RID: 6427
 		private readonly int paritySymbols;
 
-		// Token: 0x0400191C RID: 6428
 		private readonly int[] codeGenPoly;
 
-		// Token: 0x0400191D RID: 6429
 		private readonly int[] modulusResult;
 
-		// Token: 0x0400191E RID: 6430
 		private readonly GaloisField gf;
 	}
 }

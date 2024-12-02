@@ -1,16 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using StrikeCore;
 using StrikeCore.Logging;
 using UnityEngine;
 
-// Token: 0x020001AC RID: 428
 [Serializable]
 public class SongEntry
 {
-	// Token: 0x170001ED RID: 493
-	// (get) Token: 0x060012F1 RID: 4849 RVA: 0x0000FDDE File Offset: 0x0000DFDE
 	public sbyte GuitarCoopIntensity
 	{
 		get
@@ -19,8 +16,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x170001F7 RID: 503
-	// (get) Token: 0x060012F3 RID: 4851 RVA: 0x0000FDFE File Offset: 0x0000DFFE
 	public sbyte GHLRhythmIntensity
 	{
 		get
@@ -29,8 +24,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x170001DF RID: 479
-	// (get) Token: 0x060012F4 RID: 4852 RVA: 0x0000FE08 File Offset: 0x0000E008
 	public bool HasValidName
 	{
 		get
@@ -39,7 +32,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x060012F5 RID: 4853 RVA: 0x0009AB34 File Offset: 0x00098D34
 	public bool \u02BF\u02B3\u02B4\u02BE\u02BD\u02BB\u02B4\u02BD\u02BF\u02B5\u02BD(string \u02B8\u02BA\u02BB\u02B4\u02B5\u02B4\u02B6\u02B6\u02C0\u02B9\u02BF)
 	{
 		try
@@ -141,14 +133,11 @@ public class SongEntry
 		return SongEntry.metadataCache[0] != null;
 	}
 
-	// Token: 0x060012F6 RID: 4854 RVA: 0x0000FE19 File Offset: 0x0000E019
 	public \u02BB\u02BE\u02BC\u02B9\u02B3\u02B2\u02B6\u02B6\u02BB\u02BE\u02B9 \u02B6\u02B7\u02B2\u02C1\u02B9\u02B3\u02B8\u02BC\u02B4\u02BD\u02BB()
 	{
 		return this.\u02C0\u02C0\u02B3\u02BC\u02BC\u02BB\u02C0\u02B4\u02BC\u02BB\u02BF(\u02B5\u02B7\u02B7\u02B8\u02B4\u02B3\u02B3\u02B4\u02BF\u02C1\u02BC.Name);
 	}
 
-	// Token: 0x170001E8 RID: 488
-	// (get) Token: 0x060012F7 RID: 4855 RVA: 0x0000FE22 File Offset: 0x0000E022
 	public string Artist_StrippedTags
 	{
 		get
@@ -157,8 +146,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x170001E5 RID: 485
-	// (get) Token: 0x060012F8 RID: 4856 RVA: 0x0000FE35 File Offset: 0x0000E035
 	public \u02BB\u02BE\u02BC\u02B9\u02B3\u02B2\u02B6\u02B6\u02BB\u02BE\u02B9 Year
 	{
 		get
@@ -167,8 +154,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x170001E3 RID: 483
-	// (get) Token: 0x060012F9 RID: 4857 RVA: 0x0000FE3E File Offset: 0x0000E03E
 	public \u02BB\u02BE\u02BC\u02B9\u02B3\u02B2\u02B6\u02B6\u02BB\u02BE\u02B9 Genre
 	{
 		get
@@ -177,7 +162,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x060012FA RID: 4858 RVA: 0x0000FE47 File Offset: 0x0000E047
 	public sbyte \u02BF\u02B5\u02BD\u02B2\u02B5\u02BE\u02B5\u02B8\u02B4\u02BF\u02BC(Instrument \u02B7\u02BB\u02BA\u02BC\u02B4\u02B6\u02B4\u02B3\u02BD\u02BA\u02BF)
 	{
 		if (\u02B7\u02BB\u02BA\u02BC\u02B4\u02B6\u02B4\u02B3\u02BD\u02BA\u02BF == Instrument.None)
@@ -191,8 +175,6 @@ public class SongEntry
 		return this.intensities[(int)\u02B7\u02BB\u02BA\u02BC\u02B4\u02B6\u02B4\u02B3\u02BD\u02BA\u02BF];
 	}
 
-	// Token: 0x170001DD RID: 477
-	// (get) Token: 0x060012FB RID: 4859 RVA: 0x0000FE6F File Offset: 0x0000E06F
 	public string iniPath
 	{
 		get
@@ -205,8 +187,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x170001DC RID: 476
-	// (get) Token: 0x060012FC RID: 4860 RVA: 0x0000FE90 File Offset: 0x0000E090
 	public bool isMIDIChart
 	{
 		get
@@ -220,8 +200,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x170001F6 RID: 502
-	// (get) Token: 0x060012FD RID: 4861 RVA: 0x0000FEC3 File Offset: 0x0000E0C3
 	public sbyte GHLGuitarCoopIntensity
 	{
 		get
@@ -230,7 +208,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x060012FE RID: 4862 RVA: 0x0009AE1C File Offset: 0x0009901C
 	public bool \u02BC\u02B7\u02B6\u02B4\u02C1\u02BC\u02BA\u02B9\u02BF\u02BD\u02B9(\u02BD\u02BC\u02B2\u02B4\u02B2\u02C0\u02B8\u02BB\u02B8\u02B2\u02B9 \u02BD\u02BD\u02BF\u02BF\u02BE\u02B2\u02B5\u02BD\u02BC\u02B7\u02C0)
 	{
 		this.chartName = \u02BD\u02BD\u02BF\u02BF\u02BE\u02B2\u02B5\u02BD\u02BC\u02B7\u02C0.\u02B3\u02C0\u02C1\u02B3\u02BB\u02BE\u02C1\u02B7\u02BB\u02B6\u02BF;
@@ -263,8 +240,6 @@ public class SongEntry
 		return true;
 	}
 
-	// Token: 0x170001F3 RID: 499
-	// (get) Token: 0x060012FF RID: 4863 RVA: 0x0000FECD File Offset: 0x0000E0CD
 	public sbyte KeysIntensity
 	{
 		get
@@ -273,8 +248,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x170001E9 RID: 489
-	// (get) Token: 0x06001300 RID: 4864 RVA: 0x0000FED6 File Offset: 0x0000E0D6
 	public string Genre_StrippedTags
 	{
 		get
@@ -283,8 +256,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x170001E2 RID: 482
-	// (get) Token: 0x06001301 RID: 4865 RVA: 0x0000FEE9 File Offset: 0x0000E0E9
 	public \u02BB\u02BE\u02BC\u02B9\u02B3\u02B2\u02B6\u02B6\u02BB\u02BE\u02B9 Album
 	{
 		get
@@ -293,7 +264,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x06001302 RID: 4866 RVA: 0x0009AF8C File Offset: 0x0009918C
 	public SongEntry(string \u02BF\u02BB\u02B4\u02B3\u02B6\u02B5\u02BE\u02B8\u02B6\u02BB\u02B9)
 	{
 		FileAttributes attributes = File.GetAttributes(\u02BF\u02BB\u02B4\u02B3\u02B6\u02B5\u02BE\u02B8\u02B6\u02BB\u02B9);
@@ -322,7 +292,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x06001303 RID: 4867 RVA: 0x0009B068 File Offset: 0x00099268
 	public override string ToString()
 	{
 		return string.Concat(new string[]
@@ -335,8 +304,6 @@ public class SongEntry
 		});
 	}
 
-	// Token: 0x170001E6 RID: 486
-	// (get) Token: 0x06001304 RID: 4868 RVA: 0x0000FEF2 File Offset: 0x0000E0F2
 	public \u02BB\u02BE\u02BC\u02B9\u02B3\u02B2\u02B6\u02B6\u02BB\u02BE\u02B9 Playlist
 	{
 		get
@@ -345,7 +312,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x06001305 RID: 4869 RVA: 0x0009B0B8 File Offset: 0x000992B8
 	public SongEntry(BinaryReader \u02C0\u02B8\u02B4\u02BF\u02BB\u02B9\u02BC\u02B7\u02B2\u02C0\u02B8, string \u02BF\u02BB\u02B4\u02B3\u02B6\u02B5\u02BE\u02B8\u02B6\u02BB\u02B9)
 	{
 		this.metadata = new \u02BB\u02BE\u02BC\u02B9\u02B3\u02B2\u02B6\u02B6\u02BB\u02BE\u02B9[7];
@@ -358,8 +324,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x170001EB RID: 491
-	// (get) Token: 0x06001306 RID: 4870 RVA: 0x0000FEFB File Offset: 0x0000E0FB
 	public string Year_Stripped
 	{
 		get
@@ -368,7 +332,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x06001307 RID: 4871 RVA: 0x0009B12C File Offset: 0x0009932C
 	public void \u02C1\u02BF\u02B9\u02B6\u02BD\u02B2\u02BA\u02BB\u02C1\u02BC\u02B8()
 	{
 		\u02B7\u02B8\u02BE\u02B3\u02C1\u02C0\u02B3\u02B5\u02BB\u02BA\u02BE u02B7_u02B8_u02BE_u02B3_u02C1_u02C0_u02B3_u02B5_u02BB_u02BA_u02BE;
@@ -386,8 +349,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x170001DA RID: 474
-	// (get) Token: 0x06001308 RID: 4872 RVA: 0x0000FF08 File Offset: 0x0000E108
 	public string checksumString
 	{
 		get
@@ -400,7 +361,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x06001309 RID: 4873 RVA: 0x0009B1AC File Offset: 0x000993AC
 	public void \u02B7\u02B2\u02BF\u02BE\u02B7\u02BF\u02BD\u02BD\u02B7\u02B4\u02B7(bool \u02B4\u02BF\u02BB\u02C1\u02BA\u02BC\u02BD\u02BE\u02BA\u02B8\u02BA)
 	{
 		INIParser iniparser = new INIParser();
@@ -476,7 +436,6 @@ public class SongEntry
 		\u02C1\u02B4\u02BB\u02B9\u02B5\u02B6\u02B2\u02BA\u02B8\u02C1\u02BE.\u02BC\u02BE\u02BA\u02BB\u02B4\u02BB\u02BE\u02BA\u02B3\u02BD\u02C0(this.iniPath);
 	}
 
-	// Token: 0x0600130A RID: 4874 RVA: 0x0009B5DC File Offset: 0x000997DC
 	public \u02B7\u02BD\u02BB\u02BB\u02BF\u02B5\u02C0\u02C1\u02BD\u02B3\u02B6 \u02BF\u02B2\u02B7\u02B9\u02BF\u02B3\u02BE\u02B3\u02B7\u02C0\u02BE(bool \u02BB\u02C0\u02BD\u02BF\u02BC\u02B9\u02B3\u02BC\u02B5\u02C1\u02C1)
 	{
 		this.isTypeCached = false;
@@ -498,7 +457,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x0600130B RID: 4875 RVA: 0x0000FF2F File Offset: 0x0000E12F
 	public void \u02C1\u02B3\u02BD\u02B4\u02BC\u02B4\u02BD\u02B9\u02B4\u02B2\u02BC(byte[] \u02B5\u02B2\u02BE\u02B9\u02B9\u02C1\u02BF\u02B5\u02BA\u02C0\u02B8)
 	{
 		SongHash songHash = this.checksum;
@@ -506,8 +464,6 @@ public class SongEntry
 		this.scores.\u02B7\u02C1\u02BF\u02B4\u02B8\u02B6\u02B3\u02B8\u02B2\u02BB\u02B2 = this.checksum;
 	}
 
-	// Token: 0x170001F4 RID: 500
-	// (get) Token: 0x0600130C RID: 4876 RVA: 0x0000FF55 File Offset: 0x0000E155
 	public sbyte GHLGuitarIntensity
 	{
 		get
@@ -516,7 +472,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x0600130D RID: 4877 RVA: 0x0009B648 File Offset: 0x00099848
 	private void \u02B2\u02BF\u02B7\u02BA\u02B5\u02BB\u02BA\u02C1\u02B3\u02BD\u02C0()
 	{
 		this.intensities = new sbyte[12];
@@ -526,13 +481,11 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x0600130E RID: 4878 RVA: 0x0000FF5E File Offset: 0x0000E15E
 	public void \u02BF\u02B8\u02B4\u02BB\u02B8\u02C1\u02BE\u02C1\u02BB\u02BB\u02B8()
 	{
 		this.checksumStringCached = null;
 	}
 
-	// Token: 0x0600130F RID: 4879 RVA: 0x0009B680 File Offset: 0x00099880
 	public bool \u02B6\u02BB\u02BB\u02BD\u02BC\u02B2\u02B7\u02C0\u02BE\u02BD\u02B7(\u02C0\u02B5\u02B3\u02B2\u02BA\u02BD\u02B5\u02C1\u02B9\u02BA\u02BC \u02BC\u02BC\u02C0\u02B8\u02C0\u02BB\u02C0\u02BF\u02BE\u02B5\u02B8)
 	{
 		\u02C0\u02B5\u02B3\u02B2\u02BA\u02BD\u02B5\u02C1\u02B9\u02BA\u02BC u02C0_u02B5_u02B3_u02B2_u02BA_u02BD_u02B5_u02C1_u02B9_u02BA_u02BC = this.scores.\u02BC\u02BB\u02B9\u02B5\u02B5\u02BB\u02B8\u02B9\u02B9\u02BC\u02BC(\u02BC\u02BC\u02C0\u02B8\u02C0\u02BB\u02C0\u02BF\u02BE\u02B5\u02B8.\u02B7\u02BB\u02BA\u02BC\u02B4\u02B6\u02B4\u02B3\u02BD\u02BA\u02BF);
@@ -542,7 +495,6 @@ public class SongEntry
 		return \u02BC\u02BC\u02C0\u02B8\u02C0\u02BB\u02C0\u02BF\u02BE\u02B5\u02B8.\u02BC\u02BC\u02C1\u02B4\u02BF\u02B8\u02BF\u02B2\u02BA\u02B3\u02B5 > u02C0_u02B5_u02B3_u02B2_u02BA_u02BD_u02B5_u02C1_u02B9_u02BA_u02BC.\u02BC\u02BC\u02C1\u02B4\u02BF\u02B8\u02BF\u02B2\u02BA\u02B3\u02B5;
 	}
 
-	// Token: 0x06001310 RID: 4880 RVA: 0x0009B6C4 File Offset: 0x000998C4
 	public string \u02B8\u02BA\u02BB\u02B3\u02BF\u02BE\u02C0\u02BE\u02B9\u02BF\u02BD()
 	{
 		if (this.isEnc)
@@ -558,8 +510,6 @@ public class SongEntry
 		return "";
 	}
 
-	// Token: 0x170001E0 RID: 480
-	// (get) Token: 0x06001311 RID: 4881 RVA: 0x0000FE19 File Offset: 0x0000E019
 	public \u02BB\u02BE\u02BC\u02B9\u02B3\u02B2\u02B6\u02B6\u02BB\u02BE\u02B9 Name
 	{
 		get
@@ -568,7 +518,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x06001312 RID: 4882 RVA: 0x0009B724 File Offset: 0x00099924
 	public \u02B7\u02BD\u02BB\u02BB\u02BF\u02B5\u02C0\u02C1\u02BD\u02B3\u02B6 \u02BF\u02B2\u02B7\u02B9\u02BF\u02B3\u02BE\u02B3\u02B7\u02C0\u02BE()
 	{
 		this.isTypeCached = false;
@@ -603,8 +552,6 @@ public class SongEntry
 		return new \u02B7\u02BD\u02BB\u02BB\u02BF\u02B5\u02C0\u02C1\u02BD\u02B3\u02B6(array, false);
 	}
 
-	// Token: 0x170001E1 RID: 481
-	// (get) Token: 0x06001313 RID: 4883 RVA: 0x0000FF67 File Offset: 0x0000E167
 	public \u02BB\u02BE\u02BC\u02B9\u02B3\u02B2\u02B6\u02B6\u02BB\u02BE\u02B9 Artist
 	{
 		get
@@ -613,7 +560,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x06001314 RID: 4884 RVA: 0x0009B7F0 File Offset: 0x000999F0
 	public bool \u02BF\u02C1\u02B6\u02B5\u02B6\u02B2\u02BD\u02B5\u02B2\u02C0\u02BA(string \u02B8\u02BD\u02B6\u02B5\u02C1\u02B3\u02B6\u02B2\u02BD\u02B5\u02B7)
 	{
 		bool flag;
@@ -679,8 +625,6 @@ public class SongEntry
 		return flag;
 	}
 
-	// Token: 0x170001E4 RID: 484
-	// (get) Token: 0x06001315 RID: 4885 RVA: 0x0000FF70 File Offset: 0x0000E170
 	public \u02BB\u02BE\u02BC\u02B9\u02B3\u02B2\u02B6\u02B6\u02BB\u02BE\u02B9 Charter
 	{
 		get
@@ -689,8 +633,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x170001EC RID: 492
-	// (get) Token: 0x06001316 RID: 4886 RVA: 0x0000FF79 File Offset: 0x0000E179
 	public sbyte GuitarIntensity
 	{
 		get
@@ -699,20 +641,16 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x06001317 RID: 4887 RVA: 0x0000FF82 File Offset: 0x0000E182
 	public \u02BB\u02BE\u02BC\u02B9\u02B3\u02B2\u02B6\u02B6\u02BB\u02BE\u02B9 \u02C0\u02C0\u02B3\u02BC\u02BC\u02BB\u02C0\u02B4\u02BC\u02BB\u02BF(\u02B5\u02B7\u02B7\u02B8\u02B4\u02B3\u02B3\u02B4\u02BF\u02C1\u02BC \u02C0\u02B2\u02BA\u02B6\u02BC\u02C0\u02BC\u02BE\u02B6\u02B2\u02B5)
 	{
 		return this.metadata[(int)\u02C0\u02B2\u02BA\u02B6\u02BC\u02C0\u02BC\u02BE\u02B6\u02B2\u02B5];
 	}
 
-	// Token: 0x06001318 RID: 4888 RVA: 0x0000FF79 File Offset: 0x0000E179
 	public sbyte \u02BD\u02B6\u02BB\u02B4\u02BF\u02B5\u02B7\u02B4\u02B6\u02BF\u02BF()
 	{
 		return this.\u02BF\u02B5\u02BD\u02B2\u02B5\u02BE\u02B5\u02B8\u02B4\u02BF\u02BC(Instrument.Guitar);
 	}
 
-	// Token: 0x170001EA RID: 490
-	// (get) Token: 0x06001319 RID: 4889 RVA: 0x0000FF8C File Offset: 0x0000E18C
 	public string Charter_StrippedTags
 	{
 		get
@@ -721,7 +659,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x0600131A RID: 4890 RVA: 0x0009BBE4 File Offset: 0x00099DE4
 	public void \u02C0\u02B3\u02B2\u02C1\u02B7\u02BB\u02BA\u02BF\u02B8\u02B5\u02B3(BinaryWriter \u02BA\u02BB\u02C0\u02C0\u02BF\u02BE\u02B2\u02B3\u02B7\u02BB\u02BC)
 	{
 		\u02BA\u02BB\u02C0\u02C0\u02BF\u02BE\u02B2\u02B3\u02B7\u02BB\u02BC.Write(this.chartName);
@@ -759,8 +696,6 @@ public class SongEntry
 		\u02BA\u02BB\u02C0\u02C0\u02BF\u02BE\u02B2\u02B3\u02B7\u02BB\u02BC.Write(this.checksum.ToArray());
 	}
 
-	// Token: 0x170001E7 RID: 487
-	// (get) Token: 0x0600131B RID: 4891 RVA: 0x0000FF9F File Offset: 0x0000E19F
 	public string Name_StrippedTags
 	{
 		get
@@ -769,8 +704,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x170001F5 RID: 501
-	// (get) Token: 0x0600131C RID: 4892 RVA: 0x0000FFB2 File Offset: 0x0000E1B2
 	public sbyte GHLBassIntensity
 	{
 		get
@@ -779,14 +712,11 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x0600131D RID: 4893 RVA: 0x0000FF67 File Offset: 0x0000E167
 	public \u02BB\u02BE\u02BC\u02B9\u02B3\u02B2\u02B6\u02B6\u02BB\u02BE\u02B9 \u02B9\u02BA\u02BE\u02BC\u02BB\u02B2\u02B2\u02B8\u02B8\u02BA\u02BB()
 	{
 		return this.\u02C0\u02C0\u02B3\u02BC\u02BC\u02BB\u02C0\u02B4\u02BC\u02BB\u02BF(\u02B5\u02B7\u02B7\u02B8\u02B4\u02B3\u02B3\u02B4\u02BF\u02C1\u02BC.Artist);
 	}
 
-	// Token: 0x170001EE RID: 494
-	// (get) Token: 0x0600131E RID: 4894 RVA: 0x0000FFBB File Offset: 0x0000E1BB
 	public sbyte BassIntensity
 	{
 		get
@@ -795,7 +725,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x0600131F RID: 4895 RVA: 0x0009BD84 File Offset: 0x00099F84
 	public void \u02BE\u02BB\u02B9\u02B6\u02C1\u02BA\u02B7\u02B8\u02B2\u02C0\u02C0(BinaryReader \u02C0\u02B8\u02B4\u02BF\u02BB\u02B9\u02BC\u02B7\u02B2\u02C0\u02B8)
 	{
 		this.chartName = \u02C0\u02B8\u02B4\u02BF\u02BB\u02B9\u02BC\u02B7\u02B2\u02C0\u02B8.ReadString();
@@ -836,8 +765,6 @@ public class SongEntry
 		this.\u02BA\u02BE\u02BE\u02B6\u02B3\u02BA\u02B4\u02C0\u02BC\u02BD\u02BE(\u02C0\u02B8\u02B4\u02BF\u02BB\u02B9\u02BC\u02B7\u02B2\u02C0\u02B8.ReadBytes(16));
 	}
 
-	// Token: 0x170001F2 RID: 498
-	// (get) Token: 0x06001320 RID: 4896 RVA: 0x0000FFC4 File Offset: 0x0000E1C4
 	public sbyte BandIntensity
 	{
 		get
@@ -846,8 +773,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x170001F1 RID: 497
-	// (get) Token: 0x06001321 RID: 4897 RVA: 0x0000FFCD File Offset: 0x0000E1CD
 	public sbyte ProDrumsIntensity
 	{
 		get
@@ -856,14 +781,11 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x06001322 RID: 4898 RVA: 0x0000FFD7 File Offset: 0x0000E1D7
 	public ushort \u02C0\u02B5\u02B6\u02BC\u02B2\u02B7\u02B3\u02BB\u02C1\u02BB\u02B3()
 	{
 		return this.scores.\u02B9\u02B2\u02B7\u02B5\u02B2\u02BF\u02B4\u02B2\u02BF\u02BF\u02BD;
 	}
 
-	// Token: 0x170001DE RID: 478
-	// (get) Token: 0x06001323 RID: 4899 RVA: 0x0000FFE4 File Offset: 0x0000E1E4
 	public string chartPath
 	{
 		get
@@ -876,7 +798,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x06001324 RID: 4900 RVA: 0x0009BFA0 File Offset: 0x0009A1A0
 	public void \u02B9\u02BC\u02C1\u02BC\u02B8\u02B5\u02BD\u02BE\u02B5\u02B4\u02BD()
 	{
 		this.metadata = new \u02BB\u02BE\u02BC\u02B9\u02B3\u02B2\u02B6\u02B6\u02BB\u02BE\u02B9[7];
@@ -907,7 +828,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x06001325 RID: 4901 RVA: 0x00010006 File Offset: 0x0000E206
 	public void \u02BA\u02BE\u02BE\u02B6\u02B3\u02BA\u02B4\u02C0\u02BC\u02BD\u02BE(byte[] \u02B7\u02C1\u02BF\u02B4\u02B8\u02B6\u02B3\u02B8\u02B2\u02BB\u02B2)
 	{
 		SongHash songHash = this.checksum;
@@ -915,8 +835,6 @@ public class SongEntry
 		this.scores.\u02B7\u02C1\u02BF\u02B4\u02B8\u02B6\u02B3\u02B8\u02B2\u02BB\u02B2 = this.checksum;
 	}
 
-	// Token: 0x170001DB RID: 475
-	// (get) Token: 0x06001326 RID: 4902 RVA: 0x0000FFD7 File Offset: 0x0000E1D7
 	public ushort playCount
 	{
 		get
@@ -925,7 +843,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x06001327 RID: 4903 RVA: 0x0009C074 File Offset: 0x0009A274
 	private void \u02B7\u02BE\u02C1\u02BC\u02B2\u02BF\u02BE\u02BB\u02B4\u02B9\u02C0()
 	{
 		SongEntry.metadataCache[6] = null;
@@ -956,8 +873,6 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x170001F0 RID: 496
-	// (get) Token: 0x06001328 RID: 4904 RVA: 0x0001002C File Offset: 0x0000E22C
 	public sbyte DrumsIntensity
 	{
 		get
@@ -966,14 +881,11 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x06001329 RID: 4905 RVA: 0x0000FE19 File Offset: 0x0000E019
 	public \u02BB\u02BE\u02BC\u02B9\u02B3\u02B2\u02B6\u02B6\u02BB\u02BE\u02B9 \u02B2\u02BB\u02BF\u02B7\u02BE\u02C0\u02B5\u02BE\u02BF\u02B9\u02B4()
 	{
 		return this.\u02C0\u02C0\u02B3\u02BC\u02BC\u02BB\u02C0\u02B4\u02BC\u02BB\u02BF(\u02B5\u02B7\u02B7\u02B8\u02B4\u02B3\u02B3\u02B4\u02BF\u02C1\u02BC.Name);
 	}
 
-	// Token: 0x170001EF RID: 495
-	// (get) Token: 0x0600132A RID: 4906 RVA: 0x00010035 File Offset: 0x0000E235
 	public sbyte RhythmIntensity
 	{
 		get
@@ -982,109 +894,78 @@ public class SongEntry
 		}
 	}
 
-	// Token: 0x04000E2F RID: 3631
 	[NonSerialized]
 	public \u02B7\u02B8\u02BE\u02B3\u02C1\u02C0\u02B3\u02B5\u02BB\u02BA\u02BE songEnc;
 
-	// Token: 0x04000E30 RID: 3632
 	[NonSerialized]
 	public \u02B5\u02B4\u02BD\u02BE\u02B5\u02BA\u02BA\u02B5\u02B2\u02B9\u02B3 charts;
 
-	// Token: 0x04000E31 RID: 3633
 	[NonSerialized]
 	public string iconName = "";
 
-	// Token: 0x04000E32 RID: 3634
 	[NonSerialized]
 	public string folderPath;
 
-	// Token: 0x04000E33 RID: 3635
 	[NonSerialized]
 	public SongHash checksum;
 
-	// Token: 0x04000E34 RID: 3636
 	private string checksumStringCached;
 
-	// Token: 0x04000E35 RID: 3637
 	private static Dictionary<string, \u02B7\u02B8\u02BE\u02B3\u02C1\u02C0\u02B3\u02B5\u02BB\u02BA\u02BE> containers = new Dictionary<string, \u02B7\u02B8\u02BE\u02B3\u02C1\u02C0\u02B3\u02B5\u02BB\u02BA\u02BE>();
 
-	// Token: 0x04000E36 RID: 3638
 	[NonSerialized]
 	public short playlistTrack;
 
-	// Token: 0x04000E37 RID: 3639
 	[NonSerialized]
 	public short albumTrack;
 
-	// Token: 0x04000E38 RID: 3640
 	[NonSerialized]
 	public int previewStart;
 
-	// Token: 0x04000E39 RID: 3641
 	private bool isMidiChartCache;
 
-	// Token: 0x04000E3A RID: 3642
 	private bool isTypeCached;
 
-	// Token: 0x04000E3B RID: 3643
 	[NonSerialized]
 	public \u02BD\u02B5\u02B3\u02B2\u02BA\u02C0\u02C0\u02B7\u02B5\u02B8\u02C0 scores = new \u02BD\u02B5\u02B3\u02B2\u02BA\u02C0\u02C0\u02B7\u02B5\u02B8\u02C0();
 
-	// Token: 0x04000E3C RID: 3644
 	[NonSerialized]
 	public DateTime dateAdded;
 
-	// Token: 0x04000E3D RID: 3645
 	[NonSerialized]
 	public bool videoBackground;
 
-	// Token: 0x04000E3E RID: 3646
 	[NonSerialized]
 	public bool isAvailableOnline = true;
 
-	// Token: 0x04000E3F RID: 3647
 	public string chartName;
 
-	// Token: 0x04000E40 RID: 3648
 	public int songLength;
 
-	// Token: 0x04000E41 RID: 3649
 	private \u02BB\u02BE\u02BC\u02B9\u02B3\u02B2\u02B6\u02B6\u02BB\u02BE\u02B9[] metadata;
 
-	// Token: 0x04000E42 RID: 3650
 	private static string[] metadataCache = new string[7];
 
-	// Token: 0x04000E43 RID: 3651
 	public bool lyrics;
 
-	// Token: 0x04000E44 RID: 3652
 	public bool modchart;
 
-	// Token: 0x04000E45 RID: 3653
 	public bool forceProDrums;
 
-	// Token: 0x04000E46 RID: 3654
 	public bool forceFiveLane;
 
-	// Token: 0x04000E47 RID: 3655
 	public string topLevelPlaylist = "";
 
-	// Token: 0x04000E48 RID: 3656
 	public string subPlaylist = "";
 
-	// Token: 0x04000E49 RID: 3657
 	private sbyte[] intensities;
 
-	// Token: 0x04000E4A RID: 3658
 	private const int INTENSITY_COUNT = 12;
 
-	// Token: 0x04000E4B RID: 3659
 	[NonSerialized]
 	public bool metadataLoaded;
 
-	// Token: 0x04000E4C RID: 3660
 	public bool filtered;
 
-	// Token: 0x04000E4D RID: 3661
 	public bool isEnc;
 }

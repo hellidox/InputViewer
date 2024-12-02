@@ -1,11 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Token: 0x0200013E RID: 318
 public class DrumsNoteRenderer : BaseNoteRenderer
 {
-	// Token: 0x06000DEB RID: 3563 RVA: 0x000724AC File Offset: 0x000706AC
 	protected virtual Color \u02B9\u02BC\u02BC\u02B9\u02B4\u02BA\u02B2\u02BD\u02B7\u02B9\u02B3(ushort \u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB)
 	{
 		if (this.\u02BD\u02BA\u02B8\u02BC\u02BF\u02B9\u02C1\u02C0\u02BC\u02B4\u02BE)
@@ -54,7 +52,6 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		return Color.white;
 	}
 
-	// Token: 0x06000DEC RID: 3564 RVA: 0x0007256C File Offset: 0x0007076C
 	protected int \u02BA\u02B8\u02B7\u02B5\u02B8\u02BF\u02BC\u02BA\u02BA\u02C1\u02BB(ushort \u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB)
 	{
 		if (\u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB <= 51)
@@ -104,13 +101,11 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		return 0;
 	}
 
-	// Token: 0x06000DED RID: 3565 RVA: 0x0000D8A7 File Offset: 0x0000BAA7
 	protected override void \u02BE\u02BF\u02B4\u02B6\u02BF\u02B3\u02C0\u02BA\u02C0\u02B9\u02BA()
 	{
 		this.\u02BD\u02BA\u02B8\u02BC\u02BF\u02B9\u02C1\u02C0\u02BC\u02B4\u02BE = true;
 	}
 
-	// Token: 0x06000DEE RID: 3566 RVA: 0x000725D0 File Offset: 0x000707D0
 	protected int \u02B5\u02B8\u02B6\u02C0\u02C1\u02C0\u02B7\u02B4\u02BE\u02BB\u02C0(ushort \u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB)
 	{
 		if (\u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB <= 88)
@@ -160,7 +155,6 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		return 0;
 	}
 
-	// Token: 0x06000DEF RID: 3567 RVA: 0x00072634 File Offset: 0x00070834
 	protected override int \u02C1\u02B7\u02C0\u02B7\u02B9\u02B2\u02B2\u02BF\u02BC\u02C0\u02BF(ushort \u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB)
 	{
 		if (this.\u02BD\u02BA\u02B8\u02BC\u02BF\u02B9\u02C1\u02C0\u02BC\u02B4\u02BE)
@@ -214,7 +208,6 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		return 2;
 	}
 
-	// Token: 0x06000DF0 RID: 3568 RVA: 0x000726A8 File Offset: 0x000708A8
 	protected Color \u02BD\u02B8\u02B6\u02C1\u02B8\u02B2\u02B3\u02BC\u02BF\u02B5\u02BB(ushort \u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB)
 	{
 		if (\u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB <= 85)
@@ -259,7 +252,6 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		return Color.white;
 	}
 
-	// Token: 0x06000DF1 RID: 3569 RVA: 0x00072758 File Offset: 0x00070958
 	protected Color \u02B5\u02BB\u02BF\u02BD\u02BF\u02B9\u02B3\u02B8\u02B9\u02B9\u02BB(ushort \u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB)
 	{
 		if (\u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB <= 16)
@@ -304,7 +296,6 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		return Color.white;
 	}
 
-	// Token: 0x06000DF2 RID: 3570 RVA: 0x00072808 File Offset: 0x00070A08
 	protected virtual void \u02C0\u02B5\u02BC\u02B3\u02B3\u02B7\u02B9\u02B2\u02C0\u02BC\u02BB()
 	{
 		if (this.basePlayer.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0 == null)
@@ -396,7 +387,6 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		BaseNoteRenderer.\u02B3\u02B3\u02C1\u02B8\u02BA\u02B8\u02BF\u02BB\u02B2\u02BD\u02BC(this.\u02B3\u02B5\u02B3\u02B4\u02BF\u02BF\u02BD\u02BE\u02C1\u02BF\u02B3, num5);
 	}
 
-	// Token: 0x06000DF3 RID: 3571 RVA: 0x00072B20 File Offset: 0x00070D20
 	protected int \u02C1\u02B8\u02B7\u02BB\u02BC\u02B5\u02B4\u02B5\u02C1\u02B4\u02BF(ushort \u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB)
 	{
 		if (\u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB <= 16)
@@ -446,7 +436,6 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		return 1;
 	}
 
-	// Token: 0x06000DF4 RID: 3572 RVA: 0x00072B84 File Offset: 0x00070D84
 	protected virtual int \u02C0\u02BC\u02C0\u02B2\u02B5\u02C0\u02BE\u02BF\u02C1\u02B3\u02BD(ushort \u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB)
 	{
 		if (this.\u02BD\u02BA\u02B8\u02BC\u02BF\u02B9\u02C1\u02C0\u02BC\u02B4\u02BE)
@@ -500,7 +489,6 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		return 4;
 	}
 
-	// Token: 0x06000DF5 RID: 3573 RVA: 0x00072BF8 File Offset: 0x00070DF8
 	protected int \u02BA\u02BD\u02BB\u02B6\u02B9\u02C0\u02B5\u02BE\u02B2\u02BA\u02B6(ushort \u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB)
 	{
 		if ((int)\u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB <= -38)
@@ -550,7 +538,6 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		return 1;
 	}
 
-	// Token: 0x06000DF6 RID: 3574 RVA: 0x00072C5C File Offset: 0x00070E5C
 	protected override Color \u02C1\u02B7\u02BF\u02BF\u02B2\u02BD\u02BD\u02B8\u02C1\u02B2\u02C0(ushort \u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB)
 	{
 		if (this.\u02BD\u02BA\u02B8\u02BC\u02BF\u02B9\u02C1\u02C0\u02BC\u02B4\u02BE)
@@ -599,13 +586,11 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		return Color.white;
 	}
 
-	// Token: 0x06000DF7 RID: 3575 RVA: 0x0000D8B0 File Offset: 0x0000BAB0
 	protected override void Start()
 	{
 		base.Start();
 	}
 
-	// Token: 0x06000DF8 RID: 3576 RVA: 0x00072D1C File Offset: 0x00070F1C
 	protected virtual void \u02C1\u02B5\u02BC\u02BD\u02B7\u02B7\u02B2\u02C1\u02BC\u02B7\u02B6()
 	{
 		base.\u02BE\u02BD\u02BB\u02B8\u02B5\u02BF\u02BE\u02B6\u02BD\u02B9\u02BD();
@@ -619,7 +604,6 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		}
 	}
 
-	// Token: 0x06000DF9 RID: 3577 RVA: 0x0000D8B8 File Offset: 0x0000BAB8
 	protected virtual Vector3 \u02BC\u02B6\u02B7\u02C0\u02C0\u02B4\u02BB\u02B4\u02C1\u02BB\u02C0(int \u02B8\u02BD\u02BA\u02BF\u02BC\u02BB\u02BF\u02BA\u02B8\u02BC\u02BD, float \u02B4\u02BE\u02B7\u02BD\u02B3\u02C0\u02B3\u02BA\u02BC\u02B7\u02BC)
 	{
 		if (\u02B8\u02BD\u02BA\u02BF\u02BC\u02BB\u02BF\u02BA\u02B8\u02BC\u02BD != 2)
@@ -629,7 +613,6 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		return new Vector3(1664f, 1674f, \u02B4\u02BE\u02B7\u02BD\u02B3\u02C0\u02B3\u02BA\u02BC\u02B7\u02BC);
 	}
 
-	// Token: 0x06000DFA RID: 3578 RVA: 0x00072D94 File Offset: 0x00070F94
 	protected override void Update()
 	{
 		if (this.basePlayer.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0 == null)
@@ -721,7 +704,6 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		BaseNoteRenderer.\u02B3\u02B3\u02C1\u02B8\u02BA\u02B8\u02BF\u02BB\u02B2\u02BD\u02BC(this.\u02B3\u02B5\u02B3\u02B4\u02BF\u02BF\u02BD\u02BE\u02C1\u02BF\u02B3, num5);
 	}
 
-	// Token: 0x06000DFB RID: 3579 RVA: 0x000730AC File Offset: 0x000712AC
 	protected override void \u02BE\u02BD\u02BB\u02B8\u02B5\u02BF\u02BE\u02B6\u02BD\u02B9\u02BD()
 	{
 		base.\u02BE\u02BD\u02BB\u02B8\u02B5\u02BF\u02BE\u02B6\u02BD\u02B9\u02BD();
@@ -733,7 +715,6 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		}
 	}
 
-	// Token: 0x06000DFC RID: 3580 RVA: 0x000730AC File Offset: 0x000712AC
 	protected virtual void \u02BE\u02BF\u02BE\u02C1\u02BD\u02BC\u02B8\u02BC\u02C1\u02B3\u02BB()
 	{
 		base.\u02BE\u02BD\u02BB\u02B8\u02B5\u02BF\u02BE\u02B6\u02BD\u02B9\u02BD();
@@ -745,13 +726,11 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		}
 	}
 
-	// Token: 0x06000DFD RID: 3581 RVA: 0x0000D8B0 File Offset: 0x0000BAB0
 	protected virtual void \u02C0\u02BE\u02B2\u02BE\u02C0\u02B5\u02B3\u02B7\u02B2\u02B8\u02B5()
 	{
 		base.Start();
 	}
 
-	// Token: 0x06000DFE RID: 3582 RVA: 0x00073124 File Offset: 0x00071324
 	protected virtual void \u02B9\u02B5\u02B2\u02BB\u02B5\u02B3\u02B9\u02BC\u02BF\u02B5\u02BA()
 	{
 		if (this.basePlayer.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0 == null)
@@ -843,7 +822,6 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		BaseNoteRenderer.\u02B3\u02B3\u02C1\u02B8\u02BA\u02B8\u02BF\u02BB\u02B2\u02BD\u02BC(this.\u02B3\u02B5\u02B3\u02B4\u02BF\u02BF\u02BD\u02BE\u02C1\u02BF\u02B3, num5);
 	}
 
-	// Token: 0x06000DFF RID: 3583 RVA: 0x0000D8D7 File Offset: 0x0000BAD7
 	protected override Vector3 \u02BE\u02B5\u02B3\u02B7\u02B5\u02BD\u02C1\u02B5\u02B2\u02BC\u02BD(int \u02B8\u02BD\u02BA\u02BF\u02BC\u02BB\u02BF\u02BA\u02B8\u02BC\u02BD, float \u02B4\u02BE\u02B7\u02BD\u02B3\u02C0\u02B3\u02BA\u02BC\u02B7\u02BC)
 	{
 		if (\u02B8\u02BD\u02BA\u02BF\u02BC\u02BB\u02BF\u02BA\u02B8\u02BC\u02BD != 4)
@@ -853,7 +831,6 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		return new Vector3(0f, 0f, \u02B4\u02BE\u02B7\u02BD\u02B3\u02C0\u02B3\u02BA\u02BC\u02B7\u02BC);
 	}
 
-	// Token: 0x06000E00 RID: 3584 RVA: 0x0007343C File Offset: 0x0007163C
 	protected virtual void \u02BE\u02B7\u02C0\u02BD\u02BA\u02B6\u02BF\u02C1\u02B7\u02BD\u02B2()
 	{
 		base.\u02BE\u02BD\u02BB\u02B8\u02B5\u02BF\u02BE\u02B6\u02BD\u02B9\u02BD();
@@ -867,14 +844,12 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		}
 	}
 
-	// Token: 0x06000E01 RID: 3585 RVA: 0x0000D8F6 File Offset: 0x0000BAF6
 	public override void Reset()
 	{
 		this.\u02BA\u02B6\u02BB\u02C0\u02BF\u02BB\u02B9\u02B5\u02BA\u02B3\u02B2 = 0;
 		base.Reset();
 	}
 
-	// Token: 0x06000E02 RID: 3586 RVA: 0x000734B4 File Offset: 0x000716B4
 	private void \u02B8\u02B9\u02BB\u02B2\u02B8\u02B5\u02B2\u02B3\u02B7\u02B2\u02B9()
 	{
 		this.\u02BE\u02BD\u02B6\u02C1\u02B9\u02BA\u02BB\u02B8\u02BC\u02B6\u02BB = new Vector2(0.25f, 100f);
@@ -902,7 +877,6 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		}
 	}
 
-	// Token: 0x06000E03 RID: 3587 RVA: 0x0007365C File Offset: 0x0007185C
 	protected Color \u02BD\u02B7\u02BC\u02C0\u02B8\u02BA\u02C0\u02BA\u02B4\u02BD\u02B6(ushort \u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB)
 	{
 		if (\u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB <= 105)
@@ -947,7 +921,6 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		return Color.white;
 	}
 
-	// Token: 0x06000E05 RID: 3589 RVA: 0x0000D928 File Offset: 0x0000BB28
 	protected override float \u02B5\u02BE\u02B7\u02BC\u02C0\u02B2\u02B9\u02BD\u02BA\u02BF\u02BE(int \u02B8\u02BD\u02BA\u02BF\u02BC\u02BB\u02BF\u02BA\u02B8\u02BC\u02BD)
 	{
 		if (\u02B8\u02BD\u02BA\u02BF\u02BC\u02BB\u02BF\u02BA\u02B8\u02BC\u02BD != 4)
@@ -957,44 +930,31 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		return this.\u02B3\u02B3\u02B5\u02BA\u02BA\u02B5\u02BD\u02B3\u02BC\u02C0\u02BB * 4f;
 	}
 
-	// Token: 0x0400098B RID: 2443
 	protected GameObject[] \u02BA\u02B3\u02B4\u02B9\u02B6\u02C1\u02B4\u02B7\u02BF\u02B4\u02BB;
 
-	// Token: 0x0400098C RID: 2444
 	protected SpriteRenderer[] \u02B8\u02BD\u02B9\u02B5\u02B8\u02B5\u02BA\u02B6\u02B7\u02B6\u02B7;
 
-	// Token: 0x0400098D RID: 2445
 	protected int \u02B6\u02B8\u02B8\u02BF\u02B9\u02B5\u02BC\u02BC\u02B4\u02B9\u02BE = 32;
 
-	// Token: 0x0400098E RID: 2446
 	protected int \u02BA\u02B6\u02BB\u02C0\u02BF\u02BB\u02B9\u02B5\u02BA\u02B3\u02B2;
 
-	// Token: 0x0400098F RID: 2447
 	protected GameObject[] \u02B3\u02B5\u02B3\u02B4\u02BF\u02BF\u02BD\u02BE\u02C1\u02BF\u02B3;
 
-	// Token: 0x04000990 RID: 2448
 	protected SpriteRenderer[] \u02BB\u02BF\u02B8\u02B8\u02BA\u02B6\u02B6\u02B5\u02B5\u02BE\u02BB;
 
-	// Token: 0x04000991 RID: 2449
 	protected int \u02B8\u02BB\u02C1\u02B4\u02C0\u02B2\u02B8\u02BB\u02B4\u02BC\u02B8 = 32;
 
-	// Token: 0x04000992 RID: 2450
 	protected int \u02BE\u02B6\u02B6\u02C1\u02C1\u02B6\u02C1\u02C0\u02B6\u02B4\u02BC;
 
-	// Token: 0x04000993 RID: 2451
 	protected List<\u02BE\u02B9\u02B7\u02C0\u02BC\u02BC\u02C1\u02BD\u02BC\u02BD\u02BE> \u02C1\u02B3\u02B4\u02B3\u02B3\u02BE\u02BA\u02BE\u02C0\u02BE\u02B4 = new List<\u02BE\u02B9\u02B7\u02C0\u02BC\u02BC\u02C1\u02BD\u02BC\u02BD\u02BE>();
 
-	// Token: 0x04000994 RID: 2452
 	[SerializeField]
 	protected GameObject activationModel;
 
-	// Token: 0x04000995 RID: 2453
 	[SerializeField]
 	protected GameObject laneModel;
 
-	// Token: 0x04000996 RID: 2454
 	private Vector2 \u02BE\u02BD\u02B6\u02C1\u02B9\u02BA\u02BB\u02B8\u02BC\u02B6\u02BB;
 
-	// Token: 0x04000997 RID: 2455
 	private bool \u02BD\u02BA\u02B8\u02BC\u02BF\u02B9\u02C1\u02C0\u02BC\u02B4\u02BE;
 }

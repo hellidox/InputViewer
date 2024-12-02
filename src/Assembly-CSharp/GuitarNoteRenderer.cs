@@ -1,10 +1,8 @@
-﻿using System;
+using System;
 using UnityEngine;
 
-// Token: 0x02000141 RID: 321
 public class GuitarNoteRenderer : BaseNoteRenderer
 {
-	// Token: 0x06000E3B RID: 3643 RVA: 0x0000DAE0 File Offset: 0x0000BCE0
 	protected virtual int \u02C0\u02C0\u02B8\u02B9\u02BB\u02C0\u02BB\u02B2\u02B8\u02BB\u02BF(ushort \u02BF\u02BB\u02BB\u02BB\u02B6\u02B4\u02B8\u02BE\u02C0\u02C1\u02B9)
 	{
 		if (\u02BF\u02BB\u02BB\u02BB\u02B6\u02B4\u02B8\u02BE\u02C0\u02C1\u02B9 <= 8)
@@ -41,7 +39,6 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 		return -1;
 	}
 
-	// Token: 0x06000E3C RID: 3644 RVA: 0x00078110 File Offset: 0x00076310
 	protected void \u02BB\u02B7\u02B8\u02BE\u02BE\u02BA\u02BF\u02BA\u02BB\u02B5\u02B5(Note \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2, float \u02B9\u02BB\u02BC\u02B5\u02B4\u02B3\u02C1\u02B7\u02B7\u02B4\u02B2)
 	{
 		__FIXME_clon_util.\u02B2\u02B8\u02C1\u02BF\u02B7\u02B4\u02B2\u02B2\u02C0\u02B2\u02BA u02B2_u02B8_u02C1_u02BF_u02B7_u02B4_u02B2_u02B2_u02C0_u02B2_u02BA = __FIXME_clon_util.\u02B8\u02C0\u02BA\u02BB\u02B6\u02BA\u02BA\u02C0\u02B4\u02C1\u02B9(\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF).\u02B3\u02BF\u02B6\u02B4\u02B4\u02BC\u02C0\u02C0\u02B5\u02B2\u02C0();
@@ -72,7 +69,6 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 		}
 	}
 
-	// Token: 0x06000E3D RID: 3645 RVA: 0x0000DB1D File Offset: 0x0000BD1D
 	protected virtual int \u02B2\u02B5\u02B2\u02B4\u02B9\u02B7\u02B7\u02B7\u02B7\u02BF\u02B6(ushort \u02BF\u02BB\u02BB\u02BB\u02B6\u02B4\u02B8\u02BE\u02C0\u02C1\u02B9)
 	{
 		if (\u02BF\u02BB\u02BB\u02BB\u02B6\u02B4\u02B8\u02BE\u02C0\u02C1\u02B9 <= 6)
@@ -109,7 +105,6 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 		return -1;
 	}
 
-	// Token: 0x06000E3E RID: 3646 RVA: 0x00078238 File Offset: 0x00076438
 	protected void \u02B9\u02BD\u02C1\u02BF\u02B4\u02B9\u02BE\u02B6\u02BB\u02C1\u02C1(Note \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2, float \u02B9\u02BB\u02BC\u02B5\u02B4\u02B3\u02C1\u02B7\u02B7\u02B4\u02B2)
 	{
 		__FIXME_clon_util.\u02B2\u02B8\u02C1\u02BF\u02B7\u02B4\u02B2\u02B2\u02C0\u02B2\u02BA u02B2_u02B8_u02C1_u02BF_u02B7_u02B4_u02B2_u02B2_u02C0_u02B2_u02BA = __FIXME_clon_util.\u02B8\u02C0\u02BA\u02BB\u02B6\u02BA\u02BA\u02C0\u02B4\u02C1\u02B9(\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF).\u02BE\u02C0\u02BA\u02B2\u02BD\u02C1\u02B5\u02B8\u02BC\u02B9\u02BB();
@@ -140,7 +135,6 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 		}
 	}
 
-	// Token: 0x06000E3F RID: 3647 RVA: 0x00078360 File Offset: 0x00076560
 	protected override void Update()
 	{
 		if (this.basePlayer.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0 == null)
@@ -203,13 +197,11 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 		BaseNoteRenderer.\u02B3\u02B3\u02C1\u02B8\u02BA\u02B8\u02BF\u02BB\u02B2\u02BD\u02BC(this.\u02BC\u02B4\u02C1\u02BC\u02BA\u02BC\u02B6\u02BE\u02B4\u02B6\u02B7, this.\u02C0\u02BE\u02BE\u02B4\u02C1\u02BF\u02C0\u02B9\u02B5\u02BD\u02BB);
 	}
 
-	// Token: 0x06000E40 RID: 3648 RVA: 0x0000DB5A File Offset: 0x0000BD5A
 	private bool \u02BD\u02BD\u02B7\u02B9\u02BC\u02BE\u02B3\u02BB\u02B3\u02B2\u02C0()
 	{
 		return this.\u02BA\u02B8\u02BC\u02B2\u02BA\u02BD\u02B3\u02B5\u02B9\u02B6\u02B7 < this.\u02B5\u02BB\u02B2\u02BA\u02B5\u02B6\u02B2\u02B2\u02BC\u02BD\u02B7 && this.\u02BF\u02B7\u02BE\u02BB\u02B3\u02B6\u02BE\u02BE\u02B2\u02C1\u02B6 >= this.\u02B4\u02B5\u02BE\u02BC\u02B7\u02BF\u02C1\u02B8\u02C1\u02BF\u02C0;
 	}
 
-	// Token: 0x06000E41 RID: 3649 RVA: 0x0000DB7D File Offset: 0x0000BD7D
 	protected override void \u02BE\u02BD\u02BB\u02B8\u02B5\u02BF\u02BE\u02B6\u02BD\u02B9\u02BD()
 	{
 		base.\u02BE\u02BD\u02BB\u02B8\u02B5\u02BF\u02BE\u02B6\u02BD\u02B9\u02BD();
@@ -217,7 +209,6 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 		this.\u02B5\u02B2\u02B7\u02C1\u02BB\u02C0\u02BF\u02B8\u02B4\u02B2\u02B2();
 	}
 
-	// Token: 0x06000E42 RID: 3650 RVA: 0x000785F4 File Offset: 0x000767F4
 	protected override Color \u02C1\u02B7\u02BF\u02BF\u02B2\u02BD\u02BD\u02B8\u02C1\u02B2\u02C0(ushort \u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB)
 	{
 		if (\u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB <= 8)
@@ -254,7 +245,6 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 		return Color.white;
 	}
 
-	// Token: 0x06000E43 RID: 3651 RVA: 0x0000DB91 File Offset: 0x0000BD91
 	protected virtual int \u02B9\u02B7\u02B6\u02B9\u02B8\u02B5\u02B2\u02B7\u02BC\u02BA\u02BE(ushort \u02BF\u02BB\u02BB\u02BB\u02B6\u02B4\u02B8\u02BE\u02C0\u02C1\u02B9)
 	{
 		if (\u02BF\u02BB\u02BB\u02BB\u02B6\u02B4\u02B8\u02BE\u02C0\u02C1\u02B9 <= 0)
@@ -291,13 +281,11 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 		return -1;
 	}
 
-	// Token: 0x06000E44 RID: 3652 RVA: 0x0000DBCE File Offset: 0x0000BDCE
 	private bool \u02BD\u02B2\u02B6\u02B8\u02B7\u02B2\u02BA\u02B2\u02BF\u02BC\u02B6()
 	{
 		return this.\u02C0\u02BE\u02BE\u02B4\u02C1\u02BF\u02C0\u02B9\u02B5\u02BD\u02BB >= this.\u02B5\u02B4\u02C0\u02B8\u02B3\u02B2\u02B9\u02C1\u02BB\u02B9\u02B7 || this.\u02BF\u02B7\u02BE\u02BB\u02B3\u02B6\u02BE\u02BE\u02B2\u02C1\u02B6 >= this.\u02B4\u02B5\u02BE\u02BC\u02B7\u02BF\u02C1\u02B8\u02C1\u02BF\u02C0;
 	}
 
-	// Token: 0x06000E45 RID: 3653 RVA: 0x0007867C File Offset: 0x0007687C
 	protected virtual Color \u02B3\u02B7\u02B2\u02BC\u02B4\u02B3\u02B9\u02B4\u02B3\u02BF\u02BE(ushort \u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB)
 	{
 		if (\u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB <= 6)
@@ -334,7 +322,6 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 		return Color.white;
 	}
 
-	// Token: 0x06000E46 RID: 3654 RVA: 0x00078704 File Offset: 0x00076904
 	private void \u02B4\u02B9\u02B5\u02BF\u02B4\u02C1\u02B2\u02B8\u02BD\u02C0\u02BF()
 	{
 		if (this.basePlayer.playerStuff.playerInfo.IsGHLController)
@@ -347,7 +334,6 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 		}
 	}
 
-	// Token: 0x06000E47 RID: 3655 RVA: 0x00078768 File Offset: 0x00076968
 	private void \u02B9\u02B9\u02B7\u02B2\u02BB\u02B2\u02BB\u02B6\u02BA\u02BA\u02B4()
 	{
 		if (this.basePlayer.playerStuff.playerInfo.IsGHLController)
@@ -360,7 +346,6 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 		}
 	}
 
-	// Token: 0x06000E48 RID: 3656 RVA: 0x0000DBF1 File Offset: 0x0000BDF1
 	protected override int \u02C1\u02B7\u02C0\u02B7\u02B9\u02B2\u02B2\u02BF\u02BC\u02C0\u02BF(ushort \u02BF\u02BB\u02BB\u02BB\u02B6\u02B4\u02B8\u02BE\u02C0\u02C1\u02B9)
 	{
 		if (\u02BF\u02BB\u02BB\u02BB\u02B6\u02B4\u02B8\u02BE\u02C0\u02C1\u02B9 <= 8)
@@ -397,7 +382,6 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 		return -1;
 	}
 
-	// Token: 0x06000E49 RID: 3657 RVA: 0x000787CC File Offset: 0x000769CC
 	protected void \u02C1\u02C1\u02B4\u02B3\u02C0\u02B6\u02BF\u02B7\u02C0\u02BB\u02BB(Note \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2, float \u02B9\u02BB\u02BC\u02B5\u02B4\u02B3\u02C1\u02B7\u02B7\u02B4\u02B2)
 	{
 		float num = \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.\u02BB\u02BE\u02BA\u02B8\u02BE\u02B9\u02BF\u02B3\u02B4\u02B8\u02BD * this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4;
@@ -473,7 +457,6 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 		}
 	}
 
-	// Token: 0x06000E4A RID: 3658 RVA: 0x00078AB8 File Offset: 0x00076CB8
 	protected void \u02B4\u02B7\u02BB\u02B2\u02C0\u02B3\u02BF\u02B5\u02BA\u02C1\u02C0(Note \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2, Vector3 \u02BB\u02B7\u02C1\u02BC\u02B8\u02B5\u02B6\u02B5\u02B6\u02B7\u02B4)
 	{
 		float num = (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5 ? (\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.\u02B2\u02B8\u02B7\u02BD\u02B5\u02B7\u02B6\u02B2\u02BF\u02BD\u02C0 - (float)this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B7\u02B4\u02BA\u02B5\u02B5\u02B8\u02BE\u02B5\u02B3\u02B5\u02BB) : \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.\u02BB\u02BE\u02BA\u02B8\u02BE\u02B9\u02BF\u02B3\u02B4\u02B8\u02BD) * this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4;
@@ -577,7 +560,6 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 		}
 	}
 
-	// Token: 0x06000E4B RID: 3659 RVA: 0x00078F14 File Offset: 0x00077114
 	protected virtual Color \u02BC\u02B8\u02B7\u02B5\u02BB\u02B8\u02B8\u02C1\u02BB\u02BD\u02B2(ushort \u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB)
 	{
 		if (\u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB <= 2)
@@ -614,13 +596,11 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 		return Color.white;
 	}
 
-	// Token: 0x06000E4C RID: 3660 RVA: 0x0000DC2E File Offset: 0x0000BE2E
 	private bool \u02B5\u02BD\u02B2\u02B6\u02B2\u02B5\u02BE\u02BF\u02B7\u02C1\u02BA()
 	{
 		return this.\u02BA\u02BB\u02B9\u02BC\u02B2\u02B8\u02BD\u02B8\u02BC\u02C1\u02B8 >= this.\u02BC\u02BE\u02B9\u02BD\u02BC\u02B5\u02C0\u02C0\u02C0\u02B6\u02B4 || this.\u02BF\u02B7\u02BE\u02BB\u02B3\u02B6\u02BE\u02BE\u02B2\u02C1\u02B6 >= this.\u02B4\u02B5\u02BE\u02BC\u02B7\u02BF\u02C1\u02B8\u02C1\u02BF\u02C0;
 	}
 
-	// Token: 0x06000E4D RID: 3661 RVA: 0x00078F9C File Offset: 0x0007719C
 	protected void \u02B2\u02C1\u02C0\u02B5\u02B5\u02B2\u02BB\u02BC\u02B4\u02B2\u02BE(Note \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2, float \u02B9\u02BB\u02BC\u02B5\u02B4\u02B3\u02C1\u02B7\u02B7\u02B4\u02B2)
 	{
 		float num = \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.\u02B6\u02BA\u02BD\u02B5\u02B8\u02BC\u02B8\u02B9\u02B4\u02BD\u02C1() * this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4;
@@ -696,7 +676,6 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 		}
 	}
 
-	// Token: 0x06000E4E RID: 3662 RVA: 0x00079288 File Offset: 0x00077488
 	protected void \u02BE\u02BF\u02BE\u02C1\u02BC\u02B5\u02B5\u02C1\u02BD\u02C0\u02BC(Note \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2, float \u02B9\u02BB\u02BC\u02B5\u02B4\u02B3\u02C1\u02B7\u02B7\u02B4\u02B2)
 	{
 		float num = \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.\u02BB\u02BE\u02BA\u02B8\u02BE\u02B9\u02BF\u02B3\u02B4\u02B8\u02BD * this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4;
@@ -772,13 +751,11 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 		}
 	}
 
-	// Token: 0x06000E4F RID: 3663 RVA: 0x0000DC51 File Offset: 0x0000BE51
 	private bool \u02B7\u02BF\u02C0\u02B6\u02B3\u02C1\u02C1\u02BC\u02BF\u02BD\u02BE()
 	{
 		return this.\u02BA\u02B8\u02BC\u02B2\u02BA\u02BD\u02B3\u02B5\u02B9\u02B6\u02B7 >= this.\u02B5\u02BB\u02B2\u02BA\u02B5\u02B6\u02B2\u02B2\u02BC\u02BD\u02B7 || this.\u02BF\u02B7\u02BE\u02BB\u02B3\u02B6\u02BE\u02BE\u02B2\u02C1\u02B6 >= this.\u02B4\u02B5\u02BE\u02BC\u02B7\u02BF\u02C1\u02B8\u02C1\u02BF\u02C0;
 	}
 
-	// Token: 0x06000E50 RID: 3664 RVA: 0x00079574 File Offset: 0x00077774
 	private void \u02C1\u02BE\u02BA\u02BF\u02BE\u02B8\u02B3\u02BA\u02B7\u02BA\u02B7()
 	{
 		float getFloatPercent = SettingsController.\u02B3\u02B8\u02B6\u02C1\u02B2\u02B2\u02B5\u02C1\u02B6\u02B5\u02C0.GetFloatPercent;
@@ -822,13 +799,11 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 		}
 	}
 
-	// Token: 0x06000E51 RID: 3665 RVA: 0x0000DC74 File Offset: 0x0000BE74
 	private bool \u02C0\u02BA\u02B2\u02BF\u02BF\u02B2\u02BF\u02BD\u02BC\u02BE\u02BA()
 	{
 		return this.\u02BA\u02BB\u02B9\u02BC\u02B2\u02B8\u02BD\u02B8\u02BC\u02C1\u02B8 >= this.\u02BC\u02BE\u02B9\u02BD\u02BC\u02B5\u02C0\u02C0\u02C0\u02B6\u02B4 || this.\u02BF\u02B7\u02BE\u02BB\u02B3\u02B6\u02BE\u02BE\u02B2\u02C1\u02B6 < this.\u02B4\u02B5\u02BE\u02BC\u02B7\u02BF\u02C1\u02B8\u02C1\u02BF\u02C0;
 	}
 
-	// Token: 0x06000E52 RID: 3666 RVA: 0x0000DC97 File Offset: 0x0000BE97
 	protected virtual int \u02BE\u02B5\u02B4\u02B2\u02B8\u02B6\u02B6\u02C1\u02BA\u02BD\u02BA(ushort \u02BF\u02BB\u02BB\u02BB\u02B6\u02B4\u02B8\u02BE\u02C0\u02C1\u02B9)
 	{
 		if (\u02BF\u02BB\u02BB\u02BB\u02B6\u02B4\u02B8\u02BE\u02C0\u02C1\u02B9 <= 5)
@@ -865,7 +840,6 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 		return -1;
 	}
 
-	// Token: 0x06000E53 RID: 3667 RVA: 0x0007980C File Offset: 0x00077A0C
 	protected void \u02C1\u02B4\u02B7\u02B7\u02B2\u02B3\u02B6\u02C0\u02B9\u02C0\u02B9(Note \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2, float \u02B9\u02BB\u02BC\u02B5\u02B4\u02B3\u02C1\u02B7\u02B7\u02B4\u02B2)
 	{
 		float num = \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.\u02BB\u02BE\u02BA\u02B8\u02BE\u02B9\u02BF\u02B3\u02B4\u02B8\u02BD * this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4;
@@ -941,7 +915,6 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 		}
 	}
 
-	// Token: 0x06000E54 RID: 3668 RVA: 0x00079AF8 File Offset: 0x00077CF8
 	protected void \u02BF\u02B6\u02BE\u02BB\u02B2\u02B7\u02C0\u02B4\u02B7\u02C0\u02BC(Note \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2, float \u02B9\u02BB\u02BC\u02B5\u02B4\u02B3\u02C1\u02B7\u02B7\u02B4\u02B2)
 	{
 		float num = \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.\u02BB\u02BE\u02BA\u02B8\u02BE\u02B9\u02BF\u02B3\u02B4\u02B8\u02BD * this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4;
@@ -1017,7 +990,6 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 		}
 	}
 
-	// Token: 0x06000E55 RID: 3669 RVA: 0x00078704 File Offset: 0x00076904
 	private void \u02C0\u02C0\u02B7\u02BF\u02C1\u02B9\u02BA\u02B3\u02BF\u02BF\u02B6()
 	{
 		if (this.basePlayer.playerStuff.playerInfo.IsGHLController)
@@ -1030,7 +1002,6 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 		}
 	}
 
-	// Token: 0x06000E56 RID: 3670 RVA: 0x00079DE4 File Offset: 0x00077FE4
 	protected virtual void \u02B2\u02C1\u02BB\u02B5\u02BF\u02B3\u02B5\u02B3\u02BA\u02BD\u02C1()
 	{
 		this.\u02B4\u02B2\u02B9\u02BC\u02B4\u02B6\u02B2\u02B9\u02BC\u02BA\u02C1 = this.basePlayer.playerStuff.playerInfo.IsGamepadMode();
@@ -1046,7 +1017,6 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 		base.Start();
 	}
 
-	// Token: 0x06000E57 RID: 3671 RVA: 0x00079F64 File Offset: 0x00078164
 	protected override void Start()
 	{
 		this.\u02B4\u02B2\u02B9\u02BC\u02B4\u02B6\u02B2\u02B9\u02BC\u02BA\u02C1 = this.basePlayer.playerStuff.playerInfo.IsGamepadMode();
@@ -1062,7 +1032,6 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 		base.Start();
 	}
 
-	// Token: 0x06000E58 RID: 3672 RVA: 0x0007A0E4 File Offset: 0x000782E4
 	protected void \u02B2\u02C1\u02BD\u02BC\u02BB\u02B4\u02BC\u02BC\u02BD\u02C0\u02BE(Note \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2, float \u02B9\u02BB\u02BC\u02B5\u02B4\u02B3\u02C1\u02B7\u02B7\u02B4\u02B2)
 	{
 		__FIXME_clon_util.\u02B2\u02B8\u02C1\u02BF\u02B7\u02B4\u02B2\u02B2\u02C0\u02B2\u02BA u02B2_u02B8_u02C1_u02BF_u02B7_u02B4_u02B2_u02B2_u02C0_u02B2_u02BA = __FIXME_clon_util.\u02B8\u02C0\u02BA\u02BB\u02B6\u02BA\u02BA\u02C0\u02B4\u02C1\u02B9(\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF).\u02BC\u02C0\u02B8\u02B9\u02B4\u02BB\u02BE\u02B6\u02BC\u02B7\u02C1();
@@ -1093,7 +1062,6 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 		}
 	}
 
-	// Token: 0x06000E59 RID: 3673 RVA: 0x0007A20C File Offset: 0x0007840C
 	protected void \u02BF\u02BF\u02C1\u02B5\u02B3\u02B4\u02C0\u02B7\u02BB\u02B2\u02BB(Note \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2, float \u02B9\u02BB\u02BC\u02B5\u02B4\u02B3\u02C1\u02B7\u02B7\u02B4\u02B2)
 	{
 		__FIXME_clon_util.\u02B2\u02B8\u02C1\u02BF\u02B7\u02B4\u02B2\u02B2\u02C0\u02B2\u02BA u02B2_u02B8_u02C1_u02BF_u02B7_u02B4_u02B2_u02B2_u02C0_u02B2_u02BA = __FIXME_clon_util.\u02B8\u02C0\u02BA\u02BB\u02B6\u02BA\u02BA\u02C0\u02B4\u02C1\u02B9(\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF).\u02BC\u02C0\u02B8\u02B9\u02B4\u02BB\u02BE\u02B6\u02BC\u02B7\u02C1();
@@ -1124,7 +1092,6 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 		}
 	}
 
-	// Token: 0x06000E5A RID: 3674 RVA: 0x0007A334 File Offset: 0x00078534
 	protected void \u02BF\u02B9\u02B8\u02B8\u02BB\u02BC\u02B8\u02B9\u02BA\u02C1\u02B7(Note \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2, Vector3 \u02BB\u02B7\u02C1\u02BC\u02B8\u02B5\u02B6\u02B5\u02B6\u02B7\u02B4)
 	{
 		float num = (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5 ? (\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.\u02B2\u02B8\u02B7\u02BD\u02B5\u02B7\u02B6\u02B2\u02BF\u02BD\u02C0 - (float)this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B7\u02B4\u02BA\u02B5\u02B5\u02B8\u02BE\u02B5\u02B3\u02B5\u02BB) : \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.\u02B6\u02BA\u02BD\u02B5\u02B8\u02BC\u02B8\u02B9\u02B4\u02BD\u02C1()) * this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4;
@@ -1228,7 +1195,6 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 		}
 	}
 
-	// Token: 0x06000E5B RID: 3675 RVA: 0x0007A790 File Offset: 0x00078990
 	private void \u02B5\u02B2\u02B7\u02C1\u02BB\u02C0\u02BF\u02B8\u02B4\u02B2\u02B2()
 	{
 		if (this.basePlayer.playerStuff.playerInfo.IsGHLController)
@@ -1241,79 +1207,54 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 		}
 	}
 
-	// Token: 0x040009BA RID: 2490
 	public float \u02BC\u02BC\u02BF\u02BD\u02B7\u02B7\u02BF\u02C0\u02C0\u02B6\u02BA;
 
-	// Token: 0x040009BB RID: 2491
 	protected GameObject[] \u02BE\u02B4\u02B2\u02BD\u02B6\u02BC\u02BF\u02BC\u02C1\u02B2\u02B5;
 
-	// Token: 0x040009BC RID: 2492
 	protected GameObject[] \u02BC\u02B4\u02C1\u02BC\u02BA\u02BC\u02B6\u02BE\u02B4\u02B6\u02B7;
 
-	// Token: 0x040009BD RID: 2493
 	protected SpriteRenderer[] \u02B5\u02BB\u02BD\u02B3\u02B6\u02BD\u02B5\u02C1\u02C0\u02B8\u02BF;
 
-	// Token: 0x040009BE RID: 2494
 	protected SpriteRenderer[] \u02BF\u02BD\u02B2\u02B3\u02B2\u02B4\u02B2\u02C1\u02BA\u02B5\u02B3;
 
-	// Token: 0x040009BF RID: 2495
 	protected SpriteRenderer[] \u02B6\u02B8\u02B9\u02B4\u02B7\u02B2\u02C0\u02BC\u02BE\u02C1\u02B6;
 
-	// Token: 0x040009C0 RID: 2496
 	protected SpriteRenderer[] \u02B5\u02B6\u02BD\u02B2\u02BE\u02B6\u02B8\u02B5\u02C0\u02B2\u02B3;
 
-	// Token: 0x040009C1 RID: 2497
 	protected int \u02BC\u02BE\u02B9\u02BD\u02BC\u02B5\u02C0\u02C0\u02C0\u02B6\u02B4 = 250;
 
-	// Token: 0x040009C2 RID: 2498
 	protected int \u02B5\u02B4\u02C0\u02B8\u02B3\u02B2\u02B9\u02C1\u02BB\u02B9\u02B7 = 50;
 
-	// Token: 0x040009C3 RID: 2499
 	[SerializeField]
 	protected Sprite[] Sustains;
 
-	// Token: 0x040009C4 RID: 2500
 	protected float \u02B4\u02B8\u02BA\u02BA\u02B2\u02BF\u02BC\u02C1\u02B6\u02BA\u02B4;
 
-	// Token: 0x040009C5 RID: 2501
 	protected float \u02B4\u02B7\u02B5\u02B2\u02C0\u02B3\u02B9\u02B9\u02BA\u02BC\u02C1;
 
-	// Token: 0x040009C6 RID: 2502
 	protected int \u02BD\u02B7\u02BA\u02BC\u02BE\u02BB\u02BD\u02B4\u02B4\u02B9\u02BD = Shader.PropertyToID("_uSustainProperties");
 
-	// Token: 0x040009C7 RID: 2503
 	protected int \u02B5\u02C0\u02B9\u02BA\u02BF\u02C0\u02BA\u02B8\u02C1\u02BD\u02B4 = Shader.PropertyToID("_uUVProperties");
 
-	// Token: 0x040009C8 RID: 2504
 	protected int \u02B6\u02B3\u02BC\u02BA\u02B4\u02BE\u02B4\u02B2\u02BA\u02C0\u02B7 = Shader.PropertyToID("_TailLength");
 
-	// Token: 0x040009C9 RID: 2505
 	private Vector4 \u02B4\u02B2\u02B3\u02BE\u02BE\u02B9\u02BE\u02B2\u02BD\u02B3\u02B5;
 
-	// Token: 0x040009CA RID: 2506
 	private Vector4 \u02B6\u02BF\u02C1\u02B3\u02B8\u02B9\u02C0\u02B8\u02B3\u02B6\u02B8;
 
-	// Token: 0x040009CB RID: 2507
 	protected Vector4 \u02BA\u02BE\u02BD\u02BE\u02B6\u02B9\u02B4\u02B6\u02B9\u02C0\u02C0;
 
-	// Token: 0x040009CC RID: 2508
 	protected MaterialPropertyBlock \u02B9\u02B6\u02B8\u02BB\u02BD\u02BB\u02BC\u02B4\u02BC\u02BB\u02BA;
 
-	// Token: 0x040009CD RID: 2509
 	protected bool \u02B4\u02B2\u02B9\u02BC\u02B4\u02B6\u02B2\u02B9\u02BC\u02BA\u02C1;
 
-	// Token: 0x040009CE RID: 2510
 	private int \u02BA\u02B8\u02BC\u02B2\u02BA\u02BD\u02B3\u02B5\u02B9\u02B6\u02B7;
 
-	// Token: 0x040009CF RID: 2511
 	private int \u02BA\u02BB\u02B9\u02BC\u02B2\u02B8\u02BD\u02B8\u02BC\u02C1\u02B8;
 
-	// Token: 0x040009D0 RID: 2512
 	private int \u02C0\u02BE\u02BE\u02B4\u02C1\u02BF\u02C0\u02B9\u02B5\u02BD\u02BB;
 
-	// Token: 0x040009D1 RID: 2513
 	private int \u02BF\u02B7\u02BE\u02BB\u02B3\u02B6\u02BE\u02BE\u02B2\u02C1\u02B6;
 
-	// Token: 0x040009D2 RID: 2514
 	private int \u02B4\u02B5\u02BE\u02BC\u02B7\u02BF\u02C1\u02B8\u02C1\u02BF\u02C0;
 }

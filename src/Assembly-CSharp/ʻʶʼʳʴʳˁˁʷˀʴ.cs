@@ -1,10 +1,7 @@
-﻿using System;
+using System;
 
-// Token: 0x0200024D RID: 589
 public enum \u02BB\u02B6\u02BC\u02B3\u02B4\u02B3\u02C1\u02C1\u02B7\u02C0\u02B4
 {
-	// Token: 0x0400122B RID: 4651
 	MAPPING_KEY,
-	// Token: 0x0400122C RID: 4652
 	SEQUENCE_INDEX
 }

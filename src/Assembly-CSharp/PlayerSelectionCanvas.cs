@@ -1,12 +1,10 @@
-﻿using System;
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x020000E7 RID: 231
 public class PlayerSelectionCanvas : MonoBehaviour
 {
-	// Token: 0x060008B9 RID: 2233 RVA: 0x0000A040 File Offset: 0x00008240
 	public void \u02BE\u02B2\u02B2\u02BD\u02C0\u02C0\u02BD\u02BB\u02B6\u02BC\u02B6()
 	{
 		BassAudioManager.Instance.\u02BD\u02C1\u02B5\u02B5\u02B7\u02C0\u02BE\u02B4\u02BF\u02B7\u02BF();
@@ -14,7 +12,6 @@ public class PlayerSelectionCanvas : MonoBehaviour
 		base.enabled = true;
 	}
 
-	// Token: 0x060008BA RID: 2234 RVA: 0x0000A067 File Offset: 0x00008267
 	public void \u02BF\u02BC\u02C0\u02B9\u02BC\u02B3\u02BD\u02C1\u02B6\u02BF\u02B8()
 	{
 		\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B3\u02B8\u02B2\u02BF\u02C0\u02B6\u02C1\u02BD\u02B3\u02B8\u02B9(\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02C1\u02BA\u02BE\u02C1\u02B5\u02BB\u02B9\u02B4\u02B2\u02C1\u02BF, false);
@@ -22,7 +19,6 @@ public class PlayerSelectionCanvas : MonoBehaviour
 		this.songSelect.SetActive(true);
 	}
 
-	// Token: 0x060008BC RID: 2236 RVA: 0x0000A08C File Offset: 0x0000828C
 	public void \u02C1\u02B2\u02B6\u02B6\u02B4\u02C0\u02BB\u02BA\u02B6\u02B4\u02BD()
 	{
 		BassAudioManager.Instance.\u02BD\u02C1\u02B5\u02B5\u02B7\u02C0\u02BE\u02B4\u02BF\u02B7\u02BF();
@@ -30,7 +26,6 @@ public class PlayerSelectionCanvas : MonoBehaviour
 		base.enabled = true;
 	}
 
-	// Token: 0x060008BD RID: 2237 RVA: 0x0004DB50 File Offset: 0x0004BD50
 	private void \u02B4\u02B6\u02BD\u02B5\u02C0\u02B6\u02BA\u02C1\u02C0\u02BC\u02BB()
 	{
 		if (this.\u02BF\u02B3\u02B5\u02BA\u02B8\u02B6\u02BA\u02BD\u02C1\u02BE\u02B2)
@@ -76,7 +71,6 @@ public class PlayerSelectionCanvas : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060008BE RID: 2238 RVA: 0x0000A0B3 File Offset: 0x000082B3
 	public void \u02B5\u02C0\u02B5\u02B9\u02B2\u02B3\u02B9\u02B2\u02BA\u02B2\u02B3()
 	{
 		BassAudioManager.Instance.\u02BD\u02C1\u02B5\u02B5\u02B7\u02C0\u02BE\u02B4\u02BF\u02B7\u02BF();
@@ -84,7 +78,6 @@ public class PlayerSelectionCanvas : MonoBehaviour
 		base.enabled = false;
 	}
 
-	// Token: 0x060008BF RID: 2239 RVA: 0x0000A0DA File Offset: 0x000082DA
 	public void \u02C0\u02B7\u02BF\u02B5\u02B5\u02B9\u02BD\u02BC\u02BA\u02B8\u02B4()
 	{
 		BassAudioManager.Instance.\u02BD\u02C1\u02B5\u02B5\u02B7\u02C0\u02BE\u02B4\u02BF\u02B7\u02BF();
@@ -92,7 +85,6 @@ public class PlayerSelectionCanvas : MonoBehaviour
 		base.enabled = true;
 	}
 
-	// Token: 0x060008C0 RID: 2240 RVA: 0x0004DC44 File Offset: 0x0004BE44
 	private void Update()
 	{
 		if (this.\u02BF\u02B3\u02B5\u02BA\u02B8\u02B6\u02BA\u02BD\u02C1\u02BE\u02B2)
@@ -136,7 +128,6 @@ public class PlayerSelectionCanvas : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060008C1 RID: 2241 RVA: 0x0000A101 File Offset: 0x00008301
 	public void \u02C0\u02BD\u02BF\u02B5\u02B8\u02B7\u02B2\u02B5\u02B6\u02B8\u02B3()
 	{
 		BassAudioManager.Instance.\u02BD\u02C1\u02B5\u02B5\u02B7\u02C0\u02BE\u02B4\u02BF\u02B7\u02BF();
@@ -144,7 +135,6 @@ public class PlayerSelectionCanvas : MonoBehaviour
 		base.enabled = false;
 	}
 
-	// Token: 0x060008C2 RID: 2242 RVA: 0x0004DD38 File Offset: 0x0004BF38
 	private void OnEnable()
 	{
 		this.headerText.text = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1.Name.\u02C1\u02B4\u02BF\u02C1\u02BE\u02B9\u02B6\u02B7\u02B5\u02B7\u02B5;
@@ -168,7 +158,6 @@ public class PlayerSelectionCanvas : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060008C3 RID: 2243 RVA: 0x0000A128 File Offset: 0x00008328
 	public void \u02BA\u02B8\u02BE\u02BD\u02BB\u02B3\u02B3\u02BE\u02BC\u02B7\u02C1()
 	{
 		BassAudioManager.Instance.\u02BD\u02C1\u02B5\u02B5\u02B7\u02C0\u02BE\u02B4\u02BF\u02B7\u02BF();
@@ -176,7 +165,6 @@ public class PlayerSelectionCanvas : MonoBehaviour
 		base.enabled = true;
 	}
 
-	// Token: 0x060008C4 RID: 2244 RVA: 0x0000A14F File Offset: 0x0000834F
 	public void \u02B4\u02B9\u02BD\u02B8\u02B9\u02B3\u02B7\u02B4\u02B7\u02B6\u02BA()
 	{
 		\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B3\u02B8\u02B2\u02BF\u02C0\u02B6\u02C1\u02BD\u02B3\u02B8\u02B9(\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02C1\u02BA\u02BE\u02C1\u02B5\u02BB\u02B9\u02B4\u02B2\u02C1\u02BF, false);
@@ -184,7 +172,6 @@ public class PlayerSelectionCanvas : MonoBehaviour
 		this.songSelect.SetActive(true);
 	}
 
-	// Token: 0x060008C5 RID: 2245 RVA: 0x0000A067 File Offset: 0x00008267
 	public void \u02C0\u02B5\u02B9\u02BA\u02B3\u02C1\u02BC\u02B8\u02BB\u02BC\u02B6()
 	{
 		\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B3\u02B8\u02B2\u02BF\u02C0\u02B6\u02C1\u02BD\u02B3\u02B8\u02B9(\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02C1\u02BA\u02BE\u02C1\u02B5\u02BB\u02B9\u02B4\u02B2\u02C1\u02BF, false);
@@ -192,7 +179,6 @@ public class PlayerSelectionCanvas : MonoBehaviour
 		this.songSelect.SetActive(true);
 	}
 
-	// Token: 0x060008C6 RID: 2246 RVA: 0x0000A174 File Offset: 0x00008374
 	public void \u02BD\u02BC\u02BA\u02B5\u02B4\u02BB\u02BB\u02B3\u02B3\u02B7\u02B5()
 	{
 		BassAudioManager.Instance.\u02BD\u02C1\u02B5\u02B5\u02B7\u02C0\u02BE\u02B4\u02BF\u02B7\u02BF();
@@ -200,7 +186,6 @@ public class PlayerSelectionCanvas : MonoBehaviour
 		base.enabled = true;
 	}
 
-	// Token: 0x060008C7 RID: 2247 RVA: 0x0004DE3C File Offset: 0x0004C03C
 	private void \u02C0\u02BE\u02B7\u02BF\u02B9\u02BB\u02C1\u02B2\u02B9\u02B7\u02B5()
 	{
 		if (this.\u02BF\u02B3\u02B5\u02BA\u02B8\u02B6\u02BA\u02BD\u02C1\u02BE\u02B2)
@@ -244,7 +229,6 @@ public class PlayerSelectionCanvas : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060008C8 RID: 2248 RVA: 0x0004DF30 File Offset: 0x0004C130
 	private void \u02BA\u02BA\u02C0\u02BA\u02BC\u02B9\u02B5\u02BE\u02BA\u02C0\u02BD()
 	{
 		if (this.\u02BF\u02B3\u02B5\u02BA\u02B8\u02B6\u02BA\u02BD\u02C1\u02BE\u02B2)
@@ -290,7 +274,6 @@ public class PlayerSelectionCanvas : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060008C9 RID: 2249 RVA: 0x0004E024 File Offset: 0x0004C224
 	private void \u02B8\u02B2\u02BB\u02BF\u02BF\u02BF\u02C0\u02BE\u02BD\u02B9\u02B8()
 	{
 		this.headerText.text = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1.Name.\u02C1\u02B4\u02BF\u02C1\u02BE\u02B9\u02B6\u02B7\u02B5\u02B7\u02B5;
@@ -314,25 +297,19 @@ public class PlayerSelectionCanvas : MonoBehaviour
 		}
 	}
 
-	// Token: 0x040006E5 RID: 1765
 	[SerializeField]
 	private Text headerText;
 
-	// Token: 0x040006E6 RID: 1766
 	public TextMeshProUGUI \u02B4\u02B8\u02B5\u02B5\u02B5\u02BE\u02B9\u02C0\u02BF\u02C0\u02B6;
 
-	// Token: 0x040006E7 RID: 1767
 	[SerializeField]
 	private PlayerSelectionMenu[] players;
 
-	// Token: 0x040006E8 RID: 1768
 	[SerializeField]
 	private GameObject songSelect;
 
-	// Token: 0x040006E9 RID: 1769
 	[SerializeField]
 	private PlayerProfileMenu[] playerMenus;
 
-	// Token: 0x040006EA RID: 1770
 	private bool \u02BF\u02B3\u02B5\u02BA\u02B8\u02B6\u02BA\u02BD\u02C1\u02BE\u02B2;
 }

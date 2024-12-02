@@ -1,13 +1,11 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-// Token: 0x0200002B RID: 43
 public readonly struct \u02B2\u02BA\u02BA\u02B8\u02B5\u02BC\u02BA\u02BE\u02BB\u02BA\u02B5
 {
-	// Token: 0x06000189 RID: 393 RVA: 0x00020634 File Offset: 0x0001E834
 	[CompilerGenerated]
 	internal static int \u02C1\u02B4\u02B7\u02B2\u02B4\u02BA\u02C0\u02B6\u02C0\u02B4\u02C1(ref \u02B2\u02BA\u02BA\u02B8\u02B5\u02BC\u02BA\u02BE\u02BB\u02BA\u02B5.\u02B6\u02B6\u02C1\u02B6\u02B7\u02B6\u02B4\u02B4\u02BB\u02C0\u02C0 A_0)
 	{
@@ -29,7 +27,6 @@ public readonly struct \u02B2\u02BA\u02BA\u02B8\u02B5\u02BC\u02BA\u02BE\u02BB\u0
 		return num;
 	}
 
-	// Token: 0x0600018A RID: 394 RVA: 0x000206C4 File Offset: 0x0001E8C4
 	public \u02B2\u02BA\u02BA\u02B8\u02B5\u02BC\u02BA\u02BE\u02BB\u02BA\u02B5(string \u02B5\u02BF\u02B4\u02C1\u02BE\u02B7\u02C0\u02B9\u02C1\u02B8\u02BC, float \u02B6\u02BB\u02BB\u02B2\u02BF\u02B6\u02B6\u02B2\u02B4\u02C1\u02C1, int \u02B8\u02B9\u02C1\u02B6\u02C1\u02B5\u02B5\u02B7\u02BE\u02B8\u02BE)
 	{
 		\u02B2\u02BA\u02BA\u02B8\u02B5\u02BC\u02BA\u02BE\u02BB\u02BA\u02B5.\u02B6\u02B6\u02C1\u02B6\u02B7\u02B6\u02B4\u02B4\u02BB\u02C0\u02C0 u02B6_u02B6_u02C1_u02B6_u02B7_u02B6_u02B4_u02B4_u02BB_u02C0_u02C;
@@ -41,27 +38,20 @@ public readonly struct \u02B2\u02BA\u02BA\u02B8\u02B5\u02BC\u02BA\u02BE\u02BB\u0
 		this.\u02BE\u02BE\u02BB\u02B3\u02B4\u02B2\u02BD\u02B4\u02B8\u02B6\u02B9 = \u02B2\u02BA\u02BA\u02B8\u02B5\u02BC\u02BA\u02BE\u02BB\u02BA\u02B5.\u02C1\u02B4\u02B7\u02B2\u02B4\u02BA\u02C0\u02B6\u02C0\u02B4\u02C1(ref u02B6_u02B6_u02C1_u02B6_u02B7_u02B6_u02B4_u02B4_u02BB_u02C0_u02C);
 	}
 
-	// Token: 0x040000DD RID: 221
 	public readonly string \u02B5\u02BF\u02B4\u02C1\u02BE\u02B7\u02C0\u02B9\u02C1\u02B8\u02BC;
 
-	// Token: 0x040000DE RID: 222
 	public readonly float \u02B6\u02BB\u02BB\u02B2\u02BF\u02B6\u02B6\u02B2\u02B4\u02C1\u02C1;
 
-	// Token: 0x040000DF RID: 223
 	public readonly int \u02BE\u02BE\u02BB\u02B3\u02B4\u02B2\u02BD\u02B4\u02B8\u02B6\u02B9;
 
-	// Token: 0x040000E0 RID: 224
 	public readonly int \u02B8\u02B9\u02C1\u02B6\u02C1\u02B5\u02B5\u02B7\u02BE\u02B8\u02BE;
 
-	// Token: 0x0200002C RID: 44
 	[CompilerGenerated]
 	[StructLayout(3)]
 	private struct \u02B6\u02B6\u02C1\u02B6\u02B7\u02B6\u02B4\u02B4\u02BB\u02C0\u02C0
 	{
-		// Token: 0x040000E1 RID: 225
 		public string path;
 
-		// Token: 0x040000E2 RID: 226
 		public int maxAmountOfPlays;
 	}
 }

@@ -1,12 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x020001E9 RID: 489
 public class PracticeSectionDisplay : MonoBehaviour
 {
-	// Token: 0x060015C5 RID: 5573 RVA: 0x000A8B38 File Offset: 0x000A6D38
 	private void \u02B4\u02B4\u02B8\u02BF\u02B9\u02B9\u02B8\u02B6\u02B9\u02B5\u02B2()
 	{
 		if (this.\u02C0\u02B4\u02BC\u02BA\u02B4\u02C1\u02BF\u02B3\u02B7\u02B6\u02B6 + 1 < this.\u02B4\u02BD\u02B7\u02B7\u02B6\u02BC\u02BB\u02B4\u02B3\u02B2\u02BD.Count && this.gameManager.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9 >= (double)this.\u02B9\u02B8\u02B7\u02BC\u02BF\u02BA\u02B4\u02BA\u02B6\u02B2\u02BA[this.\u02C0\u02B4\u02BC\u02BA\u02B4\u02C1\u02BF\u02B3\u02B7\u02B6\u02B6 + 1])
@@ -39,7 +37,6 @@ public class PracticeSectionDisplay : MonoBehaviour
 		this.sectionDisplay.alpha = (num - this.\u02BD\u02BA\u02BF\u02BB\u02BD\u02BD\u02B7\u02C1\u02B8\u02BF\u02B5) / this.\u02BD\u02BA\u02BF\u02BB\u02BD\u02BD\u02B7\u02C1\u02B8\u02BF\u02B5;
 	}
 
-	// Token: 0x060015C6 RID: 5574 RVA: 0x000A8C50 File Offset: 0x000A6E50
 	private void \u02B4\u02B7\u02B7\u02B6\u02BA\u02B3\u02B9\u02C0\u02B4\u02B8\u02BB()
 	{
 		if (this.\u02C0\u02B4\u02BC\u02BA\u02B4\u02C1\u02BF\u02B3\u02B7\u02B6\u02B6 + 1 < this.\u02B4\u02BD\u02B7\u02B7\u02B6\u02BC\u02BB\u02B4\u02B3\u02B2\u02BD.Count && this.gameManager.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9 >= (double)this.\u02B9\u02B8\u02B7\u02BC\u02BF\u02BA\u02B4\u02BA\u02B6\u02B2\u02BA[this.\u02C0\u02B4\u02BC\u02BA\u02B4\u02C1\u02BF\u02B3\u02B7\u02B6\u02B6 + 1])
@@ -72,7 +69,6 @@ public class PracticeSectionDisplay : MonoBehaviour
 		this.sectionDisplay.alpha = (num - this.\u02BD\u02BA\u02BF\u02BB\u02BD\u02BD\u02B7\u02C1\u02B8\u02BF\u02B5) / this.\u02BD\u02BA\u02BF\u02BB\u02BD\u02BD\u02B7\u02C1\u02B8\u02BF\u02B5;
 	}
 
-	// Token: 0x060015C7 RID: 5575 RVA: 0x000A8D68 File Offset: 0x000A6F68
 	public void \u02B7\u02BB\u02B8\u02BF\u02B9\u02C1\u02B4\u02C0\u02B4\u02C0\u02BF()
 	{
 		if (this.\u02B4\u02BD\u02B7\u02B7\u02B6\u02BC\u02BB\u02B4\u02B3\u02B2\u02BD == null || this.\u02B4\u02BD\u02B7\u02B7\u02B6\u02BC\u02BB\u02B4\u02B3\u02B2\u02BD.Count == 0)
@@ -90,7 +86,6 @@ public class PracticeSectionDisplay : MonoBehaviour
 		this.\u02B7\u02B5\u02B3\u02BE\u02B4\u02B4\u02BC\u02BF\u02B4\u02BA\u02B8 = true;
 	}
 
-	// Token: 0x060015C8 RID: 5576 RVA: 0x000A8E28 File Offset: 0x000A7028
 	private void \u02B9\u02BD\u02B5\u02C1\u02B6\u02B6\u02BD\u02B9\u02BC\u02C1\u02B3()
 	{
 		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 == null || !GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
@@ -103,7 +98,6 @@ public class PracticeSectionDisplay : MonoBehaviour
 		base.enabled = true;
 	}
 
-	// Token: 0x060015C9 RID: 5577 RVA: 0x000A8E7C File Offset: 0x000A707C
 	private void \u02B5\u02B9\u02B5\u02B3\u02BF\u02C1\u02B7\u02BD\u02C0\u02B7\u02C0()
 	{
 		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 == null || !GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
@@ -116,7 +110,6 @@ public class PracticeSectionDisplay : MonoBehaviour
 		base.enabled = true;
 	}
 
-	// Token: 0x060015CA RID: 5578 RVA: 0x000A8ED0 File Offset: 0x000A70D0
 	public void \u02BD\u02B8\u02B5\u02B3\u02B2\u02B3\u02C0\u02C1\u02BD\u02B6\u02BD()
 	{
 		if (this.\u02B4\u02BD\u02B7\u02B7\u02B6\u02BC\u02BB\u02B4\u02B3\u02B2\u02BD == null || this.\u02B4\u02BD\u02B7\u02B7\u02B6\u02BC\u02BB\u02B4\u02B3\u02B2\u02BD.Count == 0)
@@ -134,7 +127,6 @@ public class PracticeSectionDisplay : MonoBehaviour
 		this.\u02B7\u02B5\u02B3\u02BE\u02B4\u02B4\u02BC\u02BF\u02B4\u02BA\u02B8 = true;
 	}
 
-	// Token: 0x060015CC RID: 5580 RVA: 0x000A8F90 File Offset: 0x000A7190
 	private void \u02BB\u02B2\u02B3\u02BD\u02B2\u02C0\u02B5\u02B6\u02B9\u02B3\u02BB()
 	{
 		if (this.\u02C0\u02B4\u02BC\u02BA\u02B4\u02C1\u02BF\u02B3\u02B7\u02B6\u02B6 + 1 < this.\u02B4\u02BD\u02B7\u02B7\u02B6\u02BC\u02BB\u02B4\u02B3\u02B2\u02BD.Count && this.gameManager.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9 >= (double)this.\u02B9\u02B8\u02B7\u02BC\u02BF\u02BA\u02B4\u02BA\u02B6\u02B2\u02BA[this.\u02C0\u02B4\u02BC\u02BA\u02B4\u02C1\u02BF\u02B3\u02B7\u02B6\u02B6 + 0])
@@ -167,7 +159,6 @@ public class PracticeSectionDisplay : MonoBehaviour
 		this.sectionDisplay.alpha = (num - this.\u02BD\u02BA\u02BF\u02BB\u02BD\u02BD\u02B7\u02C1\u02B8\u02BF\u02B5) / this.\u02BD\u02BA\u02BF\u02BB\u02BD\u02BD\u02B7\u02C1\u02B8\u02BF\u02B5;
 	}
 
-	// Token: 0x060015CD RID: 5581 RVA: 0x000A90A8 File Offset: 0x000A72A8
 	private void \u02B4\u02C1\u02B6\u02BE\u02B3\u02B4\u02BD\u02B7\u02B6\u02C0\u02B9()
 	{
 		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 == null || !GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
@@ -180,7 +171,6 @@ public class PracticeSectionDisplay : MonoBehaviour
 		base.enabled = false;
 	}
 
-	// Token: 0x060015CE RID: 5582 RVA: 0x000A90FC File Offset: 0x000A72FC
 	private void \u02B8\u02BD\u02B4\u02BB\u02BD\u02BB\u02B9\u02B3\u02BC\u02B9\u02BC()
 	{
 		if (this.\u02C0\u02B4\u02BC\u02BA\u02B4\u02C1\u02BF\u02B3\u02B7\u02B6\u02B6 + 1 < this.\u02B4\u02BD\u02B7\u02B7\u02B6\u02BC\u02BB\u02B4\u02B3\u02B2\u02BD.Count && this.gameManager.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9 >= (double)this.\u02B9\u02B8\u02B7\u02BC\u02BF\u02BA\u02B4\u02BA\u02B6\u02B2\u02BA[this.\u02C0\u02B4\u02BC\u02BA\u02B4\u02C1\u02BF\u02B3\u02B7\u02B6\u02B6 + 1])
@@ -213,7 +203,6 @@ public class PracticeSectionDisplay : MonoBehaviour
 		this.sectionDisplay.alpha = (num - this.\u02BD\u02BA\u02BF\u02BB\u02BD\u02BD\u02B7\u02C1\u02B8\u02BF\u02B5) / this.\u02BD\u02BA\u02BF\u02BB\u02BD\u02BD\u02B7\u02C1\u02B8\u02BF\u02B5;
 	}
 
-	// Token: 0x060015CF RID: 5583 RVA: 0x000A9214 File Offset: 0x000A7414
 	public void \u02BE\u02B7\u02BF\u02B2\u02B6\u02B2\u02B2\u02B2\u02B3\u02B9\u02BC(List<\u02B8\u02BB\u02B2\u02B5\u02C1\u02C1\u02BB\u02B7\u02B3\u02B4\u02B6> \u02B4\u02BC\u02B6\u02C1\u02B6\u02C1\u02B7\u02B7\u02B2\u02BC\u02B5)
 	{
 		if (this.\u02B9\u02B8\u02B7\u02BC\u02BF\u02BA\u02B4\u02BA\u02B6\u02B2\u02BA == null)
@@ -228,7 +217,6 @@ public class PracticeSectionDisplay : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060015D0 RID: 5584 RVA: 0x000A9288 File Offset: 0x000A7488
 	public void \u02BA\u02BC\u02BC\u02B2\u02BA\u02BB\u02BF\u02B7\u02C0\u02BC\u02BF(List<\u02B8\u02BB\u02B2\u02B5\u02C1\u02C1\u02BB\u02B7\u02B3\u02B4\u02B6> \u02B4\u02BC\u02B6\u02C1\u02B6\u02C1\u02B7\u02B7\u02B2\u02BC\u02B5)
 	{
 		if (this.\u02B9\u02B8\u02B7\u02BC\u02BF\u02BA\u02B4\u02BA\u02B6\u02B2\u02BA == null)
@@ -243,7 +231,6 @@ public class PracticeSectionDisplay : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060015D1 RID: 5585 RVA: 0x000A92FC File Offset: 0x000A74FC
 	private void \u02BB\u02BD\u02C0\u02C1\u02C0\u02B3\u02B9\u02B6\u02BE\u02BF\u02BB()
 	{
 		if (this.\u02C0\u02B4\u02BC\u02BA\u02B4\u02C1\u02BF\u02B3\u02B7\u02B6\u02B6 + 1 < this.\u02B4\u02BD\u02B7\u02B7\u02B6\u02BC\u02BB\u02B4\u02B3\u02B2\u02BD.Count && this.gameManager.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9 >= (double)this.\u02B9\u02B8\u02B7\u02BC\u02BF\u02BA\u02B4\u02BA\u02B6\u02B2\u02BA[this.\u02C0\u02B4\u02BC\u02BA\u02B4\u02C1\u02BF\u02B3\u02B7\u02B6\u02B6 + 1])
@@ -276,7 +263,6 @@ public class PracticeSectionDisplay : MonoBehaviour
 		this.sectionDisplay.alpha = (num - this.\u02BD\u02BA\u02BF\u02BB\u02BD\u02BD\u02B7\u02C1\u02B8\u02BF\u02B5) / this.\u02BD\u02BA\u02BF\u02BB\u02BD\u02BD\u02B7\u02C1\u02B8\u02BF\u02B5;
 	}
 
-	// Token: 0x060015D2 RID: 5586 RVA: 0x000A9414 File Offset: 0x000A7614
 	private void Awake()
 	{
 		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 == null || !GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
@@ -289,7 +275,6 @@ public class PracticeSectionDisplay : MonoBehaviour
 		base.enabled = false;
 	}
 
-	// Token: 0x060015D3 RID: 5587 RVA: 0x000A9468 File Offset: 0x000A7668
 	private void FixedUpdate()
 	{
 		if (this.\u02C0\u02B4\u02BC\u02BA\u02B4\u02C1\u02BF\u02B3\u02B7\u02B6\u02B6 + 1 < this.\u02B4\u02BD\u02B7\u02B7\u02B6\u02BC\u02BB\u02B4\u02B3\u02B2\u02BD.Count && this.gameManager.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9 >= (double)this.\u02B9\u02B8\u02B7\u02BC\u02BF\u02BA\u02B4\u02BA\u02B6\u02B2\u02BA[this.\u02C0\u02B4\u02BC\u02BA\u02B4\u02C1\u02BF\u02B3\u02B7\u02B6\u02B6 + 1])
@@ -322,7 +307,6 @@ public class PracticeSectionDisplay : MonoBehaviour
 		this.sectionDisplay.alpha = (num - this.\u02BD\u02BA\u02BF\u02BB\u02BD\u02BD\u02B7\u02C1\u02B8\u02BF\u02B5) / this.\u02BD\u02BA\u02BF\u02BB\u02BD\u02BD\u02B7\u02C1\u02B8\u02BF\u02B5;
 	}
 
-	// Token: 0x060015D4 RID: 5588 RVA: 0x000A9580 File Offset: 0x000A7780
 	public void \u02B9\u02BD\u02BA\u02B4\u02B4\u02B4\u02B8\u02BC\u02B5\u02B8\u02B5()
 	{
 		if (this.\u02B4\u02BD\u02B7\u02B7\u02B6\u02BC\u02BB\u02B4\u02B3\u02B2\u02BD == null || this.\u02B4\u02BD\u02B7\u02B7\u02B6\u02BC\u02BB\u02B4\u02B3\u02B2\u02BD.Count == 0)
@@ -340,7 +324,6 @@ public class PracticeSectionDisplay : MonoBehaviour
 		this.\u02B7\u02B5\u02B3\u02BE\u02B4\u02B4\u02BC\u02BF\u02B4\u02BA\u02B8 = false;
 	}
 
-	// Token: 0x060015D5 RID: 5589 RVA: 0x000A9640 File Offset: 0x000A7840
 	public void \u02BA\u02BE\u02B9\u02B9\u02B8\u02BE\u02B9\u02C1\u02C1\u02B9\u02B7()
 	{
 		if (this.\u02B4\u02BD\u02B7\u02B7\u02B6\u02BC\u02BB\u02B4\u02B3\u02B2\u02BD == null || this.\u02B4\u02BD\u02B7\u02B7\u02B6\u02BC\u02BB\u02B4\u02B3\u02B2\u02BD.Count == 0)
@@ -358,7 +341,6 @@ public class PracticeSectionDisplay : MonoBehaviour
 		this.\u02B7\u02B5\u02B3\u02BE\u02B4\u02B4\u02BC\u02BF\u02B4\u02BA\u02B8 = false;
 	}
 
-	// Token: 0x060015D6 RID: 5590 RVA: 0x000A9700 File Offset: 0x000A7900
 	public void \u02C1\u02B5\u02B4\u02B7\u02C0\u02BF\u02B9\u02B9\u02C0\u02BD\u02BF()
 	{
 		if (this.\u02B4\u02BD\u02B7\u02B7\u02B6\u02BC\u02BB\u02B4\u02B3\u02B2\u02BD == null || this.\u02B4\u02BD\u02B7\u02B7\u02B6\u02BC\u02BB\u02B4\u02B3\u02B2\u02BD.Count == 0)
@@ -376,7 +358,6 @@ public class PracticeSectionDisplay : MonoBehaviour
 		this.\u02B7\u02B5\u02B3\u02BE\u02B4\u02B4\u02BC\u02BF\u02B4\u02BA\u02B8 = true;
 	}
 
-	// Token: 0x060015D7 RID: 5591 RVA: 0x000A97C0 File Offset: 0x000A79C0
 	public void \u02B5\u02BD\u02B5\u02BF\u02B3\u02B3\u02BE\u02B7\u02B6\u02B8\u02C1(List<\u02B8\u02BB\u02B2\u02B5\u02C1\u02C1\u02BB\u02B7\u02B3\u02B4\u02B6> \u02B4\u02BC\u02B6\u02C1\u02B6\u02C1\u02B7\u02B7\u02B2\u02BC\u02B5)
 	{
 		if (this.\u02B9\u02B8\u02B7\u02BC\u02BF\u02BA\u02B4\u02BA\u02B6\u02B2\u02BA == null)
@@ -391,7 +372,6 @@ public class PracticeSectionDisplay : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060015D8 RID: 5592 RVA: 0x000A97C0 File Offset: 0x000A79C0
 	public void \u02B4\u02B9\u02B4\u02B5\u02B9\u02B5\u02B3\u02C1\u02BD\u02B6\u02B4(List<\u02B8\u02BB\u02B2\u02B5\u02C1\u02C1\u02BB\u02B7\u02B3\u02B4\u02B6> \u02B4\u02BC\u02B6\u02C1\u02B6\u02C1\u02B7\u02B7\u02B2\u02BC\u02B5)
 	{
 		if (this.\u02B9\u02B8\u02B7\u02BC\u02BF\u02BA\u02B4\u02BA\u02B6\u02B2\u02BA == null)
@@ -406,7 +386,6 @@ public class PracticeSectionDisplay : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060015D9 RID: 5593 RVA: 0x000A9834 File Offset: 0x000A7A34
 	public void \u02B2\u02B3\u02BA\u02B8\u02BA\u02BD\u02B9\u02BE\u02BB\u02C1\u02B7(List<\u02B8\u02BB\u02B2\u02B5\u02C1\u02C1\u02BB\u02B7\u02B3\u02B4\u02B6> \u02B4\u02BC\u02B6\u02C1\u02B6\u02C1\u02B7\u02B7\u02B2\u02BC\u02B5)
 	{
 		if (this.\u02B9\u02B8\u02B7\u02BC\u02BF\u02BA\u02B4\u02BA\u02B6\u02B2\u02BA == null)
@@ -421,7 +400,6 @@ public class PracticeSectionDisplay : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060015DA RID: 5594 RVA: 0x000A98A8 File Offset: 0x000A7AA8
 	private void \u02B7\u02BF\u02BC\u02C0\u02B5\u02BD\u02BF\u02BB\u02C1\u02BF\u02B2()
 	{
 		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 == null || !GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
@@ -434,7 +412,6 @@ public class PracticeSectionDisplay : MonoBehaviour
 		base.enabled = false;
 	}
 
-	// Token: 0x060015DB RID: 5595 RVA: 0x000A98FC File Offset: 0x000A7AFC
 	private void \u02B5\u02BD\u02BD\u02BE\u02B9\u02BD\u02B2\u02C1\u02C1\u02B3\u02B6()
 	{
 		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 == null || !GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
@@ -447,7 +424,6 @@ public class PracticeSectionDisplay : MonoBehaviour
 		base.enabled = true;
 	}
 
-	// Token: 0x060015DC RID: 5596 RVA: 0x000A9950 File Offset: 0x000A7B50
 	private void \u02BD\u02BE\u02B2\u02C0\u02BF\u02B9\u02C1\u02B2\u02BF\u02B7\u02B3()
 	{
 		if (this.\u02C0\u02B4\u02BC\u02BA\u02B4\u02C1\u02BF\u02B3\u02B7\u02B6\u02B6 + 1 < this.\u02B4\u02BD\u02B7\u02B7\u02B6\u02BC\u02BB\u02B4\u02B3\u02B2\u02BD.Count && this.gameManager.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9 >= (double)this.\u02B9\u02B8\u02B7\u02BC\u02BF\u02BA\u02B4\u02BA\u02B6\u02B2\u02BA[this.\u02C0\u02B4\u02BC\u02BA\u02B4\u02C1\u02BF\u02B3\u02B7\u02B6\u02B6 + 0])
@@ -480,33 +456,24 @@ public class PracticeSectionDisplay : MonoBehaviour
 		this.sectionDisplay.alpha = (num - this.\u02BD\u02BA\u02BF\u02BB\u02BD\u02BD\u02B7\u02C1\u02B8\u02BF\u02B5) / this.\u02BD\u02BA\u02BF\u02BB\u02BD\u02BD\u02B7\u02C1\u02B8\u02BF\u02B5;
 	}
 
-	// Token: 0x04000FEB RID: 4075
 	[HideInInspector]
 	public List<\u02B8\u02BB\u02B2\u02B5\u02C1\u02C1\u02BB\u02B7\u02B3\u02B4\u02B6> \u02B4\u02BD\u02B7\u02B7\u02B6\u02BC\u02BB\u02B4\u02B3\u02B2\u02BD;
 
-	// Token: 0x04000FEC RID: 4076
 	private float[] \u02B9\u02B8\u02B7\u02BC\u02BF\u02BA\u02B4\u02BA\u02B6\u02B2\u02BA;
 
-	// Token: 0x04000FED RID: 4077
 	[SerializeField]
 	private TextMeshProUGUI sectionDisplay;
 
-	// Token: 0x04000FEE RID: 4078
 	[SerializeField]
 	private GameManager gameManager;
 
-	// Token: 0x04000FEF RID: 4079
 	private int \u02C0\u02B4\u02BC\u02BA\u02B4\u02C1\u02BF\u02B3\u02B7\u02B6\u02B6;
 
-	// Token: 0x04000FF0 RID: 4080
 	private bool \u02B7\u02B5\u02B3\u02BE\u02B4\u02B4\u02BC\u02BF\u02B4\u02BA\u02B8;
 
-	// Token: 0x04000FF1 RID: 4081
 	private bool \u02B8\u02B7\u02BA\u02B2\u02B4\u02B5\u02BA\u02BF\u02BC\u02BA\u02BF;
 
-	// Token: 0x04000FF2 RID: 4082
 	private const float \u02B6\u02BD\u02B8\u02B8\u02B6\u02B3\u02C0\u02BA\u02B4\u02C0\u02B5 = 1f;
 
-	// Token: 0x04000FF3 RID: 4083
 	private float \u02BD\u02BA\u02BF\u02BB\u02BD\u02BD\u02B7\u02C1\u02B8\u02BF\u02B5;
 }

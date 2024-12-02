@@ -1,12 +1,10 @@
-﻿using System;
+using System;
 using System.IO;
 using UnityEngine;
 using UnityEngine.Video;
 
-// Token: 0x02000142 RID: 322
 public class HighwayScroll : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\u02B9\u02C0\u02B8\u02B4\u02BC
 {
-	// Token: 0x06000E5D RID: 3677 RVA: 0x0000DD00 File Offset: 0x0000BF00
 	private void \u02BB\u02B7\u02BF\u02BC\u02B6\u02BB\u02B3\u02B2\u02B2\u02B5\u02BF(VideoPlayer \u02B8\u02B9\u02BA\u02BE\u02B7\u02C1\u02C1\u02B5\u02B6\u02B5\u02BE)
 	{
 		if (this.\u02B6\u02B3\u02B4\u02BA\u02B4\u02B2\u02B9\u02BE\u02BD\u02B7\u02B5.videoHighwaySettings.mirroredRepeat)
@@ -20,13 +18,11 @@ public class HighwayScroll : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6
 		\u02B8\u02B9\u02BA\u02BE\u02B7\u02C1\u02C1\u02B5\u02B6\u02B5\u02BE.Play();
 	}
 
-	// Token: 0x06000E5E RID: 3678 RVA: 0x0007A7F4 File Offset: 0x000789F4
 	private float \u02BC\u02BD\u02C1\u02BD\u02BC\u02BD\u02B2\u02B9\u02B8\u02B2\u02B3(Sprite \u02BE\u02B2\u02BB\u02B8\u02B3\u02BF\u02C0\u02C0\u02BC\u02BF\u02BA)
 	{
 		return base.transform.localScale.y * (\u02BE\u02B2\u02BB\u02B8\u02B3\u02BF\u02C0\u02C0\u02BC\u02BF\u02BA.rect.height / \u02BE\u02B2\u02BB\u02B8\u02B3\u02BF\u02C0\u02C0\u02BC\u02BF\u02BA.pixelsPerUnit) / 1119f;
 	}
 
-	// Token: 0x06000E5F RID: 3679 RVA: 0x0007A830 File Offset: 0x00078A30
 	private void Update()
 	{
 		if (this.\u02B2\u02C1\u02BC\u02B3\u02B4\u02B4\u02C0\u02B9\u02B3\u02B7\u02C1)
@@ -66,7 +62,6 @@ public class HighwayScroll : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6
 		}
 	}
 
-	// Token: 0x06000E60 RID: 3680 RVA: 0x0007A99C File Offset: 0x00078B9C
 	private void \u02BC\u02C1\u02BE\u02BE\u02B9\u02C1\u02B4\u02B5\u02BF\u02B8\u02C1()
 	{
 		if (SettingsController.\u02C1\u02BF\u02C0\u02BF\u02B8\u02B8\u02C0\u02C0\u02B3\u02B3\u02BB && !GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1.isEnc)
@@ -85,7 +80,6 @@ public class HighwayScroll : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6
 		this.\u02B2\u02C0\u02B3\u02BE\u02B7\u02B9\u02B6\u02C0\u02BC\u02B9\u02B9(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BC\u02B3\u02C1\u02C0\u02B6\u02B2\u02BE\u02B7\u02C1\u02BF\u02B5(this.\u02B3\u02C0\u02BB\u02BC\u02BC\u02B4\u02BD\u02BC\u02C0\u02C1\u02B7, false));
 	}
 
-	// Token: 0x06000E61 RID: 3681 RVA: 0x0007AA30 File Offset: 0x00078C30
 	public void \u02B2\u02C0\u02B3\u02BE\u02B7\u02B9\u02B6\u02C0\u02BC\u02B9\u02B9(Texture2D \u02B7\u02BE\u02BF\u02B4\u02B2\u02B4\u02BA\u02BE\u02BC\u02B8\u02B9)
 	{
 		if (\u02B7\u02BE\u02BF\u02B4\u02B2\u02B4\u02BA\u02BE\u02BC\u02B8\u02B9 == null)
@@ -100,8 +94,6 @@ public class HighwayScroll : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6
 		this.\u02B3\u02C0\u02B3\u02BD\u02BB\u02B3\u02BA\u02C1\u02B2\u02B5\u02BD.y = this.\u02B7\u02C1\u02B7\u02B8\u02BE\u02B4\u02B3\u02BA\u02B2\u02B6\u02B9(sprite);
 	}
 
-	// Token: 0x17000150 RID: 336
-	// (get) Token: 0x06000E62 RID: 3682 RVA: 0x0000DD39 File Offset: 0x0000BF39
 	public \u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3 \u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3
 	{
 		get
@@ -110,19 +102,16 @@ public class HighwayScroll : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6
 		}
 	}
 
-	// Token: 0x06000E63 RID: 3683 RVA: 0x0007AAC8 File Offset: 0x00078CC8
 	private float \u02B9\u02BD\u02BD\u02C0\u02BE\u02B8\u02BC\u02BA\u02BC\u02B2\u02BF(Sprite \u02BE\u02B2\u02BB\u02B8\u02B3\u02BF\u02C0\u02C0\u02BC\u02BF\u02BA)
 	{
 		return base.transform.localScale.y * (\u02BE\u02B2\u02BB\u02B8\u02B3\u02BF\u02C0\u02C0\u02BC\u02BF\u02BA.rect.height / \u02BE\u02B2\u02BB\u02B8\u02B3\u02BF\u02C0\u02C0\u02BC\u02BF\u02BA.pixelsPerUnit) / 6f;
 	}
 
-	// Token: 0x06000E64 RID: 3684 RVA: 0x0000DD3C File Offset: 0x0000BF3C
 	public \u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3 \u02B6\u02BE\u02B6\u02B7\u02BB\u02B8\u02B3\u02BA\u02B7\u02B3\u02BE()
 	{
 		return (\u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3)6;
 	}
 
-	// Token: 0x06000E65 RID: 3685 RVA: 0x0000DD3F File Offset: 0x0000BF3F
 	private void \u02B5\u02B5\u02B5\u02B6\u02BC\u02BF\u02BD\u02C0\u02BD\u02B3\u02B4(VideoPlayer \u02B8\u02B9\u02BA\u02BE\u02B7\u02C1\u02C1\u02B5\u02B6\u02B5\u02BE)
 	{
 		if (this.\u02B6\u02B3\u02B4\u02BA\u02B4\u02B2\u02B9\u02BE\u02BD\u02B7\u02B5.videoHighwaySettings.mirroredRepeat)
@@ -136,7 +125,6 @@ public class HighwayScroll : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6
 		\u02B8\u02B9\u02BA\u02BE\u02B7\u02C1\u02C1\u02B5\u02B6\u02B5\u02BE.Play();
 	}
 
-	// Token: 0x06000E66 RID: 3686 RVA: 0x0007AB04 File Offset: 0x00078D04
 	private void \u02B4\u02B6\u02BD\u02B5\u02C0\u02B6\u02BA\u02C1\u02C0\u02BC\u02BB()
 	{
 		if (this.\u02B2\u02C1\u02BC\u02B3\u02B4\u02B4\u02C0\u02B9\u02B3\u02B7\u02C1)
@@ -176,7 +164,6 @@ public class HighwayScroll : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6
 		}
 	}
 
-	// Token: 0x06000E67 RID: 3687 RVA: 0x0007AC68 File Offset: 0x00078E68
 	private void \u02B9\u02B7\u02BC\u02B4\u02BD\u02B2\u02C0\u02B6\u02BE\u02BF\u02BE()
 	{
 		if (SettingsController.\u02C1\u02BF\u02C0\u02BF\u02B8\u02B8\u02C0\u02C0\u02B3\u02B3\u02BB && !GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1.isEnc)
@@ -193,7 +180,6 @@ public class HighwayScroll : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6
 		this.\u02B3\u02B7\u02BD\u02B4\u02BA\u02BB\u02B7\u02B3\u02BB\u02BC\u02B7(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BC\u02B3\u02C1\u02C0\u02B6\u02B2\u02BE\u02B7\u02C1\u02BF\u02B5(this.\u02B3\u02C0\u02BB\u02BC\u02BC\u02B4\u02BD\u02BC\u02C0\u02C1\u02B7, false));
 	}
 
-	// Token: 0x06000E68 RID: 3688 RVA: 0x0007ACFC File Offset: 0x00078EFC
 	public void \u02BF\u02B2\u02B6\u02B6\u02BD\u02C0\u02BE\u02B6\u02B6\u02BA\u02B8(float \u02B3\u02BD\u02BE\u02BB\u02BB\u02B9\u02B2\u02B9\u02BC\u02BB\u02BF, float \u02C1\u02B8\u02B7\u02B5\u02B2\u02BA\u02BC\u02B2\u02B7\u02B2\u02BC, float \u02B2\u02BA\u02BD\u02B8\u02C1\u02B3\u02B8\u02BF\u02B5\u02B9\u02BA, float \u02B3\u02BD\u02B6\u02B8\u02B3\u02BE\u02B3\u02C0\u02B3\u02C1\u02B4)
 	{
 		float num = this.\u02B8\u02B9\u02BB\u02BD\u02B8\u02B4\u02C1\u02B8\u02B9\u02B9\u02BB.sprite.rect.height / this.\u02B8\u02B9\u02BB\u02BD\u02B8\u02B4\u02C1\u02B8\u02B9\u02B9\u02BB.sprite.pixelsPerUnit;
@@ -203,7 +189,6 @@ public class HighwayScroll : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6
 		this.\u02B3\u02C0\u02B3\u02BD\u02BB\u02B3\u02BA\u02C1\u02B2\u02B5\u02BD.y = this.\u02B9\u02BD\u02BD\u02C0\u02BE\u02B8\u02BC\u02BA\u02BC\u02B2\u02BF(this.\u02B8\u02B9\u02BB\u02BD\u02B8\u02B4\u02C1\u02B8\u02B9\u02B9\u02BB.sprite);
 	}
 
-	// Token: 0x06000E69 RID: 3689 RVA: 0x0000DD78 File Offset: 0x0000BF78
 	private void \u02B4\u02B6\u02B5\u02C1\u02B7\u02B8\u02BA\u02BD\u02C1\u02B9\u02B6(VideoPlayer \u02B8\u02B9\u02BA\u02BE\u02B7\u02C1\u02C1\u02B5\u02B6\u02B5\u02BE)
 	{
 		if (this.\u02B6\u02B3\u02B4\u02BA\u02B4\u02B2\u02B9\u02BE\u02BD\u02B7\u02B5.videoHighwaySettings.mirroredRepeat)
@@ -217,7 +202,6 @@ public class HighwayScroll : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6
 		\u02B8\u02B9\u02BA\u02BE\u02B7\u02C1\u02C1\u02B5\u02B6\u02B5\u02BE.Play();
 	}
 
-	// Token: 0x06000E6A RID: 3690 RVA: 0x0007AD9C File Offset: 0x00078F9C
 	private void \u02BC\u02BC\u02B6\u02C0\u02BC\u02C1\u02B8\u02C1\u02C0\u02C1\u02BC()
 	{
 		this.\u02B3\u02C0\u02BB\u02BC\u02BC\u02B4\u02BD\u02BC\u02C0\u02C1\u02B7 = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BA\u02C0\u02C1\u02B9\u02B4\u02BB\u02B9\u02B2\u02C0\u02B4\u02B5(this.player.playerStuff.playerInfo.highwayName);
@@ -232,19 +216,16 @@ public class HighwayScroll : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6
 		this.\u02C1\u02B9\u02BD\u02B4\u02B9\u02B9\u02B2\u02B6\u02BA\u02BB\u02C0 = Shader.PropertyToID("Device in use by ");
 	}
 
-	// Token: 0x06000E6B RID: 3691 RVA: 0x0000DDB1 File Offset: 0x0000BFB1
 	public \u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3 \u02BE\u02B5\u02B2\u02BC\u02C0\u02B6\u02B4\u02B7\u02C1\u02C1\u02B7()
 	{
 		return (\u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3)8;
 	}
 
-	// Token: 0x06000E6C RID: 3692 RVA: 0x0007AE48 File Offset: 0x00079048
 	private float \u02B7\u02C1\u02B7\u02B8\u02BE\u02B4\u02B3\u02BA\u02B2\u02B6\u02B9(Sprite \u02BE\u02B2\u02BB\u02B8\u02B3\u02BF\u02C0\u02C0\u02BC\u02BF\u02BA)
 	{
 		return base.transform.localScale.y * (\u02BE\u02B2\u02BB\u02B8\u02B3\u02BF\u02C0\u02C0\u02BC\u02BF\u02BA.rect.height / \u02BE\u02B2\u02BB\u02B8\u02B3\u02BF\u02C0\u02C0\u02BC\u02BF\u02BA.pixelsPerUnit) / 407f;
 	}
 
-	// Token: 0x06000E6D RID: 3693 RVA: 0x0007AE84 File Offset: 0x00079084
 	private void Awake()
 	{
 		this.\u02B3\u02C0\u02BB\u02BC\u02BC\u02B4\u02BD\u02BC\u02C0\u02C1\u02B7 = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BA\u02C0\u02C1\u02B9\u02B4\u02BB\u02B9\u02B2\u02C0\u02B4\u02B5(this.player.playerStuff.playerInfo.highwayName);
@@ -259,7 +240,6 @@ public class HighwayScroll : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6
 		this.\u02C1\u02B9\u02BD\u02B4\u02B9\u02B9\u02B2\u02B6\u02BA\u02BB\u02C0 = Shader.PropertyToID("_TextureScaleOffset");
 	}
 
-	// Token: 0x06000E6E RID: 3694 RVA: 0x0007AF30 File Offset: 0x00079130
 	public void \u02B3\u02BB\u02C0\u02BB\u02C0\u02BC\u02BA\u02B4\u02B6\u02B6\u02BA(float \u02B3\u02BD\u02BE\u02BB\u02BB\u02B9\u02B2\u02B9\u02BC\u02BB\u02BF, float \u02C1\u02B8\u02B7\u02B5\u02B2\u02BA\u02BC\u02B2\u02B7\u02B2\u02BC, float \u02B2\u02BA\u02BD\u02B8\u02C1\u02B3\u02B8\u02BF\u02B5\u02B9\u02BA, float \u02B3\u02BD\u02B6\u02B8\u02B3\u02BE\u02B3\u02C0\u02B3\u02C1\u02B4)
 	{
 		float num = this.\u02B8\u02B9\u02BB\u02BD\u02B8\u02B4\u02C1\u02B8\u02B9\u02B9\u02BB.sprite.rect.height / this.\u02B8\u02B9\u02BB\u02BD\u02B8\u02B4\u02C1\u02B8\u02B9\u02B9\u02BB.sprite.pixelsPerUnit;
@@ -269,7 +249,6 @@ public class HighwayScroll : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6
 		this.\u02B3\u02C0\u02B3\u02BD\u02BB\u02B3\u02BA\u02C1\u02B2\u02B5\u02BD.y = this.\u02B9\u02BD\u02BD\u02C0\u02BE\u02B8\u02BC\u02BA\u02BC\u02B2\u02BF(this.\u02B8\u02B9\u02BB\u02BD\u02B8\u02B4\u02C1\u02B8\u02B9\u02B9\u02BB.sprite);
 	}
 
-	// Token: 0x06000E6F RID: 3695 RVA: 0x0007AFD0 File Offset: 0x000791D0
 	public void \u02B3\u02B7\u02BD\u02B4\u02BA\u02BB\u02B7\u02B3\u02BB\u02BC\u02B7(Texture2D \u02B7\u02BE\u02BF\u02B4\u02B2\u02B4\u02BA\u02BE\u02BC\u02B8\u02B9)
 	{
 		if (\u02B7\u02BE\u02BF\u02B4\u02B2\u02B4\u02BA\u02BE\u02BC\u02B8\u02B9 == null)
@@ -284,7 +263,6 @@ public class HighwayScroll : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6
 		this.\u02B3\u02C0\u02B3\u02BD\u02BB\u02B3\u02BA\u02C1\u02B2\u02B5\u02BD.y = this.\u02B9\u02BD\u02BD\u02C0\u02BE\u02B8\u02BC\u02BA\u02BC\u02B2\u02BF(sprite);
 	}
 
-	// Token: 0x06000E70 RID: 3696 RVA: 0x0007B068 File Offset: 0x00079268
 	private void Start()
 	{
 		if (this.player.playerStuff.playerInfo.HasModChartModifier)
@@ -332,7 +310,6 @@ public class HighwayScroll : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6
 		this.\u02B8\u02B9\u02BB\u02BD\u02B8\u02B4\u02C1\u02B8\u02B9\u02B9\u02BB.SetPropertyBlock(this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2);
 	}
 
-	// Token: 0x06000E71 RID: 3697 RVA: 0x0007B2E8 File Offset: 0x000794E8
 	private void \u02B4\u02C1\u02B6\u02BE\u02B3\u02B4\u02BD\u02B7\u02B6\u02C0\u02B9()
 	{
 		this.\u02B3\u02C0\u02BB\u02BC\u02BC\u02B4\u02BD\u02BC\u02C0\u02C1\u02B7 = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BA\u02C0\u02C1\u02B9\u02B4\u02BB\u02B9\u02B2\u02C0\u02B4\u02B5(this.player.playerStuff.playerInfo.highwayName);
@@ -347,65 +324,46 @@ public class HighwayScroll : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6
 		this.\u02C1\u02B9\u02BD\u02B4\u02B9\u02B9\u02B2\u02B6\u02BA\u02BB\u02C0 = Shader.PropertyToID("{0:N0}");
 	}
 
-	// Token: 0x06000E72 RID: 3698 RVA: 0x0000DDB4 File Offset: 0x0000BFB4
 	\u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3 \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\u02B9\u02C0\u02B8\u02B4\u02BC.\u02BA\u02BA\u02B7\u02B9\u02B9\u02B5\u02C1\u02C1\u02B2\u02B7\u02BA()
 	{
 		return this.\u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3;
 	}
 
-	// Token: 0x040009D3 RID: 2515
 	[SerializeField]
 	private BasePlayer player;
 
-	// Token: 0x040009D4 RID: 2516
 	private SpriteRenderer \u02B8\u02B9\u02BB\u02BD\u02B8\u02B4\u02C1\u02B8\u02B9\u02B9\u02BB;
 
-	// Token: 0x040009D5 RID: 2517
 	private double \u02BB\u02B4\u02B2\u02B3\u02B4\u02BD\u02B9\u02B8\u02B5\u02B8\u02BC;
 
-	// Token: 0x040009D6 RID: 2518
 	private double \u02BE\u02B4\u02B5\u02B4\u02B6\u02BD\u02B9\u02C0\u02BD\u02BA\u02BE;
 
-	// Token: 0x040009D7 RID: 2519
 	private float \u02B9\u02BE\u02BA\u02B5\u02BE\u02B2\u02B9\u02BB\u02B6\u02BE\u02B5;
 
-	// Token: 0x040009D8 RID: 2520
 	private GameManager \u02C0\u02B9\u02BB\u02BE\u02B6\u02C1\u02B6\u02B7\u02B6\u02BA\u02B2;
 
-	// Token: 0x040009D9 RID: 2521
 	private float \u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4;
 
-	// Token: 0x040009DA RID: 2522
 	[SerializeField]
 	private TrackFadeManager fadeManager;
 
-	// Token: 0x040009DB RID: 2523
 	private MaterialPropertyBlock \u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2;
 
-	// Token: 0x040009DC RID: 2524
 	private int \u02C1\u02B9\u02BD\u02B4\u02B9\u02B9\u02B2\u02B6\u02BA\u02BB\u02C0;
 
-	// Token: 0x040009DD RID: 2525
 	private Vector4 \u02B3\u02C0\u02B3\u02BD\u02BB\u02B3\u02BA\u02C1\u02B2\u02B5\u02BD;
 
-	// Token: 0x040009DE RID: 2526
 	private VideoPlayer \u02BB\u02BC\u02C1\u02B9\u02BB\u02C1\u02B6\u02BC\u02BB\u02BC\u02BD;
 
-	// Token: 0x040009DF RID: 2527
 	private HighwayData \u02B6\u02B3\u02B4\u02BA\u02B4\u02B2\u02B9\u02BE\u02BD\u02B7\u02B5;
 
-	// Token: 0x040009E0 RID: 2528
 	private int \u02B3\u02C0\u02BB\u02BC\u02BC\u02B4\u02BD\u02BC\u02C0\u02C1\u02B7 = -1;
 
-	// Token: 0x040009E1 RID: 2529
 	private bool \u02B2\u02C1\u02BC\u02B3\u02B4\u02B4\u02C0\u02B9\u02B3\u02B7\u02C1 = true;
 
-	// Token: 0x040009E2 RID: 2530
 	private Color \u02B6\u02B7\u02BE\u02B2\u02BC\u02B4\u02BB\u02BA\u02BE\u02C1\u02B9 = Color.white;
 
-	// Token: 0x040009E3 RID: 2531
 	private float \u02BD\u02B7\u02BD\u02B9\u02BB\u02BA\u02B3\u02C0\u02BB\u02BF\u02B6 = 1f;
 
-	// Token: 0x040009E4 RID: 2532
 	private bool \u02BE\u02C1\u02B4\u02B2\u02B3\u02B4\u02BC\u02B4\u02C0\u02C0\u02B4;
 }

@@ -1,18 +1,15 @@
-﻿using System;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Token: 0x020001D6 RID: 470
 [RequireComponent(typeof(RawImage))]
 public class BlackMenu : MonoBehaviour
 {
-	// Token: 0x060014C2 RID: 5314 RVA: 0x00010EAC File Offset: 0x0000F0AC
 	public static bool \u02B3\u02B4\u02B7\u02B2\u02B4\u02B8\u02B7\u02B3\u02B7\u02B3\u02B4()
 	{
 		return SettingsController.\u02B7\u02B9\u02B4\u02C1\u02B9\u02BC\u02B8\u02BD\u02BE\u02B5\u02B8.CurrentValue == -53;
 	}
 
-	// Token: 0x060014C3 RID: 5315 RVA: 0x000A2944 File Offset: 0x000A0B44
 	public void \u02B7\u02B8\u02B2\u02BB\u02B9\u02BA\u02B6\u02B9\u02B8\u02C1\u02BC(bool \u02BC\u02B3\u02C1\u02BA\u02B3\u02B2\u02C0\u02B9\u02B2\u02B5\u02BF)
 	{
 		if (\u02BC\u02B3\u02C1\u02BA\u02B3\u02B2\u02C0\u02B9\u02B2\u02B5\u02BF || this.\u02B8\u02BF\u02BB\u02B7\u02BE\u02B4\u02BA\u02B8\u02B4\u02BF\u02B5 != SettingsController.\u02B7\u02B9\u02B4\u02C1\u02B9\u02BC\u02B8\u02BD\u02BE\u02B5\u02B8.CurrentValue)
@@ -74,13 +71,11 @@ public class BlackMenu : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060014C4 RID: 5316 RVA: 0x00010EBC File Offset: 0x0000F0BC
 	public static bool \u02B7\u02B6\u02B2\u02B7\u02BD\u02B7\u02B3\u02BA\u02B9\u02BB\u02BB()
 	{
 		return SettingsController.\u02B7\u02B9\u02B4\u02C1\u02B9\u02BC\u02B8\u02BD\u02BE\u02B5\u02B8.CurrentValue == 89;
 	}
 
-	// Token: 0x060014C5 RID: 5317 RVA: 0x000A2944 File Offset: 0x000A0B44
 	public void \u02B2\u02B5\u02B7\u02BB\u02B5\u02BB\u02BA\u02BB\u02BA\u02B4\u02B4(bool \u02BC\u02B3\u02C1\u02BA\u02B3\u02B2\u02C0\u02B9\u02B2\u02B5\u02BF)
 	{
 		if (\u02BC\u02B3\u02C1\u02BA\u02B3\u02B2\u02C0\u02B9\u02B2\u02B5\u02BF || this.\u02B8\u02BF\u02BB\u02B7\u02BE\u02B4\u02BA\u02B8\u02B4\u02BF\u02B5 != SettingsController.\u02B7\u02B9\u02B4\u02C1\u02B9\u02BC\u02B8\u02BD\u02BE\u02B5\u02B8.CurrentValue)
@@ -142,35 +137,30 @@ public class BlackMenu : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060014C6 RID: 5318 RVA: 0x00010ECC File Offset: 0x0000F0CC
 	private void \u02BF\u02BA\u02B5\u02B8\u02B5\u02BF\u02B2\u02BF\u02B3\u02BC\u02BA()
 	{
 		this.\u02B5\u02BE\u02BA\u02BF\u02B7\u02BB\u02B2\u02BC\u02B5\u02B4\u02BE = base.GetComponent<RawImage>();
 		this.\u02BE\u02B5\u02B4\u02B7\u02BF\u02B4\u02C0\u02B4\u02C1\u02BE\u02B6(true);
 	}
 
-	// Token: 0x060014C7 RID: 5319 RVA: 0x00010EE1 File Offset: 0x0000F0E1
 	private void \u02B2\u02B7\u02B5\u02C0\u02B4\u02B3\u02B8\u02B3\u02C0\u02BD\u02B5()
 	{
 		this.\u02B5\u02BE\u02BA\u02BF\u02B7\u02BB\u02B2\u02BC\u02B5\u02B4\u02BE = base.GetComponent<RawImage>();
 		this.\u02B7\u02B8\u02B2\u02BB\u02B9\u02BA\u02B6\u02B9\u02B8\u02C1\u02BC(false);
 	}
 
-	// Token: 0x060014C8 RID: 5320 RVA: 0x00010EF6 File Offset: 0x0000F0F6
 	private void \u02B4\u02B2\u02B5\u02BA\u02B4\u02C0\u02BC\u02BB\u02C1\u02B9\u02BD()
 	{
 		this.\u02B5\u02BE\u02BA\u02BF\u02B7\u02BB\u02B2\u02BC\u02B5\u02B4\u02BE = base.GetComponent<RawImage>();
 		this.\u02C1\u02B7\u02B8\u02C1\u02BC\u02BC\u02B9\u02BF\u02B5\u02BD\u02BC(true);
 	}
 
-	// Token: 0x060014C9 RID: 5321 RVA: 0x00010EF6 File Offset: 0x0000F0F6
 	private void Start()
 	{
 		this.\u02B5\u02BE\u02BA\u02BF\u02B7\u02BB\u02B2\u02BC\u02B5\u02B4\u02BE = base.GetComponent<RawImage>();
 		this.\u02C1\u02B7\u02B8\u02C1\u02BC\u02BC\u02B9\u02BF\u02B5\u02BD\u02BC(true);
 	}
 
-	// Token: 0x060014CA RID: 5322 RVA: 0x000A2944 File Offset: 0x000A0B44
 	public void \u02BE\u02B5\u02B4\u02B7\u02BF\u02B4\u02C0\u02B4\u02C1\u02BE\u02B6(bool \u02BC\u02B3\u02C1\u02BA\u02B3\u02B2\u02C0\u02B9\u02B2\u02B5\u02BF)
 	{
 		if (\u02BC\u02B3\u02C1\u02BA\u02B3\u02B2\u02C0\u02B9\u02B2\u02B5\u02BF || this.\u02B8\u02BF\u02BB\u02B7\u02BE\u02B4\u02BA\u02B8\u02B4\u02BF\u02B5 != SettingsController.\u02B7\u02B9\u02B4\u02C1\u02B9\u02BC\u02B8\u02BD\u02BE\u02B5\u02B8.CurrentValue)
@@ -232,19 +222,16 @@ public class BlackMenu : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060014CB RID: 5323 RVA: 0x00010F0B File Offset: 0x0000F10B
 	private void FixedUpdate()
 	{
 		this.\u02C1\u02B7\u02B8\u02C1\u02BC\u02BC\u02B9\u02BF\u02B5\u02BD\u02BC(false);
 	}
 
-	// Token: 0x060014CC RID: 5324 RVA: 0x00010F14 File Offset: 0x0000F114
 	private void \u02BE\u02BF\u02BA\u02B2\u02B5\u02B8\u02B5\u02B3\u02B5\u02B6\u02B9()
 	{
 		this.\u02B2\u02B5\u02B7\u02BB\u02B5\u02BB\u02BA\u02BB\u02BA\u02B4\u02B4(false);
 	}
 
-	// Token: 0x060014CD RID: 5325 RVA: 0x000A2944 File Offset: 0x000A0B44
 	public void \u02BF\u02B2\u02C0\u02B3\u02B3\u02B3\u02BE\u02B7\u02B6\u02B3\u02B8(bool \u02BC\u02B3\u02C1\u02BA\u02B3\u02B2\u02C0\u02B9\u02B2\u02B5\u02BF)
 	{
 		if (\u02BC\u02B3\u02C1\u02BA\u02B3\u02B2\u02C0\u02B9\u02B2\u02B5\u02BF || this.\u02B8\u02BF\u02BB\u02B7\u02BE\u02B4\u02BA\u02B8\u02B4\u02BF\u02B5 != SettingsController.\u02B7\u02B9\u02B4\u02C1\u02B9\u02BC\u02B8\u02BD\u02BE\u02B5\u02B8.CurrentValue)
@@ -306,27 +293,23 @@ public class BlackMenu : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060014CE RID: 5326 RVA: 0x00010ECC File Offset: 0x0000F0CC
 	private void \u02B2\u02B9\u02C1\u02C1\u02B2\u02B3\u02C1\u02BF\u02BC\u02BB\u02C1()
 	{
 		this.\u02B5\u02BE\u02BA\u02BF\u02B7\u02BB\u02B2\u02BC\u02B5\u02B4\u02BE = base.GetComponent<RawImage>();
 		this.\u02BE\u02B5\u02B4\u02B7\u02BF\u02B4\u02C0\u02B4\u02C1\u02BE\u02B6(true);
 	}
 
-	// Token: 0x060014CF RID: 5327 RVA: 0x00010F14 File Offset: 0x0000F114
 	private void \u02BB\u02BD\u02C0\u02C1\u02C0\u02B3\u02B9\u02B6\u02BE\u02BF\u02BB()
 	{
 		this.\u02B2\u02B5\u02B7\u02BB\u02B5\u02BB\u02BA\u02BB\u02BA\u02B4\u02B4(false);
 	}
 
-	// Token: 0x060014D0 RID: 5328 RVA: 0x00010EE1 File Offset: 0x0000F0E1
 	private void \u02B3\u02BB\u02BF\u02B4\u02B9\u02BA\u02B5\u02B5\u02BE\u02BB\u02BE()
 	{
 		this.\u02B5\u02BE\u02BA\u02BF\u02B7\u02BB\u02B2\u02BC\u02B5\u02B4\u02BE = base.GetComponent<RawImage>();
 		this.\u02B7\u02B8\u02B2\u02BB\u02B9\u02BA\u02B6\u02B9\u02B8\u02C1\u02BC(false);
 	}
 
-	// Token: 0x060014D2 RID: 5330 RVA: 0x000A2944 File Offset: 0x000A0B44
 	public void \u02C1\u02B7\u02B8\u02C1\u02BC\u02BC\u02B9\u02BF\u02B5\u02BD\u02BC(bool \u02BC\u02B3\u02C1\u02BA\u02B3\u02B2\u02C0\u02B9\u02B2\u02B5\u02BF)
 	{
 		if (\u02BC\u02B3\u02C1\u02BA\u02B3\u02B2\u02C0\u02B9\u02B2\u02B5\u02BF || this.\u02B8\u02BF\u02BB\u02B7\u02BE\u02B4\u02BA\u02B8\u02B4\u02BF\u02B5 != SettingsController.\u02B7\u02B9\u02B4\u02C1\u02B9\u02BC\u02B8\u02BD\u02BE\u02B5\u02B8.CurrentValue)
@@ -388,63 +371,44 @@ public class BlackMenu : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060014D3 RID: 5331 RVA: 0x00010F1D File Offset: 0x0000F11D
 	public static bool \u02C1\u02B5\u02C0\u02B2\u02BD\u02B6\u02BF\u02B2\u02BA\u02B4\u02BE()
 	{
 		return SettingsController.\u02B7\u02B9\u02B4\u02C1\u02B9\u02BC\u02B8\u02BD\u02BE\u02B5\u02B8.CurrentValue == 14;
 	}
 
-	// Token: 0x04000F49 RID: 3913
 	private RawImage \u02B5\u02BE\u02BA\u02BF\u02B7\u02BB\u02B2\u02BC\u02B5\u02B4\u02BE;
 
-	// Token: 0x04000F4A RID: 3914
 	private int \u02B8\u02BF\u02BB\u02B7\u02BE\u02B4\u02BA\u02B8\u02B4\u02BF\u02B5;
 
-	// Token: 0x04000F4B RID: 3915
 	public Material \u02B4\u02B6\u02BA\u02B4\u02BB\u02BD\u02B6\u02BE\u02B5\u02BD\u02C0;
 
-	// Token: 0x04000F4C RID: 3916
 	public Material \u02BC\u02C0\u02B2\u02C1\u02B3\u02BF\u02B9\u02B7\u02BD\u02B4\u02BD;
 
-	// Token: 0x04000F4D RID: 3917
 	public Texture2D \u02B7\u02B7\u02B5\u02BD\u02BF\u02B9\u02B8\u02BF\u02B6\u02BA\u02BC;
 
-	// Token: 0x04000F4E RID: 3918
 	public Texture2D \u02BA\u02B9\u02B6\u02B6\u02C0\u02B4\u02BA\u02BA\u02BE\u02B3\u02BA;
 
-	// Token: 0x04000F4F RID: 3919
 	public Texture2D \u02BC\u02BC\u02B2\u02B9\u02B5\u02B9\u02B9\u02B9\u02BC\u02B6\u02C1;
 
-	// Token: 0x04000F50 RID: 3920
 	public Texture2D \u02BA\u02BD\u02B6\u02B5\u02B5\u02B2\u02BA\u02B5\u02B8\u02B3\u02BF;
 
-	// Token: 0x04000F51 RID: 3921
 	public Texture2D \u02B3\u02B8\u02B6\u02B2\u02BB\u02C1\u02C0\u02B9\u02B5\u02B4\u02BD;
 
-	// Token: 0x04000F52 RID: 3922
 	public Texture2D \u02BD\u02B8\u02B9\u02B4\u02BC\u02B4\u02B7\u02B8\u02BD\u02B5\u02C0;
 
-	// Token: 0x04000F53 RID: 3923
 	public Texture2D \u02B7\u02B5\u02BA\u02B6\u02BA\u02BD\u02C0\u02B3\u02BB\u02BE\u02B5;
 
-	// Token: 0x04000F54 RID: 3924
 	public Texture2D \u02B7\u02B8\u02C0\u02BB\u02B9\u02B5\u02B7\u02B2\u02C0\u02B6\u02B7;
 
-	// Token: 0x04000F55 RID: 3925
 	public Texture2D \u02C0\u02B5\u02B2\u02B8\u02BA\u02BA\u02BC\u02BE\u02BA\u02BF\u02B9;
 
-	// Token: 0x04000F56 RID: 3926
 	public Texture2D \u02B9\u02B5\u02B7\u02BE\u02B2\u02B6\u02BC\u02B2\u02BB\u02B8\u02B6;
 
-	// Token: 0x04000F57 RID: 3927
 	public Texture2D \u02C0\u02BC\u02C1\u02B6\u02B8\u02B6\u02B8\u02BD\u02BE\u02B4\u02BD;
 
-	// Token: 0x04000F58 RID: 3928
 	public Texture2D \u02B2\u02B7\u02B2\u02BB\u02B5\u02B5\u02C1\u02BD\u02B7\u02BA\u02BA;
 
-	// Token: 0x04000F59 RID: 3929
 	public Texture2D \u02B5\u02B3\u02C0\u02BB\u02C1\u02BF\u02C0\u02BA\u02B3\u02BB\u02BA;
 
-	// Token: 0x04000F5A RID: 3930
 	public Texture2D \u02BE\u02BC\u02C1\u02B6\u02B6\u02BA\u02B6\u02B7\u02C0\u02BE\u02BA;
 }

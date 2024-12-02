@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -11,10 +11,8 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-// Token: 0x020001DB RID: 475
 public class ColorProfileEditor : MonoBehaviour
 {
-	// Token: 0x060014F2 RID: 5362 RVA: 0x000A3020 File Offset: 0x000A1220
 	private void \u02B2\u02B9\u02BB\u02BD\u02B6\u02B4\u02BC\u02B3\u02B6\u02BC\u02B3(ColorGameSetting \u02BC\u02BB\u02B2\u02B2\u02BA\u02BD\u02B6\u02BF\u02B6\u02BB\u02B6, Image \u02BF\u02C1\u02BD\u02B7\u02B5\u02B6\u02BC\u02B3\u02BE\u02B3\u02B7, Image \u02B2\u02B3\u02B3\u02BD\u02B8\u02C0\u02B6\u02B3\u02C1\u02B9\u02B5, TMP_InputField \u02B5\u02BA\u02B6\u02BD\u02BF\u02B8\u02BD\u02C1\u02B4\u02BD\u02B6)
 	{
 		ColorProfileEditor.\u02B3\u02BB\u02BF\u02BC\u02C0\u02BB\u02C1\u02C1\u02B2\u02B5\u02BF u02B3_u02BB_u02BF_u02BC_u02C0_u02BB_u02C1_u02C1_u02B2_u02B5_u02BF = new ColorProfileEditor.\u02B3\u02BB\u02BF\u02BC\u02C0\u02BB\u02C1\u02C1\u02B2\u02B5\u02BF();
@@ -71,33 +69,28 @@ public class ColorProfileEditor : MonoBehaviour
 		this.\u02BD\u02BB\u02C1\u02B6\u02BE\u02C0\u02BD\u02B5\u02B4\u02B9\u02B8.onValueChanged.AddListener(new UnityAction<float>(u02B3_u02BB_u02BF_u02BC_u02C0_u02BB_u02C1_u02C1_u02B2_u02B5_u02BF.\u02BD\u02BA\u02C0\u02B3\u02B3\u02B6\u02B7\u02BF\u02B5\u02B6\u02C0));
 	}
 
-	// Token: 0x060014F3 RID: 5363 RVA: 0x00010FE8 File Offset: 0x0000F1E8
 	[CompilerGenerated]
 	private void \u02B9\u02B7\u02BC\u02B6\u02B9\u02B4\u02B7\u02B7\u02C0\u02B9\u02BA()
 	{
 		this.\u02B6\u02B6\u02B7\u02B8\u02B7\u02C1\u02C0\u02B4\u02B6\u02BE\u02B2(this.\u02BC\u02BD\u02B8\u02B4\u02BA\u02B9\u02B6\u02B9\u02BE\u02B6\u02B4.options[this.\u02BC\u02BD\u02B8\u02B4\u02BA\u02B9\u02B6\u02B9\u02BE\u02B6\u02B4.value].text);
 	}
 
-	// Token: 0x060014F4 RID: 5364 RVA: 0x00011010 File Offset: 0x0000F210
 	public static bool \u02BF\u02B3\u02B6\u02B5\u02BB\u02B7\u02BE\u02BF\u02C1\u02BA\u02BF()
 	{
 		return !(ColorProfileEditor.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6 == null) && !(ColorProfileEditor.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02BA\u02B8\u02BC\u02BE\u02B6\u02B5\u02B3\u02B2\u02BD\u02B6\u02BA == null) && ColorProfileEditor.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02BA\u02B8\u02BC\u02BE\u02B6\u02B5\u02B3\u02B2\u02BD\u02B6\u02BA.gameObject.activeInHierarchy;
 	}
 
-	// Token: 0x060014F5 RID: 5365 RVA: 0x00011049 File Offset: 0x0000F249
 	[CompilerGenerated]
 	private void \u02B6\u02BC\u02BB\u02C0\u02B2\u02BC\u02BC\u02B7\u02B6\u02B4\u02B4(string \u02BF\u02B4\u02C1\u02BC\u02BC\u02B2\u02BC\u02BB\u02BA\u02B2\u02B6)
 	{
 		this.\u02BA\u02BB\u02B4\u02B7\u02BB\u02B4\u02B3\u02B2\u02BB\u02C0\u02B7(\u02BF\u02B4\u02C1\u02BC\u02BC\u02B2\u02BC\u02BB\u02BA\u02B2\u02B6);
 	}
 
-	// Token: 0x060014F6 RID: 5366 RVA: 0x00011052 File Offset: 0x0000F252
 	private void \u02B4\u02BF\u02B2\u02B9\u02B5\u02BE\u02BE\u02BA\u02C0\u02C1\u02BA()
 	{
 		ColorProfileEditor.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6 = null;
 	}
 
-	// Token: 0x060014F7 RID: 5367 RVA: 0x000A341C File Offset: 0x000A161C
 	private void \u02B7\u02C0\u02B6\u02BC\u02C0\u02BB\u02B8\u02B2\u02B2\u02C1\u02BD(bool \u02B2\u02B5\u02BD\u02B8\u02B6\u02B4\u02BE\u02B5\u02B8\u02B9\u02B8)
 	{
 		Color color = Color.white;
@@ -128,13 +121,11 @@ public class ColorProfileEditor : MonoBehaviour
 		this.\u02B4\u02B3\u02B7\u02B9\u02C1\u02BA\u02B7\u02BD\u02BF\u02B9\u02B2.text = this.\u02BD\u02BB\u02C1\u02B6\u02BE\u02C0\u02BD\u02B5\u02B4\u02B9\u02B8.value.ToString();
 	}
 
-	// Token: 0x060014F8 RID: 5368 RVA: 0x0001105A File Offset: 0x0000F25A
 	private void OnEnable()
 	{
 		ColorProfileEditor.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6 = this;
 	}
 
-	// Token: 0x060014F9 RID: 5369 RVA: 0x000A3574 File Offset: 0x000A1774
 	[CompilerGenerated]
 	private void \u02BA\u02BF\u02B7\u02B7\u02BD\u02C0\u02B6\u02B7\u02BB\u02B7\u02BE()
 	{
@@ -145,13 +136,11 @@ public class ColorProfileEditor : MonoBehaviour
 		Cursor.visible = SettingsController.\u02BD\u02C1\u02B5\u02B3\u02BA\u02BC\u02B9\u02B8\u02B7\u02B8\u02C0;
 	}
 
-	// Token: 0x060014FA RID: 5370 RVA: 0x00011062 File Offset: 0x0000F262
 	private void \u02C1\u02BD\u02BE\u02BD\u02C0\u02BF\u02BD\u02B5\u02B6\u02B6\u02C0()
 	{
 		this.\u02B2\u02C1\u02BB\u02B6\u02B2\u02B5\u02B5\u02B7\u02B4\u02B8\u02B8(this.\u02BC\u02BD\u02B8\u02B4\u02BA\u02B9\u02B6\u02B9\u02BE\u02B6\u02B4.options[this.\u02BC\u02BD\u02B8\u02B4\u02BA\u02B9\u02B6\u02B9\u02BE\u02B6\u02B4.value].text);
 	}
 
-	// Token: 0x060014FB RID: 5371 RVA: 0x000A35F0 File Offset: 0x000A17F0
 	private void \u02BA\u02BB\u02B4\u02B7\u02BB\u02B4\u02B3\u02B2\u02BB\u02C0\u02B7(string \u02C0\u02BB\u02B5\u02BA\u02BB\u02BF\u02B5\u02B5\u02B8\u02B3\u02C0)
 	{
 		if (string.IsNullOrWhiteSpace(\u02C0\u02BB\u02B5\u02BA\u02BB\u02BF\u02B5\u02B5\u02B8\u02B3\u02C0))
@@ -174,7 +163,6 @@ public class ColorProfileEditor : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060014FC RID: 5372 RVA: 0x000A36E0 File Offset: 0x000A18E0
 	private void \u02BC\u02B4\u02B5\u02BA\u02BD\u02C0\u02B9\u02B5\u02C1\u02B9\u02B3(string \u02C0\u02BB\u02B5\u02BA\u02BB\u02BF\u02B5\u02B5\u02B8\u02B3\u02C0)
 	{
 		if (string.IsNullOrWhiteSpace(\u02C0\u02BB\u02B5\u02BA\u02BB\u02BF\u02B5\u02B5\u02B8\u02B3\u02C0))
@@ -197,7 +185,6 @@ public class ColorProfileEditor : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060014FD RID: 5373 RVA: 0x000A37D0 File Offset: 0x000A19D0
 	private bool \u02B3\u02B3\u02B2\u02BE\u02B7\u02B8\u02B2\u02BA\u02B9\u02B8\u02B9(TMP_InputField \u02C1\u02BA\u02C0\u02BA\u02B2\u02BF\u02BC\u02C0\u02BF\u02BF\u02BE, string \u02B3\u02BE\u02BA\u02B5\u02B2\u02BB\u02C1\u02B7\u02B5\u02B8\u02B8, bool \u02C0\u02C0\u02B2\u02B8\u02B9\u02C0\u02BB\u02B5\u02B4\u02BF\u02BF = true, ColorGameSetting \u02BC\u02BB\u02B2\u02B2\u02BA\u02BD\u02B6\u02BF\u02B6\u02BB\u02B6 = null)
 	{
 		TextMeshProUGUI textMeshProUGUI = \u02C1\u02BA\u02C0\u02BA\u02B2\u02BF\u02BC\u02C0\u02BF\u02BF\u02BE.placeholder as TextMeshProUGUI;
@@ -241,7 +228,6 @@ public class ColorProfileEditor : MonoBehaviour
 		return false;
 	}
 
-	// Token: 0x06001500 RID: 5376 RVA: 0x000A462C File Offset: 0x000A282C
 	private Color \u02BF\u02C0\u02BA\u02B8\u02B6\u02BF\u02BF\u02B4\u02BB\u02BF\u02C1(Color \u02BB\u02BD\u02B4\u02B4\u02BF\u02C0\u02B2\u02BF\u02B4\u02BC\u02BD)
 	{
 		if ((double)\u02BB\u02BD\u02B4\u02B4\u02BF\u02C0\u02B2\u02BF\u02B4\u02BC\u02BD.r * 0.299 + (double)\u02BB\u02BD\u02B4\u02B4\u02BF\u02C0\u02B2\u02BF\u02B4\u02BC\u02BD.g * 0.587 + (double)\u02BB\u02BD\u02B4\u02B4\u02BF\u02C0\u02B2\u02BF\u02B4\u02BC\u02BD.b * 0.114 <= 0.7294)
@@ -251,13 +237,11 @@ public class ColorProfileEditor : MonoBehaviour
 		return Color.black;
 	}
 
-	// Token: 0x06001501 RID: 5377 RVA: 0x0001108A File Offset: 0x0000F28A
 	private void \u02C1\u02B4\u02B3\u02B2\u02B9\u02C1\u02BF\u02B7\u02B7\u02BA\u02B9()
 	{
 		this.\u02C0\u02BA\u02B3\u02B4\u02B3\u02B7\u02B7\u02B6\u02B7\u02BF\u02BE(this.\u02BB\u02B4\u02BC\u02B7\u02C1\u02C0\u02BE\u02C1\u02C1\u02BD\u02BE.text);
 	}
 
-	// Token: 0x06001502 RID: 5378 RVA: 0x000A4684 File Offset: 0x000A2884
 	private void \u02B5\u02C1\u02B9\u02BF\u02BA\u02BB\u02B2\u02BD\u02B7\u02C1\u02B4(TMP_InputField \u02C1\u02BA\u02C0\u02BA\u02B2\u02BF\u02BC\u02C0\u02BF\u02BF\u02BE, Slider \u02B9\u02B3\u02B4\u02BF\u02B6\u02B3\u02B3\u02B6\u02BF\u02BF\u02B6, string \u02B8\u02C0\u02B8\u02B9\u02BC\u02BC\u02C0\u02B2\u02B3\u02B4\u02B3, bool \u02C0\u02C0\u02B2\u02B8\u02B9\u02C0\u02BB\u02B5\u02B4\u02BF\u02BF = true)
 	{
 		bool flag = false;
@@ -294,7 +278,6 @@ public class ColorProfileEditor : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001503 RID: 5379 RVA: 0x000A4750 File Offset: 0x000A2950
 	private void Start()
 	{
 		this.\u02BC\u02BD\u02B8\u02B4\u02BA\u02B9\u02B6\u02B9\u02BE\u02B6\u02B4.options = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE.\u02B8\u02B7\u02B3\u02BA\u02BB\u02BC\u02B3\u02B9\u02BF\u02BF\u02BD.Select(new Func<string, TMP_Dropdown.OptionData>(ColorProfileEditor.<>c.<>9.\u02BF\u02B2\u02B4\u02B5\u02B7\u02BF\u02C0\u02B7\u02B7\u02B8\u02C1)).ToList<TMP_Dropdown.OptionData>();
@@ -311,7 +294,6 @@ public class ColorProfileEditor : MonoBehaviour
 		this.\u02BE\u02B2\u02BE\u02C1\u02B8\u02BD\u02BA\u02BE\u02B7\u02BC\u02BE(0);
 	}
 
-	// Token: 0x06001504 RID: 5380 RVA: 0x000A4884 File Offset: 0x000A2A84
 	private void \u02B3\u02BC\u02B6\u02BA\u02B4\u02BF\u02B7\u02B9\u02B9\u02BF\u02BF(ColorGameSetting \u02BC\u02BB\u02B2\u02B2\u02BA\u02BD\u02B6\u02BF\u02B6\u02BB\u02B6, Image \u02BF\u02C1\u02BD\u02B7\u02B5\u02B6\u02BC\u02B3\u02BE\u02B3\u02B7, Image \u02B2\u02B3\u02B3\u02BD\u02B8\u02C0\u02B6\u02B3\u02C1\u02B9\u02B5, TMP_InputField \u02B5\u02BA\u02B6\u02BD\u02BF\u02B8\u02BD\u02C1\u02B4\u02BD\u02B6)
 	{
 		ColorProfileEditor.\u02B3\u02BB\u02BF\u02BC\u02C0\u02BB\u02C1\u02C1\u02B2\u02B5\u02BF u02B3_u02BB_u02BF_u02BC_u02C0_u02BB_u02C1_u02C1_u02B2_u02B5_u02BF = new ColorProfileEditor.\u02B3\u02BB\u02BF\u02BC\u02C0\u02BB\u02C1\u02C1\u02B2\u02B5\u02BF();
@@ -368,14 +350,12 @@ public class ColorProfileEditor : MonoBehaviour
 		this.\u02BD\u02BB\u02C1\u02B6\u02BE\u02C0\u02BD\u02B5\u02B4\u02B9\u02B8.onValueChanged.AddListener(new UnityAction<float>(u02B3_u02BB_u02BF_u02BC_u02C0_u02BB_u02C1_u02C1_u02B2_u02B5_u02BF.\u02BD\u02BA\u02C0\u02B3\u02B3\u02B6\u02B7\u02BF\u02B5\u02B6\u02C0));
 	}
 
-	// Token: 0x06001505 RID: 5381 RVA: 0x0001109D File Offset: 0x0000F29D
 	[CompilerGenerated]
 	private void \u02B7\u02B2\u02C1\u02B9\u02BA\u02B4\u02B8\u02B2\u02B8\u02BA\u02B9(int \u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5)
 	{
 		this.\u02BE\u02B2\u02BE\u02C1\u02B8\u02BD\u02BA\u02BE\u02B7\u02BC\u02BE((\u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5 < GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE.\u02BB\u02BF\u02BE\u02B8\u02B2\u02B7\u02BB\u02C0\u02BE\u02B2\u02B2.Count) ? \u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5 : 0);
 	}
 
-	// Token: 0x06001506 RID: 5382 RVA: 0x000A4C80 File Offset: 0x000A2E80
 	private void \u02BD\u02C0\u02B2\u02BD\u02B8\u02BE\u02B9\u02B9\u02BF\u02BC\u02BC(string \u02C0\u02BB\u02B5\u02BA\u02BB\u02BF\u02B5\u02B5\u02B8\u02B3\u02C0)
 	{
 		if (string.IsNullOrWhiteSpace(\u02C0\u02BB\u02B5\u02BA\u02BB\u02BF\u02B5\u02B5\u02B8\u02B3\u02C0))
@@ -398,7 +378,6 @@ public class ColorProfileEditor : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001507 RID: 5383 RVA: 0x000A4D70 File Offset: 0x000A2F70
 	private void \u02C0\u02BA\u02B3\u02B4\u02B3\u02B7\u02B7\u02B6\u02B7\u02BF\u02BE(string \u02C0\u02BB\u02B5\u02BA\u02BB\u02BF\u02B5\u02B5\u02B8\u02B3\u02C0)
 	{
 		if (string.IsNullOrWhiteSpace(\u02C0\u02BB\u02B5\u02BA\u02BB\u02BF\u02B5\u02B5\u02B8\u02B3\u02C0))
@@ -421,7 +400,6 @@ public class ColorProfileEditor : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001508 RID: 5384 RVA: 0x000A4E60 File Offset: 0x000A3060
 	private void \u02B8\u02BB\u02C0\u02BF\u02BE\u02B4\u02BF\u02BF\u02C1\u02B2\u02BE(bool \u02B2\u02B5\u02BD\u02B8\u02B6\u02B4\u02BE\u02B5\u02B8\u02B9\u02B8)
 	{
 		Color color = Color.white;
@@ -452,7 +430,6 @@ public class ColorProfileEditor : MonoBehaviour
 		this.\u02B4\u02B3\u02B7\u02B9\u02C1\u02BA\u02B7\u02BD\u02BF\u02B9\u02B2.text = this.\u02BD\u02BB\u02C1\u02B6\u02BE\u02C0\u02BD\u02B5\u02B4\u02B9\u02B8.value.ToString();
 	}
 
-	// Token: 0x06001509 RID: 5385 RVA: 0x000A4FB8 File Offset: 0x000A31B8
 	private void \u02B8\u02BE\u02B2\u02B7\u02BE\u02B4\u02B7\u02BF\u02BB\u02B7\u02B4(List<string> \u02C1\u02BC\u02B8\u02C0\u02BD\u02B5\u02B8\u02C0\u02C0\u02C1\u02BB, List<Button> \u02BB\u02BA\u02BA\u02B6\u02BB\u02B6\u02BD\u02BC\u02C0\u02BC\u02BB, string \u02BE\u02B4\u02B6\u02B7\u02BF\u02B5\u02BC\u02BC\u02B4\u02C1\u02B5)
 	{
 		GameObject gameObject = global::UnityEngine.Object.Instantiate<GameObject>(this.\u02BE\u02BA\u02B8\u02C1\u02C0\u02C1\u02BA\u02B9\u02B8\u02B8\u02B7, this.\u02B6\u02B7\u02C0\u02BC\u02B7\u02BB\u02B6\u02B4\u02B6\u02B7\u02BB);
@@ -461,13 +438,11 @@ public class ColorProfileEditor : MonoBehaviour
 		\u02BB\u02BA\u02BA\u02B6\u02BB\u02B6\u02BD\u02BC\u02C0\u02BC\u02BB.Add(gameObject.GetComponent<Button>());
 	}
 
-	// Token: 0x0600150A RID: 5386 RVA: 0x000110C0 File Offset: 0x0000F2C0
 	public static bool \u02BF\u02BE\u02B9\u02BB\u02B2\u02BC\u02B7\u02BD\u02B2\u02B6\u02B6()
 	{
 		return ColorProfileEditor.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6 == null || (!(ColorProfileEditor.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02BA\u02B8\u02BC\u02BE\u02B6\u02B5\u02B3\u02B2\u02BD\u02B6\u02BA == null) && ColorProfileEditor.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02BA\u02B8\u02BC\u02BE\u02B6\u02B5\u02B3\u02B2\u02BD\u02B6\u02BA.gameObject.activeInHierarchy);
 	}
 
-	// Token: 0x0600150B RID: 5387 RVA: 0x000A5018 File Offset: 0x000A3218
 	private void \u02B6\u02B6\u02B7\u02B8\u02B7\u02C1\u02C0\u02B4\u02B6\u02BE\u02B2(string \u02B4\u02B7\u02BB\u02C1\u02C0\u02B3\u02B2\u02BC\u02B6\u02BF\u02B3)
 	{
 		ColorManager u02BD_u02BA_u02B2_u02BB_u02BC_u02C0_u02BA_u02B8_u02BE_u02BB_u02BE = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE;
@@ -486,7 +461,6 @@ public class ColorProfileEditor : MonoBehaviour
 		this.\u02BE\u02B2\u02BE\u02C1\u02B8\u02BD\u02BA\u02BE\u02B7\u02BC\u02BE(this.\u02BC\u02BD\u02B8\u02B4\u02BA\u02B9\u02B6\u02B9\u02BE\u02B6\u02B4.value);
 	}
 
-	// Token: 0x0600150C RID: 5388 RVA: 0x000A50F0 File Offset: 0x000A32F0
 	private void \u02B2\u02C1\u02BB\u02B6\u02B2\u02B5\u02B5\u02B7\u02B4\u02B8\u02B8(string \u02B4\u02B7\u02BB\u02C1\u02C0\u02B3\u02B2\u02BC\u02B6\u02BF\u02B3)
 	{
 		ColorManager u02BD_u02BA_u02B2_u02BB_u02BC_u02C0_u02BA_u02B8_u02BE_u02BB_u02BE = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE;
@@ -505,7 +479,6 @@ public class ColorProfileEditor : MonoBehaviour
 		this.\u02BB\u02B5\u02B4\u02BB\u02BD\u02B7\u02B4\u02BF\u02C1\u02C1\u02B7(this.\u02BC\u02BD\u02B8\u02B4\u02BA\u02B9\u02B6\u02B9\u02BE\u02B6\u02B4.value);
 	}
 
-	// Token: 0x0600150D RID: 5389 RVA: 0x000A51C8 File Offset: 0x000A33C8
 	private void \u02BE\u02B2\u02BE\u02C1\u02B8\u02BD\u02BA\u02BE\u02B7\u02BC\u02BE(int \u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5)
 	{
 		ColorProfileEditor.\u02BB\u02BB\u02B5\u02B8\u02B8\u02B6\u02B9\u02B8\u02B5\u02B7\u02C1 u02BB_u02BB_u02B5_u02B8_u02B8_u02B6_u02B9_u02B8_u02B5_u02B7_u02C = new ColorProfileEditor.\u02BB\u02BB\u02B5\u02B8\u02B8\u02B6\u02B9\u02B8\u02B5\u02B7\u02C1();
@@ -597,7 +570,6 @@ public class ColorProfileEditor : MonoBehaviour
 		this.\u02BE\u02BA\u02B8\u02C1\u02C0\u02C1\u02BA\u02B9\u02B8\u02B8\u02B7.SetActive(false);
 	}
 
-	// Token: 0x0600150E RID: 5390 RVA: 0x000A57FC File Offset: 0x000A39FC
 	public static void \u02BE\u02B3\u02B7\u02BD\u02BA\u02BB\u02B4\u02B7\u02B5\u02B3\u02B2(\u02B9\u02BA\u02BF\u02BB\u02B2\u02B9\u02BB\u02B9\u02B9\u02B5\u02B8 \u02C1\u02B8\u02B9\u02B7\u02BF\u02B5\u02BD\u02BD\u02BF\u02B3\u02BA)
 	{
 		ColorProfileEditor.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B2\u02BC\u02BD\u02BA\u02BF\u02B9\u02BD\u02BB\u02B5\u02BA\u02B6 = \u02C1\u02B8\u02B9\u02B7\u02BF\u02B5\u02BD\u02BD\u02BF\u02B3\u02BA;
@@ -606,7 +578,6 @@ public class ColorProfileEditor : MonoBehaviour
 		Cursor.visible = true;
 	}
 
-	// Token: 0x0600150F RID: 5391 RVA: 0x000A5860 File Offset: 0x000A3A60
 	private void \u02BB\u02B5\u02B4\u02BB\u02BD\u02B7\u02B4\u02BF\u02C1\u02C1\u02B7(int \u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5)
 	{
 		ColorProfileEditor.\u02BB\u02BB\u02B5\u02B8\u02B8\u02B6\u02B9\u02B8\u02B5\u02B7\u02C1 u02BB_u02BB_u02B5_u02B8_u02B8_u02B6_u02B9_u02B8_u02B5_u02B7_u02C = new ColorProfileEditor.\u02BB\u02BB\u02B5\u02B8\u02B8\u02B6\u02B9\u02B8\u02B5\u02B7\u02C1();
@@ -698,113 +669,80 @@ public class ColorProfileEditor : MonoBehaviour
 		this.\u02BE\u02BA\u02B8\u02C1\u02C0\u02C1\u02BA\u02B9\u02B8\u02B8\u02B7.SetActive(true);
 	}
 
-	// Token: 0x06001510 RID: 5392 RVA: 0x00011052 File Offset: 0x0000F252
 	private void OnDisable()
 	{
 		ColorProfileEditor.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6 = null;
 	}
 
-	// Token: 0x06001511 RID: 5393 RVA: 0x000110F9 File Offset: 0x0000F2F9
 	[CompilerGenerated]
 	private void \u02B8\u02BF\u02BD\u02B8\u02B3\u02BC\u02C1\u02BD\u02B4\u02B7\u02B3()
 	{
 		this.\u02BA\u02BB\u02B4\u02B7\u02BB\u02B4\u02B3\u02B2\u02BB\u02C0\u02B7(this.\u02BB\u02B4\u02BC\u02B7\u02C1\u02C0\u02BE\u02C1\u02C1\u02BD\u02BE.text);
 	}
 
-	// Token: 0x06001512 RID: 5394 RVA: 0x0001110C File Offset: 0x0000F30C
 	private void \u02BF\u02B9\u02B9\u02C0\u02BE\u02B6\u02C0\u02B2\u02B5\u02B8\u02BF(string \u02BF\u02B4\u02C1\u02BC\u02BC\u02B2\u02BC\u02BB\u02BA\u02B2\u02B6)
 	{
 		this.\u02BC\u02B4\u02B5\u02BA\u02BD\u02C0\u02B9\u02B5\u02C1\u02B9\u02B3(\u02BF\u02B4\u02C1\u02BC\u02BC\u02B2\u02BC\u02BB\u02BA\u02B2\u02B6);
 	}
 
-	// Token: 0x04000F6B RID: 3947
 	public GameObject \u02BE\u02BA\u02B8\u02C1\u02C0\u02C1\u02BA\u02B9\u02B8\u02B8\u02B7;
 
-	// Token: 0x04000F6C RID: 3948
 	public GameObject \u02B8\u02B9\u02BD\u02BC\u02BB\u02BA\u02B5\u02B8\u02B7\u02B7\u02B8;
 
-	// Token: 0x04000F6D RID: 3949
 	public TMP_Dropdown \u02BC\u02BD\u02B8\u02B4\u02BA\u02B9\u02B6\u02B9\u02BE\u02B6\u02B4;
 
-	// Token: 0x04000F6E RID: 3950
 	public TMP_InputField \u02BB\u02B4\u02BC\u02B7\u02C1\u02C0\u02BE\u02C1\u02C1\u02BD\u02BE;
 
-	// Token: 0x04000F6F RID: 3951
 	public Button \u02B7\u02BE\u02BE\u02B8\u02B7\u02BF\u02B8\u02BE\u02B4\u02BA\u02B2;
 
-	// Token: 0x04000F70 RID: 3952
 	public Button \u02BC\u02C1\u02BC\u02BA\u02BF\u02C1\u02B9\u02BD\u02BD\u02B5\u02B6;
 
-	// Token: 0x04000F71 RID: 3953
 	public GameObject \u02BB\u02B5\u02C0\u02B9\u02C1\u02B8\u02BE\u02B9\u02BE\u02BC\u02B9;
 
-	// Token: 0x04000F72 RID: 3954
 	public Button \u02BD\u02B6\u02BB\u02BD\u02B6\u02BA\u02B7\u02BD\u02B9\u02B2\u02B3;
 
-	// Token: 0x04000F73 RID: 3955
 	public Button \u02B7\u02B8\u02B6\u02B5\u02C1\u02BD\u02B4\u02BE\u02B9\u02BA\u02B4;
 
-	// Token: 0x04000F74 RID: 3956
 	public Button \u02BE\u02B7\u02B5\u02BC\u02BF\u02B8\u02B5\u02BA\u02BC\u02B6\u02BB;
 
-	// Token: 0x04000F75 RID: 3957
 	public TMP_InputField \u02BE\u02C1\u02B4\u02B6\u02B9\u02BF\u02BF\u02BE\u02B8\u02BD\u02B9;
 
-	// Token: 0x04000F76 RID: 3958
 	public TMP_InputField \u02B3\u02B8\u02B7\u02BC\u02C1\u02B6\u02C1\u02BA\u02B5\u02B8\u02BA;
 
-	// Token: 0x04000F77 RID: 3959
 	public TMP_InputField \u02B4\u02B3\u02B7\u02B9\u02C1\u02BA\u02B7\u02BD\u02BF\u02B9\u02B2;
 
-	// Token: 0x04000F78 RID: 3960
 	public TMP_InputField \u02BE\u02BA\u02B8\u02B4\u02BD\u02BF\u02B2\u02B8\u02B6\u02B9\u02B9;
 
-	// Token: 0x04000F79 RID: 3961
 	public Slider \u02B8\u02C1\u02B5\u02BD\u02BD\u02BE\u02B9\u02B9\u02B9\u02B2\u02BB;
 
-	// Token: 0x04000F7A RID: 3962
 	public Slider \u02BF\u02B6\u02C1\u02B4\u02B3\u02B2\u02B5\u02B3\u02B3\u02B9\u02C0;
 
-	// Token: 0x04000F7B RID: 3963
 	public Slider \u02BD\u02BB\u02C1\u02B6\u02BE\u02C0\u02BD\u02B5\u02B4\u02B9\u02B8;
 
-	// Token: 0x04000F7C RID: 3964
 	public Image \u02B3\u02B7\u02B5\u02BA\u02B2\u02B3\u02BD\u02BC\u02BF\u02C0\u02BB;
 
-	// Token: 0x04000F7D RID: 3965
 	public Image \u02B5\u02BB\u02C0\u02B8\u02B6\u02C1\u02BD\u02B5\u02C0\u02BA\u02B6;
 
-	// Token: 0x04000F7E RID: 3966
 	public Image \u02BE\u02B2\u02B9\u02B8\u02B9\u02B6\u02B6\u02B8\u02C0\u02B8\u02BF;
 
-	// Token: 0x04000F7F RID: 3967
 	public Image \u02BB\u02B7\u02C0\u02B2\u02B9\u02BC\u02C1\u02BC\u02BC\u02B5\u02B5;
 
-	// Token: 0x04000F80 RID: 3968
 	public Image \u02B5\u02BF\u02BD\u02BA\u02B2\u02B6\u02BA\u02C1\u02B2\u02B7\u02B5;
 
-	// Token: 0x04000F81 RID: 3969
 	public TextMeshProUGUI \u02B6\u02B4\u02BB\u02B8\u02BF\u02B5\u02BE\u02B5\u02B7\u02B5\u02B3;
 
-	// Token: 0x04000F82 RID: 3970
 	public TextMeshProUGUI \u02BB\u02C0\u02BE\u02B2\u02BE\u02BC\u02B2\u02B9\u02B9\u02BC\u02BC;
 
-	// Token: 0x04000F83 RID: 3971
 	public Button \u02B8\u02C0\u02B3\u02B2\u02BE\u02C0\u02B2\u02B6\u02BF\u02B5\u02BE;
 
-	// Token: 0x04000F84 RID: 3972
 	public Canvas \u02BA\u02B8\u02BC\u02BE\u02B6\u02B5\u02B3\u02B2\u02BD\u02B6\u02BA;
 
-	// Token: 0x04000F85 RID: 3973
 	public Transform \u02B6\u02B7\u02C0\u02BC\u02B7\u02BB\u02B6\u02B4\u02B6\u02B7\u02BB;
 
-	// Token: 0x04000F86 RID: 3974
 	private static ColorProfileEditor \u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6;
 
-	// Token: 0x04000F87 RID: 3975
 	private \u02B9\u02BA\u02BF\u02BB\u02B2\u02B9\u02BB\u02B9\u02B9\u02B5\u02B8 \u02B2\u02BC\u02BD\u02BA\u02BF\u02B9\u02BD\u02BB\u02B5\u02BA\u02B6;
 
-	// Token: 0x04000F88 RID: 3976
 	private static readonly string[] \u02B8\u02BF\u02B7\u02B2\u02B9\u02B7\u02B6\u02C0\u02BB\u02B9\u02B7 = new string[]
 	{
 		"Guitar/Notes/note_green", "Green Note", "Guitar/Notes/note_red", "Red Note", "Guitar/Notes/note_yellow", "Yellow Note", "Guitar/Notes/note_blue", "Blue Note", "Guitar/Notes/note_orange", "Orange Note",
@@ -841,17 +779,14 @@ public class ColorProfileEditor : MonoBehaviour
 		"Other/Effects/sp_act_flash", "Starpower Action Flash", "Other/Effects/sp_act_animation", "Starpower Action Animation"
 	};
 
-	// Token: 0x020001DD RID: 477
 	[CompilerGenerated]
 	private sealed class \u02B3\u02BB\u02BF\u02BC\u02C0\u02BB\u02C1\u02C1\u02B2\u02B5\u02BF
 	{
-		// Token: 0x0600151A RID: 5402 RVA: 0x00011140 File Offset: 0x0000F340
 		internal void \u02BA\u02BB\u02B7\u02B8\u02B4\u02B8\u02BB\u02BA\u02C1\u02B5\u02B2()
 		{
 			this.<>4__this.\u02BB\u02B5\u02C0\u02B9\u02C1\u02B8\u02BE\u02B9\u02BE\u02BC\u02B9.SetActive(false);
 		}
 
-		// Token: 0x0600151B RID: 5403 RVA: 0x000A5E94 File Offset: 0x000A4094
 		internal void \u02BC\u02BD\u02B8\u02B2\u02C0\u02BA\u02C1\u02C0\u02BA\u02B3\u02BF()
 		{
 			this.colorGameSetting.CurrentValue = HexColor.FromHexString("#" + this.<>4__this.\u02BE\u02BA\u02B8\u02B4\u02BD\u02BF\u02B2\u02B8\u02B6\u02B9\u02B9.text);
@@ -866,7 +801,6 @@ public class ColorProfileEditor : MonoBehaviour
 			this.<>4__this.\u02BB\u02B5\u02C0\u02B9\u02C1\u02B8\u02BE\u02B9\u02BE\u02BC\u02B9.SetActive(false);
 		}
 
-		// Token: 0x0600151C RID: 5404 RVA: 0x000A5FD0 File Offset: 0x000A41D0
 		internal void \u02B5\u02B7\u02B5\u02B6\u02B9\u02B2\u02C1\u02B7\u02BE\u02BB\u02B5()
 		{
 			string text = HexColor.ToHexString(this.colorGameSetting.DefaultValue, false);
@@ -875,122 +809,98 @@ public class ColorProfileEditor : MonoBehaviour
 			this.<>4__this.\u02B8\u02BB\u02C0\u02BF\u02BE\u02B4\u02BF\u02BF\u02C1\u02B2\u02BE(false);
 		}
 
-		// Token: 0x0600151D RID: 5405 RVA: 0x00011153 File Offset: 0x0000F353
 		internal void \u02BB\u02BC\u02BE\u02B4\u02B7\u02B4\u02BB\u02B6\u02C1\u02C0\u02C1(string value)
 		{
 			this.<>4__this.\u02B3\u02B3\u02B2\u02BE\u02B7\u02B8\u02B2\u02BA\u02B9\u02B8\u02B9(this.<>4__this.\u02BE\u02BA\u02B8\u02B4\u02BD\u02BF\u02B2\u02B8\u02B6\u02B9\u02B9, value, true, null);
 		}
 
-		// Token: 0x0600151E RID: 5406 RVA: 0x00011153 File Offset: 0x0000F353
 		internal void \u02BC\u02C0\u02B2\u02C0\u02BA\u02C1\u02B5\u02B9\u02B4\u02BB\u02B4(string value)
 		{
 			this.<>4__this.\u02B3\u02B3\u02B2\u02BE\u02B7\u02B8\u02B2\u02BA\u02B9\u02B8\u02B9(this.<>4__this.\u02BE\u02BA\u02B8\u02B4\u02BD\u02BF\u02B2\u02B8\u02B6\u02B9\u02B9, value, true, null);
 		}
 
-		// Token: 0x0600151F RID: 5407 RVA: 0x0001116F File Offset: 0x0000F36F
 		internal void \u02BB\u02C1\u02BE\u02B8\u02B6\u02BB\u02B9\u02BD\u02BA\u02BA\u02BC(string value)
 		{
 			this.<>4__this.\u02B3\u02B3\u02B2\u02BE\u02B7\u02B8\u02B2\u02BA\u02B9\u02B8\u02B9(this.<>4__this.\u02BE\u02BA\u02B8\u02B4\u02BD\u02BF\u02B2\u02B8\u02B6\u02B9\u02B9, value, false, null);
 		}
 
-		// Token: 0x06001520 RID: 5408 RVA: 0x0001118B File Offset: 0x0000F38B
 		internal void \u02B6\u02BE\u02B8\u02B9\u02C1\u02BA\u02BB\u02BB\u02BE\u02B3\u02BC(string numString)
 		{
 			this.<>4__this.\u02B5\u02C1\u02B9\u02BF\u02BA\u02BB\u02B2\u02BD\u02B7\u02C1\u02B4(this.<>4__this.\u02BE\u02C1\u02B4\u02B6\u02B9\u02BF\u02BF\u02BE\u02B8\u02BD\u02B9, this.<>4__this.\u02B8\u02C1\u02B5\u02BD\u02BD\u02BE\u02B9\u02B9\u02B9\u02B2\u02BB, numString, true);
 		}
 
-		// Token: 0x06001521 RID: 5409 RVA: 0x0001118B File Offset: 0x0000F38B
 		internal void \u02BF\u02B8\u02B9\u02C1\u02BA\u02B6\u02BB\u02B3\u02BE\u02B2\u02C1(string numString)
 		{
 			this.<>4__this.\u02B5\u02C1\u02B9\u02BF\u02BA\u02BB\u02B2\u02BD\u02B7\u02C1\u02B4(this.<>4__this.\u02BE\u02C1\u02B4\u02B6\u02B9\u02BF\u02BF\u02BE\u02B8\u02BD\u02B9, this.<>4__this.\u02B8\u02C1\u02B5\u02BD\u02BD\u02BE\u02B9\u02B9\u02B9\u02B2\u02BB, numString, true);
 		}
 
-		// Token: 0x06001522 RID: 5410 RVA: 0x000111B0 File Offset: 0x0000F3B0
 		internal void \u02B3\u02B9\u02BE\u02B4\u02B2\u02B2\u02BB\u02B8\u02B9\u02B8\u02BF(string numString)
 		{
 			this.<>4__this.\u02B5\u02C1\u02B9\u02BF\u02BA\u02BB\u02B2\u02BD\u02B7\u02C1\u02B4(this.<>4__this.\u02B3\u02B8\u02B7\u02BC\u02C1\u02B6\u02C1\u02BA\u02B5\u02B8\u02BA, this.<>4__this.\u02BF\u02B6\u02C1\u02B4\u02B3\u02B2\u02B5\u02B3\u02B3\u02B9\u02C0, numString, true);
 		}
 
-		// Token: 0x06001523 RID: 5411 RVA: 0x000111B0 File Offset: 0x0000F3B0
 		internal void \u02BA\u02C0\u02BB\u02C0\u02B8\u02B9\u02B7\u02B6\u02B2\u02BC\u02B5(string numString)
 		{
 			this.<>4__this.\u02B5\u02C1\u02B9\u02BF\u02BA\u02BB\u02B2\u02BD\u02B7\u02C1\u02B4(this.<>4__this.\u02B3\u02B8\u02B7\u02BC\u02C1\u02B6\u02C1\u02BA\u02B5\u02B8\u02BA, this.<>4__this.\u02BF\u02B6\u02C1\u02B4\u02B3\u02B2\u02B5\u02B3\u02B3\u02B9\u02C0, numString, true);
 		}
 
-		// Token: 0x06001524 RID: 5412 RVA: 0x000111D5 File Offset: 0x0000F3D5
 		internal void \u02BC\u02B3\u02B5\u02B8\u02C1\u02B6\u02B5\u02C0\u02BE\u02B6\u02B3(string numString)
 		{
 			this.<>4__this.\u02B5\u02C1\u02B9\u02BF\u02BA\u02BB\u02B2\u02BD\u02B7\u02C1\u02B4(this.<>4__this.\u02B4\u02B3\u02B7\u02B9\u02C1\u02BA\u02B7\u02BD\u02BF\u02B9\u02B2, this.<>4__this.\u02BD\u02BB\u02C1\u02B6\u02BE\u02C0\u02BD\u02B5\u02B4\u02B9\u02B8, numString, true);
 		}
 
-		// Token: 0x06001525 RID: 5413 RVA: 0x000111D5 File Offset: 0x0000F3D5
 		internal void \u02B2\u02BE\u02BB\u02B4\u02B6\u02B9\u02BB\u02C0\u02BB\u02C1\u02B6(string numString)
 		{
 			this.<>4__this.\u02B5\u02C1\u02B9\u02BF\u02BA\u02BB\u02B2\u02BD\u02B7\u02C1\u02B4(this.<>4__this.\u02B4\u02B3\u02B7\u02B9\u02C1\u02BA\u02B7\u02BD\u02BF\u02B9\u02B2, this.<>4__this.\u02BD\u02BB\u02C1\u02B6\u02BE\u02C0\u02BD\u02B5\u02B4\u02B9\u02B8, numString, true);
 		}
 
-		// Token: 0x06001526 RID: 5414 RVA: 0x000111FA File Offset: 0x0000F3FA
 		internal void \u02B3\u02BC\u02BE\u02C0\u02B7\u02B7\u02B8\u02BE\u02B9\u02B6\u02BC(float value)
 		{
 			this.<>4__this.\u02B8\u02BB\u02C0\u02BF\u02BE\u02B4\u02BF\u02BF\u02C1\u02B2\u02BE(true);
 		}
 
-		// Token: 0x06001527 RID: 5415 RVA: 0x000111FA File Offset: 0x0000F3FA
 		internal void \u02B6\u02B9\u02B8\u02B4\u02BB\u02B4\u02C0\u02B6\u02C0\u02B8\u02B6(float value)
 		{
 			this.<>4__this.\u02B8\u02BB\u02C0\u02BF\u02BE\u02B4\u02BF\u02BF\u02C1\u02B2\u02BE(true);
 		}
 
-		// Token: 0x06001528 RID: 5416 RVA: 0x000111FA File Offset: 0x0000F3FA
 		internal void \u02BD\u02BA\u02C0\u02B3\u02B3\u02B6\u02B7\u02BF\u02B5\u02B6\u02C0(float value)
 		{
 			this.<>4__this.\u02B8\u02BB\u02C0\u02BF\u02BE\u02B4\u02BF\u02BF\u02C1\u02B2\u02BE(true);
 		}
 
-		// Token: 0x04000F8E RID: 3982
 		public ColorProfileEditor <>4__this;
 
-		// Token: 0x04000F8F RID: 3983
 		public ColorGameSetting colorGameSetting;
 
-		// Token: 0x04000F90 RID: 3984
 		public Image inputButtonImage;
 
-		// Token: 0x04000F91 RID: 3985
 		public Image inputButtonIcon;
 
-		// Token: 0x04000F92 RID: 3986
 		public TMP_InputField inputText;
 	}
 
-	// Token: 0x020001DE RID: 478
 	[CompilerGenerated]
 	private sealed class \u02BB\u02BB\u02B5\u02B8\u02B8\u02B6\u02B9\u02B8\u02B5\u02B7\u02C1
 	{
-		// Token: 0x0600152A RID: 5418 RVA: 0x00011208 File Offset: 0x0000F408
 		internal ColorGameSetting \u02BA\u02BB\u02C1\u02B5\u02BF\u02C0\u02BB\u02C1\u02BC\u02BC\u02BD(FieldInfo Item)
 		{
 			return Item.GetValue(this.colorSettings) as ColorGameSetting;
 		}
 
-		// Token: 0x04000F93 RID: 3987
 		public ColorSettings colorSettings;
 
-		// Token: 0x04000F94 RID: 3988
 		public ColorProfileEditor <>4__this;
 	}
 
-	// Token: 0x020001DF RID: 479
 	[CompilerGenerated]
 	private sealed class \u02B2\u02BA\u02B6\u02B6\u02BA\u02B8\u02B3\u02C1\u02BF\u02BE\u02B6
 	{
-		// Token: 0x0600152C RID: 5420 RVA: 0x0001121B File Offset: 0x0000F41B
 		internal bool \u02B6\u02B8\u02BE\u02BC\u02BD\u02B5\u02B5\u02B5\u02BC\u02C0\u02B8(ColorGameSetting Setting)
 		{
 			return Setting.Name == this.splitString.Last<string>();
 		}
 
-		// Token: 0x0600152D RID: 5421 RVA: 0x000A6028 File Offset: 0x000A4228
 		internal void \u02BF\u02B4\u02B9\u02BF\u02BB\u02B4\u02BD\u02B6\u02B2\u02BE\u02B3(string value)
 		{
 			if (this.CS$<>8__locals1.<>4__this.\u02B3\u02B3\u02B2\u02BE\u02B7\u02B8\u02B2\u02BA\u02B9\u02B8\u02B9(this.inputField, value, true, this.colorSetting))
@@ -1001,7 +911,6 @@ public class ColorProfileEditor : MonoBehaviour
 			}
 		}
 
-		// Token: 0x0600152E RID: 5422 RVA: 0x000A6028 File Offset: 0x000A4228
 		internal void \u02B3\u02B4\u02BB\u02B9\u02BA\u02BF\u02BA\u02BC\u02B3\u02BB\u02B3(string value)
 		{
 			if (this.CS$<>8__locals1.<>4__this.\u02B3\u02B3\u02B2\u02BE\u02B7\u02B8\u02B2\u02BA\u02B9\u02B8\u02B9(this.inputField, value, true, this.colorSetting))
@@ -1012,7 +921,6 @@ public class ColorProfileEditor : MonoBehaviour
 			}
 		}
 
-		// Token: 0x0600152F RID: 5423 RVA: 0x000A60F0 File Offset: 0x000A42F0
 		internal void \u02BC\u02B9\u02BE\u02B4\u02B8\u02BF\u02B2\u02BE\u02C0\u02B6\u02BE(string value)
 		{
 			if (this.CS$<>8__locals1.<>4__this.\u02B3\u02B3\u02B2\u02BE\u02B7\u02B8\u02B2\u02BA\u02B9\u02B8\u02B9(this.inputField, value, false, this.colorSetting))
@@ -1023,13 +931,11 @@ public class ColorProfileEditor : MonoBehaviour
 			}
 		}
 
-		// Token: 0x06001530 RID: 5424 RVA: 0x00011233 File Offset: 0x0000F433
 		internal void \u02BA\u02BD\u02B5\u02B2\u02B9\u02BE\u02BF\u02BE\u02B2\u02BD\u02BD()
 		{
 			this.CS$<>8__locals1.<>4__this.\u02B2\u02B9\u02BB\u02BD\u02B6\u02B4\u02BC\u02B3\u02B6\u02BC\u02B3(this.colorSetting, this.imageObjects[2], this.imageObjects[3], this.inputField);
 		}
 
-		// Token: 0x06001531 RID: 5425 RVA: 0x000A61B8 File Offset: 0x000A43B8
 		internal void \u02BA\u02B6\u02C0\u02B4\u02BD\u02B9\u02BB\u02B4\u02B4\u02B5\u02BC()
 		{
 			this.colorSetting.CurrentValue = this.colorSetting.DefaultValue;
@@ -1043,22 +949,16 @@ public class ColorProfileEditor : MonoBehaviour
 			(this.inputField.placeholder as TextMeshProUGUI).text = this.inputField.text;
 		}
 
-		// Token: 0x04000F95 RID: 3989
 		public List<string> splitString;
 
-		// Token: 0x04000F96 RID: 3990
 		public TMP_InputField inputField;
 
-		// Token: 0x04000F97 RID: 3991
 		public ColorGameSetting colorSetting;
 
-		// Token: 0x04000F98 RID: 3992
 		public Image[] imageObjects;
 
-		// Token: 0x04000F99 RID: 3993
 		public TextMeshProUGUI[] textObjects;
 
-		// Token: 0x04000F9A RID: 3994
 		public ColorProfileEditor.\u02BB\u02BB\u02B5\u02B8\u02B8\u02B6\u02B9\u02B8\u02B5\u02B7\u02C1 CS$<>8__locals1;
 	}
 }

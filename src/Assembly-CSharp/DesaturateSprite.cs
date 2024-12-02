@@ -1,11 +1,9 @@
-﻿using System;
+using System;
 using UnityEngine;
 
-// Token: 0x0200013C RID: 316
 [RequireComponent(typeof(SpriteRenderer))]
 public class DesaturateSprite : MonoBehaviour
 {
-	// Token: 0x06000DCB RID: 3531 RVA: 0x0000D656 File Offset: 0x0000B856
 	public void \u02B5\u02BD\u02BD\u02BE\u02B9\u02BD\u02B2\u02C1\u02C1\u02B3\u02B6()
 	{
 		this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2 = new MaterialPropertyBlock();
@@ -13,7 +11,6 @@ public class DesaturateSprite : MonoBehaviour
 		this.\u02B7\u02B9\u02B4\u02B2\u02B7\u02BC\u02BF\u02BE\u02B5\u02B4\u02BD = Shader.PropertyToID("\n");
 	}
 
-	// Token: 0x06000DCC RID: 3532 RVA: 0x0000D67F File Offset: 0x0000B87F
 	public void \u02B7\u02BF\u02BC\u02C0\u02B5\u02BD\u02BF\u02BB\u02C1\u02BF\u02B2()
 	{
 		this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2 = new MaterialPropertyBlock();
@@ -21,7 +18,6 @@ public class DesaturateSprite : MonoBehaviour
 		this.\u02B7\u02B9\u02B4\u02B2\u02B7\u02BC\u02BF\u02BE\u02B5\u02B4\u02BD = Shader.PropertyToID("Star Power");
 	}
 
-	// Token: 0x06000DCD RID: 3533 RVA: 0x0000D6A8 File Offset: 0x0000B8A8
 	public void \u02B5\u02B9\u02B5\u02B3\u02BF\u02C1\u02B7\u02BD\u02C0\u02B7\u02C0()
 	{
 		this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2 = new MaterialPropertyBlock();
@@ -29,7 +25,6 @@ public class DesaturateSprite : MonoBehaviour
 		this.\u02B7\u02B9\u02B4\u02B2\u02B7\u02BC\u02BF\u02BE\u02B5\u02B4\u02BD = Shader.PropertyToID(" + ");
 	}
 
-	// Token: 0x06000DCE RID: 3534 RVA: 0x0000D6D1 File Offset: 0x0000B8D1
 	public void \u02C0\u02BA\u02BA\u02C1\u02B8\u02BB\u02B6\u02B7\u02B9\u02B2\u02B9(float \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5)
 	{
 		this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC.GetPropertyBlock(this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2);
@@ -37,7 +32,6 @@ public class DesaturateSprite : MonoBehaviour
 		this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC.SetPropertyBlock(this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2);
 	}
 
-	// Token: 0x06000DCF RID: 3535 RVA: 0x0000D6D1 File Offset: 0x0000B8D1
 	public void \u02BE\u02BE\u02BB\u02C1\u02BD\u02B7\u02B5\u02B4\u02B3\u02B2\u02B7(float \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5)
 	{
 		this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC.GetPropertyBlock(this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2);
@@ -45,7 +39,6 @@ public class DesaturateSprite : MonoBehaviour
 		this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC.SetPropertyBlock(this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2);
 	}
 
-	// Token: 0x06000DD0 RID: 3536 RVA: 0x0000D6D1 File Offset: 0x0000B8D1
 	public void \u02B2\u02BB\u02B6\u02B8\u02C1\u02B3\u02B3\u02B7\u02B2\u02BA\u02B6(float \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5)
 	{
 		this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC.GetPropertyBlock(this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2);
@@ -53,7 +46,6 @@ public class DesaturateSprite : MonoBehaviour
 		this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC.SetPropertyBlock(this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2);
 	}
 
-	// Token: 0x06000DD1 RID: 3537 RVA: 0x0000D707 File Offset: 0x0000B907
 	public void \u02BC\u02BC\u02B6\u02C0\u02BC\u02C1\u02B8\u02C1\u02C0\u02C1\u02BC()
 	{
 		this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2 = new MaterialPropertyBlock();
@@ -61,7 +53,6 @@ public class DesaturateSprite : MonoBehaviour
 		this.\u02B7\u02B9\u02B4\u02B2\u02B7\u02BC\u02BF\u02BE\u02B5\u02B4\u02BD = Shader.PropertyToID("Tom1");
 	}
 
-	// Token: 0x06000DD3 RID: 3539 RVA: 0x0000D6D1 File Offset: 0x0000B8D1
 	public void \u02B4\u02C1\u02B8\u02B5\u02B7\u02C0\u02B4\u02C0\u02B2\u02BD\u02B4(float \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5)
 	{
 		this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC.GetPropertyBlock(this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2);
@@ -69,7 +60,6 @@ public class DesaturateSprite : MonoBehaviour
 		this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC.SetPropertyBlock(this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2);
 	}
 
-	// Token: 0x06000DD4 RID: 3540 RVA: 0x0000D6D1 File Offset: 0x0000B8D1
 	public void \u02C0\u02B8\u02C0\u02BC\u02C0\u02B9\u02B5\u02B2\u02B4\u02B3\u02BD(float \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5)
 	{
 		this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC.GetPropertyBlock(this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2);
@@ -77,7 +67,6 @@ public class DesaturateSprite : MonoBehaviour
 		this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC.SetPropertyBlock(this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2);
 	}
 
-	// Token: 0x06000DD5 RID: 3541 RVA: 0x0000D730 File Offset: 0x0000B930
 	public void \u02B8\u02C1\u02B9\u02BC\u02B6\u02B9\u02B3\u02B5\u02B7\u02BF\u02BD()
 	{
 		this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2 = new MaterialPropertyBlock();
@@ -85,7 +74,6 @@ public class DesaturateSprite : MonoBehaviour
 		this.\u02B7\u02B9\u02B4\u02B2\u02B7\u02BC\u02BF\u02BE\u02B5\u02B4\u02BD = Shader.PropertyToID("No Modifiers");
 	}
 
-	// Token: 0x06000DD6 RID: 3542 RVA: 0x0000D759 File Offset: 0x0000B959
 	public void \u02B3\u02B8\u02C1\u02BE\u02B7\u02C0\u02B8\u02B8\u02B3\u02B3\u02B7()
 	{
 		this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2 = new MaterialPropertyBlock();
@@ -93,7 +81,6 @@ public class DesaturateSprite : MonoBehaviour
 		this.\u02B7\u02B9\u02B4\u02B2\u02B7\u02BC\u02BF\u02BE\u02B5\u02B4\u02BD = Shader.PropertyToID("Change Instrument");
 	}
 
-	// Token: 0x06000DD7 RID: 3543 RVA: 0x0000D6D1 File Offset: 0x0000B8D1
 	public void \u02C0\u02BF\u02B7\u02B6\u02BC\u02B4\u02B5\u02BF\u02BD\u02BE\u02B6(float \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5)
 	{
 		this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC.GetPropertyBlock(this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2);
@@ -101,7 +88,6 @@ public class DesaturateSprite : MonoBehaviour
 		this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC.SetPropertyBlock(this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2);
 	}
 
-	// Token: 0x06000DD8 RID: 3544 RVA: 0x0000D782 File Offset: 0x0000B982
 	public void Awake()
 	{
 		this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2 = new MaterialPropertyBlock();
@@ -109,7 +95,6 @@ public class DesaturateSprite : MonoBehaviour
 		this.\u02B7\u02B9\u02B4\u02B2\u02B7\u02BC\u02BF\u02BE\u02B5\u02B4\u02BD = Shader.PropertyToID("_OutputSaturation");
 	}
 
-	// Token: 0x06000DD9 RID: 3545 RVA: 0x0000D7AB File Offset: 0x0000B9AB
 	public void \u02BF\u02B2\u02C1\u02C1\u02B6\u02BE\u02B3\u02BD\u02B8\u02B3\u02BE()
 	{
 		this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2 = new MaterialPropertyBlock();
@@ -117,7 +102,6 @@ public class DesaturateSprite : MonoBehaviour
 		this.\u02B7\u02B9\u02B4\u02B2\u02B7\u02BC\u02BF\u02BE\u02B5\u02B4\u02BD = Shader.PropertyToID("6 Fret Guitar Coop");
 	}
 
-	// Token: 0x06000DDA RID: 3546 RVA: 0x0000D7D4 File Offset: 0x0000B9D4
 	public void \u02BD\u02BF\u02B6\u02B8\u02BB\u02B2\u02BF\u02C0\u02B5\u02B9\u02BC()
 	{
 		this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2 = new MaterialPropertyBlock();
@@ -125,7 +109,6 @@ public class DesaturateSprite : MonoBehaviour
 		this.\u02B7\u02B9\u02B4\u02B2\u02B7\u02BC\u02BF\u02BE\u02B5\u02B4\u02BD = Shader.PropertyToID("year");
 	}
 
-	// Token: 0x06000DDB RID: 3547 RVA: 0x0000D6D1 File Offset: 0x0000B8D1
 	public void \u02BF\u02B7\u02BE\u02B9\u02B7\u02B5\u02B9\u02BA\u02BB\u02B7\u02C1(float \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5)
 	{
 		this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC.GetPropertyBlock(this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2);
@@ -133,12 +116,9 @@ public class DesaturateSprite : MonoBehaviour
 		this.\u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC.SetPropertyBlock(this.\u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2);
 	}
 
-	// Token: 0x04000961 RID: 2401
 	private SpriteRenderer \u02BF\u02B9\u02BA\u02C1\u02B7\u02B7\u02B4\u02B9\u02BD\u02B4\u02BC;
 
-	// Token: 0x04000962 RID: 2402
 	private MaterialPropertyBlock \u02B5\u02BA\u02B4\u02BF\u02C0\u02B5\u02BF\u02B5\u02B5\u02B9\u02B2;
 
-	// Token: 0x04000963 RID: 2403
 	private int \u02B7\u02B9\u02B4\u02B2\u02B7\u02BC\u02BF\u02BE\u02B5\u02B4\u02BD;
 }

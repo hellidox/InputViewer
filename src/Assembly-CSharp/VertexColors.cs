@@ -1,11 +1,9 @@
-﻿using System;
+using System;
 using UnityEngine;
 
-// Token: 0x02000216 RID: 534
 [ExecuteAlways]
 public class VertexColors : MonoBehaviour
 {
-	// Token: 0x060017E8 RID: 6120 RVA: 0x000B1D34 File Offset: 0x000AFF34
 	private void \u02B4\u02BF\u02B6\u02BB\u02B2\u02B6\u02C1\u02B3\u02BC\u02B7\u02BE()
 	{
 		Mesh sharedMesh = base.GetComponent<MeshFilter>().sharedMesh;
@@ -32,7 +30,6 @@ public class VertexColors : MonoBehaviour
 		sharedMesh.colors = array;
 	}
 
-	// Token: 0x060017E9 RID: 6121 RVA: 0x000B1DFC File Offset: 0x000AFFFC
 	private void \u02B5\u02B2\u02BF\u02BD\u02BB\u02BA\u02B2\u02BF\u02BD\u02BE\u02BE()
 	{
 		Mesh sharedMesh = base.GetComponent<MeshFilter>().sharedMesh;
@@ -59,7 +56,6 @@ public class VertexColors : MonoBehaviour
 		sharedMesh.colors = array;
 	}
 
-	// Token: 0x060017EA RID: 6122 RVA: 0x000B1EC4 File Offset: 0x000B00C4
 	private void \u02B4\u02BA\u02BE\u02BB\u02B5\u02BB\u02C1\u02B2\u02B4\u02B2\u02BF()
 	{
 		Mesh sharedMesh = base.GetComponent<MeshFilter>().sharedMesh;
@@ -86,7 +82,6 @@ public class VertexColors : MonoBehaviour
 		sharedMesh.colors = array;
 	}
 
-	// Token: 0x060017EB RID: 6123 RVA: 0x000B1F8C File Offset: 0x000B018C
 	private void \u02B4\u02B2\u02B5\u02BA\u02B4\u02C0\u02BC\u02BB\u02C1\u02B9\u02BD()
 	{
 		Mesh sharedMesh = base.GetComponent<MeshFilter>().sharedMesh;
@@ -113,7 +108,6 @@ public class VertexColors : MonoBehaviour
 		sharedMesh.colors = array;
 	}
 
-	// Token: 0x060017EC RID: 6124 RVA: 0x000B2054 File Offset: 0x000B0254
 	private void \u02BE\u02B8\u02B4\u02BC\u02B7\u02B7\u02BE\u02BC\u02B5\u02BC\u02BF()
 	{
 		Mesh sharedMesh = base.GetComponent<MeshFilter>().sharedMesh;
@@ -140,7 +134,6 @@ public class VertexColors : MonoBehaviour
 		sharedMesh.colors = array;
 	}
 
-	// Token: 0x060017ED RID: 6125 RVA: 0x000B211C File Offset: 0x000B031C
 	private void \u02BC\u02BC\u02B3\u02B2\u02C0\u02B6\u02B8\u02BA\u02BD\u02B9\u02B6()
 	{
 		Mesh sharedMesh = base.GetComponent<MeshFilter>().sharedMesh;
@@ -167,7 +160,6 @@ public class VertexColors : MonoBehaviour
 		sharedMesh.colors = array;
 	}
 
-	// Token: 0x060017EE RID: 6126 RVA: 0x000B21E4 File Offset: 0x000B03E4
 	private void \u02B5\u02C0\u02BE\u02B8\u02B9\u02B2\u02BD\u02C0\u02BF\u02B3\u02BD()
 	{
 		Mesh sharedMesh = base.GetComponent<MeshFilter>().sharedMesh;
@@ -194,7 +186,6 @@ public class VertexColors : MonoBehaviour
 		sharedMesh.colors = array;
 	}
 
-	// Token: 0x060017EF RID: 6127 RVA: 0x000B22AC File Offset: 0x000B04AC
 	private void \u02B2\u02B9\u02C1\u02C1\u02B2\u02B3\u02C1\u02BF\u02BC\u02BB\u02C1()
 	{
 		Mesh sharedMesh = base.GetComponent<MeshFilter>().sharedMesh;
@@ -221,7 +212,6 @@ public class VertexColors : MonoBehaviour
 		sharedMesh.colors = array;
 	}
 
-	// Token: 0x060017F0 RID: 6128 RVA: 0x000B2374 File Offset: 0x000B0574
 	private void \u02C0\u02BE\u02B2\u02BE\u02C0\u02B5\u02B3\u02B7\u02B2\u02B8\u02B5()
 	{
 		Mesh sharedMesh = base.GetComponent<MeshFilter>().sharedMesh;
@@ -248,7 +238,6 @@ public class VertexColors : MonoBehaviour
 		sharedMesh.colors = array;
 	}
 
-	// Token: 0x060017F1 RID: 6129 RVA: 0x000B243C File Offset: 0x000B063C
 	private void \u02BF\u02BA\u02B5\u02B8\u02B5\u02BF\u02B2\u02BF\u02B3\u02BC\u02BA()
 	{
 		Mesh sharedMesh = base.GetComponent<MeshFilter>().sharedMesh;
@@ -275,7 +264,6 @@ public class VertexColors : MonoBehaviour
 		sharedMesh.colors = array;
 	}
 
-	// Token: 0x060017F2 RID: 6130 RVA: 0x000B2504 File Offset: 0x000B0704
 	private void \u02B7\u02B8\u02BD\u02C0\u02B2\u02B4\u02B7\u02C0\u02BC\u02BE\u02B3()
 	{
 		Mesh sharedMesh = base.GetComponent<MeshFilter>().sharedMesh;
@@ -302,7 +290,6 @@ public class VertexColors : MonoBehaviour
 		sharedMesh.colors = array;
 	}
 
-	// Token: 0x060017F3 RID: 6131 RVA: 0x000B25CC File Offset: 0x000B07CC
 	private void \u02B2\u02B7\u02B5\u02C0\u02B4\u02B3\u02B8\u02B3\u02C0\u02BD\u02B5()
 	{
 		Mesh sharedMesh = base.GetComponent<MeshFilter>().sharedMesh;
@@ -329,7 +316,6 @@ public class VertexColors : MonoBehaviour
 		sharedMesh.colors = array;
 	}
 
-	// Token: 0x060017F4 RID: 6132 RVA: 0x000B2694 File Offset: 0x000B0894
 	private void Start()
 	{
 		Mesh sharedMesh = base.GetComponent<MeshFilter>().sharedMesh;
@@ -356,7 +342,6 @@ public class VertexColors : MonoBehaviour
 		sharedMesh.colors = array;
 	}
 
-	// Token: 0x060017F6 RID: 6134 RVA: 0x000B275C File Offset: 0x000B095C
 	private void \u02B6\u02B6\u02B4\u02BB\u02B7\u02C1\u02C0\u02B6\u02B7\u02BD\u02B5()
 	{
 		Mesh sharedMesh = base.GetComponent<MeshFilter>().sharedMesh;
@@ -383,7 +368,6 @@ public class VertexColors : MonoBehaviour
 		sharedMesh.colors = array;
 	}
 
-	// Token: 0x060017F7 RID: 6135 RVA: 0x000B2824 File Offset: 0x000B0A24
 	private void \u02B3\u02BB\u02BF\u02B4\u02B9\u02BA\u02B5\u02B5\u02BE\u02BB\u02BE()
 	{
 		Mesh sharedMesh = base.GetComponent<MeshFilter>().sharedMesh;

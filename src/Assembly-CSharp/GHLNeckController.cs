@@ -1,11 +1,9 @@
-﻿using System;
+using System;
 using System.Collections;
 using UnityEngine;
 
-// Token: 0x0200016C RID: 364
 public class GHLNeckController : BaseNeckController
 {
-	// Token: 0x0600104F RID: 4175 RVA: 0x00088104 File Offset: 0x00086304
 	public virtual void \u02B9\u02BE\u02BD\u02B5\u02B5\u02B5\u02B6\u02BA\u02BD\u02B7\u02B6()
 	{
 		for (int i = 0; i < this.\u02BD\u02B3\u02B2\u02BC\u02B2\u02BC\u02B6\u02B4\u02B6\u02BA\u02B9.Length; i += 0)
@@ -18,7 +16,6 @@ public class GHLNeckController : BaseNeckController
 		this.flameAnimators[4].gameObject.SetActive(false);
 	}
 
-	// Token: 0x06001050 RID: 4176 RVA: 0x00088184 File Offset: 0x00086384
 	public virtual void \u02B3\u02B8\u02BD\u02B9\u02B4\u02B9\u02C0\u02B5\u02BF\u02C1\u02B6(Note \u02BE\u02BE\u02BD\u02B2\u02BB\u02B3\u02BD\u02BF\u02B3\u02B4\u02B3, bool \u02B3\u02B2\u02BC\u02B2\u02BD\u02BF\u02B6\u02BD\u02BF\u02C0\u02BE, bool \u02BD\u02B7\u02B5\u02BB\u02BC\u02C1\u02B9\u02B4\u02C0\u02B5\u02B3)
 	{
 		if (!SettingsController.\u02C0\u02B6\u02BC\u02BF\u02BF\u02C0\u02BF\u02BC\u02B4\u02B3\u02BC)
@@ -60,7 +57,6 @@ public class GHLNeckController : BaseNeckController
 		}
 	}
 
-	// Token: 0x06001051 RID: 4177 RVA: 0x00088250 File Offset: 0x00086450
 	public override void \u02BF\u02B2\u02BE\u02BE\u02BF\u02B4\u02BC\u02C0\u02B3\u02C0\u02C1()
 	{
 		Array.Reverse<BaseFretAnimator>(this.\u02BD\u02B3\u02B2\u02BC\u02B2\u02BC\u02B6\u02B4\u02B6\u02BA\u02B9);
@@ -72,7 +68,6 @@ public class GHLNeckController : BaseNeckController
 		this.\u02B2\u02B8\u02B2\u02C1\u02B9\u02C0\u02BE\u02BA\u02B4\u02B2\u02BA = true;
 	}
 
-	// Token: 0x06001052 RID: 4178 RVA: 0x0000EDB5 File Offset: 0x0000CFB5
 	protected virtual IEnumerator \u02B4\u02B9\u02BB\u02B5\u02BA\u02B8\u02BC\u02B3\u02C0\u02BF\u02BB()
 	{
 		byte index = 1;
@@ -90,7 +85,6 @@ public class GHLNeckController : BaseNeckController
 		yield break;
 	}
 
-	// Token: 0x06001053 RID: 4179 RVA: 0x000882A0 File Offset: 0x000864A0
 	public override void \u02C0\u02B8\u02B5\u02B3\u02BF\u02BD\u02B2\u02BE\u02B9\u02B2\u02B4(ushort \u02B4\u02BC\u02C0\u02B4\u02B3\u02BA\u02BE\u02C0\u02C1\u02B3\u02B6)
 	{
 		if (\u02B4\u02BC\u02C0\u02B4\u02B3\u02BA\u02BE\u02C0\u02C1\u02B3\u02B6 == this.\u02B7\u02C0\u02BB\u02BF\u02B9\u02C0\u02BD\u02BA\u02B7\u02B8\u02BB)
@@ -145,12 +139,10 @@ public class GHLNeckController : BaseNeckController
 		this.\u02B7\u02C0\u02BB\u02BF\u02B9\u02C0\u02BD\u02BA\u02B7\u02B8\u02BB = \u02B4\u02BC\u02C0\u02B4\u02B3\u02BA\u02BE\u02C0\u02C1\u02B3\u02B6;
 	}
 
-	// Token: 0x06001054 RID: 4180 RVA: 0x00005F91 File Offset: 0x00004191
 	public override void \u02B8\u02BA\u02B8\u02B9\u02B7\u02B3\u02B6\u02BD\u02C1\u02BC\u02B8(ushort \u02B3\u02BF\u02B5\u02B7\u02C0\u02BB\u02BA\u02B4\u02B8\u02C0\u02B7)
 	{
 	}
 
-	// Token: 0x06001056 RID: 4182 RVA: 0x00088370 File Offset: 0x00086570
 	public virtual void \u02B5\u02C0\u02BE\u02B4\u02BC\u02C0\u02BF\u02BC\u02BD\u02B8\u02BB(Note \u02BE\u02BE\u02BD\u02B2\u02BB\u02B3\u02BD\u02BF\u02B3\u02B4\u02B3, bool \u02B3\u02B2\u02BC\u02B2\u02BD\u02BF\u02B6\u02BD\u02BF\u02C0\u02BE, bool \u02BD\u02B7\u02B5\u02BB\u02BC\u02C1\u02B9\u02B4\u02C0\u02B5\u02B3)
 	{
 		if (!SettingsController.\u02C0\u02B6\u02BC\u02BF\u02BF\u02C0\u02BF\u02BC\u02B4\u02B3\u02BC)
@@ -192,7 +184,6 @@ public class GHLNeckController : BaseNeckController
 		}
 	}
 
-	// Token: 0x06001057 RID: 4183 RVA: 0x0008843C File Offset: 0x0008663C
 	public virtual void \u02B9\u02B8\u02BB\u02BE\u02BE\u02B3\u02C1\u02B7\u02B7\u02B5\u02B7()
 	{
 		Array.Reverse<BaseFretAnimator>(this.\u02BD\u02B3\u02B2\u02BC\u02B2\u02BC\u02B6\u02B4\u02B6\u02BA\u02B9);
@@ -204,7 +195,6 @@ public class GHLNeckController : BaseNeckController
 		this.\u02B2\u02B8\u02B2\u02C1\u02B9\u02C0\u02BE\u02BA\u02B4\u02B2\u02BA = true;
 	}
 
-	// Token: 0x06001058 RID: 4184 RVA: 0x0000EDB5 File Offset: 0x0000CFB5
 	protected virtual IEnumerator \u02B3\u02C0\u02C0\u02BD\u02BE\u02B2\u02BC\u02B2\u02BF\u02BD\u02BE()
 	{
 		index = 1;
@@ -222,7 +212,6 @@ public class GHLNeckController : BaseNeckController
 		yield break;
 	}
 
-	// Token: 0x06001059 RID: 4185 RVA: 0x0008848C File Offset: 0x0008668C
 	public virtual void \u02B2\u02BA\u02BC\u02B3\u02C0\u02BA\u02BC\u02B5\u02BE\u02BE\u02C0(Note \u02BE\u02BE\u02BD\u02B2\u02BB\u02B3\u02BD\u02BF\u02B3\u02B4\u02B3, bool \u02B3\u02B2\u02BC\u02B2\u02BD\u02BF\u02B6\u02BD\u02BF\u02C0\u02BE, bool \u02BD\u02B7\u02B5\u02BB\u02BC\u02C1\u02B9\u02B4\u02C0\u02B5\u02B3)
 	{
 		if (!SettingsController.\u02C0\u02B6\u02BC\u02BF\u02BF\u02C0\u02BF\u02BC\u02B4\u02B3\u02BC)
@@ -264,7 +253,6 @@ public class GHLNeckController : BaseNeckController
 		}
 	}
 
-	// Token: 0x0600105A RID: 4186 RVA: 0x00088558 File Offset: 0x00086758
 	public override void \u02B2\u02BF\u02BB\u02BC\u02B8\u02B7\u02B9\u02C1\u02B8\u02BE\u02BA()
 	{
 		for (int i = 0; i < this.\u02BD\u02B3\u02B2\u02BC\u02B2\u02BC\u02B6\u02B4\u02B6\u02BA\u02B9.Length; i++)
@@ -277,7 +265,6 @@ public class GHLNeckController : BaseNeckController
 		this.flameAnimators[4].gameObject.SetActive(false);
 	}
 
-	// Token: 0x0600105B RID: 4187 RVA: 0x0000EDB5 File Offset: 0x0000CFB5
 	protected override IEnumerator \u02B5\u02BD\u02BE\u02BF\u02B3\u02B8\u02BC\u02B5\u02B2\u02B4\u02B6()
 	{
 		index = 1;
@@ -295,7 +282,6 @@ public class GHLNeckController : BaseNeckController
 		yield break;
 	}
 
-	// Token: 0x0600105C RID: 4188 RVA: 0x0000EDB5 File Offset: 0x0000CFB5
 	protected virtual IEnumerator \u02C0\u02C0\u02BA\u02B6\u02B5\u02BD\u02B4\u02BB\u02B6\u02B6\u02BD()
 	{
 		index = 1;
@@ -313,12 +299,10 @@ public class GHLNeckController : BaseNeckController
 		yield break;
 	}
 
-	// Token: 0x0600105D RID: 4189 RVA: 0x00005F91 File Offset: 0x00004191
 	public override void \u02B6\u02B2\u02B9\u02B7\u02B5\u02B9\u02B5\u02BF\u02B8\u02B8\u02BC(bool \u02BB\u02B9\u02BB\u02B7\u02BB\u02B9\u02BA\u02B2\u02C1\u02B5\u02BA)
 	{
 	}
 
-	// Token: 0x0600105E RID: 4190 RVA: 0x000885D8 File Offset: 0x000867D8
 	public virtual void \u02B3\u02B8\u02B6\u02B3\u02BB\u02B2\u02BE\u02B9\u02BB\u02BE\u02B5()
 	{
 		Array.Reverse<BaseFretAnimator>(this.\u02BD\u02B3\u02B2\u02BC\u02B2\u02BC\u02B6\u02B4\u02B6\u02BA\u02B9);
@@ -330,7 +314,6 @@ public class GHLNeckController : BaseNeckController
 		this.\u02B2\u02B8\u02B2\u02C1\u02B9\u02C0\u02BE\u02BA\u02B4\u02B2\u02BA = true;
 	}
 
-	// Token: 0x0600105F RID: 4191 RVA: 0x00088628 File Offset: 0x00086828
 	public virtual void \u02BE\u02B3\u02BC\u02B2\u02BC\u02B3\u02B8\u02B8\u02B7\u02B4\u02BB()
 	{
 		Array.Reverse<BaseFretAnimator>(this.\u02BD\u02B3\u02B2\u02BC\u02B2\u02BC\u02B6\u02B4\u02B6\u02BA\u02B9);
@@ -342,7 +325,6 @@ public class GHLNeckController : BaseNeckController
 		this.\u02B2\u02B8\u02B2\u02C1\u02B9\u02C0\u02BE\u02BA\u02B4\u02B2\u02BA = false;
 	}
 
-	// Token: 0x06001060 RID: 4192 RVA: 0x00088678 File Offset: 0x00086878
 	public override void \u02B4\u02B7\u02B5\u02BC\u02B6\u02B2\u02BA\u02BF\u02B2\u02BA\u02BA(Note \u02BE\u02BE\u02BD\u02B2\u02BB\u02B3\u02BD\u02BF\u02B3\u02B4\u02B3, bool \u02B3\u02B2\u02BC\u02B2\u02BD\u02BF\u02B6\u02BD\u02BF\u02C0\u02BE, bool \u02BD\u02B7\u02B5\u02BB\u02BC\u02C1\u02B9\u02B4\u02C0\u02B5\u02B3)
 	{
 		if (!SettingsController.\u02C0\u02B6\u02BC\u02BF\u02BF\u02C0\u02BF\u02BC\u02B4\u02B3\u02BC)
@@ -384,14 +366,11 @@ public class GHLNeckController : BaseNeckController
 		}
 	}
 
-	// Token: 0x06001061 RID: 4193 RVA: 0x00005F91 File Offset: 0x00004191
 	public override void \u02B5\u02BD\u02BA\u02BE\u02B4\u02B9\u02BD\u02B3\u02B9\u02BC\u02BE()
 	{
 	}
 
-	// Token: 0x04000C96 RID: 3222
 	private bool \u02B2\u02B8\u02B2\u02C1\u02B9\u02C0\u02BE\u02BA\u02B4\u02B2\u02BA;
 
-	// Token: 0x04000C97 RID: 3223
 	private float \u02C1\u02B4\u02BC\u02B7\u02BD\u02BF\u02BC\u02C1\u02B7\u02BE\u02B4 = 0.1f;
 }

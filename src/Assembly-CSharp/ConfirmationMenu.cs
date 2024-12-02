@@ -1,11 +1,9 @@
-﻿using System;
+using System;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x02000083 RID: 131
 public class ConfirmationMenu : BaseMenu
 {
-	// Token: 0x0600055A RID: 1370 RVA: 0x00034FC4 File Offset: 0x000331C4
 	public virtual void \u02B3\u02C1\u02B8\u02BA\u02B2\u02B8\u02B5\u02B6\u02B2\u02B5\u02BA()
 	{
 		string text = this.messageTitleText.text;
@@ -23,7 +21,6 @@ public class ConfirmationMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x0600055B RID: 1371 RVA: 0x00035020 File Offset: 0x00033220
 	public virtual void \u02BF\u02B4\u02BE\u02BC\u02B9\u02BE\u02BD\u02B7\u02C0\u02C1\u02C0()
 	{
 		string text = this.messageTitleText.text;
@@ -41,7 +38,6 @@ public class ConfirmationMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x0600055C RID: 1372 RVA: 0x0003507C File Offset: 0x0003327C
 	public virtual void \u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD(string \u02BB\u02B3\u02B2\u02B2\u02B3\u02BF\u02B6\u02B9\u02BD\u02B5\u02BC, string \u02B8\u02B7\u02BD\u02B6\u02BC\u02B9\u02B9\u02B7\u02B4\u02B8\u02B2, string \u02B7\u02BE\u02B6\u02B7\u02BD\u02BD\u02B3\u02B9\u02BD\u02B8\u02BA, ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7 \u02B6\u02B7\u02B8\u02BE\u02BB\u02B4\u02B5\u02B4\u02B8\u02B5\u02BD, ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7 \u02B8\u02BC\u02BC\u02BD\u02BC\u02B2\u02BB\u02C0\u02BE\u02BA\u02B6, string \u02B7\u02BC\u02C1\u02BA\u02B3\u02B9\u02BB\u02C1\u02BB\u02B6\u02B8 = null)
 	{
 		base.\u02B7\u02B6\u02BC\u02BC\u02B3\u02BA\u02BE\u02C0\u02BF\u02B9\u02C1();
@@ -78,7 +74,6 @@ public class ConfirmationMenu : BaseMenu
 		Canvas.ForceUpdateCanvases();
 	}
 
-	// Token: 0x0600055D RID: 1373 RVA: 0x00035158 File Offset: 0x00033358
 	public virtual void \u02C0\u02BE\u02B9\u02B5\u02B6\u02C1\u02B5\u02C0\u02BE\u02B8\u02C1()
 	{
 		string text = this.messageTitleText.text;
@@ -96,7 +91,6 @@ public class ConfirmationMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x0600055E RID: 1374 RVA: 0x00008A07 File Offset: 0x00006C07
 	public override void \u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8()
 	{
 		if (this.\u02B5\u02C0\u02B6\u02B3\u02BC\u02B3\u02B4\u02C0\u02B8\u02BA\u02B9 != new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8))
@@ -106,7 +100,6 @@ public class ConfirmationMenu : BaseMenu
 		this.\u02B8\u02B6\u02B9\u02BF\u02BF\u02BD\u02B6\u02B7\u02B3\u02BA\u02B9(true, false);
 	}
 
-	// Token: 0x0600055F RID: 1375 RVA: 0x00008A07 File Offset: 0x00006C07
 	public virtual void \u02BC\u02BD\u02B2\u02B9\u02BB\u02C1\u02BB\u02B6\u02B4\u02BC\u02BE()
 	{
 		if (this.\u02B5\u02C0\u02B6\u02B3\u02BC\u02B3\u02B4\u02C0\u02B8\u02BA\u02B9 != new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8))
@@ -116,7 +109,6 @@ public class ConfirmationMenu : BaseMenu
 		this.\u02B8\u02B6\u02B9\u02BF\u02BF\u02BD\u02B6\u02B7\u02B3\u02BA\u02B9(true, false);
 	}
 
-	// Token: 0x06000560 RID: 1376 RVA: 0x000351B4 File Offset: 0x000333B4
 	public virtual void \u02B7\u02B3\u02BC\u02BE\u02BF\u02B7\u02B4\u02C0\u02B9\u02BC\u02BF(string \u02BB\u02B3\u02B2\u02B2\u02B3\u02BF\u02B6\u02B9\u02BD\u02B5\u02BC, string \u02B8\u02B7\u02BD\u02B6\u02BC\u02B9\u02B9\u02B7\u02B4\u02B8\u02B2, string \u02B7\u02BE\u02B6\u02B7\u02BD\u02BD\u02B3\u02B9\u02BD\u02B8\u02BA, ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7 \u02B6\u02B7\u02B8\u02BE\u02BB\u02B4\u02B5\u02B4\u02B8\u02B5\u02BD, ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7 \u02B8\u02BC\u02BC\u02BD\u02BC\u02B2\u02BB\u02C0\u02BE\u02BA\u02B6, string \u02B7\u02BC\u02C1\u02BA\u02B3\u02B9\u02BB\u02C1\u02BB\u02B6\u02B8 = null)
 	{
 		base.\u02B7\u02B6\u02BC\u02BC\u02B3\u02BA\u02BE\u02C0\u02BF\u02B9\u02C1();
@@ -153,7 +145,6 @@ public class ConfirmationMenu : BaseMenu
 		Canvas.ForceUpdateCanvases();
 	}
 
-	// Token: 0x06000561 RID: 1377 RVA: 0x00034FC4 File Offset: 0x000331C4
 	public virtual void \u02C0\u02B8\u02BD\u02B8\u02BB\u02BC\u02BE\u02B2\u02B2\u02B3\u02B5()
 	{
 		string text = this.messageTitleText.text;
@@ -171,7 +162,6 @@ public class ConfirmationMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x06000563 RID: 1379 RVA: 0x00008A3E File Offset: 0x00006C3E
 	public virtual void \u02B5\u02B4\u02BE\u02B6\u02BC\u02BC\u02C0\u02BC\u02B5\u02BC\u02BF()
 	{
 		if (this.\u02B5\u02C0\u02B6\u02B3\u02BC\u02B3\u02B4\u02C0\u02B8\u02BA\u02B9 != new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8))
@@ -181,7 +171,6 @@ public class ConfirmationMenu : BaseMenu
 		this.\u02B8\u02B6\u02B9\u02BF\u02BF\u02BD\u02B6\u02B7\u02B3\u02BA\u02B9(true, true);
 	}
 
-	// Token: 0x06000564 RID: 1380 RVA: 0x00008A6D File Offset: 0x00006C6D
 	public virtual void \u02B5\u02C0\u02BD\u02B6\u02C0\u02B6\u02B7\u02BE\u02BF\u02B5\u02C0()
 	{
 		if (this.\u02B5\u02C0\u02B6\u02B3\u02BC\u02B3\u02B4\u02C0\u02B8\u02BA\u02B9 != new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8))
@@ -191,7 +180,6 @@ public class ConfirmationMenu : BaseMenu
 		this.\u02B8\u02B6\u02B9\u02BF\u02BF\u02BD\u02B6\u02B7\u02B3\u02BA\u02B9(false, true);
 	}
 
-	// Token: 0x06000565 RID: 1381 RVA: 0x00035290 File Offset: 0x00033490
 	public virtual void \u02B5\u02B8\u02C0\u02B7\u02BF\u02B7\u02B5\u02BD\u02C1\u02B8\u02B7(string \u02BB\u02B3\u02B2\u02B2\u02B3\u02BF\u02B6\u02B9\u02BD\u02B5\u02BC, string \u02B8\u02B7\u02BD\u02B6\u02BC\u02B9\u02B9\u02B7\u02B4\u02B8\u02B2, string \u02B7\u02BE\u02B6\u02B7\u02BD\u02BD\u02B3\u02B9\u02BD\u02B8\u02BA, ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7 \u02B6\u02B7\u02B8\u02BE\u02BB\u02B4\u02B5\u02B4\u02B8\u02B5\u02BD, ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7 \u02B8\u02BC\u02BC\u02BD\u02BC\u02B2\u02BB\u02C0\u02BE\u02BA\u02B6, string \u02B7\u02BC\u02C1\u02BA\u02B3\u02B9\u02BB\u02C1\u02BB\u02B6\u02B8 = null)
 	{
 		base.\u02B7\u02B6\u02BC\u02BC\u02B3\u02BA\u02BE\u02C0\u02BF\u02B9\u02C1();
@@ -228,7 +216,6 @@ public class ConfirmationMenu : BaseMenu
 		Canvas.ForceUpdateCanvases();
 	}
 
-	// Token: 0x06000566 RID: 1382 RVA: 0x00034FC4 File Offset: 0x000331C4
 	public virtual void \u02B8\u02C1\u02B2\u02C0\u02B8\u02B6\u02C1\u02B4\u02B9\u02B8\u02BF()
 	{
 		string text = this.messageTitleText.text;
@@ -246,7 +233,6 @@ public class ConfirmationMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x06000567 RID: 1383 RVA: 0x0003536C File Offset: 0x0003356C
 	public override void \u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3()
 	{
 		string text = this.messageTitleText.text;
@@ -264,7 +250,6 @@ public class ConfirmationMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x06000568 RID: 1384 RVA: 0x00008A07 File Offset: 0x00006C07
 	public virtual void \u02C0\u02BA\u02BF\u02B6\u02C1\u02B5\u02B9\u02B9\u02B7\u02BD\u02BB()
 	{
 		if (this.\u02B5\u02C0\u02B6\u02B3\u02BC\u02B3\u02B4\u02C0\u02B8\u02BA\u02B9 != new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8))
@@ -274,21 +259,15 @@ public class ConfirmationMenu : BaseMenu
 		this.\u02B8\u02B6\u02B9\u02BF\u02BF\u02BD\u02B6\u02B7\u02B3\u02BA\u02B9(true, false);
 	}
 
-	// Token: 0x04000404 RID: 1028
 	protected ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7 \u02B9\u02BF\u02B7\u02BE\u02BD\u02BB\u02B4\u02BE\u02B3\u02B5\u02BF;
 
-	// Token: 0x04000405 RID: 1029
 	protected ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7 \u02B5\u02C0\u02B6\u02B3\u02BC\u02B3\u02B4\u02C0\u02B8\u02BA\u02B9;
 
-	// Token: 0x04000406 RID: 1030
 	[SerializeField]
 	private TextMeshProUGUI messageTitleText;
 
-	// Token: 0x04000407 RID: 1031
 	[SerializeField]
 	private TextMeshProUGUI messageBodyText;
 
-	// Token: 0x02000084 RID: 132
-	// (Invoke) Token: 0x0600056A RID: 1386
 	public delegate void \u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7();
 }

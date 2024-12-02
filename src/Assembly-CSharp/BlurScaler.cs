@@ -1,12 +1,10 @@
-﻿using System;
+using System;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-// Token: 0x02000014 RID: 20
 [ExecuteInEditMode]
 public class BlurScaler : MonoBehaviour
 {
-	// Token: 0x060000D0 RID: 208 RVA: 0x0001BA94 File Offset: 0x00019C94
 	private void \u02BA\u02B9\u02BF\u02BC\u02C1\u02B9\u02B7\u02B4\u02C1\u02BB\u02BB()
 	{
 		int num = (int)((float)this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.pixelWidth * (793f / (float)this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.pixelHeight));
@@ -42,7 +40,6 @@ public class BlurScaler : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060000D1 RID: 209 RVA: 0x0001BBF4 File Offset: 0x00019DF4
 	private void \u02BB\u02B8\u02B6\u02BB\u02BF\u02BA\u02B9\u02B2\u02BE\u02B2\u02B2()
 	{
 		int num = (int)((float)this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.pixelWidth * (1604f / (float)this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.pixelHeight));
@@ -78,7 +75,6 @@ public class BlurScaler : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060000D2 RID: 210 RVA: 0x0001BD54 File Offset: 0x00019F54
 	private void \u02B9\u02BE\u02BC\u02BE\u02BC\u02B9\u02B2\u02B3\u02BF\u02B2\u02BA()
 	{
 		int num = (int)((float)this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.pixelWidth * (371f / (float)this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.pixelHeight));
@@ -114,7 +110,6 @@ public class BlurScaler : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060000D3 RID: 211 RVA: 0x0001BEB4 File Offset: 0x0001A0B4
 	private void \u02B3\u02BC\u02BB\u02BF\u02C1\u02BE\u02B4\u02BC\u02BE\u02BF\u02B8()
 	{
 		int num = (int)((float)this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.pixelWidth * (470f / (float)this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.pixelHeight));
@@ -150,7 +145,6 @@ public class BlurScaler : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060000D4 RID: 212 RVA: 0x000064CA File Offset: 0x000046CA
 	private void OnDisable()
 	{
 		this.\u02BB\u02BB\u02BF\u02BC\u02B2\u02BD\u02C0\u02BE\u02B2\u02B6\u02BF.Release();
@@ -159,7 +153,6 @@ public class BlurScaler : MonoBehaviour
 		this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.RemoveCommandBuffer(CameraEvent.BeforeImageEffects, this.\u02B3\u02BC\u02BE\u02BA\u02C0\u02BD\u02BF\u02B3\u02B9\u02B7\u02BD);
 	}
 
-	// Token: 0x060000D5 RID: 213 RVA: 0x0001C014 File Offset: 0x0001A214
 	private void \u02C1\u02BA\u02B8\u02BD\u02BE\u02BE\u02B4\u02B7\u02C0\u02BB\u02B3()
 	{
 		int num = (int)((float)this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.pixelWidth * (1028f / (float)this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.pixelHeight));
@@ -195,7 +188,6 @@ public class BlurScaler : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060000D6 RID: 214 RVA: 0x00006500 File Offset: 0x00004700
 	private void \u02BA\u02C1\u02BB\u02B3\u02BD\u02B4\u02B4\u02B2\u02C0\u02B9\u02BF()
 	{
 		this.\u02BB\u02BB\u02BF\u02BC\u02B2\u02BD\u02C0\u02BE\u02B2\u02B6\u02BF.Release();
@@ -204,7 +196,6 @@ public class BlurScaler : MonoBehaviour
 		this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.RemoveCommandBuffer((CameraEvent)(-22), this.\u02B3\u02BC\u02BE\u02BA\u02C0\u02BD\u02BF\u02B3\u02B9\u02B7\u02BD);
 	}
 
-	// Token: 0x060000D7 RID: 215 RVA: 0x00006536 File Offset: 0x00004736
 	private void \u02C0\u02B7\u02BF\u02BC\u02C1\u02B4\u02B3\u02B9\u02C0\u02B3\u02B7()
 	{
 		this.\u02BB\u02BB\u02BF\u02BC\u02B2\u02BD\u02C0\u02BE\u02B2\u02B6\u02BF.Release();
@@ -213,7 +204,6 @@ public class BlurScaler : MonoBehaviour
 		this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.RemoveCommandBuffer((CameraEvent)(-57), this.\u02B3\u02BC\u02BE\u02BA\u02C0\u02BD\u02BF\u02B3\u02B9\u02B7\u02BD);
 	}
 
-	// Token: 0x060000D8 RID: 216 RVA: 0x0001C174 File Offset: 0x0001A374
 	private void \u02BB\u02BF\u02B7\u02BA\u02B5\u02B8\u02BA\u02B5\u02B7\u02B9\u02BE()
 	{
 		int num = (int)((float)this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.pixelWidth * (1633f / (float)this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.pixelHeight));
@@ -249,7 +239,6 @@ public class BlurScaler : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060000D9 RID: 217 RVA: 0x0001C2D4 File Offset: 0x0001A4D4
 	private void \u02C0\u02B7\u02B3\u02BF\u02B9\u02B3\u02BB\u02C1\u02BB\u02BA\u02BF()
 	{
 		int num = (int)((float)this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.pixelWidth * (182f / (float)this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.pixelHeight));
@@ -285,7 +274,6 @@ public class BlurScaler : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060000DA RID: 218 RVA: 0x0001C434 File Offset: 0x0001A634
 	private void \u02BE\u02B9\u02B7\u02B5\u02BC\u02B2\u02B8\u02BC\u02C0\u02B9\u02BE()
 	{
 		int num = (int)((float)this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.pixelWidth * (1324f / (float)this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.pixelHeight));
@@ -321,7 +309,6 @@ public class BlurScaler : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060000DB RID: 219 RVA: 0x0001C594 File Offset: 0x0001A794
 	private void \u02B9\u02B7\u02C0\u02B7\u02C1\u02BA\u02BC\u02C0\u02C1\u02BD\u02B6()
 	{
 		int num = (int)((float)this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.pixelWidth * (1204f / (float)this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.pixelHeight));
@@ -357,7 +344,6 @@ public class BlurScaler : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060000DC RID: 220 RVA: 0x0001C6F4 File Offset: 0x0001A8F4
 	private void Update()
 	{
 		int num = (int)((float)this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.pixelWidth * (512f / (float)this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.pixelHeight));
@@ -378,7 +364,6 @@ public class BlurScaler : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060000DD RID: 221 RVA: 0x0001C804 File Offset: 0x0001AA04
 	private void \u02B9\u02B6\u02B3\u02B9\u02BD\u02BD\u02B6\u02C0\u02BE\u02BA\u02BB()
 	{
 		int num = (int)((float)this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.pixelWidth * (518f / (float)this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.pixelHeight));
@@ -414,7 +399,6 @@ public class BlurScaler : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060000DE RID: 222 RVA: 0x0001C964 File Offset: 0x0001AB64
 	private void \u02B4\u02B7\u02C1\u02B8\u02B2\u02B9\u02B6\u02B2\u02B5\u02B7\u02B7()
 	{
 		int num = (int)((float)this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.pixelWidth * (1670f / (float)this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.pixelHeight));
@@ -450,7 +434,6 @@ public class BlurScaler : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060000DF RID: 223 RVA: 0x0001CAC4 File Offset: 0x0001ACC4
 	private void \u02BC\u02BE\u02B2\u02B8\u02C0\u02B6\u02B2\u02B3\u02B6\u02B4\u02BF()
 	{
 		int num = (int)((float)this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.pixelWidth * (1979f / (float)this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.pixelHeight));
@@ -486,7 +469,6 @@ public class BlurScaler : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060000E0 RID: 224 RVA: 0x0000656C File Offset: 0x0000476C
 	private void \u02B4\u02B7\u02BC\u02B9\u02B3\u02B9\u02B9\u02BE\u02C0\u02B3\u02B5()
 	{
 		this.\u02BB\u02BB\u02BF\u02BC\u02B2\u02BD\u02C0\u02BE\u02B2\u02B6\u02BF.Release();
@@ -495,7 +477,6 @@ public class BlurScaler : MonoBehaviour
 		this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.RemoveCommandBuffer((CameraEvent)99, this.\u02B3\u02BC\u02BE\u02BA\u02C0\u02BD\u02BF\u02B3\u02B9\u02B7\u02BD);
 	}
 
-	// Token: 0x060000E1 RID: 225 RVA: 0x000065A2 File Offset: 0x000047A2
 	private void \u02B3\u02BC\u02BE\u02B8\u02BE\u02C0\u02B4\u02BC\u02BE\u02BB\u02C1()
 	{
 		this.\u02BB\u02BB\u02BF\u02BC\u02B2\u02BD\u02C0\u02BE\u02B2\u02B6\u02BF.Release();
@@ -504,7 +485,6 @@ public class BlurScaler : MonoBehaviour
 		this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.RemoveCommandBuffer((CameraEvent)(-98), this.\u02B3\u02BC\u02BE\u02BA\u02C0\u02BD\u02BF\u02B3\u02B9\u02B7\u02BD);
 	}
 
-	// Token: 0x060000E2 RID: 226 RVA: 0x0001CC24 File Offset: 0x0001AE24
 	private void OnEnable()
 	{
 		int num = (int)((float)this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.pixelWidth * (512f / (float)this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.pixelHeight));
@@ -540,7 +520,6 @@ public class BlurScaler : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060000E3 RID: 227 RVA: 0x000065D8 File Offset: 0x000047D8
 	private void \u02B2\u02B5\u02B8\u02C1\u02BD\u02C0\u02BC\u02BE\u02BE\u02BA\u02B6()
 	{
 		this.\u02BB\u02BB\u02BF\u02BC\u02B2\u02BD\u02C0\u02BE\u02B2\u02B6\u02BF.Release();
@@ -549,7 +528,6 @@ public class BlurScaler : MonoBehaviour
 		this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.RemoveCommandBuffer((CameraEvent)(-99), this.\u02B3\u02BC\u02BE\u02BA\u02C0\u02BD\u02BF\u02B3\u02B9\u02B7\u02BD);
 	}
 
-	// Token: 0x060000E4 RID: 228 RVA: 0x0000660E File Offset: 0x0000480E
 	private void \u02B7\u02B2\u02BB\u02B9\u02B3\u02BD\u02B9\u02B8\u02BD\u02B9\u02B6()
 	{
 		this.\u02BB\u02BB\u02BF\u02BC\u02B2\u02BD\u02C0\u02BE\u02B2\u02B6\u02BF.Release();
@@ -558,27 +536,19 @@ public class BlurScaler : MonoBehaviour
 		this.\u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC.RemoveCommandBuffer((CameraEvent)(-28), this.\u02B3\u02BC\u02BE\u02BA\u02C0\u02BD\u02BF\u02B3\u02B9\u02B7\u02BD);
 	}
 
-	// Token: 0x04000055 RID: 85
 	private RenderTexture \u02BB\u02BB\u02BF\u02BC\u02B2\u02BD\u02C0\u02BE\u02B2\u02B6\u02BF;
 
-	// Token: 0x04000056 RID: 86
 	private RenderTexture \u02B6\u02C1\u02BD\u02B2\u02B5\u02C1\u02B7\u02B2\u02BB\u02BE\u02B6;
 
-	// Token: 0x04000057 RID: 87
 	private CommandBuffer \u02B3\u02BC\u02BE\u02BA\u02C0\u02BD\u02BF\u02B3\u02B9\u02B7\u02BD;
 
-	// Token: 0x04000058 RID: 88
 	public Camera \u02BC\u02BE\u02B8\u02BE\u02B6\u02BF\u02BC\u02B2\u02B8\u02BA\u02BC;
 
-	// Token: 0x04000059 RID: 89
 	public Material \u02B8\u02C0\u02BA\u02BB\u02B4\u02C1\u02B4\u02BA\u02BA\u02BC\u02B3;
 
-	// Token: 0x0400005A RID: 90
 	public Material \u02B8\u02BF\u02B9\u02B9\u02BE\u02B9\u02BA\u02B6\u02BF\u02C1\u02BB;
 
-	// Token: 0x0400005B RID: 91
 	public Material[] \u02BC\u02B2\u02B5\u02B4\u02BA\u02BF\u02C1\u02B9\u02C0\u02B8\u02BE;
 
-	// Token: 0x0400005C RID: 92
 	public const int \u02BE\u02B2\u02BC\u02C0\u02BF\u02C0\u02C1\u02B8\u02BD\u02C0\u02BB = 512;
 }

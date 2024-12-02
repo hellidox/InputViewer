@@ -1,19 +1,16 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace UnityEngine.UI.Extensions
 {
-	// Token: 0x02000245 RID: 581
 	[AddComponentMenu("Layout/Extensions/Flow Layout Group")]
 	public class FlowLayoutGroup : LayoutGroup
 	{
-		// Token: 0x06001939 RID: 6457 RVA: 0x000131B7 File Offset: 0x000113B7
 		public override void SetLayoutVertical()
 		{
 			this.\u02B8\u02B2\u02B3\u02C1\u02BC\u02BB\u02B8\u02B9\u02C0\u02BF\u02C1(1, false);
 		}
 
-		// Token: 0x0600193B RID: 6459 RVA: 0x000C48F0 File Offset: 0x000C2AF0
 		public override void CalculateLayoutInputVertical()
 		{
 			if (this.\u02B2\u02B5\u02B8\u02C1\u02BB\u02B2\u02BC\u02B7\u02B6\u02B4\u02C1 == FlowLayoutGroup.\u02B7\u02B6\u02C1\u02B3\u02B8\u02B3\u02BA\u02B9\u02B5\u02C1\u02B3.Horizontal)
@@ -26,9 +23,6 @@ namespace UnityEngine.UI.Extensions
 			base.SetLayoutInputForAxis(num, -1f, -1f, 1);
 		}
 
-		// Token: 0x17000279 RID: 633
-		// (get) Token: 0x0600193C RID: 6460 RVA: 0x000131D5 File Offset: 0x000113D5
-		// (set) Token: 0x06001943 RID: 6467 RVA: 0x00013256 File Offset: 0x00011456
 		public FlowLayoutGroup.\u02B7\u02B6\u02C1\u02B3\u02B8\u02B3\u02BA\u02B9\u02B5\u02C1\u02B3 \u02B2\u02B5\u02B8\u02C1\u02BB\u02B2\u02BC\u02B7\u02B6\u02B4\u02C1
 		{
 			get
@@ -41,14 +35,11 @@ namespace UnityEngine.UI.Extensions
 			}
 		}
 
-		// Token: 0x0600193D RID: 6461 RVA: 0x000131DD File Offset: 0x000113DD
 		public virtual void \u02B3\u02BE\u02B5\u02B5\u02BD\u02B5\u02BF\u02BB\u02B4\u02B9\u02B2()
 		{
 			this.\u02B8\u02B2\u02B3\u02C1\u02BC\u02BB\u02B8\u02B9\u02C0\u02BF\u02C1(0, true);
 		}
 
-		// Token: 0x1700027A RID: 634
-		// (get) Token: 0x0600193E RID: 6462 RVA: 0x000131E8 File Offset: 0x000113E8
 		protected bool \u02B3\u02BA\u02BB\u02B6\u02B4\u02B4\u02B5\u02C1\u02B7\u02B9\u02B6
 		{
 			get
@@ -57,7 +48,6 @@ namespace UnityEngine.UI.Extensions
 			}
 		}
 
-		// Token: 0x0600193F RID: 6463 RVA: 0x00013207 File Offset: 0x00011407
 		private float \u02BE\u02BE\u02BB\u02BF\u02BF\u02BA\u02B4\u02C0\u02B2\u02B5\u02B6(float \u02BE\u02B2\u02BE\u02B7\u02C0\u02B9\u02BF\u02B9\u02B9\u02B4\u02BC, float \u02B4\u02B5\u02BA\u02B8\u02BE\u02B6\u02C0\u02B4\u02BB\u02BF\u02B5, float \u02B8\u02B9\u02C0\u02B5\u02BD\u02BF\u02B8\u02B5\u02B4\u02B7\u02BE)
 		{
 			if (this.\u02BE\u02B5\u02B2\u02B4\u02BA\u02BE\u02BE\u02B8\u02B3\u02B2\u02BC)
@@ -71,8 +61,6 @@ namespace UnityEngine.UI.Extensions
 			return \u02B4\u02B5\u02BA\u02B8\u02BE\u02B6\u02C0\u02B4\u02BB\u02BF\u02B5;
 		}
 
-		// Token: 0x1700027C RID: 636
-		// (get) Token: 0x06001940 RID: 6464 RVA: 0x00013237 File Offset: 0x00011437
 		protected bool \u02B5\u02BC\u02C0\u02B5\u02C1\u02BA\u02B7\u02C0\u02B2\u02B4\u02BF
 		{
 			get
@@ -81,7 +69,6 @@ namespace UnityEngine.UI.Extensions
 			}
 		}
 
-		// Token: 0x06001941 RID: 6465 RVA: 0x000C4950 File Offset: 0x000C2B50
 		public float \u02B6\u02C0\u02B3\u02B6\u02B2\u02C0\u02BB\u02B7\u02BE\u02C1\u02C1()
 		{
 			float num = 1751f;
@@ -92,7 +79,6 @@ namespace UnityEngine.UI.Extensions
 			return num;
 		}
 
-		// Token: 0x06001942 RID: 6466 RVA: 0x000C4994 File Offset: 0x000C2B94
 		public float \u02B8\u02B2\u02B3\u02C1\u02BC\u02BB\u02B8\u02B9\u02C0\u02BF\u02C1(int \u02B9\u02B9\u02BD\u02BE\u02B9\u02BC\u02C1\u02C1\u02BB\u02C1\u02C1, bool \u02B8\u02B6\u02B7\u02B2\u02B7\u02BE\u02BD\u02BD\u02BA\u02B4\u02BE)
 		{
 			float height = base.rectTransform.rect.height;
@@ -243,7 +229,6 @@ namespace UnityEngine.UI.Extensions
 			return num3;
 		}
 
-		// Token: 0x06001944 RID: 6468 RVA: 0x000C4E68 File Offset: 0x000C3068
 		public float \u02BD\u02C0\u02C1\u02BB\u02B4\u02B2\u02B9\u02B9\u02B3\u02B4\u02B2()
 		{
 			float num = 1248f;
@@ -254,13 +239,11 @@ namespace UnityEngine.UI.Extensions
 			return num;
 		}
 
-		// Token: 0x06001945 RID: 6469 RVA: 0x00013256 File Offset: 0x00011456
 		public void \u02B3\u02B6\u02B4\u02B3\u02B7\u02BC\u02BA\u02BF\u02B8\u02BD\u02BA(FlowLayoutGroup.\u02B7\u02B6\u02C1\u02B3\u02B8\u02B3\u02BA\u02B9\u02B5\u02C1\u02B3 \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5)
 		{
 			base.SetProperty<FlowLayoutGroup.\u02B7\u02B6\u02C1\u02B3\u02B8\u02B3\u02BA\u02B9\u02B5\u02C1\u02B3>(ref this.m_StartAxis, \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5);
 		}
 
-		// Token: 0x06001946 RID: 6470 RVA: 0x000C4EAC File Offset: 0x000C30AC
 		public float \u02BA\u02B6\u02BC\u02C0\u02BE\u02B6\u02B2\u02BC\u02B6\u02BE\u02BE()
 		{
 			float num = 0f;
@@ -271,7 +254,6 @@ namespace UnityEngine.UI.Extensions
 			return num;
 		}
 
-		// Token: 0x06001947 RID: 6471 RVA: 0x000C4EF0 File Offset: 0x000C30F0
 		public float \u02BD\u02BE\u02B8\u02BD\u02BD\u02B6\u02BC\u02B5\u02B8\u02B6\u02B3(int \u02B9\u02B9\u02BD\u02BE\u02B9\u02BC\u02C1\u02C1\u02BB\u02C1\u02C1, bool \u02B8\u02B6\u02B7\u02B2\u02B7\u02BE\u02BD\u02BD\u02BA\u02B4\u02BE)
 		{
 			float height = base.rectTransform.rect.height;
@@ -422,7 +404,6 @@ namespace UnityEngine.UI.Extensions
 			return num3;
 		}
 
-		// Token: 0x06001948 RID: 6472 RVA: 0x00013265 File Offset: 0x00011465
 		private float \u02BB\u02C0\u02BB\u02BA\u02BF\u02BD\u02B6\u02B9\u02B2\u02C1\u02BE(float \u02B4\u02B3\u02B4\u02BC\u02B6\u02BF\u02BD\u02B2\u02B9\u02BB\u02BC, float \u02B4\u02C1\u02B3\u02B2\u02B6\u02B7\u02B2\u02B9\u02B6\u02B2\u02B2, float \u02B8\u02B9\u02BD\u02B2\u02BC\u02B3\u02B9\u02C1\u02C1\u02B8\u02BC)
 		{
 			if (this.\u02B8\u02B6\u02B4\u02BE\u02B5\u02BF\u02B4\u02B7\u02C0\u02B7\u02B4)
@@ -436,7 +417,6 @@ namespace UnityEngine.UI.Extensions
 			return \u02B4\u02C1\u02B3\u02B2\u02B6\u02B7\u02B2\u02B9\u02B6\u02B2\u02B2;
 		}
 
-		// Token: 0x06001949 RID: 6473 RVA: 0x00013295 File Offset: 0x00011495
 		private float \u02BE\u02BB\u02BF\u02BA\u02B7\u02B3\u02BE\u02B6\u02B4\u02B7\u02B8(float \u02BE\u02B2\u02BE\u02B7\u02C0\u02B9\u02BF\u02B9\u02B9\u02B4\u02BC, float \u02B4\u02B5\u02BA\u02B8\u02BE\u02B6\u02C0\u02B4\u02BB\u02BF\u02B5, float \u02B8\u02B9\u02C0\u02B5\u02BD\u02BF\u02B8\u02B5\u02B4\u02B7\u02BE)
 		{
 			if (this.\u02BE\u02B5\u02B2\u02B4\u02BA\u02BE\u02BE\u02B8\u02B3\u02B2\u02BC)
@@ -450,19 +430,16 @@ namespace UnityEngine.UI.Extensions
 			return \u02B4\u02B5\u02BA\u02B8\u02BE\u02B6\u02C0\u02B4\u02BB\u02BF\u02B5;
 		}
 
-		// Token: 0x0600194A RID: 6474 RVA: 0x000132C5 File Offset: 0x000114C5
 		public virtual void \u02B7\u02BF\u02B8\u02B7\u02BB\u02B6\u02C1\u02B2\u02B7\u02B8\u02C0()
 		{
 			this.\u02B8\u02B2\u02B3\u02C1\u02BC\u02BB\u02B8\u02B9\u02C0\u02BF\u02C1(0, false);
 		}
 
-		// Token: 0x0600194B RID: 6475 RVA: 0x00013256 File Offset: 0x00011456
 		public void \u02C0\u02BF\u02BC\u02B2\u02B4\u02C1\u02B6\u02BA\u02B6\u02BB\u02B7(FlowLayoutGroup.\u02B7\u02B6\u02C1\u02B3\u02B8\u02B3\u02BA\u02B9\u02B5\u02C1\u02B3 \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5)
 		{
 			base.SetProperty<FlowLayoutGroup.\u02B7\u02B6\u02C1\u02B3\u02B8\u02B3\u02BA\u02B9\u02B5\u02C1\u02B3>(ref this.m_StartAxis, \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5);
 		}
 
-		// Token: 0x0600194C RID: 6476 RVA: 0x000C53C4 File Offset: 0x000C35C4
 		protected void \u02B3\u02BA\u02BE\u02BB\u02B3\u02B9\u02C0\u02B2\u02C0\u02B9\u02B5(IList<RectTransform> \u02B3\u02B6\u02B6\u02B2\u02B7\u02BC\u02BD\u02B7\u02B7\u02B5\u02BD, float \u02BA\u02B5\u02B5\u02B7\u02C0\u02B7\u02B4\u02B8\u02BB\u02B3\u02BC, float \u02B6\u02BE\u02B6\u02BB\u02B5\u02B3\u02B4\u02BE\u02C0\u02B2\u02B5, float \u02BA\u02B4\u02B5\u02BE\u02BB\u02BA\u02B5\u02B2\u02BC\u02BA\u02B4, float \u02B4\u02B5\u02BA\u02B8\u02BE\u02B6\u02C0\u02B4\u02BB\u02BF\u02B5, float \u02B4\u02C1\u02B3\u02B2\u02B6\u02B7\u02B2\u02B9\u02B6\u02B2\u02B2, int \u02B9\u02B9\u02BD\u02BE\u02B9\u02BC\u02C1\u02C1\u02BB\u02C1\u02C1)
 		{
 			float num = \u02B4\u02B5\u02BA\u02B8\u02BE\u02B6\u02C0\u02B4\u02BB\u02BF\u02B5;
@@ -534,13 +511,11 @@ namespace UnityEngine.UI.Extensions
 			}
 		}
 
-		// Token: 0x0600194D RID: 6477 RVA: 0x000132D0 File Offset: 0x000114D0
 		protected bool \u02B5\u02B6\u02B8\u02B6\u02B5\u02BA\u02B3\u02B6\u02B3\u02B6\u02B5()
 		{
 			return base.childAlignment == TextAnchor.LowerCenter || base.childAlignment == TextAnchor.LowerRight || base.childAlignment == TextAnchor.LowerRight;
 		}
 
-		// Token: 0x0600194E RID: 6478 RVA: 0x000C5588 File Offset: 0x000C3788
 		protected void \u02BA\u02BD\u02C0\u02BE\u02B7\u02BB\u02BD\u02B4\u02BB\u02B8\u02B7(IList<RectTransform> \u02B3\u02B6\u02B6\u02B2\u02B7\u02BC\u02BD\u02B7\u02B7\u02B5\u02BD, float \u02BA\u02BE\u02B5\u02B2\u02B6\u02B8\u02BF\u02B8\u02BE\u02BD\u02B9, float \u02C1\u02B9\u02C1\u02B9\u02B7\u02BD\u02B2\u02B5\u02B5\u02C0\u02BA, float \u02B9\u02B4\u02BD\u02BD\u02BC\u02B4\u02B3\u02B4\u02B9\u02B2\u02BC, float \u02B4\u02B5\u02BA\u02B8\u02BE\u02B6\u02C0\u02B4\u02BB\u02BF\u02B5, float \u02B4\u02C1\u02B3\u02B2\u02B6\u02B7\u02B2\u02B9\u02B6\u02B2\u02B2, int \u02B9\u02B9\u02BD\u02BE\u02B9\u02BC\u02C1\u02C1\u02BB\u02C1\u02C1)
 		{
 			float num = \u02B4\u02C1\u02B3\u02B2\u02B6\u02B7\u02B2\u02B9\u02B6\u02B2\u02B2;
@@ -612,7 +587,6 @@ namespace UnityEngine.UI.Extensions
 			}
 		}
 
-		// Token: 0x0600194F RID: 6479 RVA: 0x000C574C File Offset: 0x000C394C
 		public virtual void \u02B7\u02C0\u02BC\u02BA\u02B7\u02B9\u02B6\u02C0\u02BB\u02B5\u02B8()
 		{
 			if (this.\u02B2\u02B5\u02B8\u02C1\u02BB\u02B2\u02BC\u02B7\u02B6\u02B4\u02C1 == FlowLayoutGroup.\u02B7\u02B6\u02C1\u02B3\u02B8\u02B3\u02BA\u02B9\u02B5\u02C1\u02B3.Horizontal)
@@ -625,8 +599,6 @@ namespace UnityEngine.UI.Extensions
 			base.SetLayoutInputForAxis(num, 1197f, 1759f, 1);
 		}
 
-		// Token: 0x1700027D RID: 637
-		// (get) Token: 0x06001950 RID: 6480 RVA: 0x000132EF File Offset: 0x000114EF
 		protected bool \u02B8\u02B6\u02B4\u02BE\u02B5\u02BF\u02B4\u02B7\u02C0\u02B7\u02B4
 		{
 			get
@@ -635,7 +607,6 @@ namespace UnityEngine.UI.Extensions
 			}
 		}
 
-		// Token: 0x06001951 RID: 6481 RVA: 0x0001330E File Offset: 0x0001150E
 		private float \u02B4\u02B9\u02B8\u02B3\u02B2\u02B7\u02B2\u02BD\u02B7\u02BE\u02BC(float \u02BE\u02B2\u02BE\u02B7\u02C0\u02B9\u02BF\u02B9\u02B9\u02B4\u02BC, float \u02B4\u02B5\u02BA\u02B8\u02BE\u02B6\u02C0\u02B4\u02BB\u02BF\u02B5, float \u02B8\u02B9\u02C0\u02B5\u02BD\u02BF\u02B8\u02B5\u02B4\u02B7\u02BE)
 		{
 			if (this.\u02BE\u02B5\u02B2\u02B4\u02BA\u02BE\u02BE\u02B8\u02B3\u02B2\u02BC)
@@ -649,7 +620,6 @@ namespace UnityEngine.UI.Extensions
 			return \u02B4\u02B5\u02BA\u02B8\u02BE\u02B6\u02C0\u02B4\u02BB\u02BF\u02B5;
 		}
 
-		// Token: 0x06001952 RID: 6482 RVA: 0x000C57AC File Offset: 0x000C39AC
 		public float \u02B6\u02B9\u02BE\u02BF\u02BC\u02B4\u02B2\u02BA\u02BF\u02B8\u02BB()
 		{
 			float num = 0f;
@@ -660,7 +630,6 @@ namespace UnityEngine.UI.Extensions
 			return num;
 		}
 
-		// Token: 0x06001953 RID: 6483 RVA: 0x000C57F0 File Offset: 0x000C39F0
 		public override void CalculateLayoutInputHorizontal()
 		{
 			if (this.\u02B2\u02B5\u02B8\u02C1\u02BB\u02B2\u02BC\u02B7\u02B6\u02B4\u02C1 == FlowLayoutGroup.\u02B7\u02B6\u02C1\u02B3\u02B8\u02B3\u02BA\u02B9\u02B5\u02C1\u02B3.Horizontal)
@@ -673,14 +642,11 @@ namespace UnityEngine.UI.Extensions
 			this.\u02BA\u02BF\u02BD\u02BC\u02B2\u02BB\u02B3\u02B8\u02BD\u02BE\u02BE = this.\u02B8\u02B2\u02B3\u02C1\u02BC\u02BB\u02B8\u02B9\u02C0\u02BF\u02C1(0, true);
 		}
 
-		// Token: 0x06001954 RID: 6484 RVA: 0x0001333E File Offset: 0x0001153E
 		protected bool \u02B8\u02B8\u02B3\u02B6\u02BD\u02B6\u02B5\u02B9\u02BD\u02BF\u02B9()
 		{
 			return base.childAlignment == TextAnchor.UpperRight || base.childAlignment == TextAnchor.LowerCenter || base.childAlignment == TextAnchor.UpperLeft;
 		}
 
-		// Token: 0x1700027B RID: 635
-		// (get) Token: 0x06001955 RID: 6485 RVA: 0x0001335D File Offset: 0x0001155D
 		protected bool \u02BE\u02B5\u02B2\u02B4\u02BA\u02BE\u02BE\u02B8\u02B3\u02B2\u02BC
 		{
 			get
@@ -689,55 +655,39 @@ namespace UnityEngine.UI.Extensions
 			}
 		}
 
-		// Token: 0x06001956 RID: 6486 RVA: 0x000132C5 File Offset: 0x000114C5
 		public override void SetLayoutHorizontal()
 		{
 			this.\u02B8\u02B2\u02B3\u02C1\u02BC\u02BB\u02B8\u02B9\u02C0\u02BF\u02C1(0, false);
 		}
 
-		// Token: 0x04001206 RID: 4614
 		public float \u02B5\u02BC\u02BC\u02B7\u02B8\u02C1\u02C0\u02B6\u02BB\u02C0\u02B9;
 
-		// Token: 0x04001207 RID: 4615
 		public float \u02C0\u02B7\u02BF\u02B5\u02BF\u02B6\u02B9\u02B9\u02BD\u02B8\u02B9;
 
-		// Token: 0x04001208 RID: 4616
 		public bool \u02BC\u02BA\u02BF\u02BC\u02B3\u02BF\u02BD\u02BC\u02B2\u02B3\u02B3;
 
-		// Token: 0x04001209 RID: 4617
 		public bool \u02BA\u02B8\u02B8\u02BD\u02BC\u02B5\u02BD\u02B4\u02BF\u02BE\u02C1;
 
-		// Token: 0x0400120A RID: 4618
 		public bool \u02C0\u02BF\u02B6\u02B6\u02B4\u02BD\u02B7\u02BA\u02C1\u02BB\u02B4;
 
-		// Token: 0x0400120B RID: 4619
 		public bool \u02C1\u02B2\u02BA\u02B7\u02B4\u02B5\u02B9\u02B3\u02B6\u02B6\u02BB;
 
-		// Token: 0x0400120C RID: 4620
 		public bool \u02B6\u02BA\u02BA\u02B4\u02B2\u02B8\u02BD\u02BB\u02C0\u02BE\u02C0;
 
-		// Token: 0x0400120D RID: 4621
 		public float \u02C1\u02BD\u02B6\u02B4\u02B9\u02B9\u02B9\u02B7\u02BC\u02BD\u02B9;
 
-		// Token: 0x0400120E RID: 4622
 		private float \u02BE\u02BE\u02B6\u02B4\u02B5\u02BA\u02BB\u02BF\u02BD\u02B8\u02B4;
 
-		// Token: 0x0400120F RID: 4623
 		private float \u02BA\u02BF\u02BD\u02BC\u02B2\u02BB\u02B3\u02B8\u02BD\u02BE\u02BE;
 
-		// Token: 0x04001210 RID: 4624
 		[SerializeField]
 		protected FlowLayoutGroup.\u02B7\u02B6\u02C1\u02B3\u02B8\u02B3\u02BA\u02B9\u02B5\u02C1\u02B3 m_StartAxis;
 
-		// Token: 0x04001211 RID: 4625
 		private readonly IList<RectTransform> \u02BB\u02C1\u02B7\u02B3\u02B8\u02BD\u02B2\u02B5\u02BA\u02C1\u02BE = new List<RectTransform>();
 
-		// Token: 0x02000246 RID: 582
 		public enum \u02B7\u02B6\u02C1\u02B3\u02B8\u02B3\u02BA\u02B9\u02B5\u02C1\u02B3
 		{
-			// Token: 0x04001213 RID: 4627
 			Horizontal,
-			// Token: 0x04001214 RID: 4628
 			Vertical
 		}
 	}

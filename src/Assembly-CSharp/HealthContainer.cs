@@ -1,10 +1,8 @@
-﻿using System;
+using System;
 using UnityEngine;
 
-// Token: 0x02000170 RID: 368
 public class HealthContainer : MonoBehaviour
 {
-	// Token: 0x06001098 RID: 4248 RVA: 0x00089CDC File Offset: 0x00087EDC
 	private void Start()
 	{
 		this.\u02B5\u02B6\u02BE\u02B6\u02C0\u02B8\u02BE\u02B5\u02BA\u02B4\u02B2 = 0.33333334f;
@@ -14,7 +12,6 @@ public class HealthContainer : MonoBehaviour
 		this.\u02B2\u02BD\u02BA\u02BB\u02BF\u02C0\u02C1\u02B4\u02B7\u02BB\u02B7.SetActive(false);
 	}
 
-	// Token: 0x0600109A RID: 4250 RVA: 0x00089D28 File Offset: 0x00087F28
 	private void \u02B4\u02BA\u02BE\u02BB\u02B5\u02BB\u02C1\u02B2\u02B4\u02B2\u02BF()
 	{
 		this.\u02B5\u02B6\u02BE\u02B6\u02C0\u02B8\u02BE\u02B5\u02BA\u02B4\u02B2 = 962f;
@@ -24,7 +21,6 @@ public class HealthContainer : MonoBehaviour
 		this.\u02B2\u02BD\u02BA\u02BB\u02BF\u02C0\u02C1\u02B4\u02B7\u02BB\u02B7.SetActive(true);
 	}
 
-	// Token: 0x0600109B RID: 4251 RVA: 0x00089D74 File Offset: 0x00087F74
 	private void \u02BF\u02BA\u02B5\u02B8\u02B5\u02BF\u02B2\u02BF\u02B3\u02BC\u02BA()
 	{
 		this.\u02B5\u02B6\u02BE\u02B6\u02C0\u02B8\u02BE\u02B5\u02BA\u02B4\u02B2 = 1612f;
@@ -34,7 +30,6 @@ public class HealthContainer : MonoBehaviour
 		this.\u02B2\u02BD\u02BA\u02BB\u02BF\u02C0\u02C1\u02B4\u02B7\u02BB\u02B7.SetActive(true);
 	}
 
-	// Token: 0x0600109C RID: 4252 RVA: 0x00089DC0 File Offset: 0x00087FC0
 	public void \u02BC\u02BE\u02BD\u02BA\u02BE\u02B4\u02BA\u02B2\u02B2\u02B4\u02B5(float \u02B9\u02C0\u02B2\u02C0\u02B6\u02BB\u02BE\u02B9\u02C0\u02B9\u02BD)
 	{
 		if (\u02B9\u02C0\u02B2\u02C0\u02B6\u02BB\u02BE\u02B9\u02C0\u02B9\u02BD == this.\u02B4\u02BD\u02BF\u02BC\u02BE\u02B9\u02BD\u02C1\u02BB\u02B6\u02B4)
@@ -83,7 +78,6 @@ public class HealthContainer : MonoBehaviour
 		this.\u02C0\u02C1\u02B9\u02B5\u02B3\u02BD\u02BE\u02B5\u02B3\u02B5\u02BD.localPosition = this.\u02BD\u02B2\u02BB\u02B8\u02B8\u02B9\u02B6\u02B4\u02B4\u02B5\u02BC;
 	}
 
-	// Token: 0x0600109D RID: 4253 RVA: 0x00089F38 File Offset: 0x00088138
 	public void \u02B8\u02C0\u02BB\u02BC\u02BE\u02B3\u02B7\u02BF\u02BD\u02B6\u02B4(float \u02B9\u02C0\u02B2\u02C0\u02B6\u02BB\u02BE\u02B9\u02C0\u02B9\u02BD)
 	{
 		if (\u02B9\u02C0\u02B2\u02C0\u02B6\u02BB\u02BE\u02B9\u02C0\u02B9\u02BD == this.\u02B4\u02BD\u02BF\u02BC\u02BE\u02B9\u02BD\u02C1\u02BB\u02B6\u02B4)
@@ -132,7 +126,6 @@ public class HealthContainer : MonoBehaviour
 		this.\u02C0\u02C1\u02B9\u02B5\u02B3\u02BD\u02BE\u02B5\u02B3\u02B5\u02BD.localPosition = this.\u02BD\u02B2\u02BB\u02B8\u02B8\u02B9\u02B6\u02B4\u02B4\u02B5\u02BC;
 	}
 
-	// Token: 0x0600109E RID: 4254 RVA: 0x0008A0B0 File Offset: 0x000882B0
 	public void \u02B2\u02BC\u02B6\u02BC\u02B5\u02BA\u02B6\u02BD\u02C0\u02BD\u02B3(float \u02B9\u02C0\u02B2\u02C0\u02B6\u02BB\u02BE\u02B9\u02C0\u02B9\u02BD)
 	{
 		if (\u02B9\u02C0\u02B2\u02C0\u02B6\u02BB\u02BE\u02B9\u02C0\u02B9\u02BD == this.\u02B4\u02BD\u02BF\u02BC\u02BE\u02B9\u02BD\u02C1\u02BB\u02B6\u02B4)
@@ -181,7 +174,6 @@ public class HealthContainer : MonoBehaviour
 		this.\u02C0\u02C1\u02B9\u02B5\u02B3\u02BD\u02BE\u02B5\u02B3\u02B5\u02BD.localPosition = this.\u02BD\u02B2\u02BB\u02B8\u02B8\u02B9\u02B6\u02B4\u02B4\u02B5\u02BC;
 	}
 
-	// Token: 0x0600109F RID: 4255 RVA: 0x0008A228 File Offset: 0x00088428
 	private void \u02B6\u02B6\u02B4\u02BB\u02B7\u02C1\u02C0\u02B6\u02B7\u02BD\u02B5()
 	{
 		this.\u02B5\u02B6\u02BE\u02B6\u02C0\u02B8\u02BE\u02B5\u02BA\u02B4\u02B2 = 1697f;
@@ -191,7 +183,6 @@ public class HealthContainer : MonoBehaviour
 		this.\u02B2\u02BD\u02BA\u02BB\u02BF\u02C0\u02C1\u02B4\u02B7\u02BB\u02B7.SetActive(true);
 	}
 
-	// Token: 0x060010A0 RID: 4256 RVA: 0x0008A274 File Offset: 0x00088474
 	private void \u02B2\u02B9\u02C1\u02C1\u02B2\u02B3\u02C1\u02BF\u02BC\u02BB\u02C1()
 	{
 		this.\u02B5\u02B6\u02BE\u02B6\u02C0\u02B8\u02BE\u02B5\u02BA\u02B4\u02B2 = 743f;
@@ -201,7 +192,6 @@ public class HealthContainer : MonoBehaviour
 		this.\u02B2\u02BD\u02BA\u02BB\u02BF\u02C0\u02C1\u02B4\u02B7\u02BB\u02B7.SetActive(true);
 	}
 
-	// Token: 0x060010A1 RID: 4257 RVA: 0x0008A2C0 File Offset: 0x000884C0
 	public void \u02BA\u02B5\u02B6\u02BF\u02BD\u02B3\u02B4\u02BE\u02C0\u02BF\u02B9(float \u02B9\u02C0\u02B2\u02C0\u02B6\u02BB\u02BE\u02B9\u02C0\u02B9\u02BD)
 	{
 		if (\u02B9\u02C0\u02B2\u02C0\u02B6\u02BB\u02BE\u02B9\u02C0\u02B9\u02BD == this.\u02B4\u02BD\u02BF\u02BC\u02BE\u02B9\u02BD\u02C1\u02BB\u02B6\u02B4)
@@ -250,7 +240,6 @@ public class HealthContainer : MonoBehaviour
 		this.\u02C0\u02C1\u02B9\u02B5\u02B3\u02BD\u02BE\u02B5\u02B3\u02B5\u02BD.localPosition = this.\u02BD\u02B2\u02BB\u02B8\u02B8\u02B9\u02B6\u02B4\u02B4\u02B5\u02BC;
 	}
 
-	// Token: 0x060010A2 RID: 4258 RVA: 0x0008A438 File Offset: 0x00088638
 	private void \u02B7\u02B8\u02BD\u02C0\u02B2\u02B4\u02B7\u02C0\u02BC\u02BE\u02B3()
 	{
 		this.\u02B5\u02B6\u02BE\u02B6\u02C0\u02B8\u02BE\u02B5\u02BA\u02B4\u02B2 = 888f;
@@ -260,7 +249,6 @@ public class HealthContainer : MonoBehaviour
 		this.\u02B2\u02BD\u02BA\u02BB\u02BF\u02C0\u02C1\u02B4\u02B7\u02BB\u02B7.SetActive(true);
 	}
 
-	// Token: 0x060010A3 RID: 4259 RVA: 0x0008A484 File Offset: 0x00088684
 	public void \u02BF\u02BC\u02B7\u02B2\u02B9\u02BA\u02BD\u02B6\u02C0\u02C0\u02BE(float \u02B9\u02C0\u02B2\u02C0\u02B6\u02BB\u02BE\u02B9\u02C0\u02B9\u02BD)
 	{
 		if (this.failed)
@@ -318,7 +306,6 @@ public class HealthContainer : MonoBehaviour
 		this.\u02C0\u02C1\u02B9\u02B5\u02B3\u02BD\u02BE\u02B5\u02B3\u02B5\u02BD.localPosition = this.\u02BD\u02B2\u02BB\u02B8\u02B8\u02B9\u02B6\u02B4\u02B4\u02B5\u02BC;
 	}
 
-	// Token: 0x060010A4 RID: 4260 RVA: 0x0008A638 File Offset: 0x00088838
 	public void \u02BD\u02BB\u02B2\u02B7\u02B9\u02BA\u02BB\u02B4\u02B3\u02B7\u02C1(float \u02B9\u02C0\u02B2\u02C0\u02B6\u02BB\u02BE\u02B9\u02C0\u02B9\u02BD)
 	{
 		if (\u02B9\u02C0\u02B2\u02C0\u02B6\u02BB\u02BE\u02B9\u02C0\u02B9\u02BD == this.\u02B4\u02BD\u02BF\u02BC\u02BE\u02B9\u02BD\u02C1\u02BB\u02B6\u02B4)
@@ -367,7 +354,6 @@ public class HealthContainer : MonoBehaviour
 		this.\u02C0\u02C1\u02B9\u02B5\u02B3\u02BD\u02BE\u02B5\u02B3\u02B5\u02BD.localPosition = this.\u02BD\u02B2\u02BB\u02B8\u02B8\u02B9\u02B6\u02B4\u02B4\u02B5\u02BC;
 	}
 
-	// Token: 0x060010A5 RID: 4261 RVA: 0x0008A7B0 File Offset: 0x000889B0
 	private void \u02B5\u02C0\u02BE\u02B8\u02B9\u02B2\u02BD\u02C0\u02BF\u02B3\u02BD()
 	{
 		this.\u02B5\u02B6\u02BE\u02B6\u02C0\u02B8\u02BE\u02B5\u02BA\u02B4\u02B2 = 1910f;
@@ -377,63 +363,43 @@ public class HealthContainer : MonoBehaviour
 		this.\u02B2\u02BD\u02BA\u02BB\u02BF\u02C0\u02C1\u02B4\u02B7\u02BB\u02B7.SetActive(true);
 	}
 
-	// Token: 0x04000CAA RID: 3242
 	public GameObject \u02BC\u02B2\u02B9\u02BB\u02C1\u02B3\u02BA\u02B9\u02BE\u02B8\u02C0;
 
-	// Token: 0x04000CAB RID: 3243
 	public GameObject \u02BD\u02BD\u02B7\u02B6\u02B9\u02B3\u02B9\u02BB\u02B2\u02B3\u02BE;
 
-	// Token: 0x04000CAC RID: 3244
 	public GameObject \u02B2\u02BD\u02BA\u02BB\u02BF\u02C0\u02C1\u02B4\u02B7\u02BB\u02B7;
 
-	// Token: 0x04000CAD RID: 3245
 	public Transform \u02C0\u02C1\u02B9\u02B5\u02B3\u02BD\u02BE\u02B5\u02B3\u02B5\u02BD;
 
-	// Token: 0x04000CAE RID: 3246
 	public SpriteRenderer \u02BE\u02BF\u02B9\u02B3\u02BA\u02BB\u02BD\u02B8\u02BA\u02B4\u02B8;
 
-	// Token: 0x04000CAF RID: 3247
 	public float \u02B8\u02BE\u02BE\u02B5\u02C0\u02B2\u02BE\u02B9\u02B2\u02C1\u02B2;
 
-	// Token: 0x04000CB0 RID: 3248
 	public float \u02B8\u02B9\u02B3\u02BF\u02C1\u02BB\u02B8\u02B4\u02B3\u02BE\u02BA;
 
-	// Token: 0x04000CB1 RID: 3249
 	public float \u02C1\u02B3\u02C0\u02C0\u02BF\u02B7\u02B9\u02C1\u02BC\u02B2\u02BB;
 
-	// Token: 0x04000CB2 RID: 3250
 	public float \u02C0\u02BF\u02BB\u02C1\u02B8\u02B8\u02B2\u02B3\u02B3\u02B7\u02BC;
 
-	// Token: 0x04000CB3 RID: 3251
 	private float \u02B4\u02BD\u02BF\u02BC\u02BE\u02B9\u02BD\u02C1\u02BB\u02B6\u02B4;
 
-	// Token: 0x04000CB4 RID: 3252
 	private float \u02B5\u02B6\u02BE\u02B6\u02C0\u02B8\u02BE\u02B5\u02BA\u02B4\u02B2;
 
-	// Token: 0x04000CB5 RID: 3253
 	private float \u02BB\u02B4\u02B5\u02B2\u02B5\u02BD\u02BD\u02B8\u02B8\u02BC\u02BD;
 
-	// Token: 0x04000CB6 RID: 3254
 	private Vector3 \u02BD\u02B2\u02BB\u02B8\u02B8\u02B9\u02B6\u02B4\u02B4\u02B5\u02BC;
 
-	// Token: 0x04000CB7 RID: 3255
 	public Color \u02B8\u02C1\u02C0\u02BF\u02BF\u02B4\u02C0\u02BB\u02B9\u02B9\u02B5;
 
-	// Token: 0x04000CB8 RID: 3256
 	public Color \u02B5\u02BD\u02B2\u02C0\u02C1\u02B7\u02BB\u02B3\u02C1\u02B2\u02BD;
 
-	// Token: 0x04000CB9 RID: 3257
 	public Color \u02BE\u02C0\u02B2\u02B3\u02BA\u02B8\u02B9\u02BA\u02B2\u02B5\u02BE;
 
-	// Token: 0x04000CBA RID: 3258
 	public Vector3 \u02B6\u02B5\u02B9\u02C1\u02C0\u02C0\u02BC\u02B8\u02C1\u02B3\u02C1;
 
-	// Token: 0x04000CBB RID: 3259
 	public Vector3 \u02B3\u02B5\u02B5\u02BB\u02BF\u02B3\u02C0\u02B7\u02BC\u02B6\u02B3;
 
-	// Token: 0x04000CBC RID: 3260
 	public Vector3 \u02B7\u02C1\u02BF\u02BA\u02BB\u02B3\u02B6\u02B5\u02B8\u02B3\u02BA;
 
-	// Token: 0x04000CBD RID: 3261
 	private bool failed;
 }

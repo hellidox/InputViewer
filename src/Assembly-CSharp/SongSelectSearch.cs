@@ -1,14 +1,12 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Runtime.CompilerServices;
 using Cysharp.Text;
 using TMPro;
 using UnityEngine;
 
-// Token: 0x0200011D RID: 285
 public class SongSelectSearch : MonoBehaviour
 {
-	// Token: 0x06000C38 RID: 3128 RVA: 0x0006B260 File Offset: 0x00069460
 	private void \u02C0\u02B3\u02B2\u02B6\u02B3\u02B8\u02B8\u02C1\u02BE\u02B9\u02B3()
 	{
 		SongSelectSearch.\u02BF\u02BC\u02B9\u02C1\u02B8\u02C1\u02BF\u02BB\u02BF\u02B7\u02BB u02BF_u02BC_u02B9_u02C1_u02B8_u02C1_u02BF_u02BB_u02BF_u02B7_u02BB = new SongSelectSearch.\u02BF\u02BC\u02B9\u02C1\u02B8\u02C1\u02BF\u02BB\u02BF\u02B7\u02BB();
@@ -59,7 +57,6 @@ public class SongSelectSearch : MonoBehaviour
 		this.songSelect.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(num, true);
 	}
 
-	// Token: 0x06000C39 RID: 3129 RVA: 0x0006B3BC File Offset: 0x000695BC
 	private void Update()
 	{
 		if (Input.GetKeyUp(KeyCode.Escape))
@@ -127,7 +124,6 @@ public class SongSelectSearch : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000C3A RID: 3130 RVA: 0x0006B5E4 File Offset: 0x000697E4
 	private void \u02BD\u02B8\u02BD\u02B5\u02B6\u02B3\u02BF\u02B3\u02C1\u02B8\u02C1()
 	{
 		if (Input.GetKeyUp((KeyCode)69))
@@ -197,7 +193,6 @@ public class SongSelectSearch : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000C3B RID: 3131 RVA: 0x0006B80C File Offset: 0x00069A0C
 	private void \u02C1\u02BE\u02BF\u02C0\u02BC\u02B7\u02BC\u02BC\u02BE\u02B5\u02BC()
 	{
 		if (SongSelectSearch.\u02B7\u02B6\u02B8\u02B7\u02B5\u02BE\u02C0\u02C1\u02B8\u02BE\u02B4 >= SongSelectSearch.\u02BF\u02BE\u02B6\u02BB\u02BF\u02B5\u02B4\u02BD\u02BD\u02BF\u02B5.Length)
@@ -216,7 +211,6 @@ public class SongSelectSearch : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000C3C RID: 3132 RVA: 0x0006B898 File Offset: 0x00069A98
 	private int \u02B6\u02BC\u02B4\u02BF\u02BA\u02B2\u02BE\u02C0\u02C0\u02B8\u02B3(string \u02BC\u02BD\u02BC\u02B8\u02B7\u02BD\u02B7\u02B2\u02BF\u02C1\u02C0)
 	{
 		uint num = PrivateImplementationDetails.ComputeStringHash(\u02BC\u02BD\u02BC\u02B8\u02B7\u02BD\u02B7\u02B2\u02BF\u02C1\u02C0);
@@ -288,7 +282,6 @@ public class SongSelectSearch : MonoBehaviour
 		return 0;
 	}
 
-	// Token: 0x06000C3E RID: 3134 RVA: 0x0006BA08 File Offset: 0x00069C08
 	private void \u02C0\u02BA\u02BB\u02BD\u02B3\u02BC\u02B7\u02B2\u02BD\u02B2\u02B3()
 	{
 		SongSelectSearch.\u02B3\u02BB\u02BA\u02B6\u02B9\u02B9\u02B5\u02BB\u02BC\u02BB\u02B2 u02B3_u02BB_u02BA_u02B6_u02B9_u02B9_u02B5_u02BB_u02BC_u02BB_u02B = new SongSelectSearch.\u02B3\u02BB\u02BA\u02B6\u02B9\u02B9\u02B5\u02BB\u02BC\u02BB\u02B2();
@@ -357,7 +350,6 @@ public class SongSelectSearch : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000C3F RID: 3135 RVA: 0x0006BBAC File Offset: 0x00069DAC
 	private void \u02B9\u02B7\u02C0\u02B7\u02C1\u02BA\u02BC\u02C0\u02C1\u02BD\u02B6()
 	{
 		this.\u02B2\u02BB\u02BE\u02B7\u02B6\u02B8\u02B4\u02B3\u02C1\u02BF\u02BB();
@@ -380,7 +372,6 @@ public class SongSelectSearch : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000C41 RID: 3137 RVA: 0x0006BC44 File Offset: 0x00069E44
 	private void \u02B3\u02B8\u02C0\u02B6\u02B3\u02C0\u02B2\u02C1\u02BD\u02BA\u02BE()
 	{
 		SongSelectSearch.\u02BF\u02BC\u02B9\u02C1\u02B8\u02C1\u02BF\u02BB\u02BF\u02B7\u02BB u02BF_u02BC_u02B9_u02C1_u02B8_u02C1_u02BF_u02BB_u02BF_u02B7_u02BB = new SongSelectSearch.\u02BF\u02BC\u02B9\u02C1\u02B8\u02C1\u02BF\u02BB\u02BF\u02B7\u02BB();
@@ -431,7 +422,6 @@ public class SongSelectSearch : MonoBehaviour
 		this.songSelect.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(num, false);
 	}
 
-	// Token: 0x06000C42 RID: 3138 RVA: 0x0000C4E9 File Offset: 0x0000A6E9
 	private IEnumerator \u02B3\u02BD\u02B5\u02B6\u02BC\u02B9\u02B2\u02C1\u02B5\u02BC\u02B7()
 	{
 		yield return null;
@@ -444,7 +434,6 @@ public class SongSelectSearch : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06000C43 RID: 3139 RVA: 0x0006BDA0 File Offset: 0x00069FA0
 	private int \u02BA\u02B9\u02B7\u02BC\u02C1\u02BC\u02B4\u02BF\u02BE\u02C1\u02BF(string \u02BC\u02BD\u02BC\u02B8\u02B7\u02BD\u02B7\u02B2\u02BF\u02C1\u02C0)
 	{
 		uint num = PrivateImplementationDetails.ComputeStringHash(\u02BC\u02BD\u02BC\u02B8\u02B7\u02BD\u02B7\u02B2\u02BF\u02C1\u02C0);
@@ -516,7 +505,6 @@ public class SongSelectSearch : MonoBehaviour
 		return 0;
 	}
 
-	// Token: 0x06000C44 RID: 3140 RVA: 0x0006BEB8 File Offset: 0x0006A0B8
 	private SongEntry \u02B8\u02BE\u02BE\u02C1\u02B9\u02BC\u02B9\u02BF\u02B4\u02B4\u02B3(\u02BB\u02BF\u02BA\u02B7\u02B5\u02B7\u02B4\u02C1\u02BC\u02BA\u02C0 \u02B8\u02BB\u02B9\u02B7\u02B4\u02BC\u02BF\u02C1\u02BD\u02C1\u02BE, Func<SongEntry, bool> \u02B9\u02BE\u02C0\u02BF\u02C1\u02BF\u02BE\u02B8\u02BD\u02BE\u02B8)
 	{
 		SongEntry songEntry = null;
@@ -532,7 +520,6 @@ public class SongSelectSearch : MonoBehaviour
 		return songEntry;
 	}
 
-	// Token: 0x06000C45 RID: 3141 RVA: 0x0006BF08 File Offset: 0x0006A108
 	private void \u02B7\u02BC\u02B6\u02B7\u02BB\u02B7\u02B6\u02BB\u02B5\u02B5\u02C1()
 	{
 		SongSelectSearch.\u02BF\u02BC\u02B9\u02C1\u02B8\u02C1\u02BF\u02BB\u02BF\u02B7\u02BB u02BF_u02BC_u02B9_u02C1_u02B8_u02C1_u02BF_u02BB_u02BF_u02B7_u02BB = new SongSelectSearch.\u02BF\u02BC\u02B9\u02C1\u02B8\u02C1\u02BF\u02BB\u02BF\u02B7\u02BB();
@@ -583,7 +570,6 @@ public class SongSelectSearch : MonoBehaviour
 		this.songSelect.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(num, true);
 	}
 
-	// Token: 0x06000C46 RID: 3142 RVA: 0x0006C064 File Offset: 0x0006A264
 	private void \u02BC\u02B8\u02B9\u02B2\u02BC\u02BD\u02B6\u02B4\u02B3\u02BC\u02C1()
 	{
 		SongSelectSearch.\u02BF\u02BC\u02B9\u02C1\u02B8\u02C1\u02BF\u02BB\u02BF\u02B7\u02BB u02BF_u02BC_u02B9_u02C1_u02B8_u02C1_u02BF_u02BB_u02BF_u02B7_u02BB = new SongSelectSearch.\u02BF\u02BC\u02B9\u02C1\u02B8\u02C1\u02BF\u02BB\u02BF\u02B7\u02BB();
@@ -634,7 +620,6 @@ public class SongSelectSearch : MonoBehaviour
 		this.songSelect.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(num, true);
 	}
 
-	// Token: 0x06000C47 RID: 3143 RVA: 0x0006C1C0 File Offset: 0x0006A3C0
 	private void OnEnable()
 	{
 		this.\u02B2\u02BB\u02BE\u02B7\u02B6\u02B8\u02B4\u02B3\u02C1\u02BF\u02BB();
@@ -657,13 +642,11 @@ public class SongSelectSearch : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000C48 RID: 3144 RVA: 0x0000C4F8 File Offset: 0x0000A6F8
 	private void \u02B7\u02B7\u02C1\u02B3\u02BB\u02C0\u02BE\u02C1\u02B4\u02BC\u02BC()
 	{
 		this.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 = false;
 	}
 
-	// Token: 0x06000C49 RID: 3145 RVA: 0x0000C4E9 File Offset: 0x0000A6E9
 	private IEnumerator \u02BD\u02BE\u02C0\u02BE\u02BB\u02B5\u02BE\u02BE\u02B3\u02BB\u02B4()
 	{
 		yield return null;
@@ -676,7 +659,6 @@ public class SongSelectSearch : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06000C4A RID: 3146 RVA: 0x0006C258 File Offset: 0x0006A458
 	private void \u02B5\u02B8\u02BE\u02BB\u02C1\u02BD\u02B9\u02B9\u02BD\u02B5\u02B6()
 	{
 		if (SongSelectSearch.\u02B7\u02B6\u02B8\u02B7\u02B5\u02BE\u02C0\u02C1\u02B8\u02BE\u02B4 >= SongSelectSearch.\u02BF\u02BE\u02B6\u02BB\u02BF\u02B5\u02B4\u02BD\u02BD\u02BF\u02B5.Length)
@@ -695,7 +677,6 @@ public class SongSelectSearch : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000C4B RID: 3147 RVA: 0x0000C4E9 File Offset: 0x0000A6E9
 	private IEnumerator \u02B4\u02B8\u02C1\u02BF\u02B9\u02B3\u02B8\u02B5\u02BF\u02B7\u02B3()
 	{
 		yield return null;
@@ -708,7 +689,6 @@ public class SongSelectSearch : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06000C4C RID: 3148 RVA: 0x0006C2E4 File Offset: 0x0006A4E4
 	private void \u02B9\u02B2\u02BF\u02B5\u02BA\u02B8\u02C0\u02C0\u02BA\u02BE\u02B3()
 	{
 		SongSelectSearch.\u02B3\u02BB\u02BA\u02B6\u02B9\u02B9\u02B5\u02BB\u02BC\u02BB\u02B2 u02B3_u02BB_u02BA_u02B6_u02B9_u02B9_u02B5_u02BB_u02BC_u02BB_u02B = new SongSelectSearch.\u02B3\u02BB\u02BA\u02B6\u02B9\u02B9\u02B5\u02BB\u02BC\u02BB\u02B2();
@@ -777,7 +757,6 @@ public class SongSelectSearch : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06000C4D RID: 3149 RVA: 0x0000C501 File Offset: 0x0000A701
 	private void \u02B2\u02BB\u02BE\u02B7\u02B6\u02B8\u02B4\u02B3\u02C1\u02BF\u02BB()
 	{
 		this.searchText.color = Color.gray;
@@ -785,13 +764,11 @@ public class SongSelectSearch : MonoBehaviour
 		this.\u02B3\u02BA\u02B9\u02BE\u02BC\u02C1\u02B2\u02BE\u02B2\u02BC\u02BA = true;
 	}
 
-	// Token: 0x06000C4E RID: 3150 RVA: 0x0000C534 File Offset: 0x0000A734
 	private void \u02BA\u02C1\u02BB\u02B3\u02BD\u02B4\u02B4\u02B2\u02C0\u02B9\u02BF()
 	{
 		this.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 = true;
 	}
 
-	// Token: 0x06000C4F RID: 3151 RVA: 0x0000C4E9 File Offset: 0x0000A6E9
 	private IEnumerator \u02C1\u02B4\u02BC\u02C1\u02BB\u02BE\u02B8\u02BD\u02BD\u02B3\u02B5()
 	{
 		yield return null;
@@ -804,13 +781,11 @@ public class SongSelectSearch : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x06000C50 RID: 3152 RVA: 0x0000C4F8 File Offset: 0x0000A6F8
 	private void OnDisable()
 	{
 		this.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 = false;
 	}
 
-	// Token: 0x06000C51 RID: 3153 RVA: 0x0006C488 File Offset: 0x0006A688
 	private void \u02BE\u02BC\u02B8\u02BF\u02C0\u02B2\u02BE\u02BD\u02BE\u02BF\u02B2()
 	{
 		SongSelectSearch.\u02BF\u02BC\u02B9\u02C1\u02B8\u02C1\u02BF\u02BB\u02BF\u02B7\u02BB u02BF_u02BC_u02B9_u02C1_u02B8_u02C1_u02BF_u02BB_u02BF_u02B7_u02BB = new SongSelectSearch.\u02BF\u02BC\u02B9\u02C1\u02B8\u02C1\u02BF\u02BB\u02BF\u02B7\u02BB();
@@ -861,99 +836,77 @@ public class SongSelectSearch : MonoBehaviour
 		this.songSelect.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(num, true);
 	}
 
-	// Token: 0x040008C5 RID: 2245
 	[SerializeField]
 	private SongSelect songSelect;
 
-	// Token: 0x040008C6 RID: 2246
 	[SerializeField]
 	private TextMeshProUGUI searchText;
 
-	// Token: 0x040008C7 RID: 2247
 	[SerializeField]
 	private TextMeshProUGUI filterText;
 
-	// Token: 0x040008C8 RID: 2248
 	[SerializeField]
 	private TextMeshProUGUI pressEnterText;
 
-	// Token: 0x040008C9 RID: 2249
 	[SerializeField]
 	private TextMeshProUGUI changeSearchText;
 
-	// Token: 0x040008CA RID: 2250
 	[SerializeField]
 	private Color hintColor;
 
-	// Token: 0x040008CB RID: 2251
 	private bool \u02B3\u02BA\u02B9\u02BE\u02BC\u02C1\u02B2\u02BE\u02B2\u02BC\u02BA;
 
-	// Token: 0x040008CC RID: 2252
 	[HideInInspector]
 	public bool \u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8;
 
-	// Token: 0x040008CD RID: 2253
 	private static string[] \u02BF\u02BE\u02B6\u02BB\u02BF\u02B5\u02B4\u02BD\u02BD\u02BF\u02B5 = new string[] { "Song", "Artist", "Album", "Charter", "Playlist", "Genre", "Source" };
 
-	// Token: 0x040008CE RID: 2254
 	private bool \u02B3\u02B5\u02BE\u02B8\u02B3\u02BA\u02B4\u02BA\u02B6\u02B4\u02BB;
 
-	// Token: 0x040008CF RID: 2255
 	private static bool \u02B8\u02BE\u02B6\u02BF\u02B2\u02BA\u02B7\u02B2\u02B6\u02BC\u02B9 = true;
 
-	// Token: 0x040008D0 RID: 2256
 	public bool \u02BF\u02C0\u02B9\u02C0\u02BB\u02BD\u02B9\u02B7\u02B3\u02B4\u02B3;
 
-	// Token: 0x040008D1 RID: 2257
 	private static int \u02B7\u02B6\u02B8\u02B7\u02B5\u02BE\u02C0\u02C1\u02B8\u02BE\u02B4;
 
-	// Token: 0x0200011F RID: 287
 	[CompilerGenerated]
 	private sealed class \u02B3\u02BB\u02BA\u02B6\u02B9\u02B9\u02B5\u02BB\u02BC\u02BB\u02B2
 	{
-		// Token: 0x06000C59 RID: 3161 RVA: 0x0000C554 File Offset: 0x0000A754
 		internal bool \u02BE\u02BD\u02BF\u02BB\u02BD\u02BE\u02B3\u02BE\u02BF\u02B2\u02B9(SongEntry songEntry)
 		{
 			return SongSelectSearch.\u02B3\u02BB\u02BA\u02B6\u02B9\u02B9\u02B5\u02BB\u02BC\u02BB\u02B2.Matches(songEntry.Name.\u02BB\u02B5\u02B5\u02B8\u02B4\u02BD\u02B9\u02B2\u02B3\u02BF\u02B6, this.text);
 		}
 
-		// Token: 0x06000C5A RID: 3162 RVA: 0x0000C56C File Offset: 0x0000A76C
 		internal bool \u02B3\u02BE\u02BB\u02BA\u02B4\u02BF\u02BC\u02B4\u02B6\u02BD\u02B7(SongEntry songEntry)
 		{
 			return songEntry.Artist.\u02BB\u02B6\u02B6\u02B6\u02C0\u02B4\u02BC\u02B8\u02B3\u02B9\u02B7(this.text);
 		}
 
-		// Token: 0x06000C5B RID: 3163 RVA: 0x0000C57F File Offset: 0x0000A77F
 		internal bool \u02BF\u02B8\u02B6\u02C0\u02B3\u02BE\u02C1\u02BC\u02B5\u02B7\u02B7(SongEntry songEntry)
 		{
 			return songEntry.Album.\u02BB\u02B6\u02B6\u02B6\u02C0\u02B4\u02BC\u02B8\u02B3\u02B9\u02B7(this.text);
 		}
 
-		// Token: 0x06000C5C RID: 3164 RVA: 0x0000C592 File Offset: 0x0000A792
 		internal bool \u02BC\u02B3\u02B5\u02B6\u02BE\u02B7\u02BA\u02BA\u02B4\u02BA\u02BB(SongEntry songEntry)
 		{
 			return songEntry.Charter.\u02BB\u02B6\u02B6\u02B6\u02C0\u02B4\u02BC\u02B8\u02B3\u02B9\u02B7(this.text);
 		}
 
-		// Token: 0x06000C5D RID: 3165 RVA: 0x0000C5A5 File Offset: 0x0000A7A5
 		internal bool \u02B8\u02BC\u02BB\u02BC\u02BF\u02C0\u02B2\u02B4\u02B4\u02B7\u02B3(SongEntry songEntry)
 		{
 			return songEntry.Playlist.\u02BB\u02B6\u02B6\u02B6\u02C0\u02B4\u02BC\u02B8\u02B3\u02B9\u02B7(this.text);
 		}
 
-		// Token: 0x06000C5E RID: 3166 RVA: 0x0000C5B8 File Offset: 0x0000A7B8
 		internal bool \u02BF\u02C0\u02BA\u02B9\u02B6\u02BC\u02BF\u02B3\u02B2\u02B8\u02B6(SongEntry songEntry)
 		{
 			return songEntry.Genre.\u02BB\u02B6\u02B6\u02B6\u02C0\u02B4\u02BC\u02B8\u02B3\u02B9\u02B7(this.text);
 		}
 
-		// Token: 0x06000C5F RID: 3167 RVA: 0x0000C5CB File Offset: 0x0000A7CB
 		internal bool \u02BD\u02B3\u02B4\u02BF\u02BB\u02BA\u02B2\u02B6\u02BC\u02B5\u02BD(SongEntry songEntry)
 		{
 			return \u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B2\u02BA\u02B6\u02B7\u02C1\u02B9\u02B3\u02BC\u02B7\u02BC\u02BA.\u02B9\u02BD\u02BA\u02BC\u02B9\u02B7\u02B3\u02B3\u02B6\u02BC\u02C0(songEntry.iconName) && \u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B2\u02BA\u02B6\u02B7\u02C1\u02B9\u02B3\u02BC\u02B7\u02BC\u02BA.\u02B3\u02C1\u02BE\u02BC\u02BC\u02B7\u02B8\u02B3\u02B2\u02C0\u02BB(songEntry.iconName).StartsWith(this.text, StringComparison.OrdinalIgnoreCase);
 		}
 
-		// Token: 0x06000C60 RID: 3168 RVA: 0x0006C650 File Offset: 0x0006A850
 		public static bool Matches(string str, string pattern)
 		{
 			str = str.ToLower();
@@ -996,57 +949,47 @@ public class SongSelectSearch : MonoBehaviour
 			return num2 == pattern.Length;
 		}
 
-		// Token: 0x040008D5 RID: 2261
 		public string text;
 	}
 
-	// Token: 0x02000121 RID: 289
 	[CompilerGenerated]
 	private sealed class \u02BF\u02BC\u02B9\u02C1\u02B8\u02C1\u02BF\u02BB\u02BF\u02B7\u02BB
 	{
-		// Token: 0x06000C66 RID: 3174 RVA: 0x0000C60C File Offset: 0x0000A80C
 		internal bool \u02BE\u02B7\u02BE\u02B6\u02C1\u02B5\u02B5\u02B6\u02B6\u02B8\u02B2(SongEntry x)
 		{
 			return x.Name.\u02B5\u02BD\u02BA\u02B5\u02BA\u02B7\u02B7\u02B6\u02C1\u02B4\u02BF(this.text);
 		}
 
-		// Token: 0x06000C67 RID: 3175 RVA: 0x0000C61F File Offset: 0x0000A81F
 		internal bool \u02B4\u02C1\u02C0\u02B5\u02B6\u02BC\u02BA\u02BB\u02BE\u02BC\u02C1(SongEntry x)
 		{
 			return x.Artist.\u02B5\u02BD\u02BA\u02B5\u02BA\u02B7\u02B7\u02B6\u02C1\u02B4\u02BF(this.text);
 		}
 
-		// Token: 0x06000C68 RID: 3176 RVA: 0x0000C632 File Offset: 0x0000A832
 		internal bool \u02B2\u02BF\u02B5\u02B8\u02BA\u02B6\u02BF\u02B5\u02BD\u02BA\u02B9(SongEntry x)
 		{
 			return x.Album.\u02B5\u02BD\u02BA\u02B5\u02BA\u02B7\u02B7\u02B6\u02C1\u02B4\u02BF(this.text);
 		}
 
-		// Token: 0x06000C69 RID: 3177 RVA: 0x0000C645 File Offset: 0x0000A845
 		internal bool \u02BA\u02B2\u02BE\u02C1\u02B8\u02B3\u02BF\u02B4\u02BD\u02B6\u02B2(SongEntry x)
 		{
 			return x.Charter.\u02B5\u02BD\u02BA\u02B5\u02BA\u02B7\u02B7\u02B6\u02C1\u02B4\u02BF(this.text);
 		}
 
-		// Token: 0x06000C6A RID: 3178 RVA: 0x0000C658 File Offset: 0x0000A858
 		internal bool \u02B6\u02BF\u02B4\u02B6\u02B7\u02BD\u02BC\u02BC\u02B9\u02B3\u02B3(SongEntry x)
 		{
 			return x.Playlist.\u02B5\u02BD\u02BA\u02B5\u02BA\u02B7\u02B7\u02B6\u02C1\u02B4\u02BF(this.text);
 		}
 
-		// Token: 0x06000C6B RID: 3179 RVA: 0x0000C66B File Offset: 0x0000A86B
 		internal bool \u02B2\u02BC\u02C1\u02B3\u02BE\u02BF\u02C0\u02BF\u02C0\u02BC\u02B9(SongEntry x)
 		{
 			return x.Genre.\u02B5\u02BD\u02BA\u02B5\u02BA\u02B7\u02B7\u02B6\u02C1\u02B4\u02BF(this.text);
 		}
 
-		// Token: 0x06000C6C RID: 3180 RVA: 0x0000C67E File Offset: 0x0000A87E
 		internal bool \u02C1\u02B3\u02BF\u02B6\u02B4\u02B8\u02BC\u02BA\u02B8\u02B8\u02BA(SongEntry x)
 		{
 			return \u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B2\u02BA\u02B6\u02B7\u02C1\u02B9\u02B3\u02BC\u02B7\u02BC\u02BA.\u02B9\u02BD\u02BA\u02BC\u02B9\u02B7\u02B3\u02B3\u02B6\u02BC\u02C0(x.iconName) && \u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B2\u02BA\u02B6\u02B7\u02C1\u02B9\u02B3\u02BC\u02B7\u02BC\u02BA.\u02B3\u02C1\u02BE\u02BC\u02BC\u02B7\u02B8\u02B3\u02B2\u02C0\u02BB(x.iconName).Contains(this.text, StringComparison.OrdinalIgnoreCase);
 		}
 
-		// Token: 0x040008D9 RID: 2265
 		public string text;
 	}
 }

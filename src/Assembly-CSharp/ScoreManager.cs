@@ -1,18 +1,15 @@
-﻿using System;
+using System;
 using System.Collections;
 using StrikeCore;
 using UnityEngine;
 
-// Token: 0x020001EB RID: 491
 public class ScoreManager : MonoBehaviour
 {
-	// Token: 0x060015F3 RID: 5619 RVA: 0x000115DD File Offset: 0x0000F7DD
 	public void \u02B7\u02B5\u02B9\u02BE\u02B4\u02B4\u02C1\u02B8\u02BE\u02B2\u02B7(int \u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7)
 	{
 		this.\u02BC\u02B6\u02B6\u02B6\u02BA\u02BA\u02BF\u02BE\u02B5\u02BA\u02BA.\u02B8\u02B2\u02C1\u02B8\u02BB\u02BA\u02B7\u02B7\u02BD\u02C1\u02BC(-this.playerList[\u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7].\u02C1\u02BA\u02BA\u02C0\u02B7\u02BA\u02B3\u02BF\u02C1\u02B7\u02C1());
 	}
 
-	// Token: 0x060015F4 RID: 5620 RVA: 0x000AA35C File Offset: 0x000A855C
 	private void \u02B7\u02BA\u02BD\u02B8\u02B7\u02BD\u02B6\u02BE\u02B6\u02B7\u02B9()
 	{
 		if (this.\u02B4\u02BA\u02BF\u02BF\u02BD\u02B5\u02BF\u02B2\u02BF\u02B9\u02B3 != this.\u02BC\u02B3\u02BD\u02BA\u02B4\u02BA\u02B4\u02B4\u02C1\u02B5\u02B6)
@@ -34,7 +31,6 @@ public class ScoreManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060015F5 RID: 5621 RVA: 0x000AA3D8 File Offset: 0x000A85D8
 	private void \u02BD\u02BA\u02BA\u02B8\u02B5\u02B6\u02B5\u02B7\u02B8\u02B9\u02B2()
 	{
 		if (this.\u02B4\u02BA\u02BF\u02BF\u02BD\u02B5\u02BF\u02B2\u02BF\u02B9\u02B3 != this.\u02BC\u02B3\u02BD\u02BA\u02B4\u02BA\u02B4\u02B4\u02C1\u02B5\u02B6)
@@ -56,13 +52,11 @@ public class ScoreManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060015F6 RID: 5622 RVA: 0x000115DD File Offset: 0x0000F7DD
 	public void \u02B5\u02B2\u02BC\u02B8\u02B9\u02C1\u02BE\u02B2\u02B2\u02BC\u02BF(int \u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7)
 	{
 		this.\u02BC\u02B6\u02B6\u02B6\u02BA\u02BA\u02BF\u02BE\u02B5\u02BA\u02BA.\u02B8\u02B2\u02C1\u02B8\u02BB\u02BA\u02B7\u02B7\u02BD\u02C1\u02BC(-this.playerList[\u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7].\u02C1\u02BA\u02BA\u02C0\u02B7\u02BA\u02B3\u02BF\u02C1\u02B7\u02C1());
 	}
 
-	// Token: 0x060015F7 RID: 5623 RVA: 0x000115F8 File Offset: 0x0000F7F8
 	private IEnumerator Start()
 	{
 		this.comboOrigColor = this.comboFont.characters[0].color;
@@ -85,7 +79,6 @@ public class ScoreManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060015F8 RID: 5624 RVA: 0x000AA454 File Offset: 0x000A8654
 	private void \u02BC\u02B7\u02B2\u02C1\u02B4\u02C1\u02B6\u02B3\u02B2\u02B8\u02C1()
 	{
 		this.\u02BC\u02B3\u02BD\u02BA\u02B4\u02BA\u02B4\u02B4\u02C1\u02B5\u02B6 = 1;
@@ -105,7 +98,6 @@ public class ScoreManager : MonoBehaviour
 		this.scoreFont.\u02BF\u02BD\u02B3\u02C0\u02B3\u02B2\u02B2\u02C1\u02C1\u02BF\u02B6(this.\u02B8\u02B6\u02BB\u02B2\u02B2\u02C0\u02B7\u02BB\u02B3\u02B8\u02B2);
 	}
 
-	// Token: 0x060015F9 RID: 5625 RVA: 0x000AA508 File Offset: 0x000A8708
 	private void \u02BC\u02B6\u02B8\u02BA\u02B2\u02B4\u02B7\u02B3\u02C0\u02B8\u02B7()
 	{
 		this.\u02C0\u02BB\u02B9\u02BC\u02BD\u02B3\u02B2\u02BE\u02B7\u02B9\u02B2();
@@ -121,7 +113,6 @@ public class ScoreManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060015FA RID: 5626 RVA: 0x000AA584 File Offset: 0x000A8784
 	private bool \u02B3\u02B4\u02BE\u02BA\u02BE\u02C0\u02B3\u02BA\u02B8\u02BF\u02BB(int \u02B2\u02B9\u02B3\u02C0\u02BC\u02BA\u02B4\u02B5\u02C0\u02BA\u02B3)
 	{
 		this.comboBoxDesiredPos = this.comboBox.localPosition;
@@ -160,7 +151,6 @@ public class ScoreManager : MonoBehaviour
 		return false;
 	}
 
-	// Token: 0x060015FB RID: 5627 RVA: 0x000AA658 File Offset: 0x000A8858
 	private void \u02BD\u02C1\u02B3\u02C0\u02C0\u02BE\u02BA\u02B2\u02B6\u02BA\u02C1()
 	{
 		this.\u02BC\u02B3\u02BD\u02BA\u02B4\u02BA\u02B4\u02B4\u02C1\u02B5\u02B6 = 0;
@@ -180,7 +170,6 @@ public class ScoreManager : MonoBehaviour
 		this.scoreFont.\u02BF\u02BD\u02B3\u02C0\u02B3\u02B2\u02B2\u02C1\u02C1\u02BF\u02B6(this.\u02B8\u02B6\u02BB\u02B2\u02B2\u02C0\u02B7\u02BB\u02B3\u02B8\u02B2);
 	}
 
-	// Token: 0x060015FC RID: 5628 RVA: 0x000AA70C File Offset: 0x000A890C
 	private void \u02C0\u02B5\u02BC\u02B3\u02B3\u02B7\u02B9\u02B2\u02C0\u02BC\u02BB()
 	{
 		this.\u02C0\u02BB\u02B9\u02BC\u02BD\u02B3\u02B2\u02BE\u02B7\u02B9\u02B2();
@@ -196,7 +185,6 @@ public class ScoreManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x060015FD RID: 5629 RVA: 0x00011607 File Offset: 0x0000F807
 	private IEnumerator \u02B3\u02BC\u02BD\u02C1\u02BF\u02B5\u02BA\u02C0\u02B4\u02BF\u02B7()
 	{
 		this.highScoreDisplay.\u02B3\u02BC\u02B4\u02B5\u02BD\u02C0\u02B8\u02BD\u02B7\u02B5\u02BF(false);
@@ -205,7 +193,6 @@ public class ScoreManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x060015FE RID: 5630 RVA: 0x000AA788 File Offset: 0x000A8988
 	private void \u02BA\u02BA\u02C0\u02BA\u02BC\u02B9\u02B5\u02BE\u02BA\u02C0\u02BD()
 	{
 		this.\u02C0\u02BB\u02B9\u02BC\u02BD\u02B3\u02B2\u02BE\u02B7\u02B9\u02B2();
@@ -221,7 +208,6 @@ public class ScoreManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001600 RID: 5632 RVA: 0x000AA804 File Offset: 0x000A8A04
 	private void \u02C0\u02BE\u02B7\u02BF\u02B9\u02BB\u02C1\u02B2\u02B9\u02B7\u02B5()
 	{
 		this.\u02C0\u02BB\u02B9\u02BC\u02BD\u02B3\u02B2\u02BE\u02B7\u02B9\u02B2();
@@ -237,7 +223,6 @@ public class ScoreManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001601 RID: 5633 RVA: 0x000AA880 File Offset: 0x000A8A80
 	private void \u02C0\u02BB\u02B9\u02BC\u02BD\u02B3\u02B2\u02BE\u02B7\u02B9\u02B2()
 	{
 		this.\u02BC\u02B3\u02BD\u02BA\u02B4\u02BA\u02B4\u02B4\u02C1\u02B5\u02B6 = 0;
@@ -257,7 +242,6 @@ public class ScoreManager : MonoBehaviour
 		this.scoreFont.\u02B8\u02B2\u02B2\u02C1\u02B7\u02B3\u02BE\u02BB\u02B6\u02BE\u02C1(this.\u02B8\u02B6\u02BB\u02B2\u02B2\u02C0\u02B7\u02BB\u02B3\u02B8\u02B2);
 	}
 
-	// Token: 0x06001602 RID: 5634 RVA: 0x000AA934 File Offset: 0x000A8B34
 	private void Update()
 	{
 		this.ticker += Time.unscaledDeltaTime;
@@ -302,7 +286,6 @@ public class ScoreManager : MonoBehaviour
 		}
 	}
 
-	// Token: 0x06001603 RID: 5635 RVA: 0x000AAA90 File Offset: 0x000A8C90
 	private bool \u02B4\u02BF\u02B8\u02C1\u02B8\u02B3\u02B8\u02B8\u02BD\u02B3\u02B7(int \u02B2\u02B9\u02B3\u02C0\u02BC\u02BA\u02B4\u02B5\u02C0\u02BA\u02B3)
 	{
 		this.comboBoxDesiredPos = this.comboBox.localPosition;
@@ -341,7 +324,6 @@ public class ScoreManager : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x06001604 RID: 5636 RVA: 0x000AAB64 File Offset: 0x000A8D64
 	private bool \u02BA\u02C1\u02C1\u02BE\u02C1\u02B7\u02B5\u02B3\u02BC\u02B4\u02B4(int \u02B2\u02B9\u02B3\u02C0\u02BC\u02BA\u02B4\u02B5\u02C0\u02BA\u02B3)
 	{
 		this.comboBoxDesiredPos = this.comboBox.localPosition;
@@ -380,7 +362,6 @@ public class ScoreManager : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x06001605 RID: 5637 RVA: 0x000AAC38 File Offset: 0x000A8E38
 	private bool \u02BF\u02B9\u02B4\u02BF\u02C1\u02B2\u02B5\u02C1\u02BA\u02BE\u02C1(int \u02B2\u02B9\u02B3\u02C0\u02BC\u02BA\u02B4\u02B5\u02C0\u02BA\u02B3)
 	{
 		this.comboBoxDesiredPos = this.comboBox.localPosition;
@@ -419,7 +400,6 @@ public class ScoreManager : MonoBehaviour
 		return true;
 	}
 
-	// Token: 0x06001606 RID: 5638 RVA: 0x000AAD0C File Offset: 0x000A8F0C
 	private void \u02B9\u02B9\u02BE\u02B7\u02BD\u02BF\u02B6\u02BE\u02B2\u02B5\u02B6()
 	{
 		this.\u02BC\u02B3\u02BD\u02BA\u02B4\u02BA\u02B4\u02B4\u02C1\u02B5\u02B6 = 1;
@@ -439,13 +419,11 @@ public class ScoreManager : MonoBehaviour
 		this.scoreFont.\u02BF\u02BD\u02B3\u02C0\u02B3\u02B2\u02B2\u02C1\u02C1\u02BF\u02B6(this.\u02B8\u02B6\u02BB\u02B2\u02B2\u02C0\u02B7\u02BB\u02B3\u02B8\u02B2);
 	}
 
-	// Token: 0x06001607 RID: 5639 RVA: 0x00011656 File Offset: 0x0000F856
 	public void \u02BD\u02B5\u02C1\u02B8\u02BE\u02BE\u02BB\u02B4\u02BA\u02B4\u02B4(int \u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7)
 	{
 		this.\u02BC\u02B6\u02B6\u02B6\u02BA\u02BA\u02BF\u02BE\u02B5\u02BA\u02BA.\u02BD\u02BA\u02B5\u02B9\u02C1\u02BE\u02BA\u02BF\u02B9\u02B7\u02B8(-this.playerList[\u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7].\u02C1\u02BA\u02BA\u02C0\u02B7\u02BA\u02B3\u02BF\u02C1\u02B7\u02C1());
 	}
 
-	// Token: 0x06001608 RID: 5640 RVA: 0x00011607 File Offset: 0x0000F807
 	private IEnumerator \u02BB\u02C0\u02BB\u02BF\u02BE\u02B4\u02BB\u02BB\u02C0\u02B3\u02C0()
 	{
 		this.highScoreDisplay.\u02B3\u02BC\u02B4\u02B5\u02BD\u02C0\u02B8\u02BD\u02B7\u02B5\u02BF(false);
@@ -454,82 +432,56 @@ public class ScoreManager : MonoBehaviour
 		yield break;
 	}
 
-	// Token: 0x04001008 RID: 4104
 	public Transform comboBox;
 
-	// Token: 0x04001009 RID: 4105
 	[SerializeField]
 	private HighScoreDisplay highScoreDisplay;
 
-	// Token: 0x0400100A RID: 4106
 	private bool \u02BA\u02B7\u02C0\u02B2\u02BF\u02B6\u02BE\u02BF\u02BA\u02C0\u02BA;
 
-	// Token: 0x0400100B RID: 4107
 	private BasePlayer[] playerList;
 
-	// Token: 0x0400100C RID: 4108
 	private int \u02BF\u02B4\u02C0\u02B3\u02BF\u02C1\u02C0\u02BE\u02B7\u02C1\u02C0;
 
-	// Token: 0x0400100D RID: 4109
 	private int \u02B3\u02B7\u02BA\u02B4\u02B6\u02C0\u02B6\u02B7\u02B4\u02B7\u02BE;
 
-	// Token: 0x0400100E RID: 4110
 	private int \u02BC\u02B3\u02BD\u02BA\u02B4\u02BA\u02B4\u02B4\u02C1\u02B5\u02B6;
 
-	// Token: 0x0400100F RID: 4111
 	private int \u02B5\u02B7\u02C1\u02BC\u02B5\u02BD\u02B9\u02BC\u02BE\u02B8\u02BA;
 
-	// Token: 0x04001010 RID: 4112
 	private int \u02B8\u02B6\u02BB\u02B2\u02B2\u02C0\u02B7\u02BB\u02B3\u02B8\u02B2;
 
-	// Token: 0x04001011 RID: 4113
 	private int \u02B4\u02BA\u02BF\u02BF\u02BD\u02B5\u02BF\u02B2\u02BF\u02B9\u02B3;
 
-	// Token: 0x04001012 RID: 4114
 	private int \u02B2\u02B9\u02B3\u02C0\u02BC\u02BA\u02B4\u02B5\u02C0\u02BA\u02B3 = -1;
 
-	// Token: 0x04001013 RID: 4115
 	private float \u02BA\u02C1\u02B6\u02B7\u02BE\u02BB\u02BE\u02B6\u02BC\u02B6\u02C1 = 0.3f;
 
-	// Token: 0x04001014 RID: 4116
 	private float \u02B7\u02BF\u02B2\u02BD\u02B6\u02B2\u02BB\u02B3\u02B3\u02BB\u02B2 = 0.36f;
 
-	// Token: 0x04001015 RID: 4117
 	private float \u02BA\u02B6\u02B7\u02BD\u02B5\u02B3\u02B7\u02B4\u02C0\u02B3\u02B3 = 0.28f;
 
-	// Token: 0x04001016 RID: 4118
 	private Vector3 comboBoxDesiredPos;
 
-	// Token: 0x04001017 RID: 4119
 	private bool \u02BD\u02BE\u02BB\u02BA\u02BC\u02BB\u02B3\u02BF\u02B3\u02BA\u02C1;
 
-	// Token: 0x04001018 RID: 4120
 	private IEnumerator \u02BF\u02BD\u02B7\u02B8\u02B5\u02B4\u02B5\u02C1\u02C1\u02BE\u02B2;
 
-	// Token: 0x04001019 RID: 4121
 	public SpriteFont comboFont;
 
-	// Token: 0x0400101A RID: 4122
 	public SpriteFont scoreFont;
 
-	// Token: 0x0400101B RID: 4123
 	public StarProgress \u02BC\u02B6\u02B6\u02B6\u02BA\u02BA\u02BF\u02BE\u02B5\u02BA\u02BA;
 
-	// Token: 0x0400101C RID: 4124
 	private YieldInstruction \u02B2\u02B5\u02B2\u02B5\u02B4\u02BF\u02B2\u02B8\u02BE\u02B2\u02B9 = new WaitForSeconds(3.5f);
 
-	// Token: 0x0400101D RID: 4125
 	private float colorr;
 
-	// Token: 0x0400101E RID: 4126
 	private float colorg;
 
-	// Token: 0x0400101F RID: 4127
 	private float colorb;
 
-	// Token: 0x04001020 RID: 4128
 	private float ticker;
 
-	// Token: 0x04001021 RID: 4129
 	private Color comboOrigColor;
 }

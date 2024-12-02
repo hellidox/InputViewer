@@ -1,13 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-// Token: 0x0200002E RID: 46
 public static class GameAudioManager
 {
-	// Token: 0x0600018E RID: 398 RVA: 0x00006B6D File Offset: 0x00004D6D
 	public static \u02B2\u02BA\u02BA\u02B8\u02B5\u02BC\u02BA\u02BE\u02BB\u02BA\u02B5 \u02B6\u02B9\u02B9\u02B5\u02BE\u02B8\u02B7\u02BA\u02B6\u02BE\u02B5(SoundID \u02BE\u02BE\u02BB\u02B3\u02B4\u02B2\u02BD\u02B4\u02B8\u02B6\u02B9, short \u02B3\u02C0\u02BF\u02B5\u02BE\u02C1\u02B6\u02B6\u02B8\u02B4\u02BC = 0)
 	{
 		if (\u02BE\u02BE\u02BB\u02B3\u02B4\u02B2\u02BD\u02B4\u02B8\u02B6\u02B9 < SoundID.FreestyleSnare)
@@ -17,14 +15,12 @@ public static class GameAudioManager
 		return GameAudioManager.\u02C0\u02BF\u02BE\u02BD\u02B5\u02BB\u02B6\u02BF\u02B6\u02BD\u02B7[\u02BE\u02BE\u02BB\u02B3\u02B4\u02B2\u02BD\u02B4\u02B8\u02B6\u02B9](\u02B3\u02C0\u02BF\u02B5\u02BE\u02C1\u02B6\u02B6\u02B8\u02B4\u02BC);
 	}
 
-	// Token: 0x0600018F RID: 399 RVA: 0x00020710 File Offset: 0x0001E910
 	public static void \u02B6\u02B2\u02B3\u02BB\u02BB\u02BC\u02B9\u02BF\u02B5\u02B4\u02BB()
 	{
 		SoundID soundID = (SoundID)global::UnityEngine.Random.Range(5, 10);
 		BassAudioManager.Instance.PlaySoundExternal(soundID);
 	}
 
-	// Token: 0x06000190 RID: 400 RVA: 0x00006B91 File Offset: 0x00004D91
 	public static void PlaySound(SoundID \u02B9\u02BF\u02B4\u02BA\u02B2\u02BE\u02BA\u02BB\u02B4\u02B8\u02BD)
 	{
 		if (\u02B9\u02BF\u02B4\u02BA\u02B2\u02BE\u02BA\u02BB\u02B4\u02B8\u02BD == SoundID.None)
@@ -34,7 +30,6 @@ public static class GameAudioManager
 		BassAudioManager.Instance.PlaySoundExternal(\u02B9\u02BF\u02B4\u02BA\u02B2\u02BE\u02BA\u02BB\u02B4\u02B8\u02BD);
 	}
 
-	// Token: 0x06000191 RID: 401 RVA: 0x00020734 File Offset: 0x0001E934
 	public static void \u02B9\u02C1\u02B6\u02B7\u02B2\u02B5\u02B6\u02BF\u02BF\u02B7\u02C1()
 	{
 		if (GameAudioManager.\u02B4\u02C1\u02B9\u02B7\u02C1\u02BC\u02BC\u02B8\u02BC\u02BA\u02BC)
@@ -92,7 +87,6 @@ public static class GameAudioManager
 		GameAudioManager.\u02B4\u02C1\u02B9\u02B7\u02C1\u02BC\u02BC\u02B8\u02BC\u02BA\u02BC = true;
 	}
 
-	// Token: 0x06000192 RID: 402 RVA: 0x00020AD8 File Offset: 0x0001ECD8
 	private static Func<short, \u02B2\u02BA\u02BA\u02B8\u02B5\u02BC\u02BA\u02BE\u02BB\u02BA\u02B5> \u02BD\u02C0\u02B6\u02BC\u02B4\u02BE\u02B6\u02C1\u02C1\u02BF\u02B4(List<\u02B7\u02BB\u02B3\u02B7\u02BD\u02BA\u02B9\u02BA\u02BD\u02B3\u02BB> \u02B8\u02BA\u02BD\u02B5\u02BA\u02BA\u02B2\u02B9\u02B8\u02C0\u02BE)
 	{
 		GameAudioManager.\u02C1\u02B8\u02B8\u02BA\u02B7\u02BC\u02B4\u02BC\u02B9\u02B3\u02B2 u02C1_u02B8_u02B8_u02BA_u02B7_u02BC_u02B4_u02BC_u02B9_u02B3_u02B = new GameAudioManager.\u02C1\u02B8\u02B8\u02BA\u02B7\u02BC\u02B4\u02BC\u02B9\u02B3\u02B2();
@@ -101,7 +95,6 @@ public static class GameAudioManager
 		return new Func<short, \u02B2\u02BA\u02BA\u02B8\u02B5\u02BC\u02BA\u02BE\u02BB\u02BA\u02B5>(u02C1_u02B8_u02B8_u02BA_u02B7_u02BC_u02B4_u02BC_u02B9_u02B3_u02B.\u02B2\u02BE\u02B5\u02C1\u02BB\u02C1\u02C1\u02C1\u02B8\u02BC\u02B6);
 	}
 
-	// Token: 0x06000193 RID: 403 RVA: 0x00020B14 File Offset: 0x0001ED14
 	private static void \u02C1\u02B8\u02BC\u02BB\u02B7\u02B6\u02BE\u02B7\u02BB\u02B6\u02BD(string \u02B5\u02BF\u02B4\u02C1\u02BE\u02B7\u02C0\u02B9\u02C1\u02B8\u02BC, List<\u02B7\u02BB\u02B3\u02B7\u02BD\u02BA\u02B9\u02BA\u02BD\u02B3\u02BB> \u02B8\u02BA\u02BD\u02B5\u02BA\u02BA\u02B2\u02B9\u02B8\u02C0\u02BE)
 	{
 		int num = 0;
@@ -125,7 +118,6 @@ public static class GameAudioManager
 		}
 	}
 
-	// Token: 0x06000194 RID: 404 RVA: 0x00020C08 File Offset: 0x0001EE08
 	public static void \u02BC\u02B4\u02B3\u02B5\u02BE\u02C0\u02B8\u02C0\u02B8\u02B4\u02B9()
 	{
 		GameAudioManager.\u02B4\u02C1\u02B9\u02B7\u02C1\u02BC\u02BC\u02B8\u02BC\u02BA\u02BC = false;
@@ -160,54 +152,39 @@ public static class GameAudioManager
 		GameAudioManager.\u02BD\u02B8\u02B6\u02BF\u02B4\u02BE\u02B7\u02C0\u02B2\u02C0\u02BF = null;
 	}
 
-	// Token: 0x040000E5 RID: 229
 	private static \u02B2\u02BA\u02BA\u02B8\u02B5\u02BC\u02BA\u02BE\u02BB\u02BA\u02B5[] \u02BD\u02B8\u02B6\u02BF\u02B4\u02BE\u02B7\u02C0\u02B2\u02C0\u02BF;
 
-	// Token: 0x040000E6 RID: 230
 	private static Dictionary<SoundID, Func<short, \u02B2\u02BA\u02BA\u02B8\u02B5\u02BC\u02BA\u02BE\u02BB\u02BA\u02B5>> \u02C0\u02BF\u02BE\u02BD\u02B5\u02BB\u02B6\u02BF\u02B6\u02BD\u02B7;
 
-	// Token: 0x040000E7 RID: 231
 	private static bool \u02B4\u02C1\u02B9\u02B7\u02C1\u02BC\u02BC\u02B8\u02BC\u02BA\u02BC;
 
-	// Token: 0x040000E8 RID: 232
 	private static List<\u02B7\u02BB\u02B3\u02B7\u02BD\u02BA\u02B9\u02BA\u02BD\u02B3\u02BB> \u02B5\u02BD\u02BD\u02B6\u02C0\u02BA\u02BF\u02BF\u02B2\u02B4\u02B4;
 
-	// Token: 0x040000E9 RID: 233
 	private static List<\u02B7\u02BB\u02B3\u02B7\u02BD\u02BA\u02B9\u02BA\u02BD\u02B3\u02BB> \u02B6\u02B8\u02BB\u02B3\u02BD\u02C0\u02BB\u02B2\u02BF\u02B9\u02B5;
 
-	// Token: 0x040000EA RID: 234
 	private static List<\u02B7\u02BB\u02B3\u02B7\u02BD\u02BA\u02B9\u02BA\u02BD\u02B3\u02BB> \u02B9\u02BF\u02B5\u02B9\u02C1\u02BA\u02B8\u02BF\u02C1\u02B9\u02B7;
 
-	// Token: 0x040000EB RID: 235
 	private static List<\u02B7\u02BB\u02B3\u02B7\u02BD\u02BA\u02B9\u02BA\u02BD\u02B3\u02BB> \u02BD\u02B3\u02C0\u02BF\u02B9\u02B2\u02B4\u02B7\u02B3\u02C1\u02B7;
 
-	// Token: 0x040000EC RID: 236
 	private static List<\u02B7\u02BB\u02B3\u02B7\u02BD\u02BA\u02B9\u02BA\u02BD\u02B3\u02BB> \u02C0\u02B9\u02B6\u02BF\u02B9\u02B3\u02B9\u02BA\u02B5\u02B3\u02BD;
 
-	// Token: 0x040000ED RID: 237
 	private static List<\u02B7\u02BB\u02B3\u02B7\u02BD\u02BA\u02B9\u02BA\u02BD\u02B3\u02BB> \u02B7\u02BF\u02B6\u02BA\u02B3\u02BC\u02B5\u02B8\u02BF\u02B3\u02B8;
 
-	// Token: 0x040000EE RID: 238
 	private static List<\u02B7\u02BB\u02B3\u02B7\u02BD\u02BA\u02B9\u02BA\u02BD\u02B3\u02BB> \u02C1\u02B9\u02B3\u02B2\u02B6\u02B9\u02BD\u02BE\u02B7\u02BA\u02BA;
 
-	// Token: 0x040000EF RID: 239
 	private static List<\u02B7\u02BB\u02B3\u02B7\u02BD\u02BA\u02B9\u02BA\u02BD\u02B3\u02BB> \u02B8\u02BA\u02B3\u02BB\u02B4\u02B5\u02B5\u02B7\u02B6\u02BD\u02B7;
 
-	// Token: 0x0200002F RID: 47
 	[CompilerGenerated]
 	private sealed class \u02C1\u02B8\u02B8\u02BA\u02B7\u02BC\u02B4\u02BC\u02B9\u02B3\u02B2
 	{
-		// Token: 0x06000196 RID: 406 RVA: 0x00020D30 File Offset: 0x0001EF30
 		internal \u02B2\u02BA\u02BA\u02B8\u02B5\u02BC\u02BA\u02BE\u02BB\u02BA\u02B5 \u02B2\u02BE\u02B5\u02C1\u02BB\u02C1\u02C1\u02C1\u02B8\u02BC\u02B6(short velocity)
 		{
 			int num = (((int)velocity / this.steps < this.sfxHolder.Count) ? ((int)velocity / this.steps) : (this.sfxHolder.Count - 1));
 			return this.sfxHolder[num].\u02B4\u02C1\u02B8\u02B8\u02BA\u02C1\u02BD\u02B7\u02B6\u02B9\u02BC();
 		}
 
-		// Token: 0x040000F0 RID: 240
 		public int steps;
 
-		// Token: 0x040000F1 RID: 241
 		public List<\u02B7\u02BB\u02B3\u02B7\u02BD\u02BA\u02B9\u02BA\u02BD\u02B3\u02BB> sfxHolder;
 	}
 }

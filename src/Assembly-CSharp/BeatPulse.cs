@@ -1,10 +1,8 @@
-﻿using System;
+using System;
 using UnityEngine;
 
-// Token: 0x02000036 RID: 54
 public class BeatPulse : MonoBehaviour
 {
-	// Token: 0x060001E8 RID: 488 RVA: 0x000229F8 File Offset: 0x00020BF8
 	private void \u02B4\u02B7\u02B4\u02B2\u02B2\u02B7\u02B6\u02B3\u02B2\u02BC\u02B9()
 	{
 		this.\u02B2\u02B9\u02B2\u02C1\u02C1\u02BA\u02C1\u02C1\u02B2\u02BD\u02B5 += 0;
@@ -13,7 +11,6 @@ public class BeatPulse : MonoBehaviour
 		this.\u02BF\u02B5\u02B4\u02BC\u02B7\u02BF\u02BF\u02B9\u02B2\u02B2\u02B2 = this.\u02B4\u02BF\u02B6\u02BD\u02B7\u02BC\u02B3\u02BA\u02C1\u02BE\u02BD - this.\u02BD\u02C1\u02B6\u02B9\u02BE\u02B2\u02C1\u02B2\u02BA\u02B2\u02C1;
 	}
 
-	// Token: 0x060001E9 RID: 489 RVA: 0x00022A60 File Offset: 0x00020C60
 	private void \u02B9\u02B5\u02B2\u02BB\u02B5\u02B3\u02B9\u02BC\u02BF\u02B5\u02BA()
 	{
 		if (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9 < 976.0)
@@ -37,7 +34,6 @@ public class BeatPulse : MonoBehaviour
 		this.\u02B5\u02BE\u02B8\u02BB\u02B3\u02B8\u02B7\u02C1\u02B6\u02B9\u02BC = (float)this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9;
 	}
 
-	// Token: 0x060001EA RID: 490 RVA: 0x00006D54 File Offset: 0x00004F54
 	private void \u02B2\u02B9\u02C1\u02C1\u02B2\u02B3\u02C1\u02BF\u02BC\u02BB\u02C1()
 	{
 		this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = global::UnityEngine.Object.FindObjectOfType<GameManager>();
@@ -49,7 +45,6 @@ public class BeatPulse : MonoBehaviour
 		this.\u02BC\u02B3\u02C1\u02C0\u02C0\u02B9\u02B3\u02B7\u02B5\u02BF\u02B8();
 	}
 
-	// Token: 0x060001EC RID: 492 RVA: 0x00022B10 File Offset: 0x00020D10
 	private void Update()
 	{
 		if (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9 < 0.0)
@@ -73,7 +68,6 @@ public class BeatPulse : MonoBehaviour
 		this.\u02B5\u02BE\u02B8\u02BB\u02B3\u02B8\u02B7\u02C1\u02B6\u02B9\u02BC = (float)this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9;
 	}
 
-	// Token: 0x060001ED RID: 493 RVA: 0x00022BC0 File Offset: 0x00020DC0
 	private void \u02BC\u02B3\u02C1\u02C0\u02C0\u02B9\u02B3\u02B7\u02B5\u02BF\u02B8()
 	{
 		this.\u02B2\u02B9\u02B2\u02C1\u02C1\u02BA\u02C1\u02C1\u02B2\u02BD\u02B5++;
@@ -82,7 +76,6 @@ public class BeatPulse : MonoBehaviour
 		this.\u02BF\u02B5\u02B4\u02BC\u02B7\u02BF\u02BF\u02B9\u02B2\u02B2\u02B2 = this.\u02B4\u02BF\u02B6\u02BD\u02B7\u02BC\u02B3\u02BA\u02C1\u02BE\u02BD - this.\u02BD\u02C1\u02B6\u02B9\u02BE\u02B2\u02C1\u02B2\u02BA\u02B2\u02C1;
 	}
 
-	// Token: 0x060001EE RID: 494 RVA: 0x00006D9C File Offset: 0x00004F9C
 	private void \u02C0\u02BE\u02B2\u02BE\u02C0\u02B5\u02B3\u02B7\u02B2\u02B8\u02B5()
 	{
 		this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = global::UnityEngine.Object.FindObjectOfType<GameManager>();
@@ -94,7 +87,6 @@ public class BeatPulse : MonoBehaviour
 		this.\u02B4\u02B7\u02B4\u02B2\u02B2\u02B7\u02B6\u02B3\u02B2\u02BC\u02B9();
 	}
 
-	// Token: 0x060001EF RID: 495 RVA: 0x00006DD5 File Offset: 0x00004FD5
 	private void \u02B3\u02BB\u02BF\u02B4\u02B9\u02BA\u02B5\u02B5\u02BE\u02BB\u02BE()
 	{
 		this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = global::UnityEngine.Object.FindObjectOfType<GameManager>();
@@ -106,7 +98,6 @@ public class BeatPulse : MonoBehaviour
 		this.\u02BC\u02B3\u02C1\u02C0\u02C0\u02B9\u02B3\u02B7\u02B5\u02BF\u02B8();
 	}
 
-	// Token: 0x060001F0 RID: 496 RVA: 0x00006E0E File Offset: 0x0000500E
 	private void \u02BF\u02BA\u02B5\u02B8\u02B5\u02BF\u02B2\u02BF\u02B3\u02BC\u02BA()
 	{
 		this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = global::UnityEngine.Object.FindObjectOfType<GameManager>();
@@ -118,7 +109,6 @@ public class BeatPulse : MonoBehaviour
 		this.\u02B4\u02B7\u02B4\u02B2\u02B2\u02B7\u02B6\u02B3\u02B2\u02BC\u02B9();
 	}
 
-	// Token: 0x060001F1 RID: 497 RVA: 0x00022C28 File Offset: 0x00020E28
 	private void \u02BD\u02B8\u02BD\u02B5\u02B6\u02B3\u02BF\u02B3\u02C1\u02B8\u02C1()
 	{
 		if (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9 < 1559.0)
@@ -142,7 +132,6 @@ public class BeatPulse : MonoBehaviour
 		this.\u02B5\u02BE\u02B8\u02BB\u02B3\u02B8\u02B7\u02C1\u02B6\u02B9\u02BC = (float)this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9;
 	}
 
-	// Token: 0x060001F2 RID: 498 RVA: 0x00006E47 File Offset: 0x00005047
 	private void \u02B5\u02B2\u02BF\u02BD\u02BB\u02BA\u02B2\u02BF\u02BD\u02BE\u02BE()
 	{
 		this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = global::UnityEngine.Object.FindObjectOfType<GameManager>();
@@ -154,7 +143,6 @@ public class BeatPulse : MonoBehaviour
 		this.\u02B4\u02B7\u02B9\u02B6\u02BA\u02B9\u02B4\u02B7\u02BF\u02BC\u02C1();
 	}
 
-	// Token: 0x060001F3 RID: 499 RVA: 0x00006E80 File Offset: 0x00005080
 	private void \u02BE\u02B8\u02B4\u02BC\u02B7\u02B7\u02BE\u02BC\u02B5\u02BC\u02BF()
 	{
 		this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = global::UnityEngine.Object.FindObjectOfType<GameManager>();
@@ -166,7 +154,6 @@ public class BeatPulse : MonoBehaviour
 		this.\u02B4\u02B7\u02B4\u02B2\u02B2\u02B7\u02B6\u02B3\u02B2\u02BC\u02B9();
 	}
 
-	// Token: 0x060001F4 RID: 500 RVA: 0x00006EB9 File Offset: 0x000050B9
 	private void \u02B2\u02B7\u02B5\u02C0\u02B4\u02B3\u02B8\u02B3\u02C0\u02BD\u02B5()
 	{
 		this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = global::UnityEngine.Object.FindObjectOfType<GameManager>();
@@ -178,7 +165,6 @@ public class BeatPulse : MonoBehaviour
 		this.\u02B4\u02B7\u02B9\u02B6\u02BA\u02B9\u02B4\u02B7\u02BF\u02BC\u02C1();
 	}
 
-	// Token: 0x060001F5 RID: 501 RVA: 0x00006EF2 File Offset: 0x000050F2
 	private void \u02B2\u02BB\u02B6\u02B5\u02B9\u02B8\u02B2\u02B3\u02BF\u02C1\u02BF()
 	{
 		this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = global::UnityEngine.Object.FindObjectOfType<GameManager>();
@@ -190,7 +176,6 @@ public class BeatPulse : MonoBehaviour
 		this.\u02B4\u02B7\u02B9\u02B6\u02BA\u02B9\u02B4\u02B7\u02BF\u02BC\u02C1();
 	}
 
-	// Token: 0x060001F6 RID: 502 RVA: 0x00022CD8 File Offset: 0x00020ED8
 	private void Start()
 	{
 		global::UnityEngine.Object.DestroyImmediate(this);
@@ -207,7 +192,6 @@ public class BeatPulse : MonoBehaviour
 		this.\u02B4\u02B7\u02B9\u02B6\u02BA\u02B9\u02B4\u02B7\u02BF\u02BC\u02C1();
 	}
 
-	// Token: 0x060001F7 RID: 503 RVA: 0x00006F2B File Offset: 0x0000512B
 	private void \u02B7\u02B8\u02BD\u02C0\u02B2\u02B4\u02B7\u02C0\u02BC\u02BE\u02B3()
 	{
 		this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = global::UnityEngine.Object.FindObjectOfType<GameManager>();
@@ -219,7 +203,6 @@ public class BeatPulse : MonoBehaviour
 		this.\u02B4\u02B7\u02B9\u02B6\u02BA\u02B9\u02B4\u02B7\u02BF\u02BC\u02C1();
 	}
 
-	// Token: 0x060001F8 RID: 504 RVA: 0x00022D30 File Offset: 0x00020F30
 	private void \u02BD\u02B7\u02BD\u02BF\u02BE\u02B9\u02B6\u02C0\u02B4\u02B7\u02BF()
 	{
 		if (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9 < 1423.0)
@@ -243,7 +226,6 @@ public class BeatPulse : MonoBehaviour
 		this.\u02B5\u02BE\u02B8\u02BB\u02B3\u02B8\u02B7\u02C1\u02B6\u02B9\u02BC = (float)this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9;
 	}
 
-	// Token: 0x060001F9 RID: 505 RVA: 0x00006F64 File Offset: 0x00005164
 	private void \u02BC\u02BC\u02B3\u02B2\u02C0\u02B6\u02B8\u02BA\u02BD\u02B9\u02B6()
 	{
 		this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = global::UnityEngine.Object.FindObjectOfType<GameManager>();
@@ -255,7 +237,6 @@ public class BeatPulse : MonoBehaviour
 		this.\u02B4\u02B7\u02B9\u02B6\u02BA\u02B9\u02B4\u02B7\u02BF\u02BC\u02C1();
 	}
 
-	// Token: 0x060001FA RID: 506 RVA: 0x00022BC0 File Offset: 0x00020DC0
 	private void \u02B4\u02B7\u02B9\u02B6\u02BA\u02B9\u02B4\u02B7\u02BF\u02BC\u02C1()
 	{
 		this.\u02B2\u02B9\u02B2\u02C1\u02C1\u02BA\u02C1\u02C1\u02B2\u02BD\u02B5++;
@@ -264,7 +245,6 @@ public class BeatPulse : MonoBehaviour
 		this.\u02BF\u02B5\u02B4\u02BC\u02B7\u02BF\u02BF\u02B9\u02B2\u02B2\u02B2 = this.\u02B4\u02BF\u02B6\u02BD\u02B7\u02BC\u02B3\u02BA\u02C1\u02BE\u02BD - this.\u02BD\u02C1\u02B6\u02B9\u02BE\u02B2\u02C1\u02B2\u02BA\u02B2\u02C1;
 	}
 
-	// Token: 0x060001FB RID: 507 RVA: 0x00006F9D File Offset: 0x0000519D
 	private void \u02C0\u02BC\u02BC\u02BD\u02B8\u02BD\u02BE\u02B6\u02BE\u02BB\u02BB()
 	{
 		this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = global::UnityEngine.Object.FindObjectOfType<GameManager>();
@@ -276,27 +256,19 @@ public class BeatPulse : MonoBehaviour
 		this.\u02B4\u02B7\u02B9\u02B6\u02BA\u02B9\u02B4\u02B7\u02BF\u02BC\u02C1();
 	}
 
-	// Token: 0x04000128 RID: 296
 	private GameManager \u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD;
 
-	// Token: 0x04000129 RID: 297
 	public \u02B5\u02B9\u02C1\u02C0\u02B7\u02BD\u02BE\u02B2\u02C1\u02B2\u02B6 \u02B3\u02BC\u02B3\u02B6\u02BD\u02B6\u02B4\u02B5\u02B6\u02B7\u02BB;
 
-	// Token: 0x0400012A RID: 298
 	private int \u02B2\u02B9\u02B2\u02C1\u02C1\u02BA\u02C1\u02C1\u02B2\u02BD\u02B5 = -1;
 
-	// Token: 0x0400012B RID: 299
 	public float \u02BD\u02B7\u02B2\u02BA\u02BF\u02B7\u02BF\u02B7\u02BF\u02BD\u02B9;
 
-	// Token: 0x0400012C RID: 300
 	private float \u02BD\u02C1\u02B6\u02B9\u02BE\u02B2\u02C1\u02B2\u02BA\u02B2\u02C1;
 
-	// Token: 0x0400012D RID: 301
 	private float \u02B4\u02BF\u02B6\u02BD\u02B7\u02BC\u02B3\u02BA\u02C1\u02BE\u02BD;
 
-	// Token: 0x0400012E RID: 302
 	private float \u02BF\u02B5\u02B4\u02BC\u02B7\u02BF\u02BF\u02B9\u02B2\u02B2\u02B2;
 
-	// Token: 0x0400012F RID: 303
 	private float \u02B5\u02BE\u02B8\u02BB\u02B3\u02B8\u02B7\u02C1\u02B6\u02B9\u02BC;
 }

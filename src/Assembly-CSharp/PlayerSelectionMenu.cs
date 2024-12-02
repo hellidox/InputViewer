@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using StrikeCore;
 using TMPro;
 using UnityEngine;
@@ -6,11 +6,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.UI.Extensions;
 
-// Token: 0x020000E8 RID: 232
 public class PlayerSelectionMenu : BaseMenu
 {
-	// Token: 0x17000106 RID: 262
-	// (get) Token: 0x060008CA RID: 2250 RVA: 0x0000A19B File Offset: 0x0000839B
 	public bool \u02BC\u02BF\u02B4\u02BE\u02B2\u02B6\u02B7\u02B5\u02BD\u02BC\u02B6
 	{
 		get
@@ -19,7 +16,6 @@ public class PlayerSelectionMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x060008CB RID: 2251 RVA: 0x0004E128 File Offset: 0x0004C328
 	private void \u02BA\u02B5\u02B2\u02BF\u02B4\u02C1\u02BC\u02B3\u02BA\u02B8\u02C0()
 	{
 		if (this.\u02BC\u02BE\u02C1\u02B8\u02BE\u02C1\u02BE\u02BF\u02BC\u02BC\u02BA)
@@ -40,7 +36,6 @@ public class PlayerSelectionMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x060008CD RID: 2253 RVA: 0x0004E210 File Offset: 0x0004C410
 	protected override void \u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8()
 	{
 		TextMeshProUGUI[] array;
@@ -119,7 +114,6 @@ public class PlayerSelectionMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x060008CE RID: 2254 RVA: 0x0004E48C File Offset: 0x0004C68C
 	private void \u02B5\u02B3\u02BD\u02B5\u02B4\u02BF\u02B7\u02BE\u02C1\u02B7\u02B7()
 	{
 		bool flag = this.\u02BA\u02B4\u02B8\u02BA\u02C1\u02B7\u02BF\u02BD\u02B5\u02BE\u02BA.charts.\u02B3\u02B2\u02B6\u02BA\u02B2\u02BC\u02C0\u02BA\u02B9\u02BE\u02B8(this.\u02B7\u02BB\u02BA\u02BC\u02B4\u02B6\u02B4\u02B3\u02BD\u02BA\u02BF, this.\u02B5\u02BD\u02C0\u02C1\u02BF\u02BF\u02B7\u02BF\u02B6\u02C1\u02BA);
@@ -160,7 +154,6 @@ public class PlayerSelectionMenu : BaseMenu
 		this.\u02C0\u02B8\u02B3\u02B7\u02B3\u02BA\u02BB\u02B4\u02B4\u02BF\u02B5 = 4;
 	}
 
-	// Token: 0x060008CF RID: 2255 RVA: 0x0004E6CC File Offset: 0x0004C8CC
 	private void \u02B3\u02C1\u02B5\u02BD\u02B5\u02C1\u02BB\u02B5\u02C0\u02BF\u02B6()
 	{
 		string text = this.\u02B8\u02BE\u02C1\u02BE\u02B2\u02C0\u02B6\u02C0\u02B5\u02B8\u02B5[this.\u02B3\u02BF\u02BB\u02BB\u02B5\u02B7\u02B8\u02BE\u02B7\u02B3\u02B3];
@@ -202,14 +195,12 @@ public class PlayerSelectionMenu : BaseMenu
 		this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.\u02BB\u02BE\u02B6\u02BC\u02B6\u02B4\u02BC\u02B7\u02C1\u02B7\u02B8 ? PlayerSelectionMenu.\u02C1\u02C1\u02B7\u02BD\u02BC\u02B7\u02C0\u02B3\u02BE\u02B7\u02BB.Modifiers : PlayerSelectionMenu.\u02C1\u02C1\u02B7\u02BD\u02BC\u02B7\u02C0\u02B3\u02BE\u02B7\u02BB.Confirm);
 	}
 
-	// Token: 0x060008D0 RID: 2256 RVA: 0x0000A1A6 File Offset: 0x000083A6
 	private void \u02BE\u02B9\u02BC\u02BA\u02B3\u02BD\u02C1\u02B5\u02B3\u02C1\u02C0()
 	{
 		this.buttonsGroup.SetActive(this.\u02BE\u02BA\u02BD\u02B5\u02BE\u02C0\u02B7\u02B3\u02BA\u02B4\u02BD != PlayerSelectionMenu.\u02C1\u02C1\u02B7\u02BD\u02BC\u02B7\u02C0\u02B3\u02BE\u02B7\u02BB.Ready);
 		this.ReadyHeader.SetActive(this.\u02BE\u02BA\u02BD\u02B5\u02BE\u02C0\u02B7\u02B3\u02BA\u02B4\u02BD == PlayerSelectionMenu.\u02C1\u02C1\u02B7\u02BD\u02BC\u02B7\u02C0\u02B3\u02BE\u02B7\u02BB.Ready);
 	}
 
-	// Token: 0x060008D1 RID: 2257 RVA: 0x0004E788 File Offset: 0x0004C988
 	private void \u02B3\u02BC\u02BA\u02C0\u02B3\u02B6\u02B3\u02B7\u02B8\u02B5\u02B4(int \u02BD\u02BA\u02C0\u02BC\u02B6\u02B4\u02B5\u02BD\u02B4\u02C0\u02B8)
 	{
 		foreach (ModifierFlowElement modifierFlowElement in this.modifierElements)
@@ -222,7 +213,6 @@ public class PlayerSelectionMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x060008D2 RID: 2258 RVA: 0x0004E7CC File Offset: 0x0004C9CC
 	private void \u02B9\u02BB\u02BD\u02B7\u02C0\u02BF\u02C0\u02BF\u02B8\u02C1\u02BC()
 	{
 		string text = this.\u02B8\u02BE\u02C1\u02BE\u02B2\u02C0\u02B6\u02C0\u02B5\u02B8\u02B5[base.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC];
@@ -330,7 +320,6 @@ public class PlayerSelectionMenu : BaseMenu
 		this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.\u02B8\u02B2\u02C0\u02B6\u02B2\u02B2\u02BB\u02B5\u02B4\u02B8\u02BD ? PlayerSelectionMenu.\u02C1\u02C1\u02B7\u02BD\u02BC\u02B7\u02C0\u02B3\u02BE\u02B7\u02BB.Difficulty : PlayerSelectionMenu.\u02C1\u02C1\u02B7\u02BD\u02BC\u02B7\u02C0\u02B3\u02BE\u02B7\u02BB.Confirm);
 	}
 
-	// Token: 0x060008D3 RID: 2259 RVA: 0x0000A1D3 File Offset: 0x000083D3
 	public override void \u02C1\u02B3\u02BC\u02B6\u02BD\u02B6\u02BF\u02B7\u02BB\u02B5\u02BB()
 	{
 		if (this.\u02BE\u02BA\u02BD\u02B5\u02BE\u02C0\u02B7\u02B3\u02BA\u02B4\u02BD == PlayerSelectionMenu.\u02C1\u02C1\u02B7\u02BD\u02BC\u02B7\u02C0\u02B3\u02BE\u02B7\u02BB.Ready)
@@ -344,7 +333,6 @@ public class PlayerSelectionMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x060008D4 RID: 2260 RVA: 0x0004EA4C File Offset: 0x0004CC4C
 	private int \u02B2\u02BC\u02B3\u02BD\u02B4\u02B6\u02B4\u02BA\u02BF\u02BF\u02C0(Difficulty \u02B5\u02BD\u02C0\u02C1\u02BF\u02BF\u02B7\u02BF\u02B6\u02C1\u02BA)
 	{
 		string text = \u02B5\u02BD\u02C0\u02C1\u02BF\u02BF\u02B7\u02BF\u02B6\u02C1\u02BA.ToString();
@@ -358,7 +346,6 @@ public class PlayerSelectionMenu : BaseMenu
 		return 0;
 	}
 
-	// Token: 0x060008D5 RID: 2261 RVA: 0x0004EA94 File Offset: 0x0004CC94
 	private void \u02C0\u02BE\u02BC\u02B3\u02B8\u02B4\u02C0\u02B3\u02B9\u02BA\u02BA()
 	{
 		this.\u02B8\u02B2\u02C0\u02B6\u02B2\u02B2\u02BB\u02B5\u02B4\u02B8\u02BD = false;
@@ -399,7 +386,6 @@ public class PlayerSelectionMenu : BaseMenu
 		this.noDifficultyText.text = string.Empty;
 	}
 
-	// Token: 0x060008D6 RID: 2262 RVA: 0x0004EBEC File Offset: 0x0004CDEC
 	private void \u02BA\u02C1\u02B7\u02B8\u02C0\u02BF\u02BF\u02B2\u02B5\u02C1\u02B8(string \u02BF\u02B4\u02C1\u02BC\u02BC\u02B2\u02BC\u02BB\u02BA\u02B2\u02B6)
 	{
 		this.difficultyTexts[this.\u02C0\u02B8\u02B3\u02B7\u02B3\u02BA\u02BB\u02B4\u02B4\u02BF\u02B5].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD(\u02BF\u02B4\u02C1\u02BC\u02BC\u02B2\u02BC\u02BB\u02BA\u02B2\u02B6);
@@ -409,7 +395,6 @@ public class PlayerSelectionMenu : BaseMenu
 		u02B8_u02BE_u02C1_u02BE_u02B2_u02C0_u02B6_u02C0_u02B5_u02B8_u02B[u02C0_u02B8_u02B3_u02B7_u02B3_u02BA_u02BB_u02B4_u02B4_u02BF_u02B] = \u02BF\u02B4\u02C1\u02BC\u02BC\u02B2\u02BC\u02BB\u02BA\u02B2\u02B6;
 	}
 
-	// Token: 0x060008D7 RID: 2263 RVA: 0x0004EC30 File Offset: 0x0004CE30
 	private void \u02B6\u02BD\u02BF\u02C1\u02B5\u02BD\u02B2\u02B2\u02C1\u02B7\u02BD()
 	{
 		this.\u02B8\u02B2\u02C0\u02B6\u02B2\u02B2\u02BB\u02B5\u02B4\u02B8\u02BD = true;
@@ -450,7 +435,6 @@ public class PlayerSelectionMenu : BaseMenu
 		this.noDifficultyText.text = string.Empty;
 	}
 
-	// Token: 0x060008D8 RID: 2264 RVA: 0x0000A1F8 File Offset: 0x000083F8
 	public override void \u02B7\u02BA\u02C0\u02B8\u02BE\u02BA\u02BD\u02B4\u02BB\u02B3\u02B6()
 	{
 		if (this.\u02BE\u02BA\u02BD\u02B5\u02BE\u02C0\u02B7\u02B3\u02BA\u02B4\u02BD == PlayerSelectionMenu.\u02C1\u02C1\u02B7\u02BD\u02BC\u02B7\u02C0\u02B3\u02BE\u02B7\u02BB.Ready)
@@ -464,7 +448,6 @@ public class PlayerSelectionMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x060008D9 RID: 2265 RVA: 0x0004ED88 File Offset: 0x0004CF88
 	private void \u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(PlayerSelectionMenu.\u02C1\u02C1\u02B7\u02BD\u02BC\u02B7\u02C0\u02B3\u02BE\u02B7\u02BB \u02BA\u02B2\u02B9\u02BD\u02BA\u02B4\u02B5\u02BB\u02BB\u02BC\u02C1)
 	{
 		this.\u02B7\u02BE\u02B6\u02B6\u02BF\u02BE\u02B6\u02B2\u02C1\u02B4\u02B8(false);
@@ -493,7 +476,6 @@ public class PlayerSelectionMenu : BaseMenu
 		this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 	}
 
-	// Token: 0x060008DA RID: 2266 RVA: 0x0004EE10 File Offset: 0x0004D010
 	public static string \u02BF\u02C0\u02B5\u02B6\u02B6\u02B3\u02BD\u02B6\u02B3\u02B7\u02B4(Modifier \u02BD\u02BA\u02C0\u02BC\u02B6\u02B4\u02B5\u02BD\u02B4\u02C0\u02B8, Instrument \u02B7\u02BB\u02BA\u02BC\u02B4\u02B6\u02B4\u02B3\u02BD\u02BA\u02BF)
 	{
 		if (\u02B7\u02BB\u02BA\u02BC\u02B4\u02B6\u02B4\u02B3\u02BD\u02BA\u02BF == Instrument.Drums || \u02B7\u02BB\u02BA\u02BC\u02B4\u02B6\u02B4\u02B3\u02BD\u02BA\u02BF == Instrument.ProDrums)
@@ -641,7 +623,6 @@ public class PlayerSelectionMenu : BaseMenu
 		return "Unknown";
 	}
 
-	// Token: 0x060008DB RID: 2267 RVA: 0x0004EFFC File Offset: 0x0004D1FC
 	private void \u02B3\u02B4\u02BE\u02B2\u02B7\u02BE\u02B7\u02B5\u02B9\u02B6\u02BB()
 	{
 		string text = this.\u02B8\u02BE\u02C1\u02BE\u02B2\u02C0\u02B6\u02C0\u02B5\u02B8\u02B5[this.\u02B3\u02BF\u02BB\u02BB\u02B5\u02B7\u02B8\u02BE\u02B7\u02B3\u02B3];
@@ -683,7 +664,6 @@ public class PlayerSelectionMenu : BaseMenu
 		this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.\u02BB\u02BE\u02B6\u02BC\u02B6\u02B4\u02BC\u02B7\u02C1\u02B7\u02B8 ? PlayerSelectionMenu.\u02C1\u02C1\u02B7\u02BD\u02BC\u02B7\u02C0\u02B3\u02BE\u02B7\u02BB.Difficulty : PlayerSelectionMenu.\u02C1\u02C1\u02B7\u02BD\u02BC\u02B7\u02C0\u02B3\u02BE\u02B7\u02BB.Instrument);
 	}
 
-	// Token: 0x060008DC RID: 2268 RVA: 0x0004F0B8 File Offset: 0x0004D2B8
 	protected virtual void \u02B8\u02B2\u02BB\u02BF\u02BF\u02BF\u02C0\u02BE\u02BD\u02B9\u02B8()
 	{
 		if (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[this.\u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7].\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD || GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[this.\u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7].playerInfo == null)
@@ -745,7 +725,6 @@ public class PlayerSelectionMenu : BaseMenu
 		this.ReadyText.text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0("' not found");
 	}
 
-	// Token: 0x060008DD RID: 2269 RVA: 0x0004F3CC File Offset: 0x0004D5CC
 	private void \u02B7\u02BE\u02B6\u02B6\u02BF\u02BE\u02B6\u02B2\u02C1\u02B4\u02B8(bool \u02B8\u02B2\u02B7\u02BB\u02BA\u02C0\u02BF\u02C1\u02B2\u02B6\u02BC)
 	{
 		GameObject[] array;
@@ -782,7 +761,6 @@ public class PlayerSelectionMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x060008DE RID: 2270 RVA: 0x0004F44C File Offset: 0x0004D64C
 	private void \u02B7\u02BA\u02C0\u02B9\u02B2\u02C1\u02BB\u02BD\u02BC\u02BA\u02BE()
 	{
 		DifficultyDisplay[] array = this.difficultyIcons;
@@ -825,7 +803,6 @@ public class PlayerSelectionMenu : BaseMenu
 		this.\u02B6\u02B9\u02B6\u02B4\u02BF\u02B4\u02C1\u02BF\u02BC\u02B8\u02B6 = Numerics.Clamp<int>(this.\u02B4\u02B2\u02B7\u02B2\u02BF\u02BD\u02B7\u02BB\u02BB\u02BD\u02B8 - this.instrumentTexts.Length, 0, int.MaxValue);
 	}
 
-	// Token: 0x060008DF RID: 2271 RVA: 0x0004F674 File Offset: 0x0004D874
 	private void \u02C1\u02B4\u02B8\u02B3\u02B3\u02BF\u02B8\u02B7\u02BB\u02B2\u02BE(string \u02BF\u02B4\u02C1\u02BC\u02BC\u02B2\u02BC\u02BB\u02BA\u02B2\u02B6, sbyte \u02B5\u02BD\u02C0\u02C1\u02BF\u02BF\u02B7\u02BF\u02B6\u02C1\u02BA, Instrument \u02B7\u02BB\u02BA\u02BC\u02B4\u02B6\u02B4\u02B3\u02BD\u02BA\u02BF)
 	{
 		if (\u02B7\u02BB\u02BA\u02BC\u02B4\u02B6\u02B4\u02B3\u02BD\u02BA\u02BF != Instrument.None && !this.\u02BA\u02B4\u02B8\u02BA\u02C1\u02B7\u02BF\u02BD\u02B5\u02BE\u02BA.charts.\u02BF\u02BB\u02C0\u02BB\u02B2\u02B6\u02B5\u02B8\u02B8\u02B2\u02BB(\u02B7\u02BB\u02BA\u02BC\u02B4\u02B6\u02B4\u02B3\u02BD\u02BA\u02BF))
@@ -838,7 +815,6 @@ public class PlayerSelectionMenu : BaseMenu
 		this.\u02B4\u02B2\u02B7\u02B2\u02BF\u02BD\u02B7\u02BB\u02BB\u02BD\u02B8++;
 	}
 
-	// Token: 0x060008E0 RID: 2272 RVA: 0x0004F6D4 File Offset: 0x0004D8D4
 	private void \u02B3\u02B8\u02C0\u02B9\u02B6\u02B7\u02B8\u02BD\u02B8\u02BA\u02B3()
 	{
 		switch (this.\u02B3\u02BF\u02BB\u02BB\u02B5\u02B7\u02B8\u02BE\u02B7\u02B3\u02B3)
@@ -873,7 +849,6 @@ public class PlayerSelectionMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x060008E1 RID: 2273 RVA: 0x0004F78C File Offset: 0x0004D98C
 	private void \u02B4\u02BB\u02B4\u02BC\u02BB\u02B7\u02BC\u02BA\u02BF\u02BF\u02B6()
 	{
 		bool flag = this.\u02BA\u02B4\u02B8\u02BA\u02C1\u02B7\u02BF\u02BD\u02B5\u02BE\u02BA.charts.\u02B3\u02B2\u02B6\u02BA\u02B2\u02BC\u02C0\u02BA\u02B9\u02BE\u02B8(this.\u02B7\u02BB\u02BA\u02BC\u02B4\u02B6\u02B4\u02B3\u02BD\u02BA\u02BF, this.\u02B5\u02BD\u02C0\u02C1\u02BF\u02BF\u02B7\u02BF\u02B6\u02C1\u02BA);
@@ -914,7 +889,6 @@ public class PlayerSelectionMenu : BaseMenu
 		this.\u02C0\u02B8\u02B3\u02B7\u02B3\u02BA\u02BB\u02B4\u02B4\u02BF\u02B5 = 6;
 	}
 
-	// Token: 0x060008E2 RID: 2274 RVA: 0x0004F9CC File Offset: 0x0004DBCC
 	private void \u02B6\u02B3\u02B9\u02B5\u02BE\u02C0\u02B3\u02C1\u02B9\u02B3\u02BA(PlayerSelectionMenu.\u02C1\u02C1\u02B7\u02BD\u02BC\u02B7\u02C0\u02B3\u02BE\u02B7\u02BB \u02BA\u02B2\u02B9\u02BD\u02BA\u02B4\u02B5\u02BB\u02BB\u02BC\u02C1)
 	{
 		this.\u02B7\u02BE\u02B6\u02B6\u02BF\u02BE\u02B6\u02B2\u02C1\u02B4\u02B8(true);
@@ -943,12 +917,10 @@ public class PlayerSelectionMenu : BaseMenu
 		this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 	}
 
-	// Token: 0x060008E3 RID: 2275 RVA: 0x00005F91 File Offset: 0x00004191
 	public override void \u02BA\u02BD\u02B3\u02BC\u02B8\u02BB\u02B8\u02BA\u02B5\u02C0\u02C0()
 	{
 	}
 
-	// Token: 0x060008E4 RID: 2276 RVA: 0x0004FA54 File Offset: 0x0004DC54
 	private void \u02B5\u02B2\u02B4\u02B8\u02B6\u02BF\u02B4\u02B4\u02B9\u02BB\u02BC()
 	{
 		bool flag = !this.\u02B5\u02B4\u02B4\u02BC\u02B4\u02BC\u02B3\u02BD\u02B9\u02BC\u02C0 && this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4.playerInfo.noteModifier == Modifier.None;
@@ -974,7 +946,6 @@ public class PlayerSelectionMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x060008E5 RID: 2277 RVA: 0x0004FB08 File Offset: 0x0004DD08
 	private void \u02BE\u02B4\u02B8\u02B7\u02BA\u02BE\u02B3\u02BD\u02B6\u02B2\u02C1()
 	{
 		switch (this.\u02B3\u02BF\u02BB\u02BB\u02B5\u02B7\u02B8\u02BE\u02B7\u02B3\u02B3)
@@ -1009,7 +980,6 @@ public class PlayerSelectionMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x060008E6 RID: 2278 RVA: 0x0004FBC0 File Offset: 0x0004DDC0
 	private void \u02BA\u02BA\u02B4\u02BC\u02BE\u02B9\u02BF\u02B4\u02BF\u02B6\u02B3()
 	{
 		DifficultyDisplay[] array = this.difficultyIcons;
@@ -1052,7 +1022,6 @@ public class PlayerSelectionMenu : BaseMenu
 		this.\u02B6\u02B9\u02B6\u02B4\u02BF\u02B4\u02C1\u02BF\u02BC\u02B8\u02B6 = Numerics.Clamp<int>(this.\u02B4\u02B2\u02B7\u02B2\u02BF\u02BD\u02B7\u02BB\u02BB\u02BD\u02B8 - this.instrumentTexts.Length, 1, 81);
 	}
 
-	// Token: 0x060008E7 RID: 2279 RVA: 0x0004FDE8 File Offset: 0x0004DFE8
 	private void \u02C0\u02BD\u02C1\u02BC\u02BC\u02C1\u02C0\u02B3\u02B7\u02B8\u02B3()
 	{
 		int num = this.\u02BB\u02B3\u02C0\u02BC\u02BF\u02BD\u02B9\u02B2\u02BC\u02BE\u02B7 + this.\u02B3\u02BF\u02BB\u02BB\u02B5\u02B7\u02B8\u02BE\u02B7\u02B3\u02B3;
@@ -1068,7 +1037,6 @@ public class PlayerSelectionMenu : BaseMenu
 		this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 	}
 
-	// Token: 0x060008E8 RID: 2280 RVA: 0x0004FE4C File Offset: 0x0004E04C
 	public override void \u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8()
 	{
 		if (this.\u02BE\u02BA\u02BD\u02B5\u02BE\u02C0\u02B7\u02B3\u02BA\u02B4\u02BD == PlayerSelectionMenu.\u02C1\u02C1\u02B7\u02BD\u02BC\u02B7\u02C0\u02B3\u02BE\u02B7\u02BB.Ready && CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BA\u02B8\u02B6\u02BB\u02B5\u02B2\u02B8\u02B6\u02BB\u02BB)
@@ -1106,7 +1074,6 @@ public class PlayerSelectionMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x060008E9 RID: 2281 RVA: 0x0004FEF4 File Offset: 0x0004E0F4
 	protected override void OnEnable()
 	{
 		if (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[this.\u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7].\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD || GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[this.\u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7].playerInfo == null)
@@ -1168,7 +1135,6 @@ public class PlayerSelectionMenu : BaseMenu
 		this.ReadyText.text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Ready");
 	}
 
-	// Token: 0x060008EA RID: 2282 RVA: 0x00050208 File Offset: 0x0004E408
 	private void \u02B7\u02B8\u02C1\u02B3\u02BF\u02C0\u02C1\u02B2\u02BF\u02BF\u02B7()
 	{
 		this.\u02BB\u02BE\u02B6\u02BC\u02B6\u02B4\u02BC\u02B7\u02C1\u02B7\u02B8 = false;
@@ -1178,7 +1144,6 @@ public class PlayerSelectionMenu : BaseMenu
 		this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 	}
 
-	// Token: 0x060008EB RID: 2283 RVA: 0x0005027C File Offset: 0x0004E47C
 	public override void \u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3()
 	{
 		if (this.\u02BE\u02BA\u02BD\u02B5\u02BE\u02C0\u02B7\u02B3\u02BA\u02B4\u02BD == PlayerSelectionMenu.\u02C1\u02C1\u02B7\u02BD\u02BC\u02B7\u02C0\u02B3\u02BE\u02B7\u02BB.Ready)
@@ -1207,7 +1172,6 @@ public class PlayerSelectionMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x060008EC RID: 2284 RVA: 0x000502EC File Offset: 0x0004E4EC
 	private void \u02BF\u02B5\u02B3\u02BC\u02B5\u02BC\u02BD\u02C1\u02B2\u02C0\u02B6(string \u02BF\u02B4\u02C1\u02BC\u02BC\u02B2\u02BC\u02BB\u02BA\u02B2\u02B6)
 	{
 		this.difficultyTexts[this.\u02C0\u02B8\u02B3\u02B7\u02B3\u02BA\u02BB\u02B4\u02B4\u02BF\u02B5].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(\u02BF\u02B4\u02C1\u02BC\u02BC\u02B2\u02BC\u02BB\u02BA\u02B2\u02B6);
@@ -1217,7 +1181,6 @@ public class PlayerSelectionMenu : BaseMenu
 		u02B8_u02BE_u02C1_u02BE_u02B2_u02C0_u02B6_u02C0_u02B5_u02B8_u02B[u02C0_u02B8_u02B3_u02B7_u02B3_u02BA_u02BB_u02B4_u02B4_u02BF_u02B] = \u02BF\u02B4\u02C1\u02BC\u02BC\u02B2\u02BC\u02BB\u02BA\u02B2\u02B6;
 	}
 
-	// Token: 0x060008ED RID: 2285 RVA: 0x00050330 File Offset: 0x0004E530
 	public virtual void \u02B4\u02B9\u02B4\u02BD\u02B3\u02B5\u02B9\u02B8\u02BA\u02BA\u02B2()
 	{
 		float num = 543f;
@@ -1249,7 +1212,6 @@ public class PlayerSelectionMenu : BaseMenu
 		transform.localPosition = new Vector2(1290f, num - num2 * (float)this.\u02B3\u02BF\u02BB\u02BB\u02B5\u02B7\u02B8\u02BE\u02B7\u02B3\u02B3);
 	}
 
-	// Token: 0x060008EE RID: 2286 RVA: 0x0000A21D File Offset: 0x0000841D
 	public void \u02BA\u02BD\u02BD\u02C1\u02BC\u02B4\u02B2\u02BE\u02B6\u02BD\u02B5()
 	{
 		this.\u02BE\u02BA\u02BD\u02B5\u02BE\u02C0\u02B7\u02B3\u02BA\u02B4\u02BD = PlayerSelectionMenu.\u02C1\u02C1\u02B7\u02BD\u02BC\u02B7\u02C0\u02B3\u02BE\u02B7\u02BB.Ready;
@@ -1257,7 +1219,6 @@ public class PlayerSelectionMenu : BaseMenu
 		this.\u02BE\u02B9\u02BC\u02BA\u02B3\u02BD\u02C1\u02B5\u02B3\u02C1\u02C0();
 	}
 
-	// Token: 0x060008EF RID: 2287 RVA: 0x000503DC File Offset: 0x0004E5DC
 	protected override void Update()
 	{
 		if (!this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD || this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4.playerInfo == null)
@@ -1288,7 +1249,6 @@ public class PlayerSelectionMenu : BaseMenu
 		base.Update();
 	}
 
-	// Token: 0x060008F0 RID: 2288 RVA: 0x00050498 File Offset: 0x0004E698
 	public override void \u02BF\u02B7\u02BF\u02BF\u02B4\u02B2\u02BF\u02B7\u02BA\u02BA\u02B2()
 	{
 		float num = 0f;
@@ -1320,7 +1280,6 @@ public class PlayerSelectionMenu : BaseMenu
 		transform.localPosition = new Vector2(0f, num - num2 * (float)this.\u02B3\u02BF\u02BB\u02BB\u02B5\u02B7\u02B8\u02BE\u02B7\u02B3\u02B3);
 	}
 
-	// Token: 0x060008F1 RID: 2289 RVA: 0x0004FDE8 File Offset: 0x0004DFE8
 	private void \u02B5\u02B4\u02B8\u02B8\u02B3\u02B5\u02B5\u02B2\u02B6\u02BB\u02B4()
 	{
 		int num = this.\u02BB\u02B3\u02C0\u02BC\u02BF\u02BD\u02B9\u02B2\u02BC\u02BE\u02B7 + this.\u02B3\u02BF\u02BB\u02BB\u02B5\u02B7\u02B8\u02BE\u02B7\u02B3\u02B3;
@@ -1336,7 +1295,6 @@ public class PlayerSelectionMenu : BaseMenu
 		this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 	}
 
-	// Token: 0x060008F2 RID: 2290 RVA: 0x00050544 File Offset: 0x0004E744
 	private void \u02BC\u02BF\u02BE\u02BC\u02B8\u02B3\u02B4\u02BC\u02B3\u02BF\u02C1(int \u02BD\u02BA\u02C0\u02BC\u02B6\u02B4\u02B5\u02BD\u02B4\u02C0\u02B8)
 	{
 		foreach (ModifierFlowElement modifierFlowElement in this.modifierElements)
@@ -1349,166 +1307,121 @@ public class PlayerSelectionMenu : BaseMenu
 		}
 	}
 
-	// Token: 0x040006EB RID: 1771
 	private PlayerSelectionMenu.\u02C1\u02C1\u02B7\u02BD\u02BC\u02B7\u02C0\u02B3\u02BE\u02B7\u02BB \u02BE\u02BA\u02BD\u02B5\u02BE\u02C0\u02B7\u02B3\u02BA\u02B4\u02BD;
 
-	// Token: 0x040006EC RID: 1772
 	[SerializeField]
 	private TextMeshProUGUI playerName;
 
-	// Token: 0x040006ED RID: 1773
 	public int \u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7;
 
-	// Token: 0x040006EE RID: 1774
 	[SerializeField]
 	private GameObject[] confirmPageObjects;
 
-	// Token: 0x040006EF RID: 1775
 	[SerializeField]
 	private GameObject[] instrumentPageObjects;
 
-	// Token: 0x040006F0 RID: 1776
 	[SerializeField]
 	private GameObject[] difficultyPageObjects;
 
-	// Token: 0x040006F1 RID: 1777
 	[SerializeField]
 	private GameObject[] modifierPageObjects;
 
-	// Token: 0x040006F2 RID: 1778
 	[SerializeField]
 	private GameObject buttonsGroup;
 
-	// Token: 0x040006F3 RID: 1779
 	[SerializeField]
 	private GameObject ReadyHeader;
 
-	// Token: 0x040006F4 RID: 1780
 	[SerializeField]
 	private TextMeshProUGUI ReadyText;
 
-	// Token: 0x040006F5 RID: 1781
 	[SerializeField]
 	private TextMeshProUGUI noDifficultyText;
 
-	// Token: 0x040006F6 RID: 1782
 	[SerializeField]
 	private ModifierFlowElement[] modifierElements;
 
-	// Token: 0x040006F7 RID: 1783
 	[SerializeField]
 	private TextMeshProUGUI[] confirmTexts;
 
-	// Token: 0x040006F8 RID: 1784
 	[SerializeField]
 	private TextMeshProUGUI[] instrumentTexts;
 
-	// Token: 0x040006F9 RID: 1785
 	[SerializeField]
 	private TextMeshProUGUI[] difficultyTexts;
 
-	// Token: 0x040006FA RID: 1786
 	[SerializeField]
 	private TextMeshProUGUI[] modifierTexts;
 
-	// Token: 0x040006FB RID: 1787
 	[SerializeField]
 	private TextMeshProUGUI[] headerTexts;
 
-	// Token: 0x040006FC RID: 1788
 	[SerializeField]
 	private FlowLayoutGroup modifierGroup;
 
-	// Token: 0x040006FD RID: 1789
 	[SerializeField]
 	private TextMeshProUGUI difficultyHeaderText;
 
-	// Token: 0x040006FE RID: 1790
 	[SerializeField]
 	private TextMeshProUGUI notSupported;
 
-	// Token: 0x040006FF RID: 1791
 	[SerializeField]
 	private DifficultyDisplay headerDifficultyIcon;
 
-	// Token: 0x04000700 RID: 1792
 	[SerializeField]
 	private PlayerSelectionCanvas playerSelectionCanvas;
 
-	// Token: 0x04000701 RID: 1793
 	[SerializeField]
 	private PlayerStatsBox playerStatsMenu;
 
-	// Token: 0x04000702 RID: 1794
 	[SerializeField]
 	private DifficultyDisplay[] difficultyIcons;
 
-	// Token: 0x04000703 RID: 1795
 	[SerializeField]
 	private Image[] modifierEnabledIcons;
 
-	// Token: 0x04000704 RID: 1796
 	private ControllerType \u02B6\u02B2\u02BF\u02B9\u02B9\u02BD\u02B8\u02BF\u02B4\u02B6\u02B7;
 
-	// Token: 0x04000705 RID: 1797
 	private bool \u02B5\u02B4\u02B4\u02BC\u02B4\u02BC\u02B3\u02BD\u02B9\u02BC\u02C0;
 
-	// Token: 0x04000706 RID: 1798
 	private bool \u02B8\u02B2\u02C0\u02B6\u02B2\u02B2\u02BB\u02B5\u02B4\u02B8\u02BD;
 
-	// Token: 0x04000707 RID: 1799
 	private bool \u02BB\u02BE\u02B6\u02BC\u02B6\u02B4\u02BC\u02B7\u02C1\u02B7\u02B8;
 
-	// Token: 0x04000708 RID: 1800
 	[SerializeField]
 	private Transform confirmSelection;
 
-	// Token: 0x04000709 RID: 1801
 	[SerializeField]
 	private Transform instrumentSelection;
 
-	// Token: 0x0400070A RID: 1802
 	[SerializeField]
 	private Transform difficultySelection;
 
-	// Token: 0x0400070B RID: 1803
 	[SerializeField]
 	private Transform modifierSelection;
 
-	// Token: 0x0400070C RID: 1804
 	private string[] \u02B8\u02BE\u02C1\u02BE\u02B2\u02C0\u02B6\u02C0\u02B5\u02B8\u02B5 = new string[9];
 
-	// Token: 0x0400070D RID: 1805
 	private int[] \u02BF\u02B6\u02BE\u02C1\u02C1\u02B9\u02BA\u02B5\u02BB\u02B3\u02BD = new int[9];
 
-	// Token: 0x0400070E RID: 1806
 	private Instrument[] \u02C1\u02B6\u02C1\u02B2\u02B3\u02BE\u02BD\u02BF\u02B8\u02BF\u02C0 = new Instrument[9];
 
-	// Token: 0x0400070F RID: 1807
 	private int \u02B4\u02B2\u02B7\u02B2\u02BF\u02BD\u02B7\u02BB\u02BB\u02BD\u02B8;
 
-	// Token: 0x04000710 RID: 1808
 	private SongEntry \u02BA\u02B4\u02B8\u02BA\u02C1\u02B7\u02BF\u02BD\u02B5\u02BE\u02BA;
 
-	// Token: 0x04000711 RID: 1809
 	private Instrument \u02B7\u02BB\u02BA\u02BC\u02B4\u02B6\u02B4\u02B3\u02BD\u02BA\u02BF;
 
-	// Token: 0x04000712 RID: 1810
 	private Difficulty \u02B5\u02BD\u02C0\u02C1\u02BF\u02BF\u02B7\u02BF\u02B6\u02C1\u02BA;
 
-	// Token: 0x04000713 RID: 1811
 	private bool \u02B6\u02B9\u02B7\u02B6\u02B9\u02B2\u02BE\u02BE\u02BE\u02B2\u02B5;
 
-	// Token: 0x04000714 RID: 1812
 	private bool \u02C1\u02B3\u02BE\u02B4\u02C0\u02BC\u02BD\u02C1\u02B4\u02C0\u02BC;
 
-	// Token: 0x04000715 RID: 1813
 	private bool \u02BC\u02BE\u02C1\u02B8\u02BE\u02C1\u02BE\u02BF\u02BC\u02BC\u02BA;
 
-	// Token: 0x04000716 RID: 1814
 	private bool \u02B3\u02B2\u02BF\u02C1\u02B5\u02B4\u02BF\u02C1\u02BA\u02B5\u02BE;
 
-	// Token: 0x04000717 RID: 1815
 	private Modifier[] \u02C0\u02C1\u02B8\u02B4\u02B4\u02B6\u02B6\u02BF\u02B2\u02BF\u02BA = new Modifier[]
 	{
 		Modifier.None,
@@ -1533,7 +1446,6 @@ public class PlayerSelectionMenu : BaseMenu
 		Modifier.ModPrep
 	};
 
-	// Token: 0x04000718 RID: 1816
 	private Modifier[] \u02BF\u02BE\u02B7\u02B6\u02BA\u02B2\u02B6\u02B7\u02BF\u02B3\u02BD = new Modifier[]
 	{
 		Modifier.None,
@@ -1551,18 +1463,12 @@ public class PlayerSelectionMenu : BaseMenu
 		Modifier.ModPrep
 	};
 
-	// Token: 0x020000E9 RID: 233
 	private enum \u02C1\u02C1\u02B7\u02BD\u02BC\u02B7\u02C0\u02B3\u02BE\u02B7\u02BB
 	{
-		// Token: 0x0400071A RID: 1818
 		Confirm,
-		// Token: 0x0400071B RID: 1819
 		Instrument,
-		// Token: 0x0400071C RID: 1820
 		Difficulty,
-		// Token: 0x0400071D RID: 1821
 		Modifiers,
-		// Token: 0x0400071E RID: 1822
 		Ready
 	}
 }
