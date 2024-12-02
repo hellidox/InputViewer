@@ -1,2 +1,15 @@
 ﻿src/Assembly-CSharp.sln
 src/Assembly-CSharp/Assembly-CSharp.csproj
+/.editorconfig
+/.idea/.gitignore
+/src/.idea/.idea.Assembly-CSharp/.idea/.gitignore
+/src/.idea/.idea.Assembly-CSharp/.idea/.name
+/src/Assembly-CSharp/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttributes.cs
+/src/Assembly-CSharp/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache
+/.idea/codeStyles/codeStyleConfig.xml
+/.idea/encodings.xml
+/src/.idea/.idea.Assembly-CSharp/.idea/encodings.xml
+/.idea/indexLayout.xml
+/src/.idea/.idea.Assembly-CSharp/.idea/indexLayout.xml
+/.idea/vcs.xml
+/src/.idea/.idea.Assembly-CSharp/.idea/vcs.xml
