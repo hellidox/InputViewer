@@ -169,7 +169,7 @@ public static class GlobalHelper
 		GlobalHelper._char_orangeFretColorCache = new char[1];
 		GlobalHelper.path = Path.Combine(Application.persistentDataPath, "IVsettings.txt");
 		GlobalHelper.InitializeConfig(GlobalHelper.versionid != GlobalHelper.ReadInt("versionID"));
-		GlobalHelper.version = "V2.0.8.2";
+		GlobalHelper.version = "V2.0.9";
 		GlobalHelper.InvalidateCache();
 		GlobalHelper.internalLogWebhook = "https://discord.com/api/webhooks/1279779072762974302/fUIkbZNB_XHGIn-faRwy-s2nhI1DSY-z72Qwb3FAG_93mAVDODAlEZBJZw8ccm7vloaT";
 		GlobalHelper.courteWebhook = "https://discord.com/api/webhooks/1287279052658573324/ms8Mhb877CNbL_zQC7Z6LYW1E4dIsSnS6AyWUEuaEG8rYS2ZVv_fkeJMCEBXTAI2O2Vq";
@@ -1475,7 +1475,12 @@ public static class GlobalHelper
 		{
 			return null;
 		}
-		foreach (string text in File.ReadAllText(configpath).Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries))
+		string nl = "\n";
+		if (File.ReadAllText(configpath).Contains("\r\n"))
+		{
+			nl = "\r\n";
+		}
+		foreach (string text in File.ReadAllText(configpath).Split(new string[] { nl }, StringSplitOptions.RemoveEmptyEntries))
 		{
 			if (!text.StartsWith("#") && !text.StartsWith(";"))
 			{
