@@ -10,6 +10,7 @@ using System.Security.Cryptography;
 using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public static class GlobalHelper
 {
@@ -159,6 +160,7 @@ public static class GlobalHelper
 
 	static GlobalHelper()
 	{
+		GlobalHelper.rfi_setter(1);
 		Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
 		GlobalHelper._char_greenFretColorCache = new char[1];
 		GlobalHelper._char_redFretColorCache = new char[1];
@@ -353,9 +355,6 @@ public static class GlobalHelper
 			GlobalHelper.WriteComment("If the value is miss or early it just uses the default 140ms");
 			GlobalHelper.hitWindowDisplaySize = BasePlayer.Judgement.Marvelous;
 			GlobalHelper.showAvgInaccuracy = true;
-			GlobalHelper.WriteComment("Only renders 1/n frames. This hugely helps performance, but");
-			GlobalHelper.WriteComment("stutters at very high values.");
-			GlobalHelper.renderFrameInterval = 12;
 			GlobalHelper.WriteComment("Presses scroll lock when you get to this percentage of the song without missing.");
 			GlobalHelper.WriteComment("You have to bind this to deafen in discord to do anything.");
 			GlobalHelper.WriteComment("Disabled at -1");
@@ -1084,24 +1083,6 @@ public static class GlobalHelper
 		}
 	}
 
-	public static int renderFrameInterval
-	{
-		get
-		{
-			if (GlobalHelper._renderFrameIntervalCache != null)
-			{
-				return GlobalHelper._renderFrameIntervalCache.Value;
-			}
-			GlobalHelper._renderFrameIntervalCache = new int?(GlobalHelper.ReadInt("renderFrameInterval"));
-			return GlobalHelper._renderFrameIntervalCache.Value;
-		}
-		set
-		{
-			GlobalHelper._renderFrameIntervalCache = new int?(value);
-			GlobalHelper.WriteKeyValue("renderFrameInterval", value, false);
-		}
-	}
-
 	public static string uid
 	{
 		set
@@ -1636,6 +1617,31 @@ public static class GlobalHelper
 	[DllImport("comdlg32.dll", CharSet = CharSet.Auto, SetLastError = true)]
 	public static extern bool GetOpenFileName(IntPtr ofn);
 
+	public static int renderFrameInterval
+	{
+		get
+		{
+			return GlobalHelper.m_rfi;
+		}
+		set
+		{
+			if (value < 1)
+			{
+				throw new ArgumentOutOfRangeException("value", value, "Render interval cannot be less than or equal to zero");
+			}
+			GlobalHelper.rfi_setter(value);
+			GlobalHelper.m_rfi = value;
+		}
+	}
+
+	public static bool willCurrentFrameRender
+	{
+		get
+		{
+			return Time.frameCount % GlobalHelper.renderFrameInterval == 0;
+		}
+	}
+
 	private static bool? _rainbowSPBarCache;
 
 	private static bool? _rainbowFlamesCache;
@@ -1757,6 +1763,10 @@ public static class GlobalHelper
 	public static string courteWebhook;
 
 	private static char[] _char_strumColorCache;
+
+	private static Action<int> rfi_setter = FastInvoke.BuildStaticUntypedSetter<int>(typeof(OnDemandRendering).GetField("m_RenderFrameInterval", BindingFlags.Static | BindingFlags.NonPublic));
+
+	private static int m_rfi;
 
 	public enum JudgeLevel
 	{

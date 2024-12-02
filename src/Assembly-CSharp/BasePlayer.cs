@@ -818,7 +818,7 @@ public abstract class BasePlayer : MonoBehaviour
 			this._ghosts = 0;
 		}
 		this.ticker += Time.deltaTime;
-		if (this.ticker > 0.67f && !this.playerStuff.playerInfo.HasModChartModifier)
+		if (this.ticker > 0.05f && !this.playerStuff.playerInfo.HasModChartModifier)
 		{
 			if (GlobalHelper.showBeatlines)
 			{
@@ -1162,16 +1162,16 @@ public abstract class BasePlayer : MonoBehaviour
 		{
 			if (weightSystem != GlobalHelper.WeightSystem.Etterna)
 			{
-				array2 = new float[] { 1.1f, 1.1f, 1.081f, 0.72f, 0.28f, -0.55f, -1.1f, -0.7f };
+				array2 = new float[] { 1f, 1f, 0.983f, 0.655f, 0.255f, -0.5f, -1f, -0.636f };
 			}
 			else
 			{
-				array2 = new float[] { 1.1f, 1.1f, 0.74f, 0.36f, 0f, -0.28f, -0.55f, -1.1f };
+				array2 = new float[] { 1f, 1f, 0.673f, 0.327f, 0f, -0.255f, -0.5f, -1f };
 			}
 		}
 		else
 		{
-			array2 = new float[] { 1.1f, 1.1f, 1f, 0.5f, 0.5f, 0.25f, 0.125f, 0f };
+			array2 = new float[] { 1f, 1f, 0.909f, 0.455f, 0.455f, 0.227f, 0.114f, 0f };
 		}
 		float[] array3 = array2;
 		int num = 0;

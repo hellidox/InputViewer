@@ -281,7 +281,7 @@ public class SongProgress : MonoBehaviour
 			{
 				this.lastColor = songProgressColor;
 				HexColor hexColor = HexColor.FromHexString(this.lastColor);
-				Color clear = new Color((float)hexColor.Red, (float)hexColor.Green, (float)hexColor.Blue, 1f);
+				Color clear = new Color((float)hexColor.Red / 255f, (float)hexColor.Green / 255f, (float)hexColor.Blue / 255f, 1f);
 				if (clear == new Color(1f, 1f, 1f, 1f))
 				{
 					clear = this.origColor;

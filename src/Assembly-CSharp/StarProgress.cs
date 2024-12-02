@@ -119,22 +119,17 @@ public class StarProgress : MonoBehaviour
 		if (this.ticker > 0.3f)
 		{
 			this.ticker -= 0.3f;
-			string starProgressColor = GlobalHelper.starProgressColor;
-			if (!(this.lastColor == starProgressColor))
+			HexColor hexColor = HexColor.FromHexString(GlobalHelper.starProgressColor);
+			Color col = new Color((float)hexColor.Red / 255f, (float)hexColor.Green / 255f, (float)hexColor.Blue / 255f, 1f);
+			if (col == new Color(1f, 1f, 1f, 1f))
 			{
-				this.lastColor = starProgressColor;
-				HexColor hexColor = HexColor.FromHexString(this.lastColor);
-				Color clear = new Color((float)hexColor.Red, (float)hexColor.Green, (float)hexColor.Blue, 1f);
-				if (clear == new Color(1f, 1f, 1f, 1f))
-				{
-					clear = this.origColor;
-				}
-				if (clear == Color.black)
-				{
-					clear = Color.clear;
-				}
-				this.sr.color = clear;
+				col = this.origColor;
 			}
+			if (col == Color.black)
+			{
+				col = Color.clear;
+			}
+			this.sr.color = col;
 		}
 		if (this.\u02BE\u02B2\u02BA\u02B3\u02BD\u02BD\u02BF\u02BA\u02B7\u02B4\u02B2 == null)
 		{

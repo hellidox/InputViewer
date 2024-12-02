@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Globalization;
 using System.Linq;
-using System.Reflection;
 using System.Runtime.InteropServices;
-using System.Threading;
 using Cysharp.Text;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class FrameRate : MonoBehaviour
 {
@@ -19,16 +15,13 @@ public class FrameRate : MonoBehaviour
 
 	private void Start()
 	{
+		this.targetSPF = 1f / (float)Screen.currentResolution.refreshRate;
 		this.startTime = (double)Time.realtimeSinceStartup;
 		BasePlayer.interval = 0.1f;
 		GlobalHelper.InvalidateCache();
-		this.rfi = GlobalHelper.renderFrameInterval;
-		typeof(OnDemandRendering).GetField("m_RenderFrameInterval", BindingFlags.Static | BindingFlags.NonPublic).SetValue(null, this.rfi);
-		this.cullingmask = Camera.main.cullingMask;
-		this.clearflags = Camera.main.clearFlags;
+		GlobalHelper.renderFrameInterval = 10;
 		this.startctr = 1;
 		this.ofs = -1f;
-		Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
 		this.ticker = 2f;
 		GlobalVariables.misses = 0;
 		GC.Collect();
@@ -54,8 +47,21 @@ public class FrameRate : MonoBehaviour
 
 	private void Update()
 	{
+		this.vsyncTimer += Time.unscaledDeltaTime;
 		if (this.startctr == -1)
 		{
+			if (this.vsyncTimer > this.targetSPF)
+			{
+				this.setRFI = false;
+				this.vsyncTimer -= this.targetSPF;
+				GlobalHelper.renderFrameInterval = 1;
+				this.renderedFrames++;
+			}
+			else if (!this.setRFI)
+			{
+				this.setRFI = true;
+				GlobalHelper.renderFrameInterval = 1000000;
+			}
 			this.timer4 += (((double)Time.timeScale > 0.01) ? Time.unscaledDeltaTime : 0f);
 			if (this.timer4 > 1f)
 			{
@@ -85,7 +91,7 @@ public class FrameRate : MonoBehaviour
 			{
 				this.best = Time.unscaledDeltaTime;
 			}
-			if ((Time.frameCount & 255) > 0)
+			if ((Time.frameCount & 512) > 0)
 			{
 				this.rr = 1f / (float)GlobalHelper.inputViewerHz;
 			}
@@ -100,7 +106,7 @@ public class FrameRate : MonoBehaviour
 				this.updateInputs = false;
 			}
 			this.timer1 -= Time.unscaledDeltaTime;
-			this.timer2 += 1f / Time.smoothDeltaTime;
+			this.timer2 += 1f / Time.unscaledDeltaTime;
 			this.counter1++;
 			if (Input.GetKeyDown(KeyCode.RightShift))
 			{
@@ -122,7 +128,7 @@ public class FrameRate : MonoBehaviour
 					{
 						num,
 						1f / this.worst,
-						num / (float)this.rfi,
+						Mathf.Min((float)Screen.currentResolution.refreshRate, num),
 						this.best
 					});
 				}
@@ -144,7 +150,9 @@ public class FrameRate : MonoBehaviour
 				}
 				this.timer1 = 0.36f;
 				this.timer2 = 0f;
+				this.rftimer = 0f;
 				this.counter1 = 0;
+				this.renderedFrames = 0;
 				this.instance = BaseGuitarPlayer.instance;
 			}
 			this.timesince += Time.deltaTime;
@@ -220,13 +228,6 @@ public class FrameRate : MonoBehaviour
 				this.upperLeftTextBuilder.Append("<color=#ff00ffaa>");
 				this.upperLeftTextBuilder.Append(this.orig);
 				this.upperLeftTextBuilder.AppendFormat<int>(" {0:000}%<color=#ffffffcc>\n", GlobalVariables.progress);
-				if (this._legacyBinds)
-				{
-					foreach (float num2 in GlobalHelper.judgeTimings(GlobalHelper.useJudgeLevel))
-					{
-						this.upperLeftTextBuilder.AppendFormat<float>("{0}ms\n", Mathf.Round(num2 * 2000f));
-					}
-				}
 				if (GlobalHelper.showClock)
 				{
 					this.upperLeftTextBuilder.Append(this.ctime);
@@ -388,7 +389,7 @@ public class FrameRate : MonoBehaviour
 					}
 					else
 					{
-						this.upperLeftTextBuilder.Append("<color=#000000>");
+						this.upperLeftTextBuilder.Append("<color=#00000000>");
 						this.upperLeftTextBuilder.Append("██");
 					}
 					if (minputs.g || this.lastg < minputs.gcount)
@@ -398,7 +399,7 @@ public class FrameRate : MonoBehaviour
 					}
 					else
 					{
-						this.upperLeftTextBuilder.Append("<color=#000000");
+						this.upperLeftTextBuilder.Append("<color=#00000000");
 					}
 					this.upperLeftTextBuilder.Append(">██");
 					if (minputs.r || this.lastr < minputs.rcount)
@@ -408,7 +409,7 @@ public class FrameRate : MonoBehaviour
 					}
 					else
 					{
-						this.upperLeftTextBuilder.Append("<color=#000000");
+						this.upperLeftTextBuilder.Append("<color=#00000000");
 					}
 					this.upperLeftTextBuilder.Append(">██");
 					if (minputs.y || this.lasty < minputs.ycount)
@@ -418,7 +419,7 @@ public class FrameRate : MonoBehaviour
 					}
 					else
 					{
-						this.upperLeftTextBuilder.Append("<color=#000000");
+						this.upperLeftTextBuilder.Append("<color=#00000000");
 					}
 					this.upperLeftTextBuilder.Append(">██");
 					if (minputs.b || this.lastb < minputs.bcount)
@@ -428,7 +429,7 @@ public class FrameRate : MonoBehaviour
 					}
 					else
 					{
-						this.upperLeftTextBuilder.Append("<color=#000000");
+						this.upperLeftTextBuilder.Append("<color=#00000000");
 					}
 					this.upperLeftTextBuilder.Append(">██");
 					if (minputs.o || this.lasto < minputs.ocount)
@@ -438,7 +439,7 @@ public class FrameRate : MonoBehaviour
 					}
 					else
 					{
-						this.upperLeftTextBuilder.Append("<color=#000000");
+						this.upperLeftTextBuilder.Append("<color=#00000000");
 					}
 					this.lastg = minputs.gcount;
 					this.lastr = minputs.rcount;
@@ -548,9 +549,9 @@ public class FrameRate : MonoBehaviour
 		}
 		if (this.startctr != 10)
 		{
-			int num3 = this.startctr;
-			this.startctr = num3 + 1;
-			Debug.Log(num3);
+			int num2 = this.startctr;
+			this.startctr = num2 + 1;
+			Debug.Log(num2);
 			return;
 		}
 		if (GlobalHelper.useJudgements)
@@ -579,6 +580,16 @@ public class FrameRate : MonoBehaviour
 
 	[DllImport("msvcrt.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "memset")]
 	private static extern IntPtr MemSet(IntPtr dest, int c, int count);
+
+	private void OnDisable()
+	{
+		GlobalHelper.renderFrameInterval = 1;
+	}
+
+	private void OnDestroy()
+	{
+		this.OnDisable();
+	}
 
 	public float const1;
 
@@ -707,4 +718,14 @@ public class FrameRate : MonoBehaviour
 	private double startTime;
 
 	private TextMeshProUGUI spBarText;
+
+	private int renderedFrames;
+
+	private float targetSPF;
+
+	private float vsyncTimer;
+
+	private bool setRFI;
+
+	private float rftimer;
 }
