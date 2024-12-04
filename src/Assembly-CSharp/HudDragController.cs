@@ -286,10 +286,6 @@ public class HudDragController : MonoBehaviour
 		SpriteRenderer[] array = this.renderers;
 		if (!this.logged)
 		{
-			for (int i = 0; i < array.Length; i++)
-			{
-				Debug.Log(array[i].gameObject.name);
-			}
 			this.BGSpriteRenderers = array.Where((SpriteRenderer x) => !x.gameObject.name.Contains("StarCount") && (x.gameObject.name.Contains("BG", StringComparison.OrdinalIgnoreCase) || x.gameObject.name.Contains("overlay", StringComparison.OrdinalIgnoreCase))).ToArray<SpriteRenderer>();
 			this.starRenderers = array.Where((SpriteRenderer x) => x.gameObject.name.Contains("star_", StringComparison.Ordinal)).ToArray<SpriteRenderer>();
 			foreach (SpriteRenderer spriteRenderer in array.Where((SpriteRenderer x) => x.gameObject.name.Contains("Divider")))

@@ -1475,16 +1475,16 @@ public static class GlobalHelper
 		{
 			return null;
 		}
-		string nl = "\n";
+		string text = "\n";
 		if (File.ReadAllText(configpath).Contains("\r\n"))
 		{
-			nl = "\r\n";
+			text = "\r\n";
 		}
-		foreach (string text in File.ReadAllText(configpath).Split(new string[] { nl }, StringSplitOptions.RemoveEmptyEntries))
+		foreach (string text2 in File.ReadAllText(configpath).Split(new string[] { text }, StringSplitOptions.RemoveEmptyEntries))
 		{
-			if (!text.StartsWith("#") && !text.StartsWith(";"))
+			if (!text2.StartsWith("#") && !text2.StartsWith(";"))
 			{
-				string[] array2 = text.Split(':', StringSplitOptions.None);
+				string[] array2 = text2.Split(':', StringSplitOptions.None);
 				if (array2.Length == 2 && array2[0].Trim() == key)
 				{
 					return array2[1].Trim();
@@ -1645,6 +1645,43 @@ public static class GlobalHelper
 		{
 			return Time.frameCount % GlobalHelper.renderFrameInterval == 0;
 		}
+	}
+
+	public static Vector3[] FindFrustumCornersAtDistance(Camera camera, float n)
+	{
+		Vector3[] array = new Vector3[4];
+		Vector2[] array2 = new Vector2[]
+		{
+			new Vector2(0f, 0f),
+			new Vector2(0f, (float)Screen.height),
+			new Vector2((float)Screen.width, (float)Screen.height),
+			new Vector2((float)Screen.width, 0f)
+		};
+		for (int i = 0; i < 4; i++)
+		{
+			array[i] = GlobalHelper.FindWorldPositionAtDistance(camera, array2[i], n);
+		}
+		return array;
+	}
+
+	private static Vector3 FindWorldPositionAtDistance(Camera camera, Vector2 screenPoint, float n)
+	{
+		float num = camera.nearClipPlane;
+		float num2 = camera.farClipPlane;
+		Vector3 direction = camera.ScreenPointToRay(screenPoint).direction;
+		while (num2 - num > 0.001f)
+		{
+			float num3 = (num + num2) / 2f;
+			if (Vector3.Dot(camera.transform.position + direction * num3 - camera.transform.position, camera.transform.forward) < n)
+			{
+				num = num3;
+			}
+			else
+			{
+				num2 = num3;
+			}
+		}
+		return camera.transform.position + direction * num;
 	}
 
 	private static bool? _rainbowSPBarCache;

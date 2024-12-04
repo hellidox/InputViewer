@@ -6,17 +6,17 @@ public static class FastInvoke
 {
 	public static Func<T, object> BuildUntypedGetter<T>(MemberInfo memberInfo)
 	{
-		ParameterExpression exInstance = Expression.Parameter(memberInfo.DeclaringType, "t");
-		return Expression.Lambda<Func<T, object>>(Expression.Convert(Expression.MakeMemberAccess(exInstance, memberInfo), typeof(object)), new ParameterExpression[] { exInstance }).Compile();
+		ParameterExpression parameterExpression = Expression.Parameter(memberInfo.DeclaringType, "t");
+		return Expression.Lambda<Func<T, object>>(Expression.Convert(Expression.MakeMemberAccess(parameterExpression, memberInfo), typeof(object)), new ParameterExpression[] { parameterExpression }).Compile();
 	}
 
 	public static Action<T, object> BuildUntypedSetter<T>(MemberInfo memberInfo)
 	{
-		ParameterExpression exInstance = Expression.Parameter(memberInfo.DeclaringType, "t");
-		Expression expression = Expression.MakeMemberAccess(exInstance, memberInfo);
-		ParameterExpression exValue = Expression.Parameter(typeof(object), "p");
-		UnaryExpression exConvertedValue = Expression.Convert(exValue, memberInfo.GetUnderlyingType());
-		return Expression.Lambda<Action<T, object>>(Expression.Assign(expression, exConvertedValue), new ParameterExpression[] { exInstance, exValue }).Compile();
+		ParameterExpression parameterExpression = Expression.Parameter(memberInfo.DeclaringType, "t");
+		Expression expression = Expression.MakeMemberAccess(parameterExpression, memberInfo);
+		ParameterExpression parameterExpression2 = Expression.Parameter(typeof(object), "p");
+		UnaryExpression unaryExpression = Expression.Convert(parameterExpression2, memberInfo.GetUnderlyingType());
+		return Expression.Lambda<Action<T, object>>(Expression.Assign(expression, unaryExpression), new ParameterExpression[] { parameterExpression, parameterExpression2 }).Compile();
 	}
 
 	private static Type GetUnderlyingType(this MemberInfo member)
@@ -49,13 +49,13 @@ public static class FastInvoke
 
 	private static bool IsStaticMember(MemberInfo memberInfo)
 	{
-		FieldInfo field = memberInfo as FieldInfo;
-		if (field == null)
+		FieldInfo fieldInfo = memberInfo as FieldInfo;
+		if (fieldInfo == null)
 		{
-			PropertyInfo property = memberInfo as PropertyInfo;
-			return property != null && (property.GetGetMethod() ?? property.SetMethod).IsStatic;
+			PropertyInfo propertyInfo = memberInfo as PropertyInfo;
+			return propertyInfo != null && (propertyInfo.GetGetMethod() ?? propertyInfo.SetMethod).IsStatic;
 		}
-		return field.IsStatic;
+		return fieldInfo.IsStatic;
 	}
 
 	public static Action<T> BuildStaticUntypedSetter<T>(MemberInfo memberInfo)
@@ -65,8 +65,8 @@ public static class FastInvoke
 		{
 			throw new ArgumentException("Member must be static.");
 		}
-		ParameterExpression exValue = Expression.Parameter(typeof(T), "p");
-		UnaryExpression exConvertedValue = Expression.Convert(exValue, memberInfo.GetUnderlyingType());
-		return Expression.Lambda<Action<T>>(Expression.Assign(Expression.MakeMemberAccess(null, memberInfo), exConvertedValue), new ParameterExpression[] { exValue }).Compile();
+		ParameterExpression parameterExpression = Expression.Parameter(typeof(T), "p");
+		UnaryExpression unaryExpression = Expression.Convert(parameterExpression, memberInfo.GetUnderlyingType());
+		return Expression.Lambda<Action<T>>(Expression.Assign(Expression.MakeMemberAccess(null, memberInfo), unaryExpression), new ParameterExpression[] { parameterExpression }).Compile();
 	}
 }

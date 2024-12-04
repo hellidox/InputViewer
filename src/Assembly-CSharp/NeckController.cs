@@ -630,9 +630,7 @@ public class NeckController : BaseNeckController
 			global::Animator[] flameAnimators2 = this.flameAnimators;
 			for (int j = 0; j < flameAnimators2.Length; j++)
 			{
-				Debug.Log("normal:");
 				Color color = this.nc[j];
-				Debug.Log(color);
 				float colorIntensity = GlobalHelper.colorIntensity;
 				if (colorIntensity <= -1f)
 				{
@@ -651,8 +649,6 @@ public class NeckController : BaseNeckController
 					color *= 1f + colorIntensity;
 				}
 				color.a = 1f;
-				Debug.Log("saturated:");
-				Debug.Log(color);
 				flameAnimators2[j].particleColor = color;
 			}
 		}

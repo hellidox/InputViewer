@@ -728,4 +728,6 @@ public class FrameRate : MonoBehaviour
 	private bool setRFI;
 
 	private float rftimer;
+
+	private SpriteRenderer[] squares;
 }
