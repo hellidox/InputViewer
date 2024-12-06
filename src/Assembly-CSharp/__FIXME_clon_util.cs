@@ -195,9 +195,9 @@ public static class __FIXME_clon_util
 		return memoryStream.ToArray();
 	}
 
-	public static void \u02B3\u02BC\u02B9\u02BD\u02BB\u02B6\u02B5\u02B9\u02BC\u02BD\u02BE(string \u02B9\u02BE\u02BF\u02B9\u02BF\u02BA\u02B9\u02BD\u02B7\u02BB\u02B5)
+	public static void Restart(string arguments)
 	{
-		Process.Start(Path.Combine(Directory.GetParent(Application.dataPath).FullName, Process.GetCurrentProcess().ProcessName + ".exe"), \u02B9\u02BE\u02BF\u02B9\u02BF\u02BA\u02B9\u02BD\u02B7\u02BB\u02B5);
+		Process.Start(Path.Combine(Directory.GetParent(Application.dataPath).FullName, Process.GetCurrentProcess().ProcessName + ".exe"), arguments);
 		Application.Quit();
 	}
 
@@ -368,7 +368,7 @@ public static class __FIXME_clon_util
 		return null;
 	}
 
-	public static bool \u02B4\u02B4\u02C0\u02C1\u02BF\u02B5\u02B4\u02BD\u02B2\u02B2\u02BE()
+	public static bool CaseSensitive()
 	{
 		string text = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString().ToLowerInvariant());
 		File.CreateText(text).Close();

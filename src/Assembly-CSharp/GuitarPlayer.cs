@@ -38,7 +38,7 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 			this.\u02C0\u02B4\u02BD\u02BF\u02B8\u02B9\u02B4\u02BE\u02BE\u02B7\u02B3 = 1;
 			this.inputBits |= 89;
 		}
-		base.\u02B6\u02BB\u02BB\u02B8\u02BF\u02C0\u02BD\u02C0\u02BE\u02BF\u02BB();
+		base.UpdateInputs();
 	}
 
 	protected void \u02C1\u02B3\u02BC\u02C0\u02C1\u02BD\u02B4\u02BB\u02B2\u02B9\u02B7()
@@ -77,7 +77,7 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 			this.\u02C0\u02B4\u02BD\u02BF\u02B8\u02B9\u02B4\u02BE\u02BE\u02B7\u02B3 = 0;
 			this.inputBits |= 22;
 		}
-		base.\u02B6\u02BB\u02BB\u02B8\u02BF\u02C0\u02BD\u02C0\u02BE\u02BF\u02BB();
+		base.UpdateInputs();
 	}
 
 	private static int \u02BD\u02BB\u02BB\u02B2\u02B8\u02B7\u02B2\u02C1\u02B7\u02BE\u02B8(int \u02BE\u02BA\u02BE\u02B3\u02BF\u02B3\u02BC\u02C0\u02B4\u02C0\u02B9)
@@ -616,7 +616,7 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 			this.\u02C0\u02B4\u02BD\u02BF\u02B8\u02B9\u02B4\u02BE\u02BE\u02B7\u02B3 = 0;
 			this.inputBits = (ushort)((int)this.inputBits | -15);
 		}
-		base.\u02B6\u02BB\u02BB\u02B8\u02BF\u02C0\u02BD\u02C0\u02BE\u02BF\u02BB();
+		base.UpdateInputs();
 	}
 
 	private static int \u02BB\u02B9\u02BE\u02B8\u02C0\u02C1\u02BC\u02BD\u02B6\u02B6\u02B9(int \u02BE\u02BA\u02BE\u02B3\u02BF\u02B3\u02BC\u02C0\u02B4\u02C0\u02B9)
@@ -746,7 +746,7 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 		return 0;
 	}
 
-	protected override void \u02B6\u02BB\u02BB\u02B8\u02BF\u02C0\u02BD\u02C0\u02BE\u02BF\u02BB()
+	protected override void UpdateInputs()
 	{
 		if (!this.\u02BE\u02BC\u02C1\u02BA\u02B9\u02C0\u02BE\u02B4\u02B8\u02B2\u02BE)
 		{
@@ -782,7 +782,7 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 			this.\u02C0\u02B4\u02BD\u02BF\u02B8\u02B9\u02B4\u02BE\u02BE\u02B7\u02B3 = 0;
 			this.inputBits |= 64;
 		}
-		base.\u02B6\u02BB\u02BB\u02B8\u02BF\u02C0\u02BD\u02C0\u02BE\u02BF\u02BB();
+		base.UpdateInputs();
 	}
 
 	public override ushort \u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9

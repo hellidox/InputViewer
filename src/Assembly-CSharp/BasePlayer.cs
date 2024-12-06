@@ -75,7 +75,7 @@ public abstract class BasePlayer : MonoBehaviour
 			this.spBar.gameObject.SetActive(false);
 			this.healthContainer.gameObject.SetActive(false);
 			this.neckController.\u02BF\u02B9\u02B2\u02B2\u02BF\u02B2\u02BA\u02B4\u02BB\u02B5\u02C1();
-			this.\u02BD\u02B2\u02B9\u02B8\u02C0\u02B4\u02BF\u02BF\u02B7\u02BF\u02B3 = 0f;
+			this.healthGain = 0f;
 		}
 		else if (!SettingsController.\u02BB\u02C0\u02B7\u02B8\u02B3\u02BE\u02B7\u02BB\u02BA\u02B8\u02BA && !CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BA\u02B8\u02B6\u02BB\u02B5\u02B2\u02B8\u02B6\u02BB\u02BB)
 		{
@@ -88,9 +88,9 @@ public abstract class BasePlayer : MonoBehaviour
 		this.\u02B9\u02BB\u02BD\u02C1\u02B5\u02BE\u02B4\u02B8\u02BF\u02BA\u02BD.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = this;
 		this._GameManager = global::UnityEngine.Object.FindObjectOfType<GameManager>();
 		this.beatlines = base.GetComponent<BeatRenderer>();
-		this.\u02B4\u02B4\u02BF\u02B5\u02B4\u02B6\u02BA\u02B7\u02B2\u02B9\u02C1 = this.\u02B2\u02BE\u02BE\u02B8\u02B6\u02BE\u02BA\u02BA\u02B5\u02B3\u02BC;
-		this.\u02B8\u02B2\u02B4\u02BF\u02C0\u02B8\u02C0\u02BA\u02B9\u02B2\u02B7 = -this.\u02B2\u02BE\u02BE\u02B8\u02B6\u02BE\u02BA\u02BA\u02B5\u02B3\u02BC;
-		this.\u02B2\u02B3\u02BF\u02C1\u02BF\u02BB\u02C1\u02C0\u02C1\u02B6\u02BF = this.\u02B2\u02BE\u02BE\u02B8\u02B6\u02BE\u02BA\u02BA\u02B5\u02B3\u02BC * 2f;
+		this.\u02B4\u02B4\u02BF\u02B5\u02B4\u02B6\u02BA\u02B7\u02B2\u02B9\u02C1 = this.hitWindow;
+		this.\u02B8\u02B2\u02B4\u02BF\u02C0\u02B8\u02C0\u02BA\u02B9\u02B2\u02B7 = -this.hitWindow;
+		this.\u02B2\u02B3\u02BF\u02C1\u02BF\u02BB\u02C1\u02C0\u02C1\u02B6\u02BF = this.hitWindow * 2f;
 		this.\u02B3\u02BC\u02B4\u02B8\u02BB\u02B8\u02B2\u02C0\u02C0\u02B3\u02C0 = this.playerStuff.playerInfo.HasModifier(Modifier.NoFretGhosting);
 		this.\u02B8\u02B3\u02B4\u02B7\u02C0\u02B5\u02BA\u02C0\u02B4\u02B9\u02BB = this.playerStuff.playerInfo.HasModifier(Modifier.StrumlessHopos);
 		this.\u02BD\u02B8\u02B6\u02B2\u02B8\u02B6\u02BD\u02C0\u02BD\u02B8\u02BB = this.playerStuff.playerInfo.HasModifier(Modifier.DroplessSustains);
@@ -298,7 +298,7 @@ public abstract class BasePlayer : MonoBehaviour
 		this.\u02B9\u02BB\u02BD\u02C1\u02B5\u02BE\u02B4\u02B8\u02BF\u02BA\u02BD.\u02C1\u02BD\u02B3\u02B7\u02BE\u02C0\u02BE\u02B4\u02BD\u02B3\u02BF(this._GameManager.\u02B4\u02BC\u02BF\u02BC\u02BA\u02B9\u02B8\u02B2\u02BD\u02BE\u02BD);
 	}
 
-	protected abstract void \u02B6\u02BB\u02BB\u02B8\u02BF\u02C0\u02BD\u02C0\u02BE\u02BF\u02BB();
+	protected abstract void UpdateInputs();
 
 	protected abstract void handleBotInputs();
 
@@ -439,30 +439,30 @@ public abstract class BasePlayer : MonoBehaviour
 		}
 		if (\u02BD\u02BF\u02C1\u02C1\u02B8\u02B4\u02BB\u02B9\u02B8\u02B3\u02B4)
 		{
-			if (this.\u02BA\u02BC\u02BB\u02B3\u02BC\u02B3\u02B2\u02C0\u02BC\u02B8\u02BA >= 1f)
+			if (this.health >= 1f)
 			{
 				return;
 			}
 			if (this.\u02C1\u02B8\u02B4\u02B5\u02B3\u02BE\u02BD\u02BF\u02B9\u02B7\u02BF)
 			{
-				this.\u02BA\u02BC\u02BB\u02B3\u02BC\u02B3\u02B2\u02C0\u02BC\u02B8\u02BA += this.\u02B5\u02B3\u02BE\u02B7\u02BA\u02BF\u02BD\u02BC\u02B9\u02C1\u02B8;
+				this.health += this.healthGainSP;
 			}
 			else
 			{
-				this.\u02BA\u02BC\u02BB\u02B3\u02BC\u02B3\u02B2\u02C0\u02BC\u02B8\u02BA += this.\u02B9\u02B3\u02C1\u02B6\u02BC\u02B4\u02C1\u02B2\u02B3\u02BC\u02C1;
+				this.health += this.healthDrain;
 			}
 		}
 		else
 		{
-			this.\u02BA\u02BC\u02BB\u02B3\u02BC\u02B3\u02B2\u02C0\u02BC\u02B8\u02BA -= this.\u02BD\u02B2\u02B9\u02B8\u02C0\u02B4\u02BF\u02BF\u02B7\u02BF\u02B3;
-			if (this.\u02BA\u02BC\u02BB\u02B3\u02BC\u02B3\u02B2\u02C0\u02BC\u02B8\u02BA < 0f && !GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02B8\u02B9\u02BA\u02BB\u02C1\u02BB\u02B9\u02BE\u02C1\u02B9)
+			this.health -= this.healthGain;
+			if (this.health < 0f && !GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02B8\u02B9\u02BA\u02BB\u02C1\u02BB\u02B9\u02BE\u02C1\u02B9)
 			{
 				GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02B8\u02B9\u02BA\u02BB\u02C1\u02BB\u02B9\u02BE\u02C1\u02B9 = true;
 				GameAudioManager.PlaySound(SoundID.SongFail);
 				this._GameManager.EndSong();
 			}
 		}
-		this.healthContainer.\u02BF\u02BC\u02B7\u02B2\u02B9\u02BA\u02BD\u02B6\u02C0\u02C0\u02BE(this.\u02BA\u02BC\u02BB\u02B3\u02BC\u02B3\u02B2\u02C0\u02BC\u02B8\u02BA);
+		this.healthContainer.\u02BF\u02BC\u02B7\u02B2\u02B9\u02BA\u02BD\u02B6\u02C0\u02C0\u02BE(this.health);
 	}
 
 	public bool \u02BF\u02C0\u02BA\u02B6\u02B7\u02C0\u02B2\u02BE\u02BC\u02BA\u02B2
@@ -796,17 +796,17 @@ public abstract class BasePlayer : MonoBehaviour
 		}
 		if (this.playerStuff.playerInfo.isAccuracyDisplay)
 		{
-			if (this.\u02B8\u02C1\u02BF\u02C0\u02B3\u02B9\u02B6\u02B2\u02B8\u02B7\u02BE.Count >= 256)
+			if (this.accuracyHistory.Count >= 256)
 			{
-				this.\u02B8\u02C1\u02BF\u02C0\u02B3\u02B9\u02B6\u02B2\u02B8\u02B7\u02BE.RemoveAt(0);
+				this.accuracyHistory.RemoveAt(0);
 			}
-			this.\u02B8\u02C1\u02BF\u02C0\u02B3\u02B9\u02B6\u02B2\u02B8\u02B7\u02BE.Add(this.\u02BB\u02B3\u02B2\u02C0\u02B3\u02BC\u02B3\u02B5\u02BB\u02C0\u02B6);
+			this.accuracyHistory.Add(this.\u02BB\u02B3\u02B2\u02C0\u02B3\u02BC\u02B3\u02B5\u02BB\u02C0\u02B6);
 			double num = 0.0;
-			foreach (float num2 in this.\u02B8\u02C1\u02BF\u02C0\u02B3\u02B9\u02B6\u02B2\u02B8\u02B7\u02BE)
+			foreach (float num2 in this.accuracyHistory)
 			{
 				num += (double)num2;
 			}
-			num /= (double)this.\u02B8\u02C1\u02BF\u02C0\u02B3\u02B9\u02B6\u02B2\u02B8\u02B7\u02BE.Count;
+			num /= (double)this.accuracyHistory.Count;
 			this.\u02BB\u02BC\u02B9\u02BF\u02C1\u02B3\u02BD\u02B7\u02BE\u02BC\u02B4.text = string.Format("Accuracy: {0:0.0} ms\nAverage: {1:0.0} ms", -this.\u02BB\u02B3\u02B2\u02C0\u02B3\u02BC\u02B3\u02B5\u02BB\u02C0\u02B6 * 1000f, -num * 1000.0);
 		}
 	}
@@ -914,7 +914,7 @@ public abstract class BasePlayer : MonoBehaviour
 		}
 		if (!this.playerStuff.playerInfo.isBot && !this.\u02C1\u02BC\u02BC\u02C1\u02B2\u02BF\u02C1\u02BE\u02BE\u02BB\u02B4)
 		{
-			this.\u02B6\u02BB\u02BB\u02B8\u02BF\u02C0\u02BD\u02C0\u02BE\u02BF\u02BB();
+			this.UpdateInputs();
 		}
 		else
 		{
@@ -954,7 +954,7 @@ public abstract class BasePlayer : MonoBehaviour
 		{
 			if (this.\u02B2\u02B3\u02B6\u02B9\u02B6\u02B8\u02B3\u02BE\u02BE\u02B3\u02B6)
 			{
-				this.\u02B2\u02B3\u02BF\u02C1\u02BF\u02BB\u02C1\u02C0\u02C1\u02B6\u02BF = this.\u02C0\u02BC\u02B5\u02BE\u02BE\u02C0\u02B8\u02C0\u02BD\u02C0\u02BA(note2, this.\u02BF\u02BE\u02B8\u02C1\u02BE\u02C1\u02C0\u02C0\u02BB\u02BB\u02BC, this.\u02B2\u02BE\u02BE\u02B8\u02B6\u02BE\u02BA\u02BA\u02B5\u02B3\u02BC);
+				this.\u02B2\u02B3\u02BF\u02C1\u02BF\u02BB\u02C1\u02C0\u02C1\u02B6\u02BF = this.\u02C0\u02BC\u02B5\u02BE\u02BE\u02C0\u02B8\u02C0\u02BD\u02C0\u02BA(note2, this.\u02BF\u02BE\u02B8\u02C1\u02BE\u02C1\u02C0\u02C0\u02BB\u02BB\u02BC, this.hitWindow);
 				float num2 = this.\u02B2\u02B3\u02BF\u02C1\u02BF\u02BB\u02C1\u02C0\u02C1\u02B6\u02BF / 2f;
 				this.\u02B4\u02B4\u02BF\u02B5\u02B4\u02B6\u02BA\u02B7\u02B2\u02B9\u02C1 = num2;
 				this.\u02B8\u02B2\u02B4\u02BF\u02C0\u02B8\u02C0\u02BA\u02B9\u02B2\u02B7 = -num2;
@@ -962,7 +962,7 @@ public abstract class BasePlayer : MonoBehaviour
 			if (this.\u02C0\u02BE\u02BD\u02B3\u02C0\u02B9\u02B5\u02BF\u02BC\u02BC\u02B8)
 			{
 				this.\u02B4\u02B4\u02BF\u02B5\u02B4\u02B6\u02BA\u02B7\u02B2\u02B9\u02C1 = 0f;
-				this.\u02B8\u02B2\u02B4\u02BF\u02C0\u02B8\u02C0\u02BA\u02B9\u02B2\u02B7 = -this.\u02B2\u02BE\u02BE\u02B8\u02B6\u02BE\u02BA\u02BA\u02B5\u02B3\u02BC;
+				this.\u02B8\u02B2\u02B4\u02BF\u02C0\u02B8\u02C0\u02BA\u02B9\u02B2\u02B7 = -this.hitWindow;
 			}
 			double num3 = (double)note2.\u02B2\u02B8\u02BA\u02BA\u02BC\u02B7\u02B5\u02B5\u02B6\u02B5\u02C1 - this._GameManager.\u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9;
 			if (num3 > (double)this.\u02B4\u02B4\u02BF\u02B5\u02B4\u02B6\u02BA\u02B7\u02B2\u02B9\u02C1)
@@ -1127,13 +1127,13 @@ public abstract class BasePlayer : MonoBehaviour
 	protected BasePlayer()
 	{
 		this.\u02B2\u02BF\u02BD\u02B2\u02C0\u02BD\u02BA\u02B2\u02BC\u02B5\u02B6 = true;
-		this.\u02B2\u02BE\u02BE\u02B8\u02B6\u02BE\u02BA\u02BA\u02B5\u02B3\u02BC = 0.07f;
+		this.hitWindow = 0.07f;
 		this.\u02BE\u02BC\u02C1\u02BA\u02B9\u02C0\u02BE\u02B4\u02B8\u02B2\u02BE = true;
-		this.\u02BA\u02BC\u02BB\u02B3\u02BC\u02B3\u02B2\u02C0\u02BC\u02B8\u02BA = 0.5f;
-		this.\u02B9\u02B3\u02C1\u02B6\u02BC\u02B4\u02C1\u02B2\u02B3\u02BC\u02C1 = 0.0069f;
-		this.\u02BD\u02B2\u02B9\u02B8\u02C0\u02B4\u02BF\u02BF\u02B7\u02BF\u02B3 = 0.0277f;
-		this.\u02B5\u02B3\u02BE\u02B7\u02BA\u02BF\u02BD\u02BC\u02B9\u02C1\u02B8 = 0.045f;
-		this.\u02B8\u02C1\u02BF\u02C0\u02B3\u02B9\u02B6\u02B2\u02B8\u02B7\u02BE = new List<float>(128);
+		this.health = 0.5f;
+		this.healthDrain = 0.0069f;
+		this.healthGain = 0.0277f;
+		this.healthGainSP = 0.045f;
+		this.accuracyHistory = new List<float>(128);
 		this.\u02B3\u02BC\u02B8\u02B9\u02BE\u02BC\u02BC\u02B8\u02BD\u02C1\u02BD = new Note(0f, 0f, 0, \u02BF\u02BF\u02BB\u02BC\u02B5\u02B9\u02B6\u02C1\u02BB\u02B3\u02BD.\u02B8\u02C1\u02B3\u02B7\u02BC\u02BF\u02BC\u02BC\u02BF\u02C1\u02BA.Strum, Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.NONE, 0U, 0);
 	}
 
@@ -1295,7 +1295,7 @@ public abstract class BasePlayer : MonoBehaviour
 
 	public float \u02B2\u02B3\u02BF\u02C1\u02BF\u02BB\u02C1\u02C0\u02C1\u02B6\u02BF;
 
-	protected float \u02B2\u02BE\u02BE\u02B8\u02B6\u02BE\u02BA\u02BA\u02B5\u02B3\u02BC;
+	protected float hitWindow;
 
 	protected float \u02BF\u02BE\u02B8\u02C1\u02BE\u02C1\u02C0\u02C0\u02BB\u02BB\u02BC;
 
@@ -1360,13 +1360,13 @@ public abstract class BasePlayer : MonoBehaviour
 
 	protected float \u02B9\u02C0\u02BC\u02B5\u02B3\u02C0\u02BB\u02BC\u02B5\u02BF\u02B5;
 
-	protected float \u02BA\u02BC\u02BB\u02B3\u02BC\u02B3\u02B2\u02C0\u02BC\u02B8\u02BA;
+	protected float health;
 
-	protected float \u02B9\u02B3\u02C1\u02B6\u02BC\u02B4\u02C1\u02B2\u02B3\u02BC\u02C1;
+	protected float healthDrain;
 
-	protected float \u02BD\u02B2\u02B9\u02B8\u02C0\u02B4\u02BF\u02BF\u02B7\u02BF\u02B3;
+	protected float healthGain;
 
-	protected float \u02B5\u02B3\u02BE\u02B7\u02BA\u02BF\u02BD\u02BC\u02B9\u02C1\u02B8;
+	protected float healthGainSP;
 
 	private bool \u02C0\u02BE\u02BD\u02B3\u02C0\u02B9\u02B5\u02BF\u02BC\u02BC\u02B8;
 
@@ -1374,7 +1374,7 @@ public abstract class BasePlayer : MonoBehaviour
 
 	protected float \u02BB\u02B3\u02B2\u02C0\u02B3\u02BC\u02B3\u02B5\u02BB\u02C0\u02B6;
 
-	protected List<float> \u02B8\u02C1\u02BF\u02C0\u02B3\u02B9\u02B6\u02B2\u02B8\u02B7\u02BE;
+	protected List<float> accuracyHistory;
 
 	[HideInInspector]
 	public int combo;
