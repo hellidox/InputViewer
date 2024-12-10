@@ -11,7 +11,7 @@ public class ExportSongList : MonoBehaviour
 {
 	public IEnumerator \u02B7\u02B4\u02BB\u02B2\u02B8\u02C1\u02BA\u02B2\u02B4\u02C0\u02C1()
 	{
-		string songListPath = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "songs.txt");
+		string songListPath = Path.Combine(Helper.GetDocumentsClonFolder(), "songs.txt");
 		Utf8ValueStringBuilder sb = ZString.CreateUtf8StringBuilder();
 		\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02C1\u02BA\u02BE\u02C1\u02B5\u02BB\u02B9\u02B4\u02B2\u02C1\u02BF;
 		\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B3\u02B8\u02B2\u02BF\u02C0\u02B6\u02C1\u02BD\u02B3\u02B8\u02B9("Artist", false);
@@ -61,7 +61,7 @@ public class ExportSongList : MonoBehaviour
 
 	public IEnumerator \u02BE\u02BD\u02B2\u02BD\u02C1\u02B2\u02B6\u02B2\u02B4\u02BF\u02BF()
 	{
-		songListPath = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "songs.txt");
+		songListPath = Path.Combine(Helper.GetDocumentsClonFolder(), "songs.txt");
 		sb = ZString.CreateUtf8StringBuilder();
 		\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02C1\u02BA\u02BE\u02C1\u02B5\u02BB\u02B9\u02B4\u02B2\u02C1\u02BF;
 		\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B3\u02B8\u02B2\u02BF\u02C0\u02B6\u02C1\u02BD\u02B3\u02B8\u02B9("Artist", false);
@@ -120,7 +120,7 @@ public class ExportSongList : MonoBehaviour
 
 	public IEnumerator \u02C1\u02B9\u02BA\u02BC\u02B8\u02B7\u02BC\u02C0\u02B6\u02BF\u02B9()
 	{
-		songListPath = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "songs.txt");
+		songListPath = Path.Combine(Helper.GetDocumentsClonFolder(), "songs.txt");
 		sb = ZString.CreateUtf8StringBuilder();
 		\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02C1\u02BA\u02BE\u02C1\u02B5\u02BB\u02B9\u02B4\u02B2\u02C1\u02BF;
 		\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B3\u02B8\u02B2\u02BF\u02C0\u02B6\u02C1\u02BD\u02B3\u02B8\u02B9("Artist", false);
@@ -186,7 +186,7 @@ public class ExportSongList : MonoBehaviour
 
 	public IEnumerator \u02BD\u02BE\u02B6\u02B9\u02C1\u02B6\u02B3\u02B8\u02BD\u02BF\u02C0()
 	{
-		string songListPath = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "songs.json");
+		string songListPath = Path.Combine(Helper.GetDocumentsClonFolder(), "songs.json");
 		Utf8ValueStringBuilder sb = ZString.CreateUtf8StringBuilder();
 		sb.Append("[");
 		\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02C1\u02BA\u02BE\u02C1\u02B5\u02BB\u02B9\u02B4\u02B2\u02C1\u02BF;
@@ -240,7 +240,7 @@ public class ExportSongList : MonoBehaviour
 
 	public IEnumerator \u02B7\u02B2\u02BB\u02B7\u02BA\u02B7\u02BD\u02B3\u02BE\u02BC\u02BC()
 	{
-		songListPath = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "songs.txt");
+		songListPath = Path.Combine(Helper.GetDocumentsClonFolder(), "songs.txt");
 		sb = ZString.CreateUtf8StringBuilder();
 		\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02C1\u02BA\u02BE\u02C1\u02B5\u02BB\u02B9\u02B4\u02B2\u02C1\u02BF;
 		\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B3\u02B8\u02B2\u02BF\u02C0\u02B6\u02C1\u02BD\u02B3\u02B8\u02B9("Artist", false);
@@ -320,7 +320,7 @@ public class ExportSongList : MonoBehaviour
 
 	public IEnumerator \u02B6\u02B9\u02B2\u02BE\u02BB\u02B6\u02C1\u02B8\u02B2\u02BE\u02B3()
 	{
-		songListPath = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "songs.json");
+		songListPath = Path.Combine(Helper.GetDocumentsClonFolder(), "songs.json");
 		sb = ZString.CreateUtf8StringBuilder();
 		sb.Append("[");
 		\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02C1\u02BA\u02BE\u02C1\u02B5\u02BB\u02B9\u02B4\u02B2\u02C1\u02BF;
@@ -386,7 +386,7 @@ public class ExportSongList : MonoBehaviour
 
 	public IEnumerator \u02B7\u02BA\u02B6\u02C1\u02BF\u02B6\u02BA\u02BE\u02B7\u02B7\u02BC()
 	{
-		songListPath = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "songs.json");
+		songListPath = Path.Combine(Helper.GetDocumentsClonFolder(), "songs.json");
 		sb = ZString.CreateUtf8StringBuilder();
 		sb.Append("[");
 		\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02C1\u02BA\u02BE\u02C1\u02B5\u02BB\u02B9\u02B4\u02B2\u02C1\u02BF;
@@ -473,7 +473,7 @@ public class ExportSongList : MonoBehaviour
 
 	public IEnumerator \u02B5\u02B5\u02B6\u02B9\u02B5\u02B7\u02BF\u02C0\u02B3\u02BD\u02B6()
 	{
-		songListPath = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "songs.json");
+		songListPath = Path.Combine(Helper.GetDocumentsClonFolder(), "songs.json");
 		sb = ZString.CreateUtf8StringBuilder();
 		sb.Append("[");
 		\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02C1\u02BA\u02BE\u02C1\u02B5\u02BB\u02B9\u02B4\u02B2\u02C1\u02BF;
@@ -539,7 +539,7 @@ public class ExportSongList : MonoBehaviour
 
 	public IEnumerator \u02B7\u02BF\u02B5\u02BE\u02B3\u02C1\u02BA\u02BD\u02C0\u02B5\u02B9()
 	{
-		songListPath = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "songs.json");
+		songListPath = Path.Combine(Helper.GetDocumentsClonFolder(), "songs.json");
 		sb = ZString.CreateUtf8StringBuilder();
 		sb.Append("[");
 		\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02C1\u02BA\u02BE\u02C1\u02B5\u02BB\u02B9\u02B4\u02B2\u02C1\u02BF;
@@ -619,7 +619,7 @@ public class ExportSongList : MonoBehaviour
 
 	public IEnumerator \u02BA\u02BE\u02B6\u02C0\u02B4\u02B6\u02B6\u02BC\u02B5\u02BA\u02B5()
 	{
-		songListPath = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "songs.txt");
+		songListPath = Path.Combine(Helper.GetDocumentsClonFolder(), "songs.txt");
 		sb = ZString.CreateUtf8StringBuilder();
 		\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02C1\u02BA\u02BE\u02C1\u02B5\u02BB\u02B9\u02B4\u02B2\u02C1\u02BF;
 		\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B3\u02B8\u02B2\u02BF\u02C0\u02B6\u02C1\u02BD\u02B3\u02B8\u02B9("Artist", false);

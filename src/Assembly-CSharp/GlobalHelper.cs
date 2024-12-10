@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Threading;
 using System.Threading.Tasks;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -1634,6 +1635,7 @@ public static class GlobalHelper
 			{
 				throw new ArgumentOutOfRangeException("value", value, "Render interval cannot be less than or equal to zero");
 			}
+			GlobalVariables.framereset = 0f;
 			GlobalHelper.rfi_setter(value);
 			GlobalHelper.m_rfi = value;
 		}
@@ -1682,6 +1684,30 @@ public static class GlobalHelper
 			}
 		}
 		return camera.transform.position + direction * num;
+	}
+
+	public static TextMeshPro dupTMP(TextMeshPro orig)
+	{
+		if (orig == null)
+		{
+			throw new NullReferenceException("Null TextMeshPro");
+		}
+		GameObject gameObject = new GameObject("dup");
+		gameObject.transform.SetParent(orig.transform.parent, false);
+		TextMeshPro textMeshPro = gameObject.AddComponent<TextMeshPro>();
+		textMeshPro.material = orig.material;
+		textMeshPro.text = orig.text;
+		textMeshPro.font = orig.font;
+		textMeshPro.fontSize = orig.fontSize;
+		textMeshPro.color = orig.color;
+		textMeshPro.alignment = orig.alignment;
+		textMeshPro.raycastTarget = orig.raycastTarget;
+		RectTransform component = orig.GetComponent<RectTransform>();
+		RectTransform component2 = textMeshPro.GetComponent<RectTransform>();
+		component2.sizeDelta = component.sizeDelta;
+		component2.localPosition = component.localPosition;
+		component2.localScale = component.localScale;
+		return textMeshPro;
 	}
 
 	private static bool? _rainbowSPBarCache;

@@ -53,7 +53,7 @@ public class GlobalVariables : MonoBehaviour
 				this.\u02B3\u02B9\u02BC\u02B7\u02BA\u02B9\u02BA\u02B2\u02B4\u02B7\u02B3.Add(highwayData2);
 			}
 		}
-		if (__FIXME_clon_util.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(text2))
+		if (Helper.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(text2))
 		{
 			array = Directory.GetDirectories(text2, "languageRestartNeeded", SearchOption.AllDirectories);
 			for (int k = 0; k < array.Length; k = k)
@@ -77,9 +77,9 @@ public class GlobalVariables : MonoBehaviour
 				}
 			}
 		}
-		if (__FIXME_clon_util.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(text))
+		if (Helper.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(text))
 		{
-			string[] array2 = __FIXME_clon_util.\u02BB\u02B9\u02B3\u02C0\u02C1\u02B2\u02B9\u02B2\u02B7\u02B8\u02B2(text, "Alien", SearchOption.TopDirectoryOnly);
+			string[] array2 = Helper.\u02BB\u02B9\u02B3\u02C0\u02C1\u02B2\u02B9\u02B2\u02B7\u02B8\u02B2(text, "Alien", SearchOption.TopDirectoryOnly);
 			this.\u02B7\u02BC\u02C0\u02B5\u02BF\u02B5\u02B6\u02B6\u02BB\u02B2\u02BA.AddRange(array2);
 			array = array2;
 			for (int l = 1; l < array.Length; l = l)
@@ -148,11 +148,11 @@ public class GlobalVariables : MonoBehaviour
 
 	private void \u02C0\u02B5\u02B3\u02B7\u02B9\u02BC\u02B4\u02C0\u02B7\u02B2\u02BA(string \u02B5\u02BF\u02B4\u02C1\u02BE\u02B7\u02C0\u02B9\u02C1\u02B8\u02BC)
 	{
-		if (!__FIXME_clon_util.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(\u02B5\u02BF\u02B4\u02C1\u02BE\u02B7\u02C0\u02B9\u02C1\u02B8\u02BC))
+		if (!Helper.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(\u02B5\u02BF\u02B4\u02C1\u02BE\u02B7\u02C0\u02B9\u02C1\u02B8\u02BC))
 		{
 			return;
 		}
-		foreach (string text in __FIXME_clon_util.\u02BB\u02B9\u02B3\u02C0\u02C1\u02B2\u02B9\u02B2\u02B7\u02B8\u02B2(\u02B5\u02BF\u02B4\u02C1\u02BE\u02B7\u02C0\u02B9\u02C1\u02B8\u02BC, ".png|.jpg|.jpeg", SearchOption.AllDirectories))
+		foreach (string text in Helper.\u02BB\u02B9\u02B3\u02C0\u02C1\u02B2\u02B9\u02B2\u02B7\u02B8\u02B2(\u02B5\u02BF\u02B4\u02C1\u02BE\u02B7\u02C0\u02B9\u02C1\u02B8\u02BC, ".png|.jpg|.jpeg", SearchOption.AllDirectories))
 		{
 			Texture2D texture2D = GlobalVariables.\u02C0\u02B8\u02C1\u02B5\u02B4\u02B8\u02B6\u02B6\u02BB\u02BC\u02B5(text);
 			if (!(texture2D == null))
@@ -220,7 +220,7 @@ public class GlobalVariables : MonoBehaviour
 				this.\u02B3\u02B9\u02BC\u02B7\u02BA\u02B9\u02BA\u02B2\u02B4\u02B7\u02B3.Add(highwayData2);
 			}
 		}
-		if (__FIXME_clon_util.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(text2))
+		if (Helper.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(text2))
 		{
 			foreach (string text5 in Directory.GetDirectories(text2, "*", SearchOption.AllDirectories))
 			{
@@ -242,9 +242,9 @@ public class GlobalVariables : MonoBehaviour
 				}
 			}
 		}
-		if (__FIXME_clon_util.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(text))
+		if (Helper.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(text))
 		{
-			string[] array2 = __FIXME_clon_util.\u02BB\u02B9\u02B3\u02C0\u02C1\u02B2\u02B9\u02B2\u02B7\u02B8\u02B2(text, ".png|.jpg|.jpeg", SearchOption.AllDirectories);
+			string[] array2 = Helper.\u02BB\u02B9\u02B3\u02C0\u02C1\u02B2\u02B9\u02B2\u02B7\u02B8\u02B2(text, ".png|.jpg|.jpeg", SearchOption.AllDirectories);
 			this.\u02B7\u02BC\u02C0\u02B5\u02BF\u02B5\u02B6\u02B6\u02BB\u02B2\u02BA.AddRange(array2);
 			foreach (string text8 in array2)
 			{
@@ -277,7 +277,7 @@ public class GlobalVariables : MonoBehaviour
 	public void \u02BC\u02B2\u02BA\u02C1\u02C0\u02BF\u02B8\u02C0\u02B6\u02BA\u02B2(bool \u02BF\u02BC\u02BE\u02B2\u02B4\u02B3\u02BC\u02BF\u02BF\u02B8\u02B8 = false)
 	{
 		ThumbnailCache.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BC\u02BF\u02B2\u02B6\u02B6\u02B2\u02B5\u02BF\u02BF\u02BB\u02B5();
-		string text = __FIXME_clon_util.\u02BB\u02B6\u02B4\u02BC\u02B5\u02B9\u02BA\u02BD\u02B7\u02B4\u02B3();
+		string text = Helper.\u02BB\u02B6\u02B4\u02BC\u02B5\u02B9\u02BA\u02BD\u02B7\u02B4\u02B3();
 		if (!Directory.Exists(text))
 		{
 			Directory.CreateDirectory(text);
@@ -371,7 +371,12 @@ public class GlobalVariables : MonoBehaviour
 
 	private void Update()
 	{
-		if ((Time.frameCount & 15) == 1)
+		GlobalVariables.framereset += Time.unscaledDeltaTime;
+		if ((double)GlobalVariables.framereset > 0.5)
+		{
+			GlobalHelper.renderFrameInterval = 1;
+		}
+		if ((Time.frameCount & 255) == 0)
 		{
 			this.\u02B6\u02BC\u02B4\u02B9\u02B7\u02B4\u02BE\u02BF\u02B4\u02BE\u02B4(false);
 		}
@@ -431,7 +436,7 @@ public class GlobalVariables : MonoBehaviour
 	public void \u02BC\u02BE\u02B5\u02BC\u02B6\u02B5\u02BA\u02BD\u02B6\u02B5\u02B8(bool \u02BF\u02BC\u02BE\u02B2\u02B4\u02B3\u02BC\u02BF\u02BF\u02B8\u02B8 = false)
 	{
 		this.\u02B7\u02B4\u02BB\u02C0\u02B5\u02B6\u02B6\u02B9\u02B9\u02B3\u02C0(this.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8);
-		if (!__FIXME_clon_util.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(this.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8))
+		if (!Helper.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(this.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8))
 		{
 			SettingsController.\u02B3\u02B2\u02B9\u02C0\u02B3\u02BC\u02B4\u02BD\u02B3\u02C1\u02BC.Reset();
 			SettingsController.\u02B7\u02B9\u02BF\u02BD\u02B9\u02B5\u02C0\u02BA\u02BC\u02BD\u02BE.Reset();
@@ -457,9 +462,9 @@ public class GlobalVariables : MonoBehaviour
 	private void \u02B2\u02B9\u02C1\u02C1\u02B2\u02B3\u02C1\u02BF\u02BC\u02BB\u02C1()
 	{
 		this.\u02B4\u02B6\u02C1\u02BD\u02BA\u02BE\u02C1\u02B9\u02B2\u02BD\u02B9 = "{0:N0}";
-		this.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8 = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "whammy_sfx");
-		this.\u02C0\u02BD\u02B8\u02B9\u02BA\u02B6\u02B4\u02BB\u02B2\u02B6\u02B3 = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "profiles.bin");
-		__FIXME_clon_util.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(this.\u02C0\u02BD\u02B8\u02B9\u02BA\u02B6\u02B4\u02BB\u02B2\u02B6\u02B3);
+		this.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8 = Path.Combine(Helper.GetDocumentsClonFolder(), "whammy_sfx");
+		this.\u02C0\u02BD\u02B8\u02B9\u02BA\u02B6\u02B4\u02BB\u02B2\u02B6\u02B3 = Path.Combine(Helper.GetDocumentsClonFolder(), "profiles.bin");
+		Helper.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(this.\u02C0\u02BD\u02B8\u02B9\u02BA\u02B6\u02B4\u02BB\u02B2\u02B6\u02B3);
 		this.\u02B2\u02BE\u02BE\u02B6\u02B5\u02BB\u02C0\u02C0\u02B6\u02C1\u02B8(false);
 		ReInput.configuration.joystickRefreshRate = SettingsController.\u02BC\u02BA\u02BE\u02B9\u02B5\u02BD\u02C1\u02B8\u02B7\u02C0\u02B8.CurrentValue;
 		Cursor.visible = SettingsController.\u02BD\u02C1\u02B5\u02B3\u02BA\u02BC\u02B9\u02B8\u02B7\u02B8\u02C0;
@@ -510,9 +515,9 @@ public class GlobalVariables : MonoBehaviour
 	private void Start()
 	{
 		this.\u02B4\u02B6\u02C1\u02BD\u02BA\u02BE\u02C1\u02B9\u02B2\u02BD\u02B9 = ".mp4|.avi|.webm|.vp8|.ogv|.mpeg";
-		this.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8 = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "Custom");
-		this.\u02C0\u02BD\u02B8\u02B9\u02BA\u02B6\u02B4\u02BB\u02B2\u02B6\u02B3 = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "Screenshots");
-		__FIXME_clon_util.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(this.\u02C0\u02BD\u02B8\u02B9\u02BA\u02B6\u02B4\u02BB\u02B2\u02B6\u02B3);
+		this.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8 = Path.Combine(Helper.GetDocumentsClonFolder(), "Custom");
+		this.\u02C0\u02BD\u02B8\u02B9\u02BA\u02B6\u02B4\u02BB\u02B2\u02B6\u02B3 = Path.Combine(Helper.GetDocumentsClonFolder(), "Screenshots");
+		Helper.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(this.\u02C0\u02BD\u02B8\u02B9\u02BA\u02B6\u02B4\u02BB\u02B2\u02B6\u02B3);
 		this.\u02B6\u02BC\u02B4\u02B9\u02B7\u02B4\u02BE\u02BF\u02B4\u02BE\u02B4(true);
 		ReInput.configuration.joystickRefreshRate = SettingsController.\u02BC\u02BA\u02BE\u02B9\u02B5\u02BD\u02C1\u02B8\u02B7\u02C0\u02B8.CurrentValue;
 		Cursor.visible = SettingsController.\u02BD\u02C1\u02B5\u02B3\u02BA\u02BC\u02B9\u02B8\u02B7\u02B8\u02C0;
@@ -617,7 +622,7 @@ public class GlobalVariables : MonoBehaviour
 	public void \u02B4\u02C0\u02BD\u02B5\u02B3\u02B3\u02C0\u02B7\u02B6\u02B2\u02BB()
 	{
 		this.\u02B3\u02B4\u02B5\u02B9\u02B8\u02BC\u02BC\u02B8\u02C0\u02B5\u02B9.Clear();
-		bool flag = __FIXME_clon_util.CaseSensitive();
+		bool flag = Helper.CaseSensitive();
 		this.\u02B3\u02B4\u02B5\u02B9\u02B8\u02BC\u02BC\u02B8\u02C0\u02B5\u02B9.Add(flag ? this.\u02B5\u02BB\u02B7\u02BB\u02B8\u02B5\u02B9\u02BA\u02B3\u02B8\u02BA : this.\u02B5\u02BB\u02B7\u02BB\u02B8\u02B5\u02B9\u02BA\u02B3\u02B8\u02BA.ToLowerInvariant());
 		foreach (string text in SettingsController.\u02B2\u02BB\u02BF\u02BC\u02B9\u02BF\u02B2\u02BA\u02B4\u02BC\u02B4.CurrentValue)
 		{
@@ -725,9 +730,9 @@ public class GlobalVariables : MonoBehaviour
 	public void \u02BB\u02C1\u02BC\u02BE\u02B3\u02C1\u02B5\u02B3\u02BA\u02B8\u02BB()
 	{
 		string text = Path.Combine(this.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8, "Image Backgrounds");
-		if (__FIXME_clon_util.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(text))
+		if (Helper.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(text))
 		{
-			this.\u02B9\u02BB\u02B2\u02B8\u02B3\u02B7\u02B3\u02B2\u02BD\u02B9\u02BF = __FIXME_clon_util.\u02BB\u02B9\u02B3\u02C0\u02C1\u02B2\u02B9\u02B2\u02B7\u02B8\u02B2(text, ".png|.jpg|.jpeg", SearchOption.AllDirectories);
+			this.\u02B9\u02BB\u02B2\u02B8\u02B3\u02B7\u02B3\u02B2\u02BD\u02B9\u02BF = Helper.\u02BB\u02B9\u02B3\u02C0\u02C1\u02B2\u02B9\u02B2\u02B7\u02B8\u02B2(text, ".png|.jpg|.jpeg", SearchOption.AllDirectories);
 		}
 		this.\u02B7\u02BC\u02C0\u02B5\u02BF\u02B5\u02B6\u02B6\u02BB\u02B2\u02BA.AddRange(this.\u02B9\u02BB\u02B2\u02B8\u02B3\u02B7\u02B3\u02B2\u02BD\u02B9\u02BF);
 		if (this.\u02B9\u02BB\u02B2\u02B8\u02B3\u02B7\u02B3\u02B2\u02BD\u02B9\u02BF == null || this.\u02B9\u02BB\u02B2\u02B8\u02B3\u02B7\u02B3\u02B2\u02BD\u02B9\u02BF.Length == 0)
@@ -745,7 +750,7 @@ public class GlobalVariables : MonoBehaviour
 		try
 		{
 			string text = this.\u02C0\u02BA\u02BA\u02C1\u02B6\u02B5\u02B4\u02BC\u02BF\u02BC\u02BA();
-			using (Stream stream = File.Create(Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "currentsong.txt")))
+			using (Stream stream = File.Create(Path.Combine(Helper.GetDocumentsClonFolder(), "currentsong.txt")))
 			{
 				using (StreamWriter streamWriter = new StreamWriter(stream))
 				{
@@ -777,9 +782,9 @@ public class GlobalVariables : MonoBehaviour
 	public void \u02BE\u02C0\u02BB\u02B6\u02B5\u02BA\u02B7\u02B3\u02B5\u02B3\u02C1()
 	{
 		string text = Path.Combine(this.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8, "Video Backgrounds");
-		if (__FIXME_clon_util.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(text))
+		if (Helper.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(text))
 		{
-			this.\u02B7\u02B9\u02BD\u02BC\u02B7\u02B6\u02B2\u02B2\u02BC\u02BB\u02BB = __FIXME_clon_util.\u02BB\u02B9\u02B3\u02C0\u02C1\u02B2\u02B9\u02B2\u02B7\u02B8\u02B2(text, this.\u02B4\u02B6\u02C1\u02BD\u02BA\u02BE\u02C1\u02B9\u02B2\u02BD\u02B9, SearchOption.AllDirectories);
+			this.\u02B7\u02B9\u02BD\u02BC\u02B7\u02B6\u02B2\u02B2\u02BC\u02BB\u02BB = Helper.\u02BB\u02B9\u02B3\u02C0\u02C1\u02B2\u02B9\u02B2\u02B7\u02B8\u02B2(text, this.\u02B4\u02B6\u02C1\u02BD\u02BA\u02BE\u02C1\u02B9\u02B2\u02BD\u02B9, SearchOption.AllDirectories);
 		}
 		if (this.\u02B7\u02B9\u02BD\u02BC\u02B7\u02B6\u02B2\u02B2\u02BC\u02BB\u02BB == null || this.\u02B7\u02B9\u02BD\u02BC\u02B7\u02B6\u02B2\u02B2\u02BC\u02BB\u02BB.Length == 0)
 		{
@@ -790,9 +795,9 @@ public class GlobalVariables : MonoBehaviour
 	public void \u02B8\u02B8\u02B9\u02B9\u02B2\u02B2\u02B9\u02B8\u02B5\u02C1\u02B6()
 	{
 		string text = Path.Combine(this.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8, "no_fail");
-		if (__FIXME_clon_util.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(text))
+		if (Helper.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(text))
 		{
-			this.\u02B7\u02B9\u02BD\u02BC\u02B7\u02B6\u02B2\u02B2\u02BC\u02BB\u02BB = __FIXME_clon_util.\u02BB\u02B9\u02B3\u02C0\u02C1\u02B2\u02B9\u02B2\u02B7\u02B8\u02B2(text, this.\u02B4\u02B6\u02C1\u02BD\u02BA\u02BE\u02C1\u02B9\u02B2\u02BD\u02B9, SearchOption.TopDirectoryOnly);
+			this.\u02B7\u02B9\u02BD\u02BC\u02B7\u02B6\u02B2\u02B2\u02BC\u02BB\u02BB = Helper.\u02BB\u02B9\u02B3\u02C0\u02C1\u02B2\u02B9\u02B2\u02B7\u02B8\u02B2(text, this.\u02B4\u02B6\u02C1\u02BD\u02BA\u02BE\u02C1\u02B9\u02B2\u02BD\u02B9, SearchOption.TopDirectoryOnly);
 		}
 		if (this.\u02B7\u02B9\u02BD\u02BC\u02B7\u02B6\u02B2\u02B2\u02BC\u02BB\u02BB == null || this.\u02B7\u02B9\u02BD\u02BC\u02B7\u02B6\u02B2\u02B2\u02BC\u02BB\u02BB.Length == 0)
 		{
@@ -880,8 +885,8 @@ public class GlobalVariables : MonoBehaviour
 	private void \u02B5\u02B3\u02B3\u02BB\u02BA\u02BB\u02C0\u02BE\u02B2\u02B5\u02B9()
 	{
 		this.\u02BC\u02C0\u02B5\u02BD\u02B2\u02BC\u02BA\u02BC\u02B9\u02B6\u02B6 = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B2\u02BE\u02BF\u02BD\u02BB\u02B7\u02C0\u02BD\u02B4\u02BE\u02BA.\u02B6\u02BB\u02BC\u02BD\u02C1\u02B3\u02B9\u02B3\u02B3\u02BC\u02B3.Keys.ToArray<string>();
-		this.\u02B5\u02BB\u02B7\u02BB\u02B8\u02B5\u02B9\u02BA\u02B3\u02B8\u02BA = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "Songs");
-		__FIXME_clon_util.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(this.\u02B5\u02BB\u02B7\u02BB\u02B8\u02B5\u02B9\u02BA\u02B3\u02B8\u02BA);
+		this.\u02B5\u02BB\u02B7\u02BB\u02B8\u02B5\u02B9\u02BA\u02B3\u02B8\u02BA = Path.Combine(Helper.GetDocumentsClonFolder(), "Songs");
+		Helper.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(this.\u02B5\u02BB\u02B7\u02BB\u02B8\u02B5\u02B9\u02BA\u02B3\u02B8\u02BA);
 		this.\u02B4\u02C0\u02BD\u02B5\u02B3\u02B3\u02C0\u02B7\u02B6\u02B2\u02BB();
 		Settings.GameVersion = this.\u02B4\u02B3\u02B7\u02BC\u02B5\u02B3\u02B8\u02BB\u02BE\u02B5\u02B3;
 		if (!File.Exists(SettingsController.\u02BE\u02BF\u02BE\u02BB\u02B3\u02B8\u02B9\u02BD\u02B9\u02B4\u02BC()))
@@ -1078,6 +1083,8 @@ public class GlobalVariables : MonoBehaviour
 	public static int playTime;
 
 	public static long totalPoints;
+
+	public static float framereset;
 
 	[Serializable]
 	private class InternalHighwayJsonData

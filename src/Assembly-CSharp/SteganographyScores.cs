@@ -49,7 +49,7 @@ internal class SteganographyScores
 
 	public static void EmbedBytes(PayloadData dataPayload, ref Color32[] pixels)
 	{
-		byte[] array = Helper.EncodeReedSoloman(dataPayload.BuildPayload());
+		byte[] array = Helper2.EncodeReedSoloman(dataPayload.BuildPayload());
 		new Color32[pixels.Length];
 		int num = array.Length;
 		int i = 0;
@@ -84,7 +84,7 @@ internal class SteganographyScores
 				(pixels[i].b & 1) == 1
 			});
 		}
-		byte[] array = Helper.DecodeReedSoloman(SteganographyScores.PackBitsInByteArray(list.ToArray()));
+		byte[] array = Helper2.DecodeReedSoloman(SteganographyScores.PackBitsInByteArray(list.ToArray()));
 		PayloadData payloadData = new PayloadData();
 		payloadData.ReadPayload(array);
 		return payloadData;

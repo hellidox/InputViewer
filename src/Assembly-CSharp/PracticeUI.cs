@@ -20,10 +20,8 @@ public class PracticeUI : MonoBehaviour
 
 	private void Update()
 	{
-		this.ticker += Time.deltaTime;
-		if (this.ticker > 0.033333335f)
+		if (GlobalHelper.willCurrentFrameRender)
 		{
-			this.ticker -= Time.deltaTime;
 			if (this.gameManager._basePlayer != null)
 			{
 				if (!this.\u02BD\u02BE\u02C1\u02B8\u02B6\u02B2\u02B7\u02BA\u02B4\u02BF\u02BF)

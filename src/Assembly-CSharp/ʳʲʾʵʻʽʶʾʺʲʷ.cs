@@ -47,7 +47,7 @@ public class \u02B3\u02B2\u02BE\u02B5\u02BB\u02BD\u02B6\u02BE\u02BA\u02B2\u02B7
 
 	private static void \u02C0\u02C0\u02BE\u02B2\u02B5\u02BD\u02BD\u02B5\u02B6\u02B8\u02B8()
 	{
-		string text = Path.Combine(__FIXME_clon_util.\u02B4\u02B6\u02BE\u02B5\u02BB\u02BA\u02BB\u02C0\u02C1\u02C1\u02B7(), "saVersion");
+		string text = Path.Combine(Helper.\u02B4\u02B6\u02BE\u02B5\u02BB\u02BA\u02BB\u02C0\u02C1\u02C1\u02B7(), "saVersion");
 		string text2 = Resources.Load<TextAsset>("version").text;
 		if (File.Exists(text))
 		{
@@ -164,7 +164,7 @@ public class \u02B3\u02B2\u02BE\u02B5\u02BB\u02BD\u02B6\u02BE\u02BA\u02B2\u02B7
 
 	public static bool \u02BD\u02B6\u02BD\u02B4\u02BE\u02BE\u02B4\u02BD\u02B5\u02B2\u02BF()
 	{
-		string text = Path.Combine(__FIXME_clon_util.\u02B4\u02B6\u02BE\u02B5\u02BB\u02BA\u02BB\u02C0\u02C1\u02C1\u02B7(), "saVersion");
+		string text = Path.Combine(Helper.\u02B4\u02B6\u02BE\u02B5\u02BB\u02BA\u02BB\u02C0\u02C1\u02C1\u02B7(), "saVersion");
 		if (!File.Exists(text))
 		{
 			return false;
@@ -176,7 +176,7 @@ public class \u02B3\u02B2\u02BE\u02B5\u02BB\u02BD\u02B6\u02BE\u02BA\u02B2\u02B7
 
 	public static IEnumerator \u02BA\u02BC\u02BA\u02B8\u02B9\u02B4\u02B7\u02B4\u02B3\u02B5\u02BE()
 	{
-		string streamingAssetsFolder = __FIXME_clon_util.\u02B4\u02B6\u02BE\u02B5\u02BB\u02BA\u02BB\u02C0\u02C1\u02C1\u02B7();
+		string streamingAssetsFolder = Helper.\u02B4\u02B6\u02BE\u02B5\u02BB\u02BA\u02BB\u02C0\u02C1\u02C1\u02B7();
 		if (Directory.Exists(streamingAssetsFolder))
 		{
 			Directory.Delete(streamingAssetsFolder);

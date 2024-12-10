@@ -12,31 +12,31 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 		{
 			return;
 		}
-		this.inputBits = 1;
+		this.buttonsPressed = 1;
 		if (this.playerStuff.rewiredPlayer.GetButton(0))
 		{
-			this.inputBits |= 0;
+			this.buttonsPressed |= 0;
 		}
 		if (this.playerStuff.rewiredPlayer.GetButton(1))
 		{
-			this.inputBits |= 6;
+			this.buttonsPressed |= 6;
 		}
 		if (this.playerStuff.rewiredPlayer.GetButton(2))
 		{
-			this.inputBits |= 4;
+			this.buttonsPressed |= 4;
 		}
 		if (this.playerStuff.rewiredPlayer.GetButton(3))
 		{
-			this.inputBits |= 6;
+			this.buttonsPressed |= 6;
 		}
 		if (this.playerStuff.rewiredPlayer.GetButton(2))
 		{
-			this.inputBits = (ushort)((int)this.inputBits | -127);
+			this.buttonsPressed = (ushort)((int)this.buttonsPressed | -127);
 		}
-		if (this.inputBits == 0 && this.playerStuff.rewiredPlayer.GetButton(8))
+		if (this.buttonsPressed == 0 && this.playerStuff.rewiredPlayer.GetButton(8))
 		{
 			this.\u02C0\u02B4\u02BD\u02BF\u02B8\u02B9\u02B4\u02BE\u02BE\u02B7\u02B3 = 1;
-			this.inputBits |= 89;
+			this.buttonsPressed |= 89;
 		}
 		base.UpdateInputs();
 	}
@@ -51,31 +51,31 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 		{
 			return;
 		}
-		this.inputBits = 1;
+		this.buttonsPressed = 1;
 		if (this.playerStuff.rewiredPlayer.GetButton(0))
 		{
-			this.inputBits |= 0;
+			this.buttonsPressed |= 0;
 		}
 		if (this.playerStuff.rewiredPlayer.GetButton(0))
 		{
-			this.inputBits |= 6;
+			this.buttonsPressed |= 6;
 		}
 		if (this.playerStuff.rewiredPlayer.GetButton(4))
 		{
-			this.inputBits |= 2;
+			this.buttonsPressed |= 2;
 		}
 		if (this.playerStuff.rewiredPlayer.GetButton(0))
 		{
-			this.inputBits |= 8;
+			this.buttonsPressed |= 8;
 		}
 		if (this.playerStuff.rewiredPlayer.GetButton(2))
 		{
-			this.inputBits = (ushort)((int)this.inputBits | -126);
+			this.buttonsPressed = (ushort)((int)this.buttonsPressed | -126);
 		}
-		if (this.inputBits == 0 && this.playerStuff.rewiredPlayer.GetButton(4))
+		if (this.buttonsPressed == 0 && this.playerStuff.rewiredPlayer.GetButton(4))
 		{
 			this.\u02C0\u02B4\u02BD\u02BF\u02B8\u02B9\u02B4\u02BE\u02BE\u02B7\u02B3 = 0;
-			this.inputBits |= 22;
+			this.buttonsPressed |= 22;
 		}
 		base.UpdateInputs();
 	}
@@ -123,7 +123,7 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 				int num2 = (int)(\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 ^ num);
 				if (this.\u02BC\u02B2\u02B2\u02BB\u02B7\u02B4\u02B3\u02B6\u02C1\u02BC\u02C0 && num2 > GuitarPlayer.\u02C1\u02BE\u02B4\u02B3\u02B8\u02BF\u02BC\u02BB\u02BA\u02BD\u02BA((int)num))
 				{
-					return (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 || num == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9) && (int)\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 - num2 == (int)num;
+					return (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.OpenNote || num == this.OpenNote) && (int)\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 - num2 == (int)num;
 				}
 				int num3 = GuitarPlayer.\u02BB\u02BC\u02BB\u02BE\u02BC\u02BB\u02BD\u02BA\u02B5\u02BC\u02C1((int)num);
 				return num2 <= num3 && (int)\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 - num2 == (int)num;
@@ -133,11 +133,11 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 		{
 			if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != num && (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & num) == num)
 			{
-				if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9)
+				if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.OpenNote && num != this.OpenNote)
 				{
 					return true;
 				}
-				if ((\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9) != 0 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9)
+				if ((\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & this.OpenNote) != 0 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.OpenNote && num == this.OpenNote)
 				{
 					return true;
 				}
@@ -159,11 +159,11 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 		}
 		else
 		{
-			if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9)
+			if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.OpenNote && num != this.OpenNote)
 			{
 				return true;
 			}
-			if ((\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9) != 0 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9)
+			if ((\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & this.OpenNote) != 0 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.OpenNote && num == this.OpenNote)
 			{
 				return true;
 			}
@@ -189,7 +189,7 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 				int num2 = (int)(\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 ^ num);
 				if (this.\u02BC\u02B2\u02B2\u02BB\u02B7\u02B4\u02B3\u02B6\u02C1\u02BC\u02C0 && num2 > GuitarPlayer.\u02C1\u02BE\u02B4\u02B3\u02B8\u02BF\u02BC\u02BB\u02BA\u02BD\u02BA((int)num))
 				{
-					return (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 || num == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9) && (int)\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 - num2 == (int)num;
+					return (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.OpenNote || num == this.OpenNote) && (int)\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 - num2 == (int)num;
 				}
 				int num3 = GuitarPlayer.\u02BB\u02BC\u02BB\u02BE\u02BC\u02BB\u02BD\u02BA\u02B5\u02BC\u02C1((int)num);
 				return num2 <= num3 && (int)\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 - num2 == (int)num;
@@ -199,11 +199,11 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 		{
 			if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != num && (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & num) == num)
 			{
-				if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9)
+				if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.OpenNote && num != this.OpenNote)
 				{
 					return false;
 				}
-				if ((\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9) != 0 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9)
+				if ((\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & this.OpenNote) != 0 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.OpenNote && num == this.OpenNote)
 				{
 					return false;
 				}
@@ -225,11 +225,11 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 		}
 		else
 		{
-			if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9)
+			if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.OpenNote && num != this.OpenNote)
 			{
 				return false;
 			}
-			if ((\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9) != 0 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9)
+			if ((\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & this.OpenNote) != 0 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.OpenNote && num == this.OpenNote)
 			{
 				return false;
 			}
@@ -255,7 +255,7 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 				int num2 = (int)(\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 ^ num);
 				if (this.\u02BC\u02B2\u02B2\u02BB\u02B7\u02B4\u02B3\u02B6\u02C1\u02BC\u02C0 && num2 > GuitarPlayer.\u02C1\u02BE\u02B4\u02B3\u02B8\u02BF\u02BC\u02BB\u02BA\u02BD\u02BA((int)num))
 				{
-					return (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9) || (int)\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 - num2 == (int)num;
+					return (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.OpenNote && num != this.OpenNote) || (int)\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 - num2 == (int)num;
 				}
 				int num3 = GuitarPlayer.\u02BB\u02B9\u02BE\u02B8\u02C0\u02C1\u02BC\u02BD\u02B6\u02B6\u02B9((int)num);
 				return num2 <= num3 && (int)\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 - num2 == (int)num;
@@ -265,11 +265,11 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 		{
 			if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != num && (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & num) == num)
 			{
-				if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9)
+				if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.OpenNote && num != this.OpenNote)
 				{
 					return false;
 				}
-				if ((\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9) != 0 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9)
+				if ((\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & this.OpenNote) != 0 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.OpenNote && num == this.OpenNote)
 				{
 					return false;
 				}
@@ -291,11 +291,11 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 		}
 		else
 		{
-			if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9)
+			if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.OpenNote && num != this.OpenNote)
 			{
 				return true;
 			}
-			if ((\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9) != 0 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9)
+			if ((\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & this.OpenNote) != 0 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.OpenNote && num == this.OpenNote)
 			{
 				return true;
 			}
@@ -310,7 +310,7 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 	protected void \u02B7\u02BF\u02BD\u02B5\u02BF\u02BB\u02C1\u02B4\u02B7\u02C0\u02BD(Note \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8)
 	{
 		base.\u02BA\u02BE\u02B7\u02B7\u02B7\u02B4\u02B4\u02B9\u02B4\u02BD\u02B9(\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8);
-		this._GameManager.\u02BF\u02B8\u02BA\u02BB\u02BC\u02B5\u02BE\u02B7\u02C1\u02BA\u02BC.\u02C0\u02BC\u02B8\u02C0\u02B9\u02B5\u02BA\u02BD\u02B8\u02B3\u02B8(this, \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8, \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF);
+		this.gameManager.\u02BF\u02B8\u02BA\u02BB\u02BC\u02B5\u02BE\u02B7\u02C1\u02BA\u02BC.\u02C0\u02BC\u02B8\u02C0\u02B9\u02B5\u02BA\u02BD\u02B8\u02B3\u02B8(this, \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8, \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF);
 	}
 
 	protected bool \u02C1\u02B2\u02BB\u02C0\u02BA\u02C1\u02B9\u02B9\u02B5\u02B2\u02BC(Note \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2, ushort \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4)
@@ -327,7 +327,7 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 				int num2 = (int)(\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 ^ num);
 				if (this.\u02BC\u02B2\u02B2\u02BB\u02B7\u02B4\u02B3\u02B6\u02C1\u02BC\u02C0 && num2 > GuitarPlayer.\u02C1\u02BE\u02B4\u02B3\u02B8\u02BF\u02BC\u02BB\u02BA\u02BD\u02BA((int)num))
 				{
-					return (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9) || (int)\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 - num2 == (int)num;
+					return (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.OpenNote && num != this.OpenNote) || (int)\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 - num2 == (int)num;
 				}
 				int num3 = GuitarPlayer.\u02BB\u02BC\u02BB\u02BE\u02BC\u02BB\u02BD\u02BA\u02B5\u02BC\u02C1((int)num);
 				return num2 <= num3 && (int)\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 - num2 == (int)num;
@@ -337,11 +337,11 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 		{
 			if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != num && (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & num) == num)
 			{
-				if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9)
+				if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.OpenNote && num != this.OpenNote)
 				{
 					return true;
 				}
-				if ((\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9) != 0 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9)
+				if ((\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & this.OpenNote) != 0 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.OpenNote && num == this.OpenNote)
 				{
 					return true;
 				}
@@ -363,11 +363,11 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 		}
 		else
 		{
-			if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9)
+			if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.OpenNote && num != this.OpenNote)
 			{
 				return true;
 			}
-			if ((\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9) != 0 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9)
+			if ((\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & this.OpenNote) != 0 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.OpenNote && num == this.OpenNote)
 			{
 				return true;
 			}
@@ -422,7 +422,7 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 				int num2 = (int)(\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 ^ num);
 				if (this.\u02BC\u02B2\u02B2\u02BB\u02B7\u02B4\u02B3\u02B6\u02C1\u02BC\u02C0 && num2 > GuitarPlayer.\u02C1\u02BE\u02B4\u02B3\u02B8\u02BF\u02BC\u02BB\u02BA\u02BD\u02BA((int)num))
 				{
-					return (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 || num == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9) && (int)\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 - num2 == (int)num;
+					return (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.OpenNote || num == this.OpenNote) && (int)\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 - num2 == (int)num;
 				}
 				int num3 = GuitarPlayer.\u02BB\u02BC\u02BB\u02BE\u02BC\u02BB\u02BD\u02BA\u02B5\u02BC\u02C1((int)num);
 				return num2 > num3 || (int)\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 - num2 == (int)num;
@@ -432,11 +432,11 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 		{
 			if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != num && (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & num) == num)
 			{
-				if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9)
+				if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.OpenNote && num != this.OpenNote)
 				{
 					return true;
 				}
-				if ((\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9) != 0 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9)
+				if ((\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & this.OpenNote) != 0 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.OpenNote && num == this.OpenNote)
 				{
 					return true;
 				}
@@ -458,11 +458,11 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 		}
 		else
 		{
-			if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9)
+			if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.OpenNote && num != this.OpenNote)
 			{
 				return false;
 			}
-			if ((\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9) != 0 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9)
+			if ((\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & this.OpenNote) != 0 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.OpenNote && num == this.OpenNote)
 			{
 				return true;
 			}
@@ -506,7 +506,7 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 	protected void \u02B2\u02BA\u02B5\u02B5\u02BE\u02B2\u02BD\u02BC\u02BD\u02BC\u02BB(Note \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8)
 	{
 		base.\u02BA\u02BE\u02B7\u02B7\u02B7\u02B4\u02B4\u02B9\u02B4\u02BD\u02B9(\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8);
-		this._GameManager.\u02BF\u02B8\u02BA\u02BB\u02BC\u02B5\u02BE\u02B7\u02C1\u02BA\u02BC.\u02BD\u02B8\u02BD\u02BA\u02B7\u02BD\u02B7\u02C1\u02B2\u02B5\u02B4(this, \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8, \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF);
+		this.gameManager.\u02BF\u02B8\u02BA\u02BB\u02BC\u02B5\u02BE\u02B7\u02C1\u02BA\u02BC.\u02BD\u02B8\u02BD\u02BA\u02B7\u02BD\u02B7\u02C1\u02B2\u02B5\u02B4(this, \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8, \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF);
 	}
 
 	public ushort \u02B9\u02B6\u02B7\u02B2\u02B5\u02B8\u02BE\u02C0\u02B4\u02BF\u02B5()
@@ -528,7 +528,7 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 				int num2 = (int)(\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 ^ num);
 				if (this.\u02BC\u02B2\u02B2\u02BB\u02B7\u02B4\u02B3\u02B6\u02C1\u02BC\u02C0 && num2 > GuitarPlayer.\u02C1\u02BE\u02B4\u02B3\u02B8\u02BF\u02BC\u02BB\u02BA\u02BD\u02BA((int)num))
 				{
-					return (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9) || (int)\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 - num2 == (int)num;
+					return (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.OpenNote && num != this.OpenNote) || (int)\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 - num2 == (int)num;
 				}
 				int num3 = GuitarPlayer.\u02BB\u02BC\u02BB\u02BE\u02BC\u02BB\u02BD\u02BA\u02B5\u02BC\u02C1((int)num);
 				return num2 > num3 || (int)\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 - num2 == (int)num;
@@ -538,11 +538,11 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 		{
 			if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != num && (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & num) == num)
 			{
-				if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9)
+				if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.OpenNote && num != this.OpenNote)
 				{
 					return true;
 				}
-				if ((\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9) != 0 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9)
+				if ((\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & this.OpenNote) != 0 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.OpenNote && num == this.OpenNote)
 				{
 					return false;
 				}
@@ -564,11 +564,11 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 		}
 		else
 		{
-			if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9)
+			if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.OpenNote && num != this.OpenNote)
 			{
 				return false;
 			}
-			if ((\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9) != 0 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9)
+			if ((\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & this.OpenNote) != 0 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.OpenNote && num == this.OpenNote)
 			{
 				return false;
 			}
@@ -590,31 +590,31 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 		{
 			return;
 		}
-		this.inputBits = 0;
+		this.buttonsPressed = 0;
 		if (this.playerStuff.rewiredPlayer.GetButton(0))
 		{
-			this.inputBits |= 1;
+			this.buttonsPressed |= 1;
 		}
 		if (this.playerStuff.rewiredPlayer.GetButton(0))
 		{
-			this.inputBits |= 4;
+			this.buttonsPressed |= 4;
 		}
 		if (this.playerStuff.rewiredPlayer.GetButton(6))
 		{
-			this.inputBits |= 5;
+			this.buttonsPressed |= 5;
 		}
 		if (this.playerStuff.rewiredPlayer.GetButton(1))
 		{
-			this.inputBits |= 2;
+			this.buttonsPressed |= 2;
 		}
 		if (this.playerStuff.rewiredPlayer.GetButton(3))
 		{
-			this.inputBits |= 95;
+			this.buttonsPressed |= 95;
 		}
-		if (this.inputBits == 0 && this.playerStuff.rewiredPlayer.GetButton(5))
+		if (this.buttonsPressed == 0 && this.playerStuff.rewiredPlayer.GetButton(5))
 		{
 			this.\u02C0\u02B4\u02BD\u02BF\u02B8\u02B9\u02B4\u02BE\u02BE\u02B7\u02B3 = 0;
-			this.inputBits = (ushort)((int)this.inputBits | -15);
+			this.buttonsPressed = (ushort)((int)this.buttonsPressed | -15);
 		}
 		base.UpdateInputs();
 	}
@@ -680,7 +680,7 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 	protected override void \u02BA\u02BE\u02B7\u02B7\u02B7\u02B4\u02B4\u02B9\u02B4\u02BD\u02B9(Note \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8)
 	{
 		base.\u02BA\u02BE\u02B7\u02B7\u02B7\u02B4\u02B4\u02B9\u02B4\u02BD\u02B9(\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8);
-		this._GameManager.\u02BF\u02B8\u02BA\u02BB\u02BC\u02B5\u02BE\u02B7\u02C1\u02BA\u02BC.\u02BD\u02B8\u02BD\u02BA\u02B7\u02BD\u02B7\u02C1\u02B2\u02B5\u02B4(this, \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8, \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF);
+		this.gameManager.\u02BF\u02B8\u02BA\u02BB\u02BC\u02B5\u02BE\u02B7\u02C1\u02BA\u02BC.\u02BD\u02B8\u02BD\u02BA\u02B7\u02BD\u02B7\u02C1\u02B2\u02B5\u02B4(this, \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8, \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF);
 	}
 
 	private static int \u02BF\u02BA\u02B4\u02B7\u02BE\u02B7\u02B4\u02B5\u02B6\u02B9\u02C0(int \u02BE\u02BA\u02BE\u02B3\u02BF\u02B3\u02BC\u02C0\u02B4\u02C0\u02B9)
@@ -756,36 +756,36 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 		{
 			return;
 		}
-		this.inputBits = 0;
+		this.buttonsPressed = 0;
 		if (this.playerStuff.rewiredPlayer.GetButton(0))
 		{
-			this.inputBits |= 1;
+			this.buttonsPressed |= 1;
 		}
 		if (this.playerStuff.rewiredPlayer.GetButton(1))
 		{
-			this.inputBits |= 2;
+			this.buttonsPressed |= 2;
 		}
 		if (this.playerStuff.rewiredPlayer.GetButton(2))
 		{
-			this.inputBits |= 4;
+			this.buttonsPressed |= 4;
 		}
 		if (this.playerStuff.rewiredPlayer.GetButton(3))
 		{
-			this.inputBits |= 8;
+			this.buttonsPressed |= 8;
 		}
 		if (this.playerStuff.rewiredPlayer.GetButton(4))
 		{
-			this.inputBits |= 16;
+			this.buttonsPressed |= 16;
 		}
-		if (this.inputBits == 0 && this.playerStuff.rewiredPlayer.GetButton(8))
+		if (this.buttonsPressed == 0 && this.playerStuff.rewiredPlayer.GetButton(8))
 		{
 			this.\u02C0\u02B4\u02BD\u02BF\u02B8\u02B9\u02B4\u02BE\u02BE\u02B7\u02B3 = 0;
-			this.inputBits |= 64;
+			this.buttonsPressed |= 64;
 		}
 		base.UpdateInputs();
 	}
 
-	public override ushort \u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9
+	public override ushort OpenNote
 	{
 		get
 		{
@@ -807,7 +807,7 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 				int num2 = (int)(\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 ^ num);
 				if (this.\u02BC\u02B2\u02B2\u02BB\u02B7\u02B4\u02B3\u02B6\u02C1\u02BC\u02C0 && num2 > GuitarPlayer.\u02C1\u02BE\u02B4\u02B3\u02B8\u02BF\u02BC\u02BB\u02BA\u02BD\u02BA((int)num))
 				{
-					return (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 || num == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9) && (int)\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 - num2 == (int)num;
+					return (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.OpenNote || num == this.OpenNote) && (int)\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 - num2 == (int)num;
 				}
 				int num3 = GuitarPlayer.\u02BB\u02BC\u02BB\u02BE\u02BC\u02BB\u02BD\u02BA\u02B5\u02BC\u02C1((int)num);
 				return num2 <= num3 && (int)\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 - num2 == (int)num;
@@ -817,11 +817,11 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 		{
 			if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != num && (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & num) == num)
 			{
-				if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9)
+				if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.OpenNote && num != this.OpenNote)
 				{
 					return false;
 				}
-				if ((\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9) != 0 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9)
+				if ((\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & this.OpenNote) != 0 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.OpenNote && num == this.OpenNote)
 				{
 					return false;
 				}
@@ -843,11 +843,11 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 		}
 		else
 		{
-			if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9)
+			if (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 == this.OpenNote && num != this.OpenNote)
 			{
 				return true;
 			}
-			if ((\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9) != 0 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9 && num == this.\u02BC\u02B2\u02BD\u02B8\u02BF\u02BB\u02C1\u02B3\u02C0\u02B8\u02B9)
+			if ((\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & this.OpenNote) != 0 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != this.OpenNote && num == this.OpenNote)
 			{
 				return true;
 			}

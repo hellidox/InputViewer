@@ -335,7 +335,7 @@ public class MainMenu : BaseMenu
 
 	protected override void OnEnable()
 	{
-		TimeSpan timeSpan = TimeSpan.FromSeconds((double)PlayerPrefs.GetInt("Playtime", 0));
+		TimeSpan timeSpan = TimeSpan.FromSeconds((double)GlobalVariables.playTime);
 		this.buildVersion.text = string.Concat(new string[]
 		{
 			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02B3\u02B7\u02BC\u02B5\u02B3\u02B8\u02BB\u02BE\u02B5\u02B3,
@@ -346,6 +346,9 @@ public class MainMenu : BaseMenu
 			"\nTotal points: ",
 			string.Format("{0:n}", GlobalVariables.totalPoints).Replace(".00", "")
 		});
+		Debug.Log(string.Format("{0:00}:{1:00}:{2:00}", timeSpan.TotalHours, timeSpan.TotalMinutes % 60.0, timeSpan.TotalSeconds % 60.0));
+		Debug.Log(string.Format("{0:n}", GlobalVariables.totalPoints).Replace(".00", ""));
+		Debug.Log(timeSpan.TotalSeconds);
 		if (this.fs == 0f)
 		{
 			this.fs = this.buildVersion.fontSize;

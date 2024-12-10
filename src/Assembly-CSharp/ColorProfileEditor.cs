@@ -27,8 +27,8 @@ public class ColorProfileEditor : MonoBehaviour
 		}
 		this.\u02BB\u02B5\u02C0\u02B9\u02C1\u02B8\u02BE\u02B9\u02BE\u02BC\u02B9.SetActive(true);
 		this.\u02BB\u02C0\u02BE\u02B2\u02BE\u02BC\u02B2\u02B9\u02B9\u02BC\u02BC.text = u02B3_u02BB_u02BF_u02BC_u02C0_u02BB_u02C1_u02C1_u02B2_u02B5_u02BF.colorGameSetting.Name;
-		this.\u02B3\u02B7\u02B5\u02BA\u02B2\u02B3\u02BD\u02BC\u02BF\u02C0\u02BB.color = __FIXME_clon_util.HexColorToColor(u02B3_u02BB_u02BF_u02BC_u02C0_u02BB_u02C1_u02C1_u02B2_u02B5_u02BF.colorGameSetting.CurrentValue, 1f);
-		this.\u02B5\u02BB\u02C0\u02B8\u02B6\u02C1\u02BD\u02B5\u02C0\u02BA\u02B6.color = __FIXME_clon_util.HexColorToColor(u02B3_u02BB_u02BF_u02BC_u02C0_u02BB_u02C1_u02C1_u02B2_u02B5_u02BF.colorGameSetting.DefaultValue, 1f);
+		this.\u02B3\u02B7\u02B5\u02BA\u02B2\u02B3\u02BD\u02BC\u02BF\u02C0\u02BB.color = Helper.HexColorToColor(u02B3_u02BB_u02BF_u02BC_u02C0_u02BB_u02C1_u02C1_u02B2_u02B5_u02BF.colorGameSetting.CurrentValue, 1f);
+		this.\u02B5\u02BB\u02C0\u02B8\u02B6\u02C1\u02BD\u02B5\u02C0\u02BA\u02B6.color = Helper.HexColorToColor(u02B3_u02BB_u02BF_u02BC_u02C0_u02BB_u02C1_u02C1_u02B2_u02B5_u02BF.colorGameSetting.DefaultValue, 1f);
 		this.\u02B5\u02BF\u02BD\u02BA\u02B2\u02B6\u02BA\u02C1\u02B2\u02B7\u02B5.color = this.\u02BF\u02C0\u02BA\u02B8\u02B6\u02BF\u02BF\u02B4\u02BB\u02BF\u02C1(this.\u02B5\u02BB\u02C0\u02B8\u02B6\u02C1\u02BD\u02B5\u02C0\u02BA\u02B6.color);
 		string text = HexColor.ToHexString(u02B3_u02BB_u02BF_u02BC_u02C0_u02BB_u02C1_u02C1_u02B2_u02B5_u02BF.colorGameSetting.CurrentValue, false);
 		this.\u02BE\u02BA\u02B8\u02B4\u02BD\u02BF\u02B2\u02B8\u02B6\u02B9\u02B9.text = text;
@@ -308,8 +308,8 @@ public class ColorProfileEditor : MonoBehaviour
 		}
 		this.\u02BB\u02B5\u02C0\u02B9\u02C1\u02B8\u02BE\u02B9\u02BE\u02BC\u02B9.SetActive(true);
 		this.\u02BB\u02C0\u02BE\u02B2\u02BE\u02BC\u02B2\u02B9\u02B9\u02BC\u02BC.text = u02B3_u02BB_u02BF_u02BC_u02C0_u02BB_u02C1_u02C1_u02B2_u02B5_u02BF.colorGameSetting.Name;
-		this.\u02B3\u02B7\u02B5\u02BA\u02B2\u02B3\u02BD\u02BC\u02BF\u02C0\u02BB.color = __FIXME_clon_util.HexColorToColor(u02B3_u02BB_u02BF_u02BC_u02C0_u02BB_u02C1_u02C1_u02B2_u02B5_u02BF.colorGameSetting.CurrentValue, 681f);
-		this.\u02B5\u02BB\u02C0\u02B8\u02B6\u02C1\u02BD\u02B5\u02C0\u02BA\u02B6.color = __FIXME_clon_util.HexColorToColor(u02B3_u02BB_u02BF_u02BC_u02C0_u02BB_u02C1_u02C1_u02B2_u02B5_u02BF.colorGameSetting.DefaultValue, 1506f);
+		this.\u02B3\u02B7\u02B5\u02BA\u02B2\u02B3\u02BD\u02BC\u02BF\u02C0\u02BB.color = Helper.HexColorToColor(u02B3_u02BB_u02BF_u02BC_u02C0_u02BB_u02C1_u02C1_u02B2_u02B5_u02BF.colorGameSetting.CurrentValue, 681f);
+		this.\u02B5\u02BB\u02C0\u02B8\u02B6\u02C1\u02BD\u02B5\u02C0\u02BA\u02B6.color = Helper.HexColorToColor(u02B3_u02BB_u02BF_u02BC_u02C0_u02BB_u02C1_u02C1_u02B2_u02B5_u02BF.colorGameSetting.DefaultValue, 1506f);
 		this.\u02B5\u02BF\u02BD\u02BA\u02B2\u02B6\u02BA\u02C1\u02B2\u02B7\u02B5.color = this.\u02BF\u02C0\u02BA\u02B8\u02B6\u02BF\u02BF\u02B4\u02BB\u02BF\u02C1(this.\u02B5\u02BB\u02C0\u02B8\u02B6\u02C1\u02BD\u02B5\u02C0\u02BA\u02B6.color);
 		string text = HexColor.ToHexString(u02B3_u02BB_u02BF_u02BC_u02C0_u02BB_u02C1_u02C1_u02B2_u02B5_u02BF.colorGameSetting.CurrentValue, false);
 		this.\u02BE\u02BA\u02B8\u02B4\u02BD\u02BF\u02B2\u02B8\u02B6\u02B9\u02B9.text = text;
@@ -527,8 +527,8 @@ public class ColorProfileEditor : MonoBehaviour
 					}
 				}
 			}
-			Color color2 = __FIXME_clon_util.HexColorToColor(u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.colorSetting.CurrentValue, 1f);
-			Color color3 = __FIXME_clon_util.HexColorToColor(u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.colorSetting.DefaultValue, 1f);
+			Color color2 = Helper.HexColorToColor(u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.colorSetting.CurrentValue, 1f);
+			Color color3 = Helper.HexColorToColor(u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.colorSetting.DefaultValue, 1f);
 			GameObject gameObject = global::UnityEngine.Object.Instantiate<GameObject>(this.\u02B8\u02B9\u02BD\u02BC\u02BB\u02BA\u02B5\u02B8\u02B7\u02B7\u02B8, this.\u02B6\u02B7\u02C0\u02BC\u02B7\u02BB\u02B6\u02B4\u02B6\u02B7\u02BB);
 			gameObject.GetComponent<HorizontalLayoutGroup>().padding.left = (u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.splitString.Count - 1) * 50;
 			u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.inputField = gameObject.GetComponentInChildren<TMP_InputField>();
@@ -626,8 +626,8 @@ public class ColorProfileEditor : MonoBehaviour
 					}
 				}
 			}
-			Color color2 = __FIXME_clon_util.HexColorToColor(u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.colorSetting.CurrentValue, 729f);
-			Color color3 = __FIXME_clon_util.HexColorToColor(u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.colorSetting.DefaultValue, 1611f);
+			Color color2 = Helper.HexColorToColor(u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.colorSetting.CurrentValue, 729f);
+			Color color3 = Helper.HexColorToColor(u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.colorSetting.DefaultValue, 1611f);
 			GameObject gameObject = global::UnityEngine.Object.Instantiate<GameObject>(this.\u02B8\u02B9\u02BD\u02BC\u02BB\u02BA\u02B5\u02B8\u02B7\u02B7\u02B8, this.\u02B6\u02B7\u02C0\u02BC\u02B7\u02BB\u02B6\u02B4\u02B6\u02B7\u02BB);
 			gameObject.GetComponent<HorizontalLayoutGroup>().padding.left = (u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.splitString.Count - 1) * 17;
 			u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.inputField = gameObject.GetComponentInChildren<TMP_InputField>();
@@ -791,7 +791,7 @@ public class ColorProfileEditor : MonoBehaviour
 		{
 			this.colorGameSetting.CurrentValue = HexColor.FromHexString("#" + this.<>4__this.\u02BE\u02BA\u02B8\u02B4\u02BD\u02BF\u02B2\u02B8\u02B6\u02B9\u02B9.text);
 			Settings.Commit(true);
-			this.inputButtonImage.color = __FIXME_clon_util.HexColorToColor(this.colorGameSetting.CurrentValue, 1f);
+			this.inputButtonImage.color = Helper.HexColorToColor(this.colorGameSetting.CurrentValue, 1f);
 			this.inputButtonIcon.color = this.<>4__this.\u02BF\u02C0\u02BA\u02B8\u02B6\u02BF\u02BF\u02B4\u02BB\u02BF\u02C1(this.inputButtonImage.color);
 			this.inputText.gameObject.GetComponent<Image>().color = this.inputButtonImage.color;
 			this.inputText.text = this.<>4__this.\u02BE\u02BA\u02B8\u02B4\u02BD\u02BF\u02B2\u02B8\u02B6\u02B9\u02B9.text;
@@ -905,8 +905,8 @@ public class ColorProfileEditor : MonoBehaviour
 		{
 			if (this.CS$<>8__locals1.<>4__this.\u02B3\u02B3\u02B2\u02BE\u02B7\u02B8\u02B2\u02BA\u02B9\u02B8\u02B9(this.inputField, value, true, this.colorSetting))
 			{
-				Color color = this.CS$<>8__locals1.<>4__this.\u02BF\u02C0\u02BA\u02B8\u02B6\u02BF\u02BF\u02B4\u02BB\u02BF\u02C1(__FIXME_clon_util.HexColorToColor(this.colorSetting.CurrentValue, 1f));
-				this.imageObjects[1].color = (this.imageObjects[2].color = __FIXME_clon_util.HexColorToColor(this.colorSetting.CurrentValue, 1f));
+				Color color = this.CS$<>8__locals1.<>4__this.\u02BF\u02C0\u02BA\u02B8\u02B6\u02BF\u02BF\u02B4\u02BB\u02BF\u02C1(Helper.HexColorToColor(this.colorSetting.CurrentValue, 1f));
+				this.imageObjects[1].color = (this.imageObjects[2].color = Helper.HexColorToColor(this.colorSetting.CurrentValue, 1f));
 				this.textObjects[1].color = (this.textObjects[2].color = (this.textObjects[3].color = (this.imageObjects[3].color = color)));
 			}
 		}
@@ -915,8 +915,8 @@ public class ColorProfileEditor : MonoBehaviour
 		{
 			if (this.CS$<>8__locals1.<>4__this.\u02B3\u02B3\u02B2\u02BE\u02B7\u02B8\u02B2\u02BA\u02B9\u02B8\u02B9(this.inputField, value, true, this.colorSetting))
 			{
-				Color color = this.CS$<>8__locals1.<>4__this.\u02BF\u02C0\u02BA\u02B8\u02B6\u02BF\u02BF\u02B4\u02BB\u02BF\u02C1(__FIXME_clon_util.HexColorToColor(this.colorSetting.CurrentValue, 1f));
-				this.imageObjects[1].color = (this.imageObjects[2].color = __FIXME_clon_util.HexColorToColor(this.colorSetting.CurrentValue, 1f));
+				Color color = this.CS$<>8__locals1.<>4__this.\u02BF\u02C0\u02BA\u02B8\u02B6\u02BF\u02BF\u02B4\u02BB\u02BF\u02C1(Helper.HexColorToColor(this.colorSetting.CurrentValue, 1f));
+				this.imageObjects[1].color = (this.imageObjects[2].color = Helper.HexColorToColor(this.colorSetting.CurrentValue, 1f));
 				this.textObjects[1].color = (this.textObjects[2].color = (this.textObjects[3].color = (this.imageObjects[3].color = color)));
 			}
 		}
@@ -925,8 +925,8 @@ public class ColorProfileEditor : MonoBehaviour
 		{
 			if (this.CS$<>8__locals1.<>4__this.\u02B3\u02B3\u02B2\u02BE\u02B7\u02B8\u02B2\u02BA\u02B9\u02B8\u02B9(this.inputField, value, false, this.colorSetting))
 			{
-				Color color = this.CS$<>8__locals1.<>4__this.\u02BF\u02C0\u02BA\u02B8\u02B6\u02BF\u02BF\u02B4\u02BB\u02BF\u02C1(__FIXME_clon_util.HexColorToColor(this.colorSetting.CurrentValue, 1f));
-				this.imageObjects[1].color = (this.imageObjects[2].color = __FIXME_clon_util.HexColorToColor(this.colorSetting.CurrentValue, 1f));
+				Color color = this.CS$<>8__locals1.<>4__this.\u02BF\u02C0\u02BA\u02B8\u02B6\u02BF\u02BF\u02B4\u02BB\u02BF\u02C1(Helper.HexColorToColor(this.colorSetting.CurrentValue, 1f));
+				this.imageObjects[1].color = (this.imageObjects[2].color = Helper.HexColorToColor(this.colorSetting.CurrentValue, 1f));
 				this.textObjects[1].color = (this.textObjects[2].color = (this.textObjects[3].color = (this.imageObjects[3].color = color)));
 			}
 		}
@@ -940,7 +940,7 @@ public class ColorProfileEditor : MonoBehaviour
 		{
 			this.colorSetting.CurrentValue = this.colorSetting.DefaultValue;
 			Settings.Commit(true);
-			this.imageObjects[1].color = __FIXME_clon_util.HexColorToColor(this.colorSetting.CurrentValue, 1f);
+			this.imageObjects[1].color = Helper.HexColorToColor(this.colorSetting.CurrentValue, 1f);
 			Color color = this.CS$<>8__locals1.<>4__this.\u02BF\u02C0\u02BA\u02B8\u02B6\u02BF\u02BF\u02B4\u02BB\u02BF\u02C1(this.imageObjects[1].color);
 			this.textObjects[1].color = color;
 			this.textObjects[2].color = color;

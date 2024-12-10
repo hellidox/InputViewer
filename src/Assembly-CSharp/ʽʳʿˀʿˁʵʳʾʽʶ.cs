@@ -35,7 +35,7 @@ internal class \u02BD\u02B3\u02BF\u02C0\u02BF\u02C1\u02B5\u02B3\u02BE\u02BD\u02B
 		byte[] array2 = texture2D.EncodeToPNG();
 		string text = this.scoreTimestamp.ToLocalTime().ToString("yyyyMMddHHmmss");
 		string text2 = string.Concat(new string[] { "clonehero-", this.\u02B3\u02B3\u02B2\u02C0\u02B4\u02B7\u02BA\u02B8\u02B7\u02BE\u02B8, "-", text, ".png" });
-		string text3 = __FIXME_clon_util.\u02BB\u02B4\u02B7\u02BB\u02BB\u02BD\u02C1\u02BD\u02BC\u02B9\u02BE(text2).Replace(" ", "-");
+		string text3 = Helper.\u02BB\u02B4\u02B7\u02BB\u02BB\u02BD\u02C1\u02BD\u02BC\u02B9\u02BE(text2).Replace(" ", "-");
 		text2 = Path.Combine(this.\u02B3\u02BA\u02BE\u02B3\u02C0\u02B9\u02B5\u02B9\u02C1\u02BA\u02B3, text3);
 		this.\u02B3\u02B2\u02BB\u02BB\u02BB\u02BB\u02B3\u02BF\u02C0\u02BA\u02C1 = text2;
 		File.WriteAllBytes(text2, array2);

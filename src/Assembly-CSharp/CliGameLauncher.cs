@@ -825,7 +825,7 @@ public class CliGameLauncher : MonoBehaviour
 		}
 		string text = Path.Combine(this.\u02B6\u02BB\u02BB\u02BC\u02C0\u02B5\u02BA\u02B6\u02B3\u02C0\u02B7, "notes.mid");
 		string text2 = Path.Combine(this.\u02B6\u02BB\u02BB\u02BC\u02C0\u02B5\u02BA\u02B6\u02B3\u02C0\u02B7, "notes.chart");
-		string[] array = __FIXME_clon_util.\u02BB\u02B9\u02B3\u02C0\u02C1\u02B2\u02B9\u02B2\u02B7\u02B8\u02B2(this.\u02B6\u02BB\u02BB\u02BC\u02C0\u02B5\u02BA\u02B6\u02B3\u02C0\u02B7, ".wav|.mp3|.ogg|.opus", SearchOption.TopDirectoryOnly);
+		string[] array = Helper.\u02BB\u02B9\u02B3\u02C0\u02C1\u02B2\u02B9\u02B2\u02B7\u02B8\u02B2(this.\u02B6\u02BB\u02BB\u02BC\u02C0\u02B5\u02BA\u02B6\u02B3\u02C0\u02B7, ".wav|.mp3|.ogg|.opus", SearchOption.TopDirectoryOnly);
 		this.\u02B4\u02BC\u02BF\u02BC\u02BA\u02B9\u02B8\u02B2\u02BD\u02BE\u02BD = new SongEntry(this.\u02B6\u02BB\u02BB\u02BC\u02C0\u02B5\u02BA\u02B6\u02B3\u02C0\u02B7);
 		if (File.Exists(text))
 		{

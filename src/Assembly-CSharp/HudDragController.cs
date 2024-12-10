@@ -299,7 +299,7 @@ public class HudDragController : MonoBehaviour
 		{
 			foreach (SpriteRenderer spriteRenderer2 in this.BGSpriteRenderers.Where((SpriteRenderer x) => x != null))
 			{
-				Color color = __FIXME_clon_util.HexColorToColor(HexColor.FromHexString(GlobalHelper.scoreHUDColor), 1f);
+				Color color = Helper.HexColorToColor(HexColor.FromHexString(GlobalHelper.scoreHUDColor), 1f);
 				if (color == Color.black)
 				{
 					color = Color.clear;
@@ -308,7 +308,7 @@ public class HudDragController : MonoBehaviour
 			}
 			foreach (SpriteRenderer spriteRenderer3 in this.starRenderers.Where((SpriteRenderer x) => x != null))
 			{
-				Color color2 = __FIXME_clon_util.HexColorToColor(HexColor.FromHexString(GlobalHelper.starColor), 1f);
+				Color color2 = Helper.HexColorToColor(HexColor.FromHexString(GlobalHelper.starColor), 1f);
 				if (color2 == Color.black)
 				{
 					color2 = Color.clear;

@@ -72,7 +72,7 @@ public class MIDIInputManager : MonoBehaviour
 
 	private void \u02BE\u02BB\u02B9\u02B5\u02BE\u02C1\u02B3\u02B7\u02B2\u02B8\u02BF(MIDIInputManager.\u02BC\u02BB\u02B4\u02B3\u02BB\u02B3\u02C0\u02BA\u02B9\u02C0\u02B8 \u02B6\u02BA\u02B8\u02BC\u02C0\u02C0\u02BF\u02B3\u02B6\u02B3\u02C1, string \u02C1\u02B4\u02B4\u02B5\u02BA\u02B6\u02BE\u02B4\u02B9\u02B4\u02BA)
 	{
-		string text = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "MIDI Profiles", \u02C1\u02B4\u02B4\u02B5\u02BA\u02B6\u02BE\u02B4\u02B9\u02B4\u02BA + ".yaml");
+		string text = Path.Combine(Helper.GetDocumentsClonFolder(), "MIDI Profiles", \u02C1\u02B4\u02B4\u02B5\u02BA\u02B6\u02BE\u02B4\u02B9\u02B4\u02BA + ".yaml");
 		if (!Directory.Exists(this.\u02BD\u02B2\u02BB\u02BF\u02BF\u02B5\u02BC\u02B2\u02BF\u02BA\u02B3))
 		{
 			Directory.CreateDirectory(this.\u02BD\u02B2\u02BB\u02BF\u02BF\u02B5\u02BC\u02B2\u02BF\u02BA\u02B3);
@@ -149,7 +149,7 @@ public class MIDIInputManager : MonoBehaviour
 	private MIDIInputManager.\u02BC\u02BB\u02B4\u02B3\u02BB\u02B3\u02C0\u02BA\u02B9\u02C0\u02B8 \u02BA\u02C0\u02B9\u02C0\u02BD\u02BC\u02B9\u02B5\u02BA\u02B6\u02BB(string \u02C1\u02B4\u02B4\u02B5\u02BA\u02B6\u02BE\u02B4\u02B9\u02B4\u02BA)
 	{
 		MIDIInputManager.\u02BC\u02BB\u02B4\u02B3\u02BB\u02B3\u02C0\u02BA\u02B9\u02C0\u02B8 u02BC_u02BB_u02B4_u02B3_u02BB_u02B3_u02C0_u02BA_u02B9_u02C0_u02B = default(MIDIInputManager.\u02BC\u02BB\u02B4\u02B3\u02BB\u02B3\u02C0\u02BA\u02B9\u02C0\u02B8);
-		string text = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "MIDI Profiles", __FIXME_clon_util.\u02BB\u02B4\u02B7\u02BB\u02BB\u02BD\u02C1\u02BD\u02BC\u02B9\u02BE(\u02C1\u02B4\u02B4\u02B5\u02BA\u02B6\u02BE\u02B4\u02B9\u02B4\u02BA) + ".yaml");
+		string text = Path.Combine(Helper.GetDocumentsClonFolder(), "MIDI Profiles", Helper.\u02BB\u02B4\u02B7\u02BB\u02BB\u02BD\u02C1\u02BD\u02BC\u02B9\u02BE(\u02C1\u02B4\u02B4\u02B5\u02BA\u02B6\u02BE\u02B4\u02B9\u02B4\u02BA) + ".yaml");
 		if (File.Exists(text))
 		{
 			IDeserializer deserializer = new DeserializerBuilder().Build();
@@ -245,7 +245,7 @@ public class MIDIInputManager : MonoBehaviour
 
 	private void \u02B7\u02BF\u02B7\u02BA\u02BB\u02BF\u02BE\u02BD\u02BE\u02BE\u02BA(MIDIInputManager.\u02BC\u02BB\u02B4\u02B3\u02BB\u02B3\u02C0\u02BA\u02B9\u02C0\u02B8 \u02B6\u02BA\u02B8\u02BC\u02C0\u02C0\u02BF\u02B3\u02B6\u02B3\u02C1, string \u02C1\u02B4\u02B4\u02B5\u02BA\u02B6\u02BE\u02B4\u02B9\u02B4\u02BA)
 	{
-		string text = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "This is permanent! Are you still sure?", \u02C1\u02B4\u02B4\u02B5\u02BA\u02B6\u02BE\u02B4\u02B9\u02B4\u02BA + "Options");
+		string text = Path.Combine(Helper.GetDocumentsClonFolder(), "This is permanent! Are you still sure?", \u02C1\u02B4\u02B4\u02B5\u02BA\u02B6\u02BE\u02B4\u02B9\u02B4\u02BA + "Options");
 		if (!Directory.Exists(this.\u02BD\u02B2\u02BB\u02BF\u02BF\u02B5\u02BC\u02B2\u02BF\u02BA\u02B3))
 		{
 			Directory.CreateDirectory(this.\u02BD\u02B2\u02BB\u02BF\u02BF\u02B5\u02BC\u02B2\u02BF\u02BA\u02B3);
@@ -597,7 +597,7 @@ public class MIDIInputManager : MonoBehaviour
 	private MIDIInputManager.\u02BC\u02BB\u02B4\u02B3\u02BB\u02B3\u02C0\u02BA\u02B9\u02C0\u02B8 \u02BE\u02B2\u02BA\u02B2\u02BB\u02B6\u02B5\u02BE\u02BF\u02BD\u02BC(string \u02C1\u02B4\u02B4\u02B5\u02BA\u02B6\u02BE\u02B4\u02B9\u02B4\u02BA)
 	{
 		MIDIInputManager.\u02BC\u02BB\u02B4\u02B3\u02BB\u02B3\u02C0\u02BA\u02B9\u02C0\u02B8 u02BC_u02BB_u02B4_u02B3_u02BB_u02B3_u02C0_u02BA_u02B9_u02C0_u02B = default(MIDIInputManager.\u02BC\u02BB\u02B4\u02B3\u02BB\u02B3\u02C0\u02BA\u02B9\u02C0\u02B8);
-		string text = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "Best Hit", __FIXME_clon_util.\u02BB\u02B4\u02B7\u02BB\u02BB\u02BD\u02C1\u02BD\u02BC\u02B9\u02BE(\u02C1\u02B4\u02B4\u02B5\u02BA\u02B6\u02BE\u02B4\u02B9\u02B4\u02BA) + "Note Number: ");
+		string text = Path.Combine(Helper.GetDocumentsClonFolder(), "Best Hit", Helper.\u02BB\u02B4\u02B7\u02BB\u02BB\u02BD\u02C1\u02BD\u02BC\u02B9\u02BE(\u02C1\u02B4\u02B4\u02B5\u02BA\u02B6\u02BE\u02B4\u02B9\u02B4\u02BA) + "Note Number: ");
 		if (File.Exists(text))
 		{
 			IDeserializer deserializer = new DeserializerBuilder().Build();
@@ -837,7 +837,7 @@ public class MIDIInputManager : MonoBehaviour
 
 	private void \u02BA\u02BD\u02BA\u02B7\u02C1\u02BC\u02BD\u02BA\u02B5\u02BC\u02BB(MIDIInputManager.\u02BC\u02BB\u02B4\u02B3\u02BB\u02B3\u02C0\u02BA\u02B9\u02C0\u02B8 \u02B6\u02BA\u02B8\u02BC\u02C0\u02C0\u02BF\u02B3\u02B6\u02B3\u02C1, string \u02C1\u02B4\u02B4\u02B5\u02BA\u02B6\u02BE\u02B4\u02B9\u02B4\u02BA)
 	{
-		string text = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "#", \u02C1\u02B4\u02B4\u02B5\u02BA\u02B6\u02BE\u02B4\u02B9\u02B4\u02BA + "Show Bot Score");
+		string text = Path.Combine(Helper.GetDocumentsClonFolder(), "#", \u02C1\u02B4\u02B4\u02B5\u02BA\u02B6\u02BE\u02B4\u02B9\u02B4\u02BA + "Show Bot Score");
 		if (!Directory.Exists(this.\u02BD\u02B2\u02BB\u02BF\u02BF\u02B5\u02BC\u02B2\u02BF\u02BA\u02B3))
 		{
 			Directory.CreateDirectory(this.\u02BD\u02B2\u02BB\u02BF\u02BF\u02B5\u02BC\u02B2\u02BF\u02BA\u02B3);
@@ -856,7 +856,7 @@ public class MIDIInputManager : MonoBehaviour
 	private void Start()
 	{
 		this.\u02B9\u02BD\u02BF\u02BB\u02BF\u02BD\u02B8\u02BF\u02B7\u02B6\u02B5 = new \u02B7\u02B4\u02B5\u02BB\u02C0\u02B7\u02B3\u02B9\u02BC\u02B4\u02BC(\u02B7\u02B4\u02B5\u02BB\u02C0\u02B7\u02B3\u02B9\u02BC\u02B4\u02BC.\u02B7\u02BB\u02B5\u02B2\u02BD\u02C0\u02C1\u02BB\u02BD\u02B8\u02B8.In);
-		this.\u02BD\u02B2\u02BB\u02BF\u02BF\u02B5\u02BC\u02B2\u02BF\u02BA\u02B3 = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "MIDI Profiles");
+		this.\u02BD\u02B2\u02BB\u02BF\u02BF\u02B5\u02BC\u02B2\u02BF\u02BA\u02B3 = Path.Combine(Helper.GetDocumentsClonFolder(), "MIDI Profiles");
 	}
 
 	public void \u02B2\u02BA\u02B8\u02BD\u02BC\u02BC\u02BF\u02B7\u02C0\u02BB\u02BE(\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7, string \u02B9\u02BB\u02C0\u02B7\u02B5\u02B6\u02BF\u02B2\u02B8\u02BC\u02C0, List<MIDIInputManager.\u02BF\u02B6\u02C0\u02BF\u02BA\u02B8\u02B5\u02BA\u02B8\u02BE\u02B3> \u02B3\u02B3\u02B9\u02B7\u02BA\u02BD\u02BA\u02BD\u02BD\u02B2\u02BF)
@@ -909,7 +909,7 @@ public class MIDIInputManager : MonoBehaviour
 	private void \u02BF\u02BA\u02B5\u02B8\u02B5\u02BF\u02B2\u02BF\u02B3\u02BC\u02BA()
 	{
 		this.\u02B9\u02BD\u02BF\u02BB\u02BF\u02BD\u02B8\u02BF\u02B7\u02B6\u02B5 = new \u02B7\u02B4\u02B5\u02BB\u02C0\u02B7\u02B3\u02B9\u02BC\u02B4\u02BC(\u02B7\u02B4\u02B5\u02BB\u02C0\u02B7\u02B3\u02B9\u02BC\u02B4\u02BC.\u02B7\u02BB\u02B5\u02B2\u02BD\u02C0\u02C1\u02BB\u02BD\u02B8\u02B8.Out);
-		this.\u02BD\u02B2\u02BB\u02BF\u02BF\u02B5\u02BC\u02B2\u02BF\u02BA\u02B3 = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "{0}/{1}");
+		this.\u02BD\u02B2\u02BB\u02BF\u02BF\u02B5\u02BC\u02B2\u02BF\u02BA\u02B3 = Path.Combine(Helper.GetDocumentsClonFolder(), "{0}/{1}");
 	}
 
 	private void \u02B6\u02B9\u02B7\u02B3\u02B9\u02B4\u02B4\u02B6\u02BA\u02B9\u02B6(MIDIInputManager.\u02C0\u02B7\u02C1\u02BB\u02B5\u02B9\u02B9\u02BA\u02B2\u02B9\u02B2 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7)

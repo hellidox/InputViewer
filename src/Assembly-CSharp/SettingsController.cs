@@ -8,7 +8,7 @@ public static class SettingsController
 {
 	public static string \u02BE\u02BF\u02BE\u02BB\u02B3\u02B8\u02B9\u02BD\u02B9\u02B4\u02BC()
 	{
-		return Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "settings.ini");
+		return Path.Combine(Helper.GetDocumentsClonFolder(), "settings.ini");
 	}
 
 	[SettingsInit]
@@ -43,7 +43,7 @@ public static class SettingsController
 		SettingsController.\u02C1\u02B6\u02B5\u02C1\u02B7\u02BE\u02B5\u02B9\u02B9\u02BB\u02C1 = new GameSetting(sectionKey2, "highway_lightning", true);
 		SettingsController.\u02C1\u02BF\u02BC\u02B4\u02BE\u02B7\u02BD\u02BC\u02B5\u02BC\u02B7 = new GameSetting(sectionKey2, "note_sp_colors", true);
 		SettingsController.\u02B3\u02B9\u02C1\u02BF\u02B2\u02B2\u02B6\u02BF\u02B4\u02B4\u02B2 = new GameSetting(sectionKey2, "song_display", true);
-		SettingsController.\u02BB\u02B5\u02BA\u02B6\u02BE\u02BA\u02B6\u02BD\u02B3\u02B9\u02BF = new GameSetting(sectionKey2, "graphicsapi", 0, 0, __FIXME_clon_util.\u02C0\u02B4\u02B9\u02C0\u02BE\u02B5\u02BA\u02B6\u02B8\u02B6\u02BD((ushort)__FIXME_clon_util.SupportedGraphicsAPIs()) - 1, 1);
+		SettingsController.\u02BB\u02B5\u02BA\u02B6\u02BE\u02BA\u02B6\u02BD\u02B3\u02B9\u02BF = new GameSetting(sectionKey2, "graphicsapi", 0, 0, Helper.\u02C0\u02B4\u02B9\u02C0\u02BE\u02B5\u02BA\u02B6\u02B8\u02B6\u02BD((ushort)Helper.SupportedGraphicsAPIs()) - 1, 1);
 		SettingsController.\u02BC\u02BA\u02BE\u02BB\u02B7\u02BE\u02BD\u02BE\u02BC\u02B2\u02B7 = new GameSetting(sectionKey3, "highway_placement", 0, -5, 5, 1);
 		SettingsController.\u02BA\u02BF\u02BF\u02B7\u02B4\u02B6\u02BD\u02BC\u02BE\u02B5\u02BA = new GameSetting(sectionKey3, "song_export", false);
 		SettingsController.\u02BF\u02BC\u02B2\u02B5\u02C0\u02B5\u02B4\u02C0\u02B3\u02B3\u02BF = new \u02B7\u02BF\u02C0\u02B9\u02B4\u02BB\u02B6\u02BB\u02BC\u02C1\u02C1(sectionKey3, "hud_position", new Vector3(0.08f, -1.38f, 0f));

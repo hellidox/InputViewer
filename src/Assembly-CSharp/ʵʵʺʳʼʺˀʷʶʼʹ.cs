@@ -174,7 +174,7 @@ public static class \u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC
 		return \u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B4\u02BE\u02B5\u02B6\u02BB\u02B4\u02B6\u02B9\u02B5\u02B7\u02BD.Count != 0 && !flag;
 	}
 
-	private static string \u02B2\u02C0\u02B9\u02C0\u02BA\u02C0\u02BA\u02BE\u02B6\u02B4\u02BD = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "Setlists");
+	private static string \u02B2\u02C0\u02B9\u02C0\u02BA\u02C0\u02BA\u02BE\u02B6\u02B4\u02BD = Path.Combine(Helper.GetDocumentsClonFolder(), "Setlists");
 
 	public static string \u02BC\u02BD\u02BE\u02BB\u02B2\u02B8\u02C0\u02B6\u02BA\u02B9\u02B7;
 

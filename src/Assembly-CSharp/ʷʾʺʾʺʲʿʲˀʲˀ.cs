@@ -212,8 +212,8 @@ public class \u02B7\u02BE\u02BA\u02BE\u02BA\u02B2\u02BF\u02B2\u02C0\u02B2\u02C0
 
 	public \u02B7\u02BE\u02BA\u02BE\u02BA\u02B2\u02BF\u02B2\u02C0\u02B2\u02C0()
 	{
-		this.\u02B9\u02B8\u02B8\u02BB\u02B2\u02B8\u02BD\u02B4\u02B4\u02BD\u02BC = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "profiles.bin");
-		this.\u02BC\u02C1\u02BB\u02B5\u02B6\u02C0\u02B7\u02B6\u02C0\u02C0\u02B6 = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "profiles.ini");
+		this.\u02B9\u02B8\u02B8\u02BB\u02B2\u02B8\u02BD\u02B4\u02B4\u02BD\u02BC = Path.Combine(Helper.GetDocumentsClonFolder(), "profiles.bin");
+		this.\u02BC\u02C1\u02BB\u02B5\u02B6\u02C0\u02B7\u02B6\u02C0\u02C0\u02B6 = Path.Combine(Helper.GetDocumentsClonFolder(), "profiles.ini");
 		Settings.RegisterConfigFileName("profiles", this.\u02BC\u02C1\u02BB\u02B5\u02B6\u02C0\u02B7\u02B6\u02C0\u02C0\u02B6);
 	}
 

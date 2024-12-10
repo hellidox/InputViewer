@@ -92,7 +92,7 @@ public class BassAudioManager : MonoBehaviour
 
 	public void \u02B4\u02C0\u02BF\u02B7\u02BB\u02BF\u02BE\u02B6\u02B2\u02B8\u02BB()
 	{
-		string text = __FIXME_clon_util.\u02BD\u02C1\u02C0\u02BA\u02B6\u02B4\u02BF\u02B9\u02B3\u02BD\u02C0();
+		string text = Helper.\u02BD\u02C1\u02C0\u02BA\u02B6\u02B4\u02BF\u02B9\u02B3\u02BD\u02C0();
 		foreach (string text2 in BassAudioManager.\u02BB\u02BD\u02B9\u02BF\u02BC\u02C0\u02C0\u02B3\u02B7\u02BD\u02BF)
 		{
 			int num = \u02B7\u02B9\u02B9\u02BB\u02B3\u02B6\u02B6\u02B6\u02B6\u02C1\u02BF.\u02B3\u02C1\u02B9\u02C1\u02B2\u02B3\u02BF\u02BC\u02B7\u02BD\u02B5(Path.Combine(text, text2));
@@ -842,7 +842,7 @@ public class BassAudioManager : MonoBehaviour
 
 	public void \u02B4\u02C1\u02B4\u02BC\u02B4\u02BF\u02B6\u02B3\u02B7\u02B2\u02C0()
 	{
-		string text = __FIXME_clon_util.\u02BD\u02C1\u02C0\u02BA\u02B6\u02B4\u02BF\u02B9\u02B3\u02BD\u02C0();
+		string text = Helper.\u02BD\u02C1\u02C0\u02BA\u02B6\u02B4\u02BF\u02B9\u02B3\u02BD\u02C0();
 		string[] u02BB_u02BD_u02B9_u02BF_u02BC_u02C0_u02C0_u02B3_u02B7_u02BD_u02BF = BassAudioManager.\u02BB\u02BD\u02B9\u02BF\u02BC\u02C0\u02C0\u02B3\u02B7\u02BD\u02BF;
 		for (int i = 0; i < u02BB_u02BD_u02B9_u02BF_u02BC_u02C0_u02C0_u02B3_u02B7_u02BD_u02BF.Length; i += 0)
 		{
@@ -1034,7 +1034,7 @@ public class BassAudioManager : MonoBehaviour
 	public void \u02B2\u02B9\u02BA\u02BA\u02B3\u02B8\u02B4\u02B5\u02BE\u02B7\u02BB(SongEntry \u02BA\u02B4\u02B8\u02BA\u02C1\u02B7\u02BF\u02BD\u02B5\u02BE\u02BA)
 	{
 		this.\u02BA\u02B4\u02BB\u02BC\u02B4\u02BF\u02BC\u02BF\u02B3\u02C1\u02B7();
-		string text = __FIXME_clon_util.\u02BB\u02BD\u02B6\u02B4\u02BE\u02C1\u02B4\u02BD\u02B9\u02C0\u02BC(Path.Combine(\u02BA\u02B4\u02B8\u02BA\u02C1\u02B7\u02BF\u02BD\u02B5\u02BE\u02BA.folderPath, "preview"), BassAudioManager.\u02BE\u02BA\u02BA\u02C1\u02BE\u02BC\u02BD\u02B6\u02B6\u02B6\u02B7, -1);
+		string text = Helper.\u02BB\u02BD\u02B6\u02B4\u02BE\u02C1\u02B4\u02BD\u02B9\u02C0\u02BC(Path.Combine(\u02BA\u02B4\u02B8\u02BA\u02C1\u02B7\u02BF\u02BD\u02B5\u02BE\u02BA.folderPath, "preview"), BassAudioManager.\u02BE\u02BA\u02BA\u02C1\u02BE\u02BC\u02BD\u02B6\u02B6\u02B6\u02B7, -1);
 		this.\u02B5\u02BB\u02C1\u02BB\u02B5\u02B3\u02BA\u02BD\u02BF\u02BF\u02B5 = false;
 		float num;
 		if (text == null)
@@ -1156,7 +1156,7 @@ public class BassAudioManager : MonoBehaviour
 				}
 				else
 				{
-					string text = __FIXME_clon_util.\u02BB\u02BD\u02B6\u02B4\u02BE\u02C1\u02B4\u02BD\u02B9\u02C0\u02BC(Path.Combine(\u02BA\u02B4\u02B8\u02BA\u02C1\u02B7\u02BF\u02BD\u02B5\u02BE\u02BA.folderPath, BassAudioManager.\u02B7\u02BC\u02C1\u02C0\u02BE\u02B8\u02B4\u02B3\u02BA\u02B5\u02C1[i]), BassAudioManager.\u02BE\u02BA\u02BA\u02C1\u02BE\u02BC\u02BD\u02B6\u02B6\u02B6\u02B7, -1);
+					string text = Helper.\u02BB\u02BD\u02B6\u02B4\u02BE\u02C1\u02B4\u02BD\u02B9\u02C0\u02BC(Path.Combine(\u02BA\u02B4\u02B8\u02BA\u02C1\u02B7\u02BF\u02BD\u02B5\u02BE\u02BA.folderPath, BassAudioManager.\u02B7\u02BC\u02C1\u02C0\u02BE\u02B8\u02B4\u02B3\u02BA\u02B5\u02C1[i]), BassAudioManager.\u02BE\u02BA\u02BA\u02C1\u02BE\u02BC\u02BD\u02B6\u02B6\u02B6\u02B7, -1);
 					if (text == null)
 					{
 						goto IL_01D5;

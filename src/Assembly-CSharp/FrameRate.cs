@@ -24,6 +24,7 @@ public class FrameRate : MonoBehaviour
 		this.ofs = -1f;
 		this.ticker = 2f;
 		GlobalVariables.misses = 0;
+		this.speedhackCheckNumber = -1;
 		GC.Collect();
 		bool useJudgements = GlobalHelper.useJudgements;
 		this.textDisplay = base.GetComponent<TextMeshProUGUI>();
@@ -50,6 +51,24 @@ public class FrameRate : MonoBehaviour
 		this.vsyncTimer += Time.unscaledDeltaTime;
 		if (this.startctr == -1)
 		{
+			if (this.speedhackCheckNumber == -1)
+			{
+				FrameRate.GetSystemTimePreciseAsFileTime(out this.ftStart);
+				this.udtTotal = (double)(-(double)Time.unscaledDeltaTime);
+				this.speedhackCheckNumber++;
+			}
+			this.udtTotal += (double)Time.unscaledDeltaTime;
+			this.speedhackCheckNumber++;
+			if (this.speedhackCheckNumber == 500)
+			{
+				this.speedhackCheckNumber = -1;
+				FrameRate.GetSystemTimePreciseAsFileTime(out this.ftEnd);
+				this.old_ftEnd = this.ftEnd;
+				this.old_ftStart = this.ftStart;
+				this.old_udtTotal = this.udtTotal;
+				double num = (double)(this.ftEnd - this.ftStart) / 10000000.0;
+				this.timeDifference = (float)(this.udtTotal / num);
+			}
 			if (this.vsyncTimer > this.targetSPF)
 			{
 				this.setRFI = false;
@@ -115,7 +134,7 @@ public class FrameRate : MonoBehaviour
 			if ((double)this.timer1 <= 0.0 && this.updateInputs)
 			{
 				this.textDisplay.enableWordWrapping = false;
-				float num = this.timer2 / (float)this.counter1;
+				float num2 = this.timer2 / (float)this.counter1;
 				this.best = 1f / this.best;
 				string text;
 				if (!GlobalHelper.showFPS)
@@ -124,23 +143,26 @@ public class FrameRate : MonoBehaviour
 				}
 				else
 				{
-					text = string.Format("{0:00000} FPS {1:0000} worst {3:00000} best {2:000} rendered", new object[]
+					text = string.Format("{0:00000} FPS {1:0000} worst {3:00000} best {2:000} rendered {4:000.000000} game speed {5:0.0000} {6:0.0000}", new object[]
 					{
-						num,
+						num2,
 						1f / this.worst,
-						Mathf.Min((float)Screen.currentResolution.refreshRate, num),
-						this.best
+						Mathf.Min((float)Screen.currentResolution.refreshRate, num2),
+						this.best,
+						this.timeDifference * 100f,
+						(double)(this.old_ftEnd - this.old_ftStart) / 1000.0 / 1000.0 / 10.0,
+						this.old_udtTotal
 					});
 				}
 				this.worst = float.NegativeInfinity;
 				this.best = float.PositiveInfinity;
 				this.textDisplay.text = text;
 				this.orig = text;
-				if (num < 30f)
+				if (num2 < 30f)
 				{
 					this.textDisplay.color = Color.yellow;
 				}
-				else if (num < 10f)
+				else if (num2 < 10f)
 				{
 					this.textDisplay.color = Color.red;
 				}
@@ -506,7 +528,7 @@ public class FrameRate : MonoBehaviour
 					}
 					else
 					{
-						this.instance._GameManager.EndSong();
+						this.instance.gameManager.EndSong();
 					}
 				}
 				if (GlobalVariables.deafened)
@@ -549,9 +571,9 @@ public class FrameRate : MonoBehaviour
 		}
 		if (this.startctr != 10)
 		{
-			int num2 = this.startctr;
-			this.startctr = num2 + 1;
-			Debug.Log(num2);
+			int num3 = this.startctr;
+			this.startctr = num3 + 1;
+			Debug.Log(num3);
 			return;
 		}
 		if (GlobalHelper.useJudgements)
@@ -590,6 +612,9 @@ public class FrameRate : MonoBehaviour
 	{
 		this.OnDisable();
 	}
+
+	[DllImport("kernel32.dll")]
+	public static extern void GetSystemTimePreciseAsFileTime(out long systemTimePreciseAsFileTime);
 
 	public float const1;
 
@@ -730,4 +755,22 @@ public class FrameRate : MonoBehaviour
 	private float rftimer;
 
 	private SpriteRenderer[] squares;
+
+	private bool checkingSpeedhack;
+
+	private double udtTotal;
+
+	private long ftStart;
+
+	private long ftEnd;
+
+	private int speedhackCheckNumber;
+
+	private float timeDifference;
+
+	private long old_ftEnd;
+
+	private long old_ftStart;
+
+	private double old_udtTotal;
 }

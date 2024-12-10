@@ -67,23 +67,23 @@ public class UnpackingScene : MonoBehaviour
 		this.messageButton.gameObject.SetActive(false);
 	}
 
-	public static void \u02BC\u02B6\u02B9\u02B4\u02B4\u02BC\u02B7\u02BE\u02B9\u02BB\u02BE(__FIXME_clon_util.GraphicsAPI \u02B8\u02C0\u02BA\u02B8\u02B5\u02B2\u02B5\u02BF\u02C0\u02BC\u02BF)
+	public static void \u02BC\u02B6\u02B9\u02B4\u02B4\u02BC\u02B7\u02BE\u02B9\u02BB\u02BE(Helper.GraphicsAPI \u02B8\u02C0\u02BA\u02B8\u02B5\u02B2\u02B5\u02BF\u02C0\u02BC\u02BF)
 	{
 		int @int = PlayerPrefs.GetInt("triedGraphicsSwitch", 0);
-		if (\u02B8\u02C0\u02BA\u02B8\u02B5\u02B2\u02B5\u02BF\u02C0\u02BC\u02BF != __FIXME_clon_util.GraphicsAPI.None && SystemInfo.graphicsDeviceType != __FIXME_clon_util.\u02BA\u02B5\u02BD\u02BF\u02B3\u02B3\u02B6\u02BC\u02BF\u02C0\u02B8(\u02B8\u02C0\u02BA\u02B8\u02B5\u02B2\u02B5\u02BF\u02C0\u02BC\u02BF) && @int == 0)
+		if (\u02B8\u02C0\u02BA\u02B8\u02B5\u02B2\u02B5\u02BF\u02C0\u02BC\u02BF != Helper.GraphicsAPI.None && SystemInfo.graphicsDeviceType != Helper.\u02BA\u02B5\u02BD\u02BF\u02B3\u02B3\u02B6\u02BC\u02BF\u02C0\u02B8(\u02B8\u02C0\u02BA\u02B8\u02B5\u02B2\u02B5\u02BF\u02C0\u02BC\u02BF) && @int == 0)
 		{
 			PlayerPrefs.SetInt("triedGraphicsSwitch", 1);
-			__FIXME_clon_util.Restart(__FIXME_clon_util.\u02BF\u02BD\u02B3\u02B2\u02B2\u02BA\u02B6\u02B2\u02C1\u02B4\u02C1(\u02B8\u02C0\u02BA\u02B8\u02B5\u02B2\u02B5\u02BF\u02C0\u02BC\u02BF) + " " + __FIXME_clon_util.\u02BF\u02B9\u02B9\u02C1\u02B7\u02B6\u02B6\u02B5\u02B3\u02B3\u02B8());
+			Helper.Restart(Helper.\u02BF\u02BD\u02B3\u02B2\u02B2\u02BA\u02B6\u02B2\u02C1\u02B4\u02C1(\u02B8\u02C0\u02BA\u02B8\u02B5\u02B2\u02B5\u02BF\u02C0\u02BC\u02BF) + " " + Helper.\u02BF\u02B9\u02B9\u02C1\u02B7\u02B6\u02B6\u02B5\u02B3\u02B3\u02B8());
 		}
 	}
 
-	public static void \u02B9\u02BE\u02B5\u02B6\u02C0\u02BD\u02BC\u02C0\u02C1\u02C1\u02BB(__FIXME_clon_util.GraphicsAPI \u02B8\u02C0\u02BA\u02B8\u02B5\u02B2\u02B5\u02BF\u02C0\u02BC\u02BF)
+	public static void \u02B9\u02BE\u02B5\u02B6\u02C0\u02BD\u02BC\u02C0\u02C1\u02C1\u02BB(Helper.GraphicsAPI \u02B8\u02C0\u02BA\u02B8\u02B5\u02B2\u02B5\u02BF\u02C0\u02BC\u02BF)
 	{
 		int @int = PlayerPrefs.GetInt("Color Profile", 1);
-		if (\u02B8\u02C0\u02BA\u02B8\u02B5\u02B2\u02B5\u02BF\u02C0\u02BC\u02BF != __FIXME_clon_util.GraphicsAPI.None && SystemInfo.graphicsDeviceType != __FIXME_clon_util.\u02BA\u02B5\u02BD\u02BF\u02B3\u02B3\u02B6\u02BC\u02BF\u02C0\u02B8(\u02B8\u02C0\u02BA\u02B8\u02B5\u02B2\u02B5\u02BF\u02C0\u02BC\u02BF) && @int == 0)
+		if (\u02B8\u02C0\u02BA\u02B8\u02B5\u02B2\u02B5\u02BF\u02C0\u02BC\u02BF != Helper.GraphicsAPI.None && SystemInfo.graphicsDeviceType != Helper.\u02BA\u02B5\u02BD\u02BF\u02B3\u02B3\u02B6\u02BC\u02BF\u02C0\u02B8(\u02B8\u02C0\u02BA\u02B8\u02B5\u02B2\u02B5\u02BF\u02C0\u02BC\u02BF) && @int == 0)
 		{
 			PlayerPrefs.SetInt(" + ", 0);
-			__FIXME_clon_util.Restart(__FIXME_clon_util.\u02BF\u02BD\u02B3\u02B2\u02B2\u02BA\u02B6\u02B2\u02C1\u02B4\u02C1(\u02B8\u02C0\u02BA\u02B8\u02B5\u02B2\u02B5\u02BF\u02C0\u02BC\u02BF) + "Use Song Backgrounds" + __FIXME_clon_util.\u02BF\u02B9\u02B9\u02C1\u02B7\u02B6\u02B6\u02B5\u02B3\u02B3\u02B8());
+			Helper.Restart(Helper.\u02BF\u02BD\u02B3\u02B2\u02B2\u02BA\u02B6\u02B2\u02C1\u02B4\u02C1(\u02B8\u02C0\u02BA\u02B8\u02B5\u02B2\u02B5\u02BF\u02C0\u02BC\u02BF) + "Use Song Backgrounds" + Helper.\u02BF\u02B9\u02B9\u02C1\u02B7\u02B6\u02B6\u02B5\u02B3\u02B3\u02B8());
 		}
 	}
 
@@ -133,14 +133,14 @@ public class UnpackingScene : MonoBehaviour
 		{
 			UnpackingScene.\u02B2\u02BE\u02B7\u02BD\u02B9\u02BD\u02B2\u02B8\u02BB\u02B7\u02B8();
 		}
-		__FIXME_clon_util.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(__FIXME_clon_util.GetDocumentsClonFolder());
-		__FIXME_clon_util.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(__FIXME_clon_util.\u02B3\u02B8\u02BF\u02B8\u02BF\u02BB\u02B7\u02B4\u02B7\u02BB\u02BD());
-		if (!File.Exists(Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "settings.ini")))
+		Helper.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(Helper.GetDocumentsClonFolder());
+		Helper.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(Helper.\u02B3\u02B8\u02BF\u02B8\u02BF\u02BB\u02B7\u02B4\u02B7\u02BB\u02BD());
+		if (!File.Exists(Path.Combine(Helper.GetDocumentsClonFolder(), "settings.ini")))
 		{
 			string text = Path.Combine(Application.persistentDataPath, "settings.ini");
 			if (File.Exists(text))
 			{
-				File.Copy(text, Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "settings.ini"));
+				File.Copy(text, Path.Combine(Helper.GetDocumentsClonFolder(), "settings.ini"));
 			}
 		}
 		UnpackingScene.\u02B5\u02B3\u02B3\u02BB\u02BA\u02BB\u02C0\u02BE\u02B2\u02B5\u02B9();
@@ -148,7 +148,7 @@ public class UnpackingScene : MonoBehaviour
 		{
 			return;
 		}
-		UnpackingScene.\u02BC\u02B6\u02B9\u02B4\u02B4\u02BC\u02B7\u02BE\u02B9\u02BB\u02BE((__FIXME_clon_util.GraphicsAPI)((SettingsController.\u02BB\u02B5\u02BA\u02B6\u02BE\u02BA\u02B6\u02BD\u02B3\u02B9\u02BF.CurrentValue == 0) ? 0 : __FIXME_clon_util.\u02BE\u02BB\u02B6\u02B7\u02B8\u02C0\u02BF\u02B5\u02C0\u02B6\u02B6((ushort)__FIXME_clon_util.SupportedGraphicsAPIs(), SettingsController.\u02BB\u02B5\u02BA\u02B6\u02BE\u02BA\u02B6\u02BD\u02B3\u02B9\u02BF.CurrentValue)));
+		UnpackingScene.\u02BC\u02B6\u02B9\u02B4\u02B4\u02BC\u02B7\u02BE\u02B9\u02BB\u02BE((Helper.GraphicsAPI)((SettingsController.\u02BB\u02B5\u02BA\u02B6\u02BE\u02BA\u02B6\u02BD\u02B3\u02B9\u02BF.CurrentValue == 0) ? 0 : Helper.\u02BE\u02BB\u02B6\u02B7\u02B8\u02C0\u02BF\u02B5\u02C0\u02B6\u02B6((ushort)Helper.SupportedGraphicsAPIs(), SettingsController.\u02BB\u02B5\u02BA\u02B6\u02BE\u02BA\u02B6\u02BD\u02B3\u02B9\u02BF.CurrentValue)));
 	}
 
 	public static void \u02BC\u02BD\u02B9\u02B6\u02BB\u02B7\u02B4\u02B6\u02B4\u02C1\u02B6()
@@ -157,14 +157,14 @@ public class UnpackingScene : MonoBehaviour
 		{
 			UnpackingScene.\u02B2\u02BE\u02B7\u02BD\u02B9\u02BD\u02B2\u02B8\u02BB\u02B7\u02B8();
 		}
-		__FIXME_clon_util.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(__FIXME_clon_util.GetDocumentsClonFolder());
-		__FIXME_clon_util.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(__FIXME_clon_util.\u02B3\u02B8\u02BF\u02B8\u02BF\u02BB\u02B7\u02B4\u02B7\u02BB\u02BD());
-		if (!File.Exists(Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "Prefabs/Gameplay/Notes/Sustain")))
+		Helper.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(Helper.GetDocumentsClonFolder());
+		Helper.\u02BB\u02B9\u02BE\u02C0\u02B3\u02B4\u02B4\u02B5\u02BE\u02B9\u02B7(Helper.\u02B3\u02B8\u02BF\u02B8\u02BF\u02BB\u02B7\u02B4\u02B7\u02BB\u02BD());
+		if (!File.Exists(Path.Combine(Helper.GetDocumentsClonFolder(), "Prefabs/Gameplay/Notes/Sustain")))
 		{
 			string text = Path.Combine(Application.persistentDataPath, "]");
 			if (File.Exists(text))
 			{
-				File.Copy(text, Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "Solo Move"));
+				File.Copy(text, Path.Combine(Helper.GetDocumentsClonFolder(), "Solo Move"));
 			}
 		}
 		UnpackingScene.\u02BD\u02B4\u02C0\u02B5\u02BA\u02B9\u02B6\u02B4\u02B2\u02B7\u02B5();
@@ -172,7 +172,7 @@ public class UnpackingScene : MonoBehaviour
 		{
 			return;
 		}
-		UnpackingScene.\u02B9\u02BE\u02B5\u02B6\u02C0\u02BD\u02BC\u02C0\u02C1\u02C1\u02BB((__FIXME_clon_util.GraphicsAPI)((SettingsController.\u02BB\u02B5\u02BA\u02B6\u02BE\u02BA\u02B6\u02BD\u02B3\u02B9\u02BF.CurrentValue == 0) ? 1 : __FIXME_clon_util.\u02BE\u02BB\u02B6\u02B7\u02B8\u02C0\u02BF\u02B5\u02C0\u02B6\u02B6((ushort)__FIXME_clon_util.SupportedGraphicsAPIs(), SettingsController.\u02BB\u02B5\u02BA\u02B6\u02BE\u02BA\u02B6\u02BD\u02B3\u02B9\u02BF.CurrentValue)));
+		UnpackingScene.\u02B9\u02BE\u02B5\u02B6\u02C0\u02BD\u02BC\u02C0\u02C1\u02C1\u02BB((Helper.GraphicsAPI)((SettingsController.\u02BB\u02B5\u02BA\u02B6\u02BE\u02BA\u02B6\u02BD\u02B3\u02B9\u02BF.CurrentValue == 0) ? 1 : Helper.\u02BE\u02BB\u02B6\u02B7\u02B8\u02C0\u02BF\u02B5\u02C0\u02B6\u02B6((ushort)Helper.SupportedGraphicsAPIs(), SettingsController.\u02BB\u02B5\u02BA\u02B6\u02BE\u02BA\u02B6\u02BD\u02B3\u02B9\u02BF.CurrentValue)));
 	}
 
 	public static void \u02BD\u02B4\u02C0\u02B5\u02BA\u02B9\u02B6\u02B4\u02B2\u02B7\u02B5()

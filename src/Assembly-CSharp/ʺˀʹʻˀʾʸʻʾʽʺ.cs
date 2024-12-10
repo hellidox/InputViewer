@@ -335,8 +335,8 @@ public class \u02BA\u02C0\u02B9\u02BB\u02C0\u02BE\u02B8\u02BB\u02BE\u02BD\u02BA
 		this.\u02B7\u02BA\u02BC\u02B6\u02BC\u02B2\u02B7\u02BA\u02B4\u02BF\u02BA = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02B6\u02C1\u02BD\u02BA\u02BE\u02C1\u02B9\u02B2\u02BD\u02B9.Split('|', StringSplitOptions.None);
 		\u02C1\u02B4\u02BB\u02B9\u02B5\u02B6\u02B2\u02BA\u02B8\u02C1\u02BE.\u02BA\u02C0\u02B2\u02C1\u02BD\u02B7\u02BC\u02BF\u02BB\u02B2\u02B7(this.\u02B8\u02B2\u02B3\u02B7\u02C1\u02B2\u02BF\u02B8\u02BA\u02BE\u02BA, new string[] { "song.ini", "notes.mid", "notes.chart" });
 		this.\u02BA\u02C1\u02BA\u02B3\u02B9\u02B6\u02BA\u02B6\u02BF\u02B3\u02BE = Path.Combine(Application.persistentDataPath, SettingsController.\u02B8\u02BB\u02B9\u02B5\u02B3\u02B7\u02B9\u02BE\u02BC\u02BA\u02B9.CurrentValue);
-		this.\u02B7\u02B5\u02BD\u02B3\u02C0\u02B5\u02BA\u02B3\u02B7\u02BA\u02BC = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "badsongs.txt");
-		this.\u02B2\u02B7\u02B7\u02BD\u02BA\u02B6\u02BC\u02BC\u02BA\u02B7\u02B2 = __FIXME_clon_util.CaseSensitive();
+		this.\u02B7\u02B5\u02BD\u02B3\u02C0\u02B5\u02BA\u02B3\u02B7\u02BA\u02BC = Path.Combine(Helper.GetDocumentsClonFolder(), "badsongs.txt");
+		this.\u02B2\u02B7\u02B7\u02BD\u02BA\u02B6\u02BC\u02BC\u02BA\u02B7\u02B2 = Helper.CaseSensitive();
 	}
 
 	private bool \u02B4\u02BD\u02B8\u02C1\u02BA\u02BA\u02BB\u02C0\u02B3\u02C0\u02B8(SongEntry \u02BA\u02B4\u02B8\u02BA\u02C1\u02B7\u02BF\u02BD\u02B5\u02BE\u02BA)
@@ -480,7 +480,7 @@ public class \u02BA\u02C0\u02B9\u02BB\u02C0\u02BE\u02B8\u02BB\u02BE\u02BD\u02BA
 				Debug.Log(ex.Message);
 			}
 		}
-		using (IEnumerator<FileInfo> enumerator2 = new DirectoryInfo(Path.Combine(__FIXME_clon_util.\u02B4\u02B6\u02BE\u02B5\u02BB\u02BA\u02BB\u02C0\u02C1\u02C1\u02B7(), "songs")).EnumerateFiles().GetEnumerator())
+		using (IEnumerator<FileInfo> enumerator2 = new DirectoryInfo(Path.Combine(Helper.\u02B4\u02B6\u02BE\u02B5\u02BB\u02BA\u02BB\u02C0\u02C1\u02C1\u02B7(), "songs")).EnumerateFiles().GetEnumerator())
 		{
 			while (enumerator2.MoveNext())
 			{

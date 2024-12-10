@@ -735,10 +735,10 @@ public class PlayerStatsBox : BaseMenu
 		this.statsValueTexts[1].text = string.Format("{0:N0}", this.\u02B6\u02B7\u02BF\u02BB\u02C1\u02C0\u02B2\u02B2\u02BE\u02B5\u02B5.notesHit);
 		this.statsValueTexts[2].text = string.Format("{0:N0}", this.\u02B6\u02B7\u02BF\u02BB\u02C1\u02C0\u02B2\u02B2\u02BE\u02B5\u02B5.totalNotes - this.\u02B6\u02B7\u02BF\u02BB\u02C1\u02C0\u02B2\u02B2\u02BE\u02B5\u02B5.notesHit);
 		this.statsValueTexts[3].text = string.Format("{0:N0}", this.\u02B6\u02B7\u02BF\u02BB\u02C1\u02C0\u02B2\u02B2\u02BE\u02B5\u02B5.combo);
-		this.statsValueTexts[4].text = string.Format("{0:N3}x", __FIXME_clon_util.\u02B4\u02BD\u02B2\u02B2\u02B5\u02B4\u02BB\u02B8\u02B6\u02BE\u02BB(this.\u02B6\u02B7\u02BF\u02BB\u02C1\u02C0\u02B2\u02B2\u02BE\u02B5\u02B5.AvgMultiplier, 3));
+		this.statsValueTexts[4].text = string.Format("{0:N3}x", Helper.\u02B4\u02BD\u02B2\u02B2\u02B5\u02B4\u02BB\u02B8\u02B6\u02BE\u02BB(this.\u02B6\u02B7\u02BF\u02BB\u02C1\u02C0\u02B2\u02B2\u02BE\u02B5\u02B5.AvgMultiplier, 3));
 		this.statsValueTexts[5].text = string.Format("{0:N0}", this.\u02B6\u02B7\u02BF\u02BB\u02C1\u02C0\u02B2\u02B2\u02BE\u02B5\u02B5.overstrums);
 		this.statsValueTexts[6].text = string.Format("{0:N0}/{1:N0}", this.\u02B6\u02B7\u02BF\u02BB\u02C1\u02C0\u02B2\u02B2\u02BE\u02B5\u02B5.starPowersHit, this.\u02B6\u02B7\u02BF\u02BB\u02C1\u02C0\u02B2\u02B2\u02BE\u02B5\u02B5.totalStarPowers);
-		this.statsValueTexts[7].text = string.Format("{0:N2}", __FIXME_clon_util.\u02B4\u02BD\u02B2\u02B2\u02B5\u02B4\u02BB\u02B8\u02B6\u02BE\u02BB((float)this.\u02B6\u02B7\u02BF\u02BB\u02C1\u02C0\u02B2\u02B2\u02BE\u02B5\u02B5.starPowerAccrued / 100f, 2));
+		this.statsValueTexts[7].text = string.Format("{0:N2}", Helper.\u02B4\u02BD\u02B2\u02B2\u02B5\u02B4\u02BB\u02B8\u02B6\u02BE\u02BB((float)this.\u02B6\u02B7\u02BF\u02BB\u02C1\u02C0\u02B2\u02B2\u02BE\u02B5\u02B5.starPowerAccrued / 100f, 2));
 		this.statsValueTexts[8].text = string.Format("{0:N0}", this.\u02B6\u02B7\u02BF\u02BB\u02C1\u02C0\u02B2\u02B2\u02BE\u02B5\u02B5.activations);
 		this.statsValueTexts[9].text = string.Format("{0:N2}s", (float)this.\u02B6\u02B7\u02BF\u02BB\u02C1\u02C0\u02B2\u02B2\u02BE\u02B5\u02B5.timeInSP / 100f);
 		if (this.\u02B6\u02B9\u02B7\u02B6\u02B9\u02B2\u02BE\u02BE\u02BE\u02B2\u02B5)

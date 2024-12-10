@@ -380,7 +380,7 @@ public class GeneralSettingsMenu : BaseSettingMenu
 							{
 								if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Ready")
 								{
-									__FIXME_clon_util.\u02BA\u02BB\u02B7\u02B4\u02B2\u02BC\u02B4\u02B2\u02B9\u02B3\u02BD(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B5\u02BB\u02B7\u02BB\u02B8\u02B5\u02B9\u02BA\u02B3\u02B8\u02BA);
+									Helper.\u02BA\u02BB\u02B7\u02B4\u02B2\u02BC\u02B4\u02B2\u02B9\u02B3\u02BD(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B5\u02BB\u02B7\u02BB\u02B8\u02B5\u02B9\u02BA\u02B3\u02B8\u02BA);
 									this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
 									return;
 								}
@@ -423,7 +423,7 @@ public class GeneralSettingsMenu : BaseSettingMenu
 							{
 								if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "part drums")
 								{
-									__FIXME_clon_util.\u02BA\u02BB\u02B7\u02B4\u02B2\u02BC\u02B4\u02B2\u02B9\u02B3\u02BD(GameLogManager.\u02BA\u02BF\u02B2\u02B6\u02B6\u02B5\u02BE\u02BF\u02BD\u02B4\u02BF());
+									Helper.\u02BA\u02BB\u02B7\u02B4\u02B2\u02BC\u02B4\u02B2\u02B9\u02B3\u02BD(GameLogManager.\u02BA\u02BF\u02B2\u02B6\u02B6\u02B5\u02BE\u02BF\u02BD\u02B4\u02BF());
 									this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
 									return;
 								}
@@ -1059,7 +1059,7 @@ public class GeneralSettingsMenu : BaseSettingMenu
 							{
 								if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Open Default Songs Folder")
 								{
-									__FIXME_clon_util.\u02BA\u02BB\u02B7\u02B4\u02B2\u02BC\u02B4\u02B2\u02B9\u02B3\u02BD(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B5\u02BB\u02B7\u02BB\u02B8\u02B5\u02B9\u02BA\u02B3\u02B8\u02BA);
+									Helper.\u02BA\u02BB\u02B7\u02B4\u02B2\u02BC\u02B4\u02B2\u02B9\u02B3\u02BD(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B5\u02BB\u02B7\u02BB\u02B8\u02B5\u02B9\u02BA\u02B3\u02B8\u02BA);
 									this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
 									return;
 								}
@@ -1102,7 +1102,7 @@ public class GeneralSettingsMenu : BaseSettingMenu
 							{
 								if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Open Logs Folder")
 								{
-									__FIXME_clon_util.\u02BA\u02BB\u02B7\u02B4\u02B2\u02BC\u02B4\u02B2\u02B9\u02B3\u02BD(GameLogManager.\u02BA\u02BF\u02B2\u02B6\u02B6\u02B5\u02BE\u02BF\u02BD\u02B4\u02BF());
+									Helper.\u02BA\u02BB\u02B7\u02B4\u02B2\u02BC\u02B4\u02B2\u02B9\u02B3\u02BD(GameLogManager.\u02BA\u02BF\u02B2\u02B6\u02B6\u02B5\u02BE\u02BF\u02BD\u02B4\u02BF());
 									this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
 									return;
 								}

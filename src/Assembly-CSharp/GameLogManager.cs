@@ -30,7 +30,7 @@ public static class GameLogManager
 		{
 			return;
 		}
-		GameLogManager.\u02C1\u02B2\u02BE\u02B4\u02B3\u02BF\u02B2\u02BC\u02BB\u02BD\u02B8 = Path.Combine(__FIXME_clon_util.GetDocumentsClonFolder(), "Logs");
+		GameLogManager.\u02C1\u02B2\u02BE\u02B4\u02B3\u02BF\u02B2\u02BC\u02BB\u02BD\u02B8 = Path.Combine(Helper.GetDocumentsClonFolder(), "Logs");
 		if (!Directory.Exists(GameLogManager.\u02BA\u02BF\u02B2\u02B6\u02B6\u02B5\u02BE\u02BF\u02BD\u02B4\u02BF()))
 		{
 			Directory.CreateDirectory(GameLogManager.\u02BA\u02BF\u02B2\u02B6\u02B6\u02B5\u02BE\u02BF\u02BD\u02B4\u02BF());
