@@ -45,7 +45,7 @@ public class GeneralSettingsMenu : BaseSettingMenu
 		}
 		foreach (string text in this.\u02C0\u02BA\u02BF\u02B4\u02B7\u02BC\u02B8\u02B4\u02C0\u02C1\u02C1)
 		{
-			GameSetting gameSetting = this.\u02B9\u02B5\u02B5\u02B7\u02BE\u02BF\u02B6\u02B5\u02BB\u02B9\u02C1(text);
+			GameSetting settingFromString = this.GetSettingFromString(text);
 			uint num = PrivateImplementationDetails.ComputeStringHash(text);
 			if (num <= 2046560590U)
 			{
@@ -59,18 +59,18 @@ public class GeneralSettingsMenu : BaseSettingMenu
 							{
 								if (text == "Drum Pad Scrolling")
 								{
-									base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(0, gameSetting);
+									base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(0, settingFromString);
 								}
 							}
 						}
 						else if (text == "Minimum Speed")
 						{
-							base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(2, gameSetting);
+							base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(2, settingFromString);
 						}
 					}
 					else if (text == "AutoSave Results Screenshot")
 					{
-						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(2, gameSetting);
+						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(2, settingFromString);
 					}
 				}
 				else if (num <= 1190966539U)
@@ -81,13 +81,13 @@ public class GeneralSettingsMenu : BaseSettingMenu
 						{
 							if (text == "Allow Clients To Remove Songs")
 							{
-								base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(4, gameSetting);
+								base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(4, settingFromString);
 							}
 						}
 					}
 					else if (text == "Show Remote Player Names")
 					{
-						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(5, gameSetting);
+						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(5, settingFromString);
 					}
 				}
 				else if (num != 2000281641U)
@@ -96,13 +96,13 @@ public class GeneralSettingsMenu : BaseSettingMenu
 					{
 						if (text == "Online Highway Placement")
 						{
-							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(6, gameSetting);
+							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(6, settingFromString);
 						}
 					}
 				}
 				else if (text == "Server Tickrate")
 				{
-					base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(1, gameSetting);
+					base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(1, settingFromString);
 				}
 			}
 			else if (num <= 2451769732U)
@@ -115,13 +115,13 @@ public class GeneralSettingsMenu : BaseSettingMenu
 						{
 							if (text == "Songs Per Player")
 							{
-								base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(4, gameSetting);
+								base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(4, settingFromString);
 							}
 						}
 					}
 					else if (text == "Highway Placement")
 					{
-						base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(0, gameSetting);
+						base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(0, settingFromString);
 					}
 				}
 				else if (num != 2335906414U)
@@ -130,13 +130,13 @@ public class GeneralSettingsMenu : BaseSettingMenu
 					{
 						if (text == "Remote Player Righty Flip")
 						{
-							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(8, gameSetting);
+							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(8, settingFromString);
 						}
 					}
 				}
 				else if (text == "Maximum Speed")
 				{
-					base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(3, gameSetting);
+					base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(3, settingFromString);
 				}
 			}
 			else if (num <= 2780239723U)
@@ -147,13 +147,13 @@ public class GeneralSettingsMenu : BaseSettingMenu
 					{
 						if (text == "Export Current Song")
 						{
-							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(3, gameSetting);
+							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(3, settingFromString);
 						}
 					}
 				}
 				else if (text == "Language")
 				{
-					this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[0].text = LanguageManager.instance.GetString(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BC\u02C0\u02B5\u02BD\u02B2\u02BC\u02BA\u02BC\u02B9\u02B6\u02B6[gameSetting.CurrentValue]);
+					this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[0].text = LanguageManager.instance.GetString(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BC\u02C0\u02B5\u02BD\u02B2\u02BC\u02BA\u02BC\u02B9\u02B6\u02B6[settingFromString.CurrentValue]);
 				}
 			}
 			else if (num != 4185652605U)
@@ -162,13 +162,13 @@ public class GeneralSettingsMenu : BaseSettingMenu
 				{
 					if (text == "Hide Remote Highways")
 					{
-						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(7, gameSetting);
+						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(7, settingFromString);
 					}
 				}
 			}
 			else if (text == "Show Full Playlist")
 			{
-				base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(1, gameSetting);
+				base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(1, settingFromString);
 			}
 		}
 	}
@@ -195,7 +195,7 @@ public class GeneralSettingsMenu : BaseSettingMenu
 		this.\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0(this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3);
 	}
 
-	protected override GameSetting \u02B9\u02B5\u02B5\u02B7\u02BE\u02BF\u02B6\u02B5\u02BB\u02B9\u02C1(string \u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0)
+	protected override GameSetting GetSettingFromString(string \u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0)
 	{
 		GameSetting gameSetting = null;
 		uint num = PrivateImplementationDetails.ComputeStringHash(\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0);
@@ -630,7 +630,7 @@ public class GeneralSettingsMenu : BaseSettingMenu
 		}
 		foreach (string text in this.\u02C0\u02BA\u02BF\u02B4\u02B7\u02BC\u02B8\u02B4\u02C0\u02C1\u02C1)
 		{
-			GameSetting gameSetting = this.\u02B9\u02B5\u02B5\u02B7\u02BE\u02BF\u02B6\u02B5\u02BB\u02B9\u02C1(text);
+			GameSetting settingFromString = this.GetSettingFromString(text);
 			uint num = PrivateImplementationDetails.ComputeStringHash(text);
 			if (num <= 151U)
 			{
@@ -644,18 +644,18 @@ public class GeneralSettingsMenu : BaseSettingMenu
 							{
 								if (text == "Color Profile")
 								{
-									base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(1, gameSetting);
+									base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(1, settingFromString);
 								}
 							}
 						}
 						else if (text == "songSpeed")
 						{
-							base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(7, gameSetting);
+							base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(7, settingFromString);
 						}
 					}
 					else if (text == "g")
 					{
-						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(6, gameSetting);
+						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(6, settingFromString);
 					}
 				}
 				else if (num <= 4294967259U)
@@ -666,13 +666,13 @@ public class GeneralSettingsMenu : BaseSettingMenu
 						{
 							if (text == " does not contain any audio files.")
 							{
-								base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(6, gameSetting);
+								base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(6, settingFromString);
 							}
 						}
 					}
 					else if (text == "{0} ({1})")
 					{
-						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(7, gameSetting);
+						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(7, settingFromString);
 					}
 				}
 				else if (num != 4294967289U)
@@ -681,13 +681,13 @@ public class GeneralSettingsMenu : BaseSettingMenu
 					{
 						if (text == "Start")
 						{
-							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(5, gameSetting);
+							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(5, settingFromString);
 						}
 					}
 				}
 				else if (text == "soloend")
 				{
-					base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(1, gameSetting);
+					base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(1, settingFromString);
 				}
 			}
 			else if (num <= 138U)
@@ -700,13 +700,13 @@ public class GeneralSettingsMenu : BaseSettingMenu
 						{
 							if (text == "drumsortholdtip")
 							{
-								base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(6, gameSetting);
+								base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(6, settingFromString);
 							}
 						}
 					}
 					else if (text == "6-fret Guitar")
 					{
-						base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(1, gameSetting);
+						base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(1, settingFromString);
 					}
 				}
 				else if (num != 100U)
@@ -715,13 +715,13 @@ public class GeneralSettingsMenu : BaseSettingMenu
 					{
 						if (text == "groupOverHits")
 						{
-							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(8, gameSetting);
+							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(8, settingFromString);
 						}
 					}
 				}
 				else if (text == ".yaml")
 				{
-					base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(3, gameSetting);
+					base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(3, settingFromString);
 				}
 			}
 			else if (num <= 110U)
@@ -732,13 +732,13 @@ public class GeneralSettingsMenu : BaseSettingMenu
 					{
 						if (text == "drumsorttip")
 						{
-							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(8, gameSetting);
+							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(8, settingFromString);
 						}
 					}
 				}
 				else if (text == "Set B Position")
 				{
-					this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[1].text = LanguageManager.\u02C0\u02B4\u02BE\u02B9\u02C1\u02B8\u02B2\u02B3\u02BE\u02BD\u02B9().\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BC\u02C0\u02B5\u02BD\u02B2\u02BC\u02BA\u02BC\u02B9\u02B6\u02B6[gameSetting.CurrentValue]);
+					this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[1].text = LanguageManager.\u02C0\u02B4\u02BE\u02B9\u02C1\u02B8\u02B2\u02B3\u02BE\u02BD\u02B9().\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BC\u02C0\u02B5\u02BD\u02B2\u02BC\u02BA\u02BC\u02B9\u02B6\u02B6[settingFromString.CurrentValue]);
 				}
 			}
 			else if (num != 51U)
@@ -747,13 +747,13 @@ public class GeneralSettingsMenu : BaseSettingMenu
 				{
 					if (text == "Hit Notes")
 					{
-						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(8, gameSetting);
+						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(8, settingFromString);
 					}
 				}
 			}
 			else if (text == "scoreDisabled")
 			{
-				base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(0, gameSetting);
+				base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(0, settingFromString);
 			}
 		}
 	}
@@ -805,7 +805,7 @@ public class GeneralSettingsMenu : BaseSettingMenu
 		}
 	}
 
-	public override void \u02B4\u02BF\u02B6\u02B3\u02B7\u02BA\u02B9\u02B9\u02BD\u02BD\u02B4()
+	public override void SetBools()
 	{
 	}
 

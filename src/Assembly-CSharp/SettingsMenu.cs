@@ -250,7 +250,7 @@ public class SettingsMenu : BaseMenu
 
 	private void Awake()
 	{
-		(this.videoMenu as VideoSettingsMenu).\u02B4\u02BF\u02B6\u02B3\u02B7\u02BA\u02B9\u02B9\u02BD\u02BD\u02B4();
+		(this.videoMenu as VideoSettingsMenu).SetBools();
 		(this.generalMenu as GeneralSettingsMenu).\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0("");
 		(this.audioMenu as AudioSettingsMenu).\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0("");
 		(this.videoMenu as VideoSettingsMenu).\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0("");

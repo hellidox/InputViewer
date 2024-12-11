@@ -99,7 +99,7 @@ public class DrumsNeckController : BaseNeckController
 		{
 			for (int i = 0; i < this.\u02BD\u02B3\u02B2\u02BC\u02B2\u02BC\u02B6\u02B4\u02B6\u02BA\u02B9.Length; i += 0)
 			{
-				this.\u02BD\u02B3\u02B2\u02BC\u02B2\u02BC\u02B6\u02B4\u02B6\u02BA\u02B9[i].\u02BF\u02B5\u02C1\u02B4\u02B6\u02B5\u02BA\u02B7\u02C0\u02B8\u02BE(true, true);
+				this.\u02BD\u02B3\u02B2\u02BC\u02B2\u02BC\u02B6\u02B4\u02B6\u02BA\u02B9[i].Play(true, true);
 			}
 		}
 		for (int j = 0; j < this.\u02BD\u02B3\u02B2\u02BC\u02B2\u02BC\u02B6\u02B4\u02B6\u02BA\u02B9.Length; j++)
@@ -199,7 +199,7 @@ public class DrumsNeckController : BaseNeckController
 		int num;
 		for (int i = 0; i < this.\u02BD\u02B3\u02B2\u02BC\u02B2\u02BC\u02B6\u02B4\u02B6\u02BA\u02B9.Length; i = num)
 		{
-			this.\u02BD\u02B3\u02B2\u02BC\u02B2\u02BC\u02B6\u02B4\u02B6\u02BA\u02B9[i].\u02BF\u02B5\u02C1\u02B4\u02B6\u02B5\u02BA\u02B7\u02C0\u02B8\u02BE(false, false);
+			this.\u02BD\u02B3\u02B2\u02BC\u02B2\u02BC\u02B6\u02B4\u02B6\u02BA\u02B9[i].Play(false, false);
 			yield return new WaitForSeconds(0.1f);
 			num = i + 1;
 		}
@@ -259,7 +259,7 @@ public class DrumsNeckController : BaseNeckController
 		int num;
 		for (i = 0; i < this.\u02BD\u02B3\u02B2\u02BC\u02B2\u02BC\u02B6\u02B4\u02B6\u02BA\u02B9.Length; i = num)
 		{
-			this.\u02BD\u02B3\u02B2\u02BC\u02B2\u02BC\u02B6\u02B4\u02B6\u02BA\u02B9[i].\u02BF\u02B5\u02C1\u02B4\u02B6\u02B5\u02BA\u02B7\u02C0\u02B8\u02BE(false, false);
+			this.\u02BD\u02B3\u02B2\u02BC\u02B2\u02BC\u02B6\u02B4\u02B6\u02BA\u02B9[i].Play(false, false);
 			yield return new WaitForSeconds(0.1f);
 			num = i + 1;
 		}
@@ -284,7 +284,7 @@ public class DrumsNeckController : BaseNeckController
 		{
 			for (int i = 0; i < this.\u02BD\u02B3\u02B2\u02BC\u02B2\u02BC\u02B6\u02B4\u02B6\u02BA\u02B9.Length; i++)
 			{
-				this.\u02BD\u02B3\u02B2\u02BC\u02B2\u02BC\u02B6\u02B4\u02B6\u02BA\u02B9[i].\u02BF\u02B5\u02C1\u02B4\u02B6\u02B5\u02BA\u02B7\u02C0\u02B8\u02BE(false, true);
+				this.\u02BD\u02B3\u02B2\u02BC\u02B2\u02BC\u02B6\u02B4\u02B6\u02BA\u02B9[i].Play(false, true);
 			}
 		}
 		for (int j = 0; j < this.\u02BD\u02B3\u02B2\u02BC\u02B2\u02BC\u02B6\u02B4\u02B6\u02BA\u02B9.Length; j++)
@@ -363,7 +363,7 @@ public class DrumsNeckController : BaseNeckController
 			}
 			for (int j = 0; j < this.\u02BD\u02B3\u02B2\u02BC\u02B2\u02BC\u02B6\u02B4\u02B6\u02BA\u02B9.Length; j++)
 			{
-				this.\u02BD\u02B3\u02B2\u02BC\u02B2\u02BC\u02B6\u02B4\u02B6\u02BA\u02B9[j].\u02BF\u02B5\u02C1\u02B4\u02B6\u02B5\u02BA\u02B7\u02C0\u02B8\u02BE(false, true);
+				this.\u02BD\u02B3\u02B2\u02BC\u02B2\u02BC\u02B6\u02B4\u02B6\u02BA\u02B9[j].Play(false, true);
 			}
 			return;
 		}
@@ -373,7 +373,7 @@ public class DrumsNeckController : BaseNeckController
 			int num4 = 1 << k;
 			if (((flag2 ? 1 : 0) & num4) != 0)
 			{
-				this.\u02BD\u02B3\u02B2\u02BC\u02B2\u02BC\u02B6\u02B4\u02B6\u02BA\u02B9[k].\u02BF\u02B5\u02C1\u02B4\u02B6\u02B5\u02BA\u02B7\u02C0\u02B8\u02BE(false, false);
+				this.\u02BD\u02B3\u02B2\u02BC\u02B2\u02BC\u02B6\u02B4\u02B6\u02BA\u02B9[k].Play(false, false);
 				if (SettingsController.\u02C0\u02B6\u02BC\u02BF\u02BF\u02C0\u02BF\u02BC\u02B4\u02B3\u02BC)
 				{
 					if (\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.\u02B9\u02B8\u02C0\u02BB\u02B5\u02B9\u02BC\u02BF\u02BD\u02BD\u02BA && \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.\u02BF\u02BE\u02B5\u02B3\u02C1\u02C1\u02B2\u02BF\u02B5\u02BB\u02B4)

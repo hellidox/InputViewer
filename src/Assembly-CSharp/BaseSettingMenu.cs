@@ -29,7 +29,7 @@ public abstract class BaseSettingMenu : BaseMenu
 
 	protected abstract void \u02BA\u02BB\u02B5\u02B6\u02B3\u02BD\u02BA\u02BC\u02B2\u02BB\u02B5();
 
-	public abstract void \u02B4\u02BF\u02B6\u02B3\u02B7\u02BA\u02B9\u02B9\u02BD\u02BD\u02B4();
+	public abstract void SetBools();
 
 	public override void \u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8()
 	{
@@ -118,26 +118,26 @@ public abstract class BaseSettingMenu : BaseMenu
 		{
 			if (Input.GetKeyDown(KeyCode.End))
 			{
-				GameSetting gameSetting = this.\u02B9\u02B5\u02B5\u02B7\u02BE\u02BF\u02B6\u02B5\u02BB\u02B9\u02C1(this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3);
-				if (gameSetting != null)
+				GameSetting settingFromString = this.GetSettingFromString(this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3);
+				if (settingFromString != null)
 				{
-					gameSetting.CurrentValue = gameSetting.MaxValue;
+					settingFromString.CurrentValue = settingFromString.MaxValue;
 					this.\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0("");
 				}
 			}
 			if (Input.GetKeyDown(KeyCode.Home))
 			{
-				GameSetting gameSetting2 = this.\u02B9\u02B5\u02B5\u02B7\u02BE\u02BF\u02B6\u02B5\u02BB\u02B9\u02C1(this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3);
-				if (gameSetting2 != null)
+				GameSetting settingFromString2 = this.GetSettingFromString(this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3);
+				if (settingFromString2 != null)
 				{
-					gameSetting2.CurrentValue = gameSetting2.MinValue;
+					settingFromString2.CurrentValue = settingFromString2.MinValue;
 					this.\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0("");
 				}
 			}
 		}
 	}
 
-	protected abstract GameSetting \u02B9\u02B5\u02B5\u02B7\u02BE\u02BF\u02B6\u02B5\u02BB\u02B9\u02C1(string \u02B6\u02BF\u02C1\u02C0\u02BA\u02B5\u02B3\u02B6\u02B8\u02B9\u02C1);
+	protected abstract GameSetting GetSettingFromString(string \u02B6\u02BF\u02C1\u02C0\u02BA\u02B5\u02B3\u02B6\u02B8\u02B9\u02C1);
 
 	public abstract void \u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0(string \u02B6\u02BF\u02C1\u02C0\u02BA\u02B5\u02B3\u02B6\u02B8\u02B9\u02C1 = "");
 

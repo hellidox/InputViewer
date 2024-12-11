@@ -49,7 +49,7 @@ public static class SettingsController
 		SettingsController.\u02BF\u02BC\u02B2\u02B5\u02C0\u02B5\u02B4\u02C0\u02B3\u02B3\u02BF = new \u02B7\u02BF\u02C0\u02B9\u02B4\u02BB\u02B6\u02BB\u02BC\u02C1\u02C1(sectionKey3, "hud_position", new Vector3(0.08f, -1.38f, 0f));
 		SettingsController.\u02BC\u02B4\u02B2\u02B2\u02B6\u02B3\u02BB\u02B8\u02B2\u02C1\u02B3 = new StringGameSetting(sectionKey3, "custom_song_export", "%s%n%a%n%c");
 		SettingsController.\u02B7\u02B9\u02B4\u02C1\u02B9\u02BC\u02B8\u02BD\u02BE\u02B5\u02B8 = new GameSetting(sectionKey2, "menu_background", 1, 0, 14, 1);
-		SettingsController.\u02BC\u02B3\u02B6\u02BB\u02BA\u02B8\u02B8\u02BE\u02BF\u02B2\u02B7 = new GameSetting[]
+		SettingsController.volume_Stems = new GameSetting[]
 		{
 			new GameSetting(sectionKey4, "guitar", 100, 0, 100, 5),
 			new GameSetting(sectionKey4, "bass", 100, 0, 100, 5),
@@ -66,8 +66,8 @@ public static class SettingsController
 			new GameSetting(sectionKey4, "song", 100, 0, 100, 5),
 			new GameSetting(sectionKey4, "crowd", 100, 0, 100, 5)
 		};
-		SettingsController.\u02BC\u02B3\u02B6\u02BB\u02BA\u02B8\u02B8\u02BE\u02BF\u02B2\u02B7[4] = (SettingsController.\u02BC\u02B3\u02B6\u02BB\u02BA\u02B8\u02B8\u02BE\u02BF\u02B2\u02B7[5] = SettingsController.\u02BC\u02B3\u02B6\u02BB\u02BA\u02B8\u02B8\u02BE\u02BF\u02B2\u02B7[3]);
-		SettingsController.\u02BC\u02B3\u02B6\u02BB\u02BA\u02B8\u02B8\u02BE\u02BF\u02B2\u02B7[7] = (SettingsController.\u02BC\u02B3\u02B6\u02BB\u02BA\u02B8\u02B8\u02BE\u02BF\u02B2\u02B7[8] = (SettingsController.\u02BC\u02B3\u02B6\u02BB\u02BA\u02B8\u02B8\u02BE\u02BF\u02B2\u02B7[9] = (SettingsController.\u02BC\u02B3\u02B6\u02BB\u02BA\u02B8\u02B8\u02BE\u02BF\u02B2\u02B7[10] = SettingsController.\u02BC\u02B3\u02B6\u02BB\u02BA\u02B8\u02B8\u02BE\u02BF\u02B2\u02B7[6])));
+		SettingsController.volume_Stems[4] = (SettingsController.volume_Stems[5] = SettingsController.volume_Stems[3]);
+		SettingsController.volume_Stems[7] = (SettingsController.volume_Stems[8] = (SettingsController.volume_Stems[9] = (SettingsController.volume_Stems[10] = SettingsController.volume_Stems[6])));
 		SettingsController.\u02C1\u02C1\u02B3\u02BD\u02B7\u02C1\u02B9\u02BB\u02B5\u02B4\u02BB = new GameSetting(sectionKey4, "sounds", 50, 0, 100, 5);
 		SettingsController.\u02C1\u02BD\u02C0\u02B7\u02B3\u02C0\u02B7\u02B2\u02BF\u02BC\u02B7 = new GameSetting(sectionKey4, "freestyle_drums", 100, 0, 100, 5);
 		SettingsController.\u02B3\u02B2\u02B5\u02B8\u02B8\u02BD\u02BF\u02B6\u02B3\u02C1\u02BF = new GameSetting(sectionKey4, "menu_volume", 50, 0, 100, 5);
@@ -75,7 +75,7 @@ public static class SettingsController
 		SettingsController.\u02B8\u02C1\u02B8\u02BC\u02B9\u02B2\u02BB\u02BB\u02B8\u02BD\u02B5 = new GameSetting(sectionKey4, "master_volume", 50, 0, 100, 5);
 		SettingsController.\u02B9\u02B3\u02BD\u02B5\u02BB\u02C1\u02BE\u02B2\u02B3\u02B3\u02BB = new GameSetting(sectionKey4, "mute_volume", 50, 0, 100, 5);
 		SettingsController.\u02B8\u02BD\u02BF\u02B7\u02BF\u02B7\u02BC\u02C1\u02B2\u02C0\u02BB = new GameSetting(sectionKey4, "device", -1, -1, 100, 0);
-		SettingsController.\u02BE\u02BE\u02C0\u02BA\u02B8\u02B3\u02B4\u02C0\u02BD\u02B7\u02B8 = new GameSetting(sectionKey4, "backend", 0, 0, 1, 1);
+		SettingsController.audioBackend = new GameSetting(sectionKey4, "backend", 0, 0, 1, 1);
 		SettingsController.\u02BD\u02BA\u02B3\u02B7\u02C0\u02C1\u02BB\u02B4\u02B9\u02BB\u02B3 = new GameSetting(sectionKey4, "latency_mode", 1, 0, 2, 1);
 		SettingsController.\u02BF\u02BD\u02B2\u02BE\u02BC\u02B5\u02B6\u02B5\u02B6\u02B9\u02BD = new GameSetting(sectionKey5, "whammy_sfx", true);
 		SettingsController.\u02B3\u02B2\u02B9\u02C0\u02B3\u02BC\u02B4\u02BD\u02B3\u02C1\u02BC = new GameSetting(sectionKey6, "background_image", -2, -2, int.MaxValue, 1);
@@ -137,9 +137,9 @@ public static class SettingsController
 
 	public static GameSetting \u02BD\u02BA\u02B3\u02B7\u02C0\u02C1\u02BB\u02B4\u02B9\u02BB\u02B3;
 
-	public static GameSetting \u02BE\u02BE\u02C0\u02BA\u02B8\u02B3\u02B4\u02C0\u02BD\u02B7\u02B8;
+	public static GameSetting audioBackend;
 
-	public static GameSetting[] \u02BC\u02B3\u02B6\u02BB\u02BA\u02B8\u02B8\u02BE\u02BF\u02B2\u02B7;
+	public static GameSetting[] volume_Stems;
 
 	public static GameSetting \u02C1\u02C1\u02B3\u02BD\u02B7\u02C1\u02B9\u02BB\u02B5\u02B4\u02BB;
 

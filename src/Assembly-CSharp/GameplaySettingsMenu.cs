@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class GameplaySettingsMenu : BaseSettingMenu
 {
-	protected override GameSetting \u02B9\u02B5\u02B5\u02B7\u02BE\u02BF\u02B6\u02B5\u02BB\u02B9\u02C1(string \u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0)
+	protected override GameSetting GetSettingFromString(string \u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0)
 	{
 		GameSetting gameSetting = null;
 		uint num = PrivateImplementationDetails.ComputeStringHash(\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0);
@@ -591,7 +591,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 		this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 	}
 
-	public override void \u02B4\u02BF\u02B6\u02B3\u02B7\u02BA\u02B9\u02B9\u02BD\u02BD\u02B4()
+	public override void SetBools()
 	{
 	}
 
@@ -628,7 +628,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 		}
 		foreach (string text in this.\u02C0\u02BA\u02BF\u02B4\u02B7\u02BC\u02B8\u02B4\u02C0\u02C1\u02C1)
 		{
-			GameSetting gameSetting = this.\u02B9\u02B5\u02B5\u02B7\u02BE\u02BF\u02B6\u02B5\u02BB\u02B9\u02C1(text);
+			GameSetting settingFromString = this.GetSettingFromString(text);
 			uint num = PrivateImplementationDetails.ComputeStringHash(text);
 			if (num <= 53U)
 			{
@@ -644,18 +644,18 @@ public class GameplaySettingsMenu : BaseSettingMenu
 								{
 									if (text == "=")
 									{
-										base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(3, gameSetting);
+										base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(3, settingFromString);
 									}
 								}
 							}
 							else if (text == "backend")
 							{
-								this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[0].text = BassAudioManager.\u02B9\u02B2\u02B6\u02BB\u02B4\u02B7\u02B6\u02B5\u02B7\u02B2\u02BA(gameSetting.CurrentValue).ToString();
+								this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[0].text = BassAudioManager.\u02B9\u02B2\u02B6\u02BB\u02B4\u02B7\u02B6\u02B5\u02B7\u02B2\u02BA(settingFromString.CurrentValue).ToString();
 							}
 						}
 						else if (text == "Spray")
 						{
-							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(6, gameSetting);
+							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(6, settingFromString);
 						}
 					}
 					else if (num <= 4294967169U)
@@ -666,13 +666,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 							{
 								if (text == "Rhythm Guitar")
 								{
-									base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(4, gameSetting);
+									base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(4, settingFromString);
 								}
 							}
 						}
 						else if (text == "song")
 						{
-							base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(1, gameSetting);
+							base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(1, settingFromString);
 						}
 					}
 					else if (num != 67U)
@@ -681,13 +681,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 						{
 							if (text == "CPU: {0}, Count: {1}, Frequency: {2} MHz")
 							{
-								base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(5, gameSetting);
+								base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(5, settingFromString);
 							}
 						}
 					}
 					else if (text == "Delete Profile")
 					{
-						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(-115, gameSetting);
+						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(-115, settingFromString);
 					}
 				}
 				else if (num <= 4294967202U)
@@ -700,17 +700,17 @@ public class GameplaySettingsMenu : BaseSettingMenu
 							{
 								if (text == "bassinitfail")
 								{
-									if (gameSetting == this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC)
+									if (settingFromString == this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC)
 									{
-										this.\u02B9\u02B3\u02B5\u02BB\u02C1\u02B5\u02B2\u02B2\u02BE\u02BA\u02BD.\u02C0\u02BC\u02B8\u02BA\u02BB\u02B5\u02B3\u02B8\u02BA\u02C1\u02C1(gameSetting.CurrentValue, true);
+										this.\u02B9\u02B3\u02B5\u02BB\u02C1\u02B5\u02B2\u02B2\u02BE\u02BA\u02BD.\u02C0\u02BC\u02B8\u02BA\u02BB\u02B5\u02B3\u02B8\u02BA\u02C1\u02C1(settingFromString.CurrentValue, true);
 									}
-									this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[4].text = this.\u02B7\u02B9\u02B6\u02B6\u02B8\u02B4\u02B7\u02C1\u02B2\u02BA\u02BC(gameSetting.CurrentValue, "Bass", GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02B9\u02BD\u02BC\u02B7\u02B6\u02B2\u02B2\u02BC\u02BB\u02BB);
+									this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[4].text = this.\u02B7\u02B9\u02B6\u02B6\u02B8\u02B4\u02B7\u02C1\u02B2\u02BA\u02BC(settingFromString.CurrentValue, "Bass", GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02B9\u02BD\u02BC\u02B7\u02B6\u02B2\u02B2\u02BC\u02BB\u02BB);
 								}
 							}
 						}
 						else if (text == "Received profile update for own peer")
 						{
-							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(3, gameSetting);
+							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(3, settingFromString);
 						}
 					}
 					else if (num != 58U)
@@ -719,13 +719,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 						{
 							if (text == "Framerate")
 							{
-								base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(0, gameSetting);
+								base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(0, settingFromString);
 							}
 						}
 					}
 					else if (text == "%n")
 					{
-						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(4, gameSetting);
+						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(4, settingFromString);
 					}
 				}
 				else if (num <= 4294967278U)
@@ -736,13 +736,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 						{
 							if (text == "prodrums")
 							{
-								base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(65, gameSetting);
+								base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(65, settingFromString);
 							}
 						}
 					}
 					else if (text == "{0:N0} FPS")
 					{
-						base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(0, gameSetting);
+						base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(0, settingFromString);
 					}
 				}
 				else if (num != 187U)
@@ -751,13 +751,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 					{
 						if (text == "GameData")
 						{
-							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(5, gameSetting);
+							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(5, settingFromString);
 						}
 					}
 				}
 				else if (text == "Game Mode")
 				{
-					this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[1].text = LanguageManager.instance.\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0(\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B4\u02B2\u02BB\u02B2\u02BD\u02BA\u02C0\u02B2\u02B5\u02BC\u02B8[gameSetting.CurrentValue]);
+					this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[1].text = LanguageManager.instance.\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0(\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B4\u02B2\u02BB\u02B2\u02BD\u02BA\u02C0\u02B2\u02B5\u02BC\u02B8[settingFromString.CurrentValue]);
 				}
 			}
 			else if (num <= 4U)
@@ -772,13 +772,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 							{
 								if (text == "notes.mid")
 								{
-									base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(6, gameSetting);
+									base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(6, settingFromString);
 								}
 							}
 						}
 						else if (text == "song")
 						{
-							base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(4, gameSetting);
+							base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(4, settingFromString);
 						}
 					}
 					else if (num != 4294967135U)
@@ -787,13 +787,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 						{
 							if (text == "targetFramerate")
 							{
-								base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(0, gameSetting);
+								base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(0, settingFromString);
 							}
 						}
 					}
 					else if (text == "8EDC4F")
 					{
-						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(96, gameSetting);
+						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(96, settingFromString);
 					}
 				}
 				else if (num <= 4294967281U)
@@ -804,13 +804,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 						{
 							if (text == "EndOfSong")
 							{
-								base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(0, gameSetting);
+								base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(0, settingFromString);
 							}
 						}
 					}
 					else if (text == "GameColors_")
 					{
-						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(-88, gameSetting);
+						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(-88, settingFromString);
 					}
 				}
 				else if (num != 4294967169U)
@@ -819,17 +819,17 @@ public class GameplaySettingsMenu : BaseSettingMenu
 					{
 						if (text == "Test")
 						{
-							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(0, gameSetting);
+							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(0, settingFromString);
 						}
 					}
 				}
 				else if (text == "8EDC4F")
 				{
-					if (gameSetting == this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC)
+					if (settingFromString == this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC)
 					{
-						this.\u02B9\u02B3\u02B5\u02BB\u02C1\u02B5\u02B2\u02B2\u02BE\u02BA\u02BD.\u02C0\u02BC\u02B8\u02BA\u02BB\u02B5\u02B3\u02B8\u02BA\u02C1\u02C1(gameSetting.CurrentValue, false);
+						this.\u02B9\u02B3\u02B5\u02BB\u02C1\u02B5\u02B2\u02B2\u02BE\u02BA\u02BD.\u02C0\u02BC\u02B8\u02BA\u02BB\u02B5\u02B3\u02B8\u02BA\u02C1\u02C1(settingFromString.CurrentValue, false);
 					}
-					this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[1].text = this.\u02BF\u02B7\u02BE\u02BD\u02BC\u02BB\u02C0\u02BA\u02C0\u02BD\u02BF(gameSetting.CurrentValue, "midi_export", GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B9\u02BB\u02B2\u02B8\u02B3\u02B7\u02B3\u02B2\u02BD\u02B9\u02BF);
+					this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[1].text = this.\u02BF\u02B7\u02BE\u02BD\u02BC\u02BB\u02C0\u02BA\u02C0\u02BD\u02BF(settingFromString.CurrentValue, "midi_export", GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B9\u02BB\u02B2\u02B8\u02B3\u02B7\u02B3\u02B2\u02BD\u02B9\u02BF);
 				}
 			}
 			else if (num <= 12U)
@@ -842,13 +842,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 						{
 							if (text == ".ini")
 							{
-								base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(14, gameSetting);
+								base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(14, settingFromString);
 							}
 						}
 					}
 					else if (text == "Hard")
 					{
-						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(45, gameSetting);
+						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(45, settingFromString);
 					}
 				}
 				else if (num != 4294967212U)
@@ -857,13 +857,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 					{
 						if (text == "6 Fret Lead Guitar")
 						{
-							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(6, gameSetting);
+							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(6, settingFromString);
 						}
 					}
 				}
 				else if (text == "SoftMask")
 				{
-					base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(3, gameSetting);
+					base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(3, settingFromString);
 				}
 			}
 			else if (num <= 163U)
@@ -887,13 +887,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 				{
 					if (text == "")
 					{
-						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(0, gameSetting);
+						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(0, settingFromString);
 					}
 				}
 			}
 			else if (text == "five_lane_drums")
 			{
-				base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(7, gameSetting);
+				base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(7, settingFromString);
 			}
 		}
 	}
@@ -973,7 +973,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 		}
 		foreach (string text in this.\u02C0\u02BA\u02BF\u02B4\u02B7\u02BC\u02B8\u02B4\u02C0\u02C1\u02C1)
 		{
-			GameSetting gameSetting = this.\u02B9\u02B5\u02B5\u02B7\u02BE\u02BF\u02B6\u02B5\u02BB\u02B9\u02C1(text);
+			GameSetting settingFromString = this.GetSettingFromString(text);
 			uint num = PrivateImplementationDetails.ComputeStringHash(text);
 			if (num <= 2087995404U)
 			{
@@ -989,18 +989,18 @@ public class GameplaySettingsMenu : BaseSettingMenu
 								{
 									if (text == "Practice Start Delay")
 									{
-										base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(7, gameSetting);
+										base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(7, settingFromString);
 									}
 								}
 							}
 							else if (text == "Audio Backend")
 							{
-								this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[0].text = BassAudioManager.\u02B9\u02B2\u02B6\u02BB\u02B4\u02B7\u02B6\u02B5\u02B7\u02B2\u02BA(gameSetting.CurrentValue).ToString();
+								this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[0].text = BassAudioManager.\u02B9\u02B2\u02B6\u02BB\u02B4\u02B7\u02B6\u02B5\u02B7\u02B2\u02BA(settingFromString.CurrentValue).ToString();
 							}
 						}
 						else if (text == "Default Search By Current Sort")
 						{
-							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(3, gameSetting);
+							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(3, settingFromString);
 						}
 					}
 					else if (num <= 554341610U)
@@ -1011,13 +1011,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 							{
 								if (text == "Highway Shake")
 								{
-									base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(2, gameSetting);
+									base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(2, settingFromString);
 								}
 							}
 						}
 						else if (text == "Audio Offset")
 						{
-							base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(0, gameSetting);
+							base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(0, settingFromString);
 						}
 					}
 					else if (num != 580693481U)
@@ -1026,13 +1026,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 						{
 							if (text == "Double Strum Prevention")
 							{
-								base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(6, gameSetting);
+								base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(6, settingFromString);
 							}
 						}
 					}
 					else if (text == "Practice Star Power")
 					{
-						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(12, gameSetting);
+						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(12, settingFromString);
 					}
 				}
 				else if (num <= 1476092947U)
@@ -1045,17 +1045,17 @@ public class GameplaySettingsMenu : BaseSettingMenu
 							{
 								if (text == "Background Video")
 								{
-									if (gameSetting == this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC)
+									if (settingFromString == this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC)
 									{
-										this.\u02B9\u02B3\u02B5\u02BB\u02C1\u02B5\u02B2\u02B2\u02BE\u02BA\u02BD.\u02B3\u02C1\u02BC\u02BE\u02BD\u02BB\u02B9\u02B2\u02B4\u02B9\u02BE(gameSetting.CurrentValue, true);
+										this.\u02B9\u02B3\u02B5\u02BB\u02C1\u02B5\u02B2\u02B2\u02BE\u02BA\u02BD.\u02B3\u02C1\u02BC\u02BE\u02BD\u02BB\u02B9\u02B2\u02B4\u02B9\u02BE(settingFromString.CurrentValue, true);
 									}
-									this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[2].text = this.\u02BF\u02B7\u02BE\u02BD\u02BC\u02BB\u02C0\u02BA\u02C0\u02BD\u02BF(gameSetting.CurrentValue, "No Videos!", GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02B9\u02BD\u02BC\u02B7\u02B6\u02B2\u02B2\u02BC\u02BB\u02BB);
+									this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[2].text = this.\u02BF\u02B7\u02BE\u02BD\u02BC\u02BB\u02C0\u02BA\u02C0\u02BD\u02BF(settingFromString.CurrentValue, "No Videos!", GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02B9\u02BD\u02BC\u02B7\u02B6\u02B2\u02B2\u02BC\u02BB\u02BB);
 								}
 							}
 						}
 						else if (text == "Pause on Focus Lost")
 						{
-							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(5, gameSetting);
+							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(5, settingFromString);
 						}
 					}
 					else if (num != 1351274325U)
@@ -1064,13 +1064,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 						{
 							if (text == "Show Hit Window")
 							{
-								base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(0, gameSetting);
+								base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(0, settingFromString);
 							}
 						}
 					}
 					else if (text == "Allow Duplicate Songs")
 					{
-						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(4, gameSetting);
+						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(4, settingFromString);
 					}
 				}
 				else if (num <= 1753283860U)
@@ -1081,13 +1081,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 						{
 							if (text == "Song Highways")
 							{
-								base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(13, gameSetting);
+								base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(13, settingFromString);
 							}
 						}
 					}
 					else if (text == "Controller Poll Rate")
 					{
-						base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(5, gameSetting);
+						base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(5, settingFromString);
 					}
 				}
 				else if (num != 1976894744U)
@@ -1096,13 +1096,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 					{
 						if (text == "Mute Track on Miss")
 						{
-							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(7, gameSetting);
+							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(7, settingFromString);
 						}
 					}
 				}
 				else if (text == "Default Sort Filter")
 				{
-					this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[0].text = LanguageManager.instance.GetString(\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B4\u02B2\u02BB\u02B2\u02BD\u02BA\u02C0\u02B2\u02B5\u02BC\u02B8[gameSetting.CurrentValue]);
+					this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[0].text = LanguageManager.instance.GetString(\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B4\u02B2\u02BB\u02B2\u02BD\u02BA\u02C0\u02B2\u02B5\u02BC\u02B8[settingFromString.CurrentValue]);
 				}
 			}
 			else if (num <= 3148303310U)
@@ -1117,13 +1117,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 							{
 								if (text == "Star Animation FPS")
 								{
-									base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(3, gameSetting);
+									base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(3, settingFromString);
 								}
 							}
 						}
 						else if (text == "Note Animation FPS")
 						{
-							base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(2, gameSetting);
+							base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(2, settingFromString);
 						}
 					}
 					else if (num != 2325855612U)
@@ -1132,13 +1132,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 						{
 							if (text == "Video Offset")
 							{
-								base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(1, gameSetting);
+								base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(1, settingFromString);
 							}
 						}
 					}
 					else if (text == "Song Videos")
 					{
-						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(10, gameSetting);
+						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(10, settingFromString);
 					}
 				}
 				else if (num <= 2626071342U)
@@ -1149,13 +1149,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 						{
 							if (text == "Low Latency Mode")
 							{
-								base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(0, gameSetting);
+								base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(0, settingFromString);
 							}
 						}
 					}
 					else if (text == "Use Song Backgrounds")
 					{
-						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(11, gameSetting);
+						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(11, settingFromString);
 					}
 				}
 				else if (num != 2927438748U)
@@ -1164,17 +1164,17 @@ public class GameplaySettingsMenu : BaseSettingMenu
 					{
 						if (text == "No Fail")
 						{
-							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(6, gameSetting);
+							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(6, settingFromString);
 						}
 					}
 				}
 				else if (text == "Background Image")
 				{
-					if (gameSetting == this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC)
+					if (settingFromString == this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC)
 					{
-						this.\u02B9\u02B3\u02B5\u02BB\u02C1\u02B5\u02B2\u02B2\u02BE\u02BA\u02BD.\u02B3\u02C1\u02BC\u02BE\u02BD\u02BB\u02B9\u02B2\u02B4\u02B9\u02BE(gameSetting.CurrentValue, false);
+						this.\u02B9\u02B3\u02B5\u02BB\u02C1\u02B5\u02B2\u02B2\u02BE\u02BA\u02BD.\u02B3\u02C1\u02BC\u02BE\u02BD\u02BB\u02B9\u02B2\u02B4\u02B9\u02BE(settingFromString.CurrentValue, false);
 					}
-					this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[1].text = this.\u02BF\u02B7\u02BE\u02BD\u02BC\u02BB\u02C0\u02BA\u02C0\u02BD\u02BF(gameSetting.CurrentValue, "No Images!", GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B9\u02BB\u02B2\u02B8\u02B3\u02B7\u02B3\u02B2\u02BD\u02B9\u02BF);
+					this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[1].text = this.\u02BF\u02B7\u02BE\u02BD\u02BC\u02BB\u02C0\u02BA\u02C0\u02BD\u02BF(settingFromString.CurrentValue, "No Images!", GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B9\u02BB\u02B2\u02B8\u02B3\u02B7\u02B3\u02B2\u02BD\u02B9\u02BF);
 				}
 			}
 			else if (num <= 3502736215U)
@@ -1187,13 +1187,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 						{
 							if (text == "Show Lyrics")
 							{
-								base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(9, gameSetting);
+								base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(9, settingFromString);
 							}
 						}
 					}
 					else if (text == "Measure Based Countdowns")
 					{
-						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(14, gameSetting);
+						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(14, settingFromString);
 					}
 				}
 				else if (num != 3411634414U)
@@ -1202,13 +1202,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 					{
 						if (text == "Show Bot Score")
 						{
-							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(8, gameSetting);
+							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(8, settingFromString);
 						}
 					}
 				}
 				else if (text == "Crowd")
 				{
-					base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(8, gameSetting);
+					base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(8, settingFromString);
 				}
 			}
 			else if (num <= 3587543207U)
@@ -1232,13 +1232,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 				{
 					if (text == "Show Lyrics Background")
 					{
-						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(1, gameSetting);
+						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(1, settingFromString);
 					}
 				}
 			}
 			else if (text == "Gem Size")
 			{
-				base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(4, gameSetting);
+				base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(4, settingFromString);
 			}
 		}
 	}

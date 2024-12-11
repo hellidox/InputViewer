@@ -537,7 +537,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 		base.\u02C1\u02B3\u02BC\u02B6\u02BD\u02B6\u02BF\u02B7\u02BB\u02B5\u02BB();
 	}
 
-	protected override GameSetting \u02B9\u02B5\u02B5\u02B7\u02BE\u02BF\u02B6\u02B5\u02BB\u02B9\u02C1(string \u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0)
+	protected override GameSetting GetSettingFromString(string \u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0)
 	{
 		GameSetting gameSetting = null;
 		uint num = PrivateImplementationDetails.ComputeStringHash(\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0);
@@ -869,7 +869,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 		}
 		foreach (string text in this.\u02C0\u02BA\u02BF\u02B4\u02B7\u02BC\u02B8\u02B4\u02C0\u02C1\u02C1)
 		{
-			GameSetting gameSetting = this.\u02B9\u02B5\u02B5\u02B7\u02BE\u02BF\u02B6\u02B5\u02BB\u02B9\u02C1(text);
+			GameSetting settingFromString = this.GetSettingFromString(text);
 			uint num = PrivateImplementationDetails.ComputeStringHash(text);
 			if (num <= 4294967268U)
 			{
@@ -892,7 +892,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 						}
 						else if (text == "Difficulty")
 						{
-							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(6, gameSetting);
+							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(6, settingFromString);
 						}
 					}
 					else if (num != 161U)
@@ -905,24 +905,24 @@ public class VideoSettingsMenu : BaseSettingMenu
 								{
 									if (Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.WindowsEditor)
 									{
-										if (gameSetting.CurrentValue == 0)
+										if (settingFromString.CurrentValue == 0)
 										{
 											this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[4].text = "[ENHANCED_OPENS]";
 										}
-										else if (gameSetting.CurrentValue == 1)
+										else if (settingFromString.CurrentValue == 1)
 										{
 											this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[3].text = "Couldn't load that song";
 										}
-										else if (gameSetting.CurrentValue == 6)
+										else if (settingFromString.CurrentValue == 6)
 										{
 											this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[6].text = "offset";
 										}
 									}
-									else if (gameSetting.CurrentValue == 0)
+									else if (settingFromString.CurrentValue == 0)
 									{
 										this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[8].text = " ";
 									}
-									else if (gameSetting.CurrentValue == 0)
+									else if (settingFromString.CurrentValue == 0)
 									{
 										this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[0].text = "Are you sure you want to quit?";
 									}
@@ -932,7 +932,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 					}
 					else if (text == "")
 					{
-						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(5, gameSetting);
+						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(5, settingFromString);
 					}
 				}
 				else if (num <= 4294967179U)
@@ -952,13 +952,13 @@ public class VideoSettingsMenu : BaseSettingMenu
 					}
 					else if (text == "highway.webm")
 					{
-						if (gameSetting.CurrentValue == 0)
+						if (settingFromString.CurrentValue == 0)
 						{
 							this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[4].text = "Default Sort Filter";
 						}
 						else
 						{
-							this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[8].text = gameSetting.GetIntString + "Drums";
+							this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[8].text = settingFromString.GetIntString + "Drums";
 						}
 					}
 				}
@@ -968,13 +968,13 @@ public class VideoSettingsMenu : BaseSettingMenu
 					{
 						if (text == "offset")
 						{
-							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(0, gameSetting);
+							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(0, settingFromString);
 						}
 					}
 				}
 				else if (text == "Year")
 				{
-					base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(3, gameSetting);
+					base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(3, settingFromString);
 				}
 			}
 			else if (num <= 5U)
@@ -988,7 +988,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 							if (text == "currentsong.txt")
 							{
 								string text2 = "streamer";
-								switch (gameSetting.CurrentValue)
+								switch (settingFromString.CurrentValue)
 								{
 								case 0:
 									text2 = LanguageManager.instance.\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0("video");
@@ -1042,7 +1042,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 					}
 					else if (text == "Precision Mode")
 					{
-						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(0, gameSetting);
+						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(0, settingFromString);
 					}
 				}
 				else if (num != 161U)
@@ -1053,14 +1053,14 @@ public class VideoSettingsMenu : BaseSettingMenu
 						{
 							if (Application.platform != (RuntimePlatform)60)
 							{
-								base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(1, gameSetting);
+								base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(1, settingFromString);
 							}
 						}
 					}
 				}
 				else if (text == "Pro Drums")
 				{
-					base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(8, gameSetting);
+					base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(8, settingFromString);
 				}
 			}
 			else if (num <= 59U)
@@ -1071,7 +1071,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 					{
 						if (text == "Resolution")
 						{
-							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(3, gameSetting);
+							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(3, settingFromString);
 						}
 					}
 				}
@@ -1096,14 +1096,14 @@ public class VideoSettingsMenu : BaseSettingMenu
 				{
 					if (text == "6 Fret Lead Guitar")
 					{
-						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(1, gameSetting);
+						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(1, settingFromString);
 					}
 				}
 			}
 			else if (text == "Press <color=\"green\">Green</color> to continue.")
 			{
-				base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(1, gameSetting);
-				if (gameSetting.CurrentValue > 116)
+				base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(1, settingFromString);
+				if (settingFromString.CurrentValue > 116)
 				{
 					this.\u02C0\u02B9\u02C0\u02B2\u02B5\u02BA\u02BD\u02BF\u02B2\u02B7\u02B3[0].text = "Null";
 				}
@@ -1121,7 +1121,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 		this.\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0(this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3);
 	}
 
-	public override void \u02B4\u02BF\u02B6\u02B3\u02B7\u02BA\u02B9\u02B9\u02BD\u02BD\u02B4()
+	public override void SetBools()
 	{
 		GlobalVariables u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7;
 		u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B.\u02B6\u02B3\u02B7\u02B5\u02BB\u02BD\u02B3\u02B9\u02BD\u02B2\u02B7 = (Action)Delegate.Combine(u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B.\u02B6\u02B3\u02B7\u02B5\u02BB\u02BD\u02B3\u02B9\u02BD\u02B2\u02B7, new Action(this.\u02B2\u02B7\u02B2\u02B3\u02B5\u02B3\u02B8\u02BA\u02B3\u02BC\u02BD));
@@ -1200,7 +1200,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 		}
 		foreach (string text in this.\u02C0\u02BA\u02BF\u02B4\u02B7\u02BC\u02B8\u02B4\u02C0\u02C1\u02C1)
 		{
-			GameSetting gameSetting = this.\u02B9\u02B5\u02B5\u02B7\u02BE\u02BF\u02B6\u02B5\u02BB\u02B9\u02C1(text);
+			GameSetting settingFromString = this.GetSettingFromString(text);
 			uint num = PrivateImplementationDetails.ComputeStringHash(text);
 			if (num <= 112U)
 			{
@@ -1223,7 +1223,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 						}
 						else if (text == "Keyboard")
 						{
-							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(8, gameSetting);
+							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(8, settingFromString);
 						}
 					}
 					else if (num != 13U)
@@ -1236,24 +1236,24 @@ public class VideoSettingsMenu : BaseSettingMenu
 								{
 									if (Application.platform == RuntimePlatform.OSXEditor || Application.platform == RuntimePlatform.OSXDashboardPlayer)
 									{
-										if (gameSetting.CurrentValue == 0)
+										if (settingFromString.CurrentValue == 0)
 										{
 											this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[8].text = "bad_note3";
 										}
-										else if (gameSetting.CurrentValue == 1)
+										else if (settingFromString.CurrentValue == 1)
 										{
 											this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[8].text = "notes.mid";
 										}
-										else if (gameSetting.CurrentValue == 0)
+										else if (settingFromString.CurrentValue == 0)
 										{
 											this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[4].text = "year";
 										}
 									}
-									else if (gameSetting.CurrentValue == 0)
+									else if (settingFromString.CurrentValue == 0)
 									{
 										this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[3].text = "ControlMapper";
 									}
-									else if (gameSetting.CurrentValue == 1)
+									else if (settingFromString.CurrentValue == 1)
 									{
 										this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[1].text = "<b>{0}</b>%";
 									}
@@ -1263,7 +1263,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 					}
 					else if (text == "A: 00:00:00")
 					{
-						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(6, gameSetting);
+						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(6, settingFromString);
 					}
 				}
 				else if (num <= 4294967282U)
@@ -1283,13 +1283,13 @@ public class VideoSettingsMenu : BaseSettingMenu
 					}
 					else if (text == "song")
 					{
-						if (gameSetting.CurrentValue == 0)
+						if (settingFromString.CurrentValue == 0)
 						{
 							this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[2].text = "Renderer: {0}";
 						}
 						else
 						{
-							this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[6].text = gameSetting.GetIntString + "Yes";
+							this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[6].text = settingFromString.GetIntString + "Yes";
 						}
 					}
 				}
@@ -1299,13 +1299,13 @@ public class VideoSettingsMenu : BaseSettingMenu
 					{
 						if (text == "songs.json")
 						{
-							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(0, gameSetting);
+							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(0, settingFromString);
 						}
 					}
 				}
 				else if (text == "No")
 				{
-					base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(3, gameSetting);
+					base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(3, settingFromString);
 				}
 			}
 			else if (num <= 81U)
@@ -1319,7 +1319,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 							if (text == "Guest")
 							{
 								string text2 = "song";
-								switch (gameSetting.CurrentValue)
+								switch (settingFromString.CurrentValue)
 								{
 								case 0:
 									text2 = LanguageManager.\u02BE\u02C0\u02B6\u02B9\u02B7\u02BE\u02B9\u02B6\u02B9\u02BF\u02B2().\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4("highway_shake");
@@ -1373,7 +1373,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 					}
 					else if (text == "Yes")
 					{
-						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(8, gameSetting);
+						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(8, settingFromString);
 					}
 				}
 				else if (num != 155U)
@@ -1384,14 +1384,14 @@ public class VideoSettingsMenu : BaseSettingMenu
 						{
 							if (Application.platform != RuntimePlatform.WP8Player)
 							{
-								base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(0, gameSetting);
+								base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(0, settingFromString);
 							}
 						}
 					}
 				}
 				else if (text == "Test")
 				{
-					base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(4, gameSetting);
+					base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(4, settingFromString);
 				}
 			}
 			else if (num <= 4U)
@@ -1402,7 +1402,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 					{
 						if (text == "Random")
 						{
-							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(5, gameSetting);
+							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(5, settingFromString);
 						}
 					}
 				}
@@ -1427,14 +1427,14 @@ public class VideoSettingsMenu : BaseSettingMenu
 				{
 					if (text == "Songs")
 					{
-						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(8, gameSetting);
+						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(8, settingFromString);
 					}
 				}
 			}
 			else if (text == "Lead Guitar")
 			{
-				base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(1, gameSetting);
-				if (gameSetting.CurrentValue > 164)
+				base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(1, settingFromString);
+				if (settingFromString.CurrentValue > 164)
 				{
 					this.\u02C0\u02B9\u02C0\u02B2\u02B5\u02BA\u02BD\u02BF\u02B2\u02B7\u02B3[1].text = "8EDC4F";
 				}
@@ -1664,7 +1664,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 		}
 		foreach (string text in this.\u02C0\u02BA\u02BF\u02B4\u02B7\u02BC\u02B8\u02B4\u02C0\u02C1\u02C1)
 		{
-			GameSetting gameSetting = this.\u02B9\u02B5\u02B5\u02B7\u02BE\u02BF\u02B6\u02B5\u02BB\u02B9\u02C1(text);
+			GameSetting settingFromString = this.GetSettingFromString(text);
 			uint num = PrivateImplementationDetails.ComputeStringHash(text);
 			if (num <= 1595303295U)
 			{
@@ -1687,7 +1687,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 						}
 						else if (text == "Show FPS")
 						{
-							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(7, gameSetting);
+							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(7, settingFromString);
 						}
 					}
 					else if (num != 948948777U)
@@ -1700,24 +1700,24 @@ public class VideoSettingsMenu : BaseSettingMenu
 								{
 									if (Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.WindowsPlayer)
 									{
-										if (gameSetting.CurrentValue == 0)
+										if (settingFromString.CurrentValue == 0)
 										{
 											this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[2].text = "Disabled";
 										}
-										else if (gameSetting.CurrentValue == 1)
+										else if (settingFromString.CurrentValue == 1)
 										{
 											this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[2].text = "Windowed Fullscreen";
 										}
-										else if (gameSetting.CurrentValue == 2)
+										else if (settingFromString.CurrentValue == 2)
 										{
 											this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[2].text = "Exclusive Fullscreen";
 										}
 									}
-									else if (gameSetting.CurrentValue == 0)
+									else if (settingFromString.CurrentValue == 0)
 									{
 										this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[2].text = "Disabled";
 									}
-									else if (gameSetting.CurrentValue == 1)
+									else if (settingFromString.CurrentValue == 1)
 									{
 										this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[2].text = "Windowed Fullscreen";
 									}
@@ -1727,7 +1727,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 					}
 					else if (text == "Flames")
 					{
-						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(3, gameSetting);
+						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(3, settingFromString);
 					}
 				}
 				else if (num <= 1510332853U)
@@ -1747,13 +1747,13 @@ public class VideoSettingsMenu : BaseSettingMenu
 					}
 					else if (text == "MSAA Level")
 					{
-						if (gameSetting.CurrentValue == 0)
+						if (settingFromString.CurrentValue == 0)
 						{
 							this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[3].text = "Disabled";
 						}
 						else
 						{
-							this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[3].text = gameSetting.GetIntString + "x";
+							this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[3].text = settingFromString.GetIntString + "x";
 						}
 					}
 				}
@@ -1763,13 +1763,13 @@ public class VideoSettingsMenu : BaseSettingMenu
 					{
 						if (text == "Show Mouse Cursor")
 						{
-							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(0, gameSetting);
+							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(0, settingFromString);
 						}
 					}
 				}
 				else if (text == "SP Lightning")
 				{
-					base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(5, gameSetting);
+					base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(5, settingFromString);
 				}
 			}
 			else if (num <= 2897502726U)
@@ -1783,7 +1783,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 							if (text == "Menu Backgrounds")
 							{
 								string text2 = "";
-								switch (gameSetting.CurrentValue)
+								switch (settingFromString.CurrentValue)
 								{
 								case 0:
 									text2 = LanguageManager.instance.GetString("Animated");
@@ -1837,7 +1837,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 					}
 					else if (text == "SP Colors")
 					{
-						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(8, gameSetting);
+						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(8, settingFromString);
 					}
 				}
 				else if (num != 2372057453U)
@@ -1848,14 +1848,14 @@ public class VideoSettingsMenu : BaseSettingMenu
 						{
 							if (Application.platform != RuntimePlatform.Android)
 							{
-								base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(1, gameSetting);
+								base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(1, settingFromString);
 							}
 						}
 					}
 				}
 				else if (text == "Highway SP Effects")
 				{
-					base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(4, gameSetting);
+					base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(4, settingFromString);
 				}
 			}
 			else if (num <= 3134466500U)
@@ -1866,7 +1866,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 					{
 						if (text == "Particles")
 						{
-							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(2, gameSetting);
+							base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(2, settingFromString);
 						}
 					}
 				}
@@ -1891,14 +1891,14 @@ public class VideoSettingsMenu : BaseSettingMenu
 				{
 					if (text == "Song Display")
 					{
-						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(6, gameSetting);
+						base.\u02B7\u02B9\u02BE\u02B8\u02B8\u02BB\u02B2\u02BB\u02B3\u02BC\u02BE(6, settingFromString);
 					}
 				}
 			}
 			else if (text == "Framerate")
 			{
-				base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(0, gameSetting);
-				if (gameSetting.CurrentValue > 2000)
+				base.\u02BA\u02BC\u02C1\u02BE\u02B4\u02B3\u02BA\u02BC\u02BB\u02C1\u02BB(0, settingFromString);
+				if (settingFromString.CurrentValue > 2000)
 				{
 					this.\u02C0\u02B9\u02C0\u02B2\u02B5\u02BA\u02BD\u02BF\u02B2\u02B7\u02B3[0].text = "∞";
 				}
