@@ -252,7 +252,7 @@ public class BaseMenu : MonoBehaviour
 		}
 		if (this.allowMultiLanguage)
 		{
-			this.tipText.text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02BE\u02C0\u02B6\u02B9\u02B7\u02BE\u02B9\u02B6\u02B9\u02BF\u02B2().\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this.tipStrings[this.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC]);
+			this.tipText.text = LanguageManager.\u02BE\u02C0\u02B6\u02B9\u02B7\u02BE\u02B9\u02B6\u02B9\u02BF\u02B2().GetString(this.tipStrings[this.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC]);
 		}
 		else
 		{
@@ -310,7 +310,7 @@ public class BaseMenu : MonoBehaviour
 			string text = null;
 			if (this.allowMultiLanguage)
 			{
-				text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this.menuStrings[num]);
+				text = LanguageManager.instance.GetString(this.menuStrings[num]);
 			}
 			if (text == null)
 			{
@@ -408,7 +408,7 @@ public class BaseMenu : MonoBehaviour
 		}
 		if (this.allowMultiLanguage)
 		{
-			this.tipText.text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this.tipStrings[this.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC]);
+			this.tipText.text = LanguageManager.instance.GetString(this.tipStrings[this.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC]);
 		}
 		else
 		{
@@ -970,7 +970,7 @@ public class BaseMenu : MonoBehaviour
 	{
 		for (int i = 0; i < this.textObjects.Length; i++)
 		{
-			this.textObjects[i].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this.menuStrings[i]);
+			this.textObjects[i].text = LanguageManager.instance.GetString(this.menuStrings[i]);
 		}
 	}
 

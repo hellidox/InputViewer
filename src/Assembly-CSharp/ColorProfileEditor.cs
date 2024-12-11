@@ -433,7 +433,7 @@ public class ColorProfileEditor : MonoBehaviour
 	private void \u02B8\u02BE\u02B2\u02B7\u02BE\u02B4\u02B7\u02BF\u02BB\u02B7\u02B4(List<string> \u02C1\u02BC\u02B8\u02C0\u02BD\u02B5\u02B8\u02C0\u02C0\u02C1\u02BB, List<Button> \u02BB\u02BA\u02BA\u02B6\u02BB\u02B6\u02BD\u02BC\u02C0\u02BC\u02BB, string \u02BE\u02B4\u02B6\u02B7\u02BF\u02B5\u02BC\u02BC\u02B4\u02C1\u02B5)
 	{
 		GameObject gameObject = global::UnityEngine.Object.Instantiate<GameObject>(this.\u02BE\u02BA\u02B8\u02C1\u02C0\u02C1\u02BA\u02B9\u02B8\u02B8\u02B7, this.\u02B6\u02B7\u02C0\u02BC\u02B7\u02BB\u02B6\u02B4\u02B6\u02B7\u02BB);
-		gameObject.GetComponentsInChildren<TextMeshProUGUI>()[0].text = new string(' ', \u02C1\u02BC\u02B8\u02C0\u02BD\u02B5\u02B8\u02C0\u02C0\u02C1\u02BB.Count * 5) + \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(\u02BE\u02B4\u02B6\u02B7\u02BF\u02B5\u02BC\u02BC\u02B4\u02C1\u02B5);
+		gameObject.GetComponentsInChildren<TextMeshProUGUI>()[0].text = new string(' ', \u02C1\u02BC\u02B8\u02C0\u02BD\u02B5\u02B8\u02C0\u02C0\u02C1\u02BB.Count * 5) + LanguageManager.instance.GetString(\u02BE\u02B4\u02B6\u02B7\u02BF\u02B5\u02BC\u02BC\u02B4\u02C1\u02B5);
 		\u02C1\u02BC\u02B8\u02C0\u02BD\u02B5\u02B8\u02C0\u02C0\u02C1\u02BB.Add(\u02BE\u02B4\u02B6\u02B7\u02BF\u02B5\u02BC\u02BC\u02B4\u02C1\u02B5);
 		\u02BB\u02BA\u02BA\u02B6\u02BB\u02B6\u02BD\u02BC\u02C0\u02BC\u02BB.Add(gameObject.GetComponent<Button>());
 	}
@@ -536,7 +536,7 @@ public class ColorProfileEditor : MonoBehaviour
 			(u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.inputField.placeholder as TextMeshProUGUI).text = HexColor.ToHexString(u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.colorSetting.CurrentValue, false);
 			Color color4 = this.\u02BF\u02C0\u02BA\u02B8\u02B6\u02BF\u02BF\u02B4\u02BB\u02BF\u02C1(color2);
 			u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.textObjects = gameObject.GetComponentsInChildren<TextMeshProUGUI>();
-			u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.textObjects[0].text = (string.IsNullOrEmpty(list[i + 1]) ? u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.colorSetting.Name : \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(list[i + 1]));
+			u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.textObjects[0].text = (string.IsNullOrEmpty(list[i + 1]) ? u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.colorSetting.Name : LanguageManager.instance.GetString(list[i + 1]));
 			u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.textObjects[1].color = (u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.textObjects[2].color = (u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.textObjects[3].color = color4));
 			u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.imageObjects = gameObject.GetComponentsInChildren<Image>();
 			u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.imageObjects[1].color = (u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.imageObjects[2].color = color2);
@@ -635,7 +635,7 @@ public class ColorProfileEditor : MonoBehaviour
 			(u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.inputField.placeholder as TextMeshProUGUI).text = HexColor.ToHexString(u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.colorSetting.CurrentValue, true);
 			Color color4 = this.\u02BF\u02C0\u02BA\u02B8\u02B6\u02BF\u02BF\u02B4\u02BB\u02BF\u02C1(color2);
 			u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.textObjects = gameObject.GetComponentsInChildren<TextMeshProUGUI>();
-			u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.textObjects[0].text = (string.IsNullOrEmpty(list[i + 0]) ? u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.colorSetting.Name : \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02BE\u02C0\u02B6\u02B9\u02B7\u02BE\u02B9\u02B6\u02B9\u02BF\u02B2().\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(list[i + 1]));
+			u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.textObjects[0].text = (string.IsNullOrEmpty(list[i + 0]) ? u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.colorSetting.Name : LanguageManager.\u02BE\u02C0\u02B6\u02B9\u02B7\u02BE\u02B9\u02B6\u02B9\u02BF\u02B2().GetString(list[i + 1]));
 			u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.textObjects[1].color = (u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.textObjects[6].color = (u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.textObjects[7].color = color4));
 			u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.imageObjects = gameObject.GetComponentsInChildren<Image>();
 			u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.imageObjects[0].color = (u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B.imageObjects[6].color = color2);

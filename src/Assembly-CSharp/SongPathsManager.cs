@@ -41,7 +41,7 @@ public class SongPathsManager : MonoBehaviour
 		for (int i = 0; i < GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B3\u02B4\u02B5\u02B9\u02B8\u02BC\u02BC\u02B8\u02C0\u02B5\u02B9.Count; i++)
 		{
 			GameObject gameObject = global::UnityEngine.Object.Instantiate<GameObject>(this.\u02B8\u02B9\u02BD\u02BC\u02BB\u02BA\u02B5\u02B8\u02B7\u02B7\u02B8, this.\u02B6\u02B7\u02C0\u02BC\u02B7\u02BB\u02B6\u02B4\u02B6\u02B7\u02BB);
-			gameObject.GetComponentInChildren<TextMeshProUGUI>().text = ((i > 0) ? GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B3\u02B4\u02B5\u02B9\u02B8\u02BC\u02BC\u02B8\u02C0\u02B5\u02B9[i] : (\u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Default") + " (" + GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B3\u02B4\u02B5\u02B9\u02B8\u02BC\u02BC\u02B8\u02C0\u02B5\u02B9[i] + ")"));
+			gameObject.GetComponentInChildren<TextMeshProUGUI>().text = ((i > 0) ? GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B3\u02B4\u02B5\u02B9\u02B8\u02BC\u02BC\u02B8\u02C0\u02B5\u02B9[i] : (LanguageManager.instance.GetString("Default") + " (" + GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B3\u02B4\u02B5\u02B9\u02B8\u02BC\u02BC\u02B8\u02C0\u02B5\u02B9[i] + ")"));
 			Button componentInChildren = gameObject.GetComponentInChildren<Button>();
 			if (!(componentInChildren == null))
 			{
@@ -68,7 +68,7 @@ public class SongPathsManager : MonoBehaviour
 		{
 			return;
 		}
-		string text = u02C0_u02BD_u02B9_u02B8_u02B6_u02BB_u02B7_u02B8_u02B7_u02B4_u02B.\u02B3\u02BF\u02B9\u02BC\u02B5\u02BB\u02BD\u02BB\u02B6\u02B2\u02B6(\u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Select the songs folder you would like to add."));
+		string text = u02C0_u02BD_u02B9_u02B8_u02B6_u02BB_u02B7_u02B8_u02B7_u02B4_u02B.\u02B3\u02BF\u02B9\u02BC\u02B5\u02BB\u02BD\u02BB\u02B6\u02B2\u02B6(LanguageManager.instance.GetString("Select the songs folder you would like to add."));
 		if (string.IsNullOrEmpty(text) || !Directory.Exists(text))
 		{
 			return;
@@ -149,7 +149,7 @@ public class SongPathsManager : MonoBehaviour
 		{
 			return;
 		}
-		string text = u02C0_u02BD_u02B9_u02B8_u02B6_u02BB_u02B7_u02B8_u02B7_u02B4_u02B.\u02B3\u02BF\u02B9\u02BC\u02B5\u02BB\u02BD\u02BB\u02B6\u02B2\u02B6(\u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD(".png|.jpg|.jpeg"));
+		string text = u02C0_u02BD_u02B9_u02B8_u02B6_u02BB_u02B7_u02B8_u02B7_u02B4_u02B.\u02B3\u02BF\u02B9\u02BC\u02B5\u02BB\u02BD\u02BB\u02B6\u02B2\u02B6(LanguageManager.instance.\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD(".png|.jpg|.jpeg"));
 		if (string.IsNullOrEmpty(text) || !Directory.Exists(text))
 		{
 			return;
@@ -174,7 +174,7 @@ public class SongPathsManager : MonoBehaviour
 		{
 			return;
 		}
-		string text = u02C0_u02BD_u02B9_u02B8_u02B6_u02BB_u02B7_u02B8_u02B7_u02B4_u02B.\u02B3\u02BF\u02B9\u02BC\u02B5\u02BB\u02BD\u02BB\u02B6\u02B2\u02B6(\u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02BE\u02C0\u02B6\u02B9\u02B7\u02BE\u02B9\u02B6\u02B9\u02BF\u02B2().\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4("Measure Based Countdowns"));
+		string text = u02C0_u02BD_u02B9_u02B8_u02B6_u02BB_u02B7_u02B8_u02B7_u02B4_u02B.\u02B3\u02BF\u02B9\u02BC\u02B5\u02BB\u02BD\u02BB\u02B6\u02B2\u02B6(LanguageManager.\u02BE\u02C0\u02B6\u02B9\u02B7\u02BE\u02B9\u02B6\u02B9\u02BF\u02B2().\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4("Measure Based Countdowns"));
 		if (string.IsNullOrEmpty(text) || !Directory.Exists(text))
 		{
 			return;

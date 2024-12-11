@@ -739,7 +739,7 @@ public abstract class BaseGuitarPlayer : BasePlayer
 		}
 	}
 
-	protected override void handleBotInputs()
+	protected override void UpdateAI()
 	{
 		ushort num = 0;
 		foreach (Note note in this.sustainNotes)

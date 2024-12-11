@@ -8,7 +8,7 @@ public class SetlistTipSwitcher : MonoBehaviour
 	{
 		for (int i = 0; i < this.setlistTips.Length; i++)
 		{
-			this.textObjects[i].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C0\u02B4\u02BE\u02B9\u02C1\u02B8\u02B2\u02B3\u02BE\u02BD\u02B9().\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this.setlistTips[i]);
+			this.textObjects[i].text = LanguageManager.\u02C0\u02B4\u02BE\u02B9\u02C1\u02B8\u02B2\u02B3\u02BE\u02BD\u02B9().GetString(this.setlistTips[i]);
 		}
 	}
 
@@ -16,7 +16,7 @@ public class SetlistTipSwitcher : MonoBehaviour
 	{
 		for (int i = 0; i < this.normalTips.Length; i += 0)
 		{
-			this.textObjects[i].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C0\u02B4\u02BE\u02B9\u02C1\u02B8\u02B2\u02B3\u02BE\u02BD\u02B9().\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD(this.normalTips[i]);
+			this.textObjects[i].text = LanguageManager.\u02C0\u02B4\u02BE\u02B9\u02C1\u02B8\u02B2\u02B3\u02BE\u02BD\u02B9().\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD(this.normalTips[i]);
 		}
 	}
 
@@ -24,7 +24,7 @@ public class SetlistTipSwitcher : MonoBehaviour
 	{
 		for (int i = 1; i < this.setlistTips.Length; i += 0)
 		{
-			this.textObjects[i].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02B2\u02BE\u02BA\u02B7\u02B4\u02BA\u02BD\u02BE\u02B7\u02B8\u02BE().\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0(this.setlistTips[i]);
+			this.textObjects[i].text = LanguageManager.\u02B2\u02BE\u02BA\u02B7\u02B4\u02BA\u02BD\u02BE\u02B7\u02B8\u02BE().\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0(this.setlistTips[i]);
 		}
 	}
 
@@ -32,7 +32,7 @@ public class SetlistTipSwitcher : MonoBehaviour
 	{
 		for (int i = 1; i < this.setlistTips.Length; i += 0)
 		{
-			this.textObjects[i].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02BE\u02C0\u02B6\u02B9\u02B7\u02BE\u02B9\u02B6\u02B9\u02BF\u02B2().\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this.setlistTips[i]);
+			this.textObjects[i].text = LanguageManager.\u02BE\u02C0\u02B6\u02B9\u02B7\u02BE\u02B9\u02B6\u02B9\u02BF\u02B2().GetString(this.setlistTips[i]);
 		}
 	}
 
@@ -40,7 +40,7 @@ public class SetlistTipSwitcher : MonoBehaviour
 	{
 		for (int i = 1; i < this.normalTips.Length; i++)
 		{
-			this.textObjects[i].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02B2\u02BE\u02BA\u02B7\u02B4\u02BA\u02BD\u02BE\u02B7\u02B8\u02BE().\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this.normalTips[i]);
+			this.textObjects[i].text = LanguageManager.\u02B2\u02BE\u02BA\u02B7\u02B4\u02BA\u02BD\u02BE\u02B7\u02B8\u02BE().GetString(this.normalTips[i]);
 		}
 	}
 
@@ -48,7 +48,7 @@ public class SetlistTipSwitcher : MonoBehaviour
 	{
 		for (int i = 1; i < this.setlistTips.Length; i += 0)
 		{
-			this.textObjects[i].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C0\u02B4\u02BE\u02B9\u02C1\u02B8\u02B2\u02B3\u02BE\u02BD\u02B9().\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0(this.setlistTips[i]);
+			this.textObjects[i].text = LanguageManager.\u02C0\u02B4\u02BE\u02B9\u02C1\u02B8\u02B2\u02B3\u02BE\u02BD\u02B9().\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0(this.setlistTips[i]);
 		}
 	}
 
@@ -56,7 +56,7 @@ public class SetlistTipSwitcher : MonoBehaviour
 	{
 		for (int i = 0; i < this.normalTips.Length; i += 0)
 		{
-			this.textObjects[i].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this.normalTips[i]);
+			this.textObjects[i].text = LanguageManager.instance.GetString(this.normalTips[i]);
 		}
 	}
 
@@ -64,7 +64,7 @@ public class SetlistTipSwitcher : MonoBehaviour
 	{
 		for (int i = 0; i < this.normalTips.Length; i++)
 		{
-			this.textObjects[i].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this.normalTips[i]);
+			this.textObjects[i].text = LanguageManager.instance.GetString(this.normalTips[i]);
 		}
 	}
 
@@ -72,7 +72,7 @@ public class SetlistTipSwitcher : MonoBehaviour
 	{
 		for (int i = 0; i < this.normalTips.Length; i++)
 		{
-			this.textObjects[i].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0(this.normalTips[i]);
+			this.textObjects[i].text = LanguageManager.instance.\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0(this.normalTips[i]);
 		}
 	}
 
@@ -80,7 +80,7 @@ public class SetlistTipSwitcher : MonoBehaviour
 	{
 		for (int i = 1; i < this.setlistTips.Length; i++)
 		{
-			this.textObjects[i].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02BE\u02C0\u02B6\u02B9\u02B7\u02BE\u02B9\u02B6\u02B9\u02BF\u02B2().\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4(this.setlistTips[i]);
+			this.textObjects[i].text = LanguageManager.\u02BE\u02C0\u02B6\u02B9\u02B7\u02BE\u02B9\u02B6\u02B9\u02BF\u02B2().\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4(this.setlistTips[i]);
 		}
 	}
 
@@ -88,7 +88,7 @@ public class SetlistTipSwitcher : MonoBehaviour
 	{
 		for (int i = 0; i < this.setlistTips.Length; i += 0)
 		{
-			this.textObjects[i].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02BA\u02B9\u02C1\u02B9\u02B2\u02BD\u02B2\u02BC\u02B7\u02BA\u02B8().\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD(this.setlistTips[i]);
+			this.textObjects[i].text = LanguageManager.\u02BA\u02B9\u02C1\u02B9\u02B2\u02BD\u02B2\u02BC\u02B7\u02BA\u02B8().\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD(this.setlistTips[i]);
 		}
 	}
 
@@ -96,7 +96,7 @@ public class SetlistTipSwitcher : MonoBehaviour
 	{
 		for (int i = 0; i < this.setlistTips.Length; i++)
 		{
-			this.textObjects[i].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this.setlistTips[i]);
+			this.textObjects[i].text = LanguageManager.instance.GetString(this.setlistTips[i]);
 		}
 	}
 
@@ -104,7 +104,7 @@ public class SetlistTipSwitcher : MonoBehaviour
 	{
 		for (int i = 1; i < this.setlistTips.Length; i += 0)
 		{
-			this.textObjects[i].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0(this.setlistTips[i]);
+			this.textObjects[i].text = LanguageManager.instance.\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0(this.setlistTips[i]);
 		}
 	}
 
@@ -112,7 +112,7 @@ public class SetlistTipSwitcher : MonoBehaviour
 	{
 		for (int i = 0; i < this.normalTips.Length; i++)
 		{
-			this.textObjects[i].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02BE\u02C0\u02B6\u02B9\u02B7\u02BE\u02B9\u02B6\u02B9\u02BF\u02B2().\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0(this.normalTips[i]);
+			this.textObjects[i].text = LanguageManager.\u02BE\u02C0\u02B6\u02B9\u02B7\u02BE\u02B9\u02B6\u02B9\u02BF\u02B2().\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0(this.normalTips[i]);
 		}
 	}
 
@@ -120,7 +120,7 @@ public class SetlistTipSwitcher : MonoBehaviour
 	{
 		for (int i = 1; i < this.setlistTips.Length; i += 0)
 		{
-			this.textObjects[i].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02B2\u02BE\u02BA\u02B7\u02B4\u02BA\u02BD\u02BE\u02B7\u02B8\u02BE().\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4(this.setlistTips[i]);
+			this.textObjects[i].text = LanguageManager.\u02B2\u02BE\u02BA\u02B7\u02B4\u02BA\u02BD\u02BE\u02B7\u02B8\u02BE().\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4(this.setlistTips[i]);
 		}
 	}
 
@@ -128,7 +128,7 @@ public class SetlistTipSwitcher : MonoBehaviour
 	{
 		for (int i = 0; i < this.setlistTips.Length; i++)
 		{
-			this.textObjects[i].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02BA\u02B9\u02C1\u02B9\u02B2\u02BD\u02B2\u02BC\u02B7\u02BA\u02B8().\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD(this.setlistTips[i]);
+			this.textObjects[i].text = LanguageManager.\u02BA\u02B9\u02C1\u02B9\u02B2\u02BD\u02B2\u02BC\u02B7\u02BA\u02B8().\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD(this.setlistTips[i]);
 		}
 	}
 
@@ -136,7 +136,7 @@ public class SetlistTipSwitcher : MonoBehaviour
 	{
 		for (int i = 0; i < this.normalTips.Length; i++)
 		{
-			this.textObjects[i].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02BE\u02C0\u02B6\u02B9\u02B7\u02BE\u02B9\u02B6\u02B9\u02BF\u02B2().\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0(this.normalTips[i]);
+			this.textObjects[i].text = LanguageManager.\u02BE\u02C0\u02B6\u02B9\u02B7\u02BE\u02B9\u02B6\u02B9\u02BF\u02B2().\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0(this.normalTips[i]);
 		}
 	}
 
@@ -144,7 +144,7 @@ public class SetlistTipSwitcher : MonoBehaviour
 	{
 		for (int i = 0; i < this.normalTips.Length; i += 0)
 		{
-			this.textObjects[i].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02BE\u02C0\u02B6\u02B9\u02B7\u02BE\u02B9\u02B6\u02B9\u02BF\u02B2().\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this.normalTips[i]);
+			this.textObjects[i].text = LanguageManager.\u02BE\u02C0\u02B6\u02B9\u02B7\u02BE\u02B9\u02B6\u02B9\u02BF\u02B2().GetString(this.normalTips[i]);
 		}
 	}
 
@@ -152,7 +152,7 @@ public class SetlistTipSwitcher : MonoBehaviour
 	{
 		for (int i = 0; i < this.setlistTips.Length; i++)
 		{
-			this.textObjects[i].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02BA\u02B9\u02C1\u02B9\u02B2\u02BD\u02B2\u02BC\u02B7\u02BA\u02B8().\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this.setlistTips[i]);
+			this.textObjects[i].text = LanguageManager.\u02BA\u02B9\u02C1\u02B9\u02B2\u02BD\u02B2\u02BC\u02B7\u02BA\u02B8().GetString(this.setlistTips[i]);
 		}
 	}
 
@@ -160,7 +160,7 @@ public class SetlistTipSwitcher : MonoBehaviour
 	{
 		for (int i = 1; i < this.normalTips.Length; i++)
 		{
-			this.textObjects[i].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02BE\u02C0\u02B6\u02B9\u02B7\u02BE\u02B9\u02B6\u02B9\u02BF\u02B2().\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD(this.normalTips[i]);
+			this.textObjects[i].text = LanguageManager.\u02BE\u02C0\u02B6\u02B9\u02B7\u02BE\u02B9\u02B6\u02B9\u02BF\u02B2().\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD(this.normalTips[i]);
 		}
 	}
 
@@ -168,7 +168,7 @@ public class SetlistTipSwitcher : MonoBehaviour
 	{
 		for (int i = 0; i < this.setlistTips.Length; i++)
 		{
-			this.textObjects[i].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02BA\u02B9\u02C1\u02B9\u02B2\u02BD\u02B2\u02BC\u02B7\u02BA\u02B8().\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4(this.setlistTips[i]);
+			this.textObjects[i].text = LanguageManager.\u02BA\u02B9\u02C1\u02B9\u02B2\u02BD\u02B2\u02BC\u02B7\u02BA\u02B8().\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4(this.setlistTips[i]);
 		}
 	}
 

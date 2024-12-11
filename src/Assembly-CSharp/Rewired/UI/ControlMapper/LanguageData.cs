@@ -40,7 +40,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._yes);
+				return LanguageManager.instance.GetString(this._yes);
 			}
 		}
 
@@ -48,7 +48,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._no);
+				return LanguageManager.instance.GetString(this._no);
 			}
 		}
 
@@ -56,7 +56,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._add);
+				return LanguageManager.instance.GetString(this._add);
 			}
 		}
 
@@ -64,7 +64,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._replace);
+				return LanguageManager.instance.GetString(this._replace);
 			}
 		}
 
@@ -72,7 +72,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._remove);
+				return LanguageManager.instance.GetString(this._remove);
 			}
 		}
 
@@ -80,7 +80,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._swap);
+				return LanguageManager.instance.GetString(this._swap);
 			}
 		}
 
@@ -88,7 +88,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._cancel);
+				return LanguageManager.instance.GetString(this._cancel);
 			}
 		}
 
@@ -96,7 +96,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._none);
+				return LanguageManager.instance.GetString(this._none);
 			}
 		}
 
@@ -104,7 +104,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._okay);
+				return LanguageManager.instance.GetString(this._okay);
 			}
 		}
 
@@ -112,7 +112,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._done);
+				return LanguageManager.instance.GetString(this._done);
 			}
 		}
 
@@ -120,7 +120,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._default);
+				return LanguageManager.instance.GetString(this._default);
 			}
 		}
 
@@ -128,7 +128,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._assignControllerWindowTitle);
+				return LanguageManager.instance.GetString(this._assignControllerWindowTitle);
 			}
 		}
 
@@ -136,7 +136,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._assignControllerWindowMessage);
+				return LanguageManager.instance.GetString(this._assignControllerWindowMessage);
 			}
 		}
 
@@ -144,7 +144,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._controllerAssignmentConflictWindowTitle);
+				return LanguageManager.instance.GetString(this._controllerAssignmentConflictWindowTitle);
 			}
 		}
 
@@ -152,7 +152,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._elementAssignmentPrePollingWindowMessage);
+				return LanguageManager.instance.GetString(this._elementAssignmentPrePollingWindowMessage);
 			}
 		}
 
@@ -160,7 +160,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._elementAssignmentConflictWindowMessage);
+				return LanguageManager.instance.GetString(this._elementAssignmentConflictWindowMessage);
 			}
 		}
 
@@ -168,7 +168,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._mouseAssignmentConflictWindowTitle);
+				return LanguageManager.instance.GetString(this._mouseAssignmentConflictWindowTitle);
 			}
 		}
 
@@ -176,7 +176,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._calibrateControllerWindowTitle);
+				return LanguageManager.instance.GetString(this._calibrateControllerWindowTitle);
 			}
 		}
 
@@ -184,7 +184,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._calibrateAxisStep1WindowTitle);
+				return LanguageManager.instance.GetString(this._calibrateAxisStep1WindowTitle);
 			}
 		}
 
@@ -192,7 +192,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._calibrateAxisStep2WindowTitle);
+				return LanguageManager.instance.GetString(this._calibrateAxisStep2WindowTitle);
 			}
 		}
 
@@ -200,7 +200,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._inputBehaviorSettingsWindowTitle);
+				return LanguageManager.instance.GetString(this._inputBehaviorSettingsWindowTitle);
 			}
 		}
 
@@ -208,7 +208,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._restoreDefaultsWindowTitle);
+				return LanguageManager.instance.GetString(this._restoreDefaultsWindowTitle);
 			}
 		}
 
@@ -216,7 +216,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._actionColumnLabel);
+				return LanguageManager.instance.GetString(this._actionColumnLabel);
 			}
 		}
 
@@ -224,7 +224,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._keyboardColumnLabel);
+				return LanguageManager.instance.GetString(this._keyboardColumnLabel);
 			}
 		}
 
@@ -232,7 +232,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._mouseColumnLabel);
+				return LanguageManager.instance.GetString(this._mouseColumnLabel);
 			}
 		}
 
@@ -240,7 +240,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._controllerLabel);
+				return LanguageManager.instance.GetString(this._controllerLabel);
 			}
 		}
 
@@ -248,7 +248,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._removeControllerButtonLabel);
+				return LanguageManager.instance.GetString(this._removeControllerButtonLabel);
 			}
 		}
 
@@ -256,7 +256,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._calibrateLabel);
+				return LanguageManager.instance.GetString(this._calibrateLabel);
 			}
 		}
 
@@ -264,7 +264,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._assignControllerButtonLabel);
+				return LanguageManager.instance.GetString(this._assignControllerButtonLabel);
 			}
 		}
 
@@ -272,7 +272,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._inputBehaviorSettingsButtonLabel);
+				return LanguageManager.instance.GetString(this._inputBehaviorSettingsButtonLabel);
 			}
 		}
 
@@ -280,7 +280,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._done);
+				return LanguageManager.instance.GetString(this._done);
 			}
 		}
 
@@ -288,7 +288,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._restoreDefaultsButtonLabel);
+				return LanguageManager.instance.GetString(this._restoreDefaultsButtonLabel);
 			}
 		}
 
@@ -296,7 +296,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._controllerLabel) + ":";
+				return LanguageManager.instance.GetString(this._controllerLabel) + ":";
 			}
 		}
 
@@ -304,7 +304,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._playersLabel) + ":";
+				return LanguageManager.instance.GetString(this._playersLabel) + ":";
 			}
 		}
 
@@ -312,7 +312,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._assignedControllersGroupLabel);
+				return LanguageManager.instance.GetString(this._assignedControllersGroupLabel);
 			}
 		}
 
@@ -320,7 +320,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._settingsGroupLabel) + ":";
+				return LanguageManager.instance.GetString(this._settingsGroupLabel) + ":";
 			}
 		}
 
@@ -328,7 +328,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._mapCategoriesGroupLabel) + ":";
+				return LanguageManager.instance.GetString(this._mapCategoriesGroupLabel) + ":";
 			}
 		}
 
@@ -338,9 +338,9 @@ namespace Rewired.UI.ControlMapper
 			{
 				if (ReInput.players.playerCount > 1)
 				{
-					return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._restoreDefaultsWindowMessage_multiPlayer);
+					return LanguageManager.instance.GetString(this._restoreDefaultsWindowMessage_multiPlayer);
 				}
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._restoreDefaultsWindowMessage_onePlayer);
+				return LanguageManager.instance.GetString(this._restoreDefaultsWindowMessage_onePlayer);
 			}
 		}
 
@@ -348,7 +348,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._calibrateWindow_deadZoneSliderLabel) + ":";
+				return LanguageManager.instance.GetString(this._calibrateWindow_deadZoneSliderLabel) + ":";
 			}
 		}
 
@@ -356,7 +356,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._calibrateWindow_zeroSliderLabel) + ":";
+				return LanguageManager.instance.GetString(this._calibrateWindow_zeroSliderLabel) + ":";
 			}
 		}
 
@@ -364,7 +364,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._inputBehaviorSettingsButtonLabel) + ":";
+				return LanguageManager.instance.GetString(this._inputBehaviorSettingsButtonLabel) + ":";
 			}
 		}
 
@@ -372,7 +372,7 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._calibrateWindow_invertToggleLabel);
+				return LanguageManager.instance.GetString(this._calibrateWindow_invertToggleLabel);
 			}
 		}
 
@@ -380,67 +380,67 @@ namespace Rewired.UI.ControlMapper
 		{
 			get
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._calibrateLabel);
+				return LanguageManager.instance.GetString(this._calibrateLabel);
 			}
 		}
 
 		public override string GetControllerAssignmentConflictWindowMessage(string joystickName, string otherPlayerName, string currentPlayerName)
 		{
-			return string.Format(\u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._controllerAssignmentConflictWindowMessage), joystickName, otherPlayerName, currentPlayerName);
+			return string.Format(LanguageManager.instance.GetString(this._controllerAssignmentConflictWindowMessage), joystickName, otherPlayerName, currentPlayerName);
 		}
 
 		public override string GetJoystickElementAssignmentPollingWindowMessage(string actionName)
 		{
-			return string.Format(\u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._joystickElementAssignmentPollingWindowMessage), actionName);
+			return string.Format(LanguageManager.instance.GetString(this._joystickElementAssignmentPollingWindowMessage), actionName);
 		}
 
 		public override string GetJoystickElementAssignmentPollingWindowMessage_FullAxisFieldOnly(string actionName)
 		{
-			return string.Format(\u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._joystickElementAssignmentPollingWindowMessage_fullAxisFieldOnly), actionName);
+			return string.Format(LanguageManager.instance.GetString(this._joystickElementAssignmentPollingWindowMessage_fullAxisFieldOnly), actionName);
 		}
 
 		public override string GetKeyboardElementAssignmentPollingWindowMessage(string actionName)
 		{
-			return string.Format(\u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._keyboardElementAssignmentPollingWindowMessage), actionName);
+			return string.Format(LanguageManager.instance.GetString(this._keyboardElementAssignmentPollingWindowMessage), actionName);
 		}
 
 		public override string GetMouseElementAssignmentPollingWindowMessage(string actionName)
 		{
-			return string.Format(\u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._mouseElementAssignmentPollingWindowMessage), actionName);
+			return string.Format(LanguageManager.instance.GetString(this._mouseElementAssignmentPollingWindowMessage), actionName);
 		}
 
 		public override string GetMouseElementAssignmentPollingWindowMessage_FullAxisFieldOnly(string actionName)
 		{
-			return string.Format(\u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._mouseElementAssignmentPollingWindowMessage_fullAxisFieldOnly), actionName);
+			return string.Format(LanguageManager.instance.GetString(this._mouseElementAssignmentPollingWindowMessage_fullAxisFieldOnly), actionName);
 		}
 
 		public override string GetElementAlreadyInUseBlocked(string elementName)
 		{
-			return string.Format(\u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._elementAlreadyInUseBlocked), elementName);
+			return string.Format(LanguageManager.instance.GetString(this._elementAlreadyInUseBlocked), elementName);
 		}
 
 		public override string GetElementAlreadyInUseCanReplace(string elementName, bool allowConflicts)
 		{
 			if (!allowConflicts)
 			{
-				return string.Format(\u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._elementAlreadyInUseCanReplace), elementName);
+				return string.Format(LanguageManager.instance.GetString(this._elementAlreadyInUseCanReplace), elementName);
 			}
-			return string.Format(\u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._elementAlreadyInUseCanReplace_conflictAllowed), elementName);
+			return string.Format(LanguageManager.instance.GetString(this._elementAlreadyInUseCanReplace_conflictAllowed), elementName);
 		}
 
 		public override string GetMouseAssignmentConflictWindowMessage(string otherPlayerName, string thisPlayerName)
 		{
-			return string.Format(\u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._mouseAssignmentConflictWindowMessage), otherPlayerName, thisPlayerName);
+			return string.Format(LanguageManager.instance.GetString(this._mouseAssignmentConflictWindowMessage), otherPlayerName, thisPlayerName);
 		}
 
 		public override string GetCalibrateAxisStep1WindowMessage(string axisName)
 		{
-			return string.Format(\u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._calibrateAxisStep1WindowMessage), axisName);
+			return string.Format(LanguageManager.instance.GetString(this._calibrateAxisStep1WindowMessage), axisName);
 		}
 
 		public override string GetCalibrateAxisStep2WindowMessage(string axisName)
 		{
-			return string.Format(\u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this._calibrateAxisStep2WindowMessage), axisName);
+			return string.Format(LanguageManager.instance.GetString(this._calibrateAxisStep2WindowMessage), axisName);
 		}
 
 		public override string GetPlayerName(int playerId)
@@ -450,7 +450,7 @@ namespace Rewired.UI.ControlMapper
 			{
 				throw new ArgumentException("Invalid player id: " + playerId.ToString());
 			}
-			return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(player.descriptiveName);
+			return LanguageManager.instance.GetString(player.descriptiveName);
 		}
 
 		public override string GetControllerName(Controller controller)
@@ -459,7 +459,7 @@ namespace Rewired.UI.ControlMapper
 			{
 				throw new ArgumentNullException("controller");
 			}
-			return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(controller.name);
+			return LanguageManager.instance.GetString(controller.name);
 		}
 
 		public override string GetElementIdentifierName(ActionElementMap actionElementMap)
@@ -470,9 +470,9 @@ namespace Rewired.UI.ControlMapper
 			}
 			if (actionElementMap.controllerMap.controllerType == ControllerType.Keyboard)
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this.GetElementIdentifierName(actionElementMap.keyCode, actionElementMap.modifierKeyFlags));
+				return LanguageManager.instance.GetString(this.GetElementIdentifierName(actionElementMap.keyCode, actionElementMap.modifierKeyFlags));
 			}
-			return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this.GetElementIdentifierName(actionElementMap.controllerMap.controller, actionElementMap.elementIdentifierId, actionElementMap.axisRange));
+			return LanguageManager.instance.GetString(this.GetElementIdentifierName(actionElementMap.controllerMap.controller, actionElementMap.elementIdentifierId, actionElementMap.axisRange));
 		}
 
 		public override string GetElementIdentifierName(Controller controller, int elementIdentifierId, AxisRange axisRange)
@@ -494,13 +494,13 @@ namespace Rewired.UI.ControlMapper
 			ControllerElementType type = elementById.type;
 			if (type == ControllerElementType.Axis)
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(elementIdentifierById.GetDisplayName(elementById.type, axisRange));
+				return LanguageManager.instance.GetString(elementIdentifierById.GetDisplayName(elementById.type, axisRange));
 			}
 			if (type != ControllerElementType.Button)
 			{
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(elementIdentifierById.name);
+				return LanguageManager.instance.GetString(elementIdentifierById.name);
 			}
-			return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(elementIdentifierById.name);
+			return LanguageManager.instance.GetString(elementIdentifierById.name);
 		}
 
 		public override string GetElementIdentifierName(KeyCode keyCode, ModifierKeyFlags modifierKeyFlags)
@@ -519,7 +519,7 @@ namespace Rewired.UI.ControlMapper
 			{
 				throw new ArgumentException("Invalid action id: " + actionId.ToString());
 			}
-			return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(action.descriptiveName);
+			return LanguageManager.instance.GetString(action.descriptiveName);
 		}
 
 		public override string GetActionName(int actionId, AxisRange axisRange)
@@ -532,19 +532,19 @@ namespace Rewired.UI.ControlMapper
 			switch (axisRange)
 			{
 			case AxisRange.Full:
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(action.descriptiveName);
+				return LanguageManager.instance.GetString(action.descriptiveName);
 			case AxisRange.Positive:
 				if (string.IsNullOrEmpty(action.positiveDescriptiveName))
 				{
-					return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(action.descriptiveName) + "+";
+					return LanguageManager.instance.GetString(action.descriptiveName) + "+";
 				}
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(action.positiveDescriptiveName);
+				return LanguageManager.instance.GetString(action.positiveDescriptiveName);
 			case AxisRange.Negative:
 				if (string.IsNullOrEmpty(action.negativeDescriptiveName))
 				{
-					return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(action.descriptiveName) + "-";
+					return LanguageManager.instance.GetString(action.descriptiveName) + "-";
 				}
-				return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(action.negativeDescriptiveName);
+				return LanguageManager.instance.GetString(action.negativeDescriptiveName);
 			default:
 				throw new NotImplementedException();
 			}
@@ -557,7 +557,7 @@ namespace Rewired.UI.ControlMapper
 			{
 				throw new ArgumentException("Invalid map category id: " + id.ToString());
 			}
-			return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(mapCategory.descriptiveName);
+			return LanguageManager.instance.GetString(mapCategory.descriptiveName);
 		}
 
 		public override string GetActionCategoryName(int id)
@@ -567,7 +567,7 @@ namespace Rewired.UI.ControlMapper
 			{
 				throw new ArgumentException("Invalid action category id: " + id.ToString());
 			}
-			return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(actionCategory.descriptiveName);
+			return LanguageManager.instance.GetString(actionCategory.descriptiveName);
 		}
 
 		public override string GetLayoutName(ControllerType controllerType, int id)
@@ -577,7 +577,7 @@ namespace Rewired.UI.ControlMapper
 			{
 				throw new ArgumentException("Invalid " + controllerType.ToString() + " layout id: " + id.ToString());
 			}
-			return \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(layout.descriptiveName);
+			return LanguageManager.instance.GetString(layout.descriptiveName);
 		}
 
 		public override string ModifierKeyFlagsToString(ModifierKeyFlags flags)

@@ -349,7 +349,7 @@ public class SectionBrowser : BaseMenu
 			{
 				if (this.textObjects[j].text == "song")
 				{
-					this.textObjects[j].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C0\u02B4\u02BE\u02B9\u02C1\u02B8\u02B2\u02B3\u02BE\u02BD\u02B9().\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD("Video Start Time") + "highway.webm" + \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02B2\u02BE\u02BA\u02B7\u02B4\u02BA\u02BD\u02BE\u02B7\u02B8\u02BE().\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD("");
+					this.textObjects[j].text = LanguageManager.\u02C0\u02B4\u02BE\u02B9\u02C1\u02B8\u02B2\u02B3\u02BE\u02BD\u02B9().\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD("Video Start Time") + "highway.webm" + LanguageManager.\u02B2\u02BE\u02BA\u02B7\u02B4\u02BA\u02BD\u02BE\u02B7\u02B8\u02BE().\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD("");
 				}
 			}
 			return;
@@ -365,7 +365,7 @@ public class SectionBrowser : BaseMenu
 			{
 				if (this.textObjects[l] != null && \u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B9\u02BC\u02B6\u02B8\u02B2\u02B3\u02BD\u02BC\u02BF\u02B3\u02BD.Contains(this.textObjects[l].text))
 				{
-					this.textObjects[l].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02BA\u02B9\u02C1\u02B9\u02B2\u02BD\u02B2\u02BC\u02B7\u02BA\u02B8().\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this.textObjects[l].text);
+					this.textObjects[l].text = LanguageManager.\u02BA\u02B9\u02C1\u02B9\u02B2\u02BD\u02B2\u02BC\u02B7\u02BA\u02B8().GetString(this.textObjects[l].text);
 				}
 				if (l != this.\u02B3\u02BF\u02BB\u02BB\u02B5\u02B7\u02B8\u02BE\u02B7\u02B3\u02B3 && this.textObjects[l] != null && \u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02BE\u02BB\u02B8\u02BF\u02B2\u02B7\u02B2\u02B2\u02B8\u02B4\u02B2(this.textObjects[l].text))
 				{
@@ -448,7 +448,7 @@ public class SectionBrowser : BaseMenu
 			{
 				if (this.textObjects[j].text == "Artist - Album")
 				{
-					this.textObjects[j].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Artist") + " - " + \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Album");
+					this.textObjects[j].text = LanguageManager.instance.GetString("Artist") + " - " + LanguageManager.instance.GetString("Album");
 				}
 			}
 			return;
@@ -464,7 +464,7 @@ public class SectionBrowser : BaseMenu
 			{
 				if (this.textObjects[l] != null && \u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B9\u02BC\u02B6\u02B8\u02B2\u02B3\u02BD\u02BC\u02BF\u02B3\u02BD.Contains(this.textObjects[l].text))
 				{
-					this.textObjects[l].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this.textObjects[l].text);
+					this.textObjects[l].text = LanguageManager.instance.GetString(this.textObjects[l].text);
 				}
 				if (l != this.\u02B3\u02BF\u02BB\u02BB\u02B5\u02B7\u02B8\u02BE\u02B7\u02B3\u02B3 && this.textObjects[l] != null && \u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02BE\u02BB\u02B8\u02BF\u02B2\u02B7\u02B2\u02B2\u02B8\u02B4\u02B2(this.textObjects[l].text))
 				{

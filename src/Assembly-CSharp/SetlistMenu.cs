@@ -235,7 +235,7 @@ public class SetlistMenu : BaseMenu
 			this.\u02B2\u02B8\u02BC\u02BB\u02B4\u02BE\u02BD\u02C1\u02B2\u02B6\u02B9();
 		}
 		string text = TimeSpan.FromSeconds(this.\u02B5\u02BA\u02B3\u02BD\u02BF\u02BB\u02B4\u02BD\u02B6\u02C1\u02B6).ToString("Flames");
-		this.lengthText.text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD("BaseAnimationBackwards") + "Selection" + text;
+		this.lengthText.text = LanguageManager.instance.\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD("BaseAnimationBackwards") + "Selection" + text;
 	}
 
 	protected virtual void \u02BD\u02B7\u02BD\u02BF\u02BE\u02B9\u02B6\u02C0\u02B4\u02B7\u02BF()
@@ -319,7 +319,7 @@ public class SetlistMenu : BaseMenu
 			this.\u02B2\u02B8\u02BC\u02BB\u02B4\u02BE\u02BD\u02C1\u02B2\u02B6\u02B9();
 		}
 		string text = TimeSpan.FromSeconds(this.\u02B5\u02BA\u02B3\u02BD\u02BF\u02BB\u02B4\u02BD\u02B6\u02C1\u02B6).ToString("hh\\:mm\\:ss");
-		this.lengthText.text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("SETLIST LENGTH") + ": " + text;
+		this.lengthText.text = LanguageManager.instance.GetString("SETLIST LENGTH") + ": " + text;
 	}
 
 	private void \u02C1\u02B2\u02BE\u02B8\u02B5\u02B4\u02C0\u02C1\u02C1\u02B4\u02B2()

@@ -38,7 +38,7 @@ public class PlayerProfileMenu : BaseMenu
 
 	private void \u02C0\u02BC\u02B6\u02BA\u02B3\u02B3\u02C1\u02BE\u02BB\u02B2\u02B3()
 	{
-		this.\u02C1\u02BB\u02B5\u02BE\u02B6\u02B8\u02C1\u02C0\u02B4\u02B9\u02BB.text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Choose a Profile");
+		this.\u02C1\u02BB\u02B5\u02BE\u02B6\u02B8\u02C1\u02C0\u02B4\u02B9\u02BB.text = LanguageManager.instance.GetString("Choose a Profile");
 		this.\u02BD\u02C1\u02BC\u02BE\u02B4\u02BA\u02B4\u02BC\u02BB\u02B4\u02BF.CrossFadeColor(this.\u02BF\u02B7\u02BB\u02BB\u02BF\u02B9\u02B9\u02BF\u02C1\u02B2\u02BC, 1f, true, false);
 		this.menuStrings = new string[GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02B7\u02BD\u02B7\u02B7\u02BD\u02B6\u02B4\u02BA\u02B2\u02BA.\u02B9\u02BA\u02B2\u02B9\u02B8\u02B2\u02B4\u02B5\u02C0\u02BF\u02B9 + 2];
 		this.\u02BA\u02BD\u02B3\u02BC\u02B8\u02BB\u02B8\u02BA\u02B5\u02C0\u02C0();
@@ -264,7 +264,7 @@ public class PlayerProfileMenu : BaseMenu
 					{
 						if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "All Strums")
 						{
-							text = ((num == 0) ? \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02BA\u02B9\u02C1\u02B9\u02B2\u02BD\u02B2\u02BC\u02B7\u02BA\u02B8().\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("6 Fret Lead Guitar") : ((num == 1) ? \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4("name") : GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE.\u02B8\u02B7\u02B3\u02BA\u02BB\u02BC\u02B3\u02B9\u02BF\u02BF\u02BD[num - 8]));
+							text = ((num == 0) ? LanguageManager.\u02BA\u02B9\u02C1\u02B9\u02B2\u02BD\u02B2\u02BC\u02B7\u02BA\u02B8().GetString("6 Fret Lead Guitar") : ((num == 1) ? LanguageManager.instance.\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4("name") : GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE.\u02B8\u02B7\u02B3\u02BA\u02BB\u02BC\u02B3\u02B9\u02BF\u02BF\u02BD[num - 8]));
 							this.optionChecks[i].enabled = i == num2;
 							this.optionChecks[i].color = ((i == this.\u02B3\u02BF\u02BB\u02BB\u02B5\u02B7\u02B8\u02BE\u02B7\u02B3\u02B3) ? Color.black : Color.white);
 						}
@@ -291,7 +291,7 @@ public class PlayerProfileMenu : BaseMenu
 				}
 				else if (num == 0)
 				{
-					text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4("");
+					text = LanguageManager.instance.\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4("");
 				}
 				else
 				{
@@ -303,7 +303,7 @@ public class PlayerProfileMenu : BaseMenu
 			{
 				text += "song";
 			}
-			this.textObjects[i].text = "_uFillHeight" + (flag ? \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4(text) : text) + "highway_shake";
+			this.textObjects[i].text = "_uFillHeight" + (flag ? LanguageManager.instance.\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4(text) : text) + "highway_shake";
 			num++;
 			i++;
 		}
@@ -658,7 +658,7 @@ public class PlayerProfileMenu : BaseMenu
 		}
 		if (!this.\u02BD\u02B4\u02B6\u02BA\u02B9\u02BB\u02C0\u02C0\u02BE\u02B7\u02BE)
 		{
-			this.\u02C1\u02BB\u02B5\u02BE\u02B6\u02B8\u02C1\u02C0\u02B4\u02B9\u02BB.text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("PRESS START");
+			this.\u02C1\u02BB\u02B5\u02BE\u02B6\u02B8\u02C1\u02C0\u02B4\u02B9\u02BB.text = LanguageManager.instance.GetString("PRESS START");
 			this.\u02BD\u02C1\u02BC\u02BE\u02B4\u02BA\u02B4\u02BC\u02BB\u02B4\u02BF.CrossFadeColor(this.\u02B3\u02B9\u02B4\u02C1\u02BB\u02B6\u02C1\u02BE\u02C0\u02C1\u02B2, 1f, true, false);
 			this.\u02C1\u02BB\u02B5\u02BE\u02B6\u02B8\u02C1\u02C0\u02B4\u02B9\u02BB.color = Color.white;
 			return;
@@ -720,7 +720,7 @@ public class PlayerProfileMenu : BaseMenu
 
 	private IEnumerator \u02BC\u02B2\u02B2\u02B3\u02B6\u02C1\u02BD\u02BC\u02B8\u02C1\u02B6()
 	{
-		this.\u02C1\u02BB\u02B5\u02BE\u02B6\u02B8\u02C1\u02C0\u02B4\u02B9\u02BB.text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("PRESS START");
+		this.\u02C1\u02BB\u02B5\u02BE\u02B6\u02B8\u02C1\u02C0\u02B4\u02B9\u02BB.text = LanguageManager.instance.GetString("PRESS START");
 		this.\u02BD\u02C1\u02BC\u02BE\u02B4\u02BA\u02B4\u02BC\u02BB\u02B4\u02BF.CrossFadeColor(this.\u02B3\u02B9\u02B4\u02C1\u02BB\u02B6\u02C1\u02BE\u02C0\u02C1\u02B2, 1f, true, false);
 		this.\u02C1\u02BB\u02B5\u02BE\u02B6\u02B8\u02C1\u02C0\u02B4\u02B9\u02BB.color = Color.white;
 		while (this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4 == null)
@@ -1112,7 +1112,7 @@ public class PlayerProfileMenu : BaseMenu
 						return;
 					}
 					this.\u02B5\u02B7\u02B5\u02B6\u02B3\u02B4\u02B7\u02BB\u02BE\u02B6\u02B5 = true;
-					this.\u02C1\u02BB\u02B5\u02BE\u02B6\u02B8\u02C1\u02C0\u02B4\u02B9\u02BB.text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Are you sure?");
+					this.\u02C1\u02BB\u02B5\u02BE\u02B6\u02B8\u02C1\u02C0\u02B4\u02B9\u02BB.text = LanguageManager.instance.GetString("Are you sure?");
 					this.\u02BD\u02C1\u02BC\u02BE\u02B4\u02BA\u02B4\u02BC\u02BB\u02B4\u02BF.CrossFadeColor(this.\u02BF\u02B7\u02BB\u02BB\u02BF\u02B9\u02B9\u02BF\u02C1\u02B2\u02BC, 1f, true, false);
 					this.\u02C1\u02BB\u02B5\u02BE\u02B6\u02B8\u02C1\u02C0\u02B4\u02B9\u02BB.color = Color.white;
 					this.menuStrings = new string[] { "Yes", "No" };
@@ -1382,11 +1382,11 @@ public class PlayerProfileMenu : BaseMenu
 		{
 			this.\u02C1\u02B7\u02BA\u02B7\u02BB\u02BE\u02B8\u02B5\u02BB\u02B8\u02B8 = true;
 		}
-		this.textObjects[0].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Type the profile name");
+		this.textObjects[0].text = LanguageManager.instance.GetString("Type the profile name");
 		this.textObjects[0].color = Color.white;
-		this.textObjects[1].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Press Enter to confirm");
+		this.textObjects[1].text = LanguageManager.instance.GetString("Press Enter to confirm");
 		this.textObjects[1].color = Color.green;
-		this.textObjects[2].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Press Escape to cancel");
+		this.textObjects[2].text = LanguageManager.instance.GetString("Press Escape to cancel");
 		this.textObjects[2].color = Color.red;
 	}
 
@@ -1426,7 +1426,7 @@ public class PlayerProfileMenu : BaseMenu
 					{
 						if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Color Profile")
 						{
-							text = ((num == 0) ? \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Random") : ((num == 1) ? \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Editor") : GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE.\u02B8\u02B7\u02B3\u02BA\u02BB\u02BC\u02B3\u02B9\u02BF\u02BF\u02BD[num - 2]));
+							text = ((num == 0) ? LanguageManager.instance.GetString("Random") : ((num == 1) ? LanguageManager.instance.GetString("Editor") : GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE.\u02B8\u02B7\u02B3\u02BA\u02BB\u02BC\u02B3\u02B9\u02BF\u02BF\u02BD[num - 2]));
 							this.optionChecks[i].enabled = i == num2;
 							this.optionChecks[i].color = ((i == this.\u02B3\u02BF\u02BB\u02BB\u02B5\u02B7\u02B8\u02BE\u02B7\u02B3\u02B3) ? Color.black : Color.white);
 						}
@@ -1453,7 +1453,7 @@ public class PlayerProfileMenu : BaseMenu
 				}
 				else if (num == 0)
 				{
-					text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Random");
+					text = LanguageManager.instance.GetString("Random");
 				}
 				else
 				{
@@ -1465,7 +1465,7 @@ public class PlayerProfileMenu : BaseMenu
 			{
 				text += "%";
 			}
-			this.textObjects[i].text = "<noparse>" + (flag ? \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(text) : text) + "</noparse>";
+			this.textObjects[i].text = "<noparse>" + (flag ? LanguageManager.instance.GetString(text) : text) + "</noparse>";
 			num++;
 			i++;
 		}
@@ -1655,13 +1655,13 @@ public class PlayerProfileMenu : BaseMenu
 				{
 					if (num >= this.menuStrings.Length - 1)
 					{
-						this.textObjects[j].text = "<" + \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this.textObjects[j].text) + ">";
+						this.textObjects[j].text = "<" + LanguageManager.instance.GetString(this.textObjects[j].text) + ">";
 					}
 					else
 					{
 						if (num >= this.menuStrings.Length - 2)
 						{
-							this.textObjects[j].text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this.textObjects[j].text);
+							this.textObjects[j].text = LanguageManager.instance.GetString(this.textObjects[j].text);
 						}
 						if (j != this.\u02B3\u02BF\u02BB\u02BB\u02B5\u02B7\u02B8\u02BE\u02B7\u02B3\u02B3)
 						{

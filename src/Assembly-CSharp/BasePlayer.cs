@@ -300,7 +300,7 @@ public abstract class BasePlayer : MonoBehaviour
 
 	protected abstract void UpdateInputs();
 
-	protected abstract void handleBotInputs();
+	protected abstract void UpdateAI();
 
 	protected abstract bool \u02B7\u02BF\u02BA\u02BF\u02C1\u02B4\u02B5\u02BD\u02C1\u02B8\u02B6(Note \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2, ushort \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4);
 
@@ -918,7 +918,7 @@ public abstract class BasePlayer : MonoBehaviour
 		}
 		else
 		{
-			this.handleBotInputs();
+			this.UpdateAI();
 		}
 		if (!this.\u02B5\u02BB\u02BA\u02B2\u02C1\u02BB\u02B6\u02B5\u02BE\u02B9\u02BF && this.gameManager.songTime >= 0.0)
 		{

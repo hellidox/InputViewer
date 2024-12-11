@@ -77,41 +77,41 @@ public class PlayerStatsBox : BaseMenu
 
 	private void \u02BD\u02C0\u02B9\u02BF\u02C0\u02B6\u02BD\u02B7\u02BD\u02B6\u02B2()
 	{
-		\u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0 u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6;
-		this.headerTexts[0].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Performance");
-		this.headerTexts[1].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Star Power");
-		this.headerTexts[2].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("More Stats");
-		this.headerTexts[3].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Scoring");
-		this.headerTexts[4].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Song Sections");
-		this.statsNameTexts[0].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Total Notes");
-		this.statsNameTexts[1].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Notes Hit");
-		this.statsNameTexts[2].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Notes Missed");
-		this.statsNameTexts[3].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Best Streak");
-		this.statsNameTexts[4].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Avg. Multiplier");
-		this.statsNameTexts[6].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Phrases");
-		this.statsNameTexts[7].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Bars Filled");
-		this.statsNameTexts[8].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Activations");
-		this.statsNameTexts[9].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Time Used");
+		LanguageManager languageManager = LanguageManager.instance;
+		this.headerTexts[0].text = languageManager.GetString("Performance");
+		this.headerTexts[1].text = languageManager.GetString("Star Power");
+		this.headerTexts[2].text = languageManager.GetString("More Stats");
+		this.headerTexts[3].text = languageManager.GetString("Scoring");
+		this.headerTexts[4].text = languageManager.GetString("Song Sections");
+		this.statsNameTexts[0].text = languageManager.GetString("Total Notes");
+		this.statsNameTexts[1].text = languageManager.GetString("Notes Hit");
+		this.statsNameTexts[2].text = languageManager.GetString("Notes Missed");
+		this.statsNameTexts[3].text = languageManager.GetString("Best Streak");
+		this.statsNameTexts[4].text = languageManager.GetString("Avg. Multiplier");
+		this.statsNameTexts[6].text = languageManager.GetString("Phrases");
+		this.statsNameTexts[7].text = languageManager.GetString("Bars Filled");
+		this.statsNameTexts[8].text = languageManager.GetString("Activations");
+		this.statsNameTexts[9].text = languageManager.GetString("Time Used");
 		if (this.\u02B6\u02B9\u02B7\u02B6\u02B9\u02B2\u02BE\u02BE\u02BE\u02B2\u02B5)
 		{
-			this.statsNameTexts[5].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Overhits");
-			this.statsNameTexts[10].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Accents Hit");
-			this.statsNameTexts[11].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Ghosts Hit");
-			this.statsNameTexts[16].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Accent Notes");
-			this.statsNameTexts[17].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Ghost Notes");
+			this.statsNameTexts[5].text = languageManager.GetString("Overhits");
+			this.statsNameTexts[10].text = languageManager.GetString("Accents Hit");
+			this.statsNameTexts[11].text = languageManager.GetString("Ghosts Hit");
+			this.statsNameTexts[16].text = languageManager.GetString("Accent Notes");
+			this.statsNameTexts[17].text = languageManager.GetString("Ghost Notes");
 		}
 		else
 		{
-			this.statsNameTexts[5].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Overstrums");
-			this.statsNameTexts[10].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Ghost Inputs");
+			this.statsNameTexts[5].text = languageManager.GetString("Overstrums");
+			this.statsNameTexts[10].text = languageManager.GetString("Ghost Inputs");
 			this.statsNameTexts[11].text = "";
-			this.statsNameTexts[16].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Sustains");
+			this.statsNameTexts[16].text = languageManager.GetString("Sustains");
 			this.statsNameTexts[17].text = "";
 		}
-		this.statsNameTexts[12].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Notes");
-		this.statsNameTexts[13].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Combo Bonus");
-		this.statsNameTexts[14].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Star Power");
-		this.statsNameTexts[15].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Solo Bonus");
+		this.statsNameTexts[12].text = languageManager.GetString("Notes");
+		this.statsNameTexts[13].text = languageManager.GetString("Combo Bonus");
+		this.statsNameTexts[14].text = languageManager.GetString("Star Power");
+		this.statsNameTexts[15].text = languageManager.GetString("Solo Bonus");
 	}
 
 	private void \u02B6\u02BB\u02B6\u02B4\u02BB\u02B8\u02B4\u02BC\u02BD\u02B3\u02C1()
@@ -235,7 +235,7 @@ public class PlayerStatsBox : BaseMenu
 		{
 			this.\u02B7\u02BB\u02BA\u02BC\u02B4\u02B6\u02B4\u02B3\u02BD\u02BA\u02BF.gameObject.SetActive(false);
 			this.\u02BA\u02B7\u02B5\u02BA\u02B9\u02B3\u02C1\u02B2\u02BB\u02B4\u02B4.gameObject.SetActive(true);
-			this.\u02BA\u02B7\u02B5\u02BA\u02B9\u02B3\u02C1\u02B2\u02BB\u02B4\u02B4.text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("No Part");
+			this.\u02BA\u02B7\u02B5\u02BA\u02B9\u02B3\u02C1\u02B2\u02BB\u02B4\u02B4.text = LanguageManager.instance.GetString("No Part");
 		}
 		else
 		{
@@ -363,29 +363,29 @@ public class PlayerStatsBox : BaseMenu
 		{
 			return;
 		}
-		\u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0 u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6;
-		this.menuOptions[0].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Yes");
-		this.menuOptions[1].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("No");
+		LanguageManager languageManager = LanguageManager.instance;
+		this.menuOptions[0].text = languageManager.GetString("Yes");
+		this.menuOptions[1].text = languageManager.GetString("No");
 		this.notSupportedText.text = "";
 		this.menuObject.SetActive(true);
 		this.\u02B9\u02BA\u02B9\u02C1\u02B6\u02BB\u02C0\u02B3\u02B7\u02B8\u02B2 = 0;
 		this.\u02B2\u02BF\u02BD\u02C0\u02B3\u02BD\u02BA\u02B5\u02BF\u02B8\u02B3 = true;
 		if (\u02BF\u02BB\u02B8\u02B8\u02B4\u02B4\u02B6\u02C0\u02BD\u02B7\u02C1)
 		{
-			this.menuText.text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Are you sure you want to quit?");
+			this.menuText.text = languageManager.GetString("Are you sure you want to quit?");
 			this.\u02BE\u02BA\u02BD\u02B5\u02BE\u02C0\u02B7\u02B3\u02BA\u02B4\u02BD = PlayerStatsBox.\u02B5\u02B7\u02BB\u02B5\u02B3\u02B2\u02BA\u02B7\u02B8\u02B9\u02C1.Quitting;
 			this.\u02BC\u02BA\u02BC\u02B6\u02BA\u02B5\u02B6\u02BB\u02C1\u02BF\u02B7 = 1;
 		}
 		else
 		{
-			this.menuText.text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("playerchange");
+			this.menuText.text = LanguageManager.instance.GetString("playerchange");
 			this.\u02BE\u02BA\u02BD\u02B5\u02BE\u02C0\u02B7\u02B3\u02BA\u02B4\u02BD = PlayerStatsBox.\u02B5\u02B7\u02BB\u02B5\u02B3\u02B2\u02BA\u02B7\u02B8\u02B9\u02C1.Readying;
 			this.\u02B9\u02BA\u02B9\u02C1\u02B6\u02BB\u02C0\u02B3\u02B7\u02B8\u02B2 = 0;
 			this.\u02BC\u02BA\u02BC\u02B6\u02BA\u02B5\u02B6\u02BB\u02C1\u02BF\u02B7 = 1;
 			if (!\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B4\u02BE\u02B5\u02B6\u02BB\u02B4\u02B6\u02B9\u02B5\u02B7\u02BD[GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B5\u02B8\u02B8\u02B6\u02BC\u02BC\u02B6\u02BA\u02B7\u02BE\u02B7 + 1].charts.\u02B3\u02B2\u02B6\u02BA\u02B2\u02BC\u02C0\u02BA\u02B9\u02BE\u02B8(this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4.playerInfo.instrument, this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4.playerInfo.difficulty))
 			{
 				this.\u02B9\u02BA\u02B9\u02C1\u02B6\u02BB\u02C0\u02B3\u02B7\u02B8\u02B2 = 0;
-				this.notSupportedText.text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("playernotsupported");
+				this.notSupportedText.text = languageManager.GetString("playernotsupported");
 			}
 		}
 		this.\u02B7\u02B6\u02B7\u02C1\u02B7\u02BB\u02BB\u02B8\u02B6\u02B2\u02B9();
@@ -419,7 +419,7 @@ public class PlayerStatsBox : BaseMenu
 	{
 		this.\u02BB\u02B3\u02C0\u02BC\u02BF\u02BD\u02B9\u02B2\u02BC\u02BE\u02B7 = 4;
 		this.\u02BB\u02B7\u02B7\u02B5\u02B2\u02BA\u02B9\u02C1\u02B2\u02BF\u02BD = false;
-		this.finishText.text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(\u02BB\u02B2\u02BD\u02B9\u02B9\u02B6\u02C0\u02B5\u02B8\u02BA\u02BF);
+		this.finishText.text = LanguageManager.instance.GetString(\u02BB\u02B2\u02BD\u02B9\u02B9\u02B6\u02C0\u02B5\u02B8\u02BA\u02BF);
 		this.menuObject.SetActive(false);
 		if (\u02BB\u02B2\u02BD\u02B9\u02B9\u02B6\u02C0\u02B5\u02B8\u02BA\u02BF == "Ready")
 		{
@@ -446,41 +446,41 @@ public class PlayerStatsBox : BaseMenu
 
 	private void \u02B5\u02B8\u02BD\u02BA\u02BF\u02BB\u02B5\u02B4\u02BE\u02BA\u02B3()
 	{
-		\u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0 u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C0\u02B4\u02BE\u02B9\u02C1\u02B8\u02B2\u02B3\u02BE\u02BD\u02B9();
-		this.headerTexts[0].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4("Menu Music");
-		this.headerTexts[0].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0("sp_awarded");
-		this.headerTexts[2].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD("Quick Setup");
-		this.headerTexts[4].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4("song");
-		this.headerTexts[3].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0("");
-		this.statsNameTexts[1].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD("Change visible instrument scores");
-		this.statsNameTexts[0].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Medium");
-		this.statsNameTexts[2].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4("General");
-		this.statsNameTexts[5].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD("Save Playlist");
-		this.statsNameTexts[6].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0("Kick Pad");
-		this.statsNameTexts[7].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0("lyric ");
-		this.statsNameTexts[6].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0("Speed");
-		this.statsNameTexts[2].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("");
-		this.statsNameTexts[21].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Drum Pad Scrolling");
+		LanguageManager languageManager = LanguageManager.\u02C0\u02B4\u02BE\u02B9\u02C1\u02B8\u02B2\u02B3\u02BE\u02BD\u02B9();
+		this.headerTexts[0].text = languageManager.\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4("Menu Music");
+		this.headerTexts[0].text = languageManager.\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0("sp_awarded");
+		this.headerTexts[2].text = languageManager.\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD("Quick Setup");
+		this.headerTexts[4].text = languageManager.\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4("song");
+		this.headerTexts[3].text = languageManager.\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0("");
+		this.statsNameTexts[1].text = languageManager.\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD("Change visible instrument scores");
+		this.statsNameTexts[0].text = languageManager.GetString("Medium");
+		this.statsNameTexts[2].text = languageManager.\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4("General");
+		this.statsNameTexts[5].text = languageManager.\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD("Save Playlist");
+		this.statsNameTexts[6].text = languageManager.\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0("Kick Pad");
+		this.statsNameTexts[7].text = languageManager.\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0("lyric ");
+		this.statsNameTexts[6].text = languageManager.\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0("Speed");
+		this.statsNameTexts[2].text = languageManager.GetString("");
+		this.statsNameTexts[21].text = languageManager.GetString("Drum Pad Scrolling");
 		if (this.\u02B6\u02B9\u02B7\u02B6\u02B9\u02B2\u02BE\u02BE\u02BE\u02B2\u02B5)
 		{
-			this.statsNameTexts[2].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Scan Songs");
-			this.statsNameTexts[83].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0("soloend");
-			this.statsNameTexts[-127].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("scoredata.bin");
-			this.statsNameTexts[93].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD("diff_keys");
-			this.statsNameTexts[1].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4("Are you sure?");
+			this.statsNameTexts[2].text = languageManager.GetString("Scan Songs");
+			this.statsNameTexts[83].text = languageManager.\u02B5\u02BA\u02BE\u02B9\u02BD\u02B3\u02BB\u02B6\u02B8\u02BD\u02C0("soloend");
+			this.statsNameTexts[-127].text = languageManager.GetString("scoredata.bin");
+			this.statsNameTexts[93].text = languageManager.\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD("diff_keys");
+			this.statsNameTexts[1].text = languageManager.\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4("Are you sure?");
 		}
 		else
 		{
-			this.statsNameTexts[3].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4("Default");
-			this.statsNameTexts[125].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD("HOPO's to Taps");
+			this.statsNameTexts[3].text = languageManager.\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4("Default");
+			this.statsNameTexts[125].text = languageManager.\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD("HOPO's to Taps");
 			this.statsNameTexts[-124].text = "artist";
-			this.statsNameTexts[35].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("Quit");
+			this.statsNameTexts[35].text = languageManager.GetString("Quit");
 			this.statsNameTexts[13].text = "Video Start Time";
 		}
-		this.statsNameTexts[48].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD(" - ");
-		this.statsNameTexts[-34].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD("hasProDrums");
-		this.statsNameTexts[108].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD("Background Video");
-		this.statsNameTexts[-18].text = u02BD_u02B5_u02B7_u02C0_u02BF_u02BA_u02B5_u02B9_u02BD_u02B6_u02C.\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD("Artist - Album");
+		this.statsNameTexts[48].text = languageManager.\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD(" - ");
+		this.statsNameTexts[-34].text = languageManager.\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD("hasProDrums");
+		this.statsNameTexts[108].text = languageManager.\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD("Background Video");
+		this.statsNameTexts[-18].text = languageManager.\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD("Artist - Album");
 	}
 
 	public virtual void \u02B8\u02B3\u02B9\u02BD\u02BF\u02BE\u02BE\u02B2\u02BB\u02BE\u02C0()

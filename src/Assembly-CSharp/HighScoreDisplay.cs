@@ -11,7 +11,7 @@ public class HighScoreDisplay : MonoBehaviour
 			base.gameObject.SetActive(false);
 			return;
 		}
-		this.displayText.text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02BA\u02B9\u02C1\u02B9\u02B2\u02BD\u02B2\u02BC\u02B7\u02BA\u02B8().\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4("Highway");
+		this.displayText.text = LanguageManager.\u02BA\u02B9\u02C1\u02B9\u02B2\u02BD\u02B2\u02BC\u02B7\u02BA\u02B8().\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4("Highway");
 		this.objects.SetActive(true);
 	}
 
@@ -22,7 +22,7 @@ public class HighScoreDisplay : MonoBehaviour
 			base.gameObject.SetActive(false);
 			return;
 		}
-		this.displayText.text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("New Personal Best!");
+		this.displayText.text = LanguageManager.instance.GetString("New Personal Best!");
 		this.objects.SetActive(false);
 	}
 
@@ -45,7 +45,7 @@ public class HighScoreDisplay : MonoBehaviour
 			base.gameObject.SetActive(true);
 			return;
 		}
-		this.displayText.text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02B2\u02BE\u02BA\u02B7\u02B4\u02BA\u02BD\u02BE\u02B7\u02B8\u02BE().\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD("Stars Earned");
+		this.displayText.text = LanguageManager.\u02B2\u02BE\u02BA\u02B7\u02B4\u02BA\u02BD\u02BE\u02B7\u02B8\u02BE().\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD("Stars Earned");
 		this.objects.SetActive(false);
 	}
 
@@ -56,7 +56,7 @@ public class HighScoreDisplay : MonoBehaviour
 			base.gameObject.SetActive(true);
 			return;
 		}
-		this.displayText.text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02B2\u02BE\u02BA\u02B7\u02B4\u02BA\u02BD\u02BE\u02B7\u02B8\u02BE().\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4("Highway Placement");
+		this.displayText.text = LanguageManager.\u02B2\u02BE\u02BA\u02B7\u02B4\u02BA\u02BD\u02BE\u02B7\u02B8\u02BE().\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4("Highway Placement");
 		this.objects.SetActive(false);
 	}
 

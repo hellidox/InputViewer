@@ -1040,11 +1040,11 @@ namespace Rewired.UI.ControlMapper
 			this.CreateLayout();
 			this.SubscribeFixedUISelectionEvents();
 			this.initialized = true;
-			this.informationText.text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("mapperInformation");
-			this.windowTitleText.text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6(this.windowTitleText.text);
-			this.playersSectionTitleText.text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("mapperPlayersLabel");
-			this.controllerSectionTitleText.text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("mapperControllerLabel");
-			this.assignedControllersSectionTitle.text = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B3\u02B5\u02BB\u02BE\u02C1\u02B7\u02B2\u02C0\u02C0\u02BB\u02B6("mapperAssignedControllersTitle") + ":";
+			this.informationText.text = LanguageManager.instance.GetString("mapperInformation");
+			this.windowTitleText.text = LanguageManager.instance.GetString(this.windowTitleText.text);
+			this.playersSectionTitleText.text = LanguageManager.instance.GetString("mapperPlayersLabel");
+			this.controllerSectionTitleText.text = LanguageManager.instance.GetString("mapperControllerLabel");
+			this.assignedControllersSectionTitle.text = LanguageManager.instance.GetString("mapperAssignedControllersTitle") + ":";
 		}
 
 		private void OnJoystickConnected(ControllerStatusChangedEventArgs args)

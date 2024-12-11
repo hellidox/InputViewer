@@ -965,7 +965,7 @@ public class GameManager : MonoBehaviour
 				GameObject gameObject = Resources.Load<GameObject>(this.\u02B9\u02B2\u02B8\u02BE\u02BB\u02B6\u02B4\u02B7\u02C0\u02C0\u02B2(u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B) + this.\u02C1\u02B3\u02C0\u02BF\u02BC\u02B5\u02B5\u02B2\u02B9\u02B5\u02BB.ToString());
 				gameObject.SetActive(false);
 				GameObject gameObject2 = global::UnityEngine.Object.Instantiate<GameObject>(gameObject, new Vector3((float)(num3 * 100), 0f, 0f), Quaternion.identity);
-				float num5 = (float)Screen.width / (float)Screen.height / 1.7777778f;
+				float num5 = (float)Screen.width / (float)Screen.height / 1.2f;
 				if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BB\u02B4\u02BD\u02B2\u02BC\u02B7\u02C0\u02C1\u02B8\u02B4\u02BD == 1 && u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.playerInfo.HasModChartModifier)
 				{
 					transform.position = position;

@@ -15,7 +15,7 @@ public static class SettingsController
 	[Preserve]
 	public static void \u02BA\u02B7\u02BB\u02B2\u02B4\u02BA\u02B7\u02BA\u02BA\u02B6\u02B4()
 	{
-		string[] array = \u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B2\u02BE\u02BF\u02BD\u02BB\u02B7\u02C0\u02BD\u02B4\u02BE\u02BA.\u02B6\u02BB\u02BC\u02BD\u02C1\u02B3\u02B9\u02B3\u02B3\u02BC\u02B3.Keys.ToArray<string>();
+		string[] array = LanguageManager.instance.LocalizationResourceManager.\u02B6\u02BB\u02BC\u02BD\u02C1\u02B3\u02B9\u02B3\u02B3\u02BC\u02B3.Keys.ToArray<string>();
 		string text = Settings.RegisterConfigFileName("settings", SettingsController.\u02BE\u02BF\u02BE\u02BB\u02B3\u02B8\u02B9\u02BD\u02B9\u02B4\u02BC());
 		SectionKey sectionKey = Settings.RegisterSection(text, "offsets");
 		SectionKey sectionKey2 = Settings.RegisterSection(text, "video");
@@ -114,7 +114,7 @@ public static class SettingsController
 		SettingsController.\u02BB\u02B7\u02BC\u02C1\u02B5\u02B5\u02B3\u02B4\u02BF\u02B9\u02BB = new GameSetting(sectionKey8, "force_remote_righty", false);
 		SettingsController.\u02B2\u02BB\u02BF\u02BC\u02B9\u02BF\u02B2\u02BA\u02B4\u02BC\u02B4 = new StringArrayGameSetting(sectionKey9, "path", new string[1]);
 		SettingsController.\u02B4\u02B3\u02B3\u02B7\u02C1\u02BE\u02BC\u02B9\u02B4\u02BC\u02BB = new StringArrayGameSetting(sectionKey10, "server", new string[1]);
-		\u02BD\u02B5\u02B7\u02C0\u02BF\u02BA\u02B5\u02B9\u02BD\u02B6\u02C0.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B8\u02C0\u02B9\u02B9\u02B4\u02B7\u02BD\u02BE\u02B7\u02BC\u02B2(array[SettingsController.\u02B7\u02B3\u02BF\u02BF\u02B4\u02B8\u02C0\u02BB\u02BB\u02BF\u02BE.CurrentValue]);
+		LanguageManager.instance.\u02B8\u02C0\u02B9\u02B9\u02B4\u02B7\u02BD\u02BE\u02B7\u02BC\u02B2(array[SettingsController.\u02B7\u02B3\u02BF\u02BF\u02B4\u02B8\u02C0\u02BB\u02BB\u02BF\u02BE.CurrentValue]);
 	}
 
 	public static bool \u02BB\u02B7\u02BA\u02BC\u02B2\u02B8\u02B9\u02BC\u02C0\u02B5\u02B6;
