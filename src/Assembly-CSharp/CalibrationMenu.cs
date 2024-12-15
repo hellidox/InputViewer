@@ -36,7 +36,7 @@ public class CalibrationMenu : BaseSettingMenu
 					}
 					if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Returned missing glyphs are incorrect.")
 					{
-						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02B7\u02BD\u02BC\u02BE\u02B3\u02B2\u02C0\u02BA\u02B7\u02C1\u02B2;
+						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.show_hit_window;
 					}
 				}
 				else
@@ -98,7 +98,7 @@ public class CalibrationMenu : BaseSettingMenu
 			{
 				if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Overhits")
 				{
-					gameSetting = SettingsController.\u02B7\u02BD\u02BC\u02BE\u02B3\u02B2\u02C0\u02BA\u02B7\u02C1\u02B2;
+					gameSetting = SettingsController.show_hit_window;
 				}
 			}
 			else
@@ -134,7 +134,7 @@ public class CalibrationMenu : BaseSettingMenu
 					}
 					if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Show Hit Window")
 					{
-						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02B7\u02BD\u02BC\u02BE\u02B3\u02B2\u02C0\u02BA\u02B7\u02C1\u02B2;
+						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.show_hit_window;
 					}
 				}
 				else
@@ -180,7 +180,7 @@ public class CalibrationMenu : BaseSettingMenu
 			{
 				if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "album_track")
 				{
-					gameSetting = SettingsController.\u02B7\u02BD\u02BC\u02BE\u02B3\u02B2\u02C0\u02BA\u02B7\u02C1\u02B2;
+					gameSetting = SettingsController.show_hit_window;
 				}
 			}
 			else
@@ -245,7 +245,7 @@ public class CalibrationMenu : BaseSettingMenu
 			{
 				if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "GameColors_")
 				{
-					gameSetting = SettingsController.\u02B7\u02BD\u02BC\u02BE\u02B3\u02B2\u02C0\u02BA\u02B7\u02C1\u02B2;
+					gameSetting = SettingsController.show_hit_window;
 				}
 			}
 			else
@@ -270,7 +270,7 @@ public class CalibrationMenu : BaseSettingMenu
 			{
 				if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Show Hit Window")
 				{
-					gameSetting = SettingsController.\u02B7\u02BD\u02BC\u02BE\u02B3\u02B2\u02C0\u02BA\u02B7\u02C1\u02B2;
+					gameSetting = SettingsController.show_hit_window;
 				}
 			}
 			else
@@ -363,7 +363,7 @@ public class CalibrationMenu : BaseSettingMenu
 					}
 					if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == " ")
 					{
-						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02B7\u02BD\u02BC\u02BE\u02B3\u02B2\u02C0\u02BA\u02B7\u02C1\u02B2;
+						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.show_hit_window;
 					}
 				}
 				else

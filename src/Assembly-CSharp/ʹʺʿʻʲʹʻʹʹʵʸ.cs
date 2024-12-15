@@ -18,7 +18,7 @@ public class \u02B9\u02BA\u02BF\u02BB\u02B2\u02B9\u02BB\u02B9\u02B9\u02B5\u02B8 
 	{
 		get
 		{
-			return base.IsAnyDrumsController && SettingsController.\u02B6\u02BB\u02B2\u02B6\u02B7\u02BF\u02B6\u02B8\u02B8\u02B2\u02B2.GetBoolValue;
+			return base.IsAnyDrumsController && SettingsController.drum_pad_scrolling.GetBoolValue;
 		}
 	}
 

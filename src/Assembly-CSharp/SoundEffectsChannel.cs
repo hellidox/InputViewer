@@ -1,6 +1,6 @@
 ﻿using System;
 
-public enum SoundID
+public enum SoundEffectsChannel
 {
 	None = -1,
 	Beginning,

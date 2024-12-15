@@ -90,7 +90,7 @@ public class SongSelect : BaseMenu
 
 	public void \u02B3\u02C1\u02C0\u02B2\u02B9\u02BB\u02B6\u02B6\u02B4\u02C0\u02BB()
 	{
-		this.speedText.text = string.Format("{0}: {1}%", LanguageManager.instance.GetString("Song Speed"), SettingsController.\u02B3\u02B7\u02B4\u02BA\u02B3\u02B9\u02B7\u02BE\u02B2\u02B7\u02BE.CurrentValue);
+		this.speedText.text = string.Format("{0}: {1}%", LanguageManager.instance.GetString("Song Speed"), SettingsController.song_speed.CurrentValue);
 	}
 
 	public void \u02BA\u02C1\u02B4\u02BB\u02BC\u02BF\u02BF\u02C1\u02B3\u02C0\u02B3(bool \u02B4\u02B9\u02B9\u02B2\u02B7\u02B9\u02C0\u02C1\u02BD\u02C0\u02B5)
@@ -168,7 +168,7 @@ public class SongSelect : BaseMenu
 		}
 		DiscordController.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BF\u02B5\u02C1\u02B7\u02C1\u02B5\u02B6\u02BC\u02C0\u02B3(this.\u02BD\u02B6\u02BD\u02C0\u02C1\u02BE\u02BF\u02BB\u02BD\u02B8\u02BD);
 		yield return new WaitForSecondsRealtime(0.5f);
-		if (SettingsController.\u02B8\u02B7\u02BF\u02B4\u02B3\u02BB\u02B6\u02BB\u02B7\u02B2\u02BD.GetCurrentVolume > 0)
+		if (SettingsController.preview_volume.GetCurrentVolume > 0)
 		{
 			BassAudioManager.Instance.\u02B2\u02B9\u02BA\u02BA\u02B3\u02B8\u02B4\u02B5\u02BE\u02B7\u02BB(this.\u02BD\u02B6\u02BD\u02C0\u02C1\u02BE\u02BF\u02BB\u02BD\u02B8\u02BD);
 			this.\u02B5\u02C0\u02B4\u02B7\u02BB\u02BB\u02BD\u02B2\u02B4\u02BF\u02BE = base.StartCoroutine(this.\u02C1\u02BE\u02B7\u02B8\u02B9\u02B2\u02B7\u02BA\u02BC\u02BC\u02BF());
@@ -200,7 +200,7 @@ public class SongSelect : BaseMenu
 		}
 		if (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4 && this.setlistMenu.\u02B7\u02BD\u02C1\u02C0\u02BA\u02BE\u02BC\u02B3\u02B6\u02B9\u02BB)
 		{
-			this.setlistMenu.\u02BA\u02B4\u02B2\u02BB\u02B9\u02BC\u02B9\u02B8\u02C1\u02B5\u02BE((SongEntry)obj, SettingsController.\u02B3\u02B7\u02B4\u02BA\u02B3\u02B9\u02B7\u02BE\u02B2\u02B7\u02BE.CurrentValue, "");
+			this.setlistMenu.\u02BA\u02B4\u02B2\u02BB\u02B9\u02BC\u02B9\u02B8\u02C1\u02B5\u02BE((SongEntry)obj, SettingsController.song_speed.CurrentValue, "");
 			return;
 		}
 		if (\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B7\u02BD\u02C1\u02C0\u02B4\u02B7\u02BE\u02BF\u02BD\u02B7\u02B7)
@@ -565,7 +565,7 @@ public class SongSelect : BaseMenu
 		}
 		DiscordController.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BF\u02B5\u02C1\u02B7\u02C1\u02B5\u02B6\u02BC\u02C0\u02B3(this.\u02BD\u02B6\u02BD\u02C0\u02C1\u02BE\u02BF\u02BB\u02BD\u02B8\u02BD);
 		yield return new WaitForSecondsRealtime(0.5f);
-		if (SettingsController.\u02B8\u02B7\u02BF\u02B4\u02B3\u02BB\u02B6\u02BB\u02B7\u02B2\u02BD.GetCurrentVolume > 0)
+		if (SettingsController.preview_volume.GetCurrentVolume > 0)
 		{
 			BassAudioManager.Instance.\u02B2\u02B9\u02BA\u02BA\u02B3\u02B8\u02B4\u02B5\u02BE\u02B7\u02BB(this.\u02BD\u02B6\u02BD\u02C0\u02C1\u02BE\u02BF\u02BB\u02BD\u02B8\u02BD);
 			this.\u02B5\u02C0\u02B4\u02B7\u02BB\u02BB\u02BD\u02B2\u02B4\u02BF\u02BE = base.StartCoroutine(this.\u02C1\u02BE\u02B7\u02B8\u02B9\u02B2\u02B7\u02BA\u02BC\u02BC\u02BF());
@@ -631,7 +631,7 @@ public class SongSelect : BaseMenu
 
 	public void \u02BD\u02B7\u02B2\u02BE\u02B7\u02BD\u02C1\u02BE\u02C1\u02B9\u02B7()
 	{
-		GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B9\u02B7\u02BE\u02BF\u02B4\u02C1\u02BC\u02B2\u02BC\u02B8\u02B4 = SettingsController.\u02B3\u02B7\u02B4\u02BA\u02B3\u02B9\u02B7\u02BE\u02B2\u02B7\u02BE.CurrentValue;
+		GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B9\u02B7\u02BE\u02BF\u02B4\u02C1\u02BC\u02B2\u02BC\u02B8\u02B4 = SettingsController.song_speed.CurrentValue;
 		GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02C1\u02BF\u02BD\u02B5\u02BE\u02C1\u02BE\u02B8\u02BF\u02B7 = \u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02BE\u02B3\u02BE\u02BF\u02B3\u02C1\u02B3\u02BF\u02BE\u02B3\u02B7(base.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC);
 		if (this.setlistMenu.\u02B7\u02BD\u02C1\u02C0\u02BA\u02BE\u02BC\u02B3\u02B6\u02B9\u02BB)
 		{
@@ -1048,7 +1048,7 @@ public class SongSelect : BaseMenu
 		{
 			return "";
 		}
-		TimeSpan timeSpan = TimeSpan.FromMilliseconds((double)((float)\u02BD\u02B9\u02B8\u02B2\u02C1\u02B4\u02B8\u02C0\u02B3\u02BB\u02BC / SettingsController.\u02B3\u02B7\u02B4\u02BA\u02B3\u02B9\u02B7\u02BE\u02B2\u02B7\u02BE.GetFloatPercent));
+		TimeSpan timeSpan = TimeSpan.FromMilliseconds((double)((float)\u02BD\u02B9\u02B8\u02B2\u02C1\u02B4\u02B8\u02C0\u02B3\u02BB\u02BC / SettingsController.song_speed.GetFloatPercent));
 		return string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Hours, timeSpan.Minutes, timeSpan.Seconds);
 	}
 
@@ -1079,7 +1079,7 @@ public class SongSelect : BaseMenu
 			\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02B7\u02BA\u02B6\u02C1\u02BD\u02B2\u02B5\u02B7\u02B5\u02B2\u02B8 = false;
 			if (!(obj is \u02C1\u02BD\u02B8\u02B2\u02B3\u02BA\u02B8\u02B8\u02C0\u02B6\u02B8))
 			{
-				this.setlistMenu.\u02BA\u02B4\u02B2\u02BB\u02B9\u02BC\u02B9\u02B8\u02C1\u02B5\u02BE((SongEntry)obj, SettingsController.\u02B3\u02B7\u02B4\u02BA\u02B3\u02B9\u02B7\u02BE\u02B2\u02B7\u02BE.CurrentValue, "");
+				this.setlistMenu.\u02BA\u02B4\u02B2\u02BB\u02B9\u02BC\u02B9\u02B8\u02C1\u02B5\u02BE((SongEntry)obj, SettingsController.song_speed.CurrentValue, "");
 			}
 			else
 			{
@@ -1090,7 +1090,7 @@ public class SongSelect : BaseMenu
 				}
 				for (int i = 0; i < u02C1_u02BD_u02B8_u02B2_u02B3_u02BA_u02B8_u02B8_u02C0_u02B6_u02B.\u02B5\u02B5\u02B6\u02B8\u02B5\u02BF\u02BF\u02B6\u02BB\u02BA\u02B5.Count; i++)
 				{
-					this.setlistMenu.\u02BA\u02B4\u02B2\u02BB\u02B9\u02BC\u02B9\u02B8\u02C1\u02B5\u02BE(u02C1_u02BD_u02B8_u02B2_u02B3_u02BA_u02B8_u02B8_u02C0_u02B6_u02B.\u02B5\u02B5\u02B6\u02B8\u02B5\u02BF\u02BF\u02B6\u02BB\u02BA\u02B5[i], SettingsController.\u02B3\u02B7\u02B4\u02BA\u02B3\u02B9\u02B7\u02BE\u02B2\u02B7\u02BE.CurrentValue, "");
+					this.setlistMenu.\u02BA\u02B4\u02B2\u02BB\u02B9\u02BC\u02B9\u02B8\u02C1\u02B5\u02BE(u02C1_u02BD_u02B8_u02B2_u02B3_u02BA_u02B8_u02B8_u02C0_u02B6_u02B.\u02B5\u02B5\u02B6\u02B8\u02B5\u02BF\u02BF\u02B6\u02BB\u02BA\u02B5[i], SettingsController.song_speed.CurrentValue, "");
 				}
 			}
 			base.\u02B7\u02B6\u02BC\u02BC\u02B3\u02BA\u02BE\u02C0\u02BF\u02B9\u02C1();

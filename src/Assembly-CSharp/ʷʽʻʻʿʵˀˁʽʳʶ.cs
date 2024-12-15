@@ -713,7 +713,7 @@ public class \u02B7\u02BD\u02BB\u02BB\u02BF\u02B5\u02C0\u02C1\u02BD\u02B3\u02B6
 		int num2;
 		if (dictionary.\u02BB\u02B6\u02B8\u02BB\u02BC\u02B2\u02BB\u02B9\u02B9\u02BA\u02BE("Resolution", out num2))
 		{
-			this.\u02C0\u02BB\u02BA\u02B7\u02BE\u02BF\u02BF\u02BB\u02BC\u02B2\u02BF = (float)num2 * SettingsController.\u02B3\u02B7\u02B4\u02BA\u02B3\u02B9\u02B7\u02BE\u02B2\u02B7\u02BE.GetFloatPercent;
+			this.\u02C0\u02BB\u02BA\u02B7\u02BE\u02BF\u02BF\u02BB\u02BC\u02B2\u02BF = (float)num2 * SettingsController.song_speed.GetFloatPercent;
 			this.\u02C0\u02B3\u02C1\u02BB\u02B5\u02BA\u02BB\u02B3\u02C1\u02B8\u02BD = (float)num2;
 		}
 		if (dictionary.\u02BB\u02B6\u02B8\u02BB\u02BC\u02B2\u02BB\u02B9\u02B9\u02BA\u02BE("Player2", out u02BE_u02BA_u02BA_u02B8_u02BE_u02B3_u02B2_u02B2_u02B8_u02B8_u02B.player))

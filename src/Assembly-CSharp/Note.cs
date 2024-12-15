@@ -187,7 +187,7 @@ public class Note : \u02B6\u02BC\u02C0\u02C1\u02B2\u02B4\u02BF\u02BE\u02B5\u02B2
 		}
 	}
 
-	public ushort \u02B5\u02B9\u02B4\u02B8\u02BD\u02B7\u02BA\u02B3\u02B5\u02BF\u02B3
+	public ushort noteMask
 	{
 		get
 		{

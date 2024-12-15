@@ -38,7 +38,7 @@ public class AudioSettingsMenu : BaseSettingMenu
 						}
 						else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Whammy SFX")
 						{
-							this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02BF\u02BD\u02B2\u02BE\u02BC\u02B5\u02B6\u02B5\u02B6\u02B9\u02BD;
+							this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.whammy_sfx;
 						}
 					}
 					else if (num != 259185239U)
@@ -47,7 +47,7 @@ public class AudioSettingsMenu : BaseSettingMenu
 						{
 							if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Preview Music")
 							{
-								this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02B8\u02B7\u02BF\u02B4\u02B3\u02BB\u02B6\u02BB\u02B7\u02B2\u02BD;
+								this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.preview_volume;
 							}
 						}
 					}
@@ -64,13 +64,13 @@ public class AudioSettingsMenu : BaseSettingMenu
 						{
 							if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Audio Latency")
 							{
-								this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02BD\u02BA\u02B3\u02B7\u02C0\u02C1\u02BB\u02B4\u02B9\u02BB\u02B3;
+								this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.latency_mode;
 							}
 						}
 					}
 					else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Master Volume")
 					{
-						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02B8\u02C1\u02B8\u02BC\u02B9\u02B2\u02BB\u02BB\u02B8\u02BD\u02B5;
+						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.master_volume;
 					}
 				}
 				else if (num != 1613443821U)
@@ -104,7 +104,7 @@ public class AudioSettingsMenu : BaseSettingMenu
 					}
 					else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Drums Freestyle")
 					{
-						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02C1\u02BD\u02C0\u02B7\u02B3\u02C0\u02B7\u02B2\u02BF\u02BC\u02B7;
+						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.freestyle_drums;
 					}
 				}
 				else if (num != 2770175893U)
@@ -119,7 +119,7 @@ public class AudioSettingsMenu : BaseSettingMenu
 				}
 				else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Menu Music")
 				{
-					this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02B3\u02B2\u02B5\u02B8\u02B8\u02BD\u02BF\u02B6\u02B3\u02C1\u02BF;
+					this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.menu_volume;
 				}
 			}
 			else if (num <= 3411634414U)
@@ -147,7 +147,7 @@ public class AudioSettingsMenu : BaseSettingMenu
 					{
 						if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Sound Effects")
 						{
-							this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02C1\u02C1\u02B3\u02BD\u02B7\u02C1\u02B9\u02BB\u02B5\u02B4\u02BB;
+							this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.sounds;
 						}
 					}
 				}
@@ -158,7 +158,7 @@ public class AudioSettingsMenu : BaseSettingMenu
 			}
 			else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Track Mute")
 			{
-				this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02B9\u02B3\u02BD\u02B5\u02BB\u02C1\u02BE\u02B2\u02B3\u02B3\u02BB;
+				this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.mute_volume;
 			}
 			this.\u02BA\u02BB\u02B5\u02B6\u02B3\u02BD\u02BA\u02BC\u02B2\u02BB\u02B5();
 			return;
@@ -234,7 +234,7 @@ public class AudioSettingsMenu : BaseSettingMenu
 							if (text == "Audio Latency")
 							{
 								string text2;
-								switch (SettingsController.\u02BD\u02BA\u02B3\u02B7\u02C0\u02C1\u02BB\u02B4\u02B9\u02BB\u02B3.CurrentValue)
+								switch (SettingsController.latency_mode.CurrentValue)
 								{
 								case 0:
 									text2 = "Low Latency";
@@ -356,7 +356,7 @@ public class AudioSettingsMenu : BaseSettingMenu
 	{
 		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Master Volume")
 		{
-			BassAudioManager.Instance.\u02BD\u02BB\u02B3\u02B3\u02B3\u02BA\u02B6\u02B6\u02C0\u02B9\u02B3(SettingsController.\u02B3\u02B2\u02B5\u02B8\u02B8\u02BD\u02BF\u02B6\u02B3\u02C1\u02BF.GetCurrentVolume);
+			BassAudioManager.Instance.\u02BD\u02BB\u02B3\u02B3\u02B3\u02BA\u02B6\u02B6\u02C0\u02B9\u02B3(SettingsController.menu_volume.GetCurrentVolume);
 			return;
 		}
 		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Menu Music")
@@ -408,7 +408,7 @@ public class AudioSettingsMenu : BaseSettingMenu
 					}
 					else if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Whammy SFX")
 					{
-						gameSetting = SettingsController.\u02BF\u02BD\u02B2\u02BE\u02BC\u02B5\u02B6\u02B5\u02B6\u02B9\u02BD;
+						gameSetting = SettingsController.whammy_sfx;
 					}
 				}
 				else if (num != 259185239U)
@@ -417,7 +417,7 @@ public class AudioSettingsMenu : BaseSettingMenu
 					{
 						if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Preview Music")
 						{
-							gameSetting = SettingsController.\u02B8\u02B7\u02BF\u02B4\u02B3\u02BB\u02B6\u02BB\u02B7\u02B2\u02BD;
+							gameSetting = SettingsController.preview_volume;
 						}
 					}
 				}
@@ -434,13 +434,13 @@ public class AudioSettingsMenu : BaseSettingMenu
 					{
 						if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Audio Latency")
 						{
-							gameSetting = SettingsController.\u02BD\u02BA\u02B3\u02B7\u02C0\u02C1\u02BB\u02B4\u02B9\u02BB\u02B3;
+							gameSetting = SettingsController.latency_mode;
 						}
 					}
 				}
 				else if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Master Volume")
 				{
-					gameSetting = SettingsController.\u02B8\u02C1\u02B8\u02BC\u02B9\u02B2\u02BB\u02BB\u02B8\u02BD\u02B5;
+					gameSetting = SettingsController.master_volume;
 				}
 			}
 			else if (num != 1613443821U)
@@ -474,7 +474,7 @@ public class AudioSettingsMenu : BaseSettingMenu
 				}
 				else if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Drums Freestyle")
 				{
-					gameSetting = SettingsController.\u02C1\u02BD\u02C0\u02B7\u02B3\u02C0\u02B7\u02B2\u02BF\u02BC\u02B7;
+					gameSetting = SettingsController.freestyle_drums;
 				}
 			}
 			else if (num != 2770175893U)
@@ -489,7 +489,7 @@ public class AudioSettingsMenu : BaseSettingMenu
 			}
 			else if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Menu Music")
 			{
-				gameSetting = SettingsController.\u02B3\u02B2\u02B5\u02B8\u02B8\u02BD\u02BF\u02B6\u02B3\u02C1\u02BF;
+				gameSetting = SettingsController.menu_volume;
 			}
 		}
 		else if (num <= 3411634414U)
@@ -517,7 +517,7 @@ public class AudioSettingsMenu : BaseSettingMenu
 				{
 					if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Sound Effects")
 					{
-						gameSetting = SettingsController.\u02C1\u02C1\u02B3\u02BD\u02B7\u02C1\u02B9\u02BB\u02B5\u02B4\u02BB;
+						gameSetting = SettingsController.sounds;
 					}
 				}
 			}
@@ -528,7 +528,7 @@ public class AudioSettingsMenu : BaseSettingMenu
 		}
 		else if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Track Mute")
 		{
-			gameSetting = SettingsController.\u02B9\u02B3\u02BD\u02B5\u02BB\u02C1\u02BE\u02B2\u02B3\u02B3\u02BB;
+			gameSetting = SettingsController.mute_volume;
 		}
 		return gameSetting;
 	}
@@ -593,7 +593,7 @@ public class AudioSettingsMenu : BaseSettingMenu
 							if (text == "{0:N0}")
 							{
 								string text2;
-								switch (SettingsController.\u02BD\u02BA\u02B3\u02B7\u02C0\u02C1\u02BB\u02B4\u02B9\u02BB\u02B3.CurrentValue)
+								switch (SettingsController.latency_mode.CurrentValue)
 								{
 								case 0:
 									text2 = "8EDC4F";
@@ -711,7 +711,7 @@ public class AudioSettingsMenu : BaseSettingMenu
 	{
 		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "")
 		{
-			BassAudioManager.Instance.\u02BD\u02BB\u02B3\u02B3\u02B3\u02BA\u02B6\u02B6\u02C0\u02B9\u02B3(SettingsController.\u02B3\u02B2\u02B5\u02B8\u02B8\u02BD\u02BF\u02B6\u02B3\u02C1\u02BF.GetCurrentVolume);
+			BassAudioManager.Instance.\u02BD\u02BB\u02B3\u02B3\u02B3\u02BA\u02B6\u02B6\u02C0\u02B9\u02B3(SettingsController.menu_volume.GetCurrentVolume);
 			return;
 		}
 		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "#")
@@ -784,7 +784,7 @@ public class AudioSettingsMenu : BaseSettingMenu
 							if (text == "Show Mouse Cursor")
 							{
 								string text2;
-								switch (SettingsController.\u02BD\u02BA\u02B3\u02B7\u02C0\u02C1\u02BB\u02B4\u02B9\u02BB\u02B3.CurrentValue)
+								switch (SettingsController.latency_mode.CurrentValue)
 								{
 								case 0:
 									text2 = "";

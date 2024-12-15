@@ -476,7 +476,7 @@ public class BaseMenu : MonoBehaviour
 		}
 		if (\u02BE\u02B5\u02B9\u02B4\u02C0\u02C0\u02BF\u02BB\u02C0\u02B5\u02B9 && (u02B3_u02BF_u02BB_u02BB_u02B5_u02B7_u02B8_u02BE_u02B7_u02B3_u02B != this.\u02B3\u02BF\u02BB\u02BB\u02B5\u02B7\u02B8\u02BE\u02B7\u02B3\u02B3 || u02BB_u02B3_u02C0_u02BC_u02BF_u02BD_u02B9_u02B2_u02BC_u02BE_u02B != this.\u02BB\u02B3\u02C0\u02BC\u02BF\u02BD\u02B9\u02B2\u02BC\u02BE\u02B7))
 		{
-			GameAudioManager.PlaySound((SoundID)117);
+			GameAudioManager.PlaySound((SoundEffectsChannel)117);
 		}
 	}
 
@@ -657,14 +657,14 @@ public class BaseMenu : MonoBehaviour
 		}
 		if (\u02BE\u02B5\u02B9\u02B4\u02C0\u02C0\u02BF\u02BB\u02C0\u02B5\u02B9 && (u02B3_u02BF_u02BB_u02BB_u02B5_u02B7_u02B8_u02BE_u02B7_u02B3_u02B != this.\u02B3\u02BF\u02BB\u02BB\u02B5\u02B7\u02B8\u02BE\u02B7\u02B3\u02B3 || u02BB_u02B3_u02C0_u02BC_u02BF_u02BD_u02B9_u02B2_u02BC_u02BE_u02B != this.\u02BB\u02B3\u02C0\u02BC\u02BF\u02BD\u02B9\u02B2\u02BC\u02BE\u02B7))
 		{
-			GameAudioManager.PlaySound(SoundID.UIScrollDown);
+			GameAudioManager.PlaySound(SoundEffectsChannel.UIScrollDown);
 		}
 	}
 
 	public virtual void \u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3()
 	{
 		this.\u02BD\u02B5\u02BE\u02BC\u02B4\u02B6\u02B7\u02BF\u02B4\u02BF\u02C0 = true;
-		GameAudioManager.PlaySound(SoundID.UIConfirm);
+		GameAudioManager.PlaySound(SoundEffectsChannel.UIConfirm);
 	}
 
 	protected bool \u02C0\u02B9\u02BE\u02BF\u02BA\u02BE\u02B9\u02B4\u02BE\u02BA\u02B5()
@@ -694,7 +694,7 @@ public class BaseMenu : MonoBehaviour
 	public virtual void \u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8()
 	{
 		this.\u02BA\u02B8\u02B2\u02C1\u02BF\u02C0\u02BD\u02C0\u02B4\u02B4\u02B2 = true;
-		GameAudioManager.PlaySound(SoundID.UICancel);
+		GameAudioManager.PlaySound(SoundEffectsChannel.UICancel);
 	}
 
 	protected virtual void \u02BE\u02B4\u02BD\u02B6\u02B5\u02B7\u02BB\u02BE\u02B3\u02B5\u02B9(bool \u02BE\u02B5\u02B9\u02B4\u02C0\u02C0\u02BF\u02BB\u02C0\u02B5\u02B9 = true)
@@ -734,7 +734,7 @@ public class BaseMenu : MonoBehaviour
 		}
 		if (\u02BE\u02B5\u02B9\u02B4\u02C0\u02C0\u02BF\u02BB\u02C0\u02B5\u02B9 && (u02B3_u02BF_u02BB_u02BB_u02B5_u02B7_u02B8_u02BE_u02B7_u02B3_u02B != this.\u02B3\u02BF\u02BB\u02BB\u02B5\u02B7\u02B8\u02BE\u02B7\u02B3\u02B3 || u02BB_u02B3_u02C0_u02BC_u02BF_u02BD_u02B9_u02B2_u02BC_u02BE_u02B != this.\u02BB\u02B3\u02C0\u02BC\u02BF\u02BD\u02B9\u02B2\u02BC\u02BE\u02B7))
 		{
-			GameAudioManager.PlaySound(SoundID.UIScrollUp);
+			GameAudioManager.PlaySound(SoundEffectsChannel.UIScrollUp);
 		}
 	}
 

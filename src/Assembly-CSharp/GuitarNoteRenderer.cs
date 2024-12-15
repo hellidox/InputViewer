@@ -758,7 +758,7 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 
 	private void \u02C1\u02BE\u02BA\u02BF\u02BE\u02B8\u02B3\u02BA\u02B7\u02BA\u02B7()
 	{
-		float getFloatPercent = SettingsController.\u02B3\u02B8\u02B6\u02C1\u02B2\u02B2\u02B5\u02C1\u02B6\u02B5\u02C0.GetFloatPercent;
+		float getFloatPercent = SettingsController.gem_size.GetFloatPercent;
 		Vector2 vector = new Vector2(0.13f * getFloatPercent, 100.2f);
 		Vector2 vector2 = new Vector2(0.3f * getFloatPercent, 101.2f);
 		Vector2 vector3 = new Vector2(0.9f * getFloatPercent, 100.2f);

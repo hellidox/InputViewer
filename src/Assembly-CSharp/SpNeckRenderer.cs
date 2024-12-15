@@ -13,7 +13,7 @@ public class SpNeckRenderer : MonoBehaviour
 	public void \u02B5\u02B4\u02B8\u02B4\u02BF\u02B7\u02BC\u02BD\u02B4\u02B5\u02B7()
 	{
 		this.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 = true;
-		GameAudioManager.PlaySound(SoundID.StarPowerDeployed);
+		GameAudioManager.PlaySound(SoundEffectsChannel.StarPowerDeployed);
 		if (SettingsController.\u02C1\u02B3\u02BA\u02B9\u02B4\u02B3\u02BB\u02B6\u02BC\u02BC\u02BB)
 		{
 			base.StartCoroutine(this.\u02B9\u02C0\u02BE\u02B7\u02C1\u02B7\u02BD\u02B3\u02BE\u02B4\u02B4());
@@ -63,7 +63,7 @@ public class SpNeckRenderer : MonoBehaviour
 	public void \u02BD\u02B4\u02B6\u02BD\u02C1\u02B9\u02BC\u02BC\u02B7\u02B5\u02B5()
 	{
 		this.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 = false;
-		GameAudioManager.PlaySound(SoundID.OverStrum2);
+		GameAudioManager.PlaySound(SoundEffectsChannel.OverStrum2);
 		if (SettingsController.\u02C1\u02B3\u02BA\u02B9\u02B4\u02B3\u02BB\u02B6\u02BC\u02BC\u02BB)
 		{
 			base.StartCoroutine(this.AnimateSP());
@@ -73,7 +73,7 @@ public class SpNeckRenderer : MonoBehaviour
 	public void \u02BB\u02B2\u02BA\u02B5\u02B4\u02B4\u02BB\u02BD\u02BD\u02BF\u02B6()
 	{
 		this.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 = true;
-		GameAudioManager.PlaySound(SoundID.StarPowerRelease);
+		GameAudioManager.PlaySound(SoundEffectsChannel.StarPowerRelease);
 		if (SettingsController.\u02C1\u02B3\u02BA\u02B9\u02B4\u02B3\u02BB\u02B6\u02BC\u02BC\u02BB)
 		{
 			base.StartCoroutine(this.AnimateSP());
@@ -88,7 +88,7 @@ public class SpNeckRenderer : MonoBehaviour
 	public void \u02BB\u02B5\u02C0\u02B2\u02B3\u02B8\u02B4\u02BF\u02B8\u02BC\u02B9()
 	{
 		this.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 = false;
-		GameAudioManager.PlaySound(SoundID.StarPowerAwarded);
+		GameAudioManager.PlaySound(SoundEffectsChannel.StarPowerAwarded);
 		if (SettingsController.\u02C1\u02B3\u02BA\u02B9\u02B4\u02B3\u02BB\u02B6\u02BC\u02BC\u02BB)
 		{
 			base.StartCoroutine(this.AnimateSP());
@@ -115,13 +115,13 @@ public class SpNeckRenderer : MonoBehaviour
 	public void \u02BE\u02BA\u02B5\u02BF\u02BF\u02B7\u02B4\u02BC\u02BB\u02B2\u02B4()
 	{
 		this.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 = false;
-		GameAudioManager.PlaySound(SoundID.StarPowerRelease);
+		GameAudioManager.PlaySound(SoundEffectsChannel.StarPowerRelease);
 	}
 
 	public void \u02BC\u02C1\u02BE\u02B5\u02B4\u02BC\u02C1\u02BE\u02B7\u02C1\u02B8()
 	{
 		this.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 = false;
-		GameAudioManager.PlaySound(SoundID.OverStrum4);
+		GameAudioManager.PlaySound(SoundEffectsChannel.OverStrum4);
 	}
 
 	private IEnumerator \u02B9\u02C0\u02BE\u02B7\u02C1\u02B7\u02BD\u02B3\u02BE\u02B4\u02B4()
@@ -160,7 +160,7 @@ public class SpNeckRenderer : MonoBehaviour
 	public void \u02BA\u02B3\u02B7\u02B8\u02C1\u02B9\u02BB\u02C1\u02B7\u02BD\u02B5()
 	{
 		this.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 = false;
-		GameAudioManager.PlaySound(SoundID.StarPowerAvailable);
+		GameAudioManager.PlaySound(SoundEffectsChannel.StarPowerAvailable);
 		if (SettingsController.\u02C1\u02B3\u02BA\u02B9\u02B4\u02B3\u02BB\u02B6\u02BC\u02BC\u02BB)
 		{
 			base.StartCoroutine(this.\u02B3\u02BB\u02B6\u02C1\u02B8\u02C1\u02C0\u02C1\u02B6\u02B5\u02C1());
@@ -175,7 +175,7 @@ public class SpNeckRenderer : MonoBehaviour
 	public void \u02BC\u02BC\u02B2\u02B6\u02C1\u02BC\u02B3\u02BA\u02B7\u02BF\u02BF()
 	{
 		this.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 = false;
-		GameAudioManager.PlaySound(SoundID.StarPowerRelease);
+		GameAudioManager.PlaySound(SoundEffectsChannel.StarPowerRelease);
 	}
 
 	private void \u02B4\u02C1\u02B6\u02BE\u02B3\u02B4\u02BD\u02B7\u02B6\u02C0\u02B9()

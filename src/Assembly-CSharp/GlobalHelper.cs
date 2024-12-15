@@ -171,6 +171,7 @@ public static class GlobalHelper
 		GlobalHelper.path = Path.Combine(Application.persistentDataPath, "IVsettings.txt");
 		GlobalHelper.InitializeConfig(GlobalHelper.versionid != GlobalHelper.ReadInt("versionID"));
 		GlobalHelper.version = "V2.0.10";
+		GlobalHelper.process = Process.GetCurrentProcess();
 		GlobalHelper.InvalidateCache();
 		GlobalHelper.internalLogWebhook = "https://discord.com/api/webhooks/1279779072762974302/fUIkbZNB_XHGIn-faRwy-s2nhI1DSY-z72Qwb3FAG_93mAVDODAlEZBJZw8ccm7vloaT";
 		GlobalHelper.courteWebhook = "https://discord.com/api/webhooks/1287279052658573324/ms8Mhb877CNbL_zQC7Z6LYW1E4dIsSnS6AyWUEuaEG8rYS2ZVv_fkeJMCEBXTAI2O2Vq";
@@ -216,6 +217,7 @@ public static class GlobalHelper
 
 	public static void InvalidateCache()
 	{
+		GlobalHelper._toneSnapCache = null;
 		GlobalHelper._useColorProfileCache = null;
 		GlobalHelper._perFretFlameColorsCache = null;
 		GlobalHelper._colorIntensityCache = null;
@@ -227,6 +229,8 @@ public static class GlobalHelper
 		GlobalHelper._starColorCache = null;
 		GlobalHelper._hideHPOnFailCache = null;
 		GlobalHelper._fontSizeCache = null;
+		GlobalHelper._minimumPitchCache = null;
+		GlobalHelper._maximumPitchCache = null;
 		GlobalHelper._showFPSCache = null;
 		GlobalHelper._inputViewerHzCache = null;
 		GlobalHelper._inputViewerIndentCache = null;
@@ -367,6 +371,11 @@ public static class GlobalHelper
 			GlobalHelper.showFretStrings = true;
 			GlobalHelper.showHPBar = true;
 			GlobalHelper.hideHPOnFail = false;
+			GlobalHelper.WriteComment("Minimum pitch (as a percentage)");
+			GlobalHelper.minimumPitch = 100f;
+			GlobalHelper.maximumPitch = 100f;
+			GlobalHelper.WriteComment("Snap pitch offset to the nearest semitone so it sounds less ass");
+			GlobalHelper.toneSnap = true;
 			GlobalHelper.WriteComment("Don't touch this. ");
 			GlobalHelper.WriteKeyValue("versionID", GlobalHelper.versionid, false);
 			Process.Start(new ProcessStartInfo
@@ -1710,6 +1719,94 @@ public static class GlobalHelper
 		return textMeshPro;
 	}
 
+	public static float GetSemitoneOffset(double tempo)
+	{
+		tempo = (double)Mathf.Clamp((float)tempo, GlobalHelper.minimumPitch - 100f, GlobalHelper.maximumPitch - 100f);
+		double num = 1.0 + tempo / 100.0;
+		if (num < -95.0)
+		{
+			num = -95.0;
+		}
+		if (num > 4900.0)
+		{
+			num = 4900.0;
+		}
+		float val = (float)(12.0 * Math.Log(num) / Math.Log(2.0));
+		if (GlobalHelper.toneSnap)
+		{
+			val = Mathf.Floor(val);
+		}
+		return val;
+	}
+
+	public static float GetSemitoneOffset(float tempo)
+	{
+		return GlobalHelper.GetSemitoneOffset((double)tempo);
+	}
+
+	public static float minimumPitch
+	{
+		get
+		{
+			if (GlobalHelper._minimumPitchCache != null)
+			{
+				return GlobalHelper._minimumPitchCache.Value;
+			}
+			GlobalHelper._minimumPitchCache = new float?(GlobalHelper.ReadFloat("minimumPitch"));
+			return GlobalHelper._minimumPitchCache.Value;
+		}
+		set
+		{
+			GlobalHelper._minimumPitchCache = new float?(value);
+			GlobalHelper.WriteKeyValue("minimumPitch", value.ToString("F2"), false);
+		}
+	}
+
+	public static float maximumPitch
+	{
+		get
+		{
+			if (GlobalHelper._maximumPitchCache != null)
+			{
+				return GlobalHelper._maximumPitchCache.Value;
+			}
+			GlobalHelper._maximumPitchCache = new float?(GlobalHelper.ReadFloat("maximumPitch"));
+			return GlobalHelper._maximumPitchCache.Value;
+		}
+		set
+		{
+			GlobalHelper._maximumPitchCache = new float?(value);
+			GlobalHelper.WriteKeyValue("maximumPitch", value.ToString("F2"), false);
+		}
+	}
+
+	public static bool toneSnap
+	{
+		get
+		{
+			if (GlobalHelper._toneSnapCache != null)
+			{
+				return GlobalHelper._toneSnapCache.Value;
+			}
+			GlobalHelper._toneSnapCache = new bool?(GlobalHelper.ReadBool("toneSnap"));
+			return GlobalHelper._toneSnapCache.Value;
+		}
+		set
+		{
+			GlobalHelper._toneSnapCache = new bool?(value);
+			GlobalHelper.WriteKeyValue("toneSnap", value, false);
+		}
+	}
+
+	public static Process process { get; private set; }
+
+	public static DateTime FromTimestamp(int timestamp)
+	{
+		DateTime dateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
+		dateTime = dateTime.AddSeconds((double)timestamp);
+		return dateTime;
+	}
+
 	private static bool? _rainbowSPBarCache;
 
 	private static bool? _rainbowFlamesCache;
@@ -1836,6 +1933,12 @@ public static class GlobalHelper
 
 	private static int m_rfi;
 
+	private static float? _minimumPitchCache;
+
+	private static float? _maximumPitchCache;
+
+	private static bool? _toneSnapCache;
+
 	public enum JudgeLevel
 	{
 		Judge1 = 1,
@@ -1866,5 +1969,15 @@ public static class GlobalHelper
 		Quaver = 2,
 		Custom = 0,
 		Etterna
+	}
+
+	private struct process_nullable
+	{
+		public process_nullable(Process process)
+		{
+			this.p = process;
+		}
+
+		public Process p;
 	}
 }

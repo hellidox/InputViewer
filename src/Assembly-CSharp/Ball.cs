@@ -37,7 +37,7 @@ public class Ball : MonoBehaviour
 			this.\u02B3\u02B3\u02C0\u02BA\u02B5\u02B9\u02B2\u02B9\u02B7\u02BE\u02BB.y = this.\u02C1\u02B2\u02BD\u02B2\u02B6\u02BD\u02C0\u02B5\u02BC\u02B9\u02B7 * num;
 			if (this.\u02BE\u02C0\u02C0\u02BD\u02B3\u02BC\u02BC\u02BB\u02BD\u02BC\u02B5)
 			{
-				BassAudioManager.Instance.\u02BA\u02BA\u02B5\u02B3\u02BB\u02BA\u02B3\u02B3\u02B8\u02C1\u02B4((SoundID)global::UnityEngine.Random.Range(3, -78));
+				BassAudioManager.Instance.\u02BA\u02BA\u02B5\u02B3\u02BB\u02BA\u02B3\u02B3\u02B8\u02C1\u02B4((SoundEffectsChannel)global::UnityEngine.Random.Range(3, -78));
 			}
 		}
 		if (\u02B6\u02BF\u02B3\u02C0\u02B4\u02B5\u02C1\u02BE\u02B2\u02B3\u02B7.collider.CompareTag(""))
@@ -45,7 +45,7 @@ public class Ball : MonoBehaviour
 			this.\u02B3\u02B3\u02C0\u02BA\u02B5\u02B9\u02B2\u02B9\u02B7\u02BE\u02BB.y = this.\u02B3\u02B3\u02C0\u02BA\u02B5\u02B9\u02B2\u02B9\u02B7\u02BE\u02BB.y * 631f;
 			if (this.\u02BE\u02C0\u02C0\u02BD\u02B3\u02BC\u02BC\u02BB\u02BD\u02BC\u02B5)
 			{
-				BassAudioManager.Instance.PlaySoundExternal((SoundID)global::UnityEngine.Random.Range(8, -118));
+				BassAudioManager.Instance.PlaySound((SoundEffectsChannel)global::UnityEngine.Random.Range(8, -118));
 			}
 		}
 		if (\u02B6\u02BF\u02B3\u02C0\u02B4\u02B5\u02C1\u02BE\u02B2\u02B3\u02B7.collider.CompareTag("Menu Music"))
@@ -54,7 +54,7 @@ public class Ball : MonoBehaviour
 			this.\u02B8\u02B6\u02B4\u02B6\u02B4\u02B9\u02BE\u02BE\u02BC\u02B8\u02B4();
 			if (this.\u02BE\u02C0\u02C0\u02BD\u02B3\u02BC\u02BC\u02BB\u02BD\u02BC\u02B5)
 			{
-				BassAudioManager.Instance.PlaySoundExternal((SoundID)35);
+				BassAudioManager.Instance.PlaySound((SoundEffectsChannel)35);
 			}
 			return;
 		}
@@ -137,7 +137,7 @@ public class Ball : MonoBehaviour
 			this.\u02B3\u02B3\u02C0\u02BA\u02B5\u02B9\u02B2\u02B9\u02B7\u02BE\u02BB.y = this.\u02C1\u02B2\u02BD\u02B2\u02B6\u02BD\u02C0\u02B5\u02BC\u02B9\u02B7 * num;
 			if (this.\u02BE\u02C0\u02C0\u02BD\u02B3\u02BC\u02BC\u02BB\u02BD\u02BC\u02B5)
 			{
-				BassAudioManager.Instance.PlaySoundExternal((SoundID)global::UnityEngine.Random.Range(5, -128));
+				BassAudioManager.Instance.PlaySound((SoundEffectsChannel)global::UnityEngine.Random.Range(5, -128));
 			}
 		}
 		if (\u02B6\u02BF\u02B3\u02C0\u02B4\u02B5\u02C1\u02BE\u02B2\u02B3\u02B7.collider.CompareTag(" , "))
@@ -145,7 +145,7 @@ public class Ball : MonoBehaviour
 			this.\u02B3\u02B3\u02C0\u02BA\u02B5\u02B9\u02B2\u02B9\u02B7\u02BE\u02BB.y = this.\u02B3\u02B3\u02C0\u02BA\u02B5\u02B9\u02B2\u02B9\u02B7\u02BE\u02BB.y * 1777f;
 			if (this.\u02BE\u02C0\u02C0\u02BD\u02B3\u02BC\u02BC\u02BB\u02BD\u02BC\u02B5)
 			{
-				BassAudioManager.Instance.\u02BA\u02BA\u02B5\u02B3\u02BB\u02BA\u02B3\u02B3\u02B8\u02C1\u02B4((SoundID)global::UnityEngine.Random.Range(8, -79));
+				BassAudioManager.Instance.\u02BA\u02BA\u02B5\u02B3\u02BB\u02BA\u02B3\u02B3\u02B8\u02C1\u02B4((SoundEffectsChannel)global::UnityEngine.Random.Range(8, -79));
 			}
 		}
 		if (\u02B6\u02BF\u02B3\u02C0\u02B4\u02B5\u02C1\u02BE\u02B2\u02B3\u02B7.collider.CompareTag("ScoreDisabledPause"))
@@ -154,7 +154,7 @@ public class Ball : MonoBehaviour
 			this.\u02B7\u02B4\u02C1\u02B4\u02BA\u02B4\u02BB\u02BC\u02B3\u02B7\u02C0();
 			if (this.\u02BE\u02C0\u02C0\u02BD\u02B3\u02BC\u02BC\u02BB\u02BD\u02BC\u02B5)
 			{
-				BassAudioManager.Instance.PlaySoundExternal((SoundID)105);
+				BassAudioManager.Instance.PlaySound((SoundEffectsChannel)105);
 			}
 			return;
 		}
@@ -190,7 +190,7 @@ public class Ball : MonoBehaviour
 			this.\u02B3\u02B3\u02C0\u02BA\u02B5\u02B9\u02B2\u02B9\u02B7\u02BE\u02BB.y = this.\u02C1\u02B2\u02BD\u02B2\u02B6\u02BD\u02C0\u02B5\u02BC\u02B9\u02B7 * num;
 			if (this.\u02BE\u02C0\u02C0\u02BD\u02B3\u02BC\u02BC\u02BB\u02BD\u02BC\u02B5)
 			{
-				BassAudioManager.Instance.PlaySoundExternal((SoundID)global::UnityEngine.Random.Range(1, 76));
+				BassAudioManager.Instance.PlaySound((SoundEffectsChannel)global::UnityEngine.Random.Range(1, 76));
 			}
 		}
 		if (\u02B6\u02BF\u02B3\u02C0\u02B4\u02B5\u02C1\u02BE\u02B2\u02B3\u02B7.collider.CompareTag("hh\\:mm\\:ss"))
@@ -198,7 +198,7 @@ public class Ball : MonoBehaviour
 			this.\u02B3\u02B3\u02C0\u02BA\u02B5\u02B9\u02B2\u02B9\u02B7\u02BE\u02BB.y = this.\u02B3\u02B3\u02C0\u02BA\u02B5\u02B9\u02B2\u02B9\u02B7\u02BE\u02BB.y * 403f;
 			if (this.\u02BE\u02C0\u02C0\u02BD\u02B3\u02BC\u02BC\u02BB\u02BD\u02BC\u02B5)
 			{
-				BassAudioManager.Instance.\u02BA\u02BA\u02B5\u02B3\u02BB\u02BA\u02B3\u02B3\u02B8\u02C1\u02B4((SoundID)global::UnityEngine.Random.Range(8, 32));
+				BassAudioManager.Instance.\u02BA\u02BA\u02B5\u02B3\u02BB\u02BA\u02B3\u02B3\u02B8\u02C1\u02B4((SoundEffectsChannel)global::UnityEngine.Random.Range(8, 32));
 			}
 		}
 		if (\u02B6\u02BF\u02B3\u02C0\u02B4\u02B5\u02C1\u02BE\u02B2\u02B3\u02B7.collider.CompareTag("Notes Hit"))
@@ -207,7 +207,7 @@ public class Ball : MonoBehaviour
 			this.\u02B7\u02B4\u02C1\u02B4\u02BA\u02B4\u02BB\u02BC\u02B3\u02B7\u02C0();
 			if (this.\u02BE\u02C0\u02C0\u02BD\u02B3\u02BC\u02BC\u02BB\u02BD\u02BC\u02B5)
 			{
-				BassAudioManager.Instance.PlaySoundExternal((SoundID)32);
+				BassAudioManager.Instance.PlaySound((SoundEffectsChannel)32);
 			}
 			return;
 		}
@@ -291,7 +291,7 @@ public class Ball : MonoBehaviour
 			this.\u02B3\u02B3\u02C0\u02BA\u02B5\u02B9\u02B2\u02B9\u02B7\u02BE\u02BB.y = this.\u02C1\u02B2\u02BD\u02B2\u02B6\u02BD\u02C0\u02B5\u02BC\u02B9\u02B7 * num;
 			if (this.\u02BE\u02C0\u02C0\u02BD\u02B3\u02BC\u02BC\u02BB\u02BD\u02BC\u02B5)
 			{
-				BassAudioManager.Instance.PlaySoundExternal((SoundID)global::UnityEngine.Random.Range(5, 9));
+				BassAudioManager.Instance.PlaySound((SoundEffectsChannel)global::UnityEngine.Random.Range(5, 9));
 			}
 		}
 		if (\u02B6\u02BF\u02B3\u02C0\u02B4\u02B5\u02C1\u02BE\u02B2\u02B3\u02B7.collider.CompareTag("Untagged"))
@@ -299,7 +299,7 @@ public class Ball : MonoBehaviour
 			this.\u02B3\u02B3\u02C0\u02BA\u02B5\u02B9\u02B2\u02B9\u02B7\u02BE\u02BB.y = this.\u02B3\u02B3\u02C0\u02BA\u02B5\u02B9\u02B2\u02B9\u02B7\u02BE\u02BB.y * -1f;
 			if (this.\u02BE\u02C0\u02C0\u02BD\u02B3\u02BC\u02BC\u02BB\u02BD\u02BC\u02B5)
 			{
-				BassAudioManager.Instance.PlaySoundExternal((SoundID)global::UnityEngine.Random.Range(5, 9));
+				BassAudioManager.Instance.PlaySound((SoundEffectsChannel)global::UnityEngine.Random.Range(5, 9));
 			}
 		}
 		if (\u02B6\u02BF\u02B3\u02C0\u02B4\u02B5\u02C1\u02BE\u02B2\u02B3\u02B7.collider.CompareTag("Respawn"))
@@ -308,7 +308,7 @@ public class Ball : MonoBehaviour
 			this.\u02B7\u02B4\u02C1\u02B4\u02BA\u02B4\u02BB\u02BC\u02B3\u02B7\u02C0();
 			if (this.\u02BE\u02C0\u02C0\u02BD\u02B3\u02BC\u02BC\u02BB\u02BD\u02BC\u02B5)
 			{
-				BassAudioManager.Instance.PlaySoundExternal(SoundID.SongFail);
+				BassAudioManager.Instance.PlaySound(SoundEffectsChannel.SongFail);
 			}
 			return;
 		}
@@ -401,7 +401,7 @@ public class Ball : MonoBehaviour
 			this.\u02B3\u02B3\u02C0\u02BA\u02B5\u02B9\u02B2\u02B9\u02B7\u02BE\u02BB.y = this.\u02C1\u02B2\u02BD\u02B2\u02B6\u02BD\u02C0\u02B5\u02BC\u02B9\u02B7 * num;
 			if (this.\u02BE\u02C0\u02C0\u02BD\u02B3\u02BC\u02BC\u02BB\u02BD\u02BC\u02B5)
 			{
-				BassAudioManager.Instance.\u02BA\u02BA\u02B5\u02B3\u02BB\u02BA\u02B3\u02B3\u02B8\u02C1\u02B4((SoundID)global::UnityEngine.Random.Range(7, 75));
+				BassAudioManager.Instance.\u02BA\u02BA\u02B5\u02B3\u02BB\u02BA\u02B3\u02B3\u02B8\u02C1\u02B4((SoundEffectsChannel)global::UnityEngine.Random.Range(7, 75));
 			}
 		}
 		if (\u02B6\u02BF\u02B3\u02C0\u02B4\u02B5\u02C1\u02BE\u02B2\u02B3\u02B7.collider.CompareTag("Highway"))
@@ -409,7 +409,7 @@ public class Ball : MonoBehaviour
 			this.\u02B3\u02B3\u02C0\u02BA\u02B5\u02B9\u02B2\u02B9\u02B7\u02BE\u02BB.y = this.\u02B3\u02B3\u02C0\u02BA\u02B5\u02B9\u02B2\u02B9\u02B7\u02BE\u02BB.y * 590f;
 			if (this.\u02BE\u02C0\u02C0\u02BD\u02B3\u02BC\u02BC\u02BB\u02BD\u02BC\u02B5)
 			{
-				BassAudioManager.Instance.\u02BA\u02BA\u02B5\u02B3\u02BB\u02BA\u02B3\u02B3\u02B8\u02C1\u02B4((SoundID)global::UnityEngine.Random.Range(3, 3));
+				BassAudioManager.Instance.\u02BA\u02BA\u02B5\u02B3\u02BB\u02BA\u02B3\u02B3\u02B8\u02C1\u02B4((SoundEffectsChannel)global::UnityEngine.Random.Range(3, 3));
 			}
 		}
 		if (\u02B6\u02BF\u02B3\u02C0\u02B4\u02B5\u02C1\u02BE\u02B2\u02B3\u02B7.collider.CompareTag("Scan Songs"))
@@ -418,7 +418,7 @@ public class Ball : MonoBehaviour
 			this.\u02B8\u02B6\u02B4\u02B6\u02B4\u02B9\u02BE\u02BE\u02BC\u02B8\u02B4();
 			if (this.\u02BE\u02C0\u02C0\u02BD\u02B3\u02BC\u02BC\u02BB\u02BD\u02BC\u02B5)
 			{
-				BassAudioManager.Instance.PlaySoundExternal((SoundID)74);
+				BassAudioManager.Instance.PlaySound((SoundEffectsChannel)74);
 			}
 			return;
 		}

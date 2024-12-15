@@ -182,7 +182,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 				{
 					if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Intensity - Bass Guitar")
 					{
-						gameSetting = SettingsController.\u02BD\u02C1\u02B5\u02B3\u02BA\u02BC\u02B9\u02B8\u02B7\u02B8\u02C0;
+						gameSetting = SettingsController.enable_cursor;
 					}
 				}
 			}
@@ -385,7 +385,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 				{
 					if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "streamingAssets.yml")
 					{
-						gameSetting = SettingsController.\u02BD\u02C1\u02B5\u02B3\u02BA\u02BC\u02B9\u02B8\u02B7\u02B8\u02C0;
+						gameSetting = SettingsController.enable_cursor;
 					}
 				}
 			}
@@ -590,7 +590,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 				{
 					if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Show Mouse Cursor")
 					{
-						gameSetting = SettingsController.\u02BD\u02C1\u02B5\u02B3\u02BA\u02BC\u02B9\u02B8\u02B7\u02B8\u02C0;
+						gameSetting = SettingsController.enable_cursor;
 					}
 				}
 			}
@@ -710,7 +710,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 				{
 					if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "[")
 					{
-						gameSetting = SettingsController.\u02BD\u02C1\u02B5\u02B3\u02BA\u02BC\u02B9\u02B8\u02B7\u02B8\u02C0;
+						gameSetting = SettingsController.enable_cursor;
 					}
 				}
 			}
@@ -1543,7 +1543,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 					{
 						if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Show Mouse Cursor")
 						{
-							this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02BD\u02C1\u02B5\u02B3\u02BA\u02BC\u02B9\u02B8\u02B7\u02B8\u02C0;
+							this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.enable_cursor;
 						}
 					}
 				}

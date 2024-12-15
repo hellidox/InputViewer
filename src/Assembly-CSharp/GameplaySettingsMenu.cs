@@ -32,12 +32,12 @@ public class GameplaySettingsMenu : BaseSettingMenu
 						}
 						else if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Practice Start Delay")
 						{
-							gameSetting = SettingsController.\u02C0\u02BB\u02C1\u02BB\u02B8\u02BC\u02BB\u02C1\u02BA\u02C0\u02BF;
+							gameSetting = SettingsController.practice_delay;
 						}
 					}
 					else if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Default Search By Current Sort")
 					{
-						gameSetting = SettingsController.\u02B5\u02B9\u02BB\u02BB\u02BA\u02B3\u02B9\u02B2\u02B5\u02BD\u02BB;
+						gameSetting = SettingsController.default_search_by_current_sort;
 					}
 				}
 				else if (num <= 580693481U)
@@ -48,7 +48,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 						{
 							if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Practice Star Power")
 							{
-								gameSetting = SettingsController.\u02B7\u02B2\u02BA\u02B5\u02BC\u02C0\u02B8\u02C0\u02BC\u02BD\u02B9;
+								gameSetting = SettingsController.practice_sp;
 							}
 						}
 					}
@@ -82,13 +82,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 						{
 							if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Allow Duplicate Songs")
 							{
-								gameSetting = SettingsController.\u02BF\u02C0\u02B4\u02B3\u02BB\u02B8\u02BA\u02BE\u02B3\u02B5\u02B2;
+								gameSetting = SettingsController.allow_duplicate_songs;
 							}
 						}
 					}
 					else if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Background Video")
 					{
-						gameSetting = SettingsController.\u02B7\u02B9\u02BF\u02BD\u02B9\u02B5\u02C0\u02BA\u02BC\u02BD\u02BE;
+						gameSetting = SettingsController.background_video;
 					}
 				}
 				else if (num != 1476092947U)
@@ -103,7 +103,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 				}
 				else if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Show Hit Window")
 				{
-					gameSetting = SettingsController.\u02B7\u02BD\u02BC\u02BE\u02B3\u02B2\u02C0\u02BA\u02B7\u02C1\u02B2;
+					gameSetting = SettingsController.show_hit_window;
 				}
 			}
 			else if (num <= 1976894744U)
@@ -114,7 +114,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 					{
 						if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Default Sort Filter")
 						{
-							gameSetting = SettingsController.\u02B9\u02BD\u02B9\u02B4\u02B9\u02BB\u02B3\u02BA\u02BF\u02C0\u02B5;
+							gameSetting = SettingsController.sort_filter;
 						}
 					}
 				}
@@ -135,7 +135,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 			}
 			else if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Mute Track on Miss")
 			{
-				gameSetting = SettingsController.\u02B8\u02B6\u02B5\u02BB\u02C0\u02BA\u02B7\u02B4\u02B9\u02B8\u02BA;
+				gameSetting = SettingsController.mute_on_miss;
 			}
 		}
 		else if (num <= 3148303310U)
@@ -172,13 +172,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 					{
 						if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Background Image")
 						{
-							gameSetting = SettingsController.\u02B3\u02B2\u02B9\u02C0\u02B3\u02BC\u02B4\u02BD\u02B3\u02C1\u02BC;
+							gameSetting = SettingsController.background_image;
 						}
 					}
 				}
 				else if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Use Song Backgrounds")
 				{
-					gameSetting = SettingsController.\u02B7\u02BE\u02C1\u02BD\u02BD\u02C0\u02B4\u02BA\u02BC\u02B6\u02B9;
+					gameSetting = SettingsController.song_backgrounds;
 				}
 			}
 			else if (num != 3140304007U)
@@ -205,13 +205,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 					{
 						if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Show Lyrics")
 						{
-							gameSetting = SettingsController.\u02BD\u02B3\u02B7\u02B5\u02B5\u02BD\u02B5\u02B8\u02BD\u02C1\u02C1;
+							gameSetting = SettingsController.enable_lyrics;
 						}
 					}
 				}
 				else if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Measure Based Countdowns")
 				{
-					gameSetting = SettingsController.\u02B6\u02C0\u02BC\u02BE\u02B2\u02B6\u02B8\u02B9\u02B2\u02B9\u02B2;
+					gameSetting = SettingsController.measure_countdown;
 				}
 			}
 			else if (num != 3502736215U)
@@ -225,7 +225,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 			}
 			else if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Show Bot Score")
 			{
-				gameSetting = SettingsController.\u02B7\u02B2\u02C1\u02BA\u02BE\u02BC\u02B2\u02BB\u02BC\u02B2\u02B9;
+				gameSetting = SettingsController.show_bot_score;
 			}
 		}
 		else if (num <= 3587543207U)
@@ -241,7 +241,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 			}
 			else if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Song Speed")
 			{
-				gameSetting = SettingsController.\u02B3\u02B7\u02B4\u02BA\u02B3\u02B9\u02B7\u02BE\u02B2\u02B7\u02BE;
+				gameSetting = SettingsController.song_speed;
 			}
 		}
 		else if (num != 3924729133U)
@@ -250,13 +250,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 			{
 				if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Show Lyrics Background")
 				{
-					gameSetting = SettingsController.\u02B2\u02C1\u02BD\u02C1\u02B4\u02B4\u02B2\u02BA\u02B6\u02B8\u02B4;
+					gameSetting = SettingsController.enable_lyrics_bg;
 				}
 			}
 		}
 		else if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Gem Size")
 		{
-			gameSetting = SettingsController.\u02B3\u02B8\u02B6\u02C1\u02B2\u02B2\u02B5\u02C1\u02B6\u02B5\u02C0;
+			gameSetting = SettingsController.gem_size;
 		}
 		return gameSetting;
 	}
@@ -328,12 +328,12 @@ public class GameplaySettingsMenu : BaseSettingMenu
 							}
 							else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Practice Start Delay")
 							{
-								this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02C0\u02BB\u02C1\u02BB\u02B8\u02BC\u02BB\u02C1\u02BA\u02C0\u02BF;
+								this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.practice_delay;
 							}
 						}
 						else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Default Search By Current Sort")
 						{
-							this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02B5\u02B9\u02BB\u02BB\u02BA\u02B3\u02B9\u02B2\u02B5\u02BD\u02BB;
+							this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.default_search_by_current_sort;
 						}
 					}
 					else if (num <= 580693481U)
@@ -344,7 +344,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 							{
 								if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Practice Star Power")
 								{
-									this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02B7\u02B2\u02BA\u02B5\u02BC\u02C0\u02B8\u02C0\u02BC\u02BD\u02B9;
+									this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.practice_sp;
 								}
 							}
 						}
@@ -378,13 +378,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 							{
 								if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Allow Duplicate Songs")
 								{
-									this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02BF\u02C0\u02B4\u02B3\u02BB\u02B8\u02BA\u02BE\u02B3\u02B5\u02B2;
+									this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.allow_duplicate_songs;
 								}
 							}
 						}
 						else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Background Video")
 						{
-							this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02B7\u02B9\u02BF\u02BD\u02B9\u02B5\u02C0\u02BA\u02BC\u02BD\u02BE;
+							this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.background_video;
 							this.\u02B9\u02B3\u02B5\u02BB\u02C1\u02B5\u02B2\u02B2\u02BE\u02BA\u02BD.\u02C0\u02B3\u02BA\u02B7\u02B4\u02C0\u02BD\u02BD\u02BA\u02C1\u02BC(true);
 							this.\u02B9\u02B3\u02B5\u02BB\u02C1\u02B5\u02B2\u02B2\u02BE\u02BA\u02BD.\u02B3\u02C1\u02BC\u02BE\u02BD\u02BB\u02B9\u02B2\u02B4\u02B9\u02BE(this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC.CurrentValue, true);
 							if (!this.\u02C0\u02BA\u02B9\u02B7\u02B8\u02B6\u02B2\u02C1\u02BF\u02BD\u02B2)
@@ -405,7 +405,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 					}
 					else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Show Hit Window")
 					{
-						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02B7\u02BD\u02BC\u02BE\u02B3\u02B2\u02C0\u02BA\u02B7\u02C1\u02B2;
+						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.show_hit_window;
 					}
 				}
 				else if (num <= 1976894744U)
@@ -416,7 +416,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 						{
 							if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Default Sort Filter")
 							{
-								this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02B9\u02BD\u02B9\u02B4\u02B9\u02BB\u02B3\u02BA\u02BF\u02C0\u02B5;
+								this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.sort_filter;
 							}
 						}
 					}
@@ -437,7 +437,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 				}
 				else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Mute Track on Miss")
 				{
-					this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02B8\u02B6\u02B5\u02BB\u02C0\u02BA\u02B7\u02B4\u02B9\u02B8\u02BA;
+					this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.mute_on_miss;
 				}
 			}
 			else if (num <= 3148303310U)
@@ -474,7 +474,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 						{
 							if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Background Image")
 							{
-								this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02B3\u02B2\u02B9\u02C0\u02B3\u02BC\u02B4\u02BD\u02B3\u02C1\u02BC;
+								this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.background_image;
 								this.\u02B9\u02B3\u02B5\u02BB\u02C1\u02B5\u02B2\u02B2\u02BE\u02BA\u02BD.\u02C0\u02B3\u02BA\u02B7\u02B4\u02C0\u02BD\u02BD\u02BA\u02C1\u02BC(true);
 								this.\u02B9\u02B3\u02B5\u02BB\u02C1\u02B5\u02B2\u02B2\u02BE\u02BA\u02BD.\u02B3\u02C1\u02BC\u02BE\u02BD\u02BB\u02B9\u02B2\u02B4\u02B9\u02BE(this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC.CurrentValue, false);
 								if (!this.\u02C0\u02BB\u02B6\u02B2\u02B5\u02BD\u02BC\u02B6\u02B9\u02B2\u02B9)
@@ -486,7 +486,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 					}
 					else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Use Song Backgrounds")
 					{
-						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02B7\u02BE\u02C1\u02BD\u02BD\u02C0\u02B4\u02BA\u02BC\u02B6\u02B9;
+						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.song_backgrounds;
 					}
 				}
 				else if (num != 3140304007U)
@@ -514,13 +514,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 						{
 							if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Show Lyrics")
 							{
-								this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02BD\u02B3\u02B7\u02B5\u02B5\u02BD\u02B5\u02B8\u02BD\u02C1\u02C1;
+								this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.enable_lyrics;
 							}
 						}
 					}
 					else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Measure Based Countdowns")
 					{
-						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02B6\u02C0\u02BC\u02BE\u02B2\u02B6\u02B8\u02B9\u02B2\u02B9\u02B2;
+						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.measure_countdown;
 					}
 				}
 				else if (num != 3502736215U)
@@ -539,7 +539,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 				}
 				else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Show Bot Score")
 				{
-					this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02B7\u02B2\u02C1\u02BA\u02BE\u02BC\u02B2\u02BB\u02BC\u02B2\u02B9;
+					this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.show_bot_score;
 				}
 			}
 			else if (num <= 3587543207U)
@@ -563,7 +563,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 				}
 				else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Song Speed")
 				{
-					this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02B3\u02B7\u02B4\u02BA\u02B3\u02B9\u02B7\u02BE\u02B2\u02B7\u02BE;
+					this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.song_speed;
 				}
 			}
 			else if (num != 3924729133U)
@@ -572,13 +572,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 				{
 					if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Show Lyrics Background")
 					{
-						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02B2\u02C1\u02BD\u02C1\u02B4\u02B4\u02B2\u02BA\u02B6\u02B8\u02B4;
+						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.enable_lyrics_bg;
 					}
 				}
 			}
 			else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Gem Size")
 			{
-				this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02B3\u02B8\u02B6\u02C1\u02B2\u02B2\u02B5\u02C1\u02B6\u02B5\u02C0;
+				this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.gem_size;
 			}
 			this.\u02BA\u02BB\u02B5\u02B6\u02B3\u02BD\u02BA\u02BC\u02B2\u02BB\u02B5();
 			return;
@@ -930,8 +930,8 @@ public class GameplaySettingsMenu : BaseSettingMenu
 	{
 		this.\u02C0\u02BB\u02B6\u02B2\u02B5\u02BD\u02BC\u02B6\u02B9\u02B2\u02B9 = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B9\u02BB\u02B2\u02B8\u02B3\u02B7\u02B3\u02B2\u02BD\u02B9\u02BF != null && GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B9\u02BB\u02B2\u02B8\u02B3\u02B7\u02B3\u02B2\u02BD\u02B9\u02BF.Length != 0;
 		this.\u02C0\u02BA\u02B9\u02B7\u02B8\u02B6\u02B2\u02C1\u02BF\u02BD\u02B2 = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02B9\u02BD\u02BC\u02B7\u02B6\u02B2\u02B2\u02BC\u02BB\u02BB != null && GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02B9\u02BD\u02BC\u02B7\u02B6\u02B2\u02B2\u02BC\u02BB\u02BB.Length != 0;
-		SettingsController.\u02B3\u02B2\u02B9\u02C0\u02B3\u02BC\u02B4\u02BD\u02B3\u02C1\u02BC.MaxValue = (this.\u02C0\u02BB\u02B6\u02B2\u02B5\u02BD\u02BC\u02B6\u02B9\u02B2\u02B9 ? (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B9\u02BB\u02B2\u02B8\u02B3\u02B7\u02B3\u02B2\u02BD\u02B9\u02BF.Length - 1) : (-2));
-		SettingsController.\u02B7\u02B9\u02BF\u02BD\u02B9\u02B5\u02C0\u02BA\u02BC\u02BD\u02BE.MaxValue = (this.\u02C0\u02BA\u02B9\u02B7\u02B8\u02B6\u02B2\u02C1\u02BF\u02BD\u02B2 ? (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02B9\u02BD\u02BC\u02B7\u02B6\u02B2\u02B2\u02BC\u02BB\u02BB.Length - 1) : (-2));
+		SettingsController.background_image.MaxValue = (this.\u02C0\u02BB\u02B6\u02B2\u02B5\u02BD\u02BC\u02B6\u02B9\u02B2\u02B9 ? (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B9\u02BB\u02B2\u02B8\u02B3\u02B7\u02B3\u02B2\u02BD\u02B9\u02BF.Length - 1) : (-2));
+		SettingsController.background_video.MaxValue = (this.\u02C0\u02BA\u02B9\u02B7\u02B8\u02B6\u02B2\u02C1\u02BF\u02BD\u02B2 ? (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02B9\u02BD\u02BC\u02B7\u02B6\u02B2\u02B2\u02BC\u02BB\u02BB.Length - 1) : (-2));
 	}
 
 	protected virtual void \u02BB\u02B7\u02C0\u02B3\u02C1\u02BD\u02B9\u02B2\u02B4\u02BE\u02B6()
@@ -1331,12 +1331,12 @@ public class GameplaySettingsMenu : BaseSettingMenu
 						}
 						else if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "ResultRow")
 						{
-							gameSetting = SettingsController.\u02C0\u02BB\u02C1\u02BB\u02B8\u02BC\u02BB\u02C1\u02BA\u02C0\u02BF;
+							gameSetting = SettingsController.practice_delay;
 						}
 					}
 					else if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "%c")
 					{
-						gameSetting = SettingsController.\u02B5\u02B9\u02BB\u02BB\u02BA\u02B3\u02B9\u02B2\u02B5\u02BD\u02BB;
+						gameSetting = SettingsController.default_search_by_current_sort;
 					}
 				}
 				else if (num <= 124U)
@@ -1347,7 +1347,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 						{
 							if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Input Device")
 							{
-								gameSetting = SettingsController.\u02B7\u02B2\u02BA\u02B5\u02BC\u02C0\u02B8\u02C0\u02BC\u02BD\u02B9;
+								gameSetting = SettingsController.practice_sp;
 							}
 						}
 					}
@@ -1381,13 +1381,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 						{
 							if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Play Count")
 							{
-								gameSetting = SettingsController.\u02BF\u02C0\u02B4\u02B3\u02BB\u02B8\u02BA\u02BE\u02B3\u02B5\u02B2;
+								gameSetting = SettingsController.allow_duplicate_songs;
 							}
 						}
 					}
 					else if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Guitar")
 					{
-						gameSetting = SettingsController.\u02B7\u02B9\u02BF\u02BD\u02B9\u02B5\u02C0\u02BA\u02BC\u02BD\u02BE;
+						gameSetting = SettingsController.background_video;
 					}
 				}
 				else if (num != 4294967100U)
@@ -1402,7 +1402,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 				}
 				else if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Hit Percent")
 				{
-					gameSetting = SettingsController.\u02B7\u02BD\u02BC\u02BE\u02B3\u02B2\u02C0\u02BA\u02B7\u02C1\u02B2;
+					gameSetting = SettingsController.show_hit_window;
 				}
 			}
 			else if (num <= 11U)
@@ -1413,7 +1413,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 					{
 						if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "songs.txt")
 						{
-							gameSetting = SettingsController.\u02B9\u02BD\u02B9\u02B4\u02B9\u02BB\u02B3\u02BA\u02BF\u02C0\u02B5;
+							gameSetting = SettingsController.sort_filter;
 						}
 					}
 				}
@@ -1434,7 +1434,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 			}
 			else if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Gameplay")
 			{
-				gameSetting = SettingsController.\u02B8\u02B6\u02B5\u02BB\u02C0\u02BA\u02B7\u02B4\u02B9\u02B8\u02BA;
+				gameSetting = SettingsController.mute_on_miss;
 			}
 		}
 		else if (num <= 44U)
@@ -1471,13 +1471,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 					{
 						if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Show FPS")
 						{
-							gameSetting = SettingsController.\u02B3\u02B2\u02B9\u02C0\u02B3\u02BC\u02B4\u02BD\u02B3\u02C1\u02BC;
+							gameSetting = SettingsController.background_image;
 						}
 					}
 				}
 				else if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "No")
 				{
-					gameSetting = SettingsController.\u02B7\u02BE\u02C1\u02BD\u02BD\u02C0\u02B4\u02BA\u02BC\u02B6\u02B9;
+					gameSetting = SettingsController.song_backgrounds;
 				}
 			}
 			else if (num != 4294967253U)
@@ -1504,13 +1504,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 					{
 						if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Continue")
 						{
-							gameSetting = SettingsController.\u02BD\u02B3\u02B7\u02B5\u02B5\u02BD\u02B5\u02B8\u02BD\u02C1\u02C1;
+							gameSetting = SettingsController.enable_lyrics;
 						}
 					}
 				}
 				else if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Player")
 				{
-					gameSetting = SettingsController.\u02B6\u02C0\u02BC\u02BE\u02B2\u02B6\u02B8\u02B9\u02B2\u02B9\u02B2;
+					gameSetting = SettingsController.measure_countdown;
 				}
 			}
 			else if (num != 9U)
@@ -1524,7 +1524,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 			}
 			else if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Velocity")
 			{
-				gameSetting = SettingsController.\u02B7\u02B2\u02C1\u02BA\u02BE\u02BC\u02B2\u02BB\u02BC\u02B2\u02B9;
+				gameSetting = SettingsController.show_bot_score;
 			}
 		}
 		else if (num <= 4294967204U)
@@ -1540,7 +1540,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 			}
 			else if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "hasProDrums")
 			{
-				gameSetting = SettingsController.\u02B3\u02B7\u02B4\u02BA\u02B3\u02B9\u02B7\u02BE\u02B2\u02B7\u02BE;
+				gameSetting = SettingsController.song_speed;
 			}
 		}
 		else if (num != 4294967177U)
@@ -1549,13 +1549,13 @@ public class GameplaySettingsMenu : BaseSettingMenu
 			{
 				if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Error reading metadata: ")
 				{
-					gameSetting = SettingsController.\u02B2\u02C1\u02BD\u02C1\u02B4\u02B4\u02B2\u02BA\u02B6\u02B8\u02B4;
+					gameSetting = SettingsController.enable_lyrics_bg;
 				}
 			}
 		}
 		else if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Default Search By Current Sort")
 		{
-			gameSetting = SettingsController.\u02B3\u02B8\u02B6\u02C1\u02B2\u02B2\u02B5\u02C1\u02B6\u02B5\u02C0;
+			gameSetting = SettingsController.gem_size;
 		}
 		return gameSetting;
 	}

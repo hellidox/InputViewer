@@ -9,7 +9,7 @@ public class VisibleHitWindow : MonoBehaviour
 		this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.parent.GetComponent<BasePlayer>();
 		this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4 = this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerStuff.playerInfo.noteSpeed.CurrentValue;
 		this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.gameManager;
-		if (!SettingsController.\u02B7\u02BD\u02BC\u02BE\u02B3\u02B2\u02C0\u02BA\u02B7\u02C1\u02B2)
+		if (!SettingsController.show_hit_window)
 		{
 			global::UnityEngine.Object.Destroy(base.gameObject);
 			return;
@@ -24,7 +24,7 @@ public class VisibleHitWindow : MonoBehaviour
 		this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.parent.GetComponent<BasePlayer>();
 		this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4 = this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerStuff.playerInfo.noteSpeed.CurrentValue;
 		this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.gameManager;
-		if (!SettingsController.\u02B7\u02BD\u02BC\u02BE\u02B3\u02B2\u02C0\u02BA\u02B7\u02C1\u02B2)
+		if (!SettingsController.show_hit_window)
 		{
 			global::UnityEngine.Object.Destroy(base.gameObject);
 			return;
@@ -39,7 +39,7 @@ public class VisibleHitWindow : MonoBehaviour
 		this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.parent.GetComponent<BasePlayer>();
 		this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4 = this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerStuff.playerInfo.noteSpeed.CurrentValue;
 		this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.gameManager;
-		if (!SettingsController.\u02B7\u02BD\u02BC\u02BE\u02B3\u02B2\u02C0\u02BA\u02B7\u02C1\u02B2)
+		if (!SettingsController.show_hit_window)
 		{
 			global::UnityEngine.Object.Destroy(base.gameObject);
 			return;
@@ -61,7 +61,7 @@ public class VisibleHitWindow : MonoBehaviour
 		this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.parent.GetComponent<BasePlayer>();
 		this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4 = this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerStuff.playerInfo.noteSpeed.CurrentValue;
 		this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.gameManager;
-		if (!SettingsController.\u02B7\u02BD\u02BC\u02BE\u02B3\u02B2\u02C0\u02BA\u02B7\u02C1\u02B2)
+		if (!SettingsController.show_hit_window)
 		{
 			global::UnityEngine.Object.Destroy(base.gameObject);
 			return;
@@ -90,7 +90,7 @@ public class VisibleHitWindow : MonoBehaviour
 		this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.parent.GetComponent<BasePlayer>();
 		this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4 = this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerStuff.playerInfo.noteSpeed.CurrentValue;
 		this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.gameManager;
-		if (!SettingsController.\u02B7\u02BD\u02BC\u02BE\u02B3\u02B2\u02C0\u02BA\u02B7\u02C1\u02B2)
+		if (!SettingsController.show_hit_window)
 		{
 			global::UnityEngine.Object.Destroy(base.gameObject);
 			return;
@@ -105,7 +105,7 @@ public class VisibleHitWindow : MonoBehaviour
 		this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.parent.GetComponent<BasePlayer>();
 		this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4 = this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerStuff.playerInfo.noteSpeed.CurrentValue;
 		this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.gameManager;
-		if (!SettingsController.\u02B7\u02BD\u02BC\u02BE\u02B3\u02B2\u02C0\u02BA\u02B7\u02C1\u02B2)
+		if (!SettingsController.show_hit_window)
 		{
 			global::UnityEngine.Object.Destroy(base.gameObject);
 			return;
@@ -120,7 +120,7 @@ public class VisibleHitWindow : MonoBehaviour
 		this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.parent.GetComponent<BasePlayer>();
 		this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4 = this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerStuff.playerInfo.noteSpeed.CurrentValue;
 		this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.gameManager;
-		if (!SettingsController.\u02B7\u02BD\u02BC\u02BE\u02B3\u02B2\u02C0\u02BA\u02B7\u02C1\u02B2)
+		if (!SettingsController.show_hit_window)
 		{
 			global::UnityEngine.Object.Destroy(base.gameObject);
 			return;
@@ -135,7 +135,7 @@ public class VisibleHitWindow : MonoBehaviour
 		this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.parent.GetComponent<BasePlayer>();
 		this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4 = this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerStuff.playerInfo.noteSpeed.CurrentValue;
 		this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.gameManager;
-		if (!SettingsController.\u02B7\u02BD\u02BC\u02BE\u02B3\u02B2\u02C0\u02BA\u02B7\u02C1\u02B2)
+		if (!SettingsController.show_hit_window)
 		{
 			global::UnityEngine.Object.Destroy(base.gameObject);
 			return;
@@ -150,7 +150,7 @@ public class VisibleHitWindow : MonoBehaviour
 		this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.parent.GetComponent<BasePlayer>();
 		this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4 = this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerStuff.playerInfo.noteSpeed.CurrentValue;
 		this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.gameManager;
-		if (!SettingsController.\u02B7\u02BD\u02BC\u02BE\u02B3\u02B2\u02C0\u02BA\u02B7\u02C1\u02B2)
+		if (!SettingsController.show_hit_window)
 		{
 			global::UnityEngine.Object.Destroy(base.gameObject);
 			return;
@@ -165,7 +165,7 @@ public class VisibleHitWindow : MonoBehaviour
 		this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.parent.GetComponent<BasePlayer>();
 		this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4 = this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerStuff.playerInfo.noteSpeed.CurrentValue;
 		this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.gameManager;
-		if (!SettingsController.\u02B7\u02BD\u02BC\u02BE\u02B3\u02B2\u02C0\u02BA\u02B7\u02C1\u02B2)
+		if (!SettingsController.show_hit_window)
 		{
 			global::UnityEngine.Object.Destroy(base.gameObject);
 			return;
@@ -194,7 +194,7 @@ public class VisibleHitWindow : MonoBehaviour
 		this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.parent.GetComponent<BasePlayer>();
 		this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4 = this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerStuff.playerInfo.noteSpeed.CurrentValue;
 		this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.gameManager;
-		if (!SettingsController.\u02B7\u02BD\u02BC\u02BE\u02B3\u02B2\u02C0\u02BA\u02B7\u02C1\u02B2)
+		if (!SettingsController.show_hit_window)
 		{
 			global::UnityEngine.Object.Destroy(base.gameObject);
 			return;
@@ -216,7 +216,7 @@ public class VisibleHitWindow : MonoBehaviour
 		this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.parent.GetComponent<BasePlayer>();
 		this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4 = this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerStuff.playerInfo.noteSpeed.CurrentValue;
 		this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.gameManager;
-		if (!SettingsController.\u02B7\u02BD\u02BC\u02BE\u02B3\u02B2\u02C0\u02BA\u02B7\u02C1\u02B2)
+		if (!SettingsController.show_hit_window)
 		{
 			global::UnityEngine.Object.Destroy(base.gameObject);
 			return;
@@ -238,7 +238,7 @@ public class VisibleHitWindow : MonoBehaviour
 		this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = this.\u02B3\u02B6\u02BC\u02B8\u02B3\u02B9\u02B7\u02B6\u02BA\u02BF\u02BB.parent.GetComponent<BasePlayer>();
 		this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4 = this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerStuff.playerInfo.noteSpeed.CurrentValue;
 		this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.gameManager;
-		if (!SettingsController.\u02B7\u02BD\u02BC\u02BE\u02B3\u02B2\u02C0\u02BA\u02B7\u02C1\u02B2)
+		if (!SettingsController.show_hit_window)
 		{
 			global::UnityEngine.Object.Destroy(base.gameObject);
 			return;

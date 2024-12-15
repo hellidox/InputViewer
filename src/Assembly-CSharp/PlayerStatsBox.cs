@@ -16,7 +16,7 @@ public class PlayerStatsBox : BaseMenu
 		{
 			if (this.\u02B9\u02BA\u02B9\u02C1\u02B6\u02BB\u02C0\u02B3\u02B7\u02B8\u02B2 > 0)
 			{
-				GameAudioManager.PlaySound(SoundID.UIScrollUp);
+				GameAudioManager.PlaySound(SoundEffectsChannel.UIScrollUp);
 				this.\u02B9\u02BA\u02B9\u02C1\u02B6\u02BB\u02C0\u02B3\u02B7\u02B8\u02B2--;
 				this.\u02B7\u02B6\u02B7\u02C1\u02B7\u02BB\u02BB\u02B8\u02B6\u02B2\u02B9();
 			}
@@ -493,7 +493,7 @@ public class PlayerStatsBox : BaseMenu
 		if (this.\u02B2\u02BF\u02BD\u02C0\u02B3\u02BD\u02BA\u02B5\u02BF\u02B8\u02B3)
 		{
 			this.\u02B9\u02B7\u02B3\u02BD\u02B3\u02B6\u02B9\u02B3\u02BF\u02B8\u02B7();
-			BassAudioManager.Instance.PlaySoundExternal((SoundID)(-104));
+			BassAudioManager.Instance.PlaySound((SoundEffectsChannel)(-104));
 		}
 		else if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BC\u02B6\u02BA\u02BF\u02B2\u02C1\u02B3\u02B5\u02B2\u02B5\u02B6)
 		{
@@ -634,7 +634,7 @@ public class PlayerStatsBox : BaseMenu
 		if (this.\u02B2\u02BF\u02BD\u02C0\u02B3\u02BD\u02BA\u02B5\u02BF\u02B8\u02B3)
 		{
 			this.\u02B9\u02B7\u02B3\u02BD\u02B3\u02B6\u02B9\u02B3\u02BF\u02B8\u02B7();
-			BassAudioManager.Instance.PlaySoundExternal((SoundID)77);
+			BassAudioManager.Instance.PlaySound((SoundEffectsChannel)77);
 		}
 		else if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BC\u02B6\u02BA\u02BF\u02B2\u02C1\u02B3\u02B5\u02B2\u02B5\u02B6)
 		{
@@ -663,7 +663,7 @@ public class PlayerStatsBox : BaseMenu
 		if (this.\u02B2\u02BF\u02BD\u02C0\u02B3\u02BD\u02BA\u02B5\u02BF\u02B8\u02B3)
 		{
 			this.\u02B9\u02B7\u02B3\u02BD\u02B3\u02B6\u02B9\u02B3\u02BF\u02B8\u02B7();
-			BassAudioManager.Instance.PlaySoundExternal(SoundID.UICancel);
+			BassAudioManager.Instance.PlaySound(SoundEffectsChannel.UICancel);
 		}
 		else if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BC\u02B6\u02BA\u02BF\u02B2\u02C1\u02B3\u02B5\u02B2\u02B5\u02B6)
 		{
@@ -685,7 +685,7 @@ public class PlayerStatsBox : BaseMenu
 		{
 			if (this.\u02B9\u02BA\u02B9\u02C1\u02B6\u02BB\u02C0\u02B3\u02B7\u02B8\u02B2 > 0)
 			{
-				GameAudioManager.PlaySound((SoundID)(-116));
+				GameAudioManager.PlaySound((SoundEffectsChannel)(-116));
 				this.\u02B9\u02BA\u02B9\u02C1\u02B6\u02BB\u02C0\u02B3\u02B7\u02B8\u02B2--;
 				this.\u02B7\u02B6\u02B7\u02C1\u02B7\u02BB\u02BB\u02B8\u02B6\u02B2\u02B9();
 			}
@@ -771,7 +771,7 @@ public class PlayerStatsBox : BaseMenu
 		{
 			if (this.\u02B9\u02BA\u02B9\u02C1\u02B6\u02BB\u02C0\u02B3\u02B7\u02B8\u02B2 < this.\u02BC\u02BA\u02BC\u02B6\u02BA\u02B5\u02B6\u02BB\u02C1\u02BF\u02B7)
 			{
-				GameAudioManager.PlaySound(SoundID.UIScrollDown);
+				GameAudioManager.PlaySound(SoundEffectsChannel.UIScrollDown);
 				this.\u02B9\u02BA\u02B9\u02C1\u02B6\u02BB\u02C0\u02B3\u02B7\u02B8\u02B2++;
 				this.\u02B7\u02B6\u02B7\u02C1\u02B7\u02BB\u02BB\u02B8\u02B6\u02B2\u02B9();
 			}
@@ -785,7 +785,7 @@ public class PlayerStatsBox : BaseMenu
 				this.\u02B6\u02B3\u02BF\u02BB\u02B5\u02BF\u02B5\u02C0\u02BB\u02B9\u02BD();
 				if (this.\u02C0\u02B4\u02BC\u02BA\u02B4\u02C1\u02BF\u02B3\u02B7\u02B6\u02B6 > 0 && this.\u02C0\u02B4\u02BC\u02BA\u02B4\u02C1\u02BF\u02B3\u02B7\u02B6\u02B6 <= this.\u02B6\u02B2\u02BF\u02B6\u02B8\u02BD\u02C1\u02BB\u02BC\u02B3\u02B4)
 				{
-					GameAudioManager.PlaySound(SoundID.UIScrollUp);
+					GameAudioManager.PlaySound(SoundEffectsChannel.UIScrollUp);
 				}
 			}
 			this.\u02B6\u02C1\u02BF\u02C0\u02B8\u02BF\u02BE\u02BF\u02B8\u02B2\u02B8();

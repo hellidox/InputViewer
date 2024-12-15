@@ -12,8 +12,8 @@ public class LyricDisplay : MonoBehaviour
 	public void \u02B9\u02BF\u02BF\u02B8\u02B4\u02B8\u02BA\u02B8\u02B9\u02B6\u02BC(GameManager \u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD)
 	{
 		this.Reset();
-		this.\u02BC\u02B8\u02C0\u02B9\u02B2\u02B3\u02B4\u02BC\u02BC\u02BF\u02B4 = SettingsController.\u02B2\u02C1\u02BD\u02C1\u02B4\u02B4\u02B2\u02BA\u02B6\u02B8\u02B4;
-		if (!SettingsController.\u02BD\u02B3\u02B7\u02B5\u02B5\u02BD\u02B5\u02B8\u02BD\u02C1\u02C1)
+		this.\u02BC\u02B8\u02C0\u02B9\u02B2\u02B3\u02B4\u02BC\u02BC\u02BF\u02B4 = SettingsController.enable_lyrics_bg;
+		if (!SettingsController.enable_lyrics)
 		{
 			return;
 		}
@@ -1135,8 +1135,8 @@ public class LyricDisplay : MonoBehaviour
 	public void \u02B7\u02B8\u02B2\u02B6\u02BE\u02B5\u02B9\u02C0\u02B2\u02BB\u02B7(GameManager \u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD)
 	{
 		this.Reset();
-		this.\u02BC\u02B8\u02C0\u02B9\u02B2\u02B3\u02B4\u02BC\u02BC\u02BF\u02B4 = SettingsController.\u02B2\u02C1\u02BD\u02C1\u02B4\u02B4\u02B2\u02BA\u02B6\u02B8\u02B4;
-		if (!SettingsController.\u02BD\u02B3\u02B7\u02B5\u02B5\u02BD\u02B5\u02B8\u02BD\u02C1\u02C1)
+		this.\u02BC\u02B8\u02C0\u02B9\u02B2\u02B3\u02B4\u02BC\u02BC\u02BF\u02B4 = SettingsController.enable_lyrics_bg;
+		if (!SettingsController.enable_lyrics)
 		{
 			return;
 		}

@@ -68,19 +68,19 @@ public static class SettingsController
 		};
 		SettingsController.volume_Stems[4] = (SettingsController.volume_Stems[5] = SettingsController.volume_Stems[3]);
 		SettingsController.volume_Stems[7] = (SettingsController.volume_Stems[8] = (SettingsController.volume_Stems[9] = (SettingsController.volume_Stems[10] = SettingsController.volume_Stems[6])));
-		SettingsController.\u02C1\u02C1\u02B3\u02BD\u02B7\u02C1\u02B9\u02BB\u02B5\u02B4\u02BB = new GameSetting(sectionKey4, "sounds", 50, 0, 100, 5);
-		SettingsController.\u02C1\u02BD\u02C0\u02B7\u02B3\u02C0\u02B7\u02B2\u02BF\u02BC\u02B7 = new GameSetting(sectionKey4, "freestyle_drums", 100, 0, 100, 5);
-		SettingsController.\u02B3\u02B2\u02B5\u02B8\u02B8\u02BD\u02BF\u02B6\u02B3\u02C1\u02BF = new GameSetting(sectionKey4, "menu_volume", 50, 0, 100, 5);
-		SettingsController.\u02B8\u02B7\u02BF\u02B4\u02B3\u02BB\u02B6\u02BB\u02B7\u02B2\u02BD = new GameSetting(sectionKey4, "preview_volume", 50, 0, 100, 5);
-		SettingsController.\u02B8\u02C1\u02B8\u02BC\u02B9\u02B2\u02BB\u02BB\u02B8\u02BD\u02B5 = new GameSetting(sectionKey4, "master_volume", 50, 0, 100, 5);
-		SettingsController.\u02B9\u02B3\u02BD\u02B5\u02BB\u02C1\u02BE\u02B2\u02B3\u02B3\u02BB = new GameSetting(sectionKey4, "mute_volume", 50, 0, 100, 5);
-		SettingsController.\u02B8\u02BD\u02BF\u02B7\u02BF\u02B7\u02BC\u02C1\u02B2\u02C0\u02BB = new GameSetting(sectionKey4, "device", -1, -1, 100, 0);
+		SettingsController.sounds = new GameSetting(sectionKey4, "sounds", 50, 0, 100, 5);
+		SettingsController.freestyle_drums = new GameSetting(sectionKey4, "freestyle_drums", 100, 0, 100, 5);
+		SettingsController.menu_volume = new GameSetting(sectionKey4, "menu_volume", 50, 0, 100, 5);
+		SettingsController.preview_volume = new GameSetting(sectionKey4, "preview_volume", 50, 0, 100, 5);
+		SettingsController.master_volume = new GameSetting(sectionKey4, "master_volume", 50, 0, 100, 5);
+		SettingsController.mute_volume = new GameSetting(sectionKey4, "mute_volume", 50, 0, 100, 5);
+		SettingsController.device = new GameSetting(sectionKey4, "device", -1, -1, 100, 0);
 		SettingsController.audioBackend = new GameSetting(sectionKey4, "backend", 0, 0, 1, 1);
-		SettingsController.\u02BD\u02BA\u02B3\u02B7\u02C0\u02C1\u02BB\u02B4\u02B9\u02BB\u02B3 = new GameSetting(sectionKey4, "latency_mode", 1, 0, 2, 1);
-		SettingsController.\u02BF\u02BD\u02B2\u02BE\u02BC\u02B5\u02B6\u02B5\u02B6\u02B9\u02BD = new GameSetting(sectionKey5, "whammy_sfx", true);
-		SettingsController.\u02B3\u02B2\u02B9\u02C0\u02B3\u02BC\u02B4\u02BD\u02B3\u02C1\u02BC = new GameSetting(sectionKey6, "background_image", -2, -2, int.MaxValue, 1);
-		SettingsController.\u02B7\u02B9\u02BF\u02BD\u02B9\u02B5\u02C0\u02BA\u02BC\u02BD\u02BE = new GameSetting(sectionKey6, "background_video", -2, -2, int.MaxValue, 1);
-		SettingsController.\u02B7\u02BE\u02C1\u02BD\u02BD\u02C0\u02B4\u02BA\u02BC\u02B6\u02B9 = new GameSetting(sectionKey6, "song_backgrounds", false);
+		SettingsController.latency_mode = new GameSetting(sectionKey4, "latency_mode", 1, 0, 2, 1);
+		SettingsController.whammy_sfx = new GameSetting(sectionKey5, "whammy_sfx", true);
+		SettingsController.background_image = new GameSetting(sectionKey6, "background_image", -2, -2, int.MaxValue, 1);
+		SettingsController.background_video = new GameSetting(sectionKey6, "background_video", -2, -2, int.MaxValue, 1);
+		SettingsController.song_backgrounds = new GameSetting(sectionKey6, "song_backgrounds", false);
 		SettingsController.\u02BE\u02B6\u02BA\u02C0\u02B9\u02B6\u02B2\u02BB\u02B3\u02B3\u02BA = new GameSetting(sectionKey6, "song_videos", false);
 		SettingsController.\u02C1\u02BF\u02C0\u02BF\u02B8\u02B8\u02C0\u02C0\u02B3\u02B3\u02BB = new GameSetting(sectionKey6, "song_highway", false);
 		SettingsController.\u02BC\u02BA\u02BE\u02B9\u02B5\u02BD\u02C1\u02B8\u02B7\u02C0\u02B8 = new GameSetting(sectionKey7, "poll_rate", 2000, 2000, 2000, 1);
@@ -88,40 +88,40 @@ public static class SettingsController
 		SettingsController.\u02BB\u02C0\u02B7\u02B8\u02B3\u02BE\u02B7\u02BB\u02BA\u02B8\u02BA = new GameSetting(sectionKey7, "no_fail", true);
 		SettingsController.\u02B3\u02BD\u02BB\u02B7\u02B5\u02B7\u02BD\u02B4\u02B4\u02BD\u02B3 = new GameSetting(sectionKey7, "pause_on_focus_lost", true);
 		SettingsController.\u02BF\u02BF\u02BB\u02BF\u02B2\u02BE\u02B5\u02BD\u02C0\u02B4\u02B9 = new GameSetting(sectionKey7, "highway_shake", true);
-		SettingsController.\u02B9\u02BD\u02B9\u02B4\u02B9\u02BB\u02B3\u02BA\u02BF\u02C0\u02B5 = new GameSetting(sectionKey7, "sort_filter", 0, 0, \u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B4\u02B2\u02BB\u02B2\u02BD\u02BA\u02C0\u02B2\u02B5\u02BC\u02B8.Length - 1, 1);
-		SettingsController.\u02B3\u02B8\u02B6\u02C1\u02B2\u02B2\u02B5\u02C1\u02B6\u02B5\u02C0 = new GameSetting(sectionKey7, "gem_size", 100, -300, 300, 5);
-		SettingsController.\u02BE\u02B7\u02B8\u02B7\u02B3\u02B5\u02BF\u02BD\u02B6\u02B2\u02B5 = new GameSetting(sectionKey7, "full_playlist", false);
-		SettingsController.\u02BF\u02C0\u02B4\u02B3\u02BB\u02B8\u02BA\u02BE\u02B3\u02B5\u02B2 = new GameSetting(sectionKey7, "allow_duplicate_songs", false);
-		SettingsController.\u02B6\u02BB\u02B2\u02B6\u02B7\u02BF\u02B6\u02B8\u02B8\u02B2\u02B2 = new GameSetting(sectionKey7, "drum_pad_scrolling", true);
-		SettingsController.\u02B8\u02B6\u02B5\u02BB\u02C0\u02BA\u02B7\u02B4\u02B9\u02B8\u02BA = new GameSetting(sectionKey7, "mute_on_miss", true);
-		SettingsController.\u02B7\u02BD\u02BC\u02BE\u02B3\u02B2\u02C0\u02BA\u02B7\u02C1\u02B2 = new GameSetting(sectionKey7, "show_hit_window", false);
-		SettingsController.\u02B7\u02B2\u02C1\u02BA\u02BE\u02BC\u02B2\u02BB\u02BC\u02B2\u02B9 = new GameSetting(sectionKey7, "show_bot_score", true);
-		SettingsController.\u02BD\u02B3\u02B7\u02B5\u02B5\u02BD\u02B5\u02B8\u02BD\u02C1\u02C1 = new GameSetting(sectionKey7, "enable_lyrics", true);
-		SettingsController.\u02B2\u02C1\u02BD\u02C1\u02B4\u02B4\u02B2\u02BA\u02B6\u02B8\u02B4 = new GameSetting(sectionKey7, "enable_lyrics_bg", true);
-		SettingsController.\u02BD\u02C1\u02B5\u02B3\u02BA\u02BC\u02B9\u02B8\u02B7\u02B8\u02C0 = new GameSetting(sectionKey7, "enable_cursor", true);
-		SettingsController.\u02B7\u02B3\u02BF\u02BF\u02B4\u02B8\u02C0\u02BB\u02BB\u02BF\u02BE = new GameSetting(sectionKey7, "language", 0, 0, array.Length - 1, 1);
-		SettingsController.\u02B3\u02B7\u02B4\u02BA\u02B3\u02B9\u02B7\u02BE\u02B2\u02B7\u02BE = new GameSetting(Settings.NoSection, "song_speed", 100, 10, 5000, 5);
-		SettingsController.\u02B8\u02BB\u02B9\u02B5\u02B3\u02B7\u02B9\u02BE\u02BC\u02BA\u02B9 = new StringGameSetting(sectionKey7, "cache_file", "songcache.bin");
-		SettingsController.\u02B7\u02B2\u02BA\u02B5\u02BC\u02C0\u02B8\u02C0\u02BC\u02BD\u02B9 = new GameSetting(sectionKey7, "practice_sp", true);
-		SettingsController.\u02C0\u02BB\u02C1\u02BB\u02B8\u02BC\u02BB\u02C1\u02BA\u02C0\u02BF = new GameSetting(sectionKey7, "practice_delay", 2000, 500, 5000, 100);
-		SettingsController.\u02B6\u02C0\u02BC\u02BE\u02B2\u02B6\u02B8\u02B9\u02B2\u02B9\u02B2 = new GameSetting(sectionKey7, "measure_countdown", true);
-		SettingsController.\u02B8\u02B5\u02BB\u02BB\u02BF\u02BD\u02B9\u02B9\u02B7\u02B2\u02C0 = new GameSetting(sectionKey7, "auto_screenshot", false);
-		SettingsController.\u02B5\u02B9\u02BB\u02BB\u02BA\u02B3\u02B9\u02B2\u02B5\u02BD\u02BB = new GameSetting(sectionKey7, "default_search_by_current_sort", false);
-		SettingsController.\u02B3\u02B6\u02BB\u02BF\u02BD\u02BF\u02C0\u02B3\u02C1\u02BB\u02B8 = new GameSetting(sectionKey11, "sustaindropleniency", 5, 0, 100, 1);
-		SettingsController.\u02B8\u02C1\u02B3\u02C0\u02B7\u02B6\u02BE\u02B4\u02B4\u02BF\u02B3 = new GameSetting(sectionKey8, "showremotenames", true);
-		SettingsController.\u02BE\u02B2\u02B6\u02B7\u02B3\u02BB\u02B2\u02B8\u02BC\u02B7\u02BF = new GameSetting(sectionKey8, "highwayplacement", true);
-		SettingsController.\u02BA\u02BE\u02B7\u02B7\u02BE\u02B4\u02BE\u02C1\u02B6\u02BD\u02B7 = new GameSetting(sectionKey8, "only_show_local_players", false);
-		SettingsController.\u02BB\u02B7\u02BC\u02C1\u02B5\u02B5\u02B3\u02B4\u02BF\u02B9\u02BB = new GameSetting(sectionKey8, "force_remote_righty", false);
+		SettingsController.sort_filter = new GameSetting(sectionKey7, "sort_filter", 0, 0, \u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02B4\u02B2\u02BB\u02B2\u02BD\u02BA\u02C0\u02B2\u02B5\u02BC\u02B8.Length - 1, 1);
+		SettingsController.gem_size = new GameSetting(sectionKey7, "gem_size", 100, -300, 300, 5);
+		SettingsController.full_playlist = new GameSetting(sectionKey7, "full_playlist", false);
+		SettingsController.allow_duplicate_songs = new GameSetting(sectionKey7, "allow_duplicate_songs", false);
+		SettingsController.drum_pad_scrolling = new GameSetting(sectionKey7, "drum_pad_scrolling", true);
+		SettingsController.mute_on_miss = new GameSetting(sectionKey7, "mute_on_miss", true);
+		SettingsController.show_hit_window = new GameSetting(sectionKey7, "show_hit_window", false);
+		SettingsController.show_bot_score = new GameSetting(sectionKey7, "show_bot_score", true);
+		SettingsController.enable_lyrics = new GameSetting(sectionKey7, "enable_lyrics", true);
+		SettingsController.enable_lyrics_bg = new GameSetting(sectionKey7, "enable_lyrics_bg", true);
+		SettingsController.enable_cursor = new GameSetting(sectionKey7, "enable_cursor", true);
+		SettingsController.language = new GameSetting(sectionKey7, "language", 0, 0, array.Length - 1, 1);
+		SettingsController.song_speed = new GameSetting(Settings.NoSection, "song_speed", 100, 10, 5000, 5);
+		SettingsController.cache_file = new StringGameSetting(sectionKey7, "cache_file", "songcache.bin");
+		SettingsController.practice_sp = new GameSetting(sectionKey7, "practice_sp", true);
+		SettingsController.practice_delay = new GameSetting(sectionKey7, "practice_delay", 2000, 500, 5000, 100);
+		SettingsController.measure_countdown = new GameSetting(sectionKey7, "measure_countdown", true);
+		SettingsController.auto_screenshot = new GameSetting(sectionKey7, "auto_screenshot", false);
+		SettingsController.default_search_by_current_sort = new GameSetting(sectionKey7, "default_search_by_current_sort", false);
+		SettingsController.sustaindropleniency = new GameSetting(sectionKey11, "sustaindropleniency", 5, 0, 100, 1);
+		SettingsController.showremotenames = new GameSetting(sectionKey8, "showremotenames", true);
+		SettingsController.highwayplacement = new GameSetting(sectionKey8, "highwayplacement", true);
+		SettingsController.only_show_local_players = new GameSetting(sectionKey8, "only_show_local_players", false);
+		SettingsController.force_remote_righty = new GameSetting(sectionKey8, "force_remote_righty", false);
 		SettingsController.\u02B2\u02BB\u02BF\u02BC\u02B9\u02BF\u02B2\u02BA\u02B4\u02BC\u02B4 = new StringArrayGameSetting(sectionKey9, "path", new string[1]);
 		SettingsController.\u02B4\u02B3\u02B3\u02B7\u02C1\u02BE\u02BC\u02B9\u02B4\u02BC\u02BB = new StringArrayGameSetting(sectionKey10, "server", new string[1]);
-		LanguageManager.instance.\u02B8\u02C0\u02B9\u02B9\u02B4\u02B7\u02BD\u02BE\u02B7\u02BC\u02B2(array[SettingsController.\u02B7\u02B3\u02BF\u02BF\u02B4\u02B8\u02C0\u02BB\u02BB\u02BF\u02BE.CurrentValue]);
+		LanguageManager.instance.\u02B8\u02C0\u02B9\u02B9\u02B4\u02B7\u02BD\u02BE\u02B7\u02BC\u02B2(array[SettingsController.language.CurrentValue]);
 	}
 
 	public static bool \u02BB\u02B7\u02BA\u02BC\u02B2\u02B8\u02B9\u02BC\u02C0\u02B5\u02B6;
 
-	public static GameSetting \u02B3\u02B8\u02B6\u02C1\u02B2\u02B2\u02B5\u02C1\u02B6\u02B5\u02C0;
+	public static GameSetting gem_size;
 
-	public static GameSetting \u02B3\u02B7\u02B4\u02BA\u02B3\u02B9\u02B7\u02BE\u02B2\u02B7\u02BE;
+	public static GameSetting song_speed;
 
 	public static GameSetting \u02B7\u02B2\u02BB\u02BA\u02BD\u02B3\u02BA\u02BA\u02BE\u02B9\u02B4;
 
@@ -131,37 +131,37 @@ public static class SettingsController
 
 	public static GameSetting \u02BC\u02BA\u02BE\u02BB\u02B7\u02BE\u02BD\u02BE\u02BC\u02B2\u02B7;
 
-	public static GameSetting \u02B9\u02BD\u02B9\u02B4\u02B9\u02BB\u02B3\u02BA\u02BF\u02C0\u02B5;
+	public static GameSetting sort_filter;
 
-	public static GameSetting \u02B8\u02BD\u02BF\u02B7\u02BF\u02B7\u02BC\u02C1\u02B2\u02C0\u02BB;
+	public static GameSetting device;
 
-	public static GameSetting \u02BD\u02BA\u02B3\u02B7\u02C0\u02C1\u02BB\u02B4\u02B9\u02BB\u02B3;
+	public static GameSetting latency_mode;
 
 	public static GameSetting audioBackend;
 
 	public static GameSetting[] volume_Stems;
 
-	public static GameSetting \u02C1\u02C1\u02B3\u02BD\u02B7\u02C1\u02B9\u02BB\u02B5\u02B4\u02BB;
+	public static GameSetting sounds;
 
-	public static GameSetting \u02C1\u02BD\u02C0\u02B7\u02B3\u02C0\u02B7\u02B2\u02BF\u02BC\u02B7;
+	public static GameSetting freestyle_drums;
 
-	public static GameSetting \u02B3\u02B2\u02B5\u02B8\u02B8\u02BD\u02BF\u02B6\u02B3\u02C1\u02BF;
+	public static GameSetting menu_volume;
 
-	public static GameSetting \u02B8\u02B7\u02BF\u02B4\u02B3\u02BB\u02B6\u02BB\u02B7\u02B2\u02BD;
+	public static GameSetting preview_volume;
 
-	public static GameSetting \u02B8\u02C1\u02B8\u02BC\u02B9\u02B2\u02BB\u02BB\u02B8\u02BD\u02B5;
+	public static GameSetting master_volume;
 
-	public static GameSetting \u02B9\u02B3\u02BD\u02B5\u02BB\u02C1\u02BE\u02B2\u02B3\u02B3\u02BB;
+	public static GameSetting mute_volume;
 
-	public static GameSetting \u02BF\u02BD\u02B2\u02BE\u02BC\u02B5\u02B6\u02B5\u02B6\u02B9\u02BD;
+	public static GameSetting whammy_sfx;
 
 	public static GameSetting \u02BC\u02BA\u02BE\u02B9\u02B5\u02BD\u02C1\u02B8\u02B7\u02C0\u02B8;
 
-	public static GameSetting \u02B3\u02B2\u02B9\u02C0\u02B3\u02BC\u02B4\u02BD\u02B3\u02C1\u02BC;
+	public static GameSetting background_image;
 
-	public static GameSetting \u02B7\u02BE\u02C1\u02BD\u02BD\u02C0\u02B4\u02BA\u02BC\u02B6\u02B9;
+	public static GameSetting song_backgrounds;
 
-	public static GameSetting \u02B7\u02B9\u02BF\u02BD\u02B9\u02B5\u02C0\u02BA\u02BC\u02BD\u02BE;
+	public static GameSetting background_video;
 
 	public static GameSetting \u02BA\u02BF\u02BF\u02B7\u02B4\u02B6\u02BD\u02BC\u02BE\u02B5\u02BA;
 
@@ -177,29 +177,29 @@ public static class SettingsController
 
 	public static GameSetting \u02BB\u02B5\u02BA\u02B6\u02BE\u02BA\u02B6\u02BD\u02B3\u02B9\u02BF;
 
-	public static GameSetting \u02B7\u02B2\u02BA\u02B5\u02BC\u02C0\u02B8\u02C0\u02BC\u02BD\u02B9;
+	public static GameSetting practice_sp;
 
-	public static GameSetting \u02B6\u02C0\u02BC\u02BE\u02B2\u02B6\u02B8\u02B9\u02B2\u02B9\u02B2;
+	public static GameSetting measure_countdown;
 
-	public static GameSetting \u02B8\u02B5\u02BB\u02BB\u02BF\u02BD\u02B9\u02B9\u02B7\u02B2\u02C0;
+	public static GameSetting auto_screenshot;
 
-	public static GameSetting \u02B5\u02B9\u02BB\u02BB\u02BA\u02B3\u02B9\u02B2\u02B5\u02BD\u02BB;
+	public static GameSetting default_search_by_current_sort;
 
-	public static GameSetting \u02B6\u02BB\u02B2\u02B6\u02B7\u02BF\u02B6\u02B8\u02B8\u02B2\u02B2;
+	public static GameSetting drum_pad_scrolling;
 
-	public static GameSetting \u02BE\u02B7\u02B8\u02B7\u02B3\u02B5\u02BF\u02BD\u02B6\u02B2\u02B5;
+	public static GameSetting full_playlist;
 
 	public static GameSetting \u02B3\u02BD\u02BB\u02B7\u02B5\u02B7\u02BD\u02B4\u02B4\u02BD\u02B3;
 
 	public static GameSetting \u02BF\u02BF\u02BB\u02BF\u02B2\u02BE\u02B5\u02BD\u02C0\u02B4\u02B9;
 
-	public static GameSetting \u02B8\u02B6\u02B5\u02BB\u02C0\u02BA\u02B7\u02B4\u02B9\u02B8\u02BA;
+	public static GameSetting mute_on_miss;
 
 	public static GameSetting \u02BD\u02BF\u02B7\u02B9\u02B6\u02B8\u02BB\u02BA\u02B7\u02B8\u02B3;
 
 	public static GameSetting \u02B8\u02B3\u02B7\u02C0\u02B5\u02BA\u02BC\u02BA\u02BE\u02BA\u02B3;
 
-	public static GameSetting \u02B7\u02BD\u02BC\u02BE\u02B3\u02B2\u02C0\u02BA\u02B7\u02C1\u02B2;
+	public static GameSetting show_hit_window;
 
 	public static GameSetting \u02C1\u02B3\u02BA\u02B9\u02B4\u02B3\u02BB\u02B6\u02BC\u02BC\u02BB;
 
@@ -219,23 +219,23 @@ public static class SettingsController
 
 	public static GameSetting \u02B4\u02B5\u02BE\u02B6\u02BC\u02B7\u02BB\u02B5\u02B7\u02BF\u02C0;
 
-	public static GameSetting \u02B7\u02B2\u02C1\u02BA\u02BE\u02BC\u02B2\u02BB\u02BC\u02B2\u02B9;
+	public static GameSetting show_bot_score;
 
-	public static GameSetting \u02B7\u02B3\u02BF\u02BF\u02B4\u02B8\u02C0\u02BB\u02BB\u02BF\u02BE;
+	public static GameSetting language;
 
-	public static GameSetting \u02BF\u02C0\u02B4\u02B3\u02BB\u02B8\u02BA\u02BE\u02B3\u02B5\u02B2;
+	public static GameSetting allow_duplicate_songs;
 
-	public static GameSetting \u02BD\u02C1\u02B5\u02B3\u02BA\u02BC\u02B9\u02B8\u02B7\u02B8\u02C0;
+	public static GameSetting enable_cursor;
 
-	public static GameSetting \u02BD\u02B3\u02B7\u02B5\u02B5\u02BD\u02B5\u02B8\u02BD\u02C1\u02C1;
+	public static GameSetting enable_lyrics;
 
-	public static GameSetting \u02B2\u02C1\u02BD\u02C1\u02B4\u02B4\u02B2\u02BA\u02B6\u02B8\u02B4;
+	public static GameSetting enable_lyrics_bg;
 
-	public static GameSetting \u02C0\u02BB\u02C1\u02BB\u02B8\u02BC\u02BB\u02C1\u02BA\u02C0\u02BF;
+	public static GameSetting practice_delay;
 
 	public static GameSetting \u02B5\u02B7\u02B2\u02BB\u02BE\u02B8\u02BC\u02BA\u02B6\u02B5\u02C1;
 
-	public static GameSetting \u02B3\u02B6\u02BB\u02BF\u02BD\u02BF\u02C0\u02B3\u02C1\u02BB\u02B8;
+	public static GameSetting sustaindropleniency;
 
 	public static StringArrayGameSetting \u02B2\u02BB\u02BF\u02BC\u02B9\u02BF\u02B2\u02BA\u02B4\u02BC\u02B4;
 
@@ -245,13 +245,13 @@ public static class SettingsController
 
 	public static StringGameSetting \u02BC\u02B4\u02B2\u02B2\u02B6\u02B3\u02BB\u02B8\u02B2\u02C1\u02B3;
 
-	public static StringGameSetting \u02B8\u02BB\u02B9\u02B5\u02B3\u02B7\u02B9\u02BE\u02BC\u02BA\u02B9;
+	public static StringGameSetting cache_file;
 
-	public static GameSetting \u02B8\u02C1\u02B3\u02C0\u02B7\u02B6\u02BE\u02B4\u02B4\u02BF\u02B3;
+	public static GameSetting showremotenames;
 
-	public static GameSetting \u02BE\u02B2\u02B6\u02B7\u02B3\u02BB\u02B2\u02B8\u02BC\u02B7\u02BF;
+	public static GameSetting highwayplacement;
 
-	public static GameSetting \u02BA\u02BE\u02B7\u02B7\u02BE\u02B4\u02BE\u02C1\u02B6\u02BD\u02B7;
+	public static GameSetting only_show_local_players;
 
-	public static GameSetting \u02BB\u02B7\u02BC\u02C1\u02B5\u02B5\u02B3\u02B4\u02BF\u02B9\u02BB;
+	public static GameSetting force_remote_righty;
 }

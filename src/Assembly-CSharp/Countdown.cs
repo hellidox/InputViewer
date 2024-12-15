@@ -190,7 +190,7 @@ public class Countdown : MonoBehaviour
 		this.timerImage.enabled = false;
 		this.timerText.enabled = true;
 		this.fill.enabled = false;
-		this.\u02B6\u02C0\u02BC\u02BE\u02B2\u02B6\u02B8\u02B9\u02B2\u02B9\u02B2 = SettingsController.\u02B6\u02C0\u02BC\u02BE\u02B2\u02B6\u02B8\u02B9\u02B2\u02B9\u02B2;
+		this.\u02B6\u02C0\u02BC\u02BE\u02B2\u02B6\u02B8\u02B9\u02B2\u02B9\u02B2 = SettingsController.measure_countdown;
 		this.\u02B3\u02BC\u02B3\u02B6\u02BD\u02B6\u02B4\u02B5\u02B6\u02B7\u02BB = this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.GetBeatsFromChart;
 		base.StartCoroutine(this.\u02B9\u02BF\u02B8\u02BE\u02B7\u02B6\u02C0\u02B2\u02BA\u02BA\u02BE());
 	}
@@ -205,7 +205,7 @@ public class Countdown : MonoBehaviour
 		this.timerImage.enabled = true;
 		this.timerText.enabled = true;
 		this.fill.enabled = false;
-		this.\u02B6\u02C0\u02BC\u02BE\u02B2\u02B6\u02B8\u02B9\u02B2\u02B9\u02B2 = SettingsController.\u02B6\u02C0\u02BC\u02BE\u02B2\u02B6\u02B8\u02B9\u02B2\u02B9\u02B2;
+		this.\u02B6\u02C0\u02BC\u02BE\u02B2\u02B6\u02B8\u02B9\u02B2\u02B9\u02B2 = SettingsController.measure_countdown;
 		this.\u02B3\u02BC\u02B3\u02B6\u02BD\u02B6\u02B4\u02B5\u02B6\u02B7\u02BB = this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.GetBeatsFromChart;
 		base.StartCoroutine(this.\u02BD\u02B2\u02B5\u02BB\u02C0\u02B4\u02BA\u02B2\u02B3\u02BC\u02B4());
 	}
@@ -307,7 +307,7 @@ public class Countdown : MonoBehaviour
 		this.timerImage.enabled = false;
 		this.timerText.enabled = false;
 		this.fill.enabled = false;
-		this.\u02B6\u02C0\u02BC\u02BE\u02B2\u02B6\u02B8\u02B9\u02B2\u02B9\u02B2 = SettingsController.\u02B6\u02C0\u02BC\u02BE\u02B2\u02B6\u02B8\u02B9\u02B2\u02B9\u02B2;
+		this.\u02B6\u02C0\u02BC\u02BE\u02B2\u02B6\u02B8\u02B9\u02B2\u02B9\u02B2 = SettingsController.measure_countdown;
 		this.\u02B3\u02BC\u02B3\u02B6\u02BD\u02B6\u02B4\u02B5\u02B6\u02B7\u02BB = this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.GetBeatsFromChart;
 		base.StartCoroutine(this.\u02B8\u02BA\u02BD\u02B9\u02BB\u02B3\u02C1\u02B5\u02C0\u02B4\u02C1());
 	}
@@ -409,7 +409,7 @@ public class Countdown : MonoBehaviour
 		this.timerImage.enabled = false;
 		this.timerText.enabled = true;
 		this.fill.enabled = false;
-		this.\u02B6\u02C0\u02BC\u02BE\u02B2\u02B6\u02B8\u02B9\u02B2\u02B9\u02B2 = SettingsController.\u02B6\u02C0\u02BC\u02BE\u02B2\u02B6\u02B8\u02B9\u02B2\u02B9\u02B2;
+		this.\u02B6\u02C0\u02BC\u02BE\u02B2\u02B6\u02B8\u02B9\u02B2\u02B9\u02B2 = SettingsController.measure_countdown;
 		this.\u02B3\u02BC\u02B3\u02B6\u02BD\u02B6\u02B4\u02B5\u02B6\u02B7\u02BB = this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.GetBeatsFromChart;
 		base.StartCoroutine(this.\u02B4\u02B8\u02B4\u02C1\u02B8\u02B8\u02B4\u02BB\u02C1\u02B3\u02BF());
 	}
@@ -424,7 +424,7 @@ public class Countdown : MonoBehaviour
 		this.timerImage.enabled = false;
 		this.timerText.enabled = true;
 		this.fill.enabled = true;
-		this.\u02B6\u02C0\u02BC\u02BE\u02B2\u02B6\u02B8\u02B9\u02B2\u02B9\u02B2 = SettingsController.\u02B6\u02C0\u02BC\u02BE\u02B2\u02B6\u02B8\u02B9\u02B2\u02B9\u02B2;
+		this.\u02B6\u02C0\u02BC\u02BE\u02B2\u02B6\u02B8\u02B9\u02B2\u02B9\u02B2 = SettingsController.measure_countdown;
 		this.\u02B3\u02BC\u02B3\u02B6\u02BD\u02B6\u02B4\u02B5\u02B6\u02B7\u02BB = this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.GetBeatsFromChart;
 		base.StartCoroutine(this.\u02B8\u02BD\u02BF\u02B9\u02B7\u02B5\u02B6\u02B2\u02BB\u02BC\u02B5());
 	}
@@ -439,7 +439,7 @@ public class Countdown : MonoBehaviour
 		this.timerImage.enabled = true;
 		this.timerText.enabled = true;
 		this.fill.enabled = false;
-		this.\u02B6\u02C0\u02BC\u02BE\u02B2\u02B6\u02B8\u02B9\u02B2\u02B9\u02B2 = SettingsController.\u02B6\u02C0\u02BC\u02BE\u02B2\u02B6\u02B8\u02B9\u02B2\u02B9\u02B2;
+		this.\u02B6\u02C0\u02BC\u02BE\u02B2\u02B6\u02B8\u02B9\u02B2\u02B9\u02B2 = SettingsController.measure_countdown;
 		this.\u02B3\u02BC\u02B3\u02B6\u02BD\u02B6\u02B4\u02B5\u02B6\u02B7\u02BB = this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.GetBeatsFromChart;
 		base.StartCoroutine(this.\u02B8\u02BD\u02BF\u02B9\u02B7\u02B5\u02B6\u02B2\u02BB\u02BC\u02B5());
 	}
@@ -461,7 +461,7 @@ public class Countdown : MonoBehaviour
 		this.timerImage.enabled = true;
 		this.timerText.enabled = false;
 		this.fill.enabled = false;
-		this.\u02B6\u02C0\u02BC\u02BE\u02B2\u02B6\u02B8\u02B9\u02B2\u02B9\u02B2 = SettingsController.\u02B6\u02C0\u02BC\u02BE\u02B2\u02B6\u02B8\u02B9\u02B2\u02B9\u02B2;
+		this.\u02B6\u02C0\u02BC\u02BE\u02B2\u02B6\u02B8\u02B9\u02B2\u02B9\u02B2 = SettingsController.measure_countdown;
 		this.\u02B3\u02BC\u02B3\u02B6\u02BD\u02B6\u02B4\u02B5\u02B6\u02B7\u02BB = this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.GetBeatsFromChart;
 		base.StartCoroutine(this.\u02C1\u02BB\u02BC\u02B7\u02B6\u02B2\u02BE\u02B3\u02BF\u02B8\u02B7());
 	}

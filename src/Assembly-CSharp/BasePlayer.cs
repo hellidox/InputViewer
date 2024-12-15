@@ -111,7 +111,7 @@ public abstract class BasePlayer : MonoBehaviour
 		{
 			this.\u02BC\u02BD\u02BF\u02BA\u02B8\u02B5\u02B3\u02B8\u02BE\u02C0\u02BC.\u02BD\u02B6\u02B3\u02B3\u02BC\u02B2\u02B3\u02B3\u02BB\u02B6\u02BB();
 		}
-		this.\u02B8\u02B5\u02B8\u02BF\u02BE\u02BD\u02BB\u02BD\u02BB\u02BC\u02B6 = new Note[20];
+		this.hittableNotes = new Note[20];
 		this.\u02B7\u02B9\u02BA\u02B6\u02B3\u02B4\u02B5\u02C1\u02B4\u02B9\u02B6 = new \u02BB\u02B9\u02B2\u02B3\u02B4\u02B3\u02BF\u02C0\u02B4\u02B8\u02B9();
 		if (this.playerStuff.playerInfo.colorProfileName == "Random" && !CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BA\u02B8\u02B6\u02BB\u02B5\u02B2\u02B8\u02B6\u02BB\u02BB)
 		{
@@ -208,7 +208,7 @@ public abstract class BasePlayer : MonoBehaviour
 			this.\u02C0\u02BE\u02BD\u02B3\u02C0\u02B9\u02B5\u02BF\u02BC\u02BC\u02B8 = true;
 		}
 		this.\u02B9\u02B8\u02BE\u02B7\u02B4\u02BC\u02BB\u02BE\u02B6\u02BB\u02C0();
-		if (CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BA\u02B8\u02B6\u02BB\u02B5\u02B2\u02B8\u02B6\u02BB\u02BB && this.playerStuff.\u02BD\u02BC\u02B8\u02B5\u02B5\u02B2\u02C0\u02C1\u02B3\u02C0\u02B4 && SettingsController.\u02BA\u02BE\u02B7\u02B7\u02BE\u02B4\u02BE\u02C1\u02B6\u02BD\u02B7 && !\u02B3\u02B7\u02B4\u02BE\u02BE\u02C1\u02BE\u02BB\u02B2\u02B9\u02BA.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BF\u02BD\u02BC\u02B2\u02B8\u02BC\u02B5\u02B5\u02BB\u02BC\u02B6)
+		if (CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BA\u02B8\u02B6\u02BB\u02B5\u02B2\u02B8\u02B6\u02BB\u02BB && this.playerStuff.\u02BD\u02BC\u02B8\u02B5\u02B5\u02B2\u02C0\u02C1\u02B3\u02C0\u02B4 && SettingsController.only_show_local_players && !\u02B3\u02B7\u02B4\u02BE\u02BE\u02C1\u02BE\u02BB\u02B2\u02B9\u02BA.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BF\u02BD\u02BC\u02B2\u02B8\u02BC\u02B5\u02B5\u02BB\u02BC\u02B6)
 		{
 			base.gameObject.SetActive(false);
 		}
@@ -458,7 +458,7 @@ public abstract class BasePlayer : MonoBehaviour
 			if (this.health < 0f && !GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02B8\u02B9\u02BA\u02BB\u02C1\u02BB\u02B9\u02BE\u02C1\u02B9)
 			{
 				GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02B8\u02B9\u02BA\u02BB\u02C1\u02BB\u02B9\u02BE\u02C1\u02B9 = true;
-				GameAudioManager.PlaySound(SoundID.SongFail);
+				GameAudioManager.PlaySound(SoundEffectsChannel.SongFail);
 				this.gameManager.EndSong();
 			}
 		}
@@ -533,11 +533,11 @@ public abstract class BasePlayer : MonoBehaviour
 		if (\u02C0\u02B5\u02BC\u02C1\u02B8\u02B5\u02BB\u02BD\u02B9\u02BB\u02C1)
 		{
 			this.\u02BE\u02BB\u02B7\u02B6\u02B9\u02BB\u02B3\u02B8\u02B2\u02B6\u02B9++;
-			GameAudioManager.PlaySound(SoundID.StarPowerAwarded);
+			GameAudioManager.PlaySound(SoundEffectsChannel.StarPowerAwarded);
 		}
 		else if (flag && this.\u02B9\u02C0\u02BC\u02B5\u02B3\u02C0\u02BB\u02BC\u02B5\u02BF\u02B5 >= 0.5f)
 		{
-			GameAudioManager.PlaySound(SoundID.StarPowerAvailable);
+			GameAudioManager.PlaySound(SoundEffectsChannel.StarPowerAvailable);
 		}
 		if (this.\u02B9\u02C0\u02BC\u02B5\u02B3\u02C0\u02BB\u02BC\u02B5\u02BF\u02B5 >= 1f)
 		{
@@ -614,7 +614,7 @@ public abstract class BasePlayer : MonoBehaviour
 			{
 				if (GlobalHelper.soundOnJudgeBreak)
 				{
-					BassAudioManager.Instance.PlaySoundInternal(SoundID.FreestyleSnare, 0, 116.666664f * GlobalHelper.judgeBreakSoundVolume);
+					BassAudioManager.Instance.PlaySoundInternal(SoundEffectsChannel.FreestyleSnare, 0, 116.666664f * GlobalHelper.judgeBreakSoundVolume);
 				}
 				this.missFromWindow = false;
 			}
@@ -1140,11 +1140,11 @@ public abstract class BasePlayer : MonoBehaviour
 	[CompilerGenerated]
 	private void \u02C1\u02BA\u02BE\u02B9\u02B8\u02BB\u02B7\u02BB\u02B7\u02B3\u02B5(Note \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2, bool \u02B3\u02BF\u02C1\u02B5\u02C0\u02BC\u02BC\u02B4\u02B3\u02BF\u02B2)
 	{
-		if (\u02B3\u02BF\u02C1\u02B5\u02C0\u02BC\u02BC\u02B4\u02B3\u02BF\u02B2 && this.\u02B8\u02B5\u02B8\u02BF\u02BE\u02BD\u02BB\u02BD\u02BB\u02BC\u02B6.Length == this.\u02B9\u02BF\u02B7\u02BE\u02B9\u02B5\u02B4\u02B9\u02B6\u02B9\u02B6)
+		if (\u02B3\u02BF\u02C1\u02B5\u02C0\u02BC\u02BC\u02B4\u02B3\u02BF\u02B2 && this.hittableNotes.Length == this.\u02B9\u02BF\u02B7\u02BE\u02B9\u02B5\u02B4\u02B9\u02B6\u02B9\u02B6)
 		{
-			Array.Resize<Note>(ref this.\u02B8\u02B5\u02B8\u02BF\u02BE\u02BD\u02BB\u02BD\u02BB\u02BC\u02B6, this.\u02B8\u02B5\u02B8\u02BF\u02BE\u02BD\u02BB\u02BD\u02BB\u02BC\u02B6.Length * 2);
+			Array.Resize<Note>(ref this.hittableNotes, this.hittableNotes.Length * 2);
 		}
-		this.\u02B8\u02B5\u02B8\u02BF\u02BE\u02BD\u02BB\u02BD\u02BB\u02BC\u02B6[this.\u02B9\u02BF\u02B7\u02BE\u02B9\u02B5\u02B4\u02B9\u02B6\u02B9\u02B6] = \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2;
+		this.hittableNotes[this.\u02B9\u02BF\u02B7\u02BE\u02B9\u02B5\u02B4\u02B9\u02B6\u02B9\u02B6] = \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2;
 		this.\u02B9\u02BF\u02B7\u02BE\u02B9\u02B5\u02B4\u02B9\u02B6\u02B9\u02B6++;
 	}
 
@@ -1356,7 +1356,7 @@ public abstract class BasePlayer : MonoBehaviour
 
 	protected int \u02BA\u02B8\u02B6\u02BF\u02B7\u02BF\u02BB\u02BC\u02B9\u02B5\u02B9;
 
-	protected Note[] \u02B8\u02B5\u02B8\u02BF\u02BE\u02BD\u02BB\u02BD\u02BB\u02BC\u02B6;
+	protected Note[] hittableNotes;
 
 	protected float \u02B9\u02C0\u02BC\u02B5\u02B3\u02C0\u02BB\u02BC\u02B5\u02BF\u02B5;
 

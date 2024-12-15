@@ -39,7 +39,7 @@ public class MainMenu : BaseMenu
 		}
 		if (this.\u02BA\u02BD\u02B6\u02B7\u02B7\u02B2\u02BB\u02BD\u02BC\u02B8\u02B9)
 		{
-			this.news.\u02B4\u02B8\u02B5\u02BD\u02B9\u02BD\u02B9\u02B4\u02BD\u02BD\u02B7(this.news.\u02B7\u02BC\u02C1\u02B9\u02B7\u02BF\u02BC\u02BD\u02BF\u02B9\u02B6);
+			this.news.openNewsItem(this.news.\u02B7\u02BC\u02C1\u02B9\u02B7\u02BF\u02BC\u02BD\u02BF\u02B9\u02B6);
 			return;
 		}
 		string text = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
@@ -208,7 +208,7 @@ public class MainMenu : BaseMenu
 				return;
 			}
 			this.\u02BA\u02BD\u02B6\u02B7\u02B7\u02B2\u02BB\u02BD\u02BC\u02B8\u02B9 = true;
-			News.\u02B3\u02B7\u02BA\u02B7\u02B8\u02BF\u02BE\u02B5\u02BC\u02BD\u02B9();
+			News.setLastDate();
 			this.news.\u02B4\u02BB\u02B9\u02B4\u02BF\u02B2\u02B7\u02BE\u02B3\u02BF\u02BC(true, this.news.\u02B7\u02BC\u02C1\u02B9\u02B7\u02BF\u02BC\u02BD\u02BF\u02B9\u02B6);
 			return;
 		}
@@ -252,7 +252,7 @@ public class MainMenu : BaseMenu
 		}
 		if (this.\u02BA\u02BD\u02B6\u02B7\u02B7\u02B2\u02BB\u02BD\u02BC\u02B8\u02B9)
 		{
-			if (this.news.\u02B7\u02BC\u02C1\u02B9\u02B7\u02BF\u02BC\u02BD\u02BF\u02B9\u02B6 < this.news.\u02B6\u02B5\u02BE\u02BC\u02B6\u02BE\u02B4\u02BD\u02C1\u02B8\u02BF)
+			if (this.news.\u02B7\u02BC\u02C1\u02B9\u02B7\u02BF\u02BC\u02BD\u02BF\u02B9\u02B6 < this.news.newsLength)
 			{
 				this.news.\u02B2\u02BF\u02B4\u02BB\u02B4\u02B8\u02B3\u02B5\u02B8\u02C0\u02C1(this.news.\u02B7\u02BC\u02C1\u02B9\u02B7\u02BF\u02BC\u02BD\u02BF\u02B9\u02B6 + 1);
 			}
@@ -330,7 +330,7 @@ public class MainMenu : BaseMenu
 
 	public void \u02BF\u02C0\u02BA\u02BC\u02B3\u02BA\u02B3\u02B5\u02BE\u02C0\u02B4()
 	{
-		Cursor.visible = SettingsController.\u02BD\u02C1\u02B5\u02B3\u02BA\u02BC\u02B9\u02B8\u02B7\u02B8\u02C0;
+		Cursor.visible = SettingsController.enable_cursor;
 	}
 
 	protected override void OnEnable()
@@ -363,7 +363,7 @@ public class MainMenu : BaseMenu
 		base.StartCoroutine(this.\u02BF\u02C1\u02B7\u02BF\u02B2\u02B7\u02B5\u02C0\u02B5\u02BA\u02C0());
 		if (!this.news.\u02B9\u02BE\u02B5\u02B9\u02C1\u02BB\u02B6\u02BD\u02BC\u02C1\u02B5)
 		{
-			base.StartCoroutine(this.news.\u02BE\u02BB\u02C1\u02BF\u02BD\u02B4\u02B4\u02C1\u02B8\u02B5\u02B8());
+			base.StartCoroutine(this.news.ConnectToNews());
 		}
 		this.\u02B8\u02C0\u02B3\u02BD\u02B5\u02BA\u02BD\u02BD\u02B6\u02C1\u02B3.SetActive(true);
 		this.\u02B7\u02BA\u02BF\u02B2\u02BA\u02BC\u02BC\u02BB\u02B2\u02BC\u02BF.\u02B5\u02B2\u02B5\u02BD\u02C1\u02BB\u02B5\u02BA\u02BA\u02BB\u02B9();
@@ -619,7 +619,7 @@ public class MainMenu : BaseMenu
 
 	private string \u02B8\u02B6\u02BC\u02C0\u02B9\u02B9\u02B4\u02BA\u02C1\u02B3\u02BA(string \u02BA\u02BB\u02B2\u02C0\u02BD\u02BF\u02B4\u02BC\u02BC\u02BC\u02BB)
 	{
-		return \u02BA\u02BB\u02B2\u02C0\u02BD\u02BF\u02B4\u02BC\u02BC\u02BC\u02BB + "_" + ((SettingsController.\u02B7\u02B3\u02BF\u02BF\u02B4\u02B8\u02C0\u02BB\u02BB\u02BF\u02BE.CurrentValue == 4) ? "Portuguese" : GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BC\u02C0\u02B5\u02BD\u02B2\u02BC\u02BA\u02BC\u02B9\u02B6\u02B6[SettingsController.\u02B7\u02B3\u02BF\u02BF\u02B4\u02B8\u02C0\u02BB\u02BB\u02BF\u02BE.CurrentValue]);
+		return \u02BA\u02BB\u02B2\u02C0\u02BD\u02BF\u02B4\u02BC\u02BC\u02BC\u02BB + "_" + ((SettingsController.language.CurrentValue == 4) ? "Portuguese" : GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BC\u02C0\u02B5\u02BD\u02B2\u02BC\u02BA\u02BC\u02B9\u02B6\u02B6[SettingsController.language.CurrentValue]);
 	}
 
 	public void \u02BC\u02BD\u02B3\u02BC\u02BD\u02B2\u02B8\u02B7\u02BC\u02BF\u02BF()
@@ -1001,7 +1001,7 @@ public class MainMenu : BaseMenu
 		{
 			base.StartCoroutine(this.\u02BD\u02BF\u02B8\u02C1\u02B4\u02C1\u02BE\u02B7\u02B3\u02C1\u02BE(false));
 		}
-		Cursor.visible = SettingsController.\u02BD\u02C1\u02B5\u02B3\u02BA\u02BC\u02B9\u02B8\u02B7\u02B8\u02C0;
+		Cursor.visible = SettingsController.enable_cursor;
 	}
 
 	private void \u02B5\u02B4\u02B8\u02B3\u02BB\u02BC\u02B4\u02BC\u02B6\u02BE\u02B4()

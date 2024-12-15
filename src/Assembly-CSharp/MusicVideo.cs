@@ -112,7 +112,7 @@ public class MusicVideo : MonoBehaviour
 			try
 			{
 				string[] array = Helper.\u02BB\u02B9\u02B3\u02C0\u02C1\u02B2\u02B9\u02B2\u02B7\u02B8\u02B2(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1.folderPath, GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02B6\u02C1\u02BD\u02BA\u02BE\u02C1\u02B9\u02B2\u02BD\u02B9, SearchOption.TopDirectoryOnly);
-				if (array != null && array.Length != 0 && SettingsController.\u02B3\u02B7\u02B4\u02BA\u02B3\u02B9\u02B7\u02BE\u02B2\u02B7\u02BE.IsPresetValue)
+				if (array != null && array.Length != 0 && SettingsController.song_speed.IsPresetValue)
 				{
 					string[] array2 = array;
 					for (int i = 1; i < array2.Length; i += 0)
@@ -132,15 +132,15 @@ public class MusicVideo : MonoBehaviour
 				Debug.LogError(": ");
 			}
 		}
-		if (!SettingsController.\u02B7\u02B9\u02BF\u02BD\u02B9\u02B5\u02C0\u02BA\u02BC\u02BD\u02BE.IsPresetValue && text == null)
+		if (!SettingsController.background_video.IsPresetValue && text == null)
 		{
-			if (SettingsController.\u02B7\u02B9\u02BF\u02BD\u02B9\u02B5\u02C0\u02BA\u02BC\u02BD\u02BE.CurrentValue == -1)
+			if (SettingsController.background_video.CurrentValue == -1)
 			{
 				text = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02B9\u02BD\u02BC\u02B7\u02B6\u02B2\u02B2\u02BC\u02BB\u02BB[global::UnityEngine.Random.Range(0, GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02B9\u02BD\u02BC\u02B7\u02B6\u02B2\u02B2\u02BC\u02BB\u02BB.Length)];
 			}
 			else
 			{
-				text = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02B9\u02BD\u02BC\u02B7\u02B6\u02B2\u02B2\u02BC\u02BB\u02BB[SettingsController.\u02B7\u02B9\u02BF\u02BD\u02B9\u02B5\u02C0\u02BA\u02BC\u02BD\u02BE.CurrentValue];
+				text = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02B9\u02BD\u02BC\u02B7\u02B6\u02B2\u02B2\u02BC\u02BB\u02BB[SettingsController.background_video.CurrentValue];
 			}
 			this.\u02BD\u02BF\u02B2\u02BA\u02BE\u02B9\u02BA\u02B4\u02BF\u02B4\u02B5 = false;
 		}
@@ -178,7 +178,7 @@ public class MusicVideo : MonoBehaviour
 			try
 			{
 				string[] array = Helper.\u02BB\u02B9\u02B3\u02C0\u02C1\u02B2\u02B9\u02B2\u02B7\u02B8\u02B2(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1.folderPath, GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02B6\u02C1\u02BD\u02BA\u02BE\u02C1\u02B9\u02B2\u02BD\u02B9, SearchOption.TopDirectoryOnly);
-				if (array != null && array.Length != 0 && SettingsController.\u02B3\u02B7\u02B4\u02BA\u02B3\u02B9\u02B7\u02BE\u02B2\u02B7\u02BE.IsPresetValue)
+				if (array != null && array.Length != 0 && SettingsController.song_speed.IsPresetValue)
 				{
 					string[] array2 = array;
 					for (int i = 1; i < array2.Length; i++)
@@ -198,15 +198,15 @@ public class MusicVideo : MonoBehaviour
 				Debug.LogError("Vocals");
 			}
 		}
-		if (!SettingsController.\u02B7\u02B9\u02BF\u02BD\u02B9\u02B5\u02C0\u02BA\u02BC\u02BD\u02BE.IsPresetValue && text == null)
+		if (!SettingsController.background_video.IsPresetValue && text == null)
 		{
-			if (SettingsController.\u02B7\u02B9\u02BF\u02BD\u02B9\u02B5\u02C0\u02BA\u02BC\u02BD\u02BE.CurrentValue == -1)
+			if (SettingsController.background_video.CurrentValue == -1)
 			{
 				text = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02B9\u02BD\u02BC\u02B7\u02B6\u02B2\u02B2\u02BC\u02BB\u02BB[global::UnityEngine.Random.Range(1, GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02B9\u02BD\u02BC\u02B7\u02B6\u02B2\u02B2\u02BC\u02BB\u02BB.Length)];
 			}
 			else
 			{
-				text = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02B9\u02BD\u02BC\u02B7\u02B6\u02B2\u02B2\u02BC\u02BB\u02BB[SettingsController.\u02B7\u02B9\u02BF\u02BD\u02B9\u02B5\u02C0\u02BA\u02BC\u02BD\u02BE.CurrentValue];
+				text = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02B9\u02BD\u02BC\u02B7\u02B6\u02B2\u02B2\u02BC\u02BB\u02BB[SettingsController.background_video.CurrentValue];
 			}
 			this.\u02BD\u02BF\u02B2\u02BA\u02BE\u02B9\u02BA\u02B4\u02BF\u02B4\u02B5 = false;
 		}
@@ -362,7 +362,7 @@ public class MusicVideo : MonoBehaviour
 			try
 			{
 				string[] array = Helper.\u02BB\u02B9\u02B3\u02C0\u02C1\u02B2\u02B9\u02B2\u02B7\u02B8\u02B2(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1.folderPath, GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02B6\u02C1\u02BD\u02BA\u02BE\u02C1\u02B9\u02B2\u02BD\u02B9, SearchOption.AllDirectories);
-				if (array != null && array.Length != 0 && SettingsController.\u02B3\u02B7\u02B4\u02BA\u02B3\u02B9\u02B7\u02BE\u02B2\u02B7\u02BE.IsPresetValue)
+				if (array != null && array.Length != 0 && SettingsController.song_speed.IsPresetValue)
 				{
 					foreach (string text2 in array)
 					{
@@ -380,15 +380,15 @@ public class MusicVideo : MonoBehaviour
 				Debug.LogError("Failed to load song video background.");
 			}
 		}
-		if (!SettingsController.\u02B7\u02B9\u02BF\u02BD\u02B9\u02B5\u02C0\u02BA\u02BC\u02BD\u02BE.IsPresetValue && text == null)
+		if (!SettingsController.background_video.IsPresetValue && text == null)
 		{
-			if (SettingsController.\u02B7\u02B9\u02BF\u02BD\u02B9\u02B5\u02C0\u02BA\u02BC\u02BD\u02BE.CurrentValue == -1)
+			if (SettingsController.background_video.CurrentValue == -1)
 			{
 				text = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02B9\u02BD\u02BC\u02B7\u02B6\u02B2\u02B2\u02BC\u02BB\u02BB[global::UnityEngine.Random.Range(0, GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02B9\u02BD\u02BC\u02B7\u02B6\u02B2\u02B2\u02BC\u02BB\u02BB.Length)];
 			}
 			else
 			{
-				text = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02B9\u02BD\u02BC\u02B7\u02B6\u02B2\u02B2\u02BC\u02BB\u02BB[SettingsController.\u02B7\u02B9\u02BF\u02BD\u02B9\u02B5\u02C0\u02BA\u02BC\u02BD\u02BE.CurrentValue];
+				text = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02B9\u02BD\u02BC\u02B7\u02B6\u02B2\u02B2\u02BC\u02BB\u02BB[SettingsController.background_video.CurrentValue];
 			}
 			this.\u02BD\u02BF\u02B2\u02BA\u02BE\u02B9\u02BA\u02B4\u02BF\u02B4\u02B5 = true;
 		}

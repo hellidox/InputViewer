@@ -6,7 +6,7 @@ public class \u02C1\u02BD\u02B8\u02B2\u02B3\u02BA\u02B8\u02B8\u02C0\u02B6\u02B8
 {
 	public void \u02B9\u02BD\u02B9\u02BE\u02BD\u02C1\u02BC\u02BA\u02B7\u02B7\u02B7()
 	{
-		if (SettingsController.\u02BE\u02B7\u02B8\u02B7\u02B3\u02B5\u02BF\u02BD\u02B6\u02B2\u02B5)
+		if (SettingsController.full_playlist)
 		{
 			return;
 		}

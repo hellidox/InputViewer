@@ -519,7 +519,7 @@ public class FrameRate : MonoBehaviour
 			{
 				if (GlobalVariables.FCmode)
 				{
-					GameAudioManager.PlaySound(SoundID.SongFail);
+					GameAudioManager.PlaySound(SoundEffectsChannel.SongFail);
 					if (Time.deltaTime == 1f)
 					{
 						GameManager.instance.\u02BE\u02BD\u02BD\u02B9\u02BD\u02BF\u02B3\u02BE\u02BD\u02BB\u02BC();
