@@ -1735,12 +1735,12 @@ public static class GlobalHelper
 		{
 			num = 4900.0;
 		}
-		float val = (float)(12.0 * Math.Log(num) / Math.Log(2.0));
+		float num2 = (float)(12.0 * Math.Log(num) / Math.Log(2.0));
 		if (GlobalHelper.toneSnap)
 		{
-			val = Mathf.Floor(val);
+			num2 = Mathf.Floor(num2);
 		}
-		return val;
+		return num2;
 	}
 
 	public static float GetSemitoneOffset(float tempo)

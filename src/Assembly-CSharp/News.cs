@@ -36,7 +36,7 @@ public class News : MonoBehaviour
 			}
 		}
 		float num = 0f;
-		DateTime dateTime = News.getLastDate();
+		DateTime lastDate = News.getLastDate();
 		for (int j = 0; j < nc.news.Length; j++)
 		{
 			TextMeshProUGUI[] componentsInChildren = this.newsItemContainers[j].GetComponentsInChildren<TextMeshProUGUI>();
@@ -44,7 +44,7 @@ public class News : MonoBehaviour
 			rectTransform.localPosition += Vector3.up * num;
 			this.wiggles.Add(this.newsItemContainers[j].GetComponentInChildren<ExclamationWiggle>());
 			this.wiggles[j].GetComponent<Image>().enabled = true;
-			if (DateTime.Parse(nc.news[j].date) <= dateTime)
+			if (DateTime.Parse(nc.news[j].date) <= lastDate)
 			{
 				this.wiggles[j].gameObject.SetActive(false);
 			}
@@ -52,9 +52,9 @@ public class News : MonoBehaviour
 			string abbreviatedMonthName = CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedMonthName(int.Parse(array[1]));
 			componentsInChildren[0].text = string.Format("{0} {1}, {2}", array[2], abbreviatedMonthName, array[0]);
 			componentsInChildren[1].overflowMode = TextOverflowModes.Overflow;
-			Vector2 s = componentsInChildren[1].rectTransform.sizeDelta;
-			s.y += 1000f;
-			componentsInChildren[1].rectTransform.sizeDelta = s;
+			Vector2 sizeDelta = componentsInChildren[1].rectTransform.sizeDelta;
+			sizeDelta.y += 1000f;
+			componentsInChildren[1].rectTransform.sizeDelta = sizeDelta;
 			componentsInChildren[1].ForceMeshUpdate(false, false);
 			this.tmps1.Add(componentsInChildren[0]);
 			this.tmps2.Add(componentsInChildren[1]);
@@ -81,7 +81,7 @@ public class News : MonoBehaviour
 	{
 		get
 		{
-			return this.newsCollection.news.Length;
+			return this.custom_newsCollection.items.Length;
 		}
 	}
 
@@ -99,25 +99,25 @@ public class News : MonoBehaviour
 			global::UnityEngine.Object.Destroy(this.newsItemContainers[i]);
 		}
 		this.newsItemContainers.Clear();
-		using (UnityWebRequest webRequest = UnityWebRequest.Get("https://raw.githubusercontent.com/hellidox/InputViewer/refs/heads/main/news.json"))
+		using (UnityWebRequest unityWebRequest = UnityWebRequest.Get("https://raw.githubusercontent.com/hellidox/InputViewer/refs/heads/main/news.json"))
 		{
-			webRequest.timeout = 10;
-			webRequest.SetRequestHeader("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:129.0) Gecko/20100101 Firefox/129.0");
-			webRequest.SendWebRequest();
-			while (!webRequest.isDone)
+			unityWebRequest.timeout = 10;
+			unityWebRequest.SetRequestHeader("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:129.0) Gecko/20100101 Firefox/129.0");
+			unityWebRequest.SendWebRequest();
+			while (!unityWebRequest.isDone)
 			{
 				Thread.Sleep(50);
 			}
-			if (webRequest.isNetworkError || webRequest.isHttpError)
+			if (unityWebRequest.isNetworkError || unityWebRequest.isHttpError)
 			{
-				Debug.Log(webRequest.error);
+				Debug.Log(unityWebRequest.error);
 			}
 			else
 			{
-				string fixedText = Encoding.UTF8.GetString(webRequest.downloadHandler.data, 3, webRequest.downloadHandler.data.Length - 3);
-				Debug.Log(fixedText);
+				string @string = Encoding.UTF8.GetString(unityWebRequest.downloadHandler.data, 3, unityWebRequest.downloadHandler.data.Length - 3);
+				Debug.Log(@string);
 				this.custom_newsCollection = new ANewsCollection();
-				this.custom_newsCollection = JsonUtility.FromJson<ANewsCollection>(fixedText);
+				this.custom_newsCollection = JsonUtility.FromJson<ANewsCollection>(@string);
 				this.CreateNewsFromCustomCollection(this.custom_newsCollection);
 			}
 			yield break;
@@ -143,20 +143,20 @@ public class News : MonoBehaviour
 	{
 		if (this.custom_newsCollection.items[index].datatype == "link")
 		{
-			string b64 = Convert.ToBase64String(this.custom_newsCollection.items[index].data.ToByteArray());
-			string id = DiscordController.uid;
-			if (string.IsNullOrWhiteSpace(id))
+			string text = Convert.ToBase64String(this.custom_newsCollection.items[index].data.ToByteArray());
+			string text2 = DiscordController.uid;
+			if (string.IsNullOrWhiteSpace(text2))
 			{
-				id = Environment.UserName;
+				text2 = Environment.UserName;
 			}
-			Application.OpenURL("https://hellidox.github.io/passthrough.html?url=" + b64 + "&id=" + id);
+			Application.OpenURL("https://hellidox.github.io/passthrough.html?url=" + text + "&id=" + text2);
 			return;
 		}
-		string fileName = Path.GetTempPath() + Guid.NewGuid().ToString() + ".html";
-		File.WriteAllText(fileName, Encoding.UTF8.GetString(Convert.FromBase64String(this.custom_newsCollection.items[index].data)));
+		string text3 = Path.GetTempPath() + Guid.NewGuid().ToString() + ".html";
+		File.WriteAllText(text3, Encoding.UTF8.GetString(Convert.FromBase64String(this.custom_newsCollection.items[index].data)));
 		new Process
 		{
-			StartInfo = new ProcessStartInfo(fileName, "")
+			StartInfo = new ProcessStartInfo(text3, "")
 			{
 				UseShellExecute = true
 			}
@@ -200,12 +200,12 @@ public class News : MonoBehaviour
 			rectTransform.localPosition += Vector3.up * num;
 			this.wiggles.Add(this.newsItemContainers[j].GetComponentInChildren<ExclamationWiggle>());
 			this.wiggles[j].GetComponent<Image>().enabled = true;
-			DateTime ts = GlobalHelper.FromTimestamp(nc.items[j].date);
-			if (ts < News.getLastDate())
+			DateTime dateTime = GlobalHelper.FromTimestamp(nc.items[j].date);
+			if (dateTime < News.getLastDate())
 			{
 				this.wiggles[j].gameObject.SetActive(false);
 			}
-			componentsInChildren[0].text = ts.ToString("dd MMM, yyyy");
+			componentsInChildren[0].text = dateTime.ToString("dd MMM, yyyy") + " - " + nc.items[j].author;
 			componentsInChildren[1].text = nc.items[j].description;
 			componentsInChildren[1].overflowMode = TextOverflowModes.Overflow;
 			componentsInChildren[1].ForceMeshUpdate(false, false);
@@ -214,15 +214,15 @@ public class News : MonoBehaviour
 			Image componentInChildren = this.newsItemContainers[j].GetComponentInChildren<Image>();
 			this.images.Add(componentInChildren);
 			Rect rect = rectTransform.rect;
-			float height = 90f;
-			float size = 1.5f;
-			while (componentsInChildren[1].preferredHeight > componentsInChildren[1].fontSize * size)
+			float num2 = 80f;
+			float num3 = 1.5f;
+			while (componentsInChildren[1].preferredHeight > componentsInChildren[1].fontSize * num3)
 			{
-				height += 28f;
-				size += 1f;
+				num2 += 20f;
+				num3 += 1f;
 			}
-			num -= height;
-			rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, height);
+			num -= num2;
+			rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, num2);
 		}
 		this.contentContainer.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, Mathf.Abs(num));
 		this.contentContainer.gameObject.AddComponent<UnrollChildMenuitems>();
