@@ -1095,6 +1095,10 @@ public static class GlobalHelper
 
 	public static string uid
 	{
+		get
+		{
+			return GlobalHelper.ReadKeyValue("uid");
+		}
 		set
 		{
 			GlobalHelper.WriteKeyValue("uid", value, false);

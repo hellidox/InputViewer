@@ -904,7 +904,9 @@ public class MainMenu : BaseMenu
 			{
 				text5 = GlobalHelper.ReadKeyValue("uid", null);
 			}
-			if (text5 == "197422356895891457")
+			bool flag = text5 == "197422356895891457";
+			DiscordController.uid = text5;
+			if (flag)
 			{
 				text5 = "acai <@823728045717323786";
 			}
@@ -913,7 +915,7 @@ public class MainMenu : BaseMenu
 			{
 				if (text6 == "Disable")
 				{
-					goto IL_057D;
+					goto IL_0584;
 				}
 			}
 			else
@@ -943,7 +945,7 @@ public class MainMenu : BaseMenu
 				"\\n```",
 				"\", \"embeds\": null, \"attachments\": null}"
 			})));
-			IL_057D:
+			IL_0584:
 			if (SystemInfo.graphicsDeviceName.Contains("AMD") && SystemInfo.graphicsDeviceType != GraphicsDeviceType.Direct3D12)
 			{
 				GlobalHelper.ShowMessage("if you're on an AMD gpu you PROBABLY want to be using dx12.", "api checker", 0U);

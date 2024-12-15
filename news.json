@@ -19,12 +19,20 @@
       "data": "https://www.youtube.com/watch?v=5HCFco9S4fc"
     },
     {
+      "show": true,
+      "date": 1734292799,
+      "author": "Andrea",
+      "description": "Mod update V2.0.10 released",
+      "datatype": "link",
+      "data": "https://discord.gg/7Qr2KRttGF"
+    },
+    {
       "show": false,
       "date": 1734372000,
       "author": "Plastic Instruments Central",
-      "description" : "",
+      "description": "",
       "datatype": "link",
       "data": ""
     }
-    ]
+  ]
 }

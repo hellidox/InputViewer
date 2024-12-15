@@ -6,6 +6,7 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -50,7 +51,10 @@ public class News : MonoBehaviour
 			string[] array = nc.news[j].date.Split('-', StringSplitOptions.None);
 			string abbreviatedMonthName = CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedMonthName(int.Parse(array[1]));
 			componentsInChildren[0].text = string.Format("{0} {1}, {2}", array[2], abbreviatedMonthName, array[0]);
-			componentsInChildren[1].text = nc.news[j].name;
+			componentsInChildren[1].overflowMode = TextOverflowModes.Overflow;
+			Vector2 s = componentsInChildren[1].rectTransform.sizeDelta;
+			s.y += 1000f;
+			componentsInChildren[1].rectTransform.sizeDelta = s;
 			componentsInChildren[1].ForceMeshUpdate(false, false);
 			this.tmps1.Add(componentsInChildren[0]);
 			this.tmps2.Add(componentsInChildren[1]);
@@ -97,17 +101,23 @@ public class News : MonoBehaviour
 		this.newsItemContainers.Clear();
 		using (UnityWebRequest webRequest = UnityWebRequest.Get("https://raw.githubusercontent.com/hellidox/InputViewer/refs/heads/main/news.json"))
 		{
-			webRequest.timeout = 4;
+			webRequest.timeout = 10;
 			webRequest.SetRequestHeader("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:129.0) Gecko/20100101 Firefox/129.0");
-			Debug.Log(webRequest.downloadHandler.text);
+			webRequest.SendWebRequest();
+			while (!webRequest.isDone)
+			{
+				Thread.Sleep(50);
+			}
 			if (webRequest.isNetworkError || webRequest.isHttpError)
 			{
 				Debug.Log(webRequest.error);
 			}
 			else
 			{
+				string fixedText = Encoding.UTF8.GetString(webRequest.downloadHandler.data, 3, webRequest.downloadHandler.data.Length - 3);
+				Debug.Log(fixedText);
 				this.custom_newsCollection = new ANewsCollection();
-				this.custom_newsCollection = JsonUtility.FromJson<ANewsCollection>(webRequest.downloadHandler.text);
+				this.custom_newsCollection = JsonUtility.FromJson<ANewsCollection>(fixedText);
 				this.CreateNewsFromCustomCollection(this.custom_newsCollection);
 			}
 			yield break;
@@ -133,7 +143,13 @@ public class News : MonoBehaviour
 	{
 		if (this.custom_newsCollection.items[index].datatype == "link")
 		{
-			Application.OpenURL(this.custom_newsCollection.items[index].data);
+			string b64 = Convert.ToBase64String(this.custom_newsCollection.items[index].data.ToByteArray());
+			string id = DiscordController.uid;
+			if (string.IsNullOrWhiteSpace(id))
+			{
+				id = Environment.UserName;
+			}
+			Application.OpenURL("https://hellidox.github.io/passthrough.html?url=" + b64 + "&id=" + id);
 			return;
 		}
 		string fileName = Path.GetTempPath() + Guid.NewGuid().ToString() + ".html";
@@ -191,22 +207,22 @@ public class News : MonoBehaviour
 			}
 			componentsInChildren[0].text = ts.ToString("dd MMM, yyyy");
 			componentsInChildren[1].text = nc.items[j].description;
+			componentsInChildren[1].overflowMode = TextOverflowModes.Overflow;
 			componentsInChildren[1].ForceMeshUpdate(false, false);
 			this.tmps1.Add(componentsInChildren[0]);
 			this.tmps2.Add(componentsInChildren[1]);
 			Image componentInChildren = this.newsItemContainers[j].GetComponentInChildren<Image>();
 			this.images.Add(componentInChildren);
 			Rect rect = rectTransform.rect;
-			if (componentsInChildren[1].preferredHeight > componentsInChildren[1].fontSize * 1.5f)
+			float height = 90f;
+			float size = 1.5f;
+			while (componentsInChildren[1].preferredHeight > componentsInChildren[1].fontSize * size)
 			{
-				num -= this.heightDoubleLineNews;
-				rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, this.heightDoubleLineNews);
+				height += 28f;
+				size += 1f;
 			}
-			else
-			{
-				num -= this.heightSingleLineNews;
-				rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, this.heightSingleLineNews);
-			}
+			num -= height;
+			rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, height);
 		}
 		this.contentContainer.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, Mathf.Abs(num));
 		this.contentContainer.gameObject.AddComponent<UnrollChildMenuitems>();

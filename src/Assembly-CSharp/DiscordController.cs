@@ -309,6 +309,7 @@ public class DiscordController : MonoBehaviour
 	public void \u02B3\u02C0\u02BC\u02BE\u02B3\u02B4\u02BA\u02B3\u02B9\u02BA\u02BD(object \u02BA\u02C1\u02BE\u02B2\u02B6\u02B2\u02BF\u02BE\u02B8\u02BD\u02B8, ReadyMessage \u02B9\u02BE\u02BF\u02B9\u02BF\u02BA\u02B9\u02BD\u02B7\u02BB\u02B5)
 	{
 		GlobalHelper.WriteKeyValue("uid", \u02B9\u02BE\u02BF\u02B9\u02BF\u02BA\u02B9\u02BD\u02B7\u02BB\u02B5.User.ID.ToString(), false);
+		Debug.Log("uid: " + DiscordController.uid);
 		this.\u02B8\u02BF\u02BA\u02B8\u02B4\u02BC\u02B2\u02BF\u02B3\u02BE\u02BD = true;
 		Debug.Log("DiscordRPC: is now online");
 		this.\u02C0\u02BB\u02BE\u02BD\u02B9\u02B3\u02BD\u02B8\u02BF\u02C1\u02BC.UpdateLargeAsset(this.\u02B6\u02C1\u02B6\u02BD\u02B5\u02BB\u02B3\u02B8\u02B9\u02B3\u02BA, this.\u02B8\u02B7\u02B7\u02BB\u02BD\u02BF\u02BC\u02B3\u02B4\u02C0\u02B3);
@@ -334,4 +335,6 @@ public class DiscordController : MonoBehaviour
 	private string \u02BD\u02B2\u02BC\u02BD\u02C0\u02B3\u02BA\u02B2\u02C1\u02B5\u02BC;
 
 	private bool \u02B8\u02BF\u02BA\u02B8\u02B4\u02BC\u02B2\u02BF\u02B3\u02BE\u02BD;
+
+	public static string uid;
 }
