@@ -27,7 +27,7 @@
       "data": "https://discord.gg/7Qr2KRttGF"
     },
     {
-      "show": false,
+      "show": trueas,
       "date": 1734372000,
       "author": "Plastic Instruments\nCentral",
       "description": "",
