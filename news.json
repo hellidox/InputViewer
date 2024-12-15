@@ -1,12 +1,12 @@
 ﻿{
   "format": {
     "show": true,
-    "_comment": "date: unix timestamp",
+    "_comment1": "date: unix timestamp",
     "date": 1234567890,
     "author": "name",
     "description": "Short text goes here",
     "datatype": "link|base64",
-    "_comment": "base64 will be decoded to an html file and opened in default browser",
+    "_comment2": "base64 will be decoded to an html file and opened in default browser",
     "data": "https://example.com|PGh0bWw+PC9odG1sPg=="
   },
   "items": [
@@ -14,7 +14,7 @@
       "show": true,
       "date": 1734292800,
       "author": "Thingerthing",
-      "description": "They wander, far away into THIS GR8 DEAL! Get the Unreality Pt. II CD!",
+      "description": "And they wander, far away into this GREAT DEAL! Buy the Unreality (pt. ii) CD for 10$ here!",
       "datatype": "link",
       "data": "https://www.youtube.com/watch?v=5HCFco9S4fc"
     },
