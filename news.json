@@ -1,5 +1,4 @@
-﻿
-{
+﻿{
   "format": {
     "show": true,
     "_comment": "date: unix timestamp",
@@ -23,7 +22,7 @@
       "show": false,
       "date": 1734372000,
       "author": "Plastic Instruments Central",
-      "description": "",
+      "description" : "",
       "datatype": "link",
       "data": ""
     }
