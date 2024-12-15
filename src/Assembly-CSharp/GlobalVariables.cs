@@ -12,7 +12,6 @@ using StrikeCore;
 using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering;
-using UnityEngine.Rendering;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
@@ -579,7 +578,7 @@ public class GlobalVariables : MonoBehaviour
 		{
 			return;
 		}
-		Application.targetFrameRate = SettingsController.fpsCap * OnDemandRendering.renderFrameInterval;
+		Application.targetFrameRate = -1;
 	}
 
 	private void Awake()
