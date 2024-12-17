@@ -12,6 +12,14 @@
   "items": [
     {
       "show": true,
+      "date": 1734393600,
+      "author": "PIC",
+      "description": "Plastic Instruments Monthly | November 2024",
+      "datatype": "link",
+      "data": "https://youtu.be/Aj6VwTWssI4"
+    },
+    {
+      "show": true,
       "date": 1734292800,
       "author": "Thingerthing",
       "description": "And they wander, far away into this GREAT DEAL! Buy the Unreality (pt. ii) CD for 10$ here!",
@@ -25,14 +33,6 @@
       "description": "Mod update V2.0.10 released",
       "datatype": "link",
       "data": "https://discord.gg/7Qr2KRttGF"
-    },
-    {
-      "show": true,
-      "date": 1734393600,
-      "author": "PIC",
-      "description": "Plastic Instruments Monthly | November 2024",
-      "datatype": "link",
-      "data": "https://youtu.be/Aj6VwTWssI4"
     }
   ]
 }
