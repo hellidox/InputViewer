@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Cysharp.Text;
+using StrikeCore;
 using TMPro;
 using UnityEngine;
 
@@ -15,6 +17,9 @@ public class FrameRate : MonoBehaviour
 
 	private void Start()
 	{
+		this.trailsNeedInit = true;
+		this._onInvalidate = new Action(this.__onInvalidate);
+		GlobalHelper.OnInvalidate.Add(this._onInvalidate);
 		this.targetSPF = 1f / (float)Screen.currentResolution.refreshRate;
 		this.startTime = (double)Time.realtimeSinceStartup;
 		BasePlayer.interval = 0.1f;
@@ -29,9 +34,31 @@ public class FrameRate : MonoBehaviour
 		bool useJudgements = GlobalHelper.useJudgements;
 		this.textDisplay = base.GetComponent<TextMeshProUGUI>();
 		this.timer1 = this.const1;
-		this.textDisplay.fontSize *= 0.7f * GlobalHelper.fontSize;
+		this.textDisplay.fontSize = 0.7f * this.textDisplay.fontSize;
 		this.upperLeftTextBuilder = ZString.CreateStringBuilder();
 		this.underHighwayTextBuilder = ZString.CreateStringBuilder();
+		this.useTrails = GlobalHelper.useTrails;
+		this.trails = new TextMeshProUGUI[GlobalHelper.maxTrails];
+		for (int i = 0; i < this.trails.Length; i++)
+		{
+			this.trails[i] = this.textDisplay.Duplicate();
+			this.trails[i].material.color = Color.white;
+			this.trails[i].enableWordWrapping = false;
+			this.trails[i].text = "█";
+			this.trails[i].rectTransform.pivot = new Vector2(0.5f, 0.8363f);
+			this.trails[i].alpha = 1f;
+		}
+		this.fretColors = new Color[]
+		{
+			HexColor.FromHexString(GlobalHelper.greenFretColor).Color(),
+			HexColor.FromHexString(GlobalHelper.redFretColor).Color(),
+			HexColor.FromHexString(GlobalHelper.yellowFretColor).Color(),
+			HexColor.FromHexString(GlobalHelper.blueFretColor).Color(),
+			HexColor.FromHexString(GlobalHelper.orangeFretColor).Color(),
+			HexColor.FromHexString(GlobalHelper.strumColor).Color(),
+			HexColor.FromHexString(GlobalHelper.strumColor).Color()
+		};
+		this.activeTrails = new TextMeshProUGUI[7];
 	}
 
 	public FrameRate()
@@ -54,7 +81,7 @@ public class FrameRate : MonoBehaviour
 			if (this.speedhackCheckNumber == -1)
 			{
 				FrameRate.GetSystemTimePreciseAsFileTime(out this.ftStart);
-				this.udtTotal = (double)(-(double)Time.unscaledDeltaTime);
+				this.udtTotal = -(double)Time.unscaledDeltaTime;
 				this.speedhackCheckNumber++;
 			}
 			this.udtTotal += (double)Time.unscaledDeltaTime;
@@ -110,11 +137,7 @@ public class FrameRate : MonoBehaviour
 			{
 				this.best = Time.unscaledDeltaTime;
 			}
-			if ((Time.frameCount & 512) > 0)
-			{
-				this.rr = 1f / (float)GlobalHelper.inputViewerHz;
-			}
-			this.ptimer -= Time.deltaTime;
+			this.ptimer -= Time.unscaledDeltaTime;
 			if (this.ptimer < 0f)
 			{
 				this.ptimer = this.rr;
@@ -396,79 +419,20 @@ public class FrameRate : MonoBehaviour
 				}
 				if (GlobalHelper.showInputViewer)
 				{
-					this.upperLeftTextBuilder.AppendFormat<int>("<i><indent={0}em>", GlobalHelper.inputViewerIndent);
-					if (minputs.su && minputs.sd)
+					if (!this.useTrails)
 					{
-						this.upperLeftTextBuilder.Append("<color=#cc11cc>██");
-					}
-					else if (minputs.su && !minputs.sd)
-					{
-						this.upperLeftTextBuilder.Append("<color=#cc11cc>▀▀");
-					}
-					else if (!minputs.su && minputs.sd)
-					{
-						this.upperLeftTextBuilder.Append("<color=#cc11cc>▄▄");
+						this.UpdateLights(minputs);
 					}
 					else
 					{
-						this.upperLeftTextBuilder.Append("<color=#00000000>");
-						this.upperLeftTextBuilder.Append("██");
-					}
-					if (minputs.g || this.lastg < minputs.gcount)
-					{
-						this.upperLeftTextBuilder.Append("<color=");
-						this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_greenFretColor));
-					}
-					else
-					{
-						this.upperLeftTextBuilder.Append("<color=#00000000");
-					}
-					this.upperLeftTextBuilder.Append(">██");
-					if (minputs.r || this.lastr < minputs.rcount)
-					{
-						this.upperLeftTextBuilder.Append("<color=");
-						this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_redFretColor));
-					}
-					else
-					{
-						this.upperLeftTextBuilder.Append("<color=#00000000");
-					}
-					this.upperLeftTextBuilder.Append(">██");
-					if (minputs.y || this.lasty < minputs.ycount)
-					{
-						this.upperLeftTextBuilder.Append("<color=");
-						this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_yellowFretColor));
-					}
-					else
-					{
-						this.upperLeftTextBuilder.Append("<color=#00000000");
-					}
-					this.upperLeftTextBuilder.Append(">██");
-					if (minputs.b || this.lastb < minputs.bcount)
-					{
-						this.upperLeftTextBuilder.Append("<color=");
-						this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_blueFretColor));
-					}
-					else
-					{
-						this.upperLeftTextBuilder.Append("<color=#00000000");
-					}
-					this.upperLeftTextBuilder.Append(">██");
-					if (minputs.o || this.lasto < minputs.ocount)
-					{
-						this.upperLeftTextBuilder.Append("<color=");
-						this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_orangeFretColor));
-					}
-					else
-					{
-						this.upperLeftTextBuilder.Append("<color=#00000000");
+						this.UpdateTrails(minputs);
 					}
 					this.lastg = minputs.gcount;
 					this.lastr = minputs.rcount;
 					this.lasty = minputs.ycount;
 					this.lastb = minputs.bcount;
 					this.lasto = minputs.ocount;
-					this.upperLeftTextBuilder.Append(">██</i></indent>\n<color=");
+					this.upperLeftTextBuilder.Append("<color=");
 					this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_greenFretColor));
 					this.upperLeftTextBuilder.AppendFormat<int, float>(">{1:0.000} - {0:00000}\n<color=", minputs.gcount, minputs.gptime);
 					this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_redFretColor));
@@ -520,7 +484,7 @@ public class FrameRate : MonoBehaviour
 				if (GlobalVariables.FCmode)
 				{
 					GameAudioManager.PlaySound(SoundEffectsChannel.SongFail);
-					if (Time.deltaTime == 1f)
+					if (Time.unscaledDeltaTime == 1f)
 					{
 						GameManager.instance.\u02BE\u02BD\u02BD\u02B9\u02BD\u02BF\u02B3\u02BE\u02BD\u02BB\u02BC();
 						GameManager.instance.\u02B6\u02B4\u02B8\u02B9\u02BC\u02B5\u02B8\u02B4\u02B3\u02BB\u02B6();
@@ -605,6 +569,7 @@ public class FrameRate : MonoBehaviour
 
 	private void OnDisable()
 	{
+		GlobalHelper.OnInvalidate.Remove(this._onInvalidate);
 		GlobalHelper.renderFrameInterval = 1;
 	}
 
@@ -615,6 +580,227 @@ public class FrameRate : MonoBehaviour
 
 	[DllImport("kernel32.dll")]
 	public static extern void GetSystemTimePreciseAsFileTime(out long systemTimePreciseAsFileTime);
+
+	private void UpdateLights(BaseGuitarPlayer.inputmap minputs)
+	{
+		this.upperLeftTextBuilder.AppendFormat<int>("<i><indent={0}em>", GlobalHelper.inputViewerIndent);
+		if (minputs.su && minputs.sd)
+		{
+			this.upperLeftTextBuilder.Append("<color=#cc11cc>██");
+		}
+		else if (minputs.su && !minputs.sd)
+		{
+			this.upperLeftTextBuilder.Append("<color=#cc11cc>▀▀");
+		}
+		else if (!minputs.su && minputs.sd)
+		{
+			this.upperLeftTextBuilder.Append("<color=#cc11cc>▄▄");
+		}
+		else
+		{
+			this.upperLeftTextBuilder.Append("<color=#00000000>");
+			this.upperLeftTextBuilder.Append("██");
+		}
+		if (minputs.g || this.lastg < minputs.gcount)
+		{
+			this.upperLeftTextBuilder.Append("<color=");
+			this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_greenFretColor));
+		}
+		else
+		{
+			this.upperLeftTextBuilder.Append("<color=#00000000");
+		}
+		this.upperLeftTextBuilder.Append(">██");
+		if (minputs.r || this.lastr < minputs.rcount)
+		{
+			this.upperLeftTextBuilder.Append("<color=");
+			this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_redFretColor));
+		}
+		else
+		{
+			this.upperLeftTextBuilder.Append("<color=#00000000");
+		}
+		this.upperLeftTextBuilder.Append(">██");
+		if (minputs.y || this.lasty < minputs.ycount)
+		{
+			this.upperLeftTextBuilder.Append("<color=");
+			this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_yellowFretColor));
+		}
+		else
+		{
+			this.upperLeftTextBuilder.Append("<color=#00000000");
+		}
+		this.upperLeftTextBuilder.Append(">██");
+		if (minputs.b || this.lastb < minputs.bcount)
+		{
+			this.upperLeftTextBuilder.Append("<color=");
+			this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_blueFretColor));
+		}
+		else
+		{
+			this.upperLeftTextBuilder.Append("<color=#00000000");
+		}
+		this.upperLeftTextBuilder.Append(">██");
+		if (minputs.o || this.lasto < minputs.ocount)
+		{
+			this.upperLeftTextBuilder.Append("<color=");
+			this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_orangeFretColor));
+			this.upperLeftTextBuilder.Append(">██</i></indent>\n");
+			return;
+		}
+		this.upperLeftTextBuilder.Append("<color=#00000000>██</i></indent>\n");
+	}
+
+	private void UpdateTrails(BaseGuitarPlayer.inputmap minputs)
+	{
+		float num = this.rr;
+		if (this.trailsNeedInit)
+		{
+			Vector2 vector = new Vector2(45f, 22.5f) * ((float)Screen.width / 1920f);
+			this.sizePerChar = vector.x;
+			this.scaleSpeed = (float)Screen.height / vector.y * GlobalHelper.trailSpeed;
+			this.trailsNeedInit = false;
+		}
+		if (!this.lastinputs.g && minputs.g)
+		{
+			this.activeTrails[0] = this.GetTrail(0);
+		}
+		if (!this.lastinputs.r && minputs.r)
+		{
+			this.activeTrails[1] = this.GetTrail(1);
+		}
+		if (!this.lastinputs.y && minputs.y)
+		{
+			this.activeTrails[2] = this.GetTrail(2);
+		}
+		if (!this.lastinputs.b && minputs.b)
+		{
+			this.activeTrails[3] = this.GetTrail(3);
+		}
+		if (!this.lastinputs.o && minputs.o)
+		{
+			this.activeTrails[4] = this.GetTrail(4);
+		}
+		if (!this.lastinputs.su && minputs.su)
+		{
+			this.activeTrails[5] = this.GetTrail(5);
+		}
+		if (!this.lastinputs.sd && minputs.sd)
+		{
+			this.activeTrails[6] = this.GetTrail(6);
+		}
+		if (this.lastinputs.g && !minputs.g)
+		{
+			this.activeTrails[0] = null;
+		}
+		if (this.lastinputs.r && !minputs.r)
+		{
+			this.activeTrails[1] = null;
+		}
+		if (this.lastinputs.y && !minputs.y)
+		{
+			this.activeTrails[2] = null;
+		}
+		if (this.lastinputs.b && !minputs.b)
+		{
+			this.activeTrails[3] = null;
+		}
+		if (this.lastinputs.o && !minputs.o)
+		{
+			this.activeTrails[4] = null;
+		}
+		if (this.lastinputs.su && !minputs.su)
+		{
+			this.activeTrails[5] = null;
+		}
+		if (this.lastinputs.sd && !minputs.sd)
+		{
+			this.activeTrails[6] = null;
+		}
+		TextMeshProUGUI[] array = this.trails;
+		for (int i = 0; i < array.Length; i++)
+		{
+			bool flag = false;
+			for (int j = 0; j < this.activeTrails.Length; j++)
+			{
+				if (array[i] == this.activeTrails[j])
+				{
+					flag = true;
+				}
+			}
+			if (!flag)
+			{
+				array[i].transform.position -= new Vector3(0f, this.scaleSpeed * num * 25f, 0f);
+			}
+		}
+		for (int k = 0; k < this.activeTrails.Length; k++)
+		{
+			TextMeshProUGUI textMeshProUGUI = this.activeTrails[k];
+			if (textMeshProUGUI != null)
+			{
+				textMeshProUGUI.transform.localScale += new Vector3(0f, this.scaleSpeed * num, 0f);
+			}
+		}
+		this.lastinputs = minputs;
+		this.upperLeftTextBuilder.Append('\n');
+	}
+
+	private TextMeshProUGUI GetTrail(int trail)
+	{
+		this.currentTrail++;
+		if (this.currentTrail == this.trails.Length)
+		{
+			this.currentTrail = 0;
+		}
+		TextMeshProUGUI textMeshProUGUI = this.trails[this.currentTrail];
+		textMeshProUGUI.transform.localScale = new Vector3(1.5f, 1f, 1f);
+		Vector2 vector = new Vector2(GlobalHelper.trailPosX * (float)Screen.width, (float)Screen.height - GlobalHelper.trailPosY * (float)Screen.height);
+		Debug.Log(string.Format("dsasdasd {0}", vector));
+		switch (trail)
+		{
+		case 0:
+			vector += new Vector2(this.sizePerChar * 2f, 0f);
+			break;
+		case 1:
+			vector += new Vector2(this.sizePerChar * 3f, 0f);
+			break;
+		case 2:
+			vector += new Vector2(this.sizePerChar * 4f, 0f);
+			break;
+		case 3:
+			vector += new Vector2(this.sizePerChar * 5f, 0f);
+			break;
+		case 4:
+			vector += new Vector2(this.sizePerChar * 6f, 0f);
+			break;
+		case 5:
+			vector += new Vector2(this.sizePerChar * 0f, 0f);
+			break;
+		case 6:
+			vector += new Vector2(this.sizePerChar * 1f, 0f);
+			break;
+		}
+		textMeshProUGUI.transform.position = vector;
+		textMeshProUGUI.color = this.fretColors[trail];
+		return textMeshProUGUI;
+	}
+
+	[CompilerGenerated]
+	private void __onInvalidate()
+	{
+		this.fretColors = new Color[]
+		{
+			HexColor.FromHexString(GlobalHelper.greenFretColor).Color(),
+			HexColor.FromHexString(GlobalHelper.redFretColor).Color(),
+			HexColor.FromHexString(GlobalHelper.yellowFretColor).Color(),
+			HexColor.FromHexString(GlobalHelper.blueFretColor).Color(),
+			HexColor.FromHexString(GlobalHelper.orangeFretColor).Color(),
+			HexColor.FromHexString(GlobalHelper.strumColor).Color(),
+			HexColor.FromHexString(GlobalHelper.strumColor).Color()
+		};
+		this.rr = 1f / (float)GlobalHelper.inputViewerHz;
+		Debug.Log("fr callback");
+	}
 
 	public float const1;
 
@@ -773,4 +959,42 @@ public class FrameRate : MonoBehaviour
 	private long old_ftStart;
 
 	private double old_udtTotal;
+
+	private TextMeshProUGUI noiseTMP;
+
+	private static global::System.Random rnd = new global::System.Random();
+
+	private bool useTrails;
+
+	private TextMeshProUGUI[] trails;
+
+	private const int GREEN = 0;
+
+	private const int RED = 1;
+
+	private const int YELLOW = 2;
+
+	private const int BLUE = 3;
+
+	private const int ORANGE = 4;
+
+	private const int UPSTRUM = 5;
+
+	private const int DOWNSTRUM = 6;
+
+	private int currentTrail;
+
+	private Color[] fretColors;
+
+	private Action _onInvalidate;
+
+	private bool trailsNeedInit;
+
+	private float sizePerChar;
+
+	private float scaleSpeed;
+
+	private TextMeshProUGUI[] activeTrails;
+
+	private BaseGuitarPlayer.inputmap lastinputs;
 }

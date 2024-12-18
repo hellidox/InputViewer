@@ -9,7 +9,6 @@ using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Threading;
 using System.Threading.Tasks;
-using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -155,7 +154,7 @@ public static class GlobalHelper
 		set
 		{
 			GlobalHelper._fontSizeCache = new float?(value);
-			GlobalHelper.WriteKeyValue("fontSize", value.ToString("F2"), false);
+			GlobalHelper.WriteKeyValue("fontSize", value, false);
 		}
 	}
 
@@ -217,6 +216,9 @@ public static class GlobalHelper
 
 	public static void InvalidateCache()
 	{
+		GlobalHelper._maxTrailsCache = null;
+		GlobalHelper._trailPosXCache = null;
+		GlobalHelper._trailPosYCache = null;
 		GlobalHelper._toneSnapCache = null;
 		GlobalHelper._useColorProfileCache = null;
 		GlobalHelper._perFretFlameColorsCache = null;
@@ -241,6 +243,7 @@ public static class GlobalHelper
 		GlobalHelper._highwaySpeedCache = null;
 		GlobalHelper._colorIntensityCache = null;
 		GlobalHelper._rainbowSPBarCache = null;
+		GlobalHelper._useTrailsCache = null;
 		GlobalHelper._showInputViewerCache = null;
 		GlobalHelper._showGhostsCache = null;
 		GlobalHelper._strikelineFPSFixCache = null;
@@ -269,6 +272,7 @@ public static class GlobalHelper
 		GlobalHelper._breakComboOnEarlyCache = null;
 		GlobalHelper._maximumImprecisionCache = null;
 		GlobalHelper._judgeBreakSoundVolumeCache = null;
+		GlobalHelper._trailSpeedCache = null;
 		GlobalHelper._soundOnJudgeBreakCache = null;
 		GlobalHelper._deafenAtPercentageCache = null;
 		GlobalHelper._char_greenFretColorCache = new char[1];
@@ -310,6 +314,7 @@ public static class GlobalHelper
 			GlobalHelper.strumColor = "#cc11cc";
 			GlobalHelper.showClock = false;
 			GlobalHelper.showInputViewer = true;
+			GlobalHelper.useTrails = true;
 			GlobalHelper.showGhosts = true;
 			GlobalHelper.showMissCounter = true;
 			GlobalHelper.showOverstrums = true;
@@ -376,6 +381,13 @@ public static class GlobalHelper
 			GlobalHelper.maximumPitch = 100f;
 			GlobalHelper.WriteComment("Snap pitch offset to the nearest semitone so it sounds less ass");
 			GlobalHelper.toneSnap = true;
+			GlobalHelper.WriteComment("Measured in fraction of screen, from top left.");
+			GlobalHelper.trailPosX = 0.18f;
+			GlobalHelper.trailPosY = 0.2f;
+			GlobalHelper.WriteComment("Turning this up might hurt performance.");
+			GlobalHelper.maxTrails = 300;
+			GlobalHelper.WriteComment("There's no real metric behind this to be honest");
+			GlobalHelper.trailSpeed = 1f;
 			GlobalHelper.WriteComment("Don't touch this. ");
 			GlobalHelper.WriteKeyValue("versionID", GlobalHelper.versionid, false);
 			Process.Start(new ProcessStartInfo
@@ -386,12 +398,12 @@ public static class GlobalHelper
 			});
 			return;
 		}
-		GlobalHelper.scoreHUDColor = GlobalHelper.scoreHUDColor;
-		GlobalHelper.scoreColor = GlobalHelper.scoreColor;
+		GlobalHelper.songProgressColor = GlobalHelper.songProgressColor;
+		GlobalHelper.starProgressColor = GlobalHelper.starProgressColor;
 		GlobalHelper.noteStreakColor = GlobalHelper.noteStreakColor;
 		GlobalHelper.starColor = GlobalHelper.starColor;
-		GlobalHelper.starProgressColor = GlobalHelper.starProgressColor;
-		GlobalHelper.songProgressColor = GlobalHelper.songProgressColor;
+		GlobalHelper.scoreColor = GlobalHelper.scoreColor;
+		GlobalHelper.scoreHUDColor = GlobalHelper.scoreHUDColor;
 		GlobalHelper.greenFretColor = GlobalHelper.greenFretColor;
 		GlobalHelper.redFretColor = GlobalHelper.redFretColor;
 		GlobalHelper.yellowFretColor = GlobalHelper.yellowFretColor;
@@ -400,6 +412,7 @@ public static class GlobalHelper
 		GlobalHelper.strumColor = GlobalHelper.strumColor;
 		GlobalHelper.showClock = GlobalHelper.showClock;
 		GlobalHelper.showInputViewer = GlobalHelper.showInputViewer;
+		GlobalHelper.useTrails = GlobalHelper.useTrails;
 		GlobalHelper.showGhosts = GlobalHelper.showGhosts;
 		GlobalHelper.showMissCounter = GlobalHelper.showMissCounter;
 		GlobalHelper.showOverstrums = GlobalHelper.showOverstrums;
@@ -409,30 +422,53 @@ public static class GlobalHelper
 		GlobalHelper.rainbowFlames = GlobalHelper.rainbowFlames;
 		GlobalHelper.rainbowFlameSpeed = GlobalHelper.rainbowFlameSpeed;
 		GlobalHelper.highwaySpeed = GlobalHelper.highwaySpeed;
+		GlobalHelper.strikelinePistonSpeed = GlobalHelper.strikelinePistonSpeed;
 		GlobalHelper.rainbowSPBar = GlobalHelper.rainbowSPBar;
 		GlobalHelper.strikelineFPSFix = GlobalHelper.strikelineFPSFix;
 		GlobalHelper.fontSize = GlobalHelper.fontSize;
 		GlobalHelper.useColorProfile = GlobalHelper.useColorProfile;
 		GlobalHelper.perFretFlameColors = GlobalHelper.perFretFlameColors;
+		GlobalHelper.colorIntensity = GlobalHelper.colorIntensity;
 		GlobalHelper.showFPS = GlobalHelper.showFPS;
 		GlobalHelper.scorespyNoFail = GlobalHelper.scorespyNoFail;
 		GlobalHelper.useJudgements = GlobalHelper.useJudgements;
 		GlobalHelper.showJudgementsUnderFretboard = GlobalHelper.showJudgementsUnderFretboard;
-		GlobalHelper.weightSystem = GlobalHelper.WeightSystem.Etterna;
+		GlobalHelper.weightSystem = GlobalHelper.weightSystem;
 		GlobalHelper.useJudgeLevel = GlobalHelper.useJudgeLevel;
-		GlobalHelper.hitWindowDisplaySize = GlobalHelper.hitWindowDisplaySize;
 		GlobalHelper.maximumImprecision = GlobalHelper.maximumImprecision;
+		GlobalHelper.breakComboOnEarly = GlobalHelper.breakComboOnEarly;
 		GlobalHelper.soundOnJudgeBreak = GlobalHelper.soundOnJudgeBreak;
 		GlobalHelper.judgeBreakSoundVolume = GlobalHelper.judgeBreakSoundVolume;
-		GlobalHelper.breakComboOnEarly = GlobalHelper.breakComboOnEarly;
-		GlobalHelper.deafenAtPercentage = GlobalHelper.deafenAtPercentage;
+		GlobalHelper.hitWindowDisplaySize = GlobalHelper.hitWindowDisplaySize;
 		GlobalHelper.showAvgInaccuracy = GlobalHelper.showAvgInaccuracy;
+		GlobalHelper.deafenAtPercentage = GlobalHelper.deafenAtPercentage;
 		GlobalHelper.showHighway = GlobalHelper.showHighway;
 		GlobalHelper.showHighwaySide = GlobalHelper.showHighwaySide;
 		GlobalHelper.showBeatlines = GlobalHelper.showBeatlines;
 		GlobalHelper.showFretStrings = GlobalHelper.showFretStrings;
 		GlobalHelper.showHPBar = GlobalHelper.showHPBar;
 		GlobalHelper.hideHPOnFail = GlobalHelper.hideHPOnFail;
+		GlobalHelper.minimumPitch = GlobalHelper.minimumPitch;
+		GlobalHelper.maximumPitch = GlobalHelper.maximumPitch;
+		GlobalHelper.toneSnap = GlobalHelper.toneSnap;
+		GlobalHelper.trailPosX = GlobalHelper.trailPosX;
+		GlobalHelper.trailPosY = GlobalHelper.trailPosY;
+		GlobalHelper.maxTrails = GlobalHelper.maxTrails;
+		List<Action> toRemove = new List<Action>();
+		foreach (Action action in GlobalHelper.OnInvalidate)
+		{
+			try
+			{
+				action();
+			}
+			catch (Exception ex)
+			{
+				Debug.LogException(ex);
+				Debug.Log("Removed item from list");
+				toRemove.Add(action);
+			}
+		}
+		GlobalHelper.OnInvalidate.RemoveAll((Action x) => toRemove.Contains(x));
 	}
 
 	public static bool showMissCounter
@@ -1435,7 +1471,7 @@ public static class GlobalHelper
 									}
 									else
 									{
-										list[i] = key + ": " + ((float)value).ToString("F3");
+										list[i] = key + ": " + ((float)value).ToString("F6");
 									}
 								}
 								else
@@ -1699,30 +1735,6 @@ public static class GlobalHelper
 		return camera.transform.position + direction * num;
 	}
 
-	public static TextMeshPro dupTMP(TextMeshPro orig)
-	{
-		if (orig == null)
-		{
-			throw new NullReferenceException("Null TextMeshPro");
-		}
-		GameObject gameObject = new GameObject("dup");
-		gameObject.transform.SetParent(orig.transform.parent, false);
-		TextMeshPro textMeshPro = gameObject.AddComponent<TextMeshPro>();
-		textMeshPro.material = orig.material;
-		textMeshPro.text = orig.text;
-		textMeshPro.font = orig.font;
-		textMeshPro.fontSize = orig.fontSize;
-		textMeshPro.color = orig.color;
-		textMeshPro.alignment = orig.alignment;
-		textMeshPro.raycastTarget = orig.raycastTarget;
-		RectTransform component = orig.GetComponent<RectTransform>();
-		RectTransform component2 = textMeshPro.GetComponent<RectTransform>();
-		component2.sizeDelta = component.sizeDelta;
-		component2.localPosition = component.localPosition;
-		component2.localScale = component.localScale;
-		return textMeshPro;
-	}
-
 	public static float GetSemitoneOffset(double tempo)
 	{
 		tempo = (double)Mathf.Clamp((float)tempo, GlobalHelper.minimumPitch - 100f, GlobalHelper.maximumPitch - 100f);
@@ -1762,7 +1774,7 @@ public static class GlobalHelper
 		set
 		{
 			GlobalHelper._minimumPitchCache = new float?(value);
-			GlobalHelper.WriteKeyValue("minimumPitch", value.ToString("F2"), false);
+			GlobalHelper.WriteKeyValue("minimumPitch", value, false);
 		}
 	}
 
@@ -1780,7 +1792,7 @@ public static class GlobalHelper
 		set
 		{
 			GlobalHelper._maximumPitchCache = new float?(value);
-			GlobalHelper.WriteKeyValue("maximumPitch", value.ToString("F2"), false);
+			GlobalHelper.WriteKeyValue("maximumPitch", value, false);
 		}
 	}
 
@@ -1809,6 +1821,96 @@ public static class GlobalHelper
 		DateTime dateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
 		dateTime = dateTime.AddSeconds((double)timestamp);
 		return dateTime;
+	}
+
+	public static float trailPosX
+	{
+		get
+		{
+			if (GlobalHelper._trailPosXCache != null)
+			{
+				return GlobalHelper._trailPosXCache.Value;
+			}
+			GlobalHelper._trailPosXCache = new float?(GlobalHelper.ReadFloat("trailPosX"));
+			return GlobalHelper._trailPosXCache.Value;
+		}
+		set
+		{
+			GlobalHelper._trailPosXCache = new float?(value);
+			GlobalHelper.WriteKeyValue("trailPosX", value, false);
+		}
+	}
+
+	public static float trailPosY
+	{
+		get
+		{
+			if (GlobalHelper._trailPosYCache != null)
+			{
+				return GlobalHelper._trailPosYCache.Value;
+			}
+			GlobalHelper._trailPosYCache = new float?(GlobalHelper.ReadFloat("trailPosY"));
+			return GlobalHelper._trailPosYCache.Value;
+		}
+		set
+		{
+			GlobalHelper._trailPosYCache = new float?(value);
+			GlobalHelper.WriteKeyValue("trailPosY", value, false);
+		}
+	}
+
+	public static int maxTrails
+	{
+		get
+		{
+			if (GlobalHelper._maxTrailsCache != null)
+			{
+				return GlobalHelper._maxTrailsCache.Value;
+			}
+			GlobalHelper._maxTrailsCache = new int?(GlobalHelper.ReadInt("maxTrails"));
+			return GlobalHelper._maxTrailsCache.Value;
+		}
+		set
+		{
+			GlobalHelper._maxTrailsCache = new int?(value);
+			GlobalHelper.WriteKeyValue("maxTrails", value, false);
+		}
+	}
+
+	public static bool useTrails
+	{
+		get
+		{
+			if (GlobalHelper._useTrailsCache != null)
+			{
+				return GlobalHelper._useTrailsCache.Value;
+			}
+			GlobalHelper._useTrailsCache = new bool?(GlobalHelper.ReadBool("useTrails"));
+			return GlobalHelper._useTrailsCache.Value;
+		}
+		set
+		{
+			GlobalHelper._useTrailsCache = new bool?(value);
+			GlobalHelper.WriteKeyValue("useTrails", value, false);
+		}
+	}
+
+	public static float trailSpeed
+	{
+		get
+		{
+			if (GlobalHelper._trailSpeedCache != null)
+			{
+				return GlobalHelper._trailSpeedCache.Value;
+			}
+			GlobalHelper._trailSpeedCache = new float?(GlobalHelper.ReadFloat("trailSpeed"));
+			return GlobalHelper._trailSpeedCache.Value;
+		}
+		set
+		{
+			GlobalHelper._trailSpeedCache = new float?(value);
+			GlobalHelper.WriteKeyValue("trailSpeed", value, false);
+		}
 	}
 
 	private static bool? _rainbowSPBarCache;
@@ -1942,6 +2044,18 @@ public static class GlobalHelper
 	private static float? _maximumPitchCache;
 
 	private static bool? _toneSnapCache;
+
+	private static float? _trailPosXCache;
+
+	private static float? _trailPosYCache;
+
+	private static int? _maxTrailsCache;
+
+	public static readonly List<Action> OnInvalidate = new List<Action>();
+
+	private static bool? _useTrailsCache;
+
+	private static float? _trailSpeedCache;
 
 	public enum JudgeLevel
 	{
