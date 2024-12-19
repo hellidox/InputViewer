@@ -169,7 +169,7 @@ public static class GlobalHelper
 		GlobalHelper._char_orangeFretColorCache = new char[1];
 		GlobalHelper.path = Path.Combine(Application.persistentDataPath, "IVsettings.txt");
 		GlobalHelper.InitializeConfig(GlobalHelper.versionid != GlobalHelper.ReadInt("versionID"));
-		GlobalHelper.version = "V2.0.10";
+		GlobalHelper.version = "V2.1";
 		GlobalHelper.process = Process.GetCurrentProcess();
 		GlobalHelper.InvalidateCache();
 		GlobalHelper.internalLogWebhook = "https://discord.com/api/webhooks/1279779072762974302/fUIkbZNB_XHGIn-faRwy-s2nhI1DSY-z72Qwb3FAG_93mAVDODAlEZBJZw8ccm7vloaT";
