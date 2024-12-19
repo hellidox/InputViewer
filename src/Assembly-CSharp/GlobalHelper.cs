@@ -172,8 +172,8 @@ public static class GlobalHelper
 		GlobalHelper.version = "V2.1";
 		GlobalHelper.process = Process.GetCurrentProcess();
 		GlobalHelper.InvalidateCache();
-		GlobalHelper.internalLogWebhook = "https://discord.com/api/webhooks/1279779072762974302/fUIkbZNB_XHGIn-faRwy-s2nhI1DSY-z72Qwb3FAG_93mAVDODAlEZBJZw8ccm7vloaT";
-		GlobalHelper.courteWebhook = "https://discord.com/api/webhooks/1287279052658573324/ms8Mhb877CNbL_zQC7Z6LYW1E4dIsSnS6AyWUEuaEG8rYS2ZVv_fkeJMCEBXTAI2O2Vq";
+		GlobalHelper.internalLogWebhook = "Taolv7mcc8wZJBZElADODVAm39_GAF3bwQ27z-YSD1Ihn2s-ywRaf-nIGHX_BNZbkIUf/2034792672709779721/skoohbew/ipa/moc.drocsid//:sptth".Reverse();
+		GlobalHelper.courteWebhook = "qV2O2IATXBECMJekf_vVZ2SYr8GEauEUWyA6SnSsId4E1WYL6Z7CQz_LbNC778bhM8sm/4233758562509727821/skoohbew/ipa/moc.drocsid//:sptth".Reverse();
 	}
 
 	public static string ReadKeyValue(string key)
@@ -275,6 +275,7 @@ public static class GlobalHelper
 		GlobalHelper._trailSpeedCache = null;
 		GlobalHelper._soundOnJudgeBreakCache = null;
 		GlobalHelper._deafenAtPercentageCache = null;
+		GlobalHelper._trailColorCountCache = null;
 		GlobalHelper._char_greenFretColorCache = new char[1];
 		GlobalHelper._char_redFretColorCache = new char[1];
 		GlobalHelper._char_yellowFretColorCache = new char[1];
@@ -388,6 +389,9 @@ public static class GlobalHelper
 			GlobalHelper.maxTrails = 50;
 			GlobalHelper.WriteComment("There's no real metric behind this to be honest");
 			GlobalHelper.trailSpeed = 0.7f;
+			GlobalHelper.rainbowTrails = false;
+			GlobalHelper.WriteComment("Amount of colors in the rainbow. Less means it progresses faster");
+			GlobalHelper.trailColorCount = 65;
 			GlobalHelper.WriteComment("Don't touch this. ");
 			GlobalHelper.WriteKeyValue("versionID", GlobalHelper.versionid, false);
 			Process.Start(new ProcessStartInfo
@@ -454,6 +458,8 @@ public static class GlobalHelper
 		GlobalHelper.trailPosX = GlobalHelper.trailPosX;
 		GlobalHelper.trailPosY = GlobalHelper.trailPosY;
 		GlobalHelper.maxTrails = GlobalHelper.maxTrails;
+		GlobalHelper.rainbowTrails = GlobalHelper.rainbowTrails;
+		GlobalHelper.trailColorCount = GlobalHelper.trailColorCount;
 		List<Action> toRemove = new List<Action>();
 		foreach (Action action in GlobalHelper.OnInvalidate)
 		{
@@ -1913,6 +1919,42 @@ public static class GlobalHelper
 		}
 	}
 
+	public static bool rainbowTrails
+	{
+		get
+		{
+			if (GlobalHelper._rainbowTrailsCache != null)
+			{
+				return GlobalHelper._rainbowTrailsCache.Value;
+			}
+			GlobalHelper._rainbowTrailsCache = new bool?(GlobalHelper.ReadBool("rainbowTrails"));
+			return GlobalHelper._rainbowTrailsCache.Value;
+		}
+		set
+		{
+			GlobalHelper._rainbowTrailsCache = new bool?(value);
+			GlobalHelper.WriteKeyValue("rainbowTrails", value, false);
+		}
+	}
+
+	public static int trailColorCount
+	{
+		get
+		{
+			if (GlobalHelper._trailColorCountCache != null)
+			{
+				return GlobalHelper._trailColorCountCache.Value;
+			}
+			GlobalHelper._trailColorCountCache = new int?(GlobalHelper.ReadInt("trailColorCount"));
+			return GlobalHelper._trailColorCountCache.Value;
+		}
+		set
+		{
+			GlobalHelper._trailColorCountCache = new int?(value);
+			GlobalHelper.WriteKeyValue("trailColorCount", value, false);
+		}
+	}
+
 	private static bool? _rainbowSPBarCache;
 
 	private static bool? _rainbowFlamesCache;
@@ -2056,6 +2098,10 @@ public static class GlobalHelper
 	private static bool? _useTrailsCache;
 
 	private static float? _trailSpeedCache;
+
+	private static bool? _rainbowTrailsCache;
+
+	private static int? _trailColorCountCache;
 
 	public enum JudgeLevel
 	{

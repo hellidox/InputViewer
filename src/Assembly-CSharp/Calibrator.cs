@@ -9,7 +9,7 @@ public class Calibrator : MonoBehaviour
 {
 	public List<\u02BD\u02BC\u02C0\u02BE\u02B2\u02BB\u02C0\u02B5\u02B5\u02BA\u02C1> \u02B8\u02C1\u02B7\u02B6\u02C0\u02BD\u02BD\u02B2\u02B6\u02BA\u02B9 { get; private set; }
 
-	public void \u02B3\u02B7\u02B9\u02B4\u02C1\u02BF\u02B3\u02B3\u02B4\u02BE\u02B9(\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7)
+	public void \u02B3\u02B7\u02B9\u02B4\u02C1\u02BF\u02B3\u02B3\u02B4\u02BE\u02B9(CHPlayer \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7)
 	{
 		this.\u02B8\u02C1\u02B7\u02B6\u02C0\u02BD\u02BD\u02B2\u02B6\u02BA\u02B9 = Calibrator.\u02B3\u02BF\u02C0\u02C0\u02BF\u02BD\u02B8\u02BA\u02C0\u02BE\u02B6();
 		this.\u02B5\u02BB\u02BE\u02B7\u02B6\u02BA\u02B2\u02BA\u02B4\u02BE\u02B9 = Time.realtimeSinceStartup;
@@ -58,7 +58,7 @@ public class Calibrator : MonoBehaviour
 		this.\u02B9\u02BE\u02B9\u02B8\u02B2\u02B2\u02BE\u02BC\u02B5\u02B9\u02BC = this.\u02B8\u02C1\u02B7\u02B6\u02C0\u02BD\u02BD\u02B2\u02B6\u02BA\u02B9[this.\u02B8\u02C1\u02B7\u02B6\u02C0\u02BD\u02BD\u02B2\u02B6\u02BA\u02B9.Count - 1].\u02B2\u02B6\u02B9\u02B8\u02BF\u02BD\u02BF\u02BA\u02B9\u02C1\u02B5 + 1.0;
 	}
 
-	public void \u02BC\u02BC\u02B8\u02B3\u02B2\u02B9\u02BA\u02B8\u02B3\u02B5\u02BD(\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7)
+	public void \u02BC\u02BC\u02B8\u02B3\u02B2\u02B9\u02BA\u02B8\u02B3\u02B5\u02BD(CHPlayer \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7)
 	{
 		this.\u02B8\u02C1\u02B7\u02B6\u02C0\u02BD\u02BD\u02B2\u02B6\u02BA\u02B9 = Calibrator.\u02B3\u02BF\u02C0\u02C0\u02BF\u02BD\u02B8\u02BA\u02C0\u02BE\u02B6();
 		this.\u02B5\u02BB\u02BE\u02B7\u02B6\u02BA\u02B2\u02BA\u02B4\u02BE\u02B9 = Time.realtimeSinceStartup;
@@ -69,13 +69,13 @@ public class Calibrator : MonoBehaviour
 		this.latencyGraph.\u02B3\u02B5\u02BC\u02B6\u02B3\u02BB\u02C1\u02BB\u02C1\u02BF\u02BC();
 	}
 
-	private \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02BC\u02B7\u02BB\u02C1\u02C1\u02B4\u02B8\u02BD\u02B8\u02C1()
+	private CHPlayer \u02BE\u02BC\u02B7\u02BB\u02C1\u02C1\u02B4\u02B8\u02BD\u02B8\u02C1()
 	{
-		foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
+		foreach (CHPlayer chplayer in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
 		{
-			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.rewiredPlayer.GetButtonDown(0))
+			if (chplayer.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && chplayer.rewiredPlayer.GetButtonDown(0))
 			{
-				return u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B;
+				return chplayer;
 			}
 		}
 		return null;
@@ -149,7 +149,7 @@ public class Calibrator : MonoBehaviour
 		}
 	}
 
-	public void \u02B5\u02BD\u02C1\u02B6\u02BA\u02B4\u02BD\u02BD\u02B4\u02B7\u02BF(\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7)
+	public void \u02B5\u02BD\u02C1\u02B6\u02BA\u02B4\u02BD\u02BD\u02B4\u02B7\u02BF(CHPlayer \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7)
 	{
 		this.\u02B8\u02C1\u02B7\u02B6\u02C0\u02BD\u02BD\u02B2\u02B6\u02BA\u02B9 = Calibrator.\u02B4\u02B3\u02B9\u02C0\u02B3\u02B5\u02BC\u02B2\u02BA\u02B3\u02B6();
 		this.\u02B5\u02BB\u02BE\u02B7\u02B6\u02BA\u02B2\u02BA\u02B4\u02BE\u02B9 = Time.realtimeSinceStartup;
@@ -160,7 +160,7 @@ public class Calibrator : MonoBehaviour
 		this.latencyGraph.\u02B3\u02B5\u02BC\u02B6\u02B3\u02BB\u02C1\u02BB\u02C1\u02BF\u02BC();
 	}
 
-	public void \u02B3\u02B6\u02C1\u02BB\u02B9\u02BE\u02BB\u02BC\u02BC\u02B8\u02B4(\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7)
+	public void \u02B3\u02B6\u02C1\u02BB\u02B9\u02BE\u02BB\u02BC\u02BC\u02B8\u02B4(CHPlayer \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7)
 	{
 		this.\u02B8\u02C1\u02B7\u02B6\u02C0\u02BD\u02BD\u02B2\u02B6\u02BA\u02B9 = Calibrator.\u02B4\u02B3\u02B9\u02C0\u02B3\u02B5\u02BC\u02B2\u02BA\u02B3\u02B6();
 		this.\u02B5\u02BB\u02BE\u02B7\u02B6\u02BA\u02B2\u02BA\u02B4\u02BE\u02B9 = Time.realtimeSinceStartup;
@@ -171,13 +171,13 @@ public class Calibrator : MonoBehaviour
 		this.latencyGraph.\u02C1\u02C1\u02BA\u02BC\u02BE\u02B6\u02BB\u02B2\u02BC\u02C1\u02BD();
 	}
 
-	private \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02B5\u02BF\u02B4\u02BA\u02B7\u02BD\u02B5\u02B7\u02B9\u02B7\u02B7()
+	private CHPlayer \u02B5\u02BF\u02B4\u02BA\u02B7\u02BD\u02B5\u02B7\u02B9\u02B7\u02B7()
 	{
-		foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
+		foreach (CHPlayer chplayer in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
 		{
-			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.rewiredPlayer.GetButtonDown(0))
+			if (chplayer.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && chplayer.rewiredPlayer.GetButtonDown(0))
 			{
-				return u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B;
+				return chplayer;
 			}
 		}
 		return null;
@@ -193,13 +193,13 @@ public class Calibrator : MonoBehaviour
 		\u02BD\u02C1\u02B9\u02C0\u02B6\u02BB\u02BB\u02C0\u02BB\u02B7\u02BE.\u02B5\u02B2\u02B8\u02BC\u02B3\u02B5\u02B4\u02B7\u02B2\u02B5\u02BD();
 	}
 
-	private \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BB\u02BF\u02B2\u02BC\u02B3\u02B7\u02C1\u02BD\u02B4\u02B6\u02BD()
+	private CHPlayer \u02BB\u02BF\u02B2\u02BC\u02B3\u02B7\u02C1\u02BD\u02B4\u02B6\u02BD()
 	{
-		foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
+		foreach (CHPlayer chplayer in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
 		{
-			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.rewiredPlayer.GetButtonDown(1))
+			if (chplayer.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && chplayer.rewiredPlayer.GetButtonDown(1))
 			{
-				return u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B;
+				return chplayer;
 			}
 		}
 		return null;
@@ -240,10 +240,10 @@ public class Calibrator : MonoBehaviour
 		{
 		case \u02B3\u02C0\u02B9\u02B5\u02B2\u02B5\u02BF\u02B6\u02BD\u02B4\u02BC.Intro:
 		{
-			\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B = this.\u02B3\u02C0\u02BA\u02BD\u02C0\u02C1\u02B6\u02B7\u02B5\u02B9\u02C1();
-			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B != null)
+			CHPlayer chplayer = this.\u02B3\u02C0\u02BA\u02BD\u02C0\u02C1\u02B6\u02B7\u02B5\u02B9\u02C1();
+			if (chplayer != null)
 			{
-				this.\u02B3\u02B7\u02B9\u02B4\u02C1\u02BF\u02B3\u02B3\u02B4\u02BE\u02B9(u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B);
+				this.\u02B3\u02B7\u02B9\u02B4\u02C1\u02BF\u02B3\u02B3\u02B4\u02BE\u02B9(chplayer);
 				this.startText.gameObject.SetActive(false);
 				return;
 			}
@@ -272,17 +272,17 @@ public class Calibrator : MonoBehaviour
 			break;
 		case \u02B3\u02C0\u02B9\u02B5\u02B2\u02B5\u02BF\u02B6\u02BD\u02B4\u02BC.AudioFinished:
 		{
-			\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B = this.\u02B5\u02BF\u02B4\u02BA\u02B7\u02BD\u02B5\u02B7\u02B9\u02B7\u02B7();
-			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B != null)
+			CHPlayer chplayer = this.\u02B5\u02BF\u02B4\u02BA\u02B7\u02BD\u02B5\u02B7\u02B9\u02B7\u02B7();
+			if (chplayer != null)
 			{
-				this.\u02BD\u02B9\u02C1\u02BB\u02B3\u02B2\u02BD\u02C1\u02B2\u02BD\u02BC(u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B);
+				this.\u02BD\u02B9\u02C1\u02BB\u02B3\u02B2\u02BD\u02C1\u02B2\u02BD\u02BC(chplayer);
 				this.startText.gameObject.SetActive(true);
 				return;
 			}
-			u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B = this.\u02BE\u02BC\u02B7\u02BB\u02C1\u02C1\u02B4\u02B8\u02BD\u02B8\u02C1();
-			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B != null)
+			chplayer = this.\u02BE\u02BC\u02B7\u02BB\u02C1\u02C1\u02B4\u02B8\u02BD\u02B8\u02C1();
+			if (chplayer != null)
 			{
-				this.\u02B5\u02BD\u02C1\u02B6\u02BA\u02B4\u02BD\u02BD\u02B4\u02B7\u02BF(u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B);
+				this.\u02B5\u02BD\u02C1\u02B6\u02BA\u02B4\u02BD\u02BD\u02B4\u02B7\u02BF(chplayer);
 				this.startText.gameObject.SetActive(false);
 				return;
 			}
@@ -299,14 +299,14 @@ public class Calibrator : MonoBehaviour
 			return;
 		case \u02B3\u02C0\u02B9\u02B5\u02B2\u02B5\u02BF\u02B6\u02BD\u02B4\u02BC.VideoFinished:
 		{
-			\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B = this.\u02C0\u02B7\u02B5\u02B2\u02B7\u02BC\u02C1\u02BD\u02BF\u02C1\u02BA();
-			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B != null)
+			CHPlayer chplayer = this.\u02C0\u02B7\u02B5\u02B2\u02B7\u02BC\u02C1\u02BD\u02BF\u02C1\u02BA();
+			if (chplayer != null)
 			{
-				this.\u02B5\u02BD\u02C1\u02B6\u02BA\u02B4\u02BD\u02BD\u02B4\u02B7\u02BF(u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B);
+				this.\u02B5\u02BD\u02C1\u02B6\u02BA\u02B4\u02BD\u02BD\u02B4\u02B7\u02BF(chplayer);
 				this.startText.gameObject.SetActive(true);
 			}
-			u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B = this.\u02B8\u02B8\u02BF\u02B4\u02BC\u02B5\u02C1\u02C1\u02C1\u02B8\u02B2();
-			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B != null)
+			chplayer = this.\u02B8\u02B8\u02BF\u02B4\u02BC\u02B5\u02C1\u02C1\u02C1\u02B8\u02B2();
+			if (chplayer != null)
 			{
 				GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02BC\u02B4\u02B9\u02B7\u02B4\u02BE\u02BF\u02B4\u02BE\u02B4(false);
 				SceneManager.LoadScene("beat");
@@ -335,19 +335,19 @@ public class Calibrator : MonoBehaviour
 
 	public float \u02B2\u02BB\u02BA\u02B9\u02BA\u02B2\u02B7\u02BE\u02BB\u02BA\u02B9 { get; private set; }
 
-	private \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BA\u02BD\u02BC\u02B4\u02BD\u02B8\u02B8\u02B4\u02B4\u02BE\u02B6()
+	private CHPlayer \u02BA\u02BD\u02BC\u02B4\u02BD\u02B8\u02B8\u02B4\u02B4\u02BE\u02B6()
 	{
-		foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
+		foreach (CHPlayer chplayer in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
 		{
-			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.rewiredPlayer.GetButtonDown(1))
+			if (chplayer.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && chplayer.rewiredPlayer.GetButtonDown(1))
 			{
-				return u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B;
+				return chplayer;
 			}
 		}
 		return null;
 	}
 
-	public void \u02B7\u02B2\u02BE\u02B4\u02C1\u02B7\u02BA\u02B8\u02BF\u02B2\u02BA(\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7)
+	public void \u02B7\u02B2\u02BE\u02B4\u02C1\u02B7\u02BA\u02B8\u02BF\u02B2\u02BA(CHPlayer \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7)
 	{
 		this.\u02B8\u02C1\u02B7\u02B6\u02C0\u02BD\u02BD\u02B2\u02B6\u02BA\u02B9 = Calibrator.\u02B4\u02B3\u02B9\u02C0\u02B3\u02B5\u02BC\u02B2\u02BA\u02B3\u02B6();
 		this.\u02B5\u02BB\u02BE\u02B7\u02B6\u02BA\u02B2\u02BA\u02B4\u02BE\u02B9 = Time.realtimeSinceStartup;
@@ -360,13 +360,13 @@ public class Calibrator : MonoBehaviour
 		this.\u02BF\u02BA\u02B7\u02BF\u02B6\u02B8\u02B3\u02C0\u02B3\u02B7\u02B8();
 	}
 
-	private \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02B3\u02C0\u02BA\u02BD\u02C0\u02C1\u02B6\u02B7\u02B5\u02B9\u02C1()
+	private CHPlayer \u02B3\u02C0\u02BA\u02BD\u02C0\u02C1\u02B6\u02B7\u02B5\u02B9\u02C1()
 	{
-		foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
+		foreach (CHPlayer chplayer in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
 		{
-			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.rewiredPlayer.GetAnyButtonDown())
+			if (chplayer.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && chplayer.rewiredPlayer.GetAnyButtonDown())
 			{
-				return u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B;
+				return chplayer;
 			}
 		}
 		return null;
@@ -381,31 +381,31 @@ public class Calibrator : MonoBehaviour
 		this.\u02B2\u02B9\u02B7\u02C1\u02B7\u02BB\u02BA\u02BB\u02BD\u02C0\u02BC = \u02B3\u02C0\u02B9\u02B5\u02B2\u02B5\u02BF\u02B6\u02BD\u02B4\u02BC.VideoFinished;
 	}
 
-	private \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02C0\u02B7\u02B5\u02B2\u02B7\u02BC\u02C1\u02BD\u02BF\u02C1\u02BA()
+	private CHPlayer \u02C0\u02B7\u02B5\u02B2\u02B7\u02BC\u02C1\u02BD\u02BF\u02C1\u02BA()
 	{
-		foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
+		foreach (CHPlayer chplayer in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
 		{
-			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.rewiredPlayer.GetButtonDown(1))
+			if (chplayer.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && chplayer.rewiredPlayer.GetButtonDown(1))
 			{
-				return u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B;
+				return chplayer;
 			}
 		}
 		return null;
 	}
 
-	private \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02B8\u02B8\u02BF\u02B4\u02BC\u02B5\u02C1\u02C1\u02C1\u02B8\u02B2()
+	private CHPlayer \u02B8\u02B8\u02BF\u02B4\u02BC\u02B5\u02C1\u02C1\u02C1\u02B8\u02B2()
 	{
-		foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
+		foreach (CHPlayer chplayer in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
 		{
-			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.rewiredPlayer.GetButtonDown(0))
+			if (chplayer.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && chplayer.rewiredPlayer.GetButtonDown(0))
 			{
-				return u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B;
+				return chplayer;
 			}
 		}
 		return null;
 	}
 
-	public void \u02BD\u02B9\u02C1\u02BB\u02B3\u02B2\u02BD\u02C1\u02B2\u02BD\u02BC(\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7)
+	public void \u02BD\u02B9\u02C1\u02BB\u02B3\u02B2\u02BD\u02C1\u02B2\u02BD\u02BC(CHPlayer \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7)
 	{
 		this.\u02B8\u02C1\u02B7\u02B6\u02C0\u02BD\u02BD\u02B2\u02B6\u02BA\u02B9 = Calibrator.\u02B4\u02B3\u02B9\u02C0\u02B3\u02B5\u02BC\u02B2\u02BA\u02B3\u02B6();
 		this.\u02B5\u02BB\u02BE\u02B7\u02B6\u02BA\u02B2\u02BA\u02B4\u02BE\u02B9 = Time.realtimeSinceStartup;
@@ -429,10 +429,10 @@ public class Calibrator : MonoBehaviour
 		{
 		case \u02B3\u02C0\u02B9\u02B5\u02B2\u02B5\u02BF\u02B6\u02BD\u02B4\u02BC.Intro:
 		{
-			\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B = this.\u02B3\u02C0\u02BA\u02BD\u02C0\u02C1\u02B6\u02B7\u02B5\u02B9\u02C1();
-			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B != null)
+			CHPlayer chplayer = this.\u02B3\u02C0\u02BA\u02BD\u02C0\u02C1\u02B6\u02B7\u02B5\u02B9\u02C1();
+			if (chplayer != null)
 			{
-				this.\u02BD\u02B9\u02C1\u02BB\u02B3\u02B2\u02BD\u02C1\u02B2\u02BD\u02BC(u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B);
+				this.\u02BD\u02B9\u02C1\u02BB\u02B3\u02B2\u02BD\u02C1\u02B2\u02BD\u02BC(chplayer);
 				this.startText.gameObject.SetActive(false);
 				return;
 			}
@@ -461,17 +461,17 @@ public class Calibrator : MonoBehaviour
 			break;
 		case \u02B3\u02C0\u02B9\u02B5\u02B2\u02B5\u02BF\u02B6\u02BD\u02B4\u02BC.AudioFinished:
 		{
-			\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B = this.\u02C0\u02B7\u02B5\u02B2\u02B7\u02BC\u02C1\u02BD\u02BF\u02C1\u02BA();
-			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B != null)
+			CHPlayer chplayer = this.\u02C0\u02B7\u02B5\u02B2\u02B7\u02BC\u02C1\u02BD\u02BF\u02C1\u02BA();
+			if (chplayer != null)
 			{
-				this.\u02BD\u02B9\u02C1\u02BB\u02B3\u02B2\u02BD\u02C1\u02B2\u02BD\u02BC(u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B);
+				this.\u02BD\u02B9\u02C1\u02BB\u02B3\u02B2\u02BD\u02C1\u02B2\u02BD\u02BC(chplayer);
 				this.startText.gameObject.SetActive(false);
 				return;
 			}
-			u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B = this.\u02B8\u02B8\u02BF\u02B4\u02BC\u02B5\u02C1\u02C1\u02C1\u02B8\u02B2();
-			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B != null)
+			chplayer = this.\u02B8\u02B8\u02BF\u02B4\u02BC\u02B5\u02C1\u02C1\u02C1\u02B8\u02B2();
+			if (chplayer != null)
 			{
-				this.\u02B3\u02B6\u02C1\u02BB\u02B9\u02BE\u02BB\u02BC\u02BC\u02B8\u02B4(u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B);
+				this.\u02B3\u02B6\u02C1\u02BB\u02B9\u02BE\u02BB\u02BC\u02BC\u02B8\u02B4(chplayer);
 				this.startText.gameObject.SetActive(false);
 				return;
 			}
@@ -488,14 +488,14 @@ public class Calibrator : MonoBehaviour
 			return;
 		case \u02B3\u02C0\u02B9\u02B5\u02B2\u02B5\u02BF\u02B6\u02BD\u02B4\u02BC.VideoFinished:
 		{
-			\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B = this.\u02C0\u02B7\u02B5\u02B2\u02B7\u02BC\u02C1\u02BD\u02BF\u02C1\u02BA();
-			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B != null)
+			CHPlayer chplayer = this.\u02C0\u02B7\u02B5\u02B2\u02B7\u02BC\u02C1\u02BD\u02BF\u02C1\u02BA();
+			if (chplayer != null)
 			{
-				this.\u02B3\u02B6\u02C1\u02BB\u02B9\u02BE\u02BB\u02BC\u02BC\u02B8\u02B4(u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B);
+				this.\u02B3\u02B6\u02C1\u02BB\u02B9\u02BE\u02BB\u02BC\u02BC\u02B8\u02B4(chplayer);
 				this.startText.gameObject.SetActive(false);
 			}
-			u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B = this.\u02B8\u02B8\u02BF\u02B4\u02BC\u02B5\u02C1\u02C1\u02C1\u02B8\u02B2();
-			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B != null)
+			chplayer = this.\u02B8\u02B8\u02BF\u02B4\u02BC\u02B5\u02C1\u02C1\u02C1\u02B8\u02B2();
+			if (chplayer != null)
 			{
 				GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02BC\u02B4\u02B9\u02B7\u02B4\u02BE\u02BF\u02B4\u02BE\u02B4(true);
 				SceneManager.LoadScene("Main Menu");
@@ -513,10 +513,10 @@ public class Calibrator : MonoBehaviour
 		{
 		case \u02B3\u02C0\u02B9\u02B5\u02B2\u02B5\u02BF\u02B6\u02BD\u02B4\u02BC.Intro:
 		{
-			\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B = this.\u02B3\u02C0\u02BA\u02BD\u02C0\u02C1\u02B6\u02B7\u02B5\u02B9\u02C1();
-			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B != null)
+			CHPlayer chplayer = this.\u02B3\u02C0\u02BA\u02BD\u02C0\u02C1\u02B6\u02B7\u02B5\u02B9\u02C1();
+			if (chplayer != null)
 			{
-				this.\u02B7\u02B2\u02BE\u02B4\u02C1\u02B7\u02BA\u02B8\u02BF\u02B2\u02BA(u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B);
+				this.\u02B7\u02B2\u02BE\u02B4\u02C1\u02B7\u02BA\u02B8\u02BF\u02B2\u02BA(chplayer);
 				this.startText.gameObject.SetActive(true);
 				return;
 			}
@@ -545,17 +545,17 @@ public class Calibrator : MonoBehaviour
 			break;
 		case \u02B3\u02C0\u02B9\u02B5\u02B2\u02B5\u02BF\u02B6\u02BD\u02B4\u02BC.AudioFinished:
 		{
-			\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B = this.\u02B5\u02BF\u02B4\u02BA\u02B7\u02BD\u02B5\u02B7\u02B9\u02B7\u02B7();
-			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B != null)
+			CHPlayer chplayer = this.\u02B5\u02BF\u02B4\u02BA\u02B7\u02BD\u02B5\u02B7\u02B9\u02B7\u02B7();
+			if (chplayer != null)
 			{
-				this.\u02BD\u02B9\u02C1\u02BB\u02B3\u02B2\u02BD\u02C1\u02B2\u02BD\u02BC(u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B);
+				this.\u02BD\u02B9\u02C1\u02BB\u02B3\u02B2\u02BD\u02C1\u02B2\u02BD\u02BC(chplayer);
 				this.startText.gameObject.SetActive(true);
 				return;
 			}
-			u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B = this.\u02B8\u02B8\u02BF\u02B4\u02BC\u02B5\u02C1\u02C1\u02C1\u02B8\u02B2();
-			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B != null)
+			chplayer = this.\u02B8\u02B8\u02BF\u02B4\u02BC\u02B5\u02C1\u02C1\u02C1\u02B8\u02B2();
+			if (chplayer != null)
 			{
-				this.\u02BC\u02BC\u02B8\u02B3\u02B2\u02B9\u02BA\u02B8\u02B3\u02B5\u02BD(u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B);
+				this.\u02BC\u02BC\u02B8\u02B3\u02B2\u02B9\u02BA\u02B8\u02B3\u02B5\u02BD(chplayer);
 				this.startText.gameObject.SetActive(false);
 				return;
 			}
@@ -572,14 +572,14 @@ public class Calibrator : MonoBehaviour
 			return;
 		case \u02B3\u02C0\u02B9\u02B5\u02B2\u02B5\u02BF\u02B6\u02BD\u02B4\u02BC.VideoFinished:
 		{
-			\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B = this.\u02BB\u02BF\u02B2\u02BC\u02B3\u02B7\u02C1\u02BD\u02B4\u02B6\u02BD();
-			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B != null)
+			CHPlayer chplayer = this.\u02BB\u02BF\u02B2\u02BC\u02B3\u02B7\u02C1\u02BD\u02B4\u02B6\u02BD();
+			if (chplayer != null)
 			{
-				this.\u02B5\u02BD\u02C1\u02B6\u02BA\u02B4\u02BD\u02BD\u02B4\u02B7\u02BF(u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B);
+				this.\u02B5\u02BD\u02C1\u02B6\u02BA\u02B4\u02BD\u02BD\u02B4\u02B7\u02BF(chplayer);
 				this.startText.gameObject.SetActive(true);
 			}
-			u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B = this.\u02BE\u02BC\u02B7\u02BB\u02C1\u02C1\u02B4\u02B8\u02BD\u02B8\u02C1();
-			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B != null)
+			chplayer = this.\u02BE\u02BC\u02B7\u02BB\u02C1\u02C1\u02B4\u02B8\u02BD\u02B8\u02C1();
+			if (chplayer != null)
 			{
 				GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B2\u02BE\u02BE\u02B6\u02B5\u02BB\u02C0\u02C0\u02B6\u02C1\u02B8(true);
 				SceneManager.LoadScene("song");
@@ -636,9 +636,9 @@ public class Calibrator : MonoBehaviour
 
 	private \u02B3\u02C0\u02B9\u02B5\u02B2\u02B5\u02BF\u02B6\u02BD\u02B4\u02BC \u02B2\u02B9\u02B7\u02C1\u02B7\u02BB\u02BA\u02BB\u02BD\u02C0\u02BC;
 
-	private \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7;
+	private CHPlayer \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7;
 
-	private \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02BE\u02BA\u02B8\u02B2\u02B4\u02BF\u02B3\u02B3\u02BE\u02B8;
+	private CHPlayer \u02BE\u02BE\u02BA\u02B8\u02B2\u02B4\u02BF\u02B3\u02B3\u02BE\u02B8;
 
 	private bool \u02C0\u02B6\u02B9\u02BA\u02B3\u02B5\u02BA\u02B9\u02B6\u02C0\u02C0;
 

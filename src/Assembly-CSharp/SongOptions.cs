@@ -722,16 +722,16 @@ public class SongOptions : BaseMenu
 		}
 		bool flag2 = false;
 		bool flag3 = false;
-		foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
+		foreach (CHPlayer chplayer in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
 		{
-			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B != null && u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.rewiredPlayer != null && !u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02BD\u02BC\u02B8\u02B5\u02B5\u02B2\u02C0\u02C1\u02B3\u02C0\u02B4)
+			if (chplayer != null && chplayer.rewiredPlayer != null && !chplayer.\u02BD\u02BC\u02B8\u02B5\u02B5\u02B2\u02C0\u02C1\u02B3\u02C0\u02B4)
 			{
-				if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.rewiredPlayer.GetButtonDown(0))
+				if (chplayer.rewiredPlayer.GetButtonDown(0))
 				{
 					flag2 = true;
 					break;
 				}
-				if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.rewiredPlayer.GetButtonDown(1))
+				if (chplayer.rewiredPlayer.GetButtonDown(1))
 				{
 					flag3 = true;
 					break;
@@ -753,7 +753,7 @@ public class SongOptions : BaseMenu
 				this.\u02B3\u02BB\u02BF\u02C0\u02BB\u02B6\u02B5\u02B9\u02B8\u02BE\u02B9 = false;
 				this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.setlistOptionsActive);
 				base.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(this.\u02BA\u02BE\u02B9\u02B8\u02B3\u02BB\u02BB\u02C0\u02BF\u02C0\u02BE ? "Rename Setlist" : "Save Playlist");
-				\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6.\u02B2\u02B9\u02B6\u02B2\u02C0\u02BA\u02BF\u02B8\u02B5\u02B3\u02B6(true);
+				CHPlayer.\u02B2\u02B9\u02B6\u02B2\u02C0\u02BA\u02BF\u02B8\u02B5\u02B3\u02B6(true);
 			}
 			return;
 		}
@@ -782,7 +782,7 @@ public class SongOptions : BaseMenu
 		this.\u02B3\u02BB\u02BF\u02C0\u02BB\u02B6\u02B5\u02B9\u02B8\u02BE\u02B9 = false;
 		this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.setlistOptionsActive);
 		base.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(this.\u02BA\u02BE\u02B9\u02B8\u02B3\u02BB\u02BB\u02C0\u02BF\u02C0\u02BE ? "Rename Setlist" : "Save Playlist");
-		\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6.\u02B2\u02B9\u02B6\u02B2\u02C0\u02BA\u02BF\u02B8\u02B5\u02B3\u02B6(true);
+		CHPlayer.\u02B2\u02B9\u02B6\u02B2\u02C0\u02BA\u02BF\u02B8\u02B5\u02B3\u02B6(true);
 	}
 
 	private void \u02B8\u02B5\u02B7\u02B7\u02B2\u02B6\u02BE\u02B3\u02B8\u02BD\u02BE(string[] \u02BC\u02C0\u02B2\u02B5\u02BE\u02B7\u02C1\u02B4\u02B7\u02BD\u02C0)
@@ -1584,7 +1584,7 @@ public class SongOptions : BaseMenu
 		this.textObjects[2].text = LanguageManager.instance.GetString("Press Enter to confirm");
 		this.textObjects[3].text = LanguageManager.instance.GetString("Press Escape to cancel");
 		this.setlistMenu.\u02B2\u02B8\u02BC\u02BB\u02B4\u02BE\u02BD\u02C1\u02B2\u02B6\u02B9();
-		\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6.\u02B2\u02B9\u02B6\u02B2\u02C0\u02BA\u02BF\u02B8\u02B5\u02B3\u02B6(false);
+		CHPlayer.\u02B2\u02B9\u02B6\u02B2\u02C0\u02BA\u02BF\u02B8\u02B5\u02B3\u02B6(false);
 	}
 
 	[SerializeField]

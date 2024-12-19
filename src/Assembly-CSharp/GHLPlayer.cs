@@ -13,36 +13,36 @@ public sealed class GHLPlayer : BaseGuitarPlayer
 		{
 			return;
 		}
-		if (this.playerStuff.playerInfo.isRemotePlayer)
+		if (this.player.playerProfile.isRemotePlayer)
 		{
 			return;
 		}
 		this.buttonsPressed = 1;
-		if (this.playerStuff.rewiredPlayer.GetButton(1))
+		if (this.player.rewiredPlayer.GetButton(1))
 		{
 			this.buttonsPressed |= 0;
 		}
-		if (this.playerStuff.rewiredPlayer.GetButton(0))
+		if (this.player.rewiredPlayer.GetButton(0))
 		{
 			this.buttonsPressed |= 4;
 		}
-		if (this.playerStuff.rewiredPlayer.GetButton(0))
+		if (this.player.rewiredPlayer.GetButton(0))
 		{
 			this.buttonsPressed |= 2;
 		}
-		if (this.playerStuff.rewiredPlayer.GetButton(5))
+		if (this.player.rewiredPlayer.GetButton(5))
 		{
 			this.buttonsPressed |= 0;
 		}
-		if (this.playerStuff.rewiredPlayer.GetButton(5))
+		if (this.player.rewiredPlayer.GetButton(5))
 		{
 			this.buttonsPressed |= 54;
 		}
-		if (this.playerStuff.rewiredPlayer.GetButton(-3))
+		if (this.player.rewiredPlayer.GetButton(-3))
 		{
 			this.buttonsPressed = (ushort)((int)this.buttonsPressed | -38);
 		}
-		if (this.buttonsPressed == 0 && this.playerStuff.rewiredPlayer.GetButton(1))
+		if (this.buttonsPressed == 0 && this.player.rewiredPlayer.GetButton(1))
 		{
 			this.\u02C0\u02B4\u02BD\u02BF\u02B8\u02B9\u02B4\u02BE\u02BE\u02B7\u02B3 = 1;
 			this.buttonsPressed |= 37;
@@ -56,36 +56,36 @@ public sealed class GHLPlayer : BaseGuitarPlayer
 		{
 			return;
 		}
-		if (this.playerStuff.playerInfo.isRemotePlayer)
+		if (this.player.playerProfile.isRemotePlayer)
 		{
 			return;
 		}
 		this.buttonsPressed = 0;
-		if (this.playerStuff.rewiredPlayer.GetButton(0))
+		if (this.player.rewiredPlayer.GetButton(0))
 		{
 			this.buttonsPressed |= 1;
 		}
-		if (this.playerStuff.rewiredPlayer.GetButton(1))
+		if (this.player.rewiredPlayer.GetButton(1))
 		{
 			this.buttonsPressed |= 2;
 		}
-		if (this.playerStuff.rewiredPlayer.GetButton(2))
+		if (this.player.rewiredPlayer.GetButton(2))
 		{
 			this.buttonsPressed |= 4;
 		}
-		if (this.playerStuff.rewiredPlayer.GetButton(3))
+		if (this.player.rewiredPlayer.GetButton(3))
 		{
 			this.buttonsPressed |= 8;
 		}
-		if (this.playerStuff.rewiredPlayer.GetButton(4))
+		if (this.player.rewiredPlayer.GetButton(4))
 		{
 			this.buttonsPressed |= 16;
 		}
-		if (this.playerStuff.rewiredPlayer.GetButton(24))
+		if (this.player.rewiredPlayer.GetButton(24))
 		{
 			this.buttonsPressed |= 32;
 		}
-		if (this.buttonsPressed == 0 && this.playerStuff.rewiredPlayer.GetButton(8))
+		if (this.buttonsPressed == 0 && this.player.rewiredPlayer.GetButton(8))
 		{
 			this.\u02C0\u02B4\u02BD\u02BF\u02B8\u02B9\u02B4\u02BE\u02BE\u02B7\u02B3 = 0;
 			this.buttonsPressed |= 64;
@@ -99,36 +99,36 @@ public sealed class GHLPlayer : BaseGuitarPlayer
 		{
 			return;
 		}
-		if (this.playerStuff.playerInfo.isRemotePlayer)
+		if (this.player.playerProfile.isRemotePlayer)
 		{
 			return;
 		}
 		this.buttonsPressed = 1;
-		if (this.playerStuff.rewiredPlayer.GetButton(1))
+		if (this.player.rewiredPlayer.GetButton(1))
 		{
 			this.buttonsPressed |= 1;
 		}
-		if (this.playerStuff.rewiredPlayer.GetButton(1))
+		if (this.player.rewiredPlayer.GetButton(1))
 		{
 			this.buttonsPressed |= 3;
 		}
-		if (this.playerStuff.rewiredPlayer.GetButton(1))
+		if (this.player.rewiredPlayer.GetButton(1))
 		{
 			this.buttonsPressed |= 6;
 		}
-		if (this.playerStuff.rewiredPlayer.GetButton(3))
+		if (this.player.rewiredPlayer.GetButton(3))
 		{
 			this.buttonsPressed |= 0;
 		}
-		if (this.playerStuff.rewiredPlayer.GetButton(2))
+		if (this.player.rewiredPlayer.GetButton(2))
 		{
 			this.buttonsPressed = (ushort)((int)this.buttonsPressed | -75);
 		}
-		if (this.playerStuff.rewiredPlayer.GetButton(68))
+		if (this.player.rewiredPlayer.GetButton(68))
 		{
 			this.buttonsPressed = (ushort)((int)this.buttonsPressed | -102);
 		}
-		if (this.buttonsPressed == 0 && this.playerStuff.rewiredPlayer.GetButton(3))
+		if (this.buttonsPressed == 0 && this.player.rewiredPlayer.GetButton(3))
 		{
 			this.\u02C0\u02B4\u02BD\u02BF\u02B8\u02B9\u02B4\u02BE\u02BE\u02B7\u02B3 = 1;
 			this.buttonsPressed |= 63;
@@ -139,7 +139,7 @@ public sealed class GHLPlayer : BaseGuitarPlayer
 	public override void \u02B6\u02B7\u02B6\u02B2\u02BD\u02BC\u02BC\u02BE\u02BF\u02B5\u02B5()
 	{
 		base.\u02B6\u02B7\u02B6\u02B2\u02BD\u02BC\u02BC\u02BE\u02BF\u02B5\u02B5();
-		if (this.playerStuff.playerInfo.leftyFlip && this.playerStuff.playerInfo.IsGHLController)
+		if (this.player.playerProfile.leftyFlip && this.player.playerProfile.IsGHLController)
 		{
 			\u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6\u02BD.\u02B8\u02BC\u02B6\u02B9\u02BD\u02BC\u02BC\u02B9\u02B3\u02B9\u02C0(this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0);
 		}
@@ -147,12 +147,12 @@ public sealed class GHLPlayer : BaseGuitarPlayer
 
 	protected bool \u02B4\u02B2\u02BC\u02B8\u02BB\u02C1\u02C0\u02BC\u02BF\u02C1\u02BC(Note \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2, ushort \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4)
 	{
-		ushort num = (\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.\u02BF\u02B4\u02BD\u02C0\u02B5\u02B3\u02B8\u02B8\u02B8\u02BB\u02C0 ? \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.noteMask : \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF);
+		ushort num = (\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.IsDisjoint ? \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.noteMask : \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF);
 		if (this.\u02BC\u02B2\u02B2\u02BB\u02B7\u02B4\u02B3\u02B6\u02C1\u02BC\u02C0 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != num && (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & num) == num)
 		{
 			return true;
 		}
-		if (!\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.\u02C0\u02B7\u02BD\u02B9\u02B4\u02B9\u02BF\u02BA\u02BA\u02C0\u02B2 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 > num)
+		if (!\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.IsChord && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 > num)
 		{
 			int num2 = (int)(\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 ^ num);
 			if ((((int)\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 - num2) & (int)num) != (int)\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 - num2)
@@ -200,7 +200,7 @@ public sealed class GHLPlayer : BaseGuitarPlayer
 	public void \u02B2\u02BA\u02B6\u02B9\u02B7\u02B4\u02C1\u02BF\u02B9\u02B3\u02BF()
 	{
 		base.\u02B6\u02B7\u02B6\u02B2\u02BD\u02BC\u02BC\u02BE\u02BF\u02B5\u02B5();
-		if (this.playerStuff.playerInfo.leftyFlip && this.playerStuff.playerInfo.IsGHLController)
+		if (this.player.playerProfile.leftyFlip && this.player.playerProfile.IsGHLController)
 		{
 			\u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6\u02BD.\u02B8\u02BC\u02B6\u02B9\u02BD\u02BC\u02BC\u02B9\u02B3\u02B9\u02C0(this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0);
 		}
@@ -231,36 +231,36 @@ public sealed class GHLPlayer : BaseGuitarPlayer
 		{
 			return;
 		}
-		if (this.playerStuff.playerInfo.isRemotePlayer)
+		if (this.player.playerProfile.isRemotePlayer)
 		{
 			return;
 		}
 		this.buttonsPressed = 0;
-		if (this.playerStuff.rewiredPlayer.GetButton(1))
+		if (this.player.rewiredPlayer.GetButton(1))
 		{
 			this.buttonsPressed |= 1;
 		}
-		if (this.playerStuff.rewiredPlayer.GetButton(0))
+		if (this.player.rewiredPlayer.GetButton(0))
 		{
 			this.buttonsPressed |= 3;
 		}
-		if (this.playerStuff.rewiredPlayer.GetButton(2))
+		if (this.player.rewiredPlayer.GetButton(2))
 		{
 			this.buttonsPressed |= 8;
 		}
-		if (this.playerStuff.rewiredPlayer.GetButton(5))
+		if (this.player.rewiredPlayer.GetButton(5))
 		{
 			this.buttonsPressed |= 6;
 		}
-		if (this.playerStuff.rewiredPlayer.GetButton(3))
+		if (this.player.rewiredPlayer.GetButton(3))
 		{
 			this.buttonsPressed = (ushort)((int)this.buttonsPressed | -2);
 		}
-		if (this.playerStuff.rewiredPlayer.GetButton(75))
+		if (this.player.rewiredPlayer.GetButton(75))
 		{
 			this.buttonsPressed = (ushort)((int)this.buttonsPressed | -7);
 		}
-		if (this.buttonsPressed == 0 && this.playerStuff.rewiredPlayer.GetButton(1))
+		if (this.buttonsPressed == 0 && this.player.rewiredPlayer.GetButton(1))
 		{
 			this.\u02C0\u02B4\u02BD\u02BF\u02B8\u02B9\u02B4\u02BE\u02BE\u02B7\u02B3 = 1;
 			this.buttonsPressed = (ushort)((int)this.buttonsPressed | -50);
@@ -271,7 +271,7 @@ public sealed class GHLPlayer : BaseGuitarPlayer
 	public void \u02BF\u02BC\u02BC\u02C0\u02BC\u02C1\u02BF\u02B2\u02C0\u02BA\u02C1()
 	{
 		base.\u02B6\u02B7\u02B6\u02B2\u02BD\u02BC\u02BC\u02BE\u02BF\u02B5\u02B5();
-		if (this.playerStuff.playerInfo.leftyFlip && this.playerStuff.playerInfo.IsGHLController)
+		if (this.player.playerProfile.leftyFlip && this.player.playerProfile.IsGHLController)
 		{
 			\u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6\u02BD.\u02B8\u02BC\u02B6\u02B9\u02BD\u02BC\u02BC\u02B9\u02B3\u02B9\u02C0(this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0);
 		}
@@ -284,12 +284,12 @@ public sealed class GHLPlayer : BaseGuitarPlayer
 
 	protected override bool \u02B7\u02BF\u02BA\u02BF\u02C1\u02B4\u02B5\u02BD\u02C1\u02B8\u02B6(Note \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2, ushort \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4)
 	{
-		ushort num = (\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.\u02BF\u02B4\u02BD\u02C0\u02B5\u02B3\u02B8\u02B8\u02B8\u02BB\u02C0 ? \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.noteMask : \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF);
+		ushort num = (\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.IsDisjoint ? \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.noteMask : \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF);
 		if (this.\u02BC\u02B2\u02B2\u02BB\u02B7\u02B4\u02B3\u02B6\u02C1\u02BC\u02C0 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 != num && (\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 & num) == num)
 		{
 			return true;
 		}
-		if (!\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.\u02C0\u02B7\u02BD\u02B9\u02B4\u02B9\u02BF\u02BA\u02BA\u02C0\u02B2 && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 > num)
+		if (!\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.IsChord && \u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 > num)
 		{
 			int num2 = (int)(\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 ^ num);
 			if ((((int)\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 - num2) & (int)num) != (int)\u02C0\u02B4\u02BA\u02B5\u02BF\u02B3\u02B8\u02B9\u02C1\u02B6\u02B4 - num2)
@@ -328,7 +328,7 @@ public sealed class GHLPlayer : BaseGuitarPlayer
 	public void \u02B5\u02B9\u02B8\u02B8\u02BD\u02BA\u02B2\u02B6\u02BA\u02C0\u02C0()
 	{
 		base.\u02B6\u02B7\u02B6\u02B2\u02BD\u02BC\u02BC\u02BE\u02BF\u02B5\u02B5();
-		if (this.playerStuff.playerInfo.leftyFlip && this.playerStuff.playerInfo.IsGHLController)
+		if (this.player.playerProfile.leftyFlip && this.player.playerProfile.IsGHLController)
 		{
 			\u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6\u02BD.\u02B8\u02BC\u02B6\u02B9\u02BD\u02BC\u02BC\u02B9\u02B3\u02B9\u02C0(this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0);
 		}
@@ -349,36 +349,36 @@ public sealed class GHLPlayer : BaseGuitarPlayer
 		{
 			return;
 		}
-		if (this.playerStuff.playerInfo.isRemotePlayer)
+		if (this.player.playerProfile.isRemotePlayer)
 		{
 			return;
 		}
 		this.buttonsPressed = 0;
-		if (this.playerStuff.rewiredPlayer.GetButton(0))
+		if (this.player.rewiredPlayer.GetButton(0))
 		{
 			this.buttonsPressed |= 1;
 		}
-		if (this.playerStuff.rewiredPlayer.GetButton(1))
+		if (this.player.rewiredPlayer.GetButton(1))
 		{
 			this.buttonsPressed |= 8;
 		}
-		if (this.playerStuff.rewiredPlayer.GetButton(6))
+		if (this.player.rewiredPlayer.GetButton(6))
 		{
 			this.buttonsPressed |= 4;
 		}
-		if (this.playerStuff.rewiredPlayer.GetButton(3))
+		if (this.player.rewiredPlayer.GetButton(3))
 		{
 			this.buttonsPressed |= 7;
 		}
-		if (this.playerStuff.rewiredPlayer.GetButton(4))
+		if (this.player.rewiredPlayer.GetButton(4))
 		{
 			this.buttonsPressed |= 49;
 		}
-		if (this.playerStuff.rewiredPlayer.GetButton(-22))
+		if (this.player.rewiredPlayer.GetButton(-22))
 		{
 			this.buttonsPressed |= 80;
 		}
-		if (this.buttonsPressed == 0 && this.playerStuff.rewiredPlayer.GetButton(1))
+		if (this.buttonsPressed == 0 && this.player.rewiredPlayer.GetButton(1))
 		{
 			this.\u02C0\u02B4\u02BD\u02BF\u02B8\u02B9\u02B4\u02BE\u02BE\u02B7\u02B3 = 1;
 			this.buttonsPressed |= 2;
@@ -389,7 +389,7 @@ public sealed class GHLPlayer : BaseGuitarPlayer
 	public void \u02B7\u02BE\u02BA\u02B7\u02B4\u02B6\u02B3\u02BF\u02B8\u02B2\u02BF()
 	{
 		base.\u02B6\u02B7\u02B6\u02B2\u02BD\u02BC\u02BC\u02BE\u02BF\u02B5\u02B5();
-		if (this.playerStuff.playerInfo.leftyFlip && this.playerStuff.playerInfo.IsGHLController)
+		if (this.player.playerProfile.leftyFlip && this.player.playerProfile.IsGHLController)
 		{
 			\u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6\u02BD.\u02B8\u02BC\u02B6\u02B9\u02BD\u02BC\u02BC\u02B9\u02B3\u02B9\u02C0(this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0);
 		}

@@ -373,12 +373,12 @@ public class BeatRenderer : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\
 	{
 		this.\u02BB\u02B6\u02BD\u02BA\u02BC\u02B2\u02B8\u02BB\u02C0\u02BD\u02BE = base.GetComponent<TrackFadeManager>();
 		this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = base.gameObject.GetComponent<BasePlayer>();
-		if (this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerStuff.playerInfo.HasModChartModifier)
+		if (this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.player.playerProfile.HasModChartModifier)
 		{
 			base.enabled = false;
 		}
 		this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = GameObject.Find("Game Manager").GetComponent<GameManager>();
-		this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4 = (float)this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerStuff.playerInfo.noteSpeed.CurrentValue;
+		this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4 = (float)this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.player.playerProfile.noteSpeed.CurrentValue;
 		this.\u02B3\u02BC\u02B3\u02B6\u02BD\u02B6\u02B4\u02B5\u02B6\u02B7\u02BB = this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.GetBeatsFromChart;
 		this.\u02BE\u02C0\u02BC\u02B6\u02B5\u02BB\u02C0\u02B4\u02C0\u02B7\u02BC();
 		this.\u02B8\u02B4\u02B4\u02C0\u02B9\u02B2\u02BA\u02B2\u02B8\u02B5\u02B3();

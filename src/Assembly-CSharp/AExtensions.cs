@@ -66,4 +66,15 @@ public static class AExtensions
 		color.a = 1f;
 		return color;
 	}
+
+	public static string Reverse(this string text)
+	{
+		char[] cArray = text.ToCharArray();
+		string reverse = string.Empty;
+		for (int i = cArray.Length - 1; i > -1; i--)
+		{
+			reverse += cArray[i].ToString();
+		}
+		return reverse;
+	}
 }

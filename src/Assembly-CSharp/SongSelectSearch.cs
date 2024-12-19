@@ -79,9 +79,9 @@ public class SongSelectSearch : MonoBehaviour
 			this.\u02B5\u02B8\u02BE\u02BB\u02C1\u02BD\u02B9\u02B9\u02BD\u02B5\u02B6();
 			return;
 		}
-		foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
+		foreach (CHPlayer chplayer in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
 		{
-			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B != null && u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.rewiredPlayer != null && !u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02BD\u02BC\u02B8\u02B5\u02B5\u02B2\u02C0\u02C1\u02B3\u02C0\u02B4 && (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.rewiredPlayer.GetButtonDown(0) || u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.rewiredPlayer.GetButtonDown(1)))
+			if (chplayer != null && chplayer.rewiredPlayer != null && !chplayer.\u02BD\u02BC\u02B8\u02B5\u02B5\u02B2\u02C0\u02C1\u02B3\u02C0\u02B4 && (chplayer.rewiredPlayer.GetButtonDown(0) || chplayer.rewiredPlayer.GetButtonDown(1)))
 			{
 				base.StartCoroutine(this.\u02B3\u02BD\u02B5\u02B6\u02BC\u02B9\u02B2\u02C1\u02B5\u02BC\u02B7());
 				this.songSelect.\u02C1\u02B5\u02B9\u02B4\u02B9\u02B5\u02BC\u02B3\u02B4\u02C0\u02BF = true;
@@ -146,9 +146,9 @@ public class SongSelectSearch : MonoBehaviour
 			this.\u02C1\u02BE\u02BF\u02C0\u02BC\u02B7\u02BC\u02BC\u02BE\u02B5\u02BC();
 			return;
 		}
-		foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
+		foreach (CHPlayer chplayer in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
 		{
-			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B != null && u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.rewiredPlayer != null && !u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02B8\u02C0\u02BB\u02C0\u02BB\u02BB\u02BE\u02B3\u02BD\u02B2\u02B6() && (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.rewiredPlayer.GetButtonDown(1) || u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.rewiredPlayer.GetButtonDown(0)))
+			if (chplayer != null && chplayer.rewiredPlayer != null && !chplayer.\u02B8\u02C0\u02BB\u02C0\u02BB\u02BB\u02BE\u02B3\u02BD\u02B2\u02B6() && (chplayer.rewiredPlayer.GetButtonDown(1) || chplayer.rewiredPlayer.GetButtonDown(0)))
 			{
 				base.StartCoroutine(this.\u02BD\u02BE\u02C0\u02BE\u02BB\u02B5\u02BE\u02BE\u02B3\u02BB\u02B4());
 				this.songSelect.\u02C1\u02B5\u02B9\u02B4\u02B9\u02B5\u02BC\u02B3\u02B4\u02C0\u02BF = true;
@@ -363,7 +363,7 @@ public class SongSelectSearch : MonoBehaviour
 			SongSelectSearch.\u02B7\u02B6\u02B8\u02B7\u02B5\u02BE\u02C0\u02C1\u02B8\u02BE\u02B4 = 1;
 		}
 		this.\u02C1\u02BE\u02BF\u02C0\u02BC\u02B7\u02BC\u02BC\u02BE\u02B5\u02BC();
-		\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6.\u02B8\u02B3\u02BB\u02B9\u02B3\u02BF\u02B3\u02C1\u02B5\u02BA\u02BA(false);
+		CHPlayer.\u02B8\u02B3\u02BB\u02B9\u02B3\u02BF\u02B3\u02C1\u02B5\u02BA\u02BA(false);
 		this.pressEnterText.text = LanguageManager.\u02BA\u02B9\u02C1\u02B9\u02B2\u02BD\u02B2\u02BC\u02B7\u02BA\u02B8().GetString("Gamepad Mode");
 		this.changeSearchText.text = LanguageManager.\u02BA\u02B9\u02C1\u02B9\u02B2\u02BD\u02B2\u02BC\u02B7\u02BA\u02B8().\u02B9\u02BC\u02BD\u02BE\u02BA\u02C0\u02BC\u02C1\u02BD\u02B3\u02BD("playTime");
 		if (this.\u02BF\u02C0\u02B9\u02C0\u02BB\u02BD\u02B9\u02B7\u02B3\u02B4\u02B3)
@@ -430,7 +430,7 @@ public class SongSelectSearch : MonoBehaviour
 		{
 			this.songSelect.\u02B6\u02B3\u02B4\u02B6\u02C1\u02B4\u02C0\u02BA\u02BA\u02C1\u02C0(true);
 		}
-		\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6.\u02B2\u02B9\u02B6\u02B2\u02C0\u02BA\u02BF\u02B8\u02B5\u02B3\u02B6(true);
+		CHPlayer.\u02B2\u02B9\u02B6\u02B2\u02C0\u02BA\u02BF\u02B8\u02B5\u02B3\u02B6(true);
 		yield break;
 	}
 
@@ -633,7 +633,7 @@ public class SongSelectSearch : MonoBehaviour
 			SongSelectSearch.\u02B7\u02B6\u02B8\u02B7\u02B5\u02BE\u02C0\u02C1\u02B8\u02BE\u02B4 = 0;
 		}
 		this.\u02B5\u02B8\u02BE\u02BB\u02C1\u02BD\u02B9\u02B9\u02BD\u02B5\u02B6();
-		\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6.\u02B2\u02B9\u02B6\u02B2\u02C0\u02BA\u02BF\u02B8\u02B5\u02B3\u02B6(false);
+		CHPlayer.\u02B2\u02B9\u02B6\u02B2\u02C0\u02BA\u02BF\u02B8\u02B5\u02B3\u02B6(false);
 		this.pressEnterText.text = LanguageManager.instance.GetString("Press ENTER to search");
 		this.changeSearchText.text = LanguageManager.instance.GetString("changesearchtip");
 		if (this.\u02BF\u02C0\u02B9\u02C0\u02BB\u02BD\u02B9\u02B7\u02B3\u02B4\u02B3)
@@ -655,7 +655,7 @@ public class SongSelectSearch : MonoBehaviour
 		{
 			this.songSelect.\u02B6\u02B3\u02B4\u02B6\u02C1\u02B4\u02C0\u02BA\u02BA\u02C1\u02C0(true);
 		}
-		\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6.\u02B2\u02B9\u02B6\u02B2\u02C0\u02BA\u02BF\u02B8\u02B5\u02B3\u02B6(true);
+		CHPlayer.\u02B2\u02B9\u02B6\u02B2\u02C0\u02BA\u02BF\u02B8\u02B5\u02B3\u02B6(true);
 		yield break;
 	}
 
@@ -685,7 +685,7 @@ public class SongSelectSearch : MonoBehaviour
 		{
 			this.songSelect.\u02B6\u02B3\u02B4\u02B6\u02C1\u02B4\u02C0\u02BA\u02BA\u02C1\u02C0(true);
 		}
-		\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6.\u02B2\u02B9\u02B6\u02B2\u02C0\u02BA\u02BF\u02B8\u02B5\u02B3\u02B6(true);
+		CHPlayer.\u02B2\u02B9\u02B6\u02B2\u02C0\u02BA\u02BF\u02B8\u02B5\u02B3\u02B6(true);
 		yield break;
 	}
 
@@ -777,7 +777,7 @@ public class SongSelectSearch : MonoBehaviour
 		{
 			this.songSelect.\u02B6\u02B3\u02B4\u02B6\u02C1\u02B4\u02C0\u02BA\u02BA\u02C1\u02C0(true);
 		}
-		\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6.\u02B2\u02B9\u02B6\u02B2\u02C0\u02BA\u02BF\u02B8\u02B5\u02B3\u02B6(true);
+		CHPlayer.\u02B2\u02B9\u02B6\u02B2\u02C0\u02BA\u02BF\u02B8\u02B5\u02B3\u02B6(true);
 		yield break;
 	}
 

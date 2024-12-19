@@ -59,10 +59,15 @@ public class FrameRate : MonoBehaviour
 			HexColor.FromHexString(GlobalHelper.strumColor).AsColor(),
 			HexColor.FromHexString(GlobalHelper.strumColor).AsColor()
 		}.Select((Color x) => x.Saturate(1f)).ToArray<Color>();
-		Color[] array = this.fretColors;
-		for (int j = 0; j < array.Length; j++)
+		this.rainbowTrailColors = new Color[GlobalHelper.trailColorCount];
+		for (int j = 0; j < this.rainbowTrailColors.Length; j++)
 		{
-			Debug.Log(array[j]);
+			this.rainbowTrailColors[j] = Color.HSVToRGB((float)j / (float)this.rainbowTrailColors.Length, 1f, 1f);
+		}
+		Color[] array = this.fretColors;
+		for (int k = 0; k < array.Length; k++)
+		{
+			Debug.Log(array[k]);
 		}
 		this.activeTrails = new TextMeshProUGUI[7];
 	}
@@ -525,16 +530,17 @@ public class FrameRate : MonoBehaviour
 				GlobalVariables.misses = 0;
 				this.misses = 0;
 				this.combobreaks = 0;
+				if (this.instance != null)
+				{
+					this.instance.overstrums = 0;
+					this.instance.precision.Clear();
+				}
 				if (this._resetFlag)
 				{
 					GlobalVariables.hasReset = false;
 					this._resetFlag = false;
 				}
 				this._resetFlag = true;
-			}
-			if (this.instance != null)
-			{
-				this.instance.overstrums = 0;
 			}
 			this.los = this.os;
 			this.lghosts = this.ghosts;
@@ -790,6 +796,11 @@ public class FrameRate : MonoBehaviour
 
 	private TextMeshProUGUI GetTrail(int trail)
 	{
+		this.currentColor++;
+		if (this.currentColor == this.rainbowTrailColors.Length)
+		{
+			this.currentColor = 0;
+		}
 		do
 		{
 			this.currentTrail++;
@@ -827,7 +838,23 @@ public class FrameRate : MonoBehaviour
 			break;
 		}
 		textMeshProUGUI.transform.position = vector;
-		textMeshProUGUI.color = this.fretColors[trail];
+		if (GlobalHelper.rainbowTrails)
+		{
+			textMeshProUGUI.color = this.rainbowTrailColors[this.currentColor];
+			if (trail == 5 || trail == 6)
+			{
+				float h;
+				float num;
+				float num2;
+				Color.RGBToHSV(this.rainbowTrailColors[this.currentColor], out h, out num, out num2);
+				h = Mathf.Repeat(h + 0.5f, 1f);
+				textMeshProUGUI.color = Color.HSVToRGB(h, 1f, 1f);
+			}
+		}
+		else
+		{
+			textMeshProUGUI.color = this.fretColors[trail];
+		}
 		return textMeshProUGUI;
 	}
 
@@ -1050,4 +1077,8 @@ public class FrameRate : MonoBehaviour
 	private HashSet<TextMeshProUGUI> activeHashes;
 
 	private float releaseOffset;
+
+	private int currentColor;
+
+	private Color[] rainbowTrailColors;
 }
