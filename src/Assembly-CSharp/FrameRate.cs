@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
@@ -32,9 +31,7 @@ public class FrameRate : MonoBehaviour
 		GlobalVariables.misses = 0;
 		this.speedhackCheckNumber = -1;
 		GC.Collect();
-		this.lastButtons = new BitArray(7, false);
 		bool useJudgements = GlobalHelper.useJudgements;
-		this.mover = new GameObject("mover").transform;
 		this.textDisplay = base.GetComponent<TextMeshProUGUI>();
 		this.timer1 = this.const1;
 		this.textDisplay.fontSize = 0.7f * this.textDisplay.fontSize;
@@ -551,7 +548,6 @@ public class FrameRate : MonoBehaviour
 		}
 		(this.spText = BaseGuitarPlayer.instance.playerNameTextBox.Duplicate()).fontSize *= 0.315f;
 		this.spText.text = "";
-		this.lefty = BaseGuitarPlayer.instance.playerStuff.playerInfo.leftyFlip;
 		if (GlobalHelper.useJudgements)
 		{
 			BaseGuitarPlayer.instance.precision.Clear();
@@ -690,92 +686,87 @@ public class FrameRate : MonoBehaviour
 				}
 			}
 		}
-		if (minputs.gn)
+		if (!this.lastinputs.g && minputs.g)
 		{
-			this.instance.minputs.gn = false;
 			this.activeTrails[0] = this.GetTrail(0);
 		}
-		if (minputs.rn)
+		if (!this.lastinputs.r && minputs.r)
 		{
-			this.instance.minputs.rn = false;
 			this.activeTrails[1] = this.GetTrail(1);
 		}
-		if (minputs.yn)
+		if (!this.lastinputs.y && minputs.y)
 		{
-			this.instance.minputs.yn = false;
 			this.activeTrails[2] = this.GetTrail(2);
 		}
-		if (minputs.bn)
+		if (!this.lastinputs.b && minputs.b)
 		{
-			this.instance.minputs.bn = false;
 			this.activeTrails[3] = this.GetTrail(3);
 		}
-		if (minputs.on)
+		if (!this.lastinputs.o && minputs.o)
 		{
-			this.instance.minputs.on = false;
 			this.activeTrails[4] = this.GetTrail(4);
 		}
-		if (minputs.sun)
+		if (!this.lastinputs.su && minputs.su)
 		{
-			this.instance.minputs.sun = false;
 			this.activeTrails[5] = this.GetTrail(5);
 		}
-		if (minputs.sdn)
+		if (!this.lastinputs.sd && minputs.sd)
 		{
-			this.instance.minputs.sdn = false;
 			this.activeTrails[6] = this.GetTrail(6);
 		}
-		if (this.lastButtons[0] && !minputs.g)
+		if (this.lastinputs.g && !minputs.g)
 		{
-			this.activeTrails[0].transform.SetParent(this.mover);
 			this.activeTrails[0] = null;
 		}
-		if (this.lastButtons[1] && !minputs.r)
+		if (this.lastinputs.r && !minputs.r)
 		{
-			this.activeTrails[1].transform.SetParent(this.mover);
 			this.activeTrails[1] = null;
 		}
-		if (this.lastButtons[2] && !minputs.y)
+		if (this.lastinputs.y && !minputs.y)
 		{
-			this.activeTrails[2].transform.SetParent(this.mover);
 			this.activeTrails[2] = null;
 		}
-		if (this.lastButtons[3] && !minputs.b)
+		if (this.lastinputs.b && !minputs.b)
 		{
-			this.activeTrails[3].transform.SetParent(this.mover);
 			this.activeTrails[3] = null;
 		}
-		if (this.lastButtons[4] && !minputs.o)
+		if (this.lastinputs.o && !minputs.o)
 		{
-			this.activeTrails[4].transform.SetParent(this.mover);
 			this.activeTrails[4] = null;
 		}
-		if (this.lastButtons[5] && !minputs.su)
+		if (this.lastinputs.su && !minputs.su)
 		{
-			this.activeTrails[5].transform.SetParent(this.mover);
 			this.activeTrails[5] = null;
 		}
-		if (this.lastButtons[6] && !minputs.sd)
+		if (this.lastinputs.sd && !minputs.sd)
 		{
-			this.activeTrails[6].transform.SetParent(this.mover);
 			this.activeTrails[6] = null;
 		}
-		this.mover.transform.position -= new Vector3(0f, this.scaleSpeed * num * 25f, 0f);
-		for (int i = 0; i < this.activeTrails.Length; i++)
+		TextMeshProUGUI[] array2 = this.trails;
+		for (int j = 0; j < array2.Length; j++)
 		{
-			TextMeshProUGUI textMeshProUGUI3 = this.activeTrails[i];
+			bool flag = false;
+			for (int k = 0; k < this.activeTrails.Length; k++)
+			{
+				if (array2[j] == this.activeTrails[k])
+				{
+					flag = true;
+				}
+			}
+			if (!flag)
+			{
+				array2[j].transform.position -= new Vector3(0f, this.scaleSpeed * num * 25f, 0f);
+			}
+		}
+		for (int l = 0; l < this.activeTrails.Length; l++)
+		{
+			TextMeshProUGUI textMeshProUGUI3 = this.activeTrails[l];
 			if (textMeshProUGUI3 != null)
 			{
 				textMeshProUGUI3.transform.localScale += new Vector3(0f, this.scaleSpeed * num, 0f);
 			}
 		}
-		this.lastButtons[0] = minputs.gn;
-		this.lastButtons[1] = minputs.rn;
-		this.lastButtons[2] = minputs.yn;
-		this.lastButtons[3] = minputs.bn;
-		this.lastButtons[4] = minputs.on;
-		this.lastButtons[5] = minputs.sun;
-		this.lastButtons[6] = minputs.sdn;
+		this.lastinputs = minputs;
 		this.upperLeftTextBuilder.Append('\n');
 	}
 
@@ -789,59 +780,29 @@ public class FrameRate : MonoBehaviour
 		TextMeshProUGUI textMeshProUGUI = this.trails[this.currentTrail];
 		textMeshProUGUI.transform.localScale = new Vector3(1.5f, 0.05f, 1f);
 		Vector2 vector = new Vector2(GlobalHelper.trailPosX * (float)Screen.width, (float)Screen.height - GlobalHelper.trailPosY * (float)Screen.height);
-		if (this.lefty)
+		switch (trail)
 		{
-			switch (trail)
-			{
-			case 0:
-				vector += new Vector2(this.sizePerChar * 6f, 0f);
-				break;
-			case 1:
-				vector += new Vector2(this.sizePerChar * 5f, 0f);
-				break;
-			case 2:
-				vector += new Vector2(this.sizePerChar * 4f, 0f);
-				break;
-			case 3:
-				vector += new Vector2(this.sizePerChar * 3f, 0f);
-				break;
-			case 4:
-				vector += new Vector2(this.sizePerChar * 2f, 0f);
-				break;
-			case 5:
-				vector += new Vector2(this.sizePerChar * 0f, 0f);
-				break;
-			case 6:
-				vector += new Vector2(this.sizePerChar * 1f, 0f);
-				break;
-			}
-		}
-		else
-		{
-			switch (trail)
-			{
-			case 0:
-				vector += new Vector2(this.sizePerChar * 0f, 0f);
-				break;
-			case 1:
-				vector += new Vector2(this.sizePerChar * 1f, 0f);
-				break;
-			case 2:
-				vector += new Vector2(this.sizePerChar * 2f, 0f);
-				break;
-			case 3:
-				vector += new Vector2(this.sizePerChar * 3f, 0f);
-				break;
-			case 4:
-				vector += new Vector2(this.sizePerChar * 4f, 0f);
-				break;
-			case 5:
-				vector += new Vector2(this.sizePerChar * 5f, 0f);
-				break;
-			case 6:
-				vector += new Vector2(this.sizePerChar * 6f, 0f);
-				break;
-			}
+		case 0:
+			vector += new Vector2(this.sizePerChar * 2f, 0f);
+			break;
+		case 1:
+			vector += new Vector2(this.sizePerChar * 3f, 0f);
+			break;
+		case 2:
+			vector += new Vector2(this.sizePerChar * 4f, 0f);
+			break;
+		case 3:
+			vector += new Vector2(this.sizePerChar * 5f, 0f);
+			break;
+		case 4:
+			vector += new Vector2(this.sizePerChar * 6f, 0f);
+			break;
+		case 5:
+			vector += new Vector2(this.sizePerChar * 0f, 0f);
+			break;
+		case 6:
+			vector += new Vector2(this.sizePerChar * 1f, 0f);
+			break;
 		}
 		textMeshProUGUI.transform.position = vector;
 		textMeshProUGUI.color = this.fretColors[trail];
@@ -1063,10 +1024,4 @@ public class FrameRate : MonoBehaviour
 	private BaseGuitarPlayer.inputmap lastinputs;
 
 	private TextMeshProUGUI spText;
-
-	private Transform mover;
-
-	private BitArray lastButtons;
-
-	private bool lefty;
 }
