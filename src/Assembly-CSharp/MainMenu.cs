@@ -346,6 +346,7 @@ public class MainMenu : BaseMenu
 			"\nTotal points: ",
 			string.Format("{0:n}", GlobalVariables.totalPoints).Replace(".00", "")
 		});
+		global::UnityEngine.Object.DontDestroyOnLoad(this.buildVersion);
 		Debug.Log(string.Format("{0:00}:{1:00}:{2:00}", timeSpan.TotalHours, timeSpan.TotalMinutes % 60.0, timeSpan.TotalSeconds % 60.0));
 		Debug.Log(string.Format("{0:n}", GlobalVariables.totalPoints).Replace(".00", ""));
 		Debug.Log(timeSpan.TotalSeconds);
