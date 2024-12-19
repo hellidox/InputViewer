@@ -12,6 +12,15 @@
   "items": [
     {
       "show": true,
+      "date": 1734544800,
+      "author": "<color=#ffaaff>Andrea</color>",
+      "description": "Mod update V2.1 released",
+      "datatype": "link",
+      "data": "https://github.com/hellidox/InputViewer/releases/download/v2.1/Assembly-CSharp.dll"
+    },
+    
+    {
+      "show": true,
       "date": 1734372000,
       "author": "PIC",
       "description": "Plastic Instruments Monthly | November 2024\n<color=#00000001>padding</color>",
