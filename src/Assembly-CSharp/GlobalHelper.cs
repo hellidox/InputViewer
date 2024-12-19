@@ -319,7 +319,7 @@ public static class GlobalHelper
 			GlobalHelper.showMissCounter = true;
 			GlobalHelper.showOverstrums = true;
 			GlobalHelper.showSessionTimer = false;
-			GlobalHelper.inputViewerHz = 60;
+			GlobalHelper.inputViewerHz = 250;
 			GlobalHelper.inputViewerIndent = 14;
 			GlobalHelper.rainbowFlames = false;
 			GlobalHelper.rainbowFlameSpeed = 1.5f;
@@ -385,9 +385,9 @@ public static class GlobalHelper
 			GlobalHelper.trailPosX = 0.18f;
 			GlobalHelper.trailPosY = 0.2f;
 			GlobalHelper.WriteComment("Turning this up might hurt performance.");
-			GlobalHelper.maxTrails = 300;
+			GlobalHelper.maxTrails = 50;
 			GlobalHelper.WriteComment("There's no real metric behind this to be honest");
-			GlobalHelper.trailSpeed = 1f;
+			GlobalHelper.trailSpeed = 0.7f;
 			GlobalHelper.WriteComment("Don't touch this. ");
 			GlobalHelper.WriteKeyValue("versionID", GlobalHelper.versionid, false);
 			Process.Start(new ProcessStartInfo

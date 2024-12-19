@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
@@ -32,6 +33,7 @@ public class FrameRate : MonoBehaviour
 		this.speedhackCheckNumber = -1;
 		GC.Collect();
 		bool useJudgements = GlobalHelper.useJudgements;
+		this.activeHashes = new HashSet<TextMeshProUGUI>();
 		this.textDisplay = base.GetComponent<TextMeshProUGUI>();
 		this.timer1 = this.const1;
 		this.textDisplay.fontSize = 0.7f * this.textDisplay.fontSize;
@@ -42,23 +44,26 @@ public class FrameRate : MonoBehaviour
 		for (int i = 0; i < this.trails.Length; i++)
 		{
 			this.trails[i] = this.textDisplay.Duplicate();
-			this.trails[i].material.color = Color.white;
 			this.trails[i].enableWordWrapping = false;
 			this.trails[i].text = "█";
 			this.trails[i].rectTransform.pivot = new Vector2(0.5f, 0.8185f);
-			this.trails[i].alpha = 1f;
 			this.trails[i].mainTexture.filterMode = FilterMode.Point;
 		}
 		this.fretColors = new Color[]
 		{
-			HexColor.FromHexString(GlobalHelper.greenFretColor).Color(),
-			HexColor.FromHexString(GlobalHelper.redFretColor).Color(),
-			HexColor.FromHexString(GlobalHelper.yellowFretColor).Color(),
-			HexColor.FromHexString(GlobalHelper.blueFretColor).Color(),
-			HexColor.FromHexString(GlobalHelper.orangeFretColor).Color(),
-			HexColor.FromHexString(GlobalHelper.strumColor).Color(),
-			HexColor.FromHexString(GlobalHelper.strumColor).Color()
-		};
+			HexColor.FromHexString(GlobalHelper.greenFretColor).AsColor(),
+			HexColor.FromHexString(GlobalHelper.redFretColor).AsColor(),
+			HexColor.FromHexString(GlobalHelper.yellowFretColor).AsColor(),
+			HexColor.FromHexString(GlobalHelper.blueFretColor).AsColor(),
+			HexColor.FromHexString(GlobalHelper.orangeFretColor).AsColor(),
+			HexColor.FromHexString(GlobalHelper.strumColor).AsColor(),
+			HexColor.FromHexString(GlobalHelper.strumColor).AsColor()
+		}.Select((Color x) => x.Saturate(1f)).ToArray<Color>();
+		Color[] array = this.fretColors;
+		for (int j = 0; j < array.Length; j++)
+		{
+			Debug.Log(array[j]);
+		}
 		this.activeTrails = new TextMeshProUGUI[7];
 	}
 
@@ -530,7 +535,6 @@ public class FrameRate : MonoBehaviour
 			if (this.instance != null)
 			{
 				this.instance.overstrums = 0;
-				this.instance.precision.Clear();
 			}
 			this.los = this.os;
 			this.lghosts = this.ghosts;
@@ -665,6 +669,7 @@ public class FrameRate : MonoBehaviour
 		if (this.trailsNeedInit)
 		{
 			Vector2 vector = new Vector2(45f, 22.5f) * ((float)Screen.width / 1920f);
+			this.releaseOffset = vector.y;
 			this.sizePerChar = vector.x;
 			this.scaleSpeed = (float)Screen.height / vector.y * GlobalHelper.trailSpeed;
 			this.trailsNeedInit = false;
@@ -688,79 +693,92 @@ public class FrameRate : MonoBehaviour
 		}
 		if (!this.lastinputs.g && minputs.g)
 		{
-			this.activeTrails[0] = this.GetTrail(0);
+			this.activeHashes.Add(this.activeTrails[0] = this.GetTrail(0));
 		}
 		if (!this.lastinputs.r && minputs.r)
 		{
-			this.activeTrails[1] = this.GetTrail(1);
+			this.activeHashes.Add(this.activeTrails[1] = this.GetTrail(1));
 		}
 		if (!this.lastinputs.y && minputs.y)
 		{
-			this.activeTrails[2] = this.GetTrail(2);
+			this.activeHashes.Add(this.activeTrails[2] = this.GetTrail(2));
 		}
 		if (!this.lastinputs.b && minputs.b)
 		{
-			this.activeTrails[3] = this.GetTrail(3);
+			this.activeHashes.Add(this.activeTrails[3] = this.GetTrail(3));
 		}
 		if (!this.lastinputs.o && minputs.o)
 		{
-			this.activeTrails[4] = this.GetTrail(4);
+			this.activeHashes.Add(this.activeTrails[4] = this.GetTrail(4));
 		}
 		if (!this.lastinputs.su && minputs.su)
 		{
-			this.activeTrails[5] = this.GetTrail(5);
+			this.activeHashes.Add(this.activeTrails[5] = this.GetTrail(5));
 		}
 		if (!this.lastinputs.sd && minputs.sd)
 		{
-			this.activeTrails[6] = this.GetTrail(6);
+			this.activeHashes.Add(this.activeTrails[6] = this.GetTrail(6));
 		}
 		if (this.lastinputs.g && !minputs.g)
 		{
+			this.activeTrails[0].transform.localScale -= new Vector3(0f, 1f, 0f);
+			this.activeTrails[0].transform.localPosition -= new Vector3(0f, this.releaseOffset, 0f);
+			this.activeHashes.Remove(this.activeTrails[0]);
 			this.activeTrails[0] = null;
 		}
 		if (this.lastinputs.r && !minputs.r)
 		{
+			this.activeTrails[1].transform.localScale -= new Vector3(0f, 1f, 0f);
+			this.activeTrails[1].transform.localPosition -= new Vector3(0f, this.releaseOffset, 0f);
+			this.activeHashes.Remove(this.activeTrails[1]);
 			this.activeTrails[1] = null;
 		}
 		if (this.lastinputs.y && !minputs.y)
 		{
+			this.activeTrails[2].transform.localScale -= new Vector3(0f, 1f, 0f);
+			this.activeTrails[2].transform.localPosition -= new Vector3(0f, this.releaseOffset, 0f);
+			this.activeHashes.Remove(this.activeTrails[2]);
 			this.activeTrails[2] = null;
 		}
 		if (this.lastinputs.b && !minputs.b)
 		{
+			this.activeTrails[3].transform.localScale -= new Vector3(0f, 1f, 0f);
+			this.activeTrails[3].transform.localPosition -= new Vector3(0f, this.releaseOffset, 0f);
+			this.activeHashes.Remove(this.activeTrails[3]);
 			this.activeTrails[3] = null;
 		}
 		if (this.lastinputs.o && !minputs.o)
 		{
+			this.activeTrails[4].transform.localScale -= new Vector3(0f, 1f, 0f);
+			this.activeTrails[4].transform.localPosition -= new Vector3(0f, this.releaseOffset, 0f);
+			this.activeHashes.Remove(this.activeTrails[4]);
 			this.activeTrails[4] = null;
 		}
 		if (this.lastinputs.su && !minputs.su)
 		{
+			this.activeTrails[5].transform.localScale -= new Vector3(0f, 1f, 0f);
+			this.activeTrails[5].transform.localPosition -= new Vector3(0f, this.releaseOffset, 0f);
+			this.activeHashes.Remove(this.activeTrails[5]);
 			this.activeTrails[5] = null;
 		}
 		if (this.lastinputs.sd && !minputs.sd)
 		{
+			this.activeTrails[6].transform.localScale -= new Vector3(0f, 1f, 0f);
+			this.activeTrails[6].transform.localPosition -= new Vector3(0f, this.releaseOffset, 0f);
+			this.activeHashes.Remove(this.activeTrails[6]);
 			this.activeTrails[6] = null;
 		}
 		TextMeshProUGUI[] array2 = this.trails;
 		for (int j = 0; j < array2.Length; j++)
 		{
-			bool flag = false;
-			for (int k = 0; k < this.activeTrails.Length; k++)
-			{
-				if (array2[j] == this.activeTrails[k])
-				{
-					flag = true;
-				}
-			}
-			if (!flag)
+			if (!this.activeHashes.Contains(this.trails[j]))
 			{
 				array2[j].transform.position -= new Vector3(0f, this.scaleSpeed * num * 25f, 0f);
 			}
 		}
-		for (int l = 0; l < this.activeTrails.Length; l++)
+		for (int k = 0; k < this.activeTrails.Length; k++)
 		{
-			TextMeshProUGUI textMeshProUGUI3 = this.activeTrails[l];
+			TextMeshProUGUI textMeshProUGUI3 = this.activeTrails[k];
 			if (textMeshProUGUI3 != null)
 			{
 				textMeshProUGUI3.transform.localScale += new Vector3(0f, this.scaleSpeed * num, 0f);
@@ -772,13 +790,17 @@ public class FrameRate : MonoBehaviour
 
 	private TextMeshProUGUI GetTrail(int trail)
 	{
-		this.currentTrail++;
-		if (this.currentTrail == this.trails.Length)
+		do
 		{
-			this.currentTrail = 0;
+			this.currentTrail++;
+			if (this.currentTrail == this.trails.Length)
+			{
+				this.currentTrail = 0;
+			}
 		}
+		while (this.trails[this.currentTrail] == this.activeTrails[0] || this.trails[this.currentTrail] == this.activeTrails[1] || this.trails[this.currentTrail] == this.activeTrails[2] || this.trails[this.currentTrail] == this.activeTrails[3] || this.trails[this.currentTrail] == this.activeTrails[4] || this.trails[this.currentTrail] == this.activeTrails[5] || this.trails[this.currentTrail] == this.activeTrails[6]);
 		TextMeshProUGUI textMeshProUGUI = this.trails[this.currentTrail];
-		textMeshProUGUI.transform.localScale = new Vector3(1.5f, 0.05f, 1f);
+		textMeshProUGUI.transform.localScale = new Vector3(1.5f, 1.01f, 1f);
 		Vector2 vector = new Vector2(GlobalHelper.trailPosX * (float)Screen.width, (float)Screen.height - GlobalHelper.trailPosY * (float)Screen.height);
 		switch (trail)
 		{
@@ -814,13 +836,13 @@ public class FrameRate : MonoBehaviour
 	{
 		this.fretColors = new Color[]
 		{
-			HexColor.FromHexString(GlobalHelper.greenFretColor).Color(),
-			HexColor.FromHexString(GlobalHelper.redFretColor).Color(),
-			HexColor.FromHexString(GlobalHelper.yellowFretColor).Color(),
-			HexColor.FromHexString(GlobalHelper.blueFretColor).Color(),
-			HexColor.FromHexString(GlobalHelper.orangeFretColor).Color(),
-			HexColor.FromHexString(GlobalHelper.strumColor).Color(),
-			HexColor.FromHexString(GlobalHelper.strumColor).Color()
+			HexColor.FromHexString(GlobalHelper.greenFretColor).AsColor(),
+			HexColor.FromHexString(GlobalHelper.redFretColor).AsColor(),
+			HexColor.FromHexString(GlobalHelper.yellowFretColor).AsColor(),
+			HexColor.FromHexString(GlobalHelper.blueFretColor).AsColor(),
+			HexColor.FromHexString(GlobalHelper.orangeFretColor).AsColor(),
+			HexColor.FromHexString(GlobalHelper.strumColor).AsColor(),
+			HexColor.FromHexString(GlobalHelper.strumColor).AsColor()
 		};
 		this.trailsNeedInit = true;
 		this.rr = 1f / (float)GlobalHelper.inputViewerHz;
@@ -1024,4 +1046,8 @@ public class FrameRate : MonoBehaviour
 	private BaseGuitarPlayer.inputmap lastinputs;
 
 	private TextMeshProUGUI spText;
+
+	private HashSet<TextMeshProUGUI> activeHashes;
+
+	private float releaseOffset;
 }

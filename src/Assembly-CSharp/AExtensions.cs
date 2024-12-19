@@ -40,8 +40,30 @@ public static class AExtensions
 		return textMeshProUGUI;
 	}
 
-	public static Color Color(this HexColor src)
+	public static Color AsColor(this HexColor src)
 	{
 		return new Color((float)src.Red / 255f, (float)src.Green / 255f, (float)src.Blue / 255f);
+	}
+
+	public static Color Saturate(this Color color, float intensity)
+	{
+		if (intensity <= -1f)
+		{
+			color = Color.black;
+		}
+		else if (intensity > 0f)
+		{
+			float maxColorComponent = color.maxColorComponent;
+			if (maxColorComponent > 0f)
+			{
+				color = Color.Lerp(color, color * (1f / maxColorComponent), intensity);
+			}
+		}
+		else
+		{
+			color *= 1f + intensity;
+		}
+		color.a = 1f;
+		return color;
 	}
 }

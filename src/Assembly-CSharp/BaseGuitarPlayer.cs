@@ -364,7 +364,6 @@ public abstract class BaseGuitarPlayer : BasePlayer
 			float num = 0f;
 			if (!this.lastinputs.g && this.minputs.g)
 			{
-				this.minputs.gn = true;
 				this.minputs.gcount = this.minputs.gcount + 1;
 				this.minputs.gptime = unscaledDeltaTime + num;
 			}
@@ -374,7 +373,6 @@ public abstract class BaseGuitarPlayer : BasePlayer
 			}
 			if (!this.lastinputs.r && this.minputs.r)
 			{
-				this.minputs.rn = true;
 				this.minputs.rcount = this.minputs.rcount + 1;
 				this.minputs.rptime = unscaledDeltaTime + num;
 			}
@@ -384,7 +382,6 @@ public abstract class BaseGuitarPlayer : BasePlayer
 			}
 			if (!this.lastinputs.y && this.minputs.y)
 			{
-				this.minputs.yn = true;
 				this.minputs.ycount = this.minputs.ycount + 1;
 				this.minputs.yptime = unscaledDeltaTime + num;
 			}
@@ -394,7 +391,6 @@ public abstract class BaseGuitarPlayer : BasePlayer
 			}
 			if (!this.lastinputs.b && this.minputs.b)
 			{
-				this.minputs.bn = true;
 				this.minputs.bcount = this.minputs.bcount + 1;
 				this.minputs.bptime = unscaledDeltaTime + num;
 			}
@@ -404,7 +400,6 @@ public abstract class BaseGuitarPlayer : BasePlayer
 			}
 			if (!this.lastinputs.o && this.minputs.o)
 			{
-				this.minputs.on = true;
 				this.minputs.ocount = this.minputs.ocount + 1;
 				this.minputs.optime = unscaledDeltaTime + num;
 			}
@@ -414,7 +409,6 @@ public abstract class BaseGuitarPlayer : BasePlayer
 			}
 			if (!this.lastinputs.su && this.minputs.su)
 			{
-				this.minputs.sun = true;
 				this.minputs.sucount = this.minputs.sucount + 1;
 				this.minputs.sutime = unscaledDeltaTime + num;
 			}
@@ -424,7 +418,6 @@ public abstract class BaseGuitarPlayer : BasePlayer
 			}
 			if (!this.lastinputs.sd && this.minputs.sd)
 			{
-				this.minputs.sdn = true;
 				this.minputs.sdcount = this.minputs.sdcount + 1;
 				this.minputs.sdtime = unscaledDeltaTime + num;
 			}
