@@ -124,9 +124,9 @@ public class GlobalVariables : MonoBehaviour
 	{
 		byte b = 0;
 		Instrument instrument = Instrument.None;
-		foreach (CHPlayer chplayer in this.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
+		foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in this.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
 		{
-			if (chplayer.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && chplayer.playerProfile != null)
+			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.playerInfo != null)
 			{
 				b += 1;
 				if (b > 1)
@@ -134,7 +134,7 @@ public class GlobalVariables : MonoBehaviour
 					instrument = Instrument.Band;
 					break;
 				}
-				instrument = chplayer.playerProfile.instrument;
+				instrument = u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.playerInfo.instrument;
 			}
 		}
 		return instrument;
@@ -596,12 +596,12 @@ public class GlobalVariables : MonoBehaviour
 		this.\u02B4\u02B3\u02B7\u02BC\u02B5\u02B3\u02B8\u02BB\u02BE\u02B5\u02B3 = Resources.Load<TextAsset>("version").text;
 		this.\u02B5\u02BF\u02BD\u02B8\u02B7\u02B3\u02BC\u02B6\u02B4\u02BB\u02B5 = GlobalVariables.\u02C1\u02BF\u02B3\u02B6\u02B9\u02BE\u02BB\u02BA\u02B3\u02B5\u02B7(this.\u02B4\u02B3\u02B7\u02BC\u02B5\u02B3\u02B8\u02BB\u02BE\u02B5\u02B3);
 		Screen.sleepTimeout = -1;
-		this.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF = new List<CHPlayer>
+		this.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF = new List<\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6>
 		{
-			new CHPlayer(),
-			new CHPlayer(),
-			new CHPlayer(),
-			new CHPlayer()
+			new \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6(),
+			new \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6(),
+			new \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6(),
+			new \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6()
 		};
 		base.gameObject.AddComponent<DiscordController>().\u02B5\u02BE\u02BA\u02B2\u02BD\u02BB\u02B9\u02BE\u02BA\u02B2\u02B3();
 		this.\u02B5\u02B3\u02B3\u02BB\u02BA\u02BB\u02C0\u02BE\u02B2\u02B5\u02B9();
@@ -768,9 +768,9 @@ public class GlobalVariables : MonoBehaviour
 
 	public bool \u02B4\u02B5\u02B7\u02B4\u02B3\u02B8\u02BE\u02C0\u02B5\u02B4\u02B4()
 	{
-		foreach (CHPlayer chplayer in this.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
+		foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in this.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
 		{
-			if (chplayer.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && chplayer.\u02C0\u02B5\u02B2\u02B2\u02BB\u02B8\u02B8\u02BD\u02B9\u02BD\u02C1())
+			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02C0\u02B5\u02B2\u02B2\u02BB\u02B8\u02B8\u02BD\u02B9\u02BD\u02C1())
 			{
 				return true;
 			}
@@ -898,9 +898,9 @@ public class GlobalVariables : MonoBehaviour
 
 	public bool \u02BA\u02B3\u02BE\u02B6\u02BF\u02B3\u02BB\u02C1\u02B6\u02C1\u02BF()
 	{
-		foreach (CHPlayer chplayer in this.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
+		foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in this.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
 		{
-			if (chplayer.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && chplayer.\u02C0\u02B5\u02B2\u02B2\u02BB\u02B8\u02B8\u02BD\u02B9\u02BD\u02C1())
+			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02C0\u02B5\u02B2\u02B2\u02BB\u02B8\u02B8\u02BD\u02B9\u02BD\u02C1())
 			{
 				return true;
 			}
@@ -950,9 +950,9 @@ public class GlobalVariables : MonoBehaviour
 
 	public \u02B5\u02B4\u02BA\u02C1\u02B5\u02BD\u02BE\u02B9\u02B8\u02B9\u02C0 \u02B8\u02B2\u02B9\u02B4\u02B2\u02B7\u02B4\u02B3\u02B9\u02B6\u02BF;
 
-	public List<CHPlayer> \u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF;
+	public List<\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6> \u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF;
 
-	public CHPlayer \u02B4\u02B8\u02BE\u02C1\u02B8\u02B7\u02B4\u02BA\u02BF\u02B7\u02BE;
+	public \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02B4\u02B8\u02BE\u02C1\u02B8\u02B7\u02B4\u02BA\u02BF\u02B7\u02BE;
 
 	[NonSerialized]
 	public string[] \u02B6\u02B8\u02B9\u02C1\u02BB\u02BE\u02B2\u02BF\u02BD\u02B4\u02BB;

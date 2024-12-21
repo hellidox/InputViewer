@@ -145,7 +145,7 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 		{
 			this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02BF\u02B8\u02BA\u02BB\u02BC\u02B5\u02BE\u02B7\u02C1\u02BA\u02BC.\u02BB\u02B7\u02C1\u02B3\u02B9\u02B6\u02B3\u02B5\u02BF\u02BE\u02B8[i] = Mathf.Min(1f, Mathf.MoveTowards(this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02BF\u02B8\u02BA\u02BB\u02BC\u02B5\u02BE\u02B7\u02C1\u02BA\u02BC.\u02BB\u02B7\u02C1\u02B3\u02B9\u02B6\u02B3\u02B5\u02BF\u02BE\u02B8[i], 1f, Time.deltaTime * 20f));
 		}
-		this.\u02BA\u02C1\u02B6\u02B4\u02B6\u02B6\u02B9\u02B7\u02B7\u02B2\u02BA += Time.deltaTime * (float)this.basePlayer.player.playerProfile.noteSpeed.CurrentValue * (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5 ? 0f : 1f);
+		this.\u02BA\u02C1\u02B6\u02B4\u02B6\u02B6\u02B9\u02B7\u02B7\u02B2\u02BA += Time.deltaTime * (float)this.basePlayer.playerStuff.playerInfo.noteSpeed.CurrentValue * (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5 ? 0f : 1f);
 		base.\u02B2\u02BF\u02B5\u02C1\u02B6\u02C0\u02B5\u02B5\u02B2\u02B2\u02B7();
 		this.\u02BF\u02B7\u02BE\u02BB\u02B3\u02B6\u02BE\u02BE\u02B2\u02C1\u02B6 = this.\u02B2\u02B5\u02B7\u02BB\u02BD\u02B5\u02BA\u02B3\u02B2\u02BE\u02B3;
 		this.\u02BA\u02B8\u02BC\u02B2\u02BA\u02BD\u02B3\u02B5\u02B9\u02B6\u02B7 = 0;
@@ -324,25 +324,25 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 
 	private void \u02B4\u02B9\u02B5\u02BF\u02B4\u02C1\u02B2\u02B8\u02BD\u02C0\u02BF()
 	{
-		if (this.basePlayer.player.playerProfile.IsGHLController)
+		if (this.basePlayer.playerStuff.playerInfo.IsGHLController)
 		{
 			return;
 		}
 		for (int i = 1; i < this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7.Length; i += 0)
 		{
-			((NoteContainer)this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7[i]).\u02B7\u02B3\u02B3\u02BA\u02BD\u02B8\u02BF\u02BB\u02B6\u02BA\u02BB = this.basePlayer.player.playerProfile.altTaps;
+			((NoteContainer)this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7[i]).\u02B7\u02B3\u02B3\u02BA\u02BD\u02B8\u02BF\u02BB\u02B6\u02BA\u02BB = this.basePlayer.playerStuff.playerInfo.altTaps;
 		}
 	}
 
 	private void \u02B9\u02B9\u02B7\u02B2\u02BB\u02B2\u02BB\u02B6\u02BA\u02BA\u02B4()
 	{
-		if (this.basePlayer.player.playerProfile.IsGHLController)
+		if (this.basePlayer.playerStuff.playerInfo.IsGHLController)
 		{
 			return;
 		}
 		for (int i = 1; i < this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7.Length; i++)
 		{
-			((NoteContainer)this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7[i]).\u02B7\u02B3\u02B3\u02BA\u02BD\u02B8\u02BF\u02BB\u02B6\u02BA\u02BB = this.basePlayer.player.playerProfile.altTaps;
+			((NoteContainer)this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7[i]).\u02B7\u02B3\u02B3\u02BA\u02BD\u02B8\u02BF\u02BB\u02B6\u02BA\u02BB = this.basePlayer.playerStuff.playerInfo.altTaps;
 		}
 	}
 
@@ -447,7 +447,7 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 					{
 						spriteRenderer.color = base.\u02B7\u02B9\u02BA\u02B6\u02B3\u02B4\u02B5\u02C1\u02B4\u02B9\u02B6.\u02BC\u02C0\u02B7\u02BD\u02B7\u02B4\u02B6\u02B6\u02B2\u02B3\u02C1[(int)b];
 					}
-					spriteRenderer.sprite = (\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.isTap ? this.Sustains[0] : this.Sustains[0]);
+					spriteRenderer.sprite = (\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.\u02B5\u02BC\u02BE\u02BF\u02B6\u02B7\u02B3\u02B9\u02BF\u02B5\u02BE ? this.Sustains[0] : this.Sustains[0]);
 				}
 				spriteRenderer.GetPropertyBlock(this.\u02B9\u02B6\u02B8\u02BB\u02BD\u02BB\u02BC\u02B4\u02BC\u02BB\u02BA);
 				this.\u02B9\u02B6\u02B8\u02BB\u02BD\u02BB\u02BC\u02B4\u02BC\u02BB\u02BA.SetFloat(this.\u02B6\u02B3\u02BC\u02BA\u02B4\u02BE\u02B4\u02B2\u02BA\u02C0\u02B7, num2);
@@ -518,7 +518,7 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 				spriteRenderer4.color = spriteRenderer3.color;
 				this.\u02BA\u02BB\u02B9\u02BC\u02B2\u02B8\u02BD\u02B8\u02BC\u02C1\u02B8++;
 			}
-			int num2 = \u02BB\u02B3\u02BF\u02BC\u02B5\u02B7\u02BA\u02B9\u02C0\u02B8\u02BE.\u02BD\u02B9\u02B3\u02BB\u02BC\u02B9\u02B5\u02BB\u02B5\u02BE\u02BA((int)(flag ? 5 : b), this.basePlayer.player.\u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7);
+			int num2 = \u02BB\u02B3\u02BF\u02BC\u02B5\u02B7\u02BA\u02B9\u02C0\u02B8\u02BE.\u02BD\u02B9\u02B3\u02BB\u02BC\u02B9\u02B5\u02BB\u02B5\u02BE\u02BA((int)(flag ? 5 : b), this.basePlayer.playerStuff.\u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7);
 			float num3 = (this.basePlayer as BaseGuitarPlayer).currentWhammy;
 			if (this.\u02B4\u02B2\u02B9\u02BC\u02B4\u02B6\u02B2\u02B9\u02BC\u02BA\u02C1)
 			{
@@ -666,7 +666,7 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 					{
 						spriteRenderer.color = base.\u02B7\u02B9\u02BA\u02B6\u02B3\u02B4\u02B5\u02C1\u02B4\u02B9\u02B6.\u02BC\u02C0\u02B7\u02BD\u02B7\u02B4\u02B6\u02B6\u02B2\u02B3\u02C1[(int)b];
 					}
-					spriteRenderer.sprite = (\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.isTap ? this.Sustains[0] : this.Sustains[0]);
+					spriteRenderer.sprite = (\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.\u02B5\u02BC\u02BE\u02BF\u02B6\u02B7\u02B3\u02B9\u02BF\u02B5\u02BE ? this.Sustains[0] : this.Sustains[0]);
 				}
 				spriteRenderer.GetPropertyBlock(this.\u02B9\u02B6\u02B8\u02BB\u02BD\u02BB\u02BC\u02B4\u02BC\u02BB\u02BA);
 				this.\u02B9\u02B6\u02B8\u02BB\u02BD\u02BB\u02BC\u02B4\u02BC\u02BB\u02BA.SetFloat(this.\u02B6\u02B3\u02BC\u02BA\u02B4\u02BE\u02B4\u02B2\u02BA\u02C0\u02B7, num2);
@@ -741,7 +741,7 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 					{
 						spriteRenderer.color = base.\u02B7\u02B9\u02BA\u02B6\u02B3\u02B4\u02B5\u02C1\u02B4\u02B9\u02B6.\u02BC\u02C0\u02B7\u02BD\u02B7\u02B4\u02B6\u02B6\u02B2\u02B3\u02C1[(int)b];
 					}
-					spriteRenderer.sprite = (\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.isTap ? this.Sustains[1] : this.Sustains[0]);
+					spriteRenderer.sprite = (\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.\u02B5\u02BC\u02BE\u02BF\u02B6\u02B7\u02B3\u02B9\u02BF\u02B5\u02BE ? this.Sustains[1] : this.Sustains[0]);
 				}
 				spriteRenderer.GetPropertyBlock(this.\u02B9\u02B6\u02B8\u02BB\u02BD\u02BB\u02BC\u02B4\u02BC\u02BB\u02BA);
 				this.\u02B9\u02B6\u02B8\u02BB\u02BD\u02BB\u02BC\u02B4\u02BC\u02BB\u02BA.SetFloat(this.\u02B6\u02B3\u02BC\u02BA\u02B4\u02BE\u02B4\u02B2\u02BA\u02C0\u02B7, num2);
@@ -905,7 +905,7 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 					{
 						spriteRenderer.color = base.\u02B7\u02B9\u02BA\u02B6\u02B3\u02B4\u02B5\u02C1\u02B4\u02B9\u02B6.\u02BC\u02C0\u02B7\u02BD\u02B7\u02B4\u02B6\u02B6\u02B2\u02B3\u02C1[(int)b];
 					}
-					spriteRenderer.sprite = (\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.isTap ? this.Sustains[0] : this.Sustains[0]);
+					spriteRenderer.sprite = (\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.\u02B5\u02BC\u02BE\u02BF\u02B6\u02B7\u02B3\u02B9\u02BF\u02B5\u02BE ? this.Sustains[0] : this.Sustains[0]);
 				}
 				spriteRenderer.GetPropertyBlock(this.\u02B9\u02B6\u02B8\u02BB\u02BD\u02BB\u02BC\u02B4\u02BC\u02BB\u02BA);
 				this.\u02B9\u02B6\u02B8\u02BB\u02BD\u02BB\u02BC\u02B4\u02BC\u02BB\u02BA.SetFloat(this.\u02B6\u02B3\u02BC\u02BA\u02B4\u02BE\u02B4\u02B2\u02BA\u02C0\u02B7, num2);
@@ -980,7 +980,7 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 					{
 						spriteRenderer.color = base.\u02B7\u02B9\u02BA\u02B6\u02B3\u02B4\u02B5\u02C1\u02B4\u02B9\u02B6.\u02BC\u02C0\u02B7\u02BD\u02B7\u02B4\u02B6\u02B6\u02B2\u02B3\u02C1[(int)b];
 					}
-					spriteRenderer.sprite = (\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.isTap ? this.Sustains[0] : this.Sustains[1]);
+					spriteRenderer.sprite = (\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.\u02B5\u02BC\u02BE\u02BF\u02B6\u02B7\u02B3\u02B9\u02BF\u02B5\u02BE ? this.Sustains[0] : this.Sustains[1]);
 				}
 				spriteRenderer.GetPropertyBlock(this.\u02B9\u02B6\u02B8\u02BB\u02BD\u02BB\u02BC\u02B4\u02BC\u02BB\u02BA);
 				this.\u02B9\u02B6\u02B8\u02BB\u02BD\u02BB\u02BC\u02B4\u02BC\u02BB\u02BA.SetFloat(this.\u02B6\u02B3\u02BC\u02BA\u02B4\u02BE\u02B4\u02B2\u02BA\u02C0\u02B7, num2);
@@ -992,19 +992,19 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 
 	private void \u02C0\u02C0\u02B7\u02BF\u02C1\u02B9\u02BA\u02B3\u02BF\u02BF\u02B6()
 	{
-		if (this.basePlayer.player.playerProfile.IsGHLController)
+		if (this.basePlayer.playerStuff.playerInfo.IsGHLController)
 		{
 			return;
 		}
 		for (int i = 1; i < this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7.Length; i += 0)
 		{
-			((NoteContainer)this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7[i]).\u02B7\u02B3\u02B3\u02BA\u02BD\u02B8\u02BF\u02BB\u02B6\u02BA\u02BB = this.basePlayer.player.playerProfile.altTaps;
+			((NoteContainer)this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7[i]).\u02B7\u02B3\u02B3\u02BA\u02BD\u02B8\u02BF\u02BB\u02B6\u02BA\u02BB = this.basePlayer.playerStuff.playerInfo.altTaps;
 		}
 	}
 
 	protected virtual void \u02B2\u02C1\u02BB\u02B5\u02BF\u02B3\u02B5\u02B3\u02BA\u02BD\u02C1()
 	{
-		this.\u02B4\u02B2\u02B9\u02BC\u02B4\u02B6\u02B2\u02B9\u02BC\u02BA\u02C1 = this.basePlayer.player.playerProfile.IsGamepadMode();
+		this.\u02B4\u02B2\u02B9\u02BC\u02B4\u02B6\u02B2\u02B9\u02BC\u02BA\u02C1 = this.basePlayer.playerStuff.playerInfo.IsGamepadMode();
 		this.\u02B4\u02B8\u02BA\u02BA\u02B2\u02BF\u02BC\u02C1\u02B6\u02BA\u02B4 = this.Sustains[0].border[5] / 275f / this.Sustains[1].rect.height;
 		this.\u02B4\u02B7\u02B5\u02B2\u02C0\u02B3\u02B9\u02B9\u02BA\u02BC\u02C1 = 1114f / (this.Sustains[1].rect.height / this.Sustains[1].pixelsPerUnit);
 		this.\u02B9\u02B6\u02B8\u02BB\u02BD\u02BB\u02BC\u02B4\u02BC\u02BB\u02BA = new MaterialPropertyBlock();
@@ -1019,7 +1019,7 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 
 	protected override void Start()
 	{
-		this.\u02B4\u02B2\u02B9\u02BC\u02B4\u02B6\u02B2\u02B9\u02BC\u02BA\u02C1 = this.basePlayer.player.playerProfile.IsGamepadMode();
+		this.\u02B4\u02B2\u02B9\u02BC\u02B4\u02B6\u02B2\u02B9\u02BC\u02BA\u02C1 = this.basePlayer.playerStuff.playerInfo.IsGamepadMode();
 		this.\u02B4\u02B8\u02BA\u02BA\u02B2\u02BF\u02BC\u02C1\u02B6\u02BA\u02B4 = this.Sustains[0].border[3] / 2f / this.Sustains[0].rect.height;
 		this.\u02B4\u02B7\u02B5\u02B2\u02C0\u02B3\u02B9\u02B9\u02BA\u02BC\u02C1 = 1f / (this.Sustains[0].rect.height / this.Sustains[0].pixelsPerUnit);
 		this.\u02B9\u02B6\u02B8\u02BB\u02BD\u02BB\u02BC\u02B4\u02BC\u02BB\u02BA = new MaterialPropertyBlock();
@@ -1153,7 +1153,7 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 				spriteRenderer4.color = spriteRenderer3.color;
 				this.\u02BA\u02BB\u02B9\u02BC\u02B2\u02B8\u02BD\u02B8\u02BC\u02C1\u02B8 += 0;
 			}
-			int num2 = \u02BB\u02B3\u02BF\u02BC\u02B5\u02B7\u02BA\u02B9\u02C0\u02B8\u02BE.\u02B9\u02BF\u02B7\u02B9\u02BA\u02B8\u02BB\u02B9\u02B8\u02B3\u02B2((int)(flag ? 4 : b), this.basePlayer.player.\u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7);
+			int num2 = \u02BB\u02B3\u02BF\u02BC\u02B5\u02B7\u02BA\u02B9\u02C0\u02B8\u02BE.\u02B9\u02BF\u02B7\u02B9\u02BA\u02B8\u02BB\u02B9\u02B8\u02B3\u02B2((int)(flag ? 4 : b), this.basePlayer.playerStuff.\u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7);
 			float num3 = (this.basePlayer as BaseGuitarPlayer).currentWhammy;
 			if (this.\u02B4\u02B2\u02B9\u02BC\u02B4\u02B6\u02B2\u02B9\u02BC\u02BA\u02C1)
 			{
@@ -1197,13 +1197,13 @@ public class GuitarNoteRenderer : BaseNoteRenderer
 
 	private void \u02B5\u02B2\u02B7\u02C1\u02BB\u02C0\u02BF\u02B8\u02B4\u02B2\u02B2()
 	{
-		if (this.basePlayer.player.playerProfile.IsGHLController)
+		if (this.basePlayer.playerStuff.playerInfo.IsGHLController)
 		{
 			return;
 		}
 		for (int i = 0; i < this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7.Length; i++)
 		{
-			((NoteContainer)this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7[i]).\u02B7\u02B3\u02B3\u02BA\u02BD\u02B8\u02BF\u02BB\u02B6\u02BA\u02BB = this.basePlayer.player.playerProfile.altTaps;
+			((NoteContainer)this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7[i]).\u02B7\u02B3\u02B3\u02BA\u02BD\u02B8\u02BF\u02BB\u02B6\u02BA\u02BB = this.basePlayer.playerStuff.playerInfo.altTaps;
 		}
 	}
 

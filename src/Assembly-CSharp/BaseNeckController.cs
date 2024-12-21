@@ -21,7 +21,7 @@ public abstract class BaseNeckController : MonoBehaviour, \u02C0\u02C1\u02B8\u02
 	public virtual void \u02B7\u02BC\u02BC\u02C0\u02BA\u02BF\u02BE\u02C0\u02BA\u02BA\u02B8()
 	{
 		base.StartCoroutine(this.\u02B5\u02BD\u02BE\u02BF\u02B3\u02B8\u02BC\u02B5\u02B2\u02B4\u02B6());
-		if (base.gameObject.GetComponent<BasePlayer>().player.playerProfile.isBot || !SettingsController.\u02C1\u02B6\u02B5\u02C1\u02B7\u02BE\u02B5\u02B9\u02B9\u02BB\u02C1)
+		if (base.gameObject.GetComponent<BasePlayer>().playerStuff.playerInfo.isBot || !SettingsController.\u02C1\u02B6\u02B5\u02C1\u02B7\u02BE\u02B5\u02B9\u02B9\u02BB\u02C1)
 		{
 			this.\u02BF\u02B9\u02B2\u02B2\u02BF\u02B2\u02BA\u02B4\u02BB\u02B5\u02C1();
 		}

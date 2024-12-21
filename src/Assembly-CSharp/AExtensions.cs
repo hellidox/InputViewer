@@ -69,12 +69,12 @@ public static class AExtensions
 
 	public static string Reverse(this string text)
 	{
-		char[] cArray = text.ToCharArray();
-		string reverse = string.Empty;
-		for (int i = cArray.Length - 1; i > -1; i--)
+		char[] array = text.ToCharArray();
+		string text2 = string.Empty;
+		for (int i = array.Length - 1; i > -1; i--)
 		{
-			reverse += cArray[i].ToString();
+			text2 += array[i].ToString();
 		}
-		return reverse;
+		return text2;
 	}
 }

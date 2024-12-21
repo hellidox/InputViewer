@@ -42,7 +42,7 @@ public class PlayerSelectionCanvas : MonoBehaviour
 		{
 			if (!this.players[i].gameObject.activeInHierarchy)
 			{
-				if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].playerProfile != null)
+				if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].playerInfo != null)
 				{
 					this.players[i].gameObject.SetActive(false);
 				}
@@ -101,7 +101,7 @@ public class PlayerSelectionCanvas : MonoBehaviour
 		{
 			if (!this.players[i].gameObject.activeInHierarchy)
 			{
-				if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].playerProfile != null)
+				if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].playerInfo != null)
 				{
 					this.players[i].gameObject.SetActive(true);
 				}
@@ -202,7 +202,7 @@ public class PlayerSelectionCanvas : MonoBehaviour
 		{
 			if (!this.players[i].gameObject.activeInHierarchy)
 			{
-				if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].playerProfile != null)
+				if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].playerInfo != null)
 				{
 					this.players[i].gameObject.SetActive(true);
 				}
@@ -245,7 +245,7 @@ public class PlayerSelectionCanvas : MonoBehaviour
 		{
 			if (!this.players[i].gameObject.activeInHierarchy)
 			{
-				if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].playerProfile != null)
+				if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].playerInfo != null)
 				{
 					this.players[i].gameObject.SetActive(true);
 				}

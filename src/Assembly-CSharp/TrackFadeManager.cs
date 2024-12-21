@@ -46,7 +46,7 @@ public class TrackFadeManager : MonoBehaviour
 
 	private void \u02B6\u02B6\u02B4\u02BB\u02B7\u02C1\u02C0\u02B6\u02B7\u02BD\u02B5()
 	{
-		this.far *= this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerProfile.highwayLength.GetFloatPercent;
+		this.far *= this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerInfo.highwayLength.GetFloatPercent;
 		this.\u02B9\u02BC\u02B2\u02BC\u02C1\u02BF\u02B3\u02C0\u02B5\u02B4\u02B4 = \u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3.All;
 		this.\u02B8\u02B3\u02B9\u02B4\u02BF\u02B5\u02BB\u02BA\u02BF\u02BD\u02B9(1527f);
 	}
@@ -177,7 +177,7 @@ public class TrackFadeManager : MonoBehaviour
 
 	private void Start()
 	{
-		this.far *= this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerProfile.highwayLength.GetFloatPercent;
+		this.far *= this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerInfo.highwayLength.GetFloatPercent;
 		this.\u02B9\u02BC\u02B2\u02BC\u02C1\u02BF\u02B3\u02C0\u02B5\u02B4\u02B4 = \u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3.All;
 		this.\u02B8\u02B3\u02B9\u02B4\u02BF\u02B5\u02BB\u02BA\u02BF\u02BD\u02B9(0f);
 	}
@@ -311,7 +311,7 @@ public class TrackFadeManager : MonoBehaviour
 	}
 
 	[HideInInspector]
-	public CHPlayer \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7;
+	public \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7;
 
 	[SerializeField]
 	public float near;

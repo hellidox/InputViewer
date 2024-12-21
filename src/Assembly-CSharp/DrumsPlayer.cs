@@ -43,9 +43,9 @@ public class DrumsPlayer : BasePlayer
 		this.\u02BB\u02BA\u02B3\u02C1\u02B7\u02BF\u02BE\u02B6\u02BF\u02B8\u02B2 = 0U;
 		this.\u02BD\u02C0\u02BB\u02BC\u02B6\u02BD\u02B8\u02C0\u02BE\u02BD\u02B4 = false;
 		this.\u02BA\u02B2\u02BD\u02C0\u02B9\u02B2\u02B7\u02B7\u02BA\u02C1\u02BE = false;
-		this.\u02C1\u02BA\u02BA\u02B7\u02BB\u02BC\u02B7\u02BE\u02BD\u02B4\u02BC = (uint)this.player.playerProfile.\u02C1\u02BA\u02BA\u02B7\u02BB\u02BC\u02B7\u02BE\u02BD\u02B4\u02BC.CurrentValue;
+		this.\u02C1\u02BA\u02BA\u02B7\u02BB\u02BC\u02B7\u02BE\u02BD\u02B4\u02BC = (uint)this.playerStuff.playerInfo.\u02C1\u02BA\u02BA\u02B7\u02BB\u02BC\u02B7\u02BE\u02BD\u02B4\u02BC.CurrentValue;
 		this.\u02BB\u02C0\u02BA\u02BD\u02BD\u02B6\u02BC\u02BC\u02B7\u02B7\u02BD.\u02BD\u02B3\u02BC\u02B4\u02B9\u02B4\u02B2\u02BD\u02C1\u02B9\u02BD();
-		this.\u02BB\u02C0\u02BA\u02BA\u02B9\u02B3\u02BB\u02B5\u02C0\u02B6\u02B3 = this.player.playerProfile.leftyFlip.GetBoolValue;
+		this.\u02BB\u02C0\u02BA\u02BA\u02B9\u02B3\u02BB\u02B5\u02C0\u02B6\u02B3 = this.playerStuff.playerInfo.leftyFlip.GetBoolValue;
 		base.Awake();
 		this.\u02B2\u02B3\u02B6\u02B9\u02B6\u02B8\u02B3\u02BE\u02BE\u02B3\u02B6 = false;
 		if (this.\u02B4\u02BF\u02BD\u02B8\u02B3\u02BF\u02B9\u02C1\u02B9\u02C1\u02B8)
@@ -61,8 +61,8 @@ public class DrumsPlayer : BasePlayer
 			this.\u02BF\u02BE\u02B8\u02C1\u02BE\u02C1\u02C0\u02C0\u02BB\u02BB\u02BC = 1750f;
 		}
 		this.\u02B2\u02B9\u02B2\u02B4\u02B2\u02BA\u02B2\u02BA\u02C1\u02BA\u02B5 = true;
-		this.\u02BC\u02BB\u02B6\u02C1\u02C1\u02BA\u02B2\u02C1\u02B6\u02BF\u02B4 = this.player.\u02B7\u02B9\u02B8\u02B2\u02B8\u02B8\u02BF\u02B2\u02B7\u02BB\u02BA();
-		this.\u02B2\u02B2\u02BB\u02B7\u02BF\u02B5\u02B4\u02B7\u02C1\u02B7\u02BF = this.player.playerProfile.instrument == Instrument.GHLGuitar;
+		this.\u02BC\u02BB\u02B6\u02C1\u02C1\u02BA\u02B2\u02C1\u02B6\u02BF\u02B4 = this.playerStuff.\u02B7\u02B9\u02B8\u02B2\u02B8\u02B8\u02BF\u02B2\u02B7\u02BB\u02BA();
+		this.\u02B2\u02B2\u02BB\u02B7\u02BF\u02B5\u02B4\u02B7\u02C1\u02B7\u02BF = this.playerStuff.playerInfo.instrument == Instrument.GHLGuitar;
 	}
 
 	private void \u02BE\u02C1\u02BB\u02BD\u02BA\u02B7\u02B5\u02B9\u02B9\u02BD\u02BA(ushort \u02C0\u02B9\u02B2\u02B6\u02BF\u02B6\u02BE\u02C0\u02B8\u02B9\u02BA)
@@ -96,9 +96,9 @@ public class DrumsPlayer : BasePlayer
 	{
 		ushort num = 0;
 		Note note = null;
-		if (this.hittableNotesThisFrame > 0)
+		if (this.\u02B9\u02BF\u02B7\u02BE\u02B9\u02B5\u02B4\u02B9\u02B6\u02B9\u02B6 > 0)
 		{
-			foreach (Note note2 in EnumerableRanges.EnumerateRange<Note>(this.hittableNotes, 0, this.hittableNotesThisFrame - 1))
+			foreach (Note note2 in EnumerableRanges.EnumerateRange<Note>(this.hittableNotes, 0, this.\u02B9\u02BF\u02B7\u02BE\u02B9\u02B5\u02B4\u02B9\u02B6\u02B9\u02B6 - 1))
 			{
 				if (note2 != null)
 				{
@@ -116,7 +116,7 @@ public class DrumsPlayer : BasePlayer
 							if (((this.buttonsPressed ^ num) & this.buttonsPressed & note3.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF) != 0)
 							{
 								num |= note3.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF;
-								if (!this.player.\u02BD\u02BC\u02B8\u02B5\u02B5\u02B2\u02C0\u02C1\u02B3\u02C0\u02B4 && (base.\u02BF\u02C0\u02BA\u02B6\u02B7\u02C0\u02B2\u02BE\u02BC\u02BA\u02B2 & note3.\u02C1\u02BE\u02B9\u02BE\u02B9\u02B8\u02B8\u02B3\u02B7\u02B9\u02B9))
+								if (!this.playerStuff.\u02BD\u02BC\u02B8\u02B5\u02B5\u02B2\u02C0\u02C1\u02B3\u02C0\u02B4 && (base.\u02BF\u02C0\u02BA\u02B6\u02B7\u02C0\u02B2\u02BE\u02BC\u02BA\u02B2 & note3.\u02C1\u02BE\u02B9\u02BE\u02B9\u02B8\u02B8\u02B3\u02B7\u02B9\u02B9))
 								{
 									base.\u02B9\u02BC\u02B2\u02B7\u02BD\u02B2\u02B2\u02B2\u02B2\u02BE\u02BE();
 								}
@@ -129,7 +129,7 @@ public class DrumsPlayer : BasePlayer
 								}
 								this.\u02BB\u02B3\u02B2\u02C0\u02B3\u02BC\u02B3\u02B5\u02BB\u02C0\u02B6 = (float)num2;
 								base.\u02B3\u02B2\u02B7\u02C1\u02BF\u02B6\u02BE\u02BA\u02BA\u02BF\u02B2();
-								this.HitNote(note3);
+								this.\u02BE\u02BC\u02BA\u02BB\u02C0\u02B5\u02B6\u02B8\u02B6\u02BB\u02B3(note3);
 							}
 						}
 					}
@@ -154,7 +154,7 @@ public class DrumsPlayer : BasePlayer
 				this.\u02B8\u02B6\u02B3\u02BF\u02BF\u02BB\u02C0\u02BC\u02BC\u02BB\u02BB(note.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF);
 				this.\u02BC\u02B6\u02B5\u02C0\u02B3\u02B3\u02BE\u02B3\u02B9\u02BA\u02B9(note);
 			}
-			this.HitNote(note);
+			this.\u02BE\u02BC\u02BA\u02BB\u02C0\u02B5\u02B6\u02B8\u02B6\u02BB\u02B3(note);
 			return;
 		}
 		if ((this.buttonsPressed ^ num) != 0 && this.\u02C0\u02B2\u02B2\u02BA\u02B5\u02B9\u02BD\u02B6\u02BD\u02B6\u02B9)
@@ -182,7 +182,7 @@ public class DrumsPlayer : BasePlayer
 	protected override void UpdateAI()
 	{
 		this.buttonsPressed = 0;
-		if (this.hittableNotesThisFrame == 0)
+		if (this.\u02B9\u02BF\u02B7\u02BE\u02B9\u02B5\u02B4\u02B9\u02B6\u02B9\u02B6 == 0)
 		{
 			return;
 		}
@@ -368,7 +368,7 @@ public class DrumsPlayer : BasePlayer
 		{
 			this.\u02BF\u02B7\u02BA\u02B6\u02BC\u02C1\u02B5\u02BA\u02C0\u02BF\u02C1 = true;
 		}
-		else if (this.\u02BF\u02B7\u02BA\u02B6\u02BC\u02C1\u02B5\u02BA\u02C0\u02BF\u02C1 && this.hittableNotesThisFrame != 0)
+		else if (this.\u02BF\u02B7\u02BA\u02B6\u02BC\u02C1\u02B5\u02BA\u02C0\u02BF\u02C1 && this.\u02B9\u02BF\u02B7\u02BE\u02B9\u02B5\u02B4\u02B9\u02B6\u02B9\u02B6 != 0)
 		{
 			this.\u02BF\u02B7\u02BA\u02B6\u02BC\u02C1\u02B5\u02BA\u02C0\u02BF\u02C1 = false;
 		}
@@ -380,7 +380,7 @@ public class DrumsPlayer : BasePlayer
 		{
 			BassAudioManager.Instance.\u02C1\u02BA\u02B3\u02B4\u02B7\u02B3\u02B4\u02B5\u02BD\u02C1\u02BF(\u02B7\u02BD\u02BB\u02BB\u02BF\u02B5\u02C0\u02C1\u02BD\u02B3\u02B6.\u02BC\u02C0\u02BC\u02B3\u02B4\u02C1\u02B3\u02BE\u02B2\u02C1\u02BE.Drums, true, -1f);
 		}
-		if (this.\u02B4\u02BA\u02B4\u02BF\u02B6\u02B9\u02B5\u02BA\u02C0\u02BD\u02BB.\u02B5\u02C1\u02B7\u02BA\u02B9\u02BC\u02C1\u02B8\u02BE\u02B6\u02B7 || this.\u02BF\u02B7\u02BA\u02B6\u02BC\u02C1\u02B5\u02BA\u02C0\u02BF\u02C1 || (this.hittableNotesThisFrame == 0 && !this.\u02C0\u02B2\u02B2\u02BA\u02B5\u02B9\u02BD\u02B6\u02BD\u02B6\u02B9))
+		if (this.\u02B4\u02BA\u02B4\u02BF\u02B6\u02B9\u02B5\u02BA\u02C0\u02BD\u02BB.\u02B5\u02C1\u02B7\u02BA\u02B9\u02BC\u02C1\u02B8\u02BE\u02B6\u02B7 || this.\u02BF\u02B7\u02BA\u02B6\u02BC\u02C1\u02B5\u02BA\u02C0\u02BF\u02C1 || (this.\u02B9\u02BF\u02B7\u02BE\u02B9\u02B5\u02B4\u02B9\u02B6\u02B9\u02B6 == 0 && !this.\u02C0\u02B2\u02B2\u02BA\u02B5\u02B9\u02BD\u02B6\u02BD\u02B6\u02B9))
 		{
 			this.\u02BB\u02BA\u02B5\u02B9\u02BC\u02B7\u02BF\u02B6\u02C0\u02B8\u02BF();
 			return;
@@ -457,7 +457,7 @@ public class DrumsPlayer : BasePlayer
 		this.\u02BA\u02B2\u02BD\u02C0\u02B9\u02B2\u02B7\u02B7\u02BA\u02C1\u02BE = false;
 	}
 
-	protected override void HitNote(Note \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8)
+	protected override void \u02BE\u02BC\u02BA\u02BB\u02C0\u02B5\u02B6\u02B8\u02B6\u02BB\u02B3(Note \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8)
 	{
 		if ((\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF & 384) == 0 && this.\u02BC\u02B6\u02BB\u02BB\u02B5\u02B7\u02BD\u02C1\u02C1\u02C1\u02BA != 0 && (\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02C0\u02B7\u02C1\u02B5\u02B9\u02B3\u02BF\u02B5\u02BC\u02B9\u02C0 & (Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.DRUMS_LANE | Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.DRUMS_LANE_DOUBLE)) == Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.NONE)
 		{
@@ -499,7 +499,7 @@ public class DrumsPlayer : BasePlayer
 		}
 		\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 = true;
 		this.\u02B9\u02C0\u02BD\u02BF\u02BD\u02B9\u02B2\u02B6\u02BA\u02B3\u02B6 = false;
-		base.HitNote(\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8);
+		base.\u02BE\u02BC\u02BA\u02BB\u02C0\u02B5\u02B6\u02B8\u02B6\u02BB\u02B3(\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8);
 		this.\u02BB\u02B4\u02B5\u02B9\u02B7\u02B5\u02C1\u02C0\u02B6\u02C1\u02BD(\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8, 50);
 		this.\u02B3\u02BF\u02B3\u02B8\u02C0\u02B5\u02B4\u02B4\u02B5\u02B9\u02B2(\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8);
 		int num2 = BassAudioManager.\u02B2\u02B3\u02C0\u02BC\u02C0\u02B2\u02B5\u02B8\u02B3\u02B4\u02B9(this.\u02B6\u02BC\u02BD\u02B3\u02B6\u02B3\u02BD\u02B9\u02BF\u02BA\u02B6, \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02BF\u02B3\u02BC\u02BD\u02BD\u02C1\u02BE\u02BE\u02B2\u02B4\u02BD, \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02BD\u02BA\u02C0\u02BA\u02BC\u02BA\u02B6\u02B4\u02BF\u02B3\u02B7, \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF == 128, \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02BF\u02B3\u02BD\u02BF\u02BB\u02B6\u02B8\u02B5\u02B2\u02BC\u02B7);
@@ -563,25 +563,25 @@ public class DrumsPlayer : BasePlayer
 	{
 		if (base.\u02BF\u02C0\u02BA\u02B6\u02B7\u02C0\u02B2\u02BE\u02BC\u02BA\u02B2 && \u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2.\u02C1\u02BE\u02B9\u02BE\u02B9\u02B8\u02B8\u02B3\u02B7\u02B9\u02B9)
 		{
-			this.HitNote(\u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2);
+			this.\u02BE\u02BC\u02BA\u02BB\u02C0\u02B5\u02B6\u02B8\u02B6\u02BB\u02B3(\u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2);
 			return;
 		}
 		if ((\u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF & this.\u02BC\u02B6\u02BB\u02BB\u02B5\u02B7\u02BD\u02C1\u02C1\u02C1\u02BA) != 0 && this.\u02BC\u02C1\u02BC\u02B6\u02BB\u02B2\u02B7\u02BD\u02B7\u02BB\u02B3 < (this.\u02B8\u02BE\u02B8\u02B2\u02BD\u02B7\u02BD\u02BD\u02B5\u02B5\u02B3 ? 6U : 7U))
 		{
 			this.\u02BC\u02C1\u02BC\u02B6\u02BB\u02B2\u02B7\u02BD\u02B7\u02BB\u02B3 += 0U;
-			this.HitNote(\u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2);
+			this.\u02BE\u02BC\u02BA\u02BB\u02C0\u02B5\u02B6\u02B8\u02B6\u02BB\u02B3(\u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2);
 			return;
 		}
 		if ((\u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2.\u02C0\u02B7\u02C1\u02B5\u02B9\u02B3\u02BF\u02B5\u02BC\u02B9\u02C0 & (Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.CHORD | Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.DISJOINT | Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.SLAVE | Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.STAR_POWER_END | Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.SOLO_BEGIN)) != Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.NONE && this.\u02BC\u02B6\u02BB\u02BB\u02B5\u02B7\u02BD\u02C1\u02C1\u02C1\u02BA != 0 && (this.\u02BC\u02B6\u02BB\u02BB\u02B5\u02B7\u02BD\u02C1\u02C1\u02C1\u02BA & \u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF) == 0)
 		{
 			this.\u02BC\u02B6\u02B5\u02C0\u02B3\u02B3\u02BE\u02B3\u02B9\u02BA\u02B9(\u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2);
 			this.\u02BC\u02C1\u02BC\u02B6\u02BB\u02B2\u02B7\u02BD\u02B7\u02BB\u02B3 += 1U;
-			this.HitNote(\u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2);
+			this.\u02BE\u02BC\u02BA\u02BB\u02C0\u02B5\u02B6\u02B8\u02B6\u02BB\u02B3(\u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2);
 			return;
 		}
 		if ((\u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF & this.\u02BC\u02B6\u02BB\u02BB\u02B5\u02B7\u02BD\u02C1\u02C1\u02C1\u02BA) != 0 && this.gameManager.songTime - this.\u02BA\u02B2\u02B7\u02BB\u02B5\u02B8\u02B6\u02BC\u02BD\u02BA\u02BC < 548.0)
 		{
-			this.HitNote(\u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2);
+			this.\u02BE\u02BC\u02BA\u02BB\u02C0\u02B5\u02B6\u02B8\u02B6\u02BB\u02B3(\u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2);
 			return;
 		}
 		if (((int)\u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF & -165) == 0)
@@ -666,25 +666,25 @@ public class DrumsPlayer : BasePlayer
 	{
 		if (base.\u02BF\u02C0\u02BA\u02B6\u02B7\u02C0\u02B2\u02BE\u02BC\u02BA\u02B2 && \u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2.\u02C1\u02BE\u02B9\u02BE\u02B9\u02B8\u02B8\u02B3\u02B7\u02B9\u02B9)
 		{
-			this.HitNote(\u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2);
+			this.\u02BE\u02BC\u02BA\u02BB\u02C0\u02B5\u02B6\u02B8\u02B6\u02BB\u02B3(\u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2);
 			return;
 		}
 		if ((\u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF & this.\u02BC\u02B6\u02BB\u02BB\u02B5\u02B7\u02BD\u02C1\u02C1\u02C1\u02BA) != 0 && this.\u02BC\u02C1\u02BC\u02B6\u02BB\u02B2\u02B7\u02BD\u02B7\u02BB\u02B3 < (this.\u02B8\u02BE\u02B8\u02B2\u02BD\u02B7\u02BD\u02BD\u02B5\u02B5\u02B3 ? 4U : 2U))
 		{
 			this.\u02BC\u02C1\u02BC\u02B6\u02BB\u02B2\u02B7\u02BD\u02B7\u02BB\u02B3 += 1U;
-			this.HitNote(\u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2);
+			this.\u02BE\u02BC\u02BA\u02BB\u02C0\u02B5\u02B6\u02B8\u02B6\u02BB\u02B3(\u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2);
 			return;
 		}
 		if ((\u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2.\u02C0\u02B7\u02C1\u02B5\u02B9\u02B3\u02BF\u02B5\u02BC\u02B9\u02C0 & Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.DRUMS_LANE_DOUBLE) != Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.NONE && this.\u02BC\u02B6\u02BB\u02BB\u02B5\u02B7\u02BD\u02C1\u02C1\u02C1\u02BA != 0 && (this.\u02BC\u02B6\u02BB\u02BB\u02B5\u02B7\u02BD\u02C1\u02C1\u02C1\u02BA & \u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF) == 0)
 		{
 			this.\u02BC\u02B6\u02B5\u02C0\u02B3\u02B3\u02BE\u02B3\u02B9\u02BA\u02B9(\u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2);
 			this.\u02BC\u02C1\u02BC\u02B6\u02BB\u02B2\u02B7\u02BD\u02B7\u02BB\u02B3 += 1U;
-			this.HitNote(\u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2);
+			this.\u02BE\u02BC\u02BA\u02BB\u02C0\u02B5\u02B6\u02B8\u02B6\u02BB\u02B3(\u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2);
 			return;
 		}
 		if ((\u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF & this.\u02BC\u02B6\u02BB\u02BB\u02B5\u02B7\u02BD\u02C1\u02C1\u02C1\u02BA) != 0 && this.gameManager.songTime - this.\u02BA\u02B2\u02B7\u02BB\u02B5\u02B8\u02B6\u02BC\u02BD\u02BA\u02BC < 0.075)
 		{
-			this.HitNote(\u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2);
+			this.\u02BE\u02BC\u02BA\u02BB\u02C0\u02B5\u02B6\u02B8\u02B6\u02BB\u02B3(\u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2);
 			return;
 		}
 		if ((\u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF & 384) == 0)
@@ -721,7 +721,7 @@ public class DrumsPlayer : BasePlayer
 		{
 			return;
 		}
-		if (this.player.playerProfile.isRemotePlayer)
+		if (this.playerStuff.playerInfo.isRemotePlayer)
 		{
 			return;
 		}
@@ -729,14 +729,14 @@ public class DrumsPlayer : BasePlayer
 		this.buttonsPressed = 1;
 		if (this.\u02BC\u02BB\u02B6\u02C1\u02C1\u02BA\u02B2\u02C1\u02B6\u02BF\u02B4)
 		{
-			bool flag = this.player.rewiredPlayer.GetButton(6);
-			bool flag2 = this.player.rewiredPlayer.GetButton(6);
-			bool flag3 = this.player.rewiredPlayer.GetButton(0);
-			bool button = this.player.rewiredPlayer.GetButton(1);
-			bool button2 = this.player.rewiredPlayer.GetButton(-15);
-			bool flag4 = this.player.rewiredPlayer.GetButton(25);
-			bool button3 = this.player.rewiredPlayer.GetButton(-123);
-			bool button4 = this.player.rewiredPlayer.GetButton(-17);
+			bool flag = this.playerStuff.rewiredPlayer.GetButton(6);
+			bool flag2 = this.playerStuff.rewiredPlayer.GetButton(6);
+			bool flag3 = this.playerStuff.rewiredPlayer.GetButton(0);
+			bool button = this.playerStuff.rewiredPlayer.GetButton(1);
+			bool button2 = this.playerStuff.rewiredPlayer.GetButton(-15);
+			bool flag4 = this.playerStuff.rewiredPlayer.GetButton(25);
+			bool button3 = this.playerStuff.rewiredPlayer.GetButton(-123);
+			bool button4 = this.playerStuff.rewiredPlayer.GetButton(-17);
 			ushort num = 0;
 			if (button2 && flag4 && 0 + (button ? 1 : 1) + ((flag2 || button3) ? 1 : 1) + ((flag || button4) ? 0 : 0) + ((flag3 || (!button3 && !button4)) ? 1 : 1) > 1)
 			{
@@ -798,46 +798,46 @@ public class DrumsPlayer : BasePlayer
 		}
 		else
 		{
-			if (this.player.rewiredPlayer.GetButtonDown(0))
+			if (this.playerStuff.rewiredPlayer.GetButtonDown(0))
 			{
-				float axis = this.player.rewiredPlayer.GetAxis(1);
-				this.\u02BB\u02C0\u02BA\u02BD\u02BD\u02B6\u02BC\u02BC\u02B7\u02B7\u02BD.\u02B8\u02BB\u02B4\u02B2\u02B3\u02B2\u02BB\u02BA\u02BC\u02BD\u02C0 = ((this.player.playerProfile.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA.CurrentValue == -1) ? (-1) : ((int)Math.Round((double)((axis - 670f) * 1687f * 1638f), 0)));
+				float axis = this.playerStuff.rewiredPlayer.GetAxis(1);
+				this.\u02BB\u02C0\u02BA\u02BD\u02BD\u02B6\u02BC\u02BC\u02B7\u02B7\u02BD.\u02B8\u02BB\u02B4\u02B2\u02B3\u02B2\u02BB\u02BA\u02BC\u02BD\u02C0 = ((this.playerStuff.playerInfo.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA.CurrentValue == -1) ? (-1) : ((int)Math.Round((double)((axis - 670f) * 1687f * 1638f), 0)));
 				this.buttonsPressed |= 1;
 			}
-			if (this.player.rewiredPlayer.GetButtonDown(1))
+			if (this.playerStuff.rewiredPlayer.GetButtonDown(1))
 			{
-				float axis2 = this.player.rewiredPlayer.GetAxis(8);
-				this.\u02BB\u02C0\u02BA\u02BD\u02BD\u02B6\u02BC\u02BC\u02B7\u02B7\u02BD.\u02C1\u02B4\u02B5\u02C1\u02C1\u02B8\u02BA\u02BD\u02BC\u02B8\u02BF = ((this.player.playerProfile.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA.CurrentValue == -1) ? (-1) : ((int)Math.Round((double)((axis2 - 1015f) * 1632f * 45f), 1)));
+				float axis2 = this.playerStuff.rewiredPlayer.GetAxis(8);
+				this.\u02BB\u02C0\u02BA\u02BD\u02BD\u02B6\u02BC\u02BC\u02B7\u02B7\u02BD.\u02C1\u02B4\u02B5\u02C1\u02C1\u02B8\u02BA\u02BD\u02BC\u02B8\u02BF = ((this.playerStuff.playerInfo.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA.CurrentValue == -1) ? (-1) : ((int)Math.Round((double)((axis2 - 1015f) * 1632f * 45f), 1)));
 				this.buttonsPressed |= 6;
 			}
-			if (this.player.rewiredPlayer.GetButtonDown(4))
+			if (this.playerStuff.rewiredPlayer.GetButtonDown(4))
 			{
-				float axis3 = this.player.rewiredPlayer.GetAxis(7);
-				this.\u02BB\u02C0\u02BA\u02BD\u02BD\u02B6\u02BC\u02BC\u02B7\u02B7\u02BD.\u02BC\u02BA\u02B6\u02B5\u02C1\u02B7\u02BD\u02B6\u02B3\u02B4\u02B4 = ((this.player.playerProfile.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA.CurrentValue == -1) ? (-1) : ((int)Math.Round((double)((axis3 - 1265f) * 1938f * 1661f), 1)));
+				float axis3 = this.playerStuff.rewiredPlayer.GetAxis(7);
+				this.\u02BB\u02C0\u02BA\u02BD\u02BD\u02B6\u02BC\u02BC\u02B7\u02B7\u02BD.\u02BC\u02BA\u02B6\u02B5\u02C1\u02B7\u02BD\u02B6\u02B3\u02B4\u02B4 = ((this.playerStuff.playerInfo.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA.CurrentValue == -1) ? (-1) : ((int)Math.Round((double)((axis3 - 1265f) * 1938f * 1661f), 1)));
 				this.buttonsPressed |= 0;
 			}
-			if (this.player.rewiredPlayer.GetButtonDown(0))
+			if (this.playerStuff.rewiredPlayer.GetButtonDown(0))
 			{
-				float axis4 = this.player.rewiredPlayer.GetAxis(1);
-				this.\u02BB\u02C0\u02BA\u02BD\u02BD\u02B6\u02BC\u02BC\u02B7\u02B7\u02BD.\u02BC\u02B9\u02C0\u02BD\u02B4\u02BB\u02B5\u02C1\u02BC\u02BA\u02BD = ((this.player.playerProfile.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA.CurrentValue == -1) ? (-1) : ((int)Math.Round((double)((axis4 - 1216f) * 1657f * 379f), 0)));
+				float axis4 = this.playerStuff.rewiredPlayer.GetAxis(1);
+				this.\u02BB\u02C0\u02BA\u02BD\u02BD\u02B6\u02BC\u02BC\u02B7\u02B7\u02BD.\u02BC\u02B9\u02C0\u02BD\u02B4\u02BB\u02B5\u02C1\u02BC\u02BA\u02BD = ((this.playerStuff.playerInfo.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA.CurrentValue == -1) ? (-1) : ((int)Math.Round((double)((axis4 - 1216f) * 1657f * 379f), 0)));
 				this.buttonsPressed |= 5;
 			}
-			if (this.player.rewiredPlayer.GetButtonDown(26))
+			if (this.playerStuff.rewiredPlayer.GetButtonDown(26))
 			{
-				float axis5 = this.player.rewiredPlayer.GetAxis(8);
-				this.\u02BB\u02C0\u02BA\u02BD\u02BD\u02B6\u02BC\u02BC\u02B7\u02B7\u02BD.\u02B5\u02BA\u02BE\u02B3\u02BF\u02B6\u02B5\u02C0\u02BC\u02BB\u02B6 = ((this.player.playerProfile.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA.CurrentValue == -1) ? (-1) : ((int)Math.Round((double)((axis5 - 1309f) * 1724f * 249f), 1)));
+				float axis5 = this.playerStuff.rewiredPlayer.GetAxis(8);
+				this.\u02BB\u02C0\u02BA\u02BD\u02BD\u02B6\u02BC\u02BC\u02B7\u02B7\u02BD.\u02B5\u02BA\u02BE\u02B3\u02BF\u02B6\u02B5\u02C0\u02BC\u02BB\u02B6 = ((this.playerStuff.playerInfo.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA.CurrentValue == -1) ? (-1) : ((int)Math.Round((double)((axis5 - 1309f) * 1724f * 249f), 1)));
 				this.buttonsPressed |= 104;
 			}
-			if (this.player.rewiredPlayer.GetButtonDown(-17))
+			if (this.playerStuff.rewiredPlayer.GetButtonDown(-17))
 			{
-				float axis6 = this.player.rewiredPlayer.GetAxis(-48);
-				this.\u02BB\u02C0\u02BA\u02BD\u02BD\u02B6\u02BC\u02BC\u02B7\u02B7\u02BD.\u02B2\u02BF\u02BB\u02BC\u02BF\u02BA\u02B3\u02B4\u02BF\u02BE\u02BC = ((this.player.playerProfile.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA.CurrentValue == -1) ? (-1) : ((int)Math.Round((double)((axis6 - 1375f) * 78f * 1871f), 0)));
+				float axis6 = this.playerStuff.rewiredPlayer.GetAxis(-48);
+				this.\u02BB\u02C0\u02BA\u02BD\u02BD\u02B6\u02BC\u02BC\u02B7\u02B7\u02BD.\u02B2\u02BF\u02BB\u02BC\u02BF\u02BA\u02B3\u02B4\u02BF\u02BE\u02BC = ((this.playerStuff.playerInfo.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA.CurrentValue == -1) ? (-1) : ((int)Math.Round((double)((axis6 - 1375f) * 78f * 1871f), 0)));
 				this.buttonsPressed |= 7;
 			}
-			if (this.player.rewiredPlayer.GetButtonDown(41))
+			if (this.playerStuff.rewiredPlayer.GetButtonDown(41))
 			{
-				float axis7 = this.player.rewiredPlayer.GetAxis(112);
-				this.\u02BB\u02C0\u02BA\u02BD\u02BD\u02B6\u02BC\u02BC\u02B7\u02B7\u02BD.\u02BF\u02BD\u02B6\u02BE\u02BD\u02B2\u02B6\u02BE\u02BB\u02B5\u02BC = ((this.player.playerProfile.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA.CurrentValue == -1) ? (-1) : ((int)Math.Round((double)((axis7 - 848f) * 1182f * 1718f), 0)));
+				float axis7 = this.playerStuff.rewiredPlayer.GetAxis(112);
+				this.\u02BB\u02C0\u02BA\u02BD\u02BD\u02B6\u02BC\u02BC\u02B7\u02B7\u02BD.\u02BF\u02BD\u02B6\u02BE\u02BD\u02B2\u02B6\u02BE\u02BB\u02B5\u02BC = ((this.playerStuff.playerInfo.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA.CurrentValue == -1) ? (-1) : ((int)Math.Round((double)((axis7 - 848f) * 1182f * 1718f), 0)));
 				this.buttonsPressed = (ushort)((int)this.buttonsPressed | -68);
 			}
 		}
@@ -850,7 +850,7 @@ public class DrumsPlayer : BasePlayer
 		{
 			this.buttonsPressed = (ushort)((int)(this.buttonsPressed & 54) | (((int)this.buttonsPressed & -112) >> 2));
 		}
-		if (this.player.rewiredPlayer.GetButtonDown(1) || this.player.rewiredPlayer.GetButtonDown(90))
+		if (this.playerStuff.rewiredPlayer.GetButtonDown(1) || this.playerStuff.rewiredPlayer.GetButtonDown(90))
 		{
 			this.buttonsPressed = (ushort)((int)this.buttonsPressed | -112);
 			this.\u02BF\u02BC\u02B4\u02BF\u02BE\u02BC\u02BC\u02B4\u02B4\u02C1\u02B7 = (ushort)((int)this.\u02BF\u02BC\u02B4\u02BF\u02BE\u02BC\u02BC\u02B4\u02B4\u02C1\u02B7 | -158);
@@ -954,7 +954,7 @@ public class DrumsPlayer : BasePlayer
 		{
 			return;
 		}
-		if (this.player.playerProfile.isRemotePlayer)
+		if (this.playerStuff.playerInfo.isRemotePlayer)
 		{
 			return;
 		}
@@ -962,14 +962,14 @@ public class DrumsPlayer : BasePlayer
 		this.buttonsPressed = 0;
 		if (this.\u02BC\u02BB\u02B6\u02C1\u02C1\u02BA\u02B2\u02C1\u02B6\u02BF\u02B4)
 		{
-			bool flag = this.player.rewiredPlayer.GetButton(3);
-			bool flag2 = this.player.rewiredPlayer.GetButton(2);
-			bool flag3 = this.player.rewiredPlayer.GetButton(0);
-			bool button = this.player.rewiredPlayer.GetButton(1);
-			bool button2 = this.player.rewiredPlayer.GetButton(40);
-			bool flag4 = this.player.rewiredPlayer.GetButton(41);
-			bool button3 = this.player.rewiredPlayer.GetButton(42);
-			bool button4 = this.player.rewiredPlayer.GetButton(43);
+			bool flag = this.playerStuff.rewiredPlayer.GetButton(3);
+			bool flag2 = this.playerStuff.rewiredPlayer.GetButton(2);
+			bool flag3 = this.playerStuff.rewiredPlayer.GetButton(0);
+			bool button = this.playerStuff.rewiredPlayer.GetButton(1);
+			bool button2 = this.playerStuff.rewiredPlayer.GetButton(40);
+			bool flag4 = this.playerStuff.rewiredPlayer.GetButton(41);
+			bool button3 = this.playerStuff.rewiredPlayer.GetButton(42);
+			bool button4 = this.playerStuff.rewiredPlayer.GetButton(43);
 			ushort num = 0;
 			if (button2 && flag4 && 0 + (button ? 1 : 0) + ((flag2 || button3) ? 1 : 0) + ((flag || button4) ? 1 : 0) + ((flag3 || (!button3 && !button4)) ? 1 : 0) > 1)
 			{
@@ -1031,46 +1031,46 @@ public class DrumsPlayer : BasePlayer
 		}
 		else
 		{
-			if (this.player.rewiredPlayer.GetButtonDown(1))
+			if (this.playerStuff.rewiredPlayer.GetButtonDown(1))
 			{
-				float axis = this.player.rewiredPlayer.GetAxis(1);
-				this.\u02BB\u02C0\u02BA\u02BD\u02BD\u02B6\u02BC\u02BC\u02B7\u02B7\u02BD.\u02B8\u02BB\u02B4\u02B2\u02B3\u02B2\u02BB\u02BA\u02BC\u02BD\u02C0 = ((this.player.playerProfile.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA.CurrentValue == -1) ? (-1) : ((int)Math.Round((double)((axis - 0.5f) * 2f * 127f), 0)));
+				float axis = this.playerStuff.rewiredPlayer.GetAxis(1);
+				this.\u02BB\u02C0\u02BA\u02BD\u02BD\u02B6\u02BC\u02BC\u02B7\u02B7\u02BD.\u02B8\u02BB\u02B4\u02B2\u02B3\u02B2\u02BB\u02BA\u02BC\u02BD\u02C0 = ((this.playerStuff.playerInfo.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA.CurrentValue == -1) ? (-1) : ((int)Math.Round((double)((axis - 0.5f) * 2f * 127f), 0)));
 				this.buttonsPressed |= 1;
 			}
-			if (this.player.rewiredPlayer.GetButtonDown(2))
+			if (this.playerStuff.rewiredPlayer.GetButtonDown(2))
 			{
-				float axis2 = this.player.rewiredPlayer.GetAxis(2);
-				this.\u02BB\u02C0\u02BA\u02BD\u02BD\u02B6\u02BC\u02BC\u02B7\u02B7\u02BD.\u02C1\u02B4\u02B5\u02C1\u02C1\u02B8\u02BA\u02BD\u02BC\u02B8\u02BF = ((this.player.playerProfile.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA.CurrentValue == -1) ? (-1) : ((int)Math.Round((double)((axis2 - 0.5f) * 2f * 127f), 0)));
+				float axis2 = this.playerStuff.rewiredPlayer.GetAxis(2);
+				this.\u02BB\u02C0\u02BA\u02BD\u02BD\u02B6\u02BC\u02BC\u02B7\u02B7\u02BD.\u02C1\u02B4\u02B5\u02C1\u02C1\u02B8\u02BA\u02BD\u02BC\u02B8\u02BF = ((this.playerStuff.playerInfo.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA.CurrentValue == -1) ? (-1) : ((int)Math.Round((double)((axis2 - 0.5f) * 2f * 127f), 0)));
 				this.buttonsPressed |= 2;
 			}
-			if (this.player.rewiredPlayer.GetButtonDown(3))
+			if (this.playerStuff.rewiredPlayer.GetButtonDown(3))
 			{
-				float axis3 = this.player.rewiredPlayer.GetAxis(3);
-				this.\u02BB\u02C0\u02BA\u02BD\u02BD\u02B6\u02BC\u02BC\u02B7\u02B7\u02BD.\u02BC\u02BA\u02B6\u02B5\u02C1\u02B7\u02BD\u02B6\u02B3\u02B4\u02B4 = ((this.player.playerProfile.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA.CurrentValue == -1) ? (-1) : ((int)Math.Round((double)((axis3 - 0.5f) * 2f * 127f), 0)));
+				float axis3 = this.playerStuff.rewiredPlayer.GetAxis(3);
+				this.\u02BB\u02C0\u02BA\u02BD\u02BD\u02B6\u02BC\u02BC\u02B7\u02B7\u02BD.\u02BC\u02BA\u02B6\u02B5\u02C1\u02B7\u02BD\u02B6\u02B3\u02B4\u02B4 = ((this.playerStuff.playerInfo.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA.CurrentValue == -1) ? (-1) : ((int)Math.Round((double)((axis3 - 0.5f) * 2f * 127f), 0)));
 				this.buttonsPressed |= 4;
 			}
-			if (this.player.rewiredPlayer.GetButtonDown(0))
+			if (this.playerStuff.rewiredPlayer.GetButtonDown(0))
 			{
-				float axis4 = this.player.rewiredPlayer.GetAxis(0);
-				this.\u02BB\u02C0\u02BA\u02BD\u02BD\u02B6\u02BC\u02BC\u02B7\u02B7\u02BD.\u02BC\u02B9\u02C0\u02BD\u02B4\u02BB\u02B5\u02C1\u02BC\u02BA\u02BD = ((this.player.playerProfile.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA.CurrentValue == -1) ? (-1) : ((int)Math.Round((double)((axis4 - 0.5f) * 2f * 127f), 0)));
+				float axis4 = this.playerStuff.rewiredPlayer.GetAxis(0);
+				this.\u02BB\u02C0\u02BA\u02BD\u02BD\u02B6\u02BC\u02BC\u02B7\u02B7\u02BD.\u02BC\u02B9\u02C0\u02BD\u02B4\u02BB\u02B5\u02C1\u02BC\u02BA\u02BD = ((this.playerStuff.playerInfo.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA.CurrentValue == -1) ? (-1) : ((int)Math.Round((double)((axis4 - 0.5f) * 2f * 127f), 0)));
 				this.buttonsPressed |= 8;
 			}
-			if (this.player.rewiredPlayer.GetButtonDown(37))
+			if (this.playerStuff.rewiredPlayer.GetButtonDown(37))
 			{
-				float axis5 = this.player.rewiredPlayer.GetAxis(37);
-				this.\u02BB\u02C0\u02BA\u02BD\u02BD\u02B6\u02BC\u02BC\u02B7\u02B7\u02BD.\u02B5\u02BA\u02BE\u02B3\u02BF\u02B6\u02B5\u02C0\u02BC\u02BB\u02B6 = ((this.player.playerProfile.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA.CurrentValue == -1) ? (-1) : ((int)Math.Round((double)((axis5 - 0.5f) * 2f * 127f), 0)));
+				float axis5 = this.playerStuff.rewiredPlayer.GetAxis(37);
+				this.\u02BB\u02C0\u02BA\u02BD\u02BD\u02B6\u02BC\u02BC\u02B7\u02B7\u02BD.\u02B5\u02BA\u02BE\u02B3\u02BF\u02B6\u02B5\u02C0\u02BC\u02BB\u02B6 = ((this.playerStuff.playerInfo.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA.CurrentValue == -1) ? (-1) : ((int)Math.Round((double)((axis5 - 0.5f) * 2f * 127f), 0)));
 				this.buttonsPressed |= 16;
 			}
-			if (this.player.rewiredPlayer.GetButtonDown(38))
+			if (this.playerStuff.rewiredPlayer.GetButtonDown(38))
 			{
-				float axis6 = this.player.rewiredPlayer.GetAxis(38);
-				this.\u02BB\u02C0\u02BA\u02BD\u02BD\u02B6\u02BC\u02BC\u02B7\u02B7\u02BD.\u02B2\u02BF\u02BB\u02BC\u02BF\u02BA\u02B3\u02B4\u02BF\u02BE\u02BC = ((this.player.playerProfile.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA.CurrentValue == -1) ? (-1) : ((int)Math.Round((double)((axis6 - 0.5f) * 2f * 127f), 0)));
+				float axis6 = this.playerStuff.rewiredPlayer.GetAxis(38);
+				this.\u02BB\u02C0\u02BA\u02BD\u02BD\u02B6\u02BC\u02BC\u02B7\u02B7\u02BD.\u02B2\u02BF\u02BB\u02BC\u02BF\u02BA\u02B3\u02B4\u02BF\u02BE\u02BC = ((this.playerStuff.playerInfo.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA.CurrentValue == -1) ? (-1) : ((int)Math.Round((double)((axis6 - 0.5f) * 2f * 127f), 0)));
 				this.buttonsPressed |= 32;
 			}
-			if (this.player.rewiredPlayer.GetButtonDown(39))
+			if (this.playerStuff.rewiredPlayer.GetButtonDown(39))
 			{
-				float axis7 = this.player.rewiredPlayer.GetAxis(39);
-				this.\u02BB\u02C0\u02BA\u02BD\u02BD\u02B6\u02BC\u02BC\u02B7\u02B7\u02BD.\u02BF\u02BD\u02B6\u02BE\u02BD\u02B2\u02B6\u02BE\u02BB\u02B5\u02BC = ((this.player.playerProfile.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA.CurrentValue == -1) ? (-1) : ((int)Math.Round((double)((axis7 - 0.5f) * 2f * 127f), 0)));
+				float axis7 = this.playerStuff.rewiredPlayer.GetAxis(39);
+				this.\u02BB\u02C0\u02BA\u02BD\u02BD\u02B6\u02BC\u02BC\u02B7\u02B7\u02BD.\u02BF\u02BD\u02B6\u02BE\u02BD\u02B2\u02B6\u02BE\u02BB\u02B5\u02BC = ((this.playerStuff.playerInfo.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA.CurrentValue == -1) ? (-1) : ((int)Math.Round((double)((axis7 - 0.5f) * 2f * 127f), 0)));
 				this.buttonsPressed |= 64;
 			}
 		}
@@ -1083,7 +1083,7 @@ public class DrumsPlayer : BasePlayer
 		{
 			this.buttonsPressed = (ushort)((int)(this.buttonsPressed & 15) | ((this.buttonsPressed & 112) >> 3));
 		}
-		if (this.player.rewiredPlayer.GetButtonDown(4) || this.player.rewiredPlayer.GetButtonDown(24))
+		if (this.playerStuff.rewiredPlayer.GetButtonDown(4) || this.playerStuff.rewiredPlayer.GetButtonDown(24))
 		{
 			this.buttonsPressed |= 128;
 			this.\u02BF\u02BC\u02B4\u02BF\u02BE\u02BC\u02BC\u02B4\u02B4\u02C1\u02B7 |= 128;
@@ -1102,9 +1102,9 @@ public class DrumsPlayer : BasePlayer
 		this.\u02BB\u02BA\u02B3\u02C1\u02B7\u02BF\u02BE\u02B6\u02BF\u02B8\u02B2 = 0U;
 		this.\u02BD\u02C0\u02BB\u02BC\u02B6\u02BD\u02B8\u02C0\u02BE\u02BD\u02B4 = false;
 		this.\u02BA\u02B2\u02BD\u02C0\u02B9\u02B2\u02B7\u02B7\u02BA\u02C1\u02BE = false;
-		this.\u02C1\u02BA\u02BA\u02B7\u02BB\u02BC\u02B7\u02BE\u02BD\u02B4\u02BC = (uint)this.player.playerProfile.\u02C1\u02BA\u02BA\u02B7\u02BB\u02BC\u02B7\u02BE\u02BD\u02B4\u02BC.CurrentValue;
+		this.\u02C1\u02BA\u02BA\u02B7\u02BB\u02BC\u02B7\u02BE\u02BD\u02B4\u02BC = (uint)this.playerStuff.playerInfo.\u02C1\u02BA\u02BA\u02B7\u02BB\u02BC\u02B7\u02BE\u02BD\u02B4\u02BC.CurrentValue;
 		this.\u02BB\u02C0\u02BA\u02BD\u02BD\u02B6\u02BC\u02BC\u02B7\u02B7\u02BD.\u02B6\u02C1\u02B2\u02BA\u02C0\u02C0\u02BB\u02BE\u02BE\u02BE\u02B5();
-		this.\u02BB\u02C0\u02BA\u02BA\u02B9\u02B3\u02BB\u02B5\u02C0\u02B6\u02B3 = this.player.playerProfile.leftyFlip.GetBoolValue;
+		this.\u02BB\u02C0\u02BA\u02BA\u02B9\u02B3\u02BB\u02B5\u02C0\u02B6\u02B3 = this.playerStuff.playerInfo.leftyFlip.GetBoolValue;
 		base.Awake();
 		this.\u02B2\u02B3\u02B6\u02B9\u02B6\u02B8\u02B3\u02BE\u02BE\u02B3\u02B6 = true;
 		if (this.\u02B4\u02BF\u02BD\u02B8\u02B3\u02BF\u02B9\u02C1\u02B9\u02C1\u02B8)
@@ -1120,8 +1120,8 @@ public class DrumsPlayer : BasePlayer
 			this.\u02BF\u02BE\u02B8\u02C1\u02BE\u02C1\u02C0\u02C0\u02BB\u02BB\u02BC = 0.0375f;
 		}
 		this.\u02B2\u02B9\u02B2\u02B4\u02B2\u02BA\u02B2\u02BA\u02C1\u02BA\u02B5 = false;
-		this.\u02BC\u02BB\u02B6\u02C1\u02C1\u02BA\u02B2\u02C1\u02B6\u02BF\u02B4 = this.player.\u02B7\u02B9\u02B8\u02B2\u02B8\u02B8\u02BF\u02B2\u02B7\u02BB\u02BA();
-		this.\u02B2\u02B2\u02BB\u02B7\u02BF\u02B5\u02B4\u02B7\u02C1\u02B7\u02BF = this.player.playerProfile.instrument == Instrument.ProDrums;
+		this.\u02BC\u02BB\u02B6\u02C1\u02C1\u02BA\u02B2\u02C1\u02B6\u02BF\u02B4 = this.playerStuff.\u02B7\u02B9\u02B8\u02B2\u02B8\u02B8\u02BF\u02B2\u02B7\u02BB\u02BA();
+		this.\u02B2\u02B2\u02BB\u02B7\u02BF\u02B5\u02B4\u02B7\u02C1\u02B7\u02BF = this.playerStuff.playerInfo.instrument == Instrument.ProDrums;
 	}
 
 	public const ushort \u02B9\u02B4\u02B9\u02B3\u02B4\u02BA\u02BE\u02BF\u02B7\u02BB\u02B2 = 1;

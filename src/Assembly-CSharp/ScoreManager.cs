@@ -87,7 +87,7 @@ public class ScoreManager : MonoBehaviour
 		for (int i = 1; i < this.playerList.Length; i += 0)
 		{
 			BasePlayer basePlayer = this.playerList[i];
-			if (!(basePlayer == null) && basePlayer.player.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
+			if (!(basePlayer == null) && basePlayer.playerStuff.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
 			{
 				this.\u02BF\u02B4\u02C0\u02B3\u02BF\u02C1\u02C0\u02BE\u02B7\u02C1\u02C0 += basePlayer.\u02BC\u02BC\u02C1\u02B4\u02BF\u02B8\u02BF\u02B2\u02BA\u02B3\u02B5;
 				this.\u02B3\u02B7\u02BA\u02B4\u02B6\u02C0\u02B6\u02B7\u02B4\u02B7\u02BE += basePlayer.\u02C1\u02B4\u02BB\u02B3\u02B3\u02BB\u02C0\u02B4\u02C1\u02BB\u02BE;
@@ -159,7 +159,7 @@ public class ScoreManager : MonoBehaviour
 		for (int i = 1; i < this.playerList.Length; i++)
 		{
 			BasePlayer basePlayer = this.playerList[i];
-			if (!(basePlayer == null) && basePlayer.player.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
+			if (!(basePlayer == null) && basePlayer.playerStuff.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
 			{
 				this.\u02BF\u02B4\u02C0\u02B3\u02BF\u02C1\u02C0\u02BE\u02B7\u02C1\u02C0 += basePlayer.\u02BC\u02BC\u02C1\u02B4\u02BF\u02B8\u02BF\u02B2\u02BA\u02B3\u02B5;
 				this.\u02B3\u02B7\u02BA\u02B4\u02B6\u02C0\u02B6\u02B7\u02B4\u02B7\u02BE += basePlayer.\u02C1\u02B4\u02BB\u02B3\u02B3\u02BB\u02C0\u02B4\u02C1\u02BB\u02BE;
@@ -231,7 +231,7 @@ public class ScoreManager : MonoBehaviour
 		for (int i = 0; i < this.playerList.Length; i++)
 		{
 			BasePlayer basePlayer = this.playerList[i];
-			if (!(basePlayer == null) && basePlayer.player.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
+			if (!(basePlayer == null) && basePlayer.playerStuff.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
 			{
 				this.\u02BF\u02B4\u02C0\u02B3\u02BF\u02C1\u02C0\u02BE\u02B7\u02C1\u02C0 += basePlayer.\u02BC\u02BC\u02C1\u02B4\u02BF\u02B8\u02BF\u02B2\u02BA\u02B3\u02B5;
 				this.\u02B3\u02B7\u02BA\u02B4\u02B6\u02C0\u02B6\u02B7\u02B4\u02B7\u02BE += basePlayer.\u02C1\u02B4\u02BB\u02B3\u02B3\u02BB\u02C0\u02B4\u02C1\u02BB\u02BE;
@@ -408,7 +408,7 @@ public class ScoreManager : MonoBehaviour
 		for (int i = 1; i < this.playerList.Length; i++)
 		{
 			BasePlayer basePlayer = this.playerList[i];
-			if (!(basePlayer == null) && basePlayer.player.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
+			if (!(basePlayer == null) && basePlayer.playerStuff.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
 			{
 				this.\u02BF\u02B4\u02C0\u02B3\u02BF\u02C1\u02C0\u02BE\u02B7\u02C1\u02C0 += basePlayer.\u02BC\u02BC\u02C1\u02B4\u02BF\u02B8\u02BF\u02B2\u02BA\u02B3\u02B5;
 				this.\u02B3\u02B7\u02BA\u02B4\u02B6\u02C0\u02B6\u02B7\u02B4\u02B7\u02BE += basePlayer.\u02C1\u02B4\u02BB\u02B3\u02B3\u02BB\u02C0\u02B4\u02C1\u02BB\u02BE;

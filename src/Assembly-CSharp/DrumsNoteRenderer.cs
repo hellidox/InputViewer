@@ -599,8 +599,8 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		for (int i = 1; i < u02B7_u02B6_u02BD_u02BC_u02BD_u02BB_u02BA_u02B2_u02B4_u02B6_u02B.Length; i++)
 		{
 			DrumsNoteContainer drumsNoteContainer = (DrumsNoteContainer)u02B7_u02B6_u02BD_u02BC_u02BD_u02BB_u02BA_u02B2_u02B4_u02B6_u02B[i];
-			drumsNoteContainer.\u02B4\u02B4\u02C0\u02B3\u02BB\u02BA\u02BB\u02BC\u02B6\u02BE\u02BF = this.basePlayer.player.playerProfile.drumDynamicsHidden;
-			drumsNoteContainer.\u02B5\u02C0\u02BE\u02C1\u02BD\u02BB\u02BD\u02BC\u02BC\u02BF\u02B4 = this.basePlayer.player.playerProfile.squareTomNotes;
+			drumsNoteContainer.\u02B4\u02B4\u02C0\u02B3\u02BB\u02BA\u02BB\u02BC\u02B6\u02BE\u02BF = this.basePlayer.playerStuff.playerInfo.drumDynamicsHidden;
+			drumsNoteContainer.\u02B5\u02C0\u02BE\u02C1\u02BD\u02BB\u02BD\u02BC\u02BC\u02BF\u02B4 = this.basePlayer.playerStuff.playerInfo.squareTomNotes;
 		}
 	}
 
@@ -710,8 +710,8 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		this.\u02B8\u02B9\u02BB\u02B2\u02B8\u02B5\u02B2\u02B3\u02B7\u02B2\u02B9();
 		foreach (DrumsNoteContainer drumsNoteContainer in this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7)
 		{
-			drumsNoteContainer.\u02B4\u02B4\u02C0\u02B3\u02BB\u02BA\u02BB\u02BC\u02B6\u02BE\u02BF = this.basePlayer.player.playerProfile.drumDynamicsHidden;
-			drumsNoteContainer.\u02B5\u02C0\u02BE\u02C1\u02BD\u02BB\u02BD\u02BC\u02BC\u02BF\u02B4 = this.basePlayer.player.playerProfile.squareTomNotes;
+			drumsNoteContainer.\u02B4\u02B4\u02C0\u02B3\u02BB\u02BA\u02BB\u02BC\u02B6\u02BE\u02BF = this.basePlayer.playerStuff.playerInfo.drumDynamicsHidden;
+			drumsNoteContainer.\u02B5\u02C0\u02BE\u02C1\u02BD\u02BB\u02BD\u02BC\u02BC\u02BF\u02B4 = this.basePlayer.playerStuff.playerInfo.squareTomNotes;
 		}
 	}
 
@@ -721,8 +721,8 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		this.\u02B8\u02B9\u02BB\u02B2\u02B8\u02B5\u02B2\u02B3\u02B7\u02B2\u02B9();
 		foreach (DrumsNoteContainer drumsNoteContainer in this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7)
 		{
-			drumsNoteContainer.\u02B4\u02B4\u02C0\u02B3\u02BB\u02BA\u02BB\u02BC\u02B6\u02BE\u02BF = this.basePlayer.player.playerProfile.drumDynamicsHidden;
-			drumsNoteContainer.\u02B5\u02C0\u02BE\u02C1\u02BD\u02BB\u02BD\u02BC\u02BC\u02BF\u02B4 = this.basePlayer.player.playerProfile.squareTomNotes;
+			drumsNoteContainer.\u02B4\u02B4\u02C0\u02B3\u02BB\u02BA\u02BB\u02BC\u02B6\u02BE\u02BF = this.basePlayer.playerStuff.playerInfo.drumDynamicsHidden;
+			drumsNoteContainer.\u02B5\u02C0\u02BE\u02C1\u02BD\u02BB\u02BD\u02BC\u02BC\u02BF\u02B4 = this.basePlayer.playerStuff.playerInfo.squareTomNotes;
 		}
 	}
 
@@ -839,8 +839,8 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		for (int i = 0; i < u02B7_u02B6_u02BD_u02BC_u02BD_u02BB_u02BA_u02B2_u02B4_u02B6_u02B.Length; i += 0)
 		{
 			DrumsNoteContainer drumsNoteContainer = (DrumsNoteContainer)u02B7_u02B6_u02BD_u02BC_u02BD_u02BB_u02BA_u02B2_u02B4_u02B6_u02B[i];
-			drumsNoteContainer.\u02B4\u02B4\u02C0\u02B3\u02BB\u02BA\u02BB\u02BC\u02B6\u02BE\u02BF = this.basePlayer.player.playerProfile.drumDynamicsHidden;
-			drumsNoteContainer.\u02B5\u02C0\u02BE\u02C1\u02BD\u02BB\u02BD\u02BC\u02BC\u02BF\u02B4 = this.basePlayer.player.playerProfile.squareTomNotes;
+			drumsNoteContainer.\u02B4\u02B4\u02C0\u02B3\u02BB\u02BA\u02BB\u02BC\u02B6\u02BE\u02BF = this.basePlayer.playerStuff.playerInfo.drumDynamicsHidden;
+			drumsNoteContainer.\u02B5\u02C0\u02BE\u02C1\u02BD\u02BB\u02BD\u02BC\u02BC\u02BF\u02B4 = this.basePlayer.playerStuff.playerInfo.squareTomNotes;
 		}
 	}
 
