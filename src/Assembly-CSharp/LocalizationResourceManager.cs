@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -119,6 +120,17 @@ public class LocalizationResourceManager
 			string text2;
 			if (this.overrides != null && this.overrides.TryGetValue(resourceID, out text2))
 			{
+				if (text2 == string.Empty)
+				{
+					try
+					{
+						StackFrame sf = new StackFrame(2);
+						Debug.Log(string.Format("Empty key {0} requested by {1}.{2}()", resourceID, sf.GetMethod().DeclaringType, sf.GetMethod().Name));
+					}
+					catch
+					{
+					}
+				}
 				return text2;
 			}
 			Dictionary<\u02BA\u02BE\u02B5\u02BF\u02BE\u02BE\u02B9\u02C1\u02B2\u02BB\u02C0, string> dictionary;

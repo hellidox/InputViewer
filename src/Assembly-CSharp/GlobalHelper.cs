@@ -224,6 +224,7 @@ public static class GlobalHelper
 		GlobalHelper._perFretFlameColorsCache = null;
 		GlobalHelper._colorIntensityCache = null;
 		GlobalHelper._songProgressColorCache = null;
+		GlobalHelper._fpsTextCache = null;
 		GlobalHelper._starProgressColorCache = null;
 		GlobalHelper._noteStreakColorCache = null;
 		GlobalHelper._scoreColorCache = null;
@@ -388,6 +389,15 @@ public static class GlobalHelper
 			GlobalHelper.maxTrails = 50;
 			GlobalHelper.WriteComment("There's no real metric behind this to be honest");
 			GlobalHelper.trailSpeed = 0.7f;
+			GlobalHelper.WriteComment("Insert values with {i} where i is 0-6");
+			GlobalHelper.WriteComment("0: frame rate");
+			GlobalHelper.WriteComment("1: worst frame time");
+			GlobalHelper.WriteComment("2: rendered frame rate (static, equivalent to your monitor refresh rate)");
+			GlobalHelper.WriteComment("3: best frame time");
+			GlobalHelper.WriteComment("4: detected real game speed");
+			GlobalHelper.WriteComment("5: debug info for game speed tracker");
+			GlobalHelper.WriteComment("6: debug info for game speed tracker");
+			GlobalHelper.fpsText = "{0:00000} FPS {1:0000} worst {3:00000} best {2:000} rendered {4:000.000000} game speed {5:0.0000} {6:0.0000}".Replace(" ", "");
 			GlobalHelper.WriteComment("Don't touch this. ");
 			GlobalHelper.WriteKeyValue("versionID", GlobalHelper.versionid, false);
 			Process.Start(new ProcessStartInfo
@@ -454,6 +464,7 @@ public static class GlobalHelper
 		GlobalHelper.trailPosX = GlobalHelper.trailPosX;
 		GlobalHelper.trailPosY = GlobalHelper.trailPosY;
 		GlobalHelper.maxTrails = GlobalHelper.maxTrails;
+		GlobalHelper.fpsText = GlobalHelper.fpsText;
 		List<Action> toRemove = new List<Action>();
 		foreach (Action action in GlobalHelper.OnInvalidate)
 		{
@@ -1451,7 +1462,7 @@ public static class GlobalHelper
 					for (int i = 0; i < list.Count; i++)
 					{
 						string[] array = list[i].Split(':', StringSplitOptions.None);
-						if (array.Length == 2 && array[0].Trim() == key)
+						if (array.Length > 1 && array[0].Trim() == key)
 						{
 							string text = value.GetType().ToString().ToLowerInvariant();
 							if (text.IndexOf("string") == -1 && text.IndexOf("bool") == -1)
@@ -1535,9 +1546,11 @@ public static class GlobalHelper
 			if (!text2.StartsWith("#") && !text2.StartsWith(";"))
 			{
 				string[] array2 = text2.Split(':', StringSplitOptions.None);
-				if (array2.Length == 2 && array2[0].Trim() == key)
+				if (array2.Length > 1 && array2[0].Trim() == key)
 				{
-					return array2[1].Trim();
+					string val = string.Join(":", array2.Skip(1)).Trim();
+					Debug.Log(string.Concat(new string[] { "found ", key, " (", val, ")" }));
+					return val;
 				}
 			}
 		}
@@ -1913,6 +1926,24 @@ public static class GlobalHelper
 		}
 	}
 
+	public static string fpsText
+	{
+		get
+		{
+			if (GlobalHelper._fpsTextCache != null)
+			{
+				return GlobalHelper._fpsTextCache;
+			}
+			GlobalHelper._fpsTextCache = GlobalHelper.ReadKeyValue("fpsText");
+			return GlobalHelper._fpsTextCache;
+		}
+		set
+		{
+			GlobalHelper._fpsTextCache = value;
+			GlobalHelper.WriteKeyValue("fpsText", value, false);
+		}
+	}
+
 	private static bool? _rainbowSPBarCache;
 
 	private static bool? _rainbowFlamesCache;
@@ -2056,6 +2087,8 @@ public static class GlobalHelper
 	private static bool? _useTrailsCache;
 
 	private static float? _trailSpeedCache;
+
+	private static string _fpsTextCache;
 
 	public enum JudgeLevel
 	{

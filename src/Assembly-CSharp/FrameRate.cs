@@ -34,6 +34,7 @@ public class FrameRate : MonoBehaviour
 		GC.Collect();
 		bool useJudgements = GlobalHelper.useJudgements;
 		this.activeHashes = new HashSet<TextMeshProUGUI>();
+		this.heldScaleProgress = new Dictionary<TextMeshProUGUI, float>();
 		this.textDisplay = base.GetComponent<TextMeshProUGUI>();
 		this.timer1 = this.const1;
 		this.textDisplay.fontSize = 0.7f * this.textDisplay.fontSize;
@@ -46,6 +47,8 @@ public class FrameRate : MonoBehaviour
 			this.trails[i] = this.textDisplay.Duplicate();
 			this.trails[i].enableWordWrapping = false;
 			this.trails[i].text = "█";
+			this.trails[i].richText = true;
+			Texture mainTexture = this.trails[i].mainTexture;
 			this.trails[i].rectTransform.pivot = new Vector2(0.5f, 0.8185f);
 			this.trails[i].mainTexture.filterMode = FilterMode.Point;
 		}
@@ -172,7 +175,8 @@ public class FrameRate : MonoBehaviour
 				}
 				else
 				{
-					text = string.Format("{0:00000} FPS {1:0000} worst {3:00000} best {2:000} rendered {4:000.000000} game speed {5:0.0000} {6:0.0000}", new object[]
+					Debug.Log("text == " + GlobalHelper.fpsText);
+					text = string.Format(GlobalHelper.fpsText, new object[]
 					{
 						num2,
 						1f / this.worst,
@@ -180,7 +184,8 @@ public class FrameRate : MonoBehaviour
 						this.best,
 						this.timeDifference * 100f,
 						(double)(this.old_ftEnd - this.old_ftStart) / 1000.0 / 1000.0 / 10.0,
-						this.old_udtTotal
+						this.old_udtTotal,
+						GlobalVariables.progress
 					});
 				}
 				this.worst = float.NegativeInfinity;
@@ -278,7 +283,7 @@ public class FrameRate : MonoBehaviour
 				BaseGuitarPlayer.inputmap minputs = this.instance.minputs;
 				this.upperLeftTextBuilder.Append("<color=#ff00ffaa>");
 				this.upperLeftTextBuilder.Append(this.orig);
-				this.upperLeftTextBuilder.AppendFormat<int>(" {0:000}%<color=#ffffffcc>\n", GlobalVariables.progress);
+				this.upperLeftTextBuilder.Append("<color=#ffffffcc>\n");
 				if (GlobalHelper.showClock)
 				{
 					this.upperLeftTextBuilder.Append(this.ctime);
@@ -668,26 +673,26 @@ public class FrameRate : MonoBehaviour
 		float num = this.rr;
 		if (this.trailsNeedInit)
 		{
-			Vector2 vector = new Vector2(45f, 22.5f) * ((float)Screen.width / 1920f);
-			this.releaseOffset = vector.y;
-			this.sizePerChar = vector.x;
+			Vector2 vector = new Vector2(45f, 22.5f);
+			this.releaseOffset = vector.y * ((float)Screen.height / 1080f);
+			this.sizePerChar = vector.x * 0.95f;
 			this.scaleSpeed = (float)Screen.height / vector.y * GlobalHelper.trailSpeed;
 			this.trailsNeedInit = false;
 		}
-		if (num == 0f)
+		if (num != 0f)
 		{
 			if (Input.GetKey(KeyCode.Alpha0))
 			{
 				foreach (TextMeshProUGUI textMeshProUGUI in this.trails)
 				{
-					this.instance.minputs.gcount = (int)(10000f * (textMeshProUGUI.rectTransform.pivot -= new Vector2(0f, 0.004f * num)).y);
+					this.instance.minputs.gcount = (int)(100000f * (textMeshProUGUI.rectTransform.pivot -= new Vector2(0f, 0.0004f * num)).y);
 				}
 			}
 			if (Input.GetKey(KeyCode.Alpha9))
 			{
 				foreach (TextMeshProUGUI textMeshProUGUI2 in this.trails)
 				{
-					this.instance.minputs.gcount = (int)(10000f * (textMeshProUGUI2.rectTransform.pivot += new Vector2(0f, 0.004f * num)).y);
+					this.instance.minputs.gcount = (int)(100000f * (textMeshProUGUI2.rectTransform.pivot += new Vector2(0f, 0.0004f * num)).y);
 				}
 			}
 		}
@@ -769,16 +774,16 @@ public class FrameRate : MonoBehaviour
 			this.activeTrails[6] = null;
 		}
 		TextMeshProUGUI[] array2 = this.trails;
-		for (int j = 0; j < array2.Length; j++)
+		for (int i = 0; i < array2.Length; i++)
 		{
-			if (!this.activeHashes.Contains(this.trails[j]))
+			if (!this.activeHashes.Contains(this.trails[i]))
 			{
-				array2[j].transform.position -= new Vector3(0f, this.scaleSpeed * num * 25f, 0f);
+				array2[i].transform.localPosition -= new Vector3(0f, this.scaleSpeed * num * 25f * ((float)Screen.height / 1080f), 0f);
 			}
 		}
-		for (int k = 0; k < this.activeTrails.Length; k++)
+		for (int j = 0; j < this.activeTrails.Length; j++)
 		{
-			TextMeshProUGUI textMeshProUGUI3 = this.activeTrails[k];
+			TextMeshProUGUI textMeshProUGUI3 = this.activeTrails[j];
 			if (textMeshProUGUI3 != null)
 			{
 				textMeshProUGUI3.transform.localScale += new Vector3(0f, this.scaleSpeed * num, 0f);
@@ -828,6 +833,7 @@ public class FrameRate : MonoBehaviour
 		}
 		textMeshProUGUI.transform.position = vector;
 		textMeshProUGUI.color = this.fretColors[trail];
+		this.heldScaleProgress[textMeshProUGUI] = 0f;
 		return textMeshProUGUI;
 	}
 
@@ -1050,4 +1056,6 @@ public class FrameRate : MonoBehaviour
 	private HashSet<TextMeshProUGUI> activeHashes;
 
 	private float releaseOffset;
+
+	private Dictionary<TextMeshProUGUI, float> heldScaleProgress;
 }
