@@ -12,14 +12,6 @@
   "items": [
     {
       "show": true,
-      "date": 1734988831,
-      "author": "<color=#ffff00>Dear Matt Money</color>",
-      "description": "fuck you matt money",
-      "datatype": "link",
-      "data": "https://github.com/hellidox/InputViewer/releases/download/v2.1/Assembly-CSharp.dll"
-    },
-    {
-      "show": true,
       "date": 1734544800,
       "author": "<color=#ffaaff>Andrea</color>",
       "description": "Update V2.1 released",
