@@ -26,7 +26,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 							{
 								if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Audio Offset")
 								{
-									gameSetting = SettingsController.\u02B7\u02B2\u02BB\u02BA\u02BD\u02B3\u02BA\u02BA\u02BE\u02B9\u02B4;
+									gameSetting = SettingsController.audioOffset;
 								}
 							}
 						}
@@ -69,7 +69,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 				}
 				else if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Double Strum Prevention")
 				{
-					gameSetting = SettingsController.\u02B5\u02B7\u02B2\u02BB\u02BE\u02B8\u02BC\u02BA\u02B6\u02B5\u02C1;
+					gameSetting = SettingsController.doubleStrumPrevention;
 				}
 			}
 			else if (num <= 1485671700U)
@@ -150,7 +150,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 						{
 							if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Video Offset")
 							{
-								gameSetting = SettingsController.\u02BE\u02C0\u02BA\u02B7\u02B9\u02C0\u02B6\u02BE\u02C1\u02B8\u02BB;
+								gameSetting = SettingsController.videoOffset;
 							}
 						}
 					}
@@ -322,7 +322,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 								{
 									if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Audio Offset")
 									{
-										this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02B7\u02B2\u02BB\u02BA\u02BD\u02B3\u02BA\u02BA\u02BE\u02B9\u02B4;
+										this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.audioOffset;
 									}
 								}
 							}
@@ -365,7 +365,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 					}
 					else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Double Strum Prevention")
 					{
-						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02B5\u02B7\u02B2\u02BB\u02BE\u02B8\u02BC\u02BA\u02B6\u02B5\u02C1;
+						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.doubleStrumPrevention;
 					}
 				}
 				else if (num <= 1485671700U)
@@ -452,7 +452,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 							{
 								if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Video Offset")
 								{
-									this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02BE\u02C0\u02BA\u02B7\u02B9\u02C0\u02B6\u02BE\u02C1\u02B8\u02BB;
+									this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.videoOffset;
 								}
 							}
 						}
@@ -529,7 +529,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 					{
 						if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Get Hardware Latency")
 						{
-							SettingsController.\u02B7\u02B2\u02BB\u02BA\u02BD\u02B3\u02BA\u02BA\u02BE\u02B9\u02B4.CurrentValue = BassAudioManager.Instance.\u02C0\u02B6\u02B9\u02BF\u02B3\u02B3\u02BF\u02B6\u02BD\u02B3\u02BF();
+							SettingsController.audioOffset.CurrentValue = BassAudioManager.Instance.\u02C0\u02B6\u02B9\u02BF\u02B3\u02B3\u02BF\u02B6\u02BD\u02B3\u02BF();
 							this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
 							this.\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0("");
 							this.backgroundObjects[base.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC].sprite = this.\u02BD\u02BD\u02B6\u02C1\u02B6\u02BD\u02BA\u02B8\u02BE\u02BF\u02B9;
@@ -1325,7 +1325,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 							{
 								if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "8EDC4F")
 								{
-									gameSetting = SettingsController.\u02B7\u02B2\u02BB\u02BA\u02BD\u02B3\u02BA\u02BA\u02BE\u02B9\u02B4;
+									gameSetting = SettingsController.audioOffset;
 								}
 							}
 						}
@@ -1368,7 +1368,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 				}
 				else if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Image Backgrounds")
 				{
-					gameSetting = SettingsController.\u02B5\u02B7\u02B2\u02BB\u02BE\u02B8\u02BC\u02BA\u02B6\u02B5\u02C1;
+					gameSetting = SettingsController.doubleStrumPrevention;
 				}
 			}
 			else if (num <= 4294967141U)
@@ -1449,7 +1449,7 @@ public class GameplaySettingsMenu : BaseSettingMenu
 						{
 							if (\u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0 == "Startup Parameters:")
 							{
-								gameSetting = SettingsController.\u02BE\u02C0\u02BA\u02B7\u02B9\u02C0\u02B6\u02BE\u02C1\u02B8\u02BB;
+								gameSetting = SettingsController.videoOffset;
 							}
 						}
 					}

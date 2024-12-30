@@ -25,15 +25,15 @@ public abstract class BaseNoteRenderer : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB
 		this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = GameObject.Find("Game Manager").GetComponent<GameManager>();
 		this.\u02BB\u02B6\u02BD\u02BA\u02BC\u02B2\u02B8\u02BB\u02C0\u02BD\u02BE = base.GetComponent<TrackFadeManager>();
 		this.\u02BD\u02B5\u02BC\u02B6\u02B5\u02BE\u02C1\u02BE\u02B7\u02C1\u02B5 = -this.firstNoteXPos * 2f / (this.laneCount - 1f);
-		this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4 = (float)this.basePlayer.playerStuff.playerInfo.noteSpeed.CurrentValue;
+		this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4 = (float)this.basePlayer.player.playerProfile.noteSpeed.CurrentValue;
 		this.\u02BE\u02BD\u02BB\u02B8\u02B5\u02BF\u02BE\u02B6\u02BD\u02B9\u02BD();
-		if (this.basePlayer.playerStuff.playerInfo.leftyFlip)
+		if (this.basePlayer.player.playerProfile.leftyFlip)
 		{
 			this.\u02BE\u02BF\u02B4\u02B6\u02BF\u02B3\u02C0\u02BA\u02C0\u02B9\u02BA();
 		}
 		this.\u02B2\u02BE\u02B4\u02BE\u02B9\u02B5\u02B4\u02BA\u02B6\u02BF\u02B8 = (this.\u02BD\u02B4\u02B8\u02B9\u02BF\u02BF\u02B4\u02C0\u02C1\u02BC\u02BF - this.\u02BB\u02BE\u02B6\u02B5\u02BD\u02BF\u02C1\u02B9\u02B4\u02B3\u02B9) / this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4;
 		this.\u02BA\u02C1\u02B6\u02B4\u02B6\u02B6\u02B9\u02B7\u02B7\u02B2\u02BA = 0f;
-		this.\u02B6\u02BB\u02B2\u02B5\u02BC\u02BB\u02B7\u02B3\u02C1\u02B4\u02B2 = base.gameObject.GetComponent<BasePlayer>().playerStuff.playerInfo.HasModChartModifier && !base.gameObject.GetComponent<BasePlayer>().playerStuff.playerInfo.HasModifier(Modifier.ModPrep);
+		this.\u02B6\u02BB\u02B2\u02B5\u02BC\u02BB\u02B7\u02B3\u02C1\u02B4\u02B2 = base.gameObject.GetComponent<BasePlayer>().player.playerProfile.HasModChartModifier && !base.gameObject.GetComponent<BasePlayer>().player.playerProfile.HasModifier(Modifier.ModPrep);
 		this.\u02BB\u02B6\u02BD\u02BA\u02BC\u02B2\u02B8\u02BB\u02C0\u02BD\u02BE.\u02B2\u02B7\u02BE\u02B2\u02C1\u02B4\u02B6\u02B7\u02BE\u02BD\u02B8(this);
 	}
 
@@ -124,10 +124,10 @@ public abstract class BaseNoteRenderer : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB
 		while (num2 <= \u02BB\u02BC\u02C1\u02B5\u02B5\u02BA\u02B9\u02B6\u02BF\u02B5\u02C0 && num2 < \u02B9\u02B5\u02B8\u02C1\u02BA\u02B2\u02BA\u02C0\u02C1\u02C1\u02BD.Count && \u02B6\u02B4\u02C0\u02B8\u02C1\u02C0\u02BE\u02BC\u02B6\u02B3\u02BF < num)
 		{
 			T t = \u02B9\u02B5\u02B8\u02C1\u02BA\u02B2\u02BA\u02C0\u02C1\u02C1\u02BD[num2];
-			Helper.\u02C0\u02BF\u02B7\u02BA\u02B6\u02BA\u02B2\u02B4\u02B5\u02B8\u02B9 u02C0_u02BF_u02B7_u02BA_u02B6_u02BA_u02B2_u02B4_u02B5_u02B8_u02B = Helper.\u02C1\u02BF\u02B8\u02B2\u02BA\u02B3\u02B4\u02B3\u02C1\u02BC\u02BE((uint)t.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF).\u02BC\u02C0\u02B8\u02B9\u02B4\u02BB\u02BE\u02B6\u02BC\u02B7\u02C1();
-			while (u02C0_u02BF_u02B7_u02BA_u02B6_u02BA_u02B2_u02B4_u02B5_u02B8_u02B.\u02BF\u02B5\u02B7\u02BB\u02B5\u02BB\u02B7\u02B5\u02B6\u02BA\u02BC())
+			Helper.UintPair this2 = Helper.NewUintPair((uint)t.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF).GetThis();
+			while (this2.MoreThanOneBitSet())
 			{
-				ushort num3 = (ushort)u02C0_u02BF_u02B7_u02BA_u02B6_u02BA_u02B2_u02B4_u02B5_u02B8_u02B.\u02B9\u02BA\u02BB\u02B4\u02C0\u02B4\u02B6\u02B2\u02B9\u02B3\u02BF;
+				ushort num3 = (ushort)this2.xor;
 				int num4 = this.\u02C1\u02B7\u02C0\u02B7\u02B9\u02B2\u02B2\u02BF\u02BC\u02C0\u02BF(num3);
 				\u02B5\u02BA\u02B7\u02C1\u02BD\u02BD\u02C1\u02B5\u02C1\u02BB\u02BF[\u02B6\u02B4\u02C0\u02B8\u02C1\u02C0\u02BE\u02BC\u02B6\u02B3\u02BF].SetActive(true);
 				SpriteRenderer spriteRenderer = \u02BD\u02B4\u02B9\u02C1\u02C1\u02B5\u02C1\u02BE\u02B4\u02BA\u02BC[\u02B6\u02B4\u02C0\u02B8\u02C1\u02C0\u02BE\u02BC\u02B6\u02B3\u02BF];
@@ -178,6 +178,16 @@ public abstract class BaseNoteRenderer : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB
 		}
 	}
 
+	\u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3 \u02B6\u02BB\u02BD\u02BB\u02BA\u02B6\u02B9\u02C0\u02B8\u02B4\u02BC.\u02BA\u02BA\u02B7\u02B9\u02B9\u02B5\u02C1\u02C1\u02B2\u02B7\u02BA()
+	{
+		return this.\u02B7\u02C0\u02B7\u02C0\u02B9\u02C0\u02BC\u02B3\u02BB\u02B7\u02B3;
+	}
+
+	void \u02C0\u02C1\u02B8\u02BF\u02BB\u02BB\u02B9\u02BC\u02B9\u02BD\u02B7.\u02B8\u02B9\u02C0\u02B7\u02C0\u02B6\u02C1\u02BA\u02BF\u02B8\u02B8(\u02BB\u02B9\u02B2\u02B3\u02B4\u02B3\u02BF\u02C0\u02B4\u02B8\u02B9 \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5)
+	{
+		this.\u02B7\u02B9\u02BA\u02B6\u02B3\u02B4\u02B5\u02C1\u02B4\u02B9\u02B6 = \u02B6\u02B2\u02B5\u02BB\u02C1\u02BB\u02BA\u02B4\u02BF\u02BA\u02B5;
+	}
+
 	[SerializeField]
 	protected BasePlayer basePlayer;
 
@@ -200,7 +210,7 @@ public abstract class BaseNoteRenderer : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB
 
 	protected bool \u02B6\u02BB\u02B2\u02B5\u02BC\u02BB\u02B7\u02B3\u02C1\u02B4\u02B2;
 
-	protected int \u02B5\u02BB\u02B2\u02BA\u02B5\u02B6\u02B2\u02B2\u02BC\u02BD\u02B7 = 500;
+	protected int \u02B5\u02BB\u02B2\u02BA\u02B5\u02B6\u02B2\u02B2\u02BC\u02BD\u02B7 = 300;
 
 	public GameObject \u02B8\u02B4\u02B3\u02B7\u02B7\u02B7\u02BF\u02B8\u02BA\u02B4\u02BE;
 

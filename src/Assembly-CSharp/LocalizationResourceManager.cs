@@ -124,8 +124,8 @@ public class LocalizationResourceManager
 				{
 					try
 					{
-						StackFrame sf = new StackFrame(2);
-						Debug.Log(string.Format("Empty key {0} requested by {1}.{2}()", resourceID, sf.GetMethod().DeclaringType, sf.GetMethod().Name));
+						StackFrame stackFrame = new StackFrame(2);
+						Debug.Log(string.Format("Empty key {0} requested by {1}.{2}()", resourceID, stackFrame.GetMethod().DeclaringType, stackFrame.GetMethod().Name));
 					}
 					catch
 					{

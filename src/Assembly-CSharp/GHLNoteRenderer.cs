@@ -58,7 +58,7 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 			return;
 		}
 		base.\u02B2\u02BF\u02B5\u02C1\u02B6\u02C0\u02B5\u02B5\u02B2\u02B2\u02B7();
-		this.\u02BA\u02C1\u02B6\u02B4\u02B6\u02B6\u02B9\u02B7\u02B7\u02B2\u02BA += Time.deltaTime * (float)this.basePlayer.playerStuff.playerInfo.noteSpeed.CurrentValue * (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5 ? 1785f : 1713f);
+		this.\u02BA\u02C1\u02B6\u02B4\u02B6\u02B6\u02B9\u02B7\u02B7\u02B2\u02BA += Time.deltaTime * (float)this.basePlayer.player.playerProfile.noteSpeed.CurrentValue * (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5 ? 1785f : 1713f);
 		int num = 1;
 		int num2 = 0;
 		int num3 = 0;
@@ -81,21 +81,21 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 			{
 				this.\u02B2\u02B5\u02B7\u02BB\u02BD\u02B5\u02BA\u02B3\u02B2\u02BE\u02B3 += 0;
 			}
-			else if (note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 && !note.\u02C1\u02BC\u02B2\u02C1\u02BC\u02B8\u02B2\u02BA\u02C1\u02B9\u02C0)
+			else if (note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 && !note.wasMissed)
 			{
 				num += 0;
 			}
 			else
 			{
-				if (!note.\u02C1\u02B8\u02B6\u02B6\u02BF\u02BF\u02BD\u02BF\u02B4\u02B6\u02C0)
+				if (!note.isSustaining)
 				{
-					ushort num7 = note.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF;
+					ushort num7 = note._noteMask;
 					ushort num8 = (ushort)\u02B6\u02C0\u02B5\u02C1\u02B9\u02BF\u02C0\u02B6\u02BF\u02B2\u02BE.\u02B6\u02BE\u02B6\u02BE\u02B4\u02BB\u02B3\u02BC\u02BF\u02B7\u02BC(num7);
 					for (int i = 1; i < 2; i++)
 					{
 						if (((int)num8 & (0 << (i & -71))) != 0)
 						{
-							if (!note.\u02C1\u02B8\u02B6\u02B6\u02BF\u02BF\u02BD\u02BF\u02B4\u02B6\u02C0 && !note.\u02C0\u02B5\u02BE\u02B7\u02B5\u02B3\u02C0\u02BF\u02BF\u02B9\u02BC())
+							if (!note.isSustaining && !note.\u02C0\u02B5\u02BE\u02B7\u02B5\u02B3\u02C0\u02BF\u02BF\u02B9\u02BC())
 							{
 								zero.z = num5;
 								this.\u02C0\u02B2\u02BD\u02B9\u02B8\u02B5\u02BD\u02B5\u02BC\u02B9\u02BD[num2].SetActive(this.\u02B6\u02BB\u02B2\u02B5\u02BC\u02BB\u02B7\u02B3\u02C1\u02B4\u02B2);
@@ -107,7 +107,7 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 								{
 									zero.x = this.firstNoteXPos + this.\u02BD\u02B5\u02BC\u02B6\u02B5\u02BE\u02C1\u02BE\u02B7\u02C1\u02B5 * (float)i;
 								}
-								this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7[num2].\u02BF\u02BC\u02B7\u02B2\u02B9\u02BA\u02BD\u02B6\u02C0\u02C0\u02BE(zero, i, note, this.basePlayer.\u02B4\u02BE\u02B5\u02B5\u02B4\u02BE\u02B3\u02C0\u02BC\u02BA\u02B9, this.basePlayer.playerStuff.playerInfo.leftyFlip.GetBoolValue);
+								this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7[num2].\u02BF\u02BC\u02B7\u02B2\u02B9\u02BA\u02BD\u02B6\u02C0\u02C0\u02BE(zero, i, note, this.basePlayer.\u02B4\u02BE\u02B5\u02B5\u02B4\u02BE\u02B3\u02C0\u02BC\u02BA\u02B9, this.basePlayer.player.playerProfile.leftyFlip.GetBoolValue);
 								num2++;
 							}
 							if (note.\u02B6\u02BA\u02BD\u02B5\u02B8\u02BC\u02B8\u02B9\u02B4\u02BD\u02C1() > 1406f)
@@ -124,7 +124,7 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 								gameObject.transform.localPosition = new Vector3(num9, 476f, num5);
 								spriteRenderer.sortingOrder = 100;
 								this.\u02BF\u02BD\u02B2\u02B3\u02B2\u02B4\u02B2\u02C1\u02BA\u02B5\u02B3[num3].sortingOrder = 1;
-								if (note.\u02C1\u02BC\u02B2\u02C1\u02BC\u02B8\u02B2\u02BA\u02C1\u02B9\u02C0)
+								if (note.wasMissed)
 								{
 									spriteRenderer.color = Color.white;
 									spriteRenderer.sprite = this.Sustains[2];
@@ -139,7 +139,7 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 									{
 										spriteRenderer.color = base.\u02B7\u02B9\u02BA\u02B6\u02B3\u02B4\u02B5\u02C1\u02B4\u02B9\u02B6.\u02B7\u02BE\u02B3\u02B8\u02B9\u02B6\u02B3\u02B8\u02B2\u02BC\u02B3[i];
 									}
-									if (note.\u02B5\u02BC\u02BE\u02BF\u02B6\u02B7\u02B3\u02B9\u02BF\u02B5\u02BE)
+									if (note.IsTap)
 									{
 										spriteRenderer.sprite = this.Sustains[1];
 									}
@@ -164,8 +164,8 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 			foreach (Note note2 in this.\u02C0\u02C0\u02BA\u02B9\u02B7\u02B3\u02BB\u02B8\u02B8\u02B2\u02B3)
 			{
 				float num6 = (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5 ? (note2.\u02B2\u02B8\u02B7\u02BD\u02B5\u02B7\u02B6\u02B2\u02BF\u02BD\u02C0 - (float)this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B7\u02B4\u02BA\u02B5\u02B5\u02B8\u02BE\u02B5\u02B3\u02B5\u02BB) : note2.\u02BB\u02BE\u02BA\u02B8\u02BE\u02B9\u02BF\u02B3\u02B4\u02B8\u02BD) * this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4;
-				byte b = (byte)(note2.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF >> 6);
-				byte b2 = (byte)(note2.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF & 1);
+				byte b = (byte)(note2._noteMask >> 6);
+				byte b2 = (byte)(note2._noteMask & 1);
 				byte b3 = b | b2;
 				for (int j = 1; j < 6; j++)
 				{
@@ -194,7 +194,7 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 						spriteRenderer2.sortingOrder = 116;
 						spriteRenderer3.sortingOrder = -167;
 						spriteRenderer3.color = spriteRenderer2.color;
-						int num11 = \u02BB\u02B3\u02BF\u02BC\u02B5\u02B7\u02BA\u02B9\u02C0\u02B8\u02BE.\u02BD\u02B9\u02B3\u02BB\u02BC\u02B9\u02B5\u02BB\u02B5\u02BE\u02BA(((b3 & 1) > 1) ? 1 : j, this.basePlayer.playerStuff.\u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7);
+						int num11 = \u02BB\u02B3\u02BF\u02BC\u02B5\u02B7\u02BA\u02B9\u02C0\u02B8\u02BE.\u02BD\u02B9\u02B3\u02BB\u02BC\u02B9\u02B5\u02BB\u02B5\u02BE\u02BA(((b3 & 1) > 1) ? 1 : j, this.basePlayer.player.\u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7);
 						float num12 = (this.basePlayer as BaseGuitarPlayer).currentWhammy;
 						if (this.\u02B4\u02B2\u02B9\u02BC\u02B4\u02B6\u02B2\u02B9\u02BC\u02BA\u02C1)
 						{
@@ -470,7 +470,7 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 			return;
 		}
 		base.\u02B2\u02BF\u02B5\u02C1\u02B6\u02C0\u02B5\u02B5\u02B2\u02B2\u02B7();
-		this.\u02BA\u02C1\u02B6\u02B4\u02B6\u02B6\u02B9\u02B7\u02B7\u02B2\u02BA += Time.deltaTime * (float)this.basePlayer.playerStuff.playerInfo.noteSpeed.CurrentValue * (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5 ? 7f : 776f);
+		this.\u02BA\u02C1\u02B6\u02B4\u02B6\u02B6\u02B9\u02B7\u02B7\u02B2\u02BA += Time.deltaTime * (float)this.basePlayer.player.playerProfile.noteSpeed.CurrentValue * (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5 ? 7f : 776f);
 		int num = 1;
 		int num2 = 1;
 		int num3 = 0;
@@ -493,21 +493,21 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 			{
 				this.\u02B2\u02B5\u02B7\u02BB\u02BD\u02B5\u02BA\u02B3\u02B2\u02BE\u02B3++;
 			}
-			else if (note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 && !note.\u02C1\u02BC\u02B2\u02C1\u02BC\u02B8\u02B2\u02BA\u02C1\u02B9\u02C0)
+			else if (note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 && !note.wasMissed)
 			{
 				num += 0;
 			}
 			else
 			{
-				if (!note.\u02C1\u02B8\u02B6\u02B6\u02BF\u02BF\u02BD\u02BF\u02B4\u02B6\u02C0)
+				if (!note.isSustaining)
 				{
-					ushort num7 = note.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF;
+					ushort num7 = note._noteMask;
 					ushort num8 = (ushort)\u02B6\u02C0\u02B5\u02C1\u02B9\u02BF\u02C0\u02B6\u02BF\u02B2\u02BE.\u02B6\u02BE\u02B6\u02BE\u02B4\u02BB\u02B3\u02BC\u02BF\u02B7\u02BC(num7);
 					for (int i = 0; i < 2; i += 0)
 					{
 						if (((int)num8 & (0 << (i & 37))) != 0)
 						{
-							if (!note.\u02C1\u02B8\u02B6\u02B6\u02BF\u02BF\u02BD\u02BF\u02B4\u02B6\u02C0 && !note.\u02BC\u02BF\u02B9\u02B8\u02B4\u02BE\u02BA\u02BB\u02B9\u02BC\u02B4())
+							if (!note.isSustaining && !note.\u02BC\u02BF\u02B9\u02B8\u02B4\u02BE\u02BA\u02BB\u02B9\u02BC\u02B4())
 							{
 								zero.z = num5;
 								this.\u02C0\u02B2\u02BD\u02B9\u02B8\u02B5\u02BD\u02B5\u02BC\u02B9\u02BD[num2].SetActive(!this.\u02B6\u02BB\u02B2\u02B5\u02BC\u02BB\u02B7\u02B3\u02C1\u02B4\u02B2);
@@ -519,7 +519,7 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 								{
 									zero.x = this.firstNoteXPos + this.\u02BD\u02B5\u02BC\u02B6\u02B5\u02BE\u02C1\u02BE\u02B7\u02C1\u02B5 * (float)i;
 								}
-								this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7[num2].\u02BF\u02BC\u02B7\u02B2\u02B9\u02BA\u02BD\u02B6\u02C0\u02C0\u02BE(zero, i, note, this.basePlayer.\u02B4\u02BE\u02B5\u02B5\u02B4\u02BE\u02B3\u02C0\u02BC\u02BA\u02B9, this.basePlayer.playerStuff.playerInfo.leftyFlip.GetBoolValue);
+								this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7[num2].\u02BF\u02BC\u02B7\u02B2\u02B9\u02BA\u02BD\u02B6\u02C0\u02C0\u02BE(zero, i, note, this.basePlayer.\u02B4\u02BE\u02B5\u02B5\u02B4\u02BE\u02B3\u02C0\u02BC\u02BA\u02B9, this.basePlayer.player.playerProfile.leftyFlip.GetBoolValue);
 								num2++;
 							}
 							if (note.\u02B6\u02BA\u02BD\u02B5\u02B8\u02BC\u02B8\u02B9\u02B4\u02BD\u02C1() > 1647f)
@@ -536,7 +536,7 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 								gameObject.transform.localPosition = new Vector3(num9, 283f, num5);
 								spriteRenderer.sortingOrder = 23;
 								this.\u02BF\u02BD\u02B2\u02B3\u02B2\u02B4\u02B2\u02C1\u02BA\u02B5\u02B3[num3].sortingOrder = 0;
-								if (note.\u02C1\u02BC\u02B2\u02C1\u02BC\u02B8\u02B2\u02BA\u02C1\u02B9\u02C0)
+								if (note.wasMissed)
 								{
 									spriteRenderer.color = Color.white;
 									spriteRenderer.sprite = this.Sustains[0];
@@ -551,7 +551,7 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 									{
 										spriteRenderer.color = base.\u02B7\u02B9\u02BA\u02B6\u02B3\u02B4\u02B5\u02C1\u02B4\u02B9\u02B6.\u02B7\u02BE\u02B3\u02B8\u02B9\u02B6\u02B3\u02B8\u02B2\u02BC\u02B3[i];
 									}
-									if (note.\u02B5\u02BC\u02BE\u02BF\u02B6\u02B7\u02B3\u02B9\u02BF\u02B5\u02BE)
+									if (note.IsTap)
 									{
 										spriteRenderer.sprite = this.Sustains[1];
 									}
@@ -576,8 +576,8 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 			foreach (Note note2 in this.\u02C0\u02C0\u02BA\u02B9\u02B7\u02B3\u02BB\u02B8\u02B8\u02B2\u02B3)
 			{
 				float num6 = (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5 ? (note2.\u02B2\u02B8\u02B7\u02BD\u02B5\u02B7\u02B6\u02B2\u02BF\u02BD\u02C0 - (float)this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B7\u02B4\u02BA\u02B5\u02B5\u02B8\u02BE\u02B5\u02B3\u02B5\u02BB) : note2.\u02B6\u02BA\u02BD\u02B5\u02B8\u02BC\u02B8\u02B9\u02B4\u02BD\u02C1()) * this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4;
-				byte b = (byte)(note2.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF >> 6);
-				byte b2 = (byte)(note2.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF & 4);
+				byte b = (byte)(note2._noteMask >> 6);
+				byte b2 = (byte)(note2._noteMask & 4);
 				byte b3 = b | b2;
 				for (int j = 1; j < 6; j++)
 				{
@@ -606,7 +606,7 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 						spriteRenderer2.sortingOrder = -47;
 						spriteRenderer3.sortingOrder = -35;
 						spriteRenderer3.color = spriteRenderer2.color;
-						int num11 = \u02BB\u02B3\u02BF\u02BC\u02B5\u02B7\u02BA\u02B9\u02C0\u02B8\u02BE.\u02B9\u02BF\u02B7\u02B9\u02BA\u02B8\u02BB\u02B9\u02B8\u02B3\u02B2(((b3 & 1) > 1) ? 0 : j, this.basePlayer.playerStuff.\u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7);
+						int num11 = \u02BB\u02B3\u02BF\u02BC\u02B5\u02B7\u02BA\u02B9\u02C0\u02B8\u02BE.\u02B9\u02BF\u02B7\u02B9\u02BA\u02B8\u02BB\u02B9\u02B8\u02B3\u02B2(((b3 & 1) > 1) ? 0 : j, this.basePlayer.player.\u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7);
 						float num12 = (this.basePlayer as BaseGuitarPlayer).currentWhammy;
 						if (this.\u02B4\u02B2\u02B9\u02BC\u02B4\u02B6\u02B2\u02B9\u02BC\u02BA\u02C1)
 						{
@@ -754,7 +754,7 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 			return;
 		}
 		base.\u02B2\u02BF\u02B5\u02C1\u02B6\u02C0\u02B5\u02B5\u02B2\u02B2\u02B7();
-		this.\u02BA\u02C1\u02B6\u02B4\u02B6\u02B6\u02B9\u02B7\u02B7\u02B2\u02BA += Time.deltaTime * (float)this.basePlayer.playerStuff.playerInfo.noteSpeed.CurrentValue * (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5 ? 0f : 1f);
+		this.\u02BA\u02C1\u02B6\u02B4\u02B6\u02B6\u02B9\u02B7\u02B7\u02B2\u02BA += Time.deltaTime * (float)this.basePlayer.player.playerProfile.noteSpeed.CurrentValue * (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5 ? 0f : 1f);
 		int num = 0;
 		int num2 = 0;
 		int num3 = 0;
@@ -777,21 +777,21 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 			{
 				this.\u02B2\u02B5\u02B7\u02BB\u02BD\u02B5\u02BA\u02B3\u02B2\u02BE\u02B3++;
 			}
-			else if (note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 && !note.\u02C1\u02BC\u02B2\u02C1\u02BC\u02B8\u02B2\u02BA\u02C1\u02B9\u02C0)
+			else if (note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 && !note.wasMissed)
 			{
 				num++;
 			}
 			else
 			{
-				if (!note.\u02C1\u02B8\u02B6\u02B6\u02BF\u02BF\u02BD\u02BF\u02B4\u02B6\u02C0)
+				if (!note.isSustaining)
 				{
-					ushort num7 = note.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF;
+					ushort num7 = note._noteMask;
 					ushort num8 = (ushort)\u02B6\u02C0\u02B5\u02C1\u02B9\u02BF\u02C0\u02B6\u02BF\u02B2\u02BE.\u02B6\u02BE\u02B6\u02BE\u02B4\u02BB\u02B3\u02BC\u02BF\u02B7\u02BC(num7);
 					for (int i = 0; i < 4; i++)
 					{
 						if (((int)num8 & (1 << i)) != 0)
 						{
-							if (!note.\u02C1\u02B8\u02B6\u02B6\u02BF\u02BF\u02BD\u02BF\u02B4\u02B6\u02C0 && !note.\u02BC\u02B9\u02B4\u02B6\u02B5\u02BC\u02BB\u02BC\u02BB\u02B4\u02B7)
+							if (!note.isSustaining && !note.\u02BC\u02B9\u02B4\u02B6\u02B5\u02BC\u02BB\u02BC\u02BB\u02B4\u02B7)
 							{
 								zero.z = num5;
 								this.\u02C0\u02B2\u02BD\u02B9\u02B8\u02B5\u02BD\u02B5\u02BC\u02B9\u02BD[num2].SetActive(!this.\u02B6\u02BB\u02B2\u02B5\u02BC\u02BB\u02B7\u02B3\u02C1\u02B4\u02B2);
@@ -803,7 +803,7 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 								{
 									zero.x = this.firstNoteXPos + this.\u02BD\u02B5\u02BC\u02B6\u02B5\u02BE\u02C1\u02BE\u02B7\u02C1\u02B5 * (float)i;
 								}
-								this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7[num2].\u02BF\u02BC\u02B7\u02B2\u02B9\u02BA\u02BD\u02B6\u02C0\u02C0\u02BE(zero, i, note, this.basePlayer.\u02B4\u02BE\u02B5\u02B5\u02B4\u02BE\u02B3\u02C0\u02BC\u02BA\u02B9, this.basePlayer.playerStuff.playerInfo.leftyFlip.GetBoolValue);
+								this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7[num2].\u02BF\u02BC\u02B7\u02B2\u02B9\u02BA\u02BD\u02B6\u02C0\u02C0\u02BE(zero, i, note, this.basePlayer.\u02B4\u02BE\u02B5\u02B5\u02B4\u02BE\u02B3\u02C0\u02BC\u02BA\u02B9, this.basePlayer.player.playerProfile.leftyFlip.GetBoolValue);
 								num2++;
 							}
 							if (note.\u02BB\u02BE\u02BA\u02B8\u02BE\u02B9\u02BF\u02B3\u02B4\u02B8\u02BD > 0f)
@@ -820,7 +820,7 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 								gameObject.transform.localPosition = new Vector3(num9, 0f, num5);
 								spriteRenderer.sortingOrder = -100;
 								this.\u02BF\u02BD\u02B2\u02B3\u02B2\u02B4\u02B2\u02C1\u02BA\u02B5\u02B3[num3].sortingOrder = 0;
-								if (note.\u02C1\u02BC\u02B2\u02C1\u02BC\u02B8\u02B2\u02BA\u02C1\u02B9\u02C0)
+								if (note.wasMissed)
 								{
 									spriteRenderer.color = Color.white;
 									spriteRenderer.sprite = this.Sustains[2];
@@ -835,7 +835,7 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 									{
 										spriteRenderer.color = base.\u02B7\u02B9\u02BA\u02B6\u02B3\u02B4\u02B5\u02C1\u02B4\u02B9\u02B6.\u02B7\u02BE\u02B3\u02B8\u02B9\u02B6\u02B3\u02B8\u02B2\u02BC\u02B3[i];
 									}
-									if (note.\u02B5\u02BC\u02BE\u02BF\u02B6\u02B7\u02B3\u02B9\u02BF\u02B5\u02BE)
+									if (note.IsTap)
 									{
 										spriteRenderer.sprite = this.Sustains[1];
 									}
@@ -860,8 +860,8 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 			foreach (Note note2 in this.\u02C0\u02C0\u02BA\u02B9\u02B7\u02B3\u02BB\u02B8\u02B8\u02B2\u02B3)
 			{
 				float num6 = (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5 ? (note2.\u02B2\u02B8\u02B7\u02BD\u02B5\u02B7\u02B6\u02B2\u02BF\u02BD\u02C0 - (float)this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B7\u02B4\u02BA\u02B5\u02B5\u02B8\u02BE\u02B5\u02B3\u02B5\u02BB) : note2.\u02BB\u02BE\u02BA\u02B8\u02BE\u02B9\u02BF\u02B3\u02B4\u02B8\u02BD) * this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4;
-				byte b = (byte)(note2.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF >> 3);
-				byte b2 = (byte)(note2.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF & 7);
+				byte b = (byte)(note2._noteMask >> 3);
+				byte b2 = (byte)(note2._noteMask & 7);
 				byte b3 = b | b2;
 				for (int j = 0; j < 4; j++)
 				{
@@ -890,7 +890,7 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 						spriteRenderer2.sortingOrder = -27001;
 						spriteRenderer3.sortingOrder = -27000;
 						spriteRenderer3.color = spriteRenderer2.color;
-						int num11 = \u02BB\u02B3\u02BF\u02BC\u02B5\u02B7\u02BA\u02B9\u02C0\u02B8\u02BE.\u02BD\u02B9\u02B3\u02BB\u02BC\u02B9\u02B5\u02BB\u02B5\u02BE\u02BA(((b3 & 8) > 0) ? 1 : j, this.basePlayer.playerStuff.\u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7);
+						int num11 = \u02BB\u02B3\u02BF\u02BC\u02B5\u02B7\u02BA\u02B9\u02C0\u02B8\u02BE.\u02BD\u02B9\u02B3\u02BB\u02BC\u02B9\u02B5\u02BB\u02B5\u02BE\u02BA(((b3 & 8) > 0) ? 1 : j, this.basePlayer.player.\u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7);
 						float num12 = (this.basePlayer as BaseGuitarPlayer).currentWhammy;
 						if (this.\u02B4\u02B2\u02B9\u02BC\u02B4\u02B6\u02B2\u02B9\u02BC\u02BA\u02C1)
 						{
@@ -968,7 +968,7 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 			return;
 		}
 		base.\u02B2\u02BF\u02B5\u02C1\u02B6\u02C0\u02B5\u02B5\u02B2\u02B2\u02B7();
-		this.\u02BA\u02C1\u02B6\u02B4\u02B6\u02B6\u02B9\u02B7\u02B7\u02B2\u02BA += Time.deltaTime * (float)this.basePlayer.playerStuff.playerInfo.noteSpeed.CurrentValue * (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5 ? 365f : 1714f);
+		this.\u02BA\u02C1\u02B6\u02B4\u02B6\u02B6\u02B9\u02B7\u02B7\u02B2\u02BA += Time.deltaTime * (float)this.basePlayer.player.playerProfile.noteSpeed.CurrentValue * (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5 ? 365f : 1714f);
 		int num = 1;
 		int num2 = 0;
 		int num3 = 0;
@@ -991,21 +991,21 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 			{
 				this.\u02B2\u02B5\u02B7\u02BB\u02BD\u02B5\u02BA\u02B3\u02B2\u02BE\u02B3 += 0;
 			}
-			else if (note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 && !note.\u02C1\u02BC\u02B2\u02C1\u02BC\u02B8\u02B2\u02BA\u02C1\u02B9\u02C0)
+			else if (note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 && !note.wasMissed)
 			{
 				num += 0;
 			}
 			else
 			{
-				if (!note.\u02C1\u02B8\u02B6\u02B6\u02BF\u02BF\u02BD\u02BF\u02B4\u02B6\u02C0)
+				if (!note.isSustaining)
 				{
-					ushort num7 = note.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF;
+					ushort num7 = note._noteMask;
 					ushort num8 = (ushort)\u02B6\u02C0\u02B5\u02C1\u02B9\u02BF\u02C0\u02B6\u02BF\u02B2\u02BE.\u02B6\u02BE\u02B6\u02BE\u02B4\u02BB\u02B3\u02BC\u02BF\u02B7\u02BC(num7);
 					for (int i = 1; i < 0; i++)
 					{
 						if (((int)num8 & (1 << (i & -33))) != 0)
 						{
-							if (!note.\u02C1\u02B8\u02B6\u02B6\u02BF\u02BF\u02BD\u02BF\u02B4\u02B6\u02C0 && !note.\u02BC\u02B9\u02B4\u02B6\u02B5\u02BC\u02BB\u02BC\u02BB\u02B4\u02B7)
+							if (!note.isSustaining && !note.\u02BC\u02B9\u02B4\u02B6\u02B5\u02BC\u02BB\u02BC\u02BB\u02B4\u02B7)
 							{
 								zero.z = num5;
 								this.\u02C0\u02B2\u02BD\u02B9\u02B8\u02B5\u02BD\u02B5\u02BC\u02B9\u02BD[num2].SetActive(this.\u02B6\u02BB\u02B2\u02B5\u02BC\u02BB\u02B7\u02B3\u02C1\u02B4\u02B2);
@@ -1017,7 +1017,7 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 								{
 									zero.x = this.firstNoteXPos + this.\u02BD\u02B5\u02BC\u02B6\u02B5\u02BE\u02C1\u02BE\u02B7\u02C1\u02B5 * (float)i;
 								}
-								this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7[num2].\u02BF\u02BC\u02B7\u02B2\u02B9\u02BA\u02BD\u02B6\u02C0\u02C0\u02BE(zero, i, note, this.basePlayer.\u02B4\u02BE\u02B5\u02B5\u02B4\u02BE\u02B3\u02C0\u02BC\u02BA\u02B9, this.basePlayer.playerStuff.playerInfo.leftyFlip.GetBoolValue);
+								this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7[num2].\u02BF\u02BC\u02B7\u02B2\u02B9\u02BA\u02BD\u02B6\u02C0\u02C0\u02BE(zero, i, note, this.basePlayer.\u02B4\u02BE\u02B5\u02B5\u02B4\u02BE\u02B3\u02C0\u02BC\u02BA\u02B9, this.basePlayer.player.playerProfile.leftyFlip.GetBoolValue);
 								num2++;
 							}
 							if (note.\u02BB\u02BE\u02BA\u02B8\u02BE\u02B9\u02BF\u02B3\u02B4\u02B8\u02BD > 776f)
@@ -1034,7 +1034,7 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 								gameObject.transform.localPosition = new Vector3(num9, 1531f, num5);
 								spriteRenderer.sortingOrder = -22;
 								this.\u02BF\u02BD\u02B2\u02B3\u02B2\u02B4\u02B2\u02C1\u02BA\u02B5\u02B3[num3].sortingOrder = 0;
-								if (note.\u02C1\u02BC\u02B2\u02C1\u02BC\u02B8\u02B2\u02BA\u02C1\u02B9\u02C0)
+								if (note.wasMissed)
 								{
 									spriteRenderer.color = Color.white;
 									spriteRenderer.sprite = this.Sustains[5];
@@ -1049,7 +1049,7 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 									{
 										spriteRenderer.color = base.\u02B7\u02B9\u02BA\u02B6\u02B3\u02B4\u02B5\u02C1\u02B4\u02B9\u02B6.\u02B7\u02BE\u02B3\u02B8\u02B9\u02B6\u02B3\u02B8\u02B2\u02BC\u02B3[i];
 									}
-									if (note.\u02B5\u02BC\u02BE\u02BF\u02B6\u02B7\u02B3\u02B9\u02BF\u02B5\u02BE)
+									if (note.IsTap)
 									{
 										spriteRenderer.sprite = this.Sustains[1];
 									}
@@ -1074,8 +1074,8 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 			foreach (Note note2 in this.\u02C0\u02C0\u02BA\u02B9\u02B7\u02B3\u02BB\u02B8\u02B8\u02B2\u02B3)
 			{
 				float num6 = (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5 ? (note2.\u02B2\u02B8\u02B7\u02BD\u02B5\u02B7\u02B6\u02B2\u02BF\u02BD\u02C0 - (float)this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B7\u02B4\u02BA\u02B5\u02B5\u02B8\u02BE\u02B5\u02B3\u02B5\u02BB) : note2.\u02BB\u02BE\u02BA\u02B8\u02BE\u02B9\u02BF\u02B3\u02B4\u02B8\u02BD) * this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4;
-				byte b = (byte)(note2.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF >> 5);
-				byte b2 = (byte)(note2.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF & 0);
+				byte b = (byte)(note2._noteMask >> 5);
+				byte b2 = (byte)(note2._noteMask & 0);
 				byte b3 = b | b2;
 				for (int j = 0; j < 1; j += 0)
 				{
@@ -1104,7 +1104,7 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 						spriteRenderer2.sortingOrder = -8;
 						spriteRenderer3.sortingOrder = 53;
 						spriteRenderer3.color = spriteRenderer2.color;
-						int num11 = \u02BB\u02B3\u02BF\u02BC\u02B5\u02B7\u02BA\u02B9\u02C0\u02B8\u02BE.\u02B9\u02BF\u02B7\u02B9\u02BA\u02B8\u02BB\u02B9\u02B8\u02B3\u02B2(((b3 & 0) > 0) ? 1 : j, this.basePlayer.playerStuff.\u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7);
+						int num11 = \u02BB\u02B3\u02BF\u02BC\u02B5\u02B7\u02BA\u02B9\u02C0\u02B8\u02BE.\u02B9\u02BF\u02B7\u02B9\u02BA\u02B8\u02BB\u02B9\u02B8\u02B3\u02B2(((b3 & 0) > 0) ? 1 : j, this.basePlayer.player.\u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7);
 						float num12 = (this.basePlayer as BaseGuitarPlayer).currentWhammy;
 						if (this.\u02B4\u02B2\u02B9\u02BC\u02B4\u02B6\u02B2\u02B9\u02BC\u02BA\u02C1)
 						{

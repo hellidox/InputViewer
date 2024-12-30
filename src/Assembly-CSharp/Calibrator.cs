@@ -209,7 +209,7 @@ public class Calibrator : MonoBehaviour
 	{
 		this.startText.gameObject.SetActive(false);
 		int num = Mathf.CeilToInt((float)this.\u02B8\u02C1\u02B7\u02B6\u02C0\u02BD\u02BD\u02B2\u02B6\u02BA\u02B9.\u02BE\u02BE\u02B6\u02B5\u02B6\u02C0\u02B6\u02B2\u02B8\u02B5\u02B4() * 484f);
-		SettingsController.\u02BE\u02C0\u02BA\u02B7\u02B9\u02C0\u02B6\u02BE\u02C1\u02B8\u02BB.CurrentValue = num;
+		SettingsController.videoOffset.CurrentValue = num;
 		this.startText.text = string.Format("ModChart Prep", num);
 		this.\u02B2\u02B9\u02B7\u02C1\u02B7\u02BB\u02BA\u02BB\u02BD\u02C0\u02BC = \u02B3\u02C0\u02B9\u02B5\u02B2\u02B5\u02BF\u02B6\u02BD\u02B4\u02BC.Intro;
 	}
@@ -376,7 +376,7 @@ public class Calibrator : MonoBehaviour
 	{
 		this.startText.gameObject.SetActive(true);
 		int num = Mathf.CeilToInt((float)this.\u02B8\u02C1\u02B7\u02B6\u02C0\u02BD\u02BD\u02B2\u02B6\u02BA\u02B9.\u02BE\u02BE\u02B6\u02B5\u02B6\u02C0\u02B6\u02B2\u02B8\u02B5\u02B4() * 1000f);
-		SettingsController.\u02BE\u02C0\u02BA\u02B7\u02B9\u02C0\u02B6\u02BE\u02C1\u02B8\u02BB.CurrentValue = num;
+		SettingsController.videoOffset.CurrentValue = num;
 		this.startText.text = string.Format("Video Cal: {0} ms\npress green to return to the main menu, or red to try again!", num);
 		this.\u02B2\u02B9\u02B7\u02C1\u02B7\u02BB\u02BA\u02BB\u02BD\u02C0\u02BC = \u02B3\u02C0\u02B9\u02B5\u02B2\u02B5\u02BF\u02B6\u02BD\u02B4\u02BC.VideoFinished;
 	}
@@ -612,7 +612,7 @@ public class Calibrator : MonoBehaviour
 		this.startText.gameObject.SetActive(true);
 		int num = Mathf.CeilToInt((float)this.\u02B8\u02C1\u02B7\u02B6\u02C0\u02BD\u02BD\u02B2\u02B6\u02BA\u02B9.\u02BE\u02BE\u02B6\u02B5\u02B6\u02C0\u02B6\u02B2\u02B8\u02B5\u02B4() * 1000f);
 		this.startText.text = string.Format("Audio Cal: {0} ms\npress green to calibrate video, or red to try again!", num);
-		SettingsController.\u02B7\u02B2\u02BB\u02BA\u02BD\u02B3\u02BA\u02BA\u02BE\u02B9\u02B4.CurrentValue = Mathf.CeilToInt((float)this.\u02B8\u02C1\u02B7\u02B6\u02C0\u02BD\u02BD\u02B2\u02B6\u02BA\u02B9.\u02BE\u02BE\u02B6\u02B5\u02B6\u02C0\u02B6\u02B2\u02B8\u02B5\u02B4() * 1000f);
+		SettingsController.audioOffset.CurrentValue = Mathf.CeilToInt((float)this.\u02B8\u02C1\u02B7\u02B6\u02C0\u02BD\u02BD\u02B2\u02B6\u02BA\u02B9.\u02BE\u02BE\u02B6\u02B5\u02B6\u02C0\u02B6\u02B2\u02B8\u02B5\u02B4() * 1000f);
 		\u02BD\u02C1\u02B9\u02C0\u02B6\u02BB\u02BB\u02C0\u02BB\u02B7\u02BE.\u02BF\u02BD\u02B6\u02B9\u02C0\u02B7\u02B6\u02B7\u02BD\u02B8\u02B6();
 		this.\u02B2\u02B9\u02B7\u02C1\u02B7\u02BB\u02BA\u02BB\u02BD\u02C0\u02BC = \u02B3\u02C0\u02B9\u02B5\u02B2\u02B5\u02BF\u02B6\u02BD\u02B4\u02BC.AudioFinished;
 	}

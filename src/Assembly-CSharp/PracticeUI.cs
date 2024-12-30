@@ -226,7 +226,7 @@ public class PracticeUI : MonoBehaviour
 		this.\u02BB\u02BB\u02BC\u02BF\u02B3\u02BF\u02B9\u02BB\u02B6\u02B8\u02B5 = this.\u02B4\u02B2\u02BF\u02C1\u02B5\u02B4\u02BF\u02C1\u02BA\u02B7\u02B8("Hit Percent");
 		this.\u02B3\u02B5\u02C1\u02B7\u02C1\u02C1\u02BA\u02B2\u02B5\u02BD\u02B7 = this.\u02B4\u02B2\u02BF\u02C1\u02B5\u02B4\u02BF\u02C1\u02BA\u02B7\u02B8("Hit Notes");
 		this.\u02C1\u02BE\u02BC\u02B3\u02BB\u02C1\u02C1\u02BA\u02BB\u02BD\u02BC = this.\u02B4\u02B2\u02BF\u02C1\u02B5\u02B4\u02BF\u02C1\u02BA\u02B7\u02B8("Avg. NPS");
-		if (this.gameManager._basePlayer.playerStuff.playerInfo.IsAnyDrumsController)
+		if (this.gameManager._basePlayer.player.playerProfile.IsAnyDrumsController)
 		{
 			this.\u02B3\u02C1\u02B6\u02BF\u02BE\u02B4\u02BC\u02B4\u02BC\u02C0\u02C1 = this.\u02B4\u02B2\u02BF\u02C1\u02B5\u02B4\u02BF\u02C1\u02BA\u02B7\u02B8("Dynamics");
 		}
@@ -268,7 +268,7 @@ public class PracticeUI : MonoBehaviour
 		this.\u02BB\u02BB\u02BC\u02BF\u02B3\u02BF\u02B9\u02BB\u02B6\u02B8\u02B5 = this.\u02B4\u02B2\u02BF\u02C1\u02B5\u02B4\u02BF\u02C1\u02BA\u02B7\u02B8(".ini");
 		this.\u02B3\u02B5\u02C1\u02B7\u02C1\u02C1\u02BA\u02B2\u02B5\u02BD\u02B7 = this.\u02B4\u02B2\u02BF\u02C1\u02B5\u02B4\u02BF\u02C1\u02BA\u02B7\u02B8("Date Added");
 		this.\u02C1\u02BE\u02BC\u02B3\u02BB\u02C1\u02C1\u02BA\u02BB\u02BD\u02BC = this.\u02B4\u02B2\u02BF\u02C1\u02B5\u02B4\u02BF\u02C1\u02BA\u02B7\u02B8("Returned missing glyphs are correct.");
-		if (this.gameManager._basePlayer.playerStuff.playerInfo.IsAnyDrumsController)
+		if (this.gameManager._basePlayer.player.playerProfile.IsAnyDrumsController)
 		{
 			this.\u02B3\u02C1\u02B6\u02BF\u02BE\u02B4\u02BC\u02B4\u02BC\u02C0\u02C1 = this.\u02C0\u02C0\u02B6\u02BD\u02BC\u02B2\u02C0\u02B6\u02B8\u02BE\u02B4("song");
 		}

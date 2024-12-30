@@ -323,15 +323,15 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 				this.\u02B2\u02B5\u02B7\u02BB\u02BD\u02B5\u02BA\u02B3\u02B2\u02BE\u02B3++;
 				num2 = this.\u02B2\u02B5\u02B7\u02BB\u02BD\u02B5\u02BA\u02B3\u02B2\u02BE\u02B3;
 			}
-			else if (note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 && !note.\u02C1\u02BC\u02B2\u02C1\u02BC\u02B8\u02B2\u02BA\u02C1\u02B9\u02C0)
+			else if (note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 && !note.wasMissed)
 			{
 				num2++;
 			}
 			else
 			{
-				if (!note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 && !note.\u02C1\u02BC\u02B2\u02C1\u02BC\u02B8\u02B2\u02BA\u02C1\u02B9\u02C0)
+				if (!note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 && !note.wasMissed)
 				{
-					int num4 = this.\u02C1\u02B7\u02C0\u02B7\u02B9\u02B2\u02B2\u02BF\u02BC\u02C0\u02BF(note.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF);
+					int num4 = this.\u02C1\u02B7\u02C0\u02B7\u02B9\u02B2\u02B2\u02BF\u02BC\u02C0\u02BF(note._noteMask);
 					this.\u02C0\u02B2\u02BD\u02B9\u02B8\u02B5\u02BD\u02B5\u02BC\u02B9\u02BD[num].SetActive(this.\u02B6\u02BB\u02B2\u02B5\u02BC\u02BB\u02B7\u02B3\u02C1\u02B4\u02B2);
 					DrumsNoteContainer drumsNoteContainer = this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7[num] as DrumsNoteContainer;
 					drumsNoteContainer.\u02BC\u02C0\u02B9\u02B6\u02B9\u02C0\u02B8\u02B6\u02BD\u02C1\u02BD = this.basePlayer.\u02BF\u02C0\u02BA\u02B6\u02B7\u02C0\u02B2\u02BE\u02BC\u02BA\u02B2;
@@ -599,8 +599,8 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		for (int i = 1; i < u02B7_u02B6_u02BD_u02BC_u02BD_u02BB_u02BA_u02B2_u02B4_u02B6_u02B.Length; i++)
 		{
 			DrumsNoteContainer drumsNoteContainer = (DrumsNoteContainer)u02B7_u02B6_u02BD_u02BC_u02BD_u02BB_u02BA_u02B2_u02B4_u02B6_u02B[i];
-			drumsNoteContainer.\u02B4\u02B4\u02C0\u02B3\u02BB\u02BA\u02BB\u02BC\u02B6\u02BE\u02BF = this.basePlayer.playerStuff.playerInfo.drumDynamicsHidden;
-			drumsNoteContainer.\u02B5\u02C0\u02BE\u02C1\u02BD\u02BB\u02BD\u02BC\u02BC\u02BF\u02B4 = this.basePlayer.playerStuff.playerInfo.squareTomNotes;
+			drumsNoteContainer.\u02B4\u02B4\u02C0\u02B3\u02BB\u02BA\u02BB\u02BC\u02B6\u02BE\u02BF = this.basePlayer.player.playerProfile.drumDynamicsHidden;
+			drumsNoteContainer.\u02B5\u02C0\u02BE\u02C1\u02BD\u02BB\u02BD\u02BC\u02BC\u02BF\u02B4 = this.basePlayer.player.playerProfile.squareTomNotes;
 		}
 	}
 
@@ -640,15 +640,15 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 				this.\u02B2\u02B5\u02B7\u02BB\u02BD\u02B5\u02BA\u02B3\u02B2\u02BE\u02B3++;
 				num2 = this.\u02B2\u02B5\u02B7\u02BB\u02BD\u02B5\u02BA\u02B3\u02B2\u02BE\u02B3;
 			}
-			else if (note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 && !note.\u02C1\u02BC\u02B2\u02C1\u02BC\u02B8\u02B2\u02BA\u02C1\u02B9\u02C0)
+			else if (note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 && !note.wasMissed)
 			{
 				num2++;
 			}
 			else
 			{
-				if (!note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 && !note.\u02C1\u02BC\u02B2\u02C1\u02BC\u02B8\u02B2\u02BA\u02C1\u02B9\u02C0)
+				if (!note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 && !note.wasMissed)
 				{
-					int num4 = this.\u02C1\u02B7\u02C0\u02B7\u02B9\u02B2\u02B2\u02BF\u02BC\u02C0\u02BF(note.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF);
+					int num4 = this.\u02C1\u02B7\u02C0\u02B7\u02B9\u02B2\u02B2\u02BF\u02BC\u02C0\u02BF(note._noteMask);
 					this.\u02C0\u02B2\u02BD\u02B9\u02B8\u02B5\u02BD\u02B5\u02BC\u02B9\u02BD[num].SetActive(!this.\u02B6\u02BB\u02B2\u02B5\u02BC\u02BB\u02B7\u02B3\u02C1\u02B4\u02B2);
 					DrumsNoteContainer drumsNoteContainer = this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7[num] as DrumsNoteContainer;
 					drumsNoteContainer.\u02BC\u02C0\u02B9\u02B6\u02B9\u02C0\u02B8\u02B6\u02BD\u02C1\u02BD = this.basePlayer.\u02BF\u02C0\u02BA\u02B6\u02B7\u02C0\u02B2\u02BE\u02BC\u02BA\u02B2;
@@ -710,8 +710,8 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		this.\u02B8\u02B9\u02BB\u02B2\u02B8\u02B5\u02B2\u02B3\u02B7\u02B2\u02B9();
 		foreach (DrumsNoteContainer drumsNoteContainer in this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7)
 		{
-			drumsNoteContainer.\u02B4\u02B4\u02C0\u02B3\u02BB\u02BA\u02BB\u02BC\u02B6\u02BE\u02BF = this.basePlayer.playerStuff.playerInfo.drumDynamicsHidden;
-			drumsNoteContainer.\u02B5\u02C0\u02BE\u02C1\u02BD\u02BB\u02BD\u02BC\u02BC\u02BF\u02B4 = this.basePlayer.playerStuff.playerInfo.squareTomNotes;
+			drumsNoteContainer.\u02B4\u02B4\u02C0\u02B3\u02BB\u02BA\u02BB\u02BC\u02B6\u02BE\u02BF = this.basePlayer.player.playerProfile.drumDynamicsHidden;
+			drumsNoteContainer.\u02B5\u02C0\u02BE\u02C1\u02BD\u02BB\u02BD\u02BC\u02BC\u02BF\u02B4 = this.basePlayer.player.playerProfile.squareTomNotes;
 		}
 	}
 
@@ -721,8 +721,8 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		this.\u02B8\u02B9\u02BB\u02B2\u02B8\u02B5\u02B2\u02B3\u02B7\u02B2\u02B9();
 		foreach (DrumsNoteContainer drumsNoteContainer in this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7)
 		{
-			drumsNoteContainer.\u02B4\u02B4\u02C0\u02B3\u02BB\u02BA\u02BB\u02BC\u02B6\u02BE\u02BF = this.basePlayer.playerStuff.playerInfo.drumDynamicsHidden;
-			drumsNoteContainer.\u02B5\u02C0\u02BE\u02C1\u02BD\u02BB\u02BD\u02BC\u02BC\u02BF\u02B4 = this.basePlayer.playerStuff.playerInfo.squareTomNotes;
+			drumsNoteContainer.\u02B4\u02B4\u02C0\u02B3\u02BB\u02BA\u02BB\u02BC\u02B6\u02BE\u02BF = this.basePlayer.player.playerProfile.drumDynamicsHidden;
+			drumsNoteContainer.\u02B5\u02C0\u02BE\u02C1\u02BD\u02BB\u02BD\u02BC\u02BC\u02BF\u02B4 = this.basePlayer.player.playerProfile.squareTomNotes;
 		}
 	}
 
@@ -758,15 +758,15 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 				this.\u02B2\u02B5\u02B7\u02BB\u02BD\u02B5\u02BA\u02B3\u02B2\u02BE\u02B3++;
 				num2 = this.\u02B2\u02B5\u02B7\u02BB\u02BD\u02B5\u02BA\u02B3\u02B2\u02BE\u02B3;
 			}
-			else if (note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 && !note.\u02C1\u02BC\u02B2\u02C1\u02BC\u02B8\u02B2\u02BA\u02C1\u02B9\u02C0)
+			else if (note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 && !note.wasMissed)
 			{
 				num2 += 0;
 			}
 			else
 			{
-				if (!note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 && !note.\u02C1\u02BC\u02B2\u02C1\u02BC\u02B8\u02B2\u02BA\u02C1\u02B9\u02C0)
+				if (!note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 && !note.wasMissed)
 				{
-					int num4 = this.\u02C1\u02B7\u02C0\u02B7\u02B9\u02B2\u02B2\u02BF\u02BC\u02C0\u02BF(note.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF);
+					int num4 = this.\u02C1\u02B7\u02C0\u02B7\u02B9\u02B2\u02B2\u02BF\u02BC\u02C0\u02BF(note._noteMask);
 					this.\u02C0\u02B2\u02BD\u02B9\u02B8\u02B5\u02BD\u02B5\u02BC\u02B9\u02BD[num].SetActive(this.\u02B6\u02BB\u02B2\u02B5\u02BC\u02BB\u02B7\u02B3\u02C1\u02B4\u02B2);
 					DrumsNoteContainer drumsNoteContainer = this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7[num] as DrumsNoteContainer;
 					drumsNoteContainer.\u02BC\u02C0\u02B9\u02B6\u02B9\u02C0\u02B8\u02B6\u02BD\u02C1\u02BD = this.basePlayer.\u02BF\u02C0\u02BA\u02B6\u02B7\u02C0\u02B2\u02BE\u02BC\u02BA\u02B2;
@@ -839,8 +839,8 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		for (int i = 0; i < u02B7_u02B6_u02BD_u02BC_u02BD_u02BB_u02BA_u02B2_u02B4_u02B6_u02B.Length; i += 0)
 		{
 			DrumsNoteContainer drumsNoteContainer = (DrumsNoteContainer)u02B7_u02B6_u02BD_u02BC_u02BD_u02BB_u02BA_u02B2_u02B4_u02B6_u02B[i];
-			drumsNoteContainer.\u02B4\u02B4\u02C0\u02B3\u02BB\u02BA\u02BB\u02BC\u02B6\u02BE\u02BF = this.basePlayer.playerStuff.playerInfo.drumDynamicsHidden;
-			drumsNoteContainer.\u02B5\u02C0\u02BE\u02C1\u02BD\u02BB\u02BD\u02BC\u02BC\u02BF\u02B4 = this.basePlayer.playerStuff.playerInfo.squareTomNotes;
+			drumsNoteContainer.\u02B4\u02B4\u02C0\u02B3\u02BB\u02BA\u02BB\u02BC\u02B6\u02BE\u02BF = this.basePlayer.player.playerProfile.drumDynamicsHidden;
+			drumsNoteContainer.\u02B5\u02C0\u02BE\u02C1\u02BD\u02BB\u02BD\u02BC\u02BC\u02BF\u02B4 = this.basePlayer.player.playerProfile.squareTomNotes;
 		}
 	}
 

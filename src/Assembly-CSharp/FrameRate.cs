@@ -21,11 +21,22 @@ public class FrameRate : MonoBehaviour
 		this.trailsNeedInit = true;
 		this._onInvalidate = new Action(this.__onInvalidate);
 		GlobalHelper.OnInvalidate.Add(this._onInvalidate);
-		this.targetSPF = 1f / (float)Screen.currentResolution.refreshRate;
+		if (GlobalHelper.rfi_config > 0)
+		{
+			Debug.Log(string.Format("rfi asdfg {0}", GlobalHelper.rfi_config));
+			this.targetSPF = 1f / (float)GlobalHelper.rfi_config;
+			Debug.Log(this.targetSPF);
+			this.targetFPS = true;
+			GlobalVariables.ignoreFrameReset = false;
+		}
+		else
+		{
+			GlobalVariables.ignoreFrameReset = true;
+			GlobalHelper.renderFrameInterval = ((GlobalHelper.rfi_config != 0) ? (-GlobalHelper.rfi_config) : 1);
+		}
 		this.startTime = (double)Time.realtimeSinceStartup;
 		BasePlayer.interval = 0.1f;
 		GlobalHelper.InvalidateCache();
-		GlobalHelper.renderFrameInterval = 10;
 		this.startctr = 1;
 		this.ofs = -1f;
 		this.ticker = 2f;
@@ -84,7 +95,10 @@ public class FrameRate : MonoBehaviour
 
 	private void Update()
 	{
-		this.vsyncTimer += Time.unscaledDeltaTime;
+		if (this.targetFPS)
+		{
+			this.vsyncTimer += Time.unscaledDeltaTime;
+		}
 		if (this.startctr == -1)
 		{
 			if (this.speedhackCheckNumber == -1)
@@ -105,17 +119,20 @@ public class FrameRate : MonoBehaviour
 				double num = (double)(this.ftEnd - this.ftStart) / 10000000.0;
 				this.timeDifference = (float)(this.udtTotal / num);
 			}
-			if (this.vsyncTimer > this.targetSPF)
+			if (this.targetFPS)
 			{
-				this.setRFI = false;
-				this.vsyncTimer -= this.targetSPF;
-				GlobalHelper.renderFrameInterval = 1;
-				this.renderedFrames++;
-			}
-			else if (!this.setRFI)
-			{
-				this.setRFI = true;
-				GlobalHelper.renderFrameInterval = 1000000;
+				if (this.vsyncTimer > this.targetSPF)
+				{
+					this.setRFI = false;
+					this.vsyncTimer -= this.targetSPF;
+					GlobalHelper.renderFrameInterval = 1;
+					this.renderedFrames++;
+				}
+				else if (!this.setRFI)
+				{
+					this.setRFI = true;
+					GlobalHelper.renderFrameInterval = 1000000;
+				}
 			}
 			this.timer4 += (((double)Time.timeScale > 0.01) ? Time.unscaledDeltaTime : 0f);
 			if (this.timer4 > 1f)
@@ -163,10 +180,15 @@ public class FrameRate : MonoBehaviour
 			{
 				BasePlayer.autoEnabled = !BasePlayer.autoEnabled;
 			}
+			if (!this.targetFPS && GlobalHelper.willCurrentFrameRender)
+			{
+				this.renderedFrames++;
+			}
 			if ((double)this.timer1 <= 0.0 && this.updateInputs)
 			{
 				this.textDisplay.enableWordWrapping = false;
 				float num2 = this.timer2 / (float)this.counter1;
+				float rval = (this.targetFPS ? (1f / this.targetSPF) : ((float)this.renderedFrames / 0.36f));
 				this.best = 1f / this.best;
 				string text;
 				if (!GlobalHelper.showFPS)
@@ -180,7 +202,7 @@ public class FrameRate : MonoBehaviour
 					{
 						num2,
 						1f / this.worst,
-						Mathf.Min((float)Screen.currentResolution.refreshRate, num2),
+						rval,
 						this.best,
 						this.timeDifference * 100f,
 						(double)(this.old_ftEnd - this.old_ftStart) / 1000.0 / 1000.0 / 10.0,
@@ -536,10 +558,11 @@ public class FrameRate : MonoBehaviour
 					this._resetFlag = false;
 				}
 				this._resetFlag = true;
-			}
-			if (this.instance != null)
-			{
-				this.instance.overstrums = 0;
+				if (this.instance != null)
+				{
+					this.instance.overstrums = 0;
+					this.instance.precision.Clear();
+				}
 			}
 			this.los = this.os;
 			this.lghosts = this.ghosts;
@@ -774,20 +797,30 @@ public class FrameRate : MonoBehaviour
 			this.activeTrails[6] = null;
 		}
 		TextMeshProUGUI[] array2 = this.trails;
-		for (int i = 0; i < array2.Length; i++)
+		for (int j = 0; j < array2.Length; j++)
 		{
-			if (!this.activeHashes.Contains(this.trails[i]))
+			if (!this.activeHashes.Contains(this.trails[j]))
 			{
-				array2[i].transform.localPosition -= new Vector3(0f, this.scaleSpeed * num * 25f * ((float)Screen.height / 1080f), 0f);
+				array2[j].transform.localPosition -= new Vector3(0f, this.scaleSpeed * num * 25f * ((float)Screen.height / 1080f), 0f);
 			}
 		}
-		for (int j = 0; j < this.activeTrails.Length; j++)
+		for (int k = 0; k < this.activeTrails.Length; k++)
 		{
-			TextMeshProUGUI textMeshProUGUI3 = this.activeTrails[j];
+			TextMeshProUGUI textMeshProUGUI3 = this.activeTrails[k];
 			if (textMeshProUGUI3 != null)
 			{
 				textMeshProUGUI3.transform.localScale += new Vector3(0f, this.scaleSpeed * num, 0f);
 			}
+		}
+		if (GlobalVariables.neededLeniency && this.lastStrum)
+		{
+			GlobalVariables.neededLeniency = false;
+			this.lastStrum.color = Color.yellow;
+		}
+		if (GlobalVariables.overstrummed && this.lastStrum)
+		{
+			GlobalVariables.overstrummed = false;
+			this.lastStrum.color = Color.red;
 		}
 		this.lastinputs = minputs;
 		this.upperLeftTextBuilder.Append('\n');
@@ -834,6 +867,10 @@ public class FrameRate : MonoBehaviour
 		textMeshProUGUI.transform.position = vector;
 		textMeshProUGUI.color = this.fretColors[trail];
 		this.heldScaleProgress[textMeshProUGUI] = 0f;
+		if (trail == 5 || trail == 6)
+		{
+			this.lastStrum = textMeshProUGUI;
+		}
 		return textMeshProUGUI;
 	}
 
@@ -1058,4 +1095,8 @@ public class FrameRate : MonoBehaviour
 	private float releaseOffset;
 
 	private Dictionary<TextMeshProUGUI, float> heldScaleProgress;
+
+	private TextMeshProUGUI lastStrum;
+
+	private bool targetFPS;
 }

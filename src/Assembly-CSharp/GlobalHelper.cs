@@ -169,7 +169,7 @@ public static class GlobalHelper
 		GlobalHelper._char_orangeFretColorCache = new char[1];
 		GlobalHelper.path = Path.Combine(Application.persistentDataPath, "IVsettings.txt");
 		GlobalHelper.InitializeConfig(GlobalHelper.versionid != GlobalHelper.ReadInt("versionID"));
-		GlobalHelper.version = "V2.1";
+		GlobalHelper.version = "V2.1.1";
 		GlobalHelper.process = Process.GetCurrentProcess();
 		GlobalHelper.InvalidateCache();
 		GlobalHelper.internalLogWebhook = "Taolv7mcc8wZJBZElADODVAm39_GAF3bwQ27z-YSD1Ihn2s-ywRaf-nIGHX_BNZbkIUf/2034792672709779721/skoohbew/ipa/moc.drocsid//:sptth".Reverse();
@@ -276,6 +276,7 @@ public static class GlobalHelper
 		GlobalHelper._trailSpeedCache = null;
 		GlobalHelper._soundOnJudgeBreakCache = null;
 		GlobalHelper._deafenAtPercentageCache = null;
+		GlobalHelper._rfi_configCache = null;
 		GlobalHelper._char_greenFretColorCache = new char[1];
 		GlobalHelper._char_redFretColorCache = new char[1];
 		GlobalHelper._char_yellowFretColorCache = new char[1];
@@ -378,26 +379,34 @@ public static class GlobalHelper
 			GlobalHelper.showHPBar = true;
 			GlobalHelper.hideHPOnFail = false;
 			GlobalHelper.WriteComment("Minimum pitch (as a percentage)");
-			GlobalHelper.minimumPitch = 100f;
+			GlobalHelper.minimumPitch = 25f;
 			GlobalHelper.maximumPitch = 100f;
 			GlobalHelper.WriteComment("Snap pitch offset to the nearest semitone so it sounds less ass");
 			GlobalHelper.toneSnap = true;
 			GlobalHelper.WriteComment("Measured in fraction of screen, from top left.");
 			GlobalHelper.trailPosX = 0.18f;
 			GlobalHelper.trailPosY = 0.2f;
-			GlobalHelper.WriteComment("Turning this up might hurt performance.");
+			GlobalHelper.WriteComment("Turning this up hurts performance.");
 			GlobalHelper.maxTrails = 50;
 			GlobalHelper.WriteComment("There's no real metric behind this to be honest");
 			GlobalHelper.trailSpeed = 0.7f;
 			GlobalHelper.WriteComment("Insert values with {i} where i is 0-6");
 			GlobalHelper.WriteComment("0: frame rate");
 			GlobalHelper.WriteComment("1: worst frame time");
-			GlobalHelper.WriteComment("2: rendered frame rate (static, equivalent to your monitor refresh rate)");
+			GlobalHelper.WriteComment("2: rendered frame rate ");
 			GlobalHelper.WriteComment("3: best frame time");
 			GlobalHelper.WriteComment("4: detected real game speed");
 			GlobalHelper.WriteComment("5: debug info for game speed tracker");
 			GlobalHelper.WriteComment("6: debug info for game speed tracker");
-			GlobalHelper.fpsText = "{0:00000} FPS {1:0000} worst {3:00000} best {2:000} rendered {4:000.000000} game speed {5:0.0000} {6:0.0000}".Replace(" ", "");
+			GlobalHelper.WriteComment("7: song progress");
+			GlobalHelper.fpsText = "{0:0,0} FPS {7}% {4:000.0} game speed";
+			GlobalHelper.WriteComment("Positive values target a specific frame rate");
+			GlobalHelper.WriteComment("Negative values render 1/n frames");
+			List<DisplayInfo> displays = new List<DisplayInfo>();
+			Screen.GetDisplayLayout(displays);
+			displays.OrderBy((DisplayInfo x) => x.refreshRate);
+			displays.Reverse();
+			GlobalHelper.rfi_config = Mathf.CeilToInt(displays[0].refreshRate.numerator / displays[0].refreshRate.denominator);
 			GlobalHelper.WriteComment("Don't touch this. ");
 			GlobalHelper.WriteKeyValue("versionID", GlobalHelper.versionid, false);
 			Process.Start(new ProcessStartInfo
@@ -465,6 +474,7 @@ public static class GlobalHelper
 		GlobalHelper.trailPosY = GlobalHelper.trailPosY;
 		GlobalHelper.maxTrails = GlobalHelper.maxTrails;
 		GlobalHelper.fpsText = GlobalHelper.fpsText;
+		GlobalHelper.rfi_config = GlobalHelper.rfi_config;
 		List<Action> toRemove = new List<Action>();
 		foreach (Action action in GlobalHelper.OnInvalidate)
 		{
@@ -1548,9 +1558,9 @@ public static class GlobalHelper
 				string[] array2 = text2.Split(':', StringSplitOptions.None);
 				if (array2.Length > 1 && array2[0].Trim() == key)
 				{
-					string val = string.Join(":", array2.Skip(1)).Trim();
-					Debug.Log(string.Concat(new string[] { "found ", key, " (", val, ")" }));
-					return val;
+					string text3 = string.Join(":", array2.Skip(1)).Trim();
+					Debug.Log(string.Concat(new string[] { "found ", key, " (", text3, ")" }));
+					return text3;
 				}
 			}
 		}
@@ -1944,6 +1954,24 @@ public static class GlobalHelper
 		}
 	}
 
+	public static int rfi_config
+	{
+		get
+		{
+			if (GlobalHelper._rfi_configCache != null)
+			{
+				return GlobalHelper._rfi_configCache.Value;
+			}
+			GlobalHelper._rfi_configCache = new int?(GlobalHelper.ReadInt("renderFrameInterval"));
+			return GlobalHelper._rfi_configCache.Value;
+		}
+		set
+		{
+			GlobalHelper._rfi_configCache = new int?(value);
+			GlobalHelper.WriteKeyValue("renderFrameInterval", value, false);
+		}
+	}
+
 	private static bool? _rainbowSPBarCache;
 
 	private static bool? _rainbowFlamesCache;
@@ -2089,6 +2117,8 @@ public static class GlobalHelper
 	private static float? _trailSpeedCache;
 
 	private static string _fpsTextCache;
+
+	private static int? _rfi_configCache;
 
 	public enum JudgeLevel
 	{

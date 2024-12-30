@@ -31,7 +31,7 @@ public class \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6
 		{
 			if (this.rewiredPlayer == null)
 			{
-				\u02B9\u02BA\u02BF\u02BB\u02B2\u02B9\u02BB\u02B9\u02B9\u02B5\u02B8 u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B = this.playerInfo;
+				\u02B9\u02BA\u02BF\u02BB\u02B2\u02B9\u02BB\u02B9\u02B9\u02B5\u02B8 u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B = this.playerProfile;
 				return u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B != null && u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B.isRemotePlayer;
 			}
 			return true;
@@ -42,18 +42,18 @@ public class \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6
 	{
 		get
 		{
-			return this.playerInfo.isRemotePlayer;
+			return this.playerProfile.isRemotePlayer;
 		}
 	}
 
 	public bool \u02BF\u02B9\u02B2\u02B8\u02BB\u02BB\u02BC\u02B5\u02B8\u02B5\u02C0()
 	{
-		return this.playerInfo.isRemotePlayer;
+		return this.playerProfile.isRemotePlayer;
 	}
 
 	public bool \u02B4\u02BD\u02BE\u02B2\u02BD\u02B4\u02B8\u02BE\u02B9\u02B6\u02B7()
 	{
-		return this.playerInfo.isRemotePlayer;
+		return this.playerProfile.isRemotePlayer;
 	}
 
 	public PlayerStats \u02B6\u02B2\u02B4\u02B9\u02B8\u02BD\u02B3\u02C1\u02B4\u02BE\u02BA
@@ -66,7 +66,7 @@ public class \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6
 
 	public global::StrikeCore.ControllerType \u02BF\u02B2\u02B3\u02BC\u02BA\u02B6\u02B7\u02BE\u02BB\u02B9\u02C1()
 	{
-		return this.playerInfo.controllerType.GetControllerType;
+		return this.playerProfile.controllerType.GetControllerType;
 	}
 
 	public bool \u02B7\u02B9\u02B8\u02B2\u02B8\u02B8\u02BF\u02B2\u02B7\u02BB\u02BA()
@@ -79,12 +79,12 @@ public class \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6
 		ActionElementMap firstButtonMapWithAction2 = this.rewiredPlayer.controllers.maps.GetFirstButtonMapWithAction(global::Rewired.ControllerType.Joystick, 41, true);
 		ActionElementMap firstButtonMapWithAction3 = this.rewiredPlayer.controllers.maps.GetFirstButtonMapWithAction(global::Rewired.ControllerType.Joystick, 42, true);
 		ActionElementMap firstButtonMapWithAction4 = this.rewiredPlayer.controllers.maps.GetFirstButtonMapWithAction(global::Rewired.ControllerType.Joystick, 43, true);
-		return firstButtonMapWithAction && firstButtonMapWithAction2 != null && firstButtonMapWithAction3 != null && firstButtonMapWithAction4 != null && this.playerInfo.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA == -1;
+		return firstButtonMapWithAction && firstButtonMapWithAction2 != null && firstButtonMapWithAction3 != null && firstButtonMapWithAction4 != null && this.playerProfile.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA == -1;
 	}
 
 	public bool \u02B8\u02C0\u02BB\u02C0\u02BB\u02BB\u02BE\u02B3\u02BD\u02B2\u02B6()
 	{
-		return this.playerInfo.isRemotePlayer;
+		return this.playerProfile.isRemotePlayer;
 	}
 
 	public static void \u02B2\u02B9\u02B6\u02B2\u02C0\u02BA\u02BF\u02B8\u02B5\u02B3\u02B6(bool \u02B8\u02B2\u02B7\u02BB\u02BA\u02C0\u02BF\u02C1\u02B2\u02B6\u02BC)
@@ -112,7 +112,7 @@ public class \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6
 	{
 		get
 		{
-			return this.playerInfo.controllerType.GetControllerType;
+			return this.playerProfile.controllerType.GetControllerType;
 		}
 	}
 
@@ -143,7 +143,7 @@ public class \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6
 		}
 	}
 
-	public \u02B9\u02BA\u02BF\u02BB\u02B2\u02B9\u02BB\u02B9\u02B9\u02B5\u02B8 playerInfo;
+	public \u02B9\u02BA\u02BF\u02BB\u02B2\u02B9\u02BB\u02B9\u02B9\u02B5\u02B8 playerProfile;
 
 	public Player rewiredPlayer;
 

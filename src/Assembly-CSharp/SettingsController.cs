@@ -28,8 +28,8 @@ public static class SettingsController
 		SectionKey sectionKey9 = Settings.RegisterSection(text, "directories");
 		SectionKey sectionKey10 = Settings.RegisterSection(text, "servers");
 		SectionKey sectionKey11 = Settings.RegisterSection(text, "teststuff");
-		SettingsController.\u02B7\u02B2\u02BB\u02BA\u02BD\u02B3\u02BA\u02BA\u02BE\u02B9\u02B4 = new GameSetting(sectionKey, "audio", 0, -2000, 2000, 1);
-		SettingsController.\u02BE\u02C0\u02BA\u02B7\u02B9\u02C0\u02B6\u02BE\u02C1\u02B8\u02BB = new GameSetting(sectionKey, "video", 0, -2000, 2000, 1);
+		SettingsController.audioOffset = new GameSetting(sectionKey, "audio", 0, -2000, 2000, 1);
+		SettingsController.videoOffset = new GameSetting(sectionKey, "video", 0, -2000, 2000, 1);
 		SettingsController.\u02B3\u02B2\u02BD\u02C1\u02B2\u02B4\u02B5\u02B3\u02C1\u02B2\u02B6 = new GameSetting(sectionKey2, "vsync", Application.platform == RuntimePlatform.OSXEditor || Application.platform == RuntimePlatform.OSXPlayer);
 		SettingsController.fpsCap = new GameSetting(sectionKey2, "framerate", Screen.currentResolution.refreshRate * 2, 10, 2010, 10);
 		SettingsController.msaaLevel = new GameSetting(sectionKey2, "msaa", 2, 0, 8, 2);
@@ -84,7 +84,7 @@ public static class SettingsController
 		SettingsController.\u02BE\u02B6\u02BA\u02C0\u02B9\u02B6\u02B2\u02BB\u02B3\u02B3\u02BA = new GameSetting(sectionKey6, "song_videos", false);
 		SettingsController.\u02C1\u02BF\u02C0\u02BF\u02B8\u02B8\u02C0\u02C0\u02B3\u02B3\u02BB = new GameSetting(sectionKey6, "song_highway", false);
 		SettingsController.\u02BC\u02BA\u02BE\u02B9\u02B5\u02BD\u02C1\u02B8\u02B7\u02C0\u02B8 = new GameSetting(sectionKey7, "poll_rate", 2000, 2000, 2000, 1);
-		SettingsController.\u02B5\u02B7\u02B2\u02BB\u02BE\u02B8\u02BC\u02BA\u02B6\u02B5\u02C1 = new GameSetting(sectionKey7, "doublestrumprevention", 5, 0, 100, 1);
+		SettingsController.doubleStrumPrevention = new GameSetting(sectionKey7, "doublestrumprevention", 5, 0, 100, 1);
 		SettingsController.\u02BB\u02C0\u02B7\u02B8\u02B3\u02BE\u02B7\u02BB\u02BA\u02B8\u02BA = new GameSetting(sectionKey7, "no_fail", true);
 		SettingsController.\u02B3\u02BD\u02BB\u02B7\u02B5\u02B7\u02BD\u02B4\u02B4\u02BD\u02B3 = new GameSetting(sectionKey7, "pause_on_focus_lost", true);
 		SettingsController.\u02BF\u02BF\u02BB\u02BF\u02B2\u02BE\u02B5\u02BD\u02C0\u02B4\u02B9 = new GameSetting(sectionKey7, "highway_shake", true);
@@ -123,9 +123,9 @@ public static class SettingsController
 
 	public static GameSetting song_speed;
 
-	public static GameSetting \u02B7\u02B2\u02BB\u02BA\u02BD\u02B3\u02BA\u02BA\u02BE\u02B9\u02B4;
+	public static GameSetting audioOffset;
 
-	public static GameSetting \u02BE\u02C0\u02BA\u02B7\u02B9\u02C0\u02B6\u02BE\u02C1\u02B8\u02BB;
+	public static GameSetting videoOffset;
 
 	public static GameSetting fpsCap;
 
@@ -233,7 +233,7 @@ public static class SettingsController
 
 	public static GameSetting practice_delay;
 
-	public static GameSetting \u02B5\u02B7\u02B2\u02BB\u02BE\u02B8\u02BC\u02BA\u02B6\u02B5\u02C1;
+	public static GameSetting doubleStrumPrevention;
 
 	public static GameSetting sustaindropleniency;
 

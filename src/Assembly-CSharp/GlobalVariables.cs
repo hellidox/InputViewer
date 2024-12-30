@@ -126,7 +126,7 @@ public class GlobalVariables : MonoBehaviour
 		Instrument instrument = Instrument.None;
 		foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in this.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
 		{
-			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.playerInfo != null)
+			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.playerProfile != null)
 			{
 				b += 1;
 				if (b > 1)
@@ -134,7 +134,7 @@ public class GlobalVariables : MonoBehaviour
 					instrument = Instrument.Band;
 					break;
 				}
-				instrument = u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.playerInfo.instrument;
+				instrument = u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.playerProfile.instrument;
 			}
 		}
 		return instrument;
@@ -370,10 +370,13 @@ public class GlobalVariables : MonoBehaviour
 
 	private void Update()
 	{
-		GlobalVariables.framereset += Time.unscaledDeltaTime;
-		if ((double)GlobalVariables.framereset > 0.5)
+		if (GlobalVariables.ignoreFrameReset)
 		{
-			GlobalHelper.renderFrameInterval = 1;
+			GlobalVariables.framereset += Time.unscaledDeltaTime;
+			if ((double)GlobalVariables.framereset > 0.5)
+			{
+				GlobalHelper.renderFrameInterval = 1;
+			}
 		}
 		if ((Time.frameCount & 255) == 0)
 		{
@@ -1084,6 +1087,12 @@ public class GlobalVariables : MonoBehaviour
 	public static long totalPoints;
 
 	public static float framereset;
+
+	public static bool neededLeniency;
+
+	public static bool overstrummed;
+
+	public static bool ignoreFrameReset;
 
 	[Serializable]
 	private class InternalHighwayJsonData

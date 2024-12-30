@@ -14,7 +14,7 @@ public abstract class BaseGuitarPlayer : BasePlayer
 	{
 		get
 		{
-			return this.\u02B6\u02B3\u02BE\u02B6\u02B3\u02BF\u02BC\u02BA\u02C1\u02B6\u02B3 + this.\u02BE\u02B3\u02B8\u02BD\u02B2\u02BD\u02B4\u02BF\u02C1\u02BD\u02B3 > this.gameManager.songTime;
+			return this.\u02B6\u02B3\u02BE\u02B6\u02B3\u02BF\u02BC\u02BA\u02C1\u02B6\u02B3 + this.doubleStrumPrevention > this.gameManager.songTime;
 		}
 	}
 
@@ -91,11 +91,11 @@ public abstract class BaseGuitarPlayer : BasePlayer
 		this.lingeringSustainNotes = new List<Note>(5);
 		this.\u02B3\u02B9\u02C1\u02BD\u02B4\u02B3\u02C0\u02B7\u02B4\u02BB\u02BA = new List<double>(5);
 		base.Start();
-		this.\u02B4\u02B2\u02B6\u02B5\u02BB\u02BB\u02B5\u02B3\u02B7\u02BA\u02B4 = (double)SettingsController.sustaindropleniency.GetFloatSecond;
-		this.\u02BE\u02B3\u02B8\u02BD\u02B2\u02BD\u02B4\u02BF\u02C1\u02BD\u02B3 = (double)SettingsController.\u02B5\u02B7\u02B2\u02BB\u02BE\u02B8\u02BC\u02BA\u02B6\u02B5\u02C1.GetFloatSecond;
-		if (this.playerStuff.playerInfo.IsGamepadMode() || this.\u02BF\u02C1\u02BF\u02BE\u02C1\u02B2\u02BC\u02BE\u02B3\u02BB\u02B8)
+		this.sustainDropLeniency = (double)SettingsController.sustaindropleniency.GetFloatSecond;
+		this.doubleStrumPrevention = (double)SettingsController.doubleStrumPrevention.GetFloatSecond;
+		if (this.player.playerProfile.IsGamepadMode() || this.\u02BF\u02C1\u02BF\u02BE\u02C1\u02B2\u02BC\u02BE\u02B3\u02BB\u02B8)
 		{
-			this.\u02BE\u02B3\u02B8\u02BD\u02B2\u02BD\u02B4\u02BF\u02C1\u02BD\u02B3 = 0.0;
+			this.doubleStrumPrevention = 0.0;
 		}
 	}
 
@@ -114,11 +114,11 @@ public abstract class BaseGuitarPlayer : BasePlayer
 
 	protected void \u02B7\u02B9\u02BA\u02BC\u02BD\u02B8\u02B2\u02BC\u02B8\u02BA\u02BF(Note \u02C0\u02B9\u02C1\u02B8\u02B7\u02BD\u02B2\u02C0\u02BD\u02BE\u02B9, int \u02C0\u02C1\u02BB\u02B9\u02B7\u02C1\u02BC\u02B4\u02BA\u02B8\u02B3)
 	{
-		this.neckController.\u02B8\u02BA\u02B8\u02B9\u02B7\u02B3\u02B6\u02BD\u02C1\u02BC\u02B8(\u02C0\u02B9\u02C1\u02B8\u02B7\u02BD\u02B2\u02C0\u02BD\u02BE\u02B9.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF);
-		\u02C0\u02B9\u02C1\u02B8\u02B7\u02BD\u02B2\u02C0\u02BD\u02BE\u02B9.\u02C1\u02BC\u02B2\u02C1\u02BC\u02B8\u02B2\u02BA\u02C1\u02B9\u02C0 = true;
+		this.neckController.\u02B8\u02BA\u02B8\u02B9\u02B7\u02B3\u02B6\u02BD\u02C1\u02BC\u02B8(\u02C0\u02B9\u02C1\u02B8\u02B7\u02BD\u02B2\u02C0\u02BD\u02BE\u02B9._noteMask);
+		\u02C0\u02B9\u02C1\u02B8\u02B7\u02BD\u02B2\u02C0\u02BD\u02BE\u02B9.wasMissed = true;
 		if (\u02C0\u02B9\u02C1\u02B8\u02B7\u02BD\u02B2\u02C0\u02BD\u02BE\u02B9.tickLength > 0)
 		{
-			\u02C0\u02B9\u02C1\u02B8\u02B7\u02BD\u02B2\u02C0\u02BD\u02BE\u02B9.\u02C1\u02B8\u02B6\u02B6\u02BF\u02BF\u02BD\u02BF\u02B4\u02B6\u02C0 = false;
+			\u02C0\u02B9\u02C1\u02B8\u02B7\u02BD\u02B2\u02C0\u02BD\u02BE\u02B9.isSustaining = false;
 		}
 		this.sustainNotes.RemoveAt(\u02C0\u02C1\u02BB\u02B9\u02B7\u02C1\u02BC\u02B4\u02BA\u02B8\u02B3);
 		this.\u02B3\u02B9\u02C1\u02BD\u02B4\u02B3\u02C0\u02B7\u02B4\u02BB\u02BA.RemoveAt(\u02C0\u02C1\u02BB\u02B9\u02B7\u02C1\u02BC\u02B4\u02BA\u02B8\u02B3);
@@ -128,12 +128,12 @@ public abstract class BaseGuitarPlayer : BasePlayer
 		}
 		if (!\u02C0\u02B9\u02C1\u02B8\u02B7\u02BD\u02B2\u02C0\u02BD\u02BE\u02B9.\u02B6\u02B3\u02B9\u02B5\u02B6\u02B6\u02BF\u02B3\u02B9\u02BC\u02BA && this.\u02BD\u02B8\u02B6\u02B2\u02B8\u02B6\u02BD\u02C0\u02BD\u02B8\u02BB)
 		{
-			this.\u02B6\u02B9\u02BC\u02C0\u02B6\u02BE\u02B4\u02BA\u02BC\u02BB\u02C1(false);
+			this.Overstrum(false);
 		}
 		if ((long)\u02C0\u02B9\u02C1\u02B8\u02B7\u02BD\u02B2\u02C0\u02BD\u02BE\u02B9.tickLength > (long)((ulong)this.gameManager.ticksPerQuarterBeat) && this.sustainNotes.Count == 0)
 		{
-			BassAudioManager.Instance.\u02C1\u02BA\u02B3\u02B4\u02B7\u02B3\u02B4\u02B5\u02BD\u02C1\u02BF(this.playerStuff.playerInfo.\u02BA\u02BD\u02BC\u02BC\u02B4\u02BD\u02B4\u02BE\u02B2\u02B7\u02C1, false, -1f);
-			this.\u02B9\u02C0\u02BD\u02BF\u02BD\u02B9\u02B2\u02B6\u02BA\u02B3\u02B6 = true;
+			BassAudioManager.Instance.MuteInstrument(this.player.playerProfile.moonInstrument, false, -1f);
+			this.isMutedAudio = true;
 		}
 	}
 
@@ -188,7 +188,7 @@ public abstract class BaseGuitarPlayer : BasePlayer
 					note.tickPosition = this.gameManager.currentTick - (uint)num;
 				}
 				note.\u02BB\u02BE\u02BA\u02B8\u02BE\u02B9\u02BF\u02B3\u02B4\u02B8\u02BD -= this.gameManager.\u02C0\u02BE\u02C1\u02BD\u02C0\u02BC\u02BB\u02B4\u02C1\u02B3\u02B9;
-				if ((!this.\u02BA\u02B7\u02B5\u02C1\u02C0\u02B4\u02BE\u02BF\u02BF\u02C0\u02BE(note) && !note.\u02B3\u02B7\u02B2\u02B3\u02BB\u02B2\u02C0\u02BC\u02BD\u02BF\u02C1) || ((note.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF & this.buttonsPressed) != note.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF && (note.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF & this.OpenNote) == 0))
+				if ((!this.\u02BA\u02B7\u02B5\u02C1\u02C0\u02B4\u02BE\u02BF\u02BF\u02C0\u02BE(note) && !note.IsExtendedSustain) || ((note._noteMask & this.buttonsPressed) != note._noteMask && (note._noteMask & this.OpenNote) == 0))
 				{
 					if (this.gameManager.songTime > this.\u02B3\u02B9\u02C1\u02BD\u02B4\u02B3\u02C0\u02B7\u02B4\u02BB\u02BA[i] + this.\u02BE\u02B9\u02BB\u02B6\u02BC\u02B2\u02BD\u02BC\u02C0\u02C1\u02B5)
 					{
@@ -271,9 +271,9 @@ public abstract class BaseGuitarPlayer : BasePlayer
 		base.\u02B3\u02B2\u02B7\u02C1\u02BF\u02B6\u02BE\u02BA\u02BA\u02BF\u02B2();
 		this.\u02BC\u02C0\u02C1\u02BD\u02B7\u02BC\u02B3\u02B8\u02C0\u02B7\u02BF = 0;
 		this.\u02B2\u02B4\u02BC\u02B2\u02B5\u02BC\u02BD\u02B7\u02BA\u02BF\u02B3 = this.\u02B8\u02BA\u02BD\u02B7\u02B2\u02C0\u02BC\u02B9\u02BA\u02C1\u02C0;
-		if (\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02C0\u02B9\u02BD\u02B8\u02B4\u02BB\u02B4\u02B9\u02B9\u02B6\u02BD && this.\u02C0\u02B5\u02BA\u02BD\u02B8\u02B6\u02B7\u02B6\u02BE\u02BE\u02B9())
+		if (\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.IsHopo && this.\u02C0\u02B5\u02BA\u02BD\u02B8\u02B6\u02B7\u02B6\u02BE\u02BE\u02B9())
 		{
-			if (this.\u02BA\u02B3\u02B4\u02B6\u02B5\u02B9\u02B7\u02B9\u02B8\u02C0\u02BA > 0f)
+			if (this.strumLenienceTimer > 0f)
 			{
 				this.\u02C0\u02C0\u02C1\u02BF\u02B5\u02B9\u02BA\u02BA\u02BB\u02B8\u02B7 = this.strumLenienceAmountNoNotes;
 			}
@@ -287,15 +287,15 @@ public abstract class BaseGuitarPlayer : BasePlayer
 			}
 			this.\u02C0\u02BD\u02C1\u02B2\u02B5\u02BD\u02B6\u02C1\u02B9\u02C0\u02BF = this.\u02C0\u02C0\u02C1\u02BF\u02B5\u02B9\u02BA\u02BA\u02BB\u02B8\u02B7;
 		}
-		if (this.\u02B8\u02B3\u02B4\u02B7\u02C0\u02B5\u02BA\u02C0\u02B4\u02B9\u02BB && \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02C0\u02B9\u02BD\u02B8\u02B4\u02BB\u02B4\u02B9\u02B9\u02B6\u02BD)
+		if (this.\u02B8\u02B3\u02B4\u02B7\u02C0\u02B5\u02BA\u02C0\u02B4\u02B9\u02BB && \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.IsHopo)
 		{
 			this.\u02B2\u02BE\u02BD\u02B7\u02BE\u02B9\u02C0\u02B9\u02B2\u02BC\u02BD = this.\u02B3\u02C0\u02BA\u02BC\u02BB\u02BF\u02B4\u02B5\u02BC\u02BD\u02BC;
 		}
-		if (\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02B8\u02C1\u02BA\u02B2\u02BC\u02B6\u02C0\u02BD\u02BD\u02BA\u02BE || (this.\u02C0\u02B5\u02BA\u02BD\u02B8\u02B6\u02B7\u02B6\u02BE\u02BE\u02B9() && \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02C0\u02B9\u02BD\u02B8\u02B4\u02BB\u02B4\u02B9\u02B9\u02B6\u02BD))
+		if (\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02B8\u02C1\u02BA\u02B2\u02BC\u02B6\u02C0\u02BD\u02BD\u02BA\u02BE || (this.\u02C0\u02B5\u02BA\u02BD\u02B8\u02B6\u02B7\u02B6\u02BE\u02BE\u02B9() && \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.IsHopo))
 		{
-			this.\u02BA\u02B3\u02B4\u02B6\u02B5\u02B9\u02B7\u02B9\u02B8\u02C0\u02BA = 0f;
+			this.strumLenienceTimer = 0f;
 		}
-		if (this.sustainNotes.Count > 0 && !\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02B3\u02B7\u02B2\u02B3\u02BB\u02B2\u02C0\u02BC\u02BD\u02BF\u02C1)
+		if (this.sustainNotes.Count > 0 && !\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.IsExtendedSustain)
 		{
 			foreach (Note note3 in this.sustainNotes)
 			{
@@ -303,23 +303,23 @@ public abstract class BaseGuitarPlayer : BasePlayer
 				{
 					note3.\u02BB\u02BE\u02BA\u02B8\u02BE\u02B9\u02BF\u02B3\u02B4\u02B8\u02BD = 0f;
 				}
-				note3.\u02C1\u02BC\u02B2\u02C1\u02BC\u02B8\u02B2\u02BA\u02C1\u02B9\u02C0 = true;
-				note3.\u02C1\u02B8\u02B6\u02B6\u02BF\u02BF\u02BD\u02BF\u02B4\u02B6\u02C0 = false;
+				note3.wasMissed = true;
+				note3.isSustaining = false;
 				this.lingeringSustainNotes.Add(note3);
 			}
 			this.sustainNotes.Clear();
 			this.\u02B3\u02B9\u02C1\u02BD\u02B4\u02B3\u02C0\u02B7\u02B4\u02BB\u02BA.Clear();
-			this.neckController.\u02B5\u02BD\u02BA\u02BE\u02B4\u02B9\u02BD\u02B3\u02B9\u02BC\u02BE();
+			this.neckController.EndFretHeldStates();
 		}
 		u02C0_u02C1_u02C0_u02BC_u02B5_u02BC_u02C0_u02B5_u02B7_u02B8_u02B = \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02BE\u02BD\u02B6\u02BB\u02B8\u02BE\u02B3\u02B4\u02BF\u02B3\u02B2.\u02BC\u02C0\u02B8\u02B9\u02B4\u02BB\u02BE\u02B6\u02BC\u02B7\u02C1();
 		while (u02C0_u02C1_u02C0_u02BC_u02B5_u02BC_u02C0_u02B5_u02B7_u02B8_u02B.\u02BF\u02B5\u02B7\u02BB\u02B5\u02BB\u02B7\u02B5\u02B6\u02BA\u02BC())
 		{
 			u02C0_u02C1_u02C0_u02BC_u02B5_u02BC_u02C0_u02B5_u02B7_u02B8_u02B.\u02B9\u02BA\u02BB\u02B4\u02C0\u02B4\u02B6\u02B2\u02B9\u02B3\u02BF.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 = true;
 		}
-		if (this.\u02B9\u02C0\u02BD\u02BF\u02BD\u02B9\u02B2\u02B6\u02BA\u02B3\u02B6)
+		if (this.isMutedAudio)
 		{
-			BassAudioManager.Instance.\u02C1\u02BA\u02B3\u02B4\u02B7\u02B3\u02B4\u02B5\u02BD\u02C1\u02BF(this.playerStuff.playerInfo.\u02BA\u02BD\u02BC\u02BC\u02B4\u02BD\u02B4\u02BE\u02B2\u02B7\u02C1, true, -1f);
-			this.\u02B9\u02C0\u02BD\u02BF\u02BD\u02B9\u02B2\u02B6\u02BA\u02B3\u02B6 = false;
+			BassAudioManager.Instance.MuteInstrument(this.player.playerProfile.moonInstrument, true, -1f);
+			this.isMutedAudio = false;
 		}
 		base.\u02BE\u02BC\u02BA\u02BB\u02C0\u02B5\u02B6\u02B8\u02B6\u02BB\u02B3(\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8);
 		u02C0_u02C1_u02C0_u02BC_u02B5_u02BC_u02C0_u02B5_u02B7_u02B8_u02B = \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02BE\u02BD\u02B6\u02BB\u02B8\u02BE\u02B3\u02B4\u02BF\u02B3\u02B2.\u02BC\u02C0\u02B8\u02B9\u02B4\u02BB\u02BE\u02B6\u02BC\u02B7\u02C1();
@@ -340,26 +340,26 @@ public abstract class BaseGuitarPlayer : BasePlayer
 		for (int i = 0; i < this.sustainNotes.Count; i++)
 		{
 			Note note = this.sustainNotes[i];
-			if ((note.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF & \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF) != 0)
+			if ((note._noteMask & \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8._noteMask) != 0)
 			{
 				this.\u02B7\u02B9\u02BA\u02BC\u02BD\u02B8\u02B2\u02BC\u02B8\u02BA\u02BF(note, i);
 			}
 		}
 		this.sustainNotes.Add(\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8);
 		this.\u02B3\u02B9\u02C1\u02BD\u02B4\u02B3\u02C0\u02B7\u02B4\u02BB\u02BA.Add(this.gameManager.songTime);
-		\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02C1\u02B8\u02B6\u02B6\u02BF\u02BF\u02BD\u02BF\u02B4\u02B6\u02C0 = true;
+		\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.isSustaining = true;
 		float num = (float)((double)\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02B2\u02B8\u02BA\u02BA\u02BC\u02B7\u02B5\u02B5\u02B6\u02B5\u02C1 - this.gameManager.songTime);
 		\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02BB\u02BE\u02BA\u02B8\u02BE\u02B9\u02BF\u02B3\u02B4\u02B8\u02BD += num;
 	}
 
 	protected override void Update()
 	{
-		if (!this.playerStuff.playerInfo.isRemotePlayer)
+		if (!this.player.playerProfile.isRemotePlayer)
 		{
 			BaseGuitarPlayer.instance = this;
 			this.minputs = this.Inputs;
-			this.minputs.su = this.playerStuff.rewiredPlayer.GetButton(5);
-			this.minputs.sd = this.playerStuff.rewiredPlayer.GetButton(14);
+			this.minputs.su = this.player.rewiredPlayer.GetButton(5);
+			this.minputs.sd = this.player.rewiredPlayer.GetButton(14);
 			float unscaledDeltaTime = Time.unscaledDeltaTime;
 			float num = 0f;
 			if (!this.lastinputs.g && this.minputs.g)
@@ -435,7 +435,7 @@ public abstract class BaseGuitarPlayer : BasePlayer
 		}
 		if (this.\u02B3\u02B3\u02BD\u02C0\u02B6\u02B7\u02C0\u02BA\u02BB\u02B9\u02B9 && this.gameManager.songTime >= this.\u02BE\u02B9\u02BB\u02B6\u02BC\u02B2\u02BD\u02BC\u02C0\u02C1\u02B5 + this.\u02BA\u02B2\u02B5\u02B2\u02B6\u02BF\u02B7\u02B6\u02BF\u02C0\u02B7)
 		{
-			this.\u02BE\u02B9\u02BB\u02B6\u02BC\u02B2\u02BD\u02BC\u02C0\u02C1\u02B5 = this.\u02B4\u02B2\u02B6\u02B5\u02BB\u02BB\u02B5\u02B3\u02B7\u02BA\u02B4;
+			this.\u02BE\u02B9\u02BB\u02B6\u02BC\u02B2\u02BD\u02BC\u02C0\u02C1\u02B5 = this.sustainDropLeniency;
 			this.\u02B3\u02B3\u02BD\u02C0\u02B6\u02B7\u02C0\u02BA\u02BB\u02B9\u02B9 = false;
 		}
 		if (this.\u02B2\u02B4\u02BC\u02B2\u02B5\u02BC\u02BD\u02B7\u02BA\u02BF\u02B3 > 0f)
@@ -459,14 +459,30 @@ public abstract class BaseGuitarPlayer : BasePlayer
 				this.\u02C0\u02B6\u02BC\u02B2\u02B9\u02B6\u02BA\u02BE\u02B3\u02BC\u02B3 = 0f;
 			}
 		}
-		if (this.\u02BA\u02B3\u02B4\u02B6\u02B5\u02B9\u02B7\u02B9\u02B8\u02C0\u02BA > 0f)
+		if (this.strumLenienceTimer > 0f)
 		{
-			this.\u02BA\u02B3\u02B4\u02B6\u02B5\u02B9\u02B7\u02B9\u02B8\u02C0\u02BA -= Time.deltaTime;
-			if (this.\u02BA\u02B3\u02B4\u02B6\u02B5\u02B9\u02B7\u02B9\u02B8\u02C0\u02BA <= 0f)
+			if (this.sl_nonotes)
 			{
-				this.\u02B6\u02B9\u02BC\u02C0\u02B6\u02BE\u02B4\u02BA\u02BC\u02BB\u02C1(true);
-				this.\u02BA\u02B3\u02B4\u02B6\u02B5\u02B9\u02B7\u02B9\u02B8\u02C0\u02BA = 0f;
+				if (this.strumLenienceTimer > this.strumLenienceAmountNoNotes - 0.01f)
+				{
+					this.lenienceFirstTick = false;
+				}
+				else if (this.strumLenienceTimer > this.strumLenienceAmount - 0.01f)
+				{
+					this.lenienceFirstTick = false;
+				}
 			}
+			if (this.lenienceFirstTick)
+			{
+				GlobalVariables.neededLeniency = true;
+			}
+			this.strumLenienceTimer -= Time.deltaTime;
+			if (this.strumLenienceTimer <= 0f)
+			{
+				this.Overstrum(true);
+				this.strumLenienceTimer = 0f;
+			}
+			this.lenienceFirstTick = true;
 		}
 		if (this.\u02B6\u02BA\u02B4\u02BA\u02B7\u02BE\u02BD\u02BE\u02BD\u02B7\u02BB > 0f && (this.\u02B4\u02BF\u02BD\u02B8\u02B3\u02BF\u02B9\u02C1\u02B9\u02C1\u02B8 || this.\u02BC\u02B2\u02B2\u02BB\u02B7\u02B4\u02B3\u02B6\u02C1\u02BC\u02C0))
 		{
@@ -517,15 +533,15 @@ public abstract class BaseGuitarPlayer : BasePlayer
 
 	protected override void UpdateInputs()
 	{
-		float axis = this.playerStuff.rewiredPlayer.GetAxis(7);
-		bool button = this.playerStuff.rewiredPlayer.GetButton(6);
+		float axis = this.player.rewiredPlayer.GetAxis(7);
+		bool button = this.player.rewiredPlayer.GetButton(6);
 		if (this.gameManager.\u02B2\u02B5\u02B8\u02C0\u02B4\u02B2\u02B2\u02BD\u02B2\u02B3\u02C1)
 		{
 			if (button)
 			{
 				this.\u02B4\u02BA\u02BA\u02B3\u02C0\u02BC\u02BD\u02BA\u02B5\u02B2\u02B8 = true;
 			}
-			if (this.playerStuff.playerInfo.tilt && axis >= 1f)
+			if (this.player.playerProfile.tilt && axis >= 1f)
 			{
 				this.\u02B6\u02C0\u02BA\u02BF\u02B7\u02B8\u02B2\u02B2\u02B5\u02B6\u02B2 = true;
 			}
@@ -541,32 +557,32 @@ public abstract class BaseGuitarPlayer : BasePlayer
 				this.\u02B6\u02C0\u02BA\u02BF\u02B7\u02B8\u02B2\u02B2\u02B5\u02B6\u02B2 = false;
 			}
 		}
-		if (base.\u02BF\u02C0\u02BA\u02B6\u02B7\u02C0\u02B2\u02BE\u02BC\u02BA\u02B2 && ((!this.\u02B4\u02BA\u02BA\u02B3\u02C0\u02BC\u02BD\u02BA\u02B5\u02B2\u02B8 && button) || (!this.\u02B6\u02C0\u02BA\u02BF\u02B7\u02B8\u02B2\u02B2\u02B5\u02B6\u02B2 && this.playerStuff.playerInfo.tilt && axis >= 1f)))
+		if (base.\u02BF\u02C0\u02BA\u02B6\u02B7\u02C0\u02B2\u02BE\u02BC\u02BA\u02B2 && ((!this.\u02B4\u02BA\u02BA\u02B3\u02C0\u02BC\u02BD\u02BA\u02B5\u02B2\u02B8 && button) || (!this.\u02B6\u02C0\u02BA\u02BF\u02B7\u02B8\u02B2\u02B2\u02B5\u02B6\u02B2 && this.player.playerProfile.tilt && axis >= 1f)))
 		{
 			base.\u02B9\u02BC\u02B2\u02B7\u02BD\u02B2\u02B2\u02B2\u02B2\u02BE\u02BE();
 		}
 		bool flag = false;
 		bool flag2 = true;
-		if (this.playerStuff.playerInfo.IsGamepadMode() && this.\u02BA\u02B3\u02B4\u02B6\u02B5\u02B9\u02B7\u02B9\u02B8\u02C0\u02BA == 0f)
+		if (this.player.playerProfile.IsGamepadMode() && this.strumLenienceTimer == 0f)
 		{
-			if (this.playerStuff.rewiredPlayer.GetButtonDown(5))
+			if (this.player.rewiredPlayer.GetButtonDown(5))
 			{
 				this.buttonsPressed |= this.OpenNote;
 			}
-			if (this.playerStuff.rewiredPlayer.GetButtonDown(14))
+			if (this.player.rewiredPlayer.GetButtonDown(14))
 			{
 				this.buttonsPressed |= this.OpenNote;
 			}
 			flag = this.buttonsPressed > this.\u02BA\u02BD\u02B4\u02BB\u02B8\u02C1\u02B2\u02B3\u02B2\u02BC\u02B3;
 		}
-		if (!this.playerStuff.playerInfo.IsGamepadMode())
+		if (!this.player.playerProfile.IsGamepadMode())
 		{
-			if (this.playerStuff.rewiredPlayer.GetButtonDown(5))
+			if (this.player.rewiredPlayer.GetButtonDown(5))
 			{
 				flag = true;
 				flag2 = true;
 			}
-			if (this.playerStuff.rewiredPlayer.GetButtonDown(14))
+			if (this.player.rewiredPlayer.GetButtonDown(14))
 			{
 				flag = true;
 				flag2 = false;
@@ -576,28 +592,28 @@ public abstract class BaseGuitarPlayer : BasePlayer
 		{
 			flag = false;
 		}
-		this.currentWhammy = this.playerStuff.rewiredPlayer.GetAxis(17);
-		if (this.playerStuff.rewiredPlayer.GetButton(30))
+		this.currentWhammy = this.player.rewiredPlayer.GetAxis(17);
+		if (this.player.rewiredPlayer.GetButton(30))
 		{
 			this.currentWhammy = 1f;
 		}
 		if (this.sustainNotes.Count > 0 && this.\u02B2\u02BF\u02BD\u02B2\u02C0\u02BD\u02BA\u02B2\u02BC\u02B5\u02B6)
 		{
-			if (!this.\u02B9\u02C0\u02BD\u02BF\u02BD\u02B9\u02B2\u02B6\u02BA\u02B3\u02B6)
+			if (!this.isMutedAudio)
 			{
 				float num = Mathf.Abs(this.currentWhammy);
-				BassAudioManager.Instance.\u02B2\u02B2\u02B9\u02BA\u02B2\u02B2\u02BA\u02B8\u02BC\u02B9\u02BF(this.playerStuff.playerInfo.\u02BA\u02BD\u02BC\u02BC\u02B4\u02BD\u02B4\u02BE\u02B2\u02B7\u02C1, num);
+				BassAudioManager.Instance.\u02B2\u02B2\u02B9\u02BA\u02B2\u02B2\u02BA\u02B8\u02BC\u02B9\u02BF(this.player.playerProfile.moonInstrument, num);
 			}
 		}
-		else if (!this.\u02B9\u02C0\u02BD\u02BF\u02BD\u02B9\u02B2\u02B6\u02BA\u02B3\u02B6)
+		else if (!this.isMutedAudio)
 		{
-			BassAudioManager.Instance.\u02B2\u02B2\u02B9\u02BA\u02B2\u02B2\u02BA\u02B8\u02BC\u02B9\u02BF(this.playerStuff.playerInfo.\u02BA\u02BD\u02BC\u02BC\u02B4\u02BD\u02B4\u02BE\u02B2\u02B7\u02C1, 0f);
+			BassAudioManager.Instance.\u02B2\u02B2\u02B9\u02BA\u02B2\u02B2\u02BA\u02B8\u02BC\u02B9\u02BF(this.player.playerProfile.moonInstrument, 0f);
 		}
 		if (this.currentWhammy != this.\u02BF\u02B7\u02C1\u02BF\u02B6\u02BB\u02B7\u02B2\u02B6\u02B7\u02B9)
 		{
 			this.whammyTimer = 0.25f;
 		}
-		if (this.playerStuff.rewiredPlayer.GetButtonDown(30))
+		if (this.player.rewiredPlayer.GetButtonDown(30))
 		{
 			this.whammyTimer = 0.75f;
 		}
@@ -645,14 +661,14 @@ public abstract class BaseGuitarPlayer : BasePlayer
 				}
 			}
 			this.\u02C0\u02B4\u02BD\u02BF\u02B8\u02B9\u02B4\u02BE\u02BE\u02B7\u02B3 = this.buttonsPressed;
-			if (this.\u02BC\u02B2\u02B2\u02BB\u02B7\u02B4\u02B3\u02B6\u02C1\u02BC\u02C0 && note != null && (note.\u02B5\u02BC\u02BE\u02BF\u02B6\u02B7\u02B3\u02B9\u02BF\u02B5\u02BE || (note.\u02C0\u02BF\u02B6\u02B4\u02BC\u02BD\u02BD\u02B6\u02C0\u02B3\u02BF && (this.combo != 0 || (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4 && !this.\u02B7\u02BD\u02C1\u02B3\u02BD\u02B5\u02B6\u02B8\u02B8\u02B2\u02BF)))) && this.\u02BA\u02B7\u02B5\u02C1\u02C0\u02B4\u02BE\u02BF\u02BF\u02C0\u02BE(note) && note.\u02C0\u02B9\u02BD\u02B8\u02B4\u02BB\u02B4\u02B9\u02B9\u02B6\u02BD && !note.\u02C1\u02B9\u02BD\u02B6\u02B7\u02BA\u02B5\u02B7\u02BA\u02B6\u02C0)
+			if (this.\u02BC\u02B2\u02B2\u02BB\u02B7\u02B4\u02B3\u02B6\u02C1\u02BC\u02C0 && note != null && (note.IsTap || (note.IsPureHopo && (this.combo != 0 || (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4 && !this.\u02B7\u02BD\u02C1\u02B3\u02BD\u02B5\u02B6\u02B8\u02B8\u02B2\u02BF)))) && this.\u02BA\u02B7\u02B5\u02C1\u02C0\u02B4\u02BE\u02BF\u02BF\u02C0\u02BE(note) && note.IsHopo && !note.\u02C1\u02B9\u02BD\u02B6\u02B7\u02BA\u02B5\u02B7\u02BA\u02B6\u02C0)
 			{
 				note.\u02C1\u02B9\u02BD\u02B6\u02B7\u02BA\u02B5\u02B7\u02BA\u02B6\u02C0 = true;
 				this.\u02B9\u02C0\u02B3\u02C0\u02B2\u02C1\u02B8\u02C1\u02B5\u02B6\u02B3 = note.\u02B2\u02B8\u02BA\u02BA\u02BC\u02B7\u02B5\u02B5\u02B6\u02B5\u02C1 - (float)this.gameManager.songTime;
 			}
 			this.\u02B6\u02BA\u02B4\u02BA\u02B7\u02BE\u02BD\u02BE\u02BD\u02B7\u02BB = this.\u02B4\u02BE\u02BC\u02B9\u02C1\u02B8\u02BC\u02B8\u02BB\u02BA\u02BC;
 		}
-		if (this.\u02BF\u02C1\u02BF\u02BE\u02C1\u02B2\u02BC\u02BE\u02B3\u02BB\u02B8 && ((!this.\u02B3\u02BC\u02B4\u02B8\u02BB\u02B8\u02B2\u02C0\u02C0\u02B3\u02C0 && !this.\u02B8\u02B3\u02B4\u02B7\u02C0\u02B5\u02BA\u02C0\u02B4\u02B9\u02BB) || ((this.\u02B3\u02BC\u02B4\u02B8\u02BB\u02B8\u02B2\u02C0\u02C0\u02B3\u02C0 || this.\u02B8\u02B3\u02B4\u02B7\u02C0\u02B5\u02BA\u02C0\u02B4\u02B9\u02BB) && note != null && !note.\u02C0\u02B9\u02BD\u02B8\u02B4\u02BB\u02B4\u02B9\u02B9\u02B6\u02BD) || this.combo == 0))
+		if (this.\u02BF\u02C1\u02BF\u02BE\u02C1\u02B2\u02BC\u02BE\u02B3\u02BB\u02B8 && ((!this.\u02B3\u02BC\u02B4\u02B8\u02BB\u02B8\u02B2\u02C0\u02C0\u02B3\u02C0 && !this.\u02B8\u02B3\u02B4\u02B7\u02C0\u02B5\u02BA\u02C0\u02B4\u02B9\u02BB) || ((this.\u02B3\u02BC\u02B4\u02B8\u02BB\u02B8\u02B2\u02C0\u02C0\u02B3\u02C0 || this.\u02B8\u02B3\u02B4\u02B7\u02C0\u02B5\u02BA\u02C0\u02B4\u02B9\u02BB) && note != null && !note.IsHopo) || this.combo == 0))
 		{
 			flag = true;
 		}
@@ -662,7 +678,7 @@ public abstract class BaseGuitarPlayer : BasePlayer
 			this.\u02C1\u02B8\u02B7\u02BB\u02B4\u02BE\u02BB\u02B5\u02B3\u02B6\u02B2 = flag2;
 			if (this.\u02C0\u02B5\u02BA\u02BD\u02B8\u02B6\u02B7\u02B6\u02BE\u02BE\u02B9() && this.\u02C0\u02C0\u02C1\u02BF\u02B5\u02B9\u02BA\u02BA\u02BB\u02B8\u02B7 > 0f)
 			{
-				this.\u02BA\u02B3\u02B4\u02B6\u02B5\u02B9\u02B7\u02B9\u02B8\u02C0\u02BA = 0f;
+				this.strumLenienceTimer = 0f;
 				if (this.\u02B4\u02BF\u02BD\u02B8\u02B3\u02BF\u02B9\u02C1\u02B9\u02C1\u02B8)
 				{
 					this.\u02C0\u02C0\u02C1\u02BF\u02B5\u02B9\u02BA\u02BA\u02BB\u02B8\u02B7 = 0f;
@@ -675,9 +691,9 @@ public abstract class BaseGuitarPlayer : BasePlayer
 				{
 					this.\u02B6\u02BA\u02B4\u02BA\u02B7\u02BE\u02BD\u02BE\u02BD\u02B7\u02BB = this.\u02C1\u02BE\u02B3\u02BA\u02BE\u02BD\u02B8\u02C0\u02C1\u02BE\u02B5;
 				}
-				if (this.\u02BA\u02B3\u02B4\u02B6\u02B5\u02B9\u02B7\u02B9\u02B8\u02C0\u02BA > 0f)
+				if (this.strumLenienceTimer > 0f)
 				{
-					this.\u02B6\u02B9\u02BC\u02C0\u02B6\u02BE\u02B4\u02BA\u02BC\u02BB\u02C1(true);
+					this.Overstrum(true);
 				}
 				bool flag3 = false;
 				if (note != null)
@@ -688,13 +704,13 @@ public abstract class BaseGuitarPlayer : BasePlayer
 					float num11 = (float)(num9 + num8);
 					if (num10 <= this.strumLenienceAmountNoNotes)
 					{
-						this.\u02BA\u02B3\u02B4\u02B6\u02B5\u02B9\u02B7\u02B9\u02B8\u02C0\u02BA = Mathf.Min(num11, this.strumLenienceAmount);
+						this.strumLenienceTimer = Mathf.Min(num11, this.strumLenienceAmount);
 						flag3 = true;
 					}
 				}
 				if (!flag3)
 				{
-					this.\u02BA\u02B3\u02B4\u02B6\u02B5\u02B9\u02B7\u02B9\u02B8\u02C0\u02BA = this.strumLenienceAmountNoNotes;
+					this.strumLenienceTimer = this.strumLenienceAmountNoNotes;
 				}
 			}
 		}
@@ -721,13 +737,13 @@ public abstract class BaseGuitarPlayer : BasePlayer
 					{
 						flag = true;
 					}
-					if (this.\u02B6\u02BA\u02B4\u02BA\u02B7\u02BE\u02BD\u02BE\u02BD\u02B7\u02BB > 0f && flag && ((note.\u02B5\u02BC\u02BE\u02BF\u02B6\u02B7\u02B3\u02B9\u02BF\u02B5\u02BE && (((!this.\u02B7\u02BD\u02C1\u02B3\u02BD\u02B5\u02B6\u02B8\u02B8\u02B2\u02BF) ? BaseGuitarPlayer.\u02B3\u02B9\u02B2\u02BB\u02BE\u02BF\u02B7\u02C0\u02B2\u02B7\u02BF(ref u02B6_u02B5_u02B9_u02B2_u02B4_u02B9_u02B7_u02BE_u02B7_u02B9_u02B) : (!this.\u02B9\u02B7\u02B5\u02BD\u02BB\u02B8\u02C0\u02B2\u02C0\u02C1\u02B9())) || BaseGuitarPlayer.\u02B3\u02B9\u02B2\u02BB\u02BE\u02BF\u02B7\u02C0\u02B2\u02B7\u02BF(ref u02B6_u02B5_u02B9_u02B2_u02B4_u02B9_u02B7_u02BE_u02B7_u02B9_u02B))) || (note.\u02C0\u02BF\u02B6\u02B4\u02BC\u02BD\u02BD\u02B6\u02C0\u02B3\u02BF && BaseGuitarPlayer.\u02B3\u02B9\u02B2\u02BB\u02BE\u02BF\u02B7\u02C0\u02B2\u02B7\u02BF(ref u02B6_u02B5_u02B9_u02B2_u02B4_u02B9_u02B7_u02BE_u02B7_u02B9_u02B) && (this.\u02B9\u02B7\u02B5\u02BD\u02BB\u02B8\u02C0\u02B2\u02C0\u02C1\u02B9() || this.\u02BA\u02BA\u02B9\u02BF\u02B8\u02B6\u02B5\u02B7\u02B9\u02C1\u02BD()))) && (this.\u02BA\u02B7\u02B5\u02C1\u02C0\u02B4\u02BE\u02BF\u02BF\u02C0\u02BE(note) || (this.\u02BC\u02B2\u02B2\u02BB\u02B7\u02B4\u02B3\u02B6\u02C1\u02BC\u02C0 && this.\u02B9\u02C0\u02B3\u02C0\u02B2\u02C1\u02B8\u02C1\u02B5\u02B6\u02B3 > 0f && note.\u02C1\u02B9\u02BD\u02B6\u02B7\u02BA\u02B5\u02B7\u02BA\u02B6\u02C0)))
+					if (this.\u02B6\u02BA\u02B4\u02BA\u02B7\u02BE\u02BD\u02BE\u02BD\u02B7\u02BB > 0f && flag && ((note.IsTap && (((!this.\u02B7\u02BD\u02C1\u02B3\u02BD\u02B5\u02B6\u02B8\u02B8\u02B2\u02BF) ? BaseGuitarPlayer.\u02B3\u02B9\u02B2\u02BB\u02BE\u02BF\u02B7\u02C0\u02B2\u02B7\u02BF(ref u02B6_u02B5_u02B9_u02B2_u02B4_u02B9_u02B7_u02BE_u02B7_u02B9_u02B) : (!this.\u02B9\u02B7\u02B5\u02BD\u02BB\u02B8\u02C0\u02B2\u02C0\u02C1\u02B9())) || BaseGuitarPlayer.\u02B3\u02B9\u02B2\u02BB\u02BE\u02BF\u02B7\u02C0\u02B2\u02B7\u02BF(ref u02B6_u02B5_u02B9_u02B2_u02B4_u02B9_u02B7_u02BE_u02B7_u02B9_u02B))) || (note.IsPureHopo && BaseGuitarPlayer.\u02B3\u02B9\u02B2\u02BB\u02BE\u02BF\u02B7\u02C0\u02B2\u02B7\u02BF(ref u02B6_u02B5_u02B9_u02B2_u02B4_u02B9_u02B7_u02BE_u02B7_u02B9_u02B) && (this.\u02B9\u02B7\u02B5\u02BD\u02BB\u02B8\u02C0\u02B2\u02C0\u02C1\u02B9() || this.\u02BA\u02BA\u02B9\u02BF\u02B8\u02B6\u02B5\u02B7\u02B9\u02C1\u02BD()))) && (this.\u02BA\u02B7\u02B5\u02C1\u02C0\u02B4\u02BE\u02BF\u02BF\u02C0\u02BE(note) || (this.\u02BC\u02B2\u02B2\u02BB\u02B7\u02B4\u02B3\u02B6\u02C1\u02BC\u02C0 && this.\u02B9\u02C0\u02B3\u02C0\u02B2\u02C1\u02B8\u02C1\u02B5\u02B6\u02B3 > 0f && note.\u02C1\u02B9\u02BD\u02B6\u02B7\u02BA\u02B5\u02B7\u02BA\u02B6\u02C0)))
 					{
 						this.\u02B6\u02BA\u02B4\u02BA\u02B7\u02BE\u02BD\u02BE\u02BD\u02B7\u02BB = 0f;
 						this.\u02BE\u02BC\u02BA\u02BB\u02C0\u02B5\u02B6\u02B8\u02B6\u02BB\u02B3(note);
 						return;
 					}
-					if ((note.\u02B8\u02C1\u02BA\u02B2\u02BC\u02B6\u02C0\u02BD\u02BD\u02BA\u02BE || (note.\u02C0\u02B9\u02BD\u02B8\u02B4\u02BB\u02B4\u02B9\u02B9\u02B6\u02BD && this.\u02C0\u02B5\u02BA\u02BD\u02B8\u02B6\u02B7\u02B6\u02BE\u02BE\u02B9())) && this.\u02BA\u02B3\u02B4\u02B6\u02B5\u02B9\u02B7\u02B9\u02B8\u02C0\u02BA > 0f && (BaseGuitarPlayer.\u02B3\u02B9\u02B2\u02BB\u02BE\u02BF\u02B7\u02C0\u02B2\u02B7\u02BF(ref u02B6_u02B5_u02B9_u02B2_u02B4_u02B9_u02B7_u02BE_u02B7_u02B9_u02B) || !this.\u02B9\u02B7\u02B5\u02BD\u02BB\u02B8\u02C0\u02B2\u02C0\u02C1\u02B9()) && this.\u02BA\u02B7\u02B5\u02C1\u02C0\u02B4\u02BE\u02BF\u02BF\u02C0\u02BE(note))
+					if ((note.\u02B8\u02C1\u02BA\u02B2\u02BC\u02B6\u02C0\u02BD\u02BD\u02BA\u02BE || (note.IsHopo && this.\u02C0\u02B5\u02BA\u02BD\u02B8\u02B6\u02B7\u02B6\u02BE\u02BE\u02B9())) && this.strumLenienceTimer > 0f && (BaseGuitarPlayer.\u02B3\u02B9\u02B2\u02BB\u02BE\u02BF\u02B7\u02C0\u02B2\u02B7\u02BF(ref u02B6_u02B5_u02B9_u02B2_u02B4_u02B9_u02B7_u02BE_u02B7_u02B9_u02B) || !this.\u02B9\u02B7\u02B5\u02BD\u02BB\u02B8\u02C0\u02B2\u02C0\u02C1\u02B9()) && this.\u02BA\u02B7\u02B5\u02C1\u02C0\u02B4\u02BE\u02BF\u02BF\u02C0\u02BE(note))
 					{
 						this.\u02BE\u02BC\u02BA\u02BB\u02C0\u02B5\u02B6\u02B8\u02B6\u02BB\u02B3(note);
 						return;
@@ -744,9 +760,9 @@ public abstract class BaseGuitarPlayer : BasePlayer
 		ushort num = 0;
 		foreach (Note note in this.sustainNotes)
 		{
-			if (note.\u02B3\u02B7\u02B2\u02B3\u02BB\u02B2\u02C0\u02BC\u02BD\u02BF\u02C1)
+			if (note.IsExtendedSustain)
 			{
-				num |= note.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF;
+				num |= note._noteMask;
 			}
 		}
 		if (this.\u02B9\u02BF\u02B7\u02BE\u02B9\u02B5\u02B4\u02B9\u02B6\u02B9\u02B6 == 0)
@@ -754,37 +770,37 @@ public abstract class BaseGuitarPlayer : BasePlayer
 			return;
 		}
 		Note note2 = this.hittableNotes[0];
-		uint num2 = (uint)(note2.\u02BF\u02B4\u02BD\u02C0\u02B5\u02B3\u02B8\u02B8\u02B8\u02BB\u02C0 ? note2.noteMask : note2.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF);
+		uint num2 = (uint)(note2.IsDisjoint ? note2.noteMask : note2._noteMask);
 		this.buttonsPressed = num;
-		Helper.\u02C0\u02BF\u02B7\u02BA\u02B6\u02BA\u02B2\u02B4\u02B5\u02B8\u02B9 u02C0_u02BF_u02B7_u02BA_u02B6_u02BA_u02B2_u02B4_u02B5_u02B8_u02B = Helper.\u02C1\u02BF\u02B8\u02B2\u02BA\u02B3\u02B4\u02B3\u02C1\u02BC\u02BE(num2).\u02BC\u02C0\u02B8\u02B9\u02B4\u02BB\u02BE\u02B6\u02BC\u02B7\u02C1();
-		while (u02C0_u02BF_u02B7_u02BA_u02B6_u02BA_u02B2_u02B4_u02B5_u02B8_u02B.\u02BF\u02B5\u02B7\u02BB\u02B5\u02BB\u02B7\u02B5\u02B6\u02BA\u02BC())
+		Helper.UintPair this2 = Helper.NewUintPair(num2).GetThis();
+		while (this2.MoreThanOneBitSet())
 		{
-			ushort num3 = (ushort)u02C0_u02BF_u02B7_u02BA_u02B6_u02BA_u02B2_u02B4_u02B5_u02B8_u02B.\u02B9\u02BA\u02BB\u02B4\u02C0\u02B4\u02B6\u02B2\u02B9\u02B3\u02BF;
+			ushort num3 = (ushort)this2.xor;
 			this.buttonsPressed |= num3;
 		}
-		if (note2.\u02C0\u02B9\u02BD\u02B8\u02B4\u02BB\u02B4\u02B9\u02B9\u02B6\u02BD && this.combo > 0)
+		if (note2.IsHopo && this.combo > 0)
 		{
 			this.\u02B6\u02BA\u02B4\u02BA\u02B7\u02BE\u02BD\u02BE\u02BD\u02B7\u02BB = this.\u02B4\u02BE\u02BC\u02B9\u02C1\u02B8\u02BC\u02B8\u02BB\u02BA\u02BC;
 			return;
 		}
-		this.\u02BA\u02B3\u02B4\u02B6\u02B5\u02B9\u02B7\u02B9\u02B8\u02C0\u02BA = this.strumLenienceAmount;
+		this.strumLenienceTimer = this.strumLenienceAmount;
 	}
 
 	protected override bool \u02BA\u02B7\u02B5\u02C1\u02C0\u02B4\u02BE\u02BF\u02BF\u02C0\u02BE(Note \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2)
 	{
 		ushort num = this.buttonsPressed;
-		if (\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.\u02B3\u02B7\u02B2\u02B3\u02BB\u02B2\u02C0\u02BC\u02BD\u02BF\u02C1)
+		if (\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.IsExtendedSustain)
 		{
 			if (this.sustainNotes.Count > 0)
 			{
 				foreach (Note note in this.sustainNotes)
 				{
-					if (note.\u02B3\u02B7\u02B2\u02B3\u02BB\u02B2\u02C0\u02BC\u02BD\u02BF\u02C1)
+					if (note.IsExtendedSustain)
 					{
-						num &= this.m((int)(~(int)note.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF));
+						num &= this.to_ushort((int)(~(int)note._noteMask));
 					}
 				}
-				if (num == 0 && \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF == this.OpenNote)
+				if (num == 0 && \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2._noteMask == this.OpenNote)
 				{
 					return true;
 				}
@@ -798,9 +814,9 @@ public abstract class BaseGuitarPlayer : BasePlayer
 			{
 				foreach (Note note2 in this.lingeringSustainNotes)
 				{
-					if (note2.\u02B3\u02B7\u02B2\u02B3\u02BB\u02B2\u02C0\u02BC\u02BD\u02BF\u02C1)
+					if (note2.IsExtendedSustain)
 					{
-						num2 &= this.m((int)(~(int)note2.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF));
+						num2 &= this.to_ushort((int)(~(int)note2._noteMask));
 					}
 				}
 				if (num2 != num && this.\u02B7\u02BF\u02BA\u02BF\u02C1\u02B4\u02B5\u02BD\u02C1\u02B8\u02B6(\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2, num2))
@@ -812,10 +828,11 @@ public abstract class BaseGuitarPlayer : BasePlayer
 		return this.\u02B7\u02BF\u02BA\u02BF\u02C1\u02B4\u02B5\u02BD\u02C1\u02B8\u02B6(\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2, this.buttonsPressed);
 	}
 
-	protected override void \u02B6\u02B9\u02BC\u02C0\u02B6\u02BE\u02B4\u02BA\u02BC\u02BB\u02C1(bool \u02B8\u02BF\u02BA\u02B6\u02BD\u02B7\u02B8\u02BD\u02BB\u02B3\u02BA)
+	protected override void Overstrum(bool plink)
 	{
-		if (\u02B8\u02BF\u02BA\u02B6\u02BD\u02B7\u02B8\u02BD\u02BB\u02B3\u02BA)
+		if (plink)
 		{
+			GlobalVariables.overstrummed = true;
 			if (this.\u02BF\u02C1\u02BF\u02BE\u02C1\u02B2\u02BC\u02BE\u02B3\u02BB\u02B8)
 			{
 				return;
@@ -824,7 +841,7 @@ public abstract class BaseGuitarPlayer : BasePlayer
 			{
 				return;
 			}
-			if (this.\u02C0\u02B5\u02BA\u02BD\u02B8\u02B6\u02B7\u02B6\u02BE\u02BE\u02B9() && this.combo > 0 && this.\u02B9\u02BF\u02B7\u02BE\u02B9\u02B5\u02B4\u02B9\u02B6\u02B9\u02B6 > 0 && this.hittableNotes[0].\u02C0\u02B9\u02BD\u02B8\u02B4\u02BB\u02B4\u02B9\u02B9\u02B6\u02BD)
+			if (this.\u02C0\u02B5\u02BA\u02BD\u02B8\u02B6\u02B7\u02B6\u02BE\u02BE\u02B9() && this.combo > 0 && this.\u02B9\u02BF\u02B7\u02BE\u02B9\u02B5\u02B4\u02B9\u02B6\u02B9\u02B6 > 0 && this.hittableNotes[0].IsHopo)
 			{
 				return;
 			}
@@ -832,23 +849,23 @@ public abstract class BaseGuitarPlayer : BasePlayer
 			{
 				foreach (Note note in this.sustainNotes)
 				{
-					note.\u02C1\u02BC\u02B2\u02C1\u02BC\u02B8\u02B2\u02BA\u02C1\u02B9\u02C0 = true;
-					note.\u02C1\u02B8\u02B6\u02B6\u02BF\u02BF\u02BD\u02BF\u02B4\u02B6\u02C0 = false;
+					note.wasMissed = true;
+					note.isSustaining = false;
 				}
 				this.sustainNotes.Clear();
-				this.neckController.\u02B5\u02BD\u02BA\u02BE\u02B4\u02B9\u02BD\u02B3\u02B9\u02BC\u02BE();
+				this.neckController.EndFretHeldStates();
 			}
 			GameAudioManager.\u02B6\u02B2\u02B3\u02BB\u02BB\u02BC\u02B9\u02BF\u02B5\u02B4\u02BB();
 			this.overstrums++;
 		}
 		this.\u02BC\u02C0\u02C1\u02BD\u02B7\u02BC\u02B3\u02B8\u02C0\u02B7\u02BF = 0;
 		this.\u02B2\u02B4\u02BC\u02B2\u02B5\u02BC\u02BD\u02B7\u02BA\u02BF\u02B3 = this.\u02B8\u02BA\u02BD\u02B7\u02B2\u02C0\u02BC\u02B9\u02BA\u02C1\u02C0;
-		if (!this.\u02B9\u02C0\u02BD\u02BF\u02BD\u02B9\u02B2\u02B6\u02BA\u02B3\u02B6 && this.sustainNotes.Count == 0)
+		if (!this.isMutedAudio && this.sustainNotes.Count == 0)
 		{
-			BassAudioManager.Instance.\u02C1\u02BA\u02B3\u02B4\u02B7\u02B3\u02B4\u02B5\u02BD\u02C1\u02BF(this.playerStuff.playerInfo.\u02BA\u02BD\u02BC\u02BC\u02B4\u02BD\u02B4\u02BE\u02B2\u02B7\u02C1, false, -1f);
-			this.\u02B9\u02C0\u02BD\u02BF\u02BD\u02B9\u02B2\u02B6\u02BA\u02B3\u02B6 = true;
+			BassAudioManager.Instance.MuteInstrument(this.player.playerProfile.moonInstrument, false, -1f);
+			this.isMutedAudio = true;
 		}
-		base.\u02B6\u02B9\u02BC\u02C0\u02B6\u02BE\u02B4\u02BA\u02BC\u02BB\u02C1(\u02B8\u02BF\u02BA\u02B6\u02BD\u02B7\u02B8\u02BD\u02BB\u02B3\u02BA);
+		base.Overstrum(plink);
 	}
 
 	protected override void \u02B9\u02C0\u02B2\u02BA\u02B9\u02BF\u02BE\u02BE\u02BD\u02B4\u02B7()
@@ -879,7 +896,7 @@ public abstract class BaseGuitarPlayer : BasePlayer
 		this.\u02C1\u02BE\u02B3\u02BA\u02BE\u02BD\u02B8\u02C0\u02C1\u02BE\u02B5 = 1f;
 		this.\u02B3\u02C0\u02BA\u02BC\u02BB\u02BF\u02B4\u02B5\u02BC\u02BD\u02BC = 0.5f;
 		this.\u02B6\u02B3\u02BE\u02B6\u02B3\u02BF\u02BC\u02BA\u02C1\u02B6\u02B3 = double.MinValue;
-		this.\u02B4\u02B2\u02B6\u02B5\u02BB\u02BB\u02B5\u02B3\u02B7\u02BA\u02B4 = 0.02;
+		this.sustainDropLeniency = 0.02;
 		this.\u02B7\u02B6\u02B4\u02B8\u02BD\u02B2\u02BF\u02B6\u02B7\u02C1\u02BD = 0.3;
 		this.\u02B5\u02B9\u02C1\u02BC\u02C0\u02BF\u02B3\u02B8\u02BD\u02BB\u02B5 = 4;
 		this.\u02B8\u02BA\u02BD\u02B7\u02B2\u02C0\u02BC\u02B9\u02BA\u02C1\u02C0 = 1f;
@@ -957,7 +974,7 @@ public abstract class BaseGuitarPlayer : BasePlayer
 		}
 	}
 
-	public ushort m(int i)
+	public ushort to_ushort(int i)
 	{
 		return (ushort)i;
 	}
@@ -967,7 +984,7 @@ public abstract class BaseGuitarPlayer : BasePlayer
 		BaseGuitarPlayer.instance = null;
 	}
 
-	protected float \u02BA\u02B3\u02B4\u02B6\u02B5\u02B9\u02B7\u02B9\u02B8\u02C0\u02BA;
+	protected float strumLenienceTimer;
 
 	protected float strumLenienceAmount;
 
@@ -991,13 +1008,13 @@ public abstract class BaseGuitarPlayer : BasePlayer
 
 	private double \u02B6\u02B3\u02BE\u02B6\u02B3\u02BF\u02BC\u02BA\u02C1\u02B6\u02B3;
 
-	private double \u02BE\u02B3\u02B8\u02BD\u02B2\u02BD\u02B4\u02BF\u02C1\u02BD\u02B3;
+	private double doubleStrumPrevention;
 
 	private bool \u02C1\u02B8\u02B7\u02BB\u02B4\u02BE\u02BB\u02B5\u02B3\u02B6\u02B2;
 
 	private double \u02BE\u02B9\u02BB\u02B6\u02BC\u02B2\u02BD\u02BC\u02C0\u02C1\u02B5;
 
-	private double \u02B4\u02B2\u02B6\u02B5\u02BB\u02BB\u02B5\u02B3\u02B7\u02BA\u02B4;
+	private double sustainDropLeniency;
 
 	private double \u02B7\u02B6\u02B4\u02B8\u02BD\u02B2\u02BF\u02B6\u02B7\u02C1\u02BD;
 
@@ -1045,6 +1062,18 @@ public abstract class BaseGuitarPlayer : BasePlayer
 	public static BaseGuitarPlayer instance;
 
 	private int ticker;
+
+	private ushort setButton;
+
+	private bool lenienceFirstTick;
+
+	private bool sl_nonotes;
+
+	private ushort goodMask;
+
+	private float maskTimer;
+
+	private float timeSinceMask;
 
 	[CompilerGenerated]
 	public struct \u02B6\u02B5\u02B9\u02B2\u02B4\u02B9\u02B7\u02BE\u02B7\u02B9\u02B2

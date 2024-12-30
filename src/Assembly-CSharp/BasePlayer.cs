@@ -91,14 +91,14 @@ public abstract class BasePlayer : MonoBehaviour
 		this.\u02B4\u02B4\u02BF\u02B5\u02B4\u02B6\u02BA\u02B7\u02B2\u02B9\u02C1 = this.hitWindow;
 		this.\u02B8\u02B2\u02B4\u02BF\u02C0\u02B8\u02C0\u02BA\u02B9\u02B2\u02B7 = -this.hitWindow;
 		this.\u02B2\u02B3\u02BF\u02C1\u02BF\u02BB\u02C1\u02C0\u02C1\u02B6\u02BF = this.hitWindow * 2f;
-		this.\u02B3\u02BC\u02B4\u02B8\u02BB\u02B8\u02B2\u02C0\u02C0\u02B3\u02C0 = this.playerStuff.playerInfo.HasModifier(Modifier.NoFretGhosting);
-		this.\u02B8\u02B3\u02B4\u02B7\u02C0\u02B5\u02BA\u02C0\u02B4\u02B9\u02BB = this.playerStuff.playerInfo.HasModifier(Modifier.StrumlessHopos);
-		this.\u02BD\u02B8\u02B6\u02B2\u02B8\u02B6\u02BD\u02C0\u02BD\u02B8\u02BB = this.playerStuff.playerInfo.HasModifier(Modifier.DroplessSustains);
-		this.\u02B4\u02BF\u02BD\u02B8\u02B3\u02BF\u02B9\u02C1\u02B9\u02C1\u02B8 = this.playerStuff.playerInfo.HasModifier(Modifier.PrecisionMode);
-		this.\u02BC\u02B2\u02B2\u02BB\u02B7\u02B4\u02B3\u02B6\u02C1\u02BC\u02C0 = this.playerStuff.playerInfo.HasModifier(Modifier.DrunkMode);
-		this.\u02BF\u02C1\u02BF\u02BE\u02C1\u02B2\u02BC\u02BE\u02B3\u02BB\u02B8 = this.playerStuff.playerInfo.HasModifier(Modifier.AutoStrum);
-		this.\u02BB\u02BD\u02C0\u02B5\u02B8\u02B3\u02BD\u02B6\u02B7\u02BB\u02B7 = this.playerStuff.playerInfo.HasModifier(Modifier.BrutalMode);
-		this.\u02B5\u02C1\u02BA\u02B9\u02B6\u02B7\u02B9\u02BC\u02B7\u02BD\u02B4 = this.playerStuff.playerInfo.HasModifier(Modifier.AllOpens);
+		this.\u02B3\u02BC\u02B4\u02B8\u02BB\u02B8\u02B2\u02C0\u02C0\u02B3\u02C0 = this.player.playerProfile.HasModifier(Modifier.NoFretGhosting);
+		this.\u02B8\u02B3\u02B4\u02B7\u02C0\u02B5\u02BA\u02C0\u02B4\u02B9\u02BB = this.player.playerProfile.HasModifier(Modifier.StrumlessHopos);
+		this.\u02BD\u02B8\u02B6\u02B2\u02B8\u02B6\u02BD\u02C0\u02BD\u02B8\u02BB = this.player.playerProfile.HasModifier(Modifier.DroplessSustains);
+		this.\u02B4\u02BF\u02BD\u02B8\u02B3\u02BF\u02B9\u02C1\u02B9\u02C1\u02B8 = this.player.playerProfile.HasModifier(Modifier.PrecisionMode);
+		this.\u02BC\u02B2\u02B2\u02BB\u02B7\u02B4\u02B3\u02B6\u02C1\u02BC\u02C0 = this.player.playerProfile.HasModifier(Modifier.DrunkMode);
+		this.\u02BF\u02C1\u02BF\u02BE\u02C1\u02B2\u02BC\u02BE\u02B3\u02BB\u02B8 = this.player.playerProfile.HasModifier(Modifier.AutoStrum);
+		this.\u02BB\u02BD\u02C0\u02B5\u02B8\u02B3\u02BD\u02B6\u02B7\u02BB\u02B7 = this.player.playerProfile.HasModifier(Modifier.BrutalMode);
+		this.\u02B5\u02C1\u02BA\u02B9\u02B6\u02B7\u02B9\u02BC\u02B7\u02BD\u02B4 = this.player.playerProfile.HasModifier(Modifier.AllOpens);
 		if (this.\u02BC\u02B2\u02B2\u02BB\u02B7\u02B4\u02B3\u02B6\u02C1\u02BC\u02C0 || this.\u02BF\u02C1\u02BF\u02BE\u02C1\u02B2\u02BC\u02BE\u02B3\u02BB\u02B8)
 		{
 			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BB\u02BA\u02C1\u02B8\u02BA\u02C0\u02BD\u02BE\u02B7\u02B7\u02BA = \u02BD\u02B9\u02B2\u02B5\u02BD\u02BC\u02BE\u02BE\u02BE\u02B7\u02B2.Modifier;
@@ -113,11 +113,11 @@ public abstract class BasePlayer : MonoBehaviour
 		}
 		this.hittableNotes = new Note[20];
 		this.\u02B7\u02B9\u02BA\u02B6\u02B3\u02B4\u02B5\u02C1\u02B4\u02B9\u02B6 = new \u02BB\u02B9\u02B2\u02B3\u02B4\u02B3\u02BF\u02C0\u02B4\u02B8\u02B9();
-		if (this.playerStuff.playerInfo.colorProfileName == "Random" && !CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BA\u02B8\u02B6\u02BB\u02B5\u02B2\u02B8\u02B6\u02BB\u02BB)
+		if (this.player.playerProfile.colorProfileName == "Random" && !CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BA\u02B8\u02B6\u02BB\u02B5\u02B2\u02B8\u02B6\u02BB\u02BB)
 		{
-			this.playerStuff.playerInfo.\u02B4\u02BF\u02B9\u02BF\u02B3\u02B9\u02B9\u02B6\u02B5\u02BF\u02BB();
+			this.player.playerProfile.\u02B4\u02BF\u02B9\u02BF\u02B3\u02B9\u02B9\u02B6\u02B5\u02BF\u02BB();
 		}
-		this.\u02B7\u02B9\u02BA\u02B6\u02B3\u02B4\u02B5\u02C1\u02B4\u02B9\u02B6.InitializeColorSettings(this.playerStuff.playerInfo.colorSettings);
+		this.\u02B7\u02B9\u02BA\u02B6\u02B3\u02B4\u02B5\u02C1\u02B4\u02B9\u02B6.InitializeColorSettings(this.player.playerProfile.colorSettings);
 		this.\u02BD\u02B8\u02B2\u02BD\u02B2\u02BF\u02BB\u02C1\u02BC\u02B7\u02B6();
 	}
 
@@ -135,37 +135,37 @@ public abstract class BasePlayer : MonoBehaviour
 	{
 		this.\u02B5\u02BE\u02B5\u02B8\u02B8\u02B4\u02BF\u02BC\u02B4\u02B8\u02B2 = this.FCIndicator.GetComponentsInChildren<DesaturateSprite>();
 		this.\u02B4\u02C0\u02BF\u02BA\u02BD\u02BA\u02B3\u02B8\u02B7\u02B7\u02BA();
-		if (this.playerStuff.playerInfo.leftyFlip)
+		if (this.player.playerProfile.leftyFlip)
 		{
 			this.neckController.\u02BF\u02B2\u02BE\u02BE\u02BF\u02B4\u02BC\u02C0\u02B3\u02C0\u02C1();
 		}
-		if (this.playerStuff.playerInfo.HasModifier(Modifier.LightsOut))
+		if (this.player.playerProfile.HasModifier(Modifier.LightsOut))
 		{
 			this.camera.enabled = false;
 			GameObject.Find("HUD").gameObject.SetActive(false);
 		}
 		else
 		{
-			if (this.playerStuff.playerInfo.HasModifier(Modifier.ModPrep))
+			if (this.player.playerProfile.HasModifier(Modifier.ModPrep))
 			{
 				this.neckController.\u02B2\u02BF\u02BB\u02BC\u02B8\u02B7\u02B9\u02C1\u02B8\u02BE\u02BA();
 				this.neckController.HideFretStrings();
 				this.highwayObjects[0].SetActive(false);
 				this.highwayObjects[1].SetActive(false);
 			}
-			if (this.playerStuff.playerInfo.HasModifier(Modifier.ModLite))
+			if (this.player.playerProfile.HasModifier(Modifier.ModLite))
 			{
 				this.neckController.HideFretStrings();
 			}
-			if (this.playerStuff.playerInfo.HasModifier(Modifier.ModFull))
+			if (this.player.playerProfile.HasModifier(Modifier.ModFull))
 			{
 				this.neckController.HideFretStrings();
 				this.highwayObjects[0].SetActive(false);
 				this.highwayObjects[1].SetActive(false);
 			}
 		}
-		this.playerNameTextBox.text = this.playerStuff.playerInfo.playerName.CurrentValueDisplay;
-		if (this.playerStuff.playerInfo.displayName || GlobalHelper.showJudgementsUnderFretboard || this.playerStuff.playerInfo.isRemotePlayer)
+		this.playerNameTextBox.text = this.player.playerProfile.playerName.CurrentValueDisplay;
+		if (this.player.playerProfile.displayName || GlobalHelper.showJudgementsUnderFretboard || this.player.playerProfile.isRemotePlayer)
 		{
 			this.playerNameTextBox.gameObject.SetActive(true);
 		}
@@ -175,7 +175,7 @@ public abstract class BasePlayer : MonoBehaviour
 		}
 		if (this.\u02B7\u02B3\u02B9\u02B5\u02B7\u02BC\u02C1\u02BB\u02B7\u02B7\u02B4 != null)
 		{
-			if (this.playerStuff.playerInfo.isAccuracyDisplay && !this.playerStuff.\u02BD\u02BC\u02B8\u02B5\u02B5\u02B2\u02C0\u02C1\u02B3\u02C0\u02B4)
+			if (this.player.playerProfile.isAccuracyDisplay && !this.player.\u02BD\u02BC\u02B8\u02B5\u02B5\u02B2\u02C0\u02C1\u02B3\u02C0\u02B4)
 			{
 				this.\u02B7\u02B3\u02B9\u02B5\u02B7\u02BC\u02C1\u02BB\u02B7\u02B7\u02B4.SetActive(true);
 				if (this.gameManager.\u02B7\u02BA\u02B3\u02BE\u02B3\u02BF\u02B6\u02B5\u02C0\u02C1\u02C0.\u02BB\u02B4\u02BD\u02B2\u02BC\u02B7\u02C0\u02C1\u02B8\u02B4\u02BD <= 2 && this.gameManager.\u02B7\u02BA\u02B3\u02BE\u02B3\u02BF\u02B6\u02B5\u02C0\u02C1\u02C0.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 == GameMode.Versus)
@@ -189,11 +189,11 @@ public abstract class BasePlayer : MonoBehaviour
 			}
 		}
 		this.\u02B9\u02BB\u02BD\u02C1\u02B5\u02BE\u02B4\u02B8\u02BF\u02BA\u02BD.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD = this.gameManager;
-		if (this.playerStuff.\u02C0\u02B5\u02B2\u02B2\u02BB\u02B8\u02B8\u02BD\u02B9\u02BD\u02C1())
+		if (this.player.\u02C0\u02B5\u02B2\u02B2\u02BB\u02B8\u02B8\u02BD\u02B9\u02BD\u02C1())
 		{
 			if (CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BA\u02B8\u02B6\u02BB\u02B5\u02B2\u02B8\u02B6\u02BB\u02BB)
 			{
-				this.playerStuff.playerInfo.isBot.CurrentValue = 0;
+				this.player.playerProfile.isBot.CurrentValue = 0;
 			}
 			else
 			{
@@ -203,16 +203,16 @@ public abstract class BasePlayer : MonoBehaviour
 				this.comboCounter.gameObject.SetActive(false);
 			}
 		}
-		if (this.playerStuff.playerInfo.isRemotePlayer)
+		if (this.player.playerProfile.isRemotePlayer)
 		{
 			this.\u02C0\u02BE\u02BD\u02B3\u02C0\u02B9\u02B5\u02BF\u02BC\u02BC\u02B8 = true;
 		}
 		this.\u02B9\u02B8\u02BE\u02B7\u02B4\u02BC\u02BB\u02BE\u02B6\u02BB\u02C0();
-		if (CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BA\u02B8\u02B6\u02BB\u02B5\u02B2\u02B8\u02B6\u02BB\u02BB && this.playerStuff.\u02BD\u02BC\u02B8\u02B5\u02B5\u02B2\u02C0\u02C1\u02B3\u02C0\u02B4 && SettingsController.only_show_local_players && !\u02B3\u02B7\u02B4\u02BE\u02BE\u02C1\u02BE\u02BB\u02B2\u02B9\u02BA.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BF\u02BD\u02BC\u02B2\u02B8\u02BC\u02B5\u02B5\u02BB\u02BC\u02B6)
+		if (CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BA\u02B8\u02B6\u02BB\u02B5\u02B2\u02B8\u02B6\u02BB\u02BB && this.player.\u02BD\u02BC\u02B8\u02B5\u02B5\u02B2\u02C0\u02C1\u02B3\u02C0\u02B4 && SettingsController.only_show_local_players && !\u02B3\u02B7\u02B4\u02BE\u02BE\u02C1\u02BE\u02BB\u02B2\u02B9\u02BA.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BF\u02BD\u02BC\u02B2\u02B8\u02BC\u02B5\u02B5\u02BB\u02BC\u02B6)
 		{
 			base.gameObject.SetActive(false);
 		}
-		if (!this.playerStuff.playerInfo.HasModChartModifier)
+		if (!this.player.playerProfile.HasModChartModifier)
 		{
 			if (GlobalHelper.showBeatlines)
 			{
@@ -308,7 +308,7 @@ public abstract class BasePlayer : MonoBehaviour
 	{
 		if (\u02C1\u02C0\u02B8\u02BE\u02BF\u02B6\u02BE\u02BA\u02B7\u02BE\u02BA.\u02BC\u02B2\u02B9\u02B9\u02B9\u02B4\u02BB\u02BF\u02BF\u02BE\u02BE < this.combo)
 		{
-			this.\u02B6\u02B9\u02BC\u02C0\u02B6\u02BE\u02B4\u02BA\u02BC\u02BB\u02C1(!base.isActiveAndEnabled);
+			this.Overstrum(!base.isActiveAndEnabled);
 		}
 		if (!this.\u02C1\u02B8\u02B4\u02B5\u02B3\u02BE\u02BD\u02BF\u02B9\u02B7\u02BF && \u02C1\u02C0\u02B8\u02BE\u02BF\u02B6\u02BE\u02BA\u02B7\u02BE\u02BA.\u02B3\u02BF\u02B4\u02B5\u02B4\u02BE\u02C0\u02B8\u02B3\u02B6\u02B6 < this.\u02B9\u02C0\u02BC\u02B5\u02B3\u02C0\u02BB\u02BC\u02B5\u02BF\u02B5)
 		{
@@ -386,7 +386,7 @@ public abstract class BasePlayer : MonoBehaviour
 				break;
 			}
 		}
-		if (!this.playerStuff.playerInfo.isRemotePlayer)
+		if (!this.player.playerProfile.isRemotePlayer)
 		{
 			this.\u02B3\u02B5\u02C1\u02B7\u02C1\u02C1\u02BA\u02B2\u02B5\u02BD\u02B7++;
 			ComboColor comboColor = this.comboCounter;
@@ -433,7 +433,7 @@ public abstract class BasePlayer : MonoBehaviour
 
 	protected void \u02B7\u02B8\u02C1\u02BE\u02BF\u02B9\u02BF\u02BD\u02B2\u02C0\u02BE(bool \u02BD\u02BF\u02C1\u02C1\u02B8\u02B4\u02BB\u02B9\u02B8\u02B3\u02B4)
 	{
-		if (this.playerStuff.playerInfo.isRemotePlayer)
+		if (this.player.playerProfile.isRemotePlayer)
 		{
 			return;
 		}
@@ -475,12 +475,12 @@ public abstract class BasePlayer : MonoBehaviour
 
 	public void \u02BA\u02B6\u02C0\u02B4\u02B4\u02BC\u02B7\u02BB\u02B2\u02C0\u02BF()
 	{
-		if (this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0[this.\u02BA\u02B8\u02B6\u02BF\u02B7\u02BF\u02BB\u02BC\u02B9\u02B5\u02B9].\u02B3\u02B7\u02B2\u02B3\u02BB\u02B2\u02C0\u02BC\u02BD\u02BF\u02C1)
+		if (this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0[this.\u02BA\u02B8\u02B6\u02BF\u02B7\u02BF\u02BB\u02BC\u02B9\u02B5\u02B9].IsExtendedSustain)
 		{
 			for (int i = this.\u02BA\u02B8\u02B6\u02BF\u02B7\u02BF\u02BB\u02BC\u02B9\u02B5\u02B9 - 1; i > 0; i--)
 			{
 				Note note = this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0[i];
-				if (!note.\u02B3\u02B7\u02B2\u02B3\u02BB\u02B2\u02C0\u02BC\u02BD\u02BF\u02C1 || !note.isStarPower)
+				if (!note.IsExtendedSustain || !note.isStarPower)
 				{
 					break;
 				}
@@ -509,7 +509,7 @@ public abstract class BasePlayer : MonoBehaviour
 
 	protected void \u02BC\u02B2\u02B4\u02B2\u02C0\u02BA\u02B2\u02B8\u02BA\u02B9\u02B5(float \u02B4\u02B7\u02C0\u02B3\u02BF\u02B4\u02BF\u02B9\u02B4\u02BE\u02B8)
 	{
-		if (this.playerStuff.playerInfo.isRemotePlayer)
+		if (this.player.playerProfile.isRemotePlayer)
 		{
 			return;
 		}
@@ -523,7 +523,7 @@ public abstract class BasePlayer : MonoBehaviour
 
 	protected virtual void \u02B8\u02B8\u02B3\u02BD\u02B2\u02BB\u02BF\u02B8\u02B3\u02B8\u02BD(float \u02B4\u02B7\u02C0\u02B3\u02BF\u02B4\u02BF\u02B9\u02B4\u02BE\u02B8, bool \u02C0\u02B5\u02BC\u02C1\u02B8\u02B5\u02BB\u02BD\u02B9\u02BB\u02C1 = false)
 	{
-		if (this.playerStuff.playerInfo.isRemotePlayer || this.playerStuff.\u02C0\u02B5\u02B2\u02B2\u02BB\u02B8\u02B8\u02BD\u02B9\u02BD\u02C1())
+		if (this.player.playerProfile.isRemotePlayer || this.player.\u02C0\u02B5\u02B2\u02B2\u02BB\u02B8\u02B8\u02BD\u02B9\u02BD\u02C1())
 		{
 			return;
 		}
@@ -558,7 +558,7 @@ public abstract class BasePlayer : MonoBehaviour
 		{
 			return;
 		}
-		if (!this.playerStuff.playerInfo.HasModChartModifier)
+		if (!this.player.playerProfile.HasModChartModifier)
 		{
 			this.spNeckRenderer.\u02B5\u02B4\u02B8\u02B4\u02BF\u02B7\u02BC\u02BD\u02B4\u02B5\u02B7();
 		}
@@ -580,14 +580,14 @@ public abstract class BasePlayer : MonoBehaviour
 
 	public virtual void \u02B3\u02B6\u02C0\u02C1\u02B6\u02B6\u02BD\u02BD\u02B7\u02BC\u02BC(Note \u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2)
 	{
-		\u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2.\u02C1\u02BC\u02B2\u02C1\u02BC\u02B8\u02B2\u02BA\u02C1\u02B9\u02C0 = true;
+		\u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2.wasMissed = true;
 		if (\u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2.\u02B5\u02C0\u02B3\u02C0\u02B6\u02B5\u02B8\u02BD\u02B6\u02B4\u02B4)
 		{
 			return;
 		}
 		this.\u02BF\u02B7\u02B6\u02B6\u02BE\u02BE\u02C0\u02C0\u02BB\u02B2\u02C1 = \u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2.isStarPower;
-		this.\u02B6\u02B9\u02BC\u02C0\u02B6\u02BE\u02B4\u02BA\u02BC\u02BB\u02C1(false);
-		if (!this.playerStuff.\u02BD\u02BC\u02B8\u02B5\u02B5\u02B2\u02C0\u02C1\u02B3\u02C0\u02B4)
+		this.Overstrum(false);
+		if (!this.player.\u02BD\u02BC\u02B8\u02B5\u02B5\u02B2\u02C0\u02C1\u02B3\u02C0\u02B4)
 		{
 			if (this.\u02B4\u02BE\u02B2\u02BB\u02B5\u02B5\u02B3\u02B4\u02B8\u02BF\u02BD && \u02BB\u02B3\u02C1\u02BF\u02B4\u02B3\u02B3\u02B3\u02B6\u02C1\u02B2.\u02C1\u02BC\u02B9\u02BF\u02B9\u02C1\u02B4\u02B8\u02BD\u02B8\u02B9)
 			{
@@ -601,9 +601,9 @@ public abstract class BasePlayer : MonoBehaviour
 		this.\u02BC\u02BD\u02BF\u02BA\u02B8\u02B5\u02B3\u02B8\u02BE\u02C0\u02BC.\u02B3\u02B3\u02B6\u02B9\u02BE\u02B4\u02BB\u02B4\u02B3\u02BF\u02B8();
 	}
 
-	protected virtual void \u02B6\u02B9\u02BC\u02C0\u02B6\u02BE\u02B4\u02BA\u02BC\u02BB\u02C1(bool \u02B8\u02BF\u02BA\u02B6\u02BD\u02B7\u02B8\u02BD\u02BB\u02B3\u02BA)
+	protected virtual void Overstrum(bool plink)
 	{
-		if (!\u02B8\u02BF\u02BA\u02B6\u02BD\u02B7\u02B8\u02BD\u02BB\u02B3\u02BA && !this.playerStuff.playerInfo.isRemotePlayer)
+		if (!plink && !this.player.playerProfile.isRemotePlayer)
 		{
 			if (!this.missFromWindow)
 			{
@@ -628,7 +628,7 @@ public abstract class BasePlayer : MonoBehaviour
 			this.\u02BA\u02B6\u02C0\u02B4\u02B4\u02BC\u02B7\u02BB\u02B2\u02C0\u02BF();
 			this.\u02BF\u02B7\u02B6\u02B6\u02BE\u02BE\u02C0\u02C0\u02BB\u02B2\u02C1 = false;
 		}
-		if (!this.playerStuff.\u02BD\u02BC\u02B8\u02B5\u02B5\u02B2\u02C0\u02C1\u02B3\u02C0\u02B4)
+		if (!this.player.\u02BD\u02BC\u02B8\u02B5\u02B5\u02B2\u02C0\u02C1\u02B3\u02C0\u02B4)
 		{
 			this.combo = 0;
 			this.\u02B9\u02B8\u02BE\u02B7\u02B4\u02BC\u02BB\u02BE\u02B6\u02BB\u02C0();
@@ -674,14 +674,14 @@ public abstract class BasePlayer : MonoBehaviour
 			{
 				num4 = 1;
 			}
-			int num5 = ((note.\u02BD\u02B7\u02BA\u02C1\u02B9\u02B9\u02B9\u02B7\u02B7\u02B6\u02BD == -1) ? Helper.\u02C0\u02B4\u02B9\u02C0\u02BE\u02B5\u02BA\u02B6\u02B8\u02B6\u02BD(note.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF) : note.\u02BD\u02B7\u02BA\u02C1\u02B9\u02B9\u02B9\u02B7\u02B7\u02B6\u02BD);
+			int num5 = ((note.\u02BD\u02B7\u02BA\u02C1\u02B9\u02B9\u02B9\u02B7\u02B7\u02B6\u02BD == -1) ? Helper.\u02C0\u02B4\u02B9\u02C0\u02BE\u02B5\u02BA\u02B6\u02B8\u02B6\u02BD(note._noteMask) : note.\u02BD\u02B7\u02BA\u02C1\u02B9\u02B9\u02B9\u02B7\u02B7\u02B6\u02BD);
 			num += num5 * (50 + num3) * num4;
 			if ((float)note.tickLength >= Mathf.Ceil(this.gameManager.song.\u02C0\u02B3\u02C1\u02BB\u02B5\u02BA\u02BB\u02B3\u02C1\u02B8\u02BD / 3f))
 			{
 				num2 += note.tickLength;
 			}
 		}
-		if (this.playerStuff.playerInfo.IsDrumsInstrument)
+		if (this.player.playerProfile.IsDrumsInstrument)
 		{
 			num2 = 0;
 		}
@@ -692,7 +692,7 @@ public abstract class BasePlayer : MonoBehaviour
 
 	protected void AddScore(int \u02BF\u02B2\u02B4\u02B8\u02BC\u02C1\u02BA\u02B3\u02BB\u02B2\u02BD)
 	{
-		if (this.playerStuff.playerInfo.isRemotePlayer)
+		if (this.player.playerProfile.isRemotePlayer)
 		{
 			return;
 		}
@@ -715,11 +715,11 @@ public abstract class BasePlayer : MonoBehaviour
 
 	protected virtual void \u02BB\u02B4\u02B5\u02B9\u02B7\u02B5\u02C1\u02C0\u02B6\u02C1\u02BD(Note \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8, int \u02B7\u02BE\u02B2\u02B6\u02BC\u02BF\u02B4\u02B6\u02B2\u02B8\u02B3 = 50)
 	{
-		if (this.playerStuff.playerInfo.isRemotePlayer)
+		if (this.player.playerProfile.isRemotePlayer)
 		{
 			return;
 		}
-		int num = ((\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02BD\u02B7\u02BA\u02C1\u02B9\u02B9\u02B9\u02B7\u02B7\u02B6\u02BD == -1) ? Helper.\u02C0\u02B4\u02B9\u02C0\u02BE\u02B5\u02BA\u02B6\u02B8\u02B6\u02BD(\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF) : \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02BD\u02B7\u02BA\u02C1\u02B9\u02B9\u02B9\u02B7\u02B7\u02B6\u02BD) * \u02B7\u02BE\u02B2\u02B6\u02BC\u02BF\u02B4\u02B6\u02B2\u02B8\u02B3;
+		int num = ((\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02BD\u02B7\u02BA\u02C1\u02B9\u02B9\u02B9\u02B7\u02B7\u02B6\u02BD == -1) ? Helper.\u02C0\u02B4\u02B9\u02C0\u02BE\u02B5\u02BA\u02B6\u02B8\u02B6\u02BD(\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8._noteMask) : \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02BD\u02B7\u02BA\u02C1\u02B9\u02B9\u02B9\u02B7\u02B7\u02B6\u02BD) * \u02B7\u02BE\u02B2\u02B6\u02BC\u02BF\u02B4\u02B6\u02B2\u02B8\u02B3;
 		this.\u02BC\u02BC\u02C1\u02B4\u02BF\u02B8\u02BF\u02B2\u02BA\u02B3\u02B5 += num * this.\u02BD\u02B7\u02BF\u02B4\u02C1\u02C1\u02BA\u02BB\u02BD\u02B4\u02B7;
 		this.\u02BD\u02BC\u02B7\u02B6\u02C1\u02B6\u02BF\u02B5\u02BA\u02BF\u02C1 += num;
 		if (this.\u02C1\u02B8\u02B4\u02B5\u02B3\u02BE\u02BD\u02BF\u02B9\u02B7\u02BF)
@@ -775,7 +775,7 @@ public abstract class BasePlayer : MonoBehaviour
 
 	protected void \u02B3\u02B2\u02B7\u02C1\u02BF\u02B6\u02BE\u02BA\u02BA\u02BF\u02B2()
 	{
-		if (!this.playerStuff.playerInfo.isRemotePlayer)
+		if (!this.player.playerProfile.isRemotePlayer)
 		{
 			BasePlayer.lastOffset = this.\u02BB\u02B3\u02B2\u02C0\u02B3\u02BC\u02B3\u02B5\u02BB\u02C0\u02B6;
 			BasePlayer.JudgementAndFloat judgementAndFloat = BasePlayer.CalculateJudgementAndScore(this.\u02BB\u02B3\u02B2\u02C0\u02B3\u02BC\u02B3\u02B5\u02BB\u02C0\u02B6);
@@ -784,17 +784,17 @@ public abstract class BasePlayer : MonoBehaviour
 				if (judgementAndFloat.judgement > GlobalHelper.maximumImprecision)
 				{
 					this.missFromWindow = true;
-					this.\u02B6\u02B9\u02BC\u02C0\u02B6\u02BE\u02B4\u02BA\u02BC\u02BB\u02C1(false);
+					this.Overstrum(false);
 				}
 				else if (judgementAndFloat.judgement == BasePlayer.Judgement.Early && GlobalHelper.breakComboOnEarly)
 				{
 					this.missFromWindow = true;
-					this.\u02B6\u02B9\u02BC\u02C0\u02B6\u02BE\u02B4\u02BA\u02BC\u02BB\u02C1(false);
+					this.Overstrum(false);
 				}
 			}
 			this.precision.AddJudgement(judgementAndFloat);
 		}
-		if (this.playerStuff.playerInfo.isAccuracyDisplay)
+		if (this.player.playerProfile.isAccuracyDisplay)
 		{
 			if (this.accuracyHistory.Count >= 256)
 			{
@@ -818,7 +818,7 @@ public abstract class BasePlayer : MonoBehaviour
 			this._ghosts = 0;
 		}
 		this.ticker += Time.deltaTime;
-		if (this.ticker > 0.05f && !this.playerStuff.playerInfo.HasModChartModifier)
+		if (this.ticker > 0.05f && !this.player.playerProfile.HasModChartModifier)
 		{
 			if (GlobalHelper.showBeatlines)
 			{
@@ -890,9 +890,9 @@ public abstract class BasePlayer : MonoBehaviour
 		this.\u02B9\u02BF\u02B7\u02BE\u02B9\u02B5\u02B4\u02B9\u02B6\u02B9\u02B6 = 0;
 		if (!this.gameManager.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5)
 		{
-			if (!this.playerStuff.playerInfo.isRemotePlayer && this.playerStuff.rewiredPlayer.GetButtonDown(16))
+			if (!this.player.playerProfile.isRemotePlayer && this.player.rewiredPlayer.GetButtonDown(16))
 			{
-				this.gameManager.\u02B7\u02BB\u02B6\u02C0\u02BE\u02B5\u02B8\u02C0\u02B3\u02C0\u02BD(this.playerStuff);
+				this.gameManager.\u02B7\u02BB\u02B6\u02C0\u02BE\u02B5\u02B8\u02C0\u02B3\u02C0\u02BD(this.player);
 			}
 		}
 		else
@@ -908,11 +908,11 @@ public abstract class BasePlayer : MonoBehaviour
 			this.\u02B5\u02B3\u02B4\u02BB\u02B2\u02BB\u02B9\u02BF\u02BB\u02B3\u02B4 += this.gameManager.\u02C0\u02BE\u02C1\u02BD\u02C0\u02BC\u02BB\u02B4\u02C1\u02B3\u02B9;
 			this.\u02BC\u02B2\u02B4\u02B2\u02C0\u02BA\u02B2\u02B8\u02BA\u02B9\u02B5(this.gameManager.\u02B6\u02BD\u02BF\u02B2\u02B5\u02BA\u02BC\u02BA\u02B9\u02B5\u02B2());
 		}
-		if (this.gameManager.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5 && this.\u02B9\u02C0\u02BD\u02BF\u02BD\u02B9\u02B2\u02B6\u02BA\u02B3\u02B6)
+		if (this.gameManager.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5 && this.isMutedAudio)
 		{
-			this.\u02B9\u02C0\u02BD\u02BF\u02BD\u02B9\u02B2\u02B6\u02BA\u02B3\u02B6 = false;
+			this.isMutedAudio = false;
 		}
-		if (!this.playerStuff.playerInfo.isBot && !this.\u02C1\u02BC\u02BC\u02C1\u02B2\u02BF\u02C1\u02BE\u02BE\u02BB\u02B4)
+		if (!this.player.playerProfile.isBot && !this.\u02C1\u02BC\u02BC\u02C1\u02B2\u02BF\u02C1\u02BE\u02BE\u02BB\u02B4)
 		{
 			this.UpdateInputs();
 		}
@@ -922,7 +922,7 @@ public abstract class BasePlayer : MonoBehaviour
 		}
 		if (!this.\u02B5\u02BB\u02BA\u02B2\u02C1\u02BB\u02B6\u02B5\u02BE\u02B9\u02BF && this.gameManager.songTime >= 0.0)
 		{
-			this.\u02B6\u02BC\u02BD\u02B3\u02B6\u02B3\u02BD\u02B9\u02BF\u02BA\u02B6 = BassAudioManager.Instance.\u02B6\u02B5\u02BD\u02C0\u02B6\u02BA\u02B2\u02B9\u02C1\u02BD\u02BD(this.playerStuff.playerInfo.\u02BA\u02BD\u02BC\u02BC\u02B4\u02BD\u02B4\u02BE\u02B2\u02B7\u02C1);
+			this.\u02B6\u02BC\u02BD\u02B3\u02B6\u02B3\u02BD\u02B9\u02BF\u02BA\u02B6 = BassAudioManager.Instance.\u02B6\u02B5\u02BD\u02C0\u02B6\u02BA\u02B2\u02B9\u02C1\u02BD\u02BD(this.player.playerProfile.moonInstrument);
 			this.\u02B5\u02BB\u02BA\u02B2\u02C1\u02BB\u02B6\u02B5\u02BE\u02B9\u02BF = true;
 		}
 		if (this.\u02B5\u02BF\u02B6\u02B6\u02C1\u02B7\u02C1\u02C0\u02B3\u02B2\u02B2 != null)
@@ -1040,7 +1040,7 @@ public abstract class BasePlayer : MonoBehaviour
 				{
 					break;
 				}
-				if (!note.\u02BF\u02B4\u02BD\u02C0\u02B5\u02B3\u02B8\u02B8\u02B8\u02BB\u02C0 || !note.\u02B5\u02C0\u02B3\u02C0\u02B6\u02B5\u02B8\u02BD\u02B6\u02B4\u02B4)
+				if (!note.IsDisjoint || !note.\u02B5\u02C0\u02B3\u02C0\u02B6\u02B5\u02B8\u02BD\u02B6\u02B4\u02B4)
 				{
 					if (note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4)
 					{
@@ -1084,8 +1084,8 @@ public abstract class BasePlayer : MonoBehaviour
 	{
 		this.gameManager.\u02B3\u02BC\u02B6\u02C0\u02BF\u02B5\u02C1\u02B4\u02BA\u02BA\u02C1.Reset();
 		this.\u02B9\u02BF\u02B7\u02BE\u02B9\u02B5\u02B4\u02B9\u02B6\u02B9\u02B6 = 0;
-		BassAudioManager.Instance.\u02C1\u02BA\u02B3\u02B4\u02B7\u02B3\u02B4\u02B5\u02BD\u02C1\u02BF(this.playerStuff.playerInfo.\u02BA\u02BD\u02BC\u02BC\u02B4\u02BD\u02B4\u02BE\u02B2\u02B7\u02C1, true, -1f);
-		this.\u02B9\u02C0\u02BD\u02BF\u02BD\u02B9\u02B2\u02B6\u02BA\u02B3\u02B6 = false;
+		BassAudioManager.Instance.MuteInstrument(this.player.playerProfile.moonInstrument, true, -1f);
+		this.isMutedAudio = false;
 		this.\u02B7\u02BD\u02C1\u02B3\u02BD\u02B5\u02B6\u02B8\u02B8\u02B2\u02BF = false;
 		this.combo = (this.\u02B7\u02C0\u02BE\u02BB\u02B2\u02B2\u02B3\u02BC\u02BD\u02B4\u02BE = (this.\u02BC\u02BC\u02C1\u02B4\u02BF\u02B8\u02BF\u02B2\u02BA\u02B3\u02B5 = (this.\u02C1\u02B4\u02BB\u02B3\u02B3\u02BB\u02C0\u02B4\u02C1\u02BB\u02BE = (this.\u02B3\u02B5\u02C1\u02B7\u02C1\u02C1\u02BA\u02B2\u02B5\u02BD\u02B7 = 0))));
 		this.\u02BA\u02B8\u02B6\u02BF\u02B7\u02BF\u02BB\u02BC\u02B9\u02B5\u02B9 = 0;
@@ -1096,9 +1096,9 @@ public abstract class BasePlayer : MonoBehaviour
 		this.\u02B9\u02B8\u02BE\u02B7\u02B4\u02BC\u02BB\u02BE\u02B6\u02BB\u02C0();
 		this.comboCounter.\u02B3\u02BD\u02B2\u02B5\u02B9\u02BB\u02C0\u02B7\u02B8\u02B8\u02B6(this.combo);
 		this.\u02C0\u02B2\u02B2\u02BA\u02B5\u02B9\u02BD\u02B6\u02BD\u02B6\u02B9 = false;
-		this.neckController.\u02B5\u02BD\u02BA\u02BE\u02B4\u02B9\u02BD\u02B3\u02B9\u02BC\u02BE();
+		this.neckController.EndFretHeldStates();
 		this.\u02B4\u02BE\u02B2\u02BB\u02B5\u02B5\u02B3\u02B4\u02B8\u02BF\u02BD = false;
-		if (this.playerStuff.\u02C0\u02B5\u02B2\u02B2\u02BB\u02B8\u02B8\u02BD\u02B9\u02BD\u02C1())
+		if (this.player.\u02C0\u02B5\u02B2\u02B2\u02BB\u02B8\u02B8\u02BD\u02B9\u02BD\u02C1())
 		{
 			this.buttonsPressed = 0;
 		}
@@ -1267,7 +1267,7 @@ public abstract class BasePlayer : MonoBehaviour
 	public bool \u02B2\u02BF\u02BD\u02B2\u02C0\u02BD\u02BA\u02B2\u02BC\u02B5\u02B6;
 
 	[HideInInspector]
-	public \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 playerStuff;
+	public \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 player;
 
 	[SerializeField]
 	protected SPBar spBar;
@@ -1330,7 +1330,7 @@ public abstract class BasePlayer : MonoBehaviour
 	[HideInInspector]
 	public bool \u02C1\u02B8\u02B4\u02B5\u02B3\u02BE\u02BD\u02BF\u02B9\u02B7\u02BF;
 
-	public bool \u02B9\u02C0\u02BD\u02BF\u02BD\u02B9\u02B2\u02B6\u02BA\u02B3\u02B6;
+	public bool isMutedAudio;
 
 	protected bool \u02B4\u02BE\u02B2\u02BB\u02B5\u02B5\u02B3\u02B4\u02B8\u02BF\u02BD;
 
