@@ -188,7 +188,7 @@ public class FrameRate : MonoBehaviour
 			{
 				this.textDisplay.enableWordWrapping = false;
 				float num2 = this.timer2 / (float)this.counter1;
-				float rval = (this.targetFPS ? (1f / this.targetSPF) : ((float)this.renderedFrames / 0.36f));
+				float num3 = (this.targetFPS ? (1f / this.targetSPF) : ((float)this.renderedFrames / 0.36f));
 				this.best = 1f / this.best;
 				string text;
 				if (!GlobalHelper.showFPS)
@@ -202,7 +202,7 @@ public class FrameRate : MonoBehaviour
 					{
 						num2,
 						1f / this.worst,
-						rval,
+						num3,
 						this.best,
 						this.timeDifference * 100f,
 						(double)(this.old_ftEnd - this.old_ftStart) / 1000.0 / 1000.0 / 10.0,
@@ -414,14 +414,15 @@ public class FrameRate : MonoBehaviour
 				}
 				if (GlobalHelper.useJudgements && GlobalHelper.showJudgementsUnderFretboard)
 				{
+					this.underHighwayTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.GetGrade(this.instance.precision.Accuracy, false)));
 					if (GlobalHelper.showAvgInaccuracy)
 					{
-						this.underHighwayTextBuilder.AppendFormat<float, float>("</i>{0:00.00}% - {1:00.00}ms\n", this.instance.precision.Accuracy * 100f, this.instance.precision.avgInaccuracy * 1000f);
+						this.underHighwayTextBuilder.AppendFormat<float, float>("\n</i>{0:00.00}% - {1:00.00}ms\n", this.instance.precision.Accuracy * 100f, this.instance.precision.avgInaccuracy * 1000f);
 						this.underHighwayTextBuilder.AppendFormat<float>("{0:00.00}", BasePlayer.lastOffset * 1000f);
 					}
 					else
 					{
-						this.underHighwayTextBuilder.AppendFormat<float, float>("</i>{0:00.00}%\n{1:00.00}ms\n", this.instance.precision.Accuracy * 100f, BasePlayer.lastOffset * 1000f);
+						this.underHighwayTextBuilder.AppendFormat<float, float>("\n</i>{0:00.00}%\n{1:00.00}ms\n", this.instance.precision.Accuracy * 100f, BasePlayer.lastOffset * 1000f);
 					}
 					switch (this.instance.precision.m_lastJudgement)
 					{
@@ -573,9 +574,9 @@ public class FrameRate : MonoBehaviour
 		}
 		if (this.startctr != 10)
 		{
-			int num3 = this.startctr;
-			this.startctr = num3 + 1;
-			Debug.Log(num3);
+			int num4 = this.startctr;
+			this.startctr = num4 + 1;
+			Debug.Log(num4);
 			return;
 		}
 		(this.spText = BaseGuitarPlayer.instance.playerNameTextBox.Duplicate()).fontSize *= 0.315f;

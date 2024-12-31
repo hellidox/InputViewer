@@ -169,6 +169,7 @@ public static class GlobalHelper
 		GlobalHelper._char_orangeFretColorCache = new char[1];
 		GlobalHelper.path = Path.Combine(Application.persistentDataPath, "IVsettings.txt");
 		GlobalHelper.InitializeConfig(GlobalHelper.versionid != GlobalHelper.ReadInt("versionID"));
+		GlobalHelper.InitializeJudgeGrades();
 		GlobalHelper.version = "V2.1.1";
 		GlobalHelper.process = Process.GetCurrentProcess();
 		GlobalHelper.InvalidateCache();
@@ -402,11 +403,11 @@ public static class GlobalHelper
 			GlobalHelper.fpsText = "{0:0,0} FPS {7}% {4:000.0} game speed";
 			GlobalHelper.WriteComment("Positive values target a specific frame rate");
 			GlobalHelper.WriteComment("Negative values render 1/n frames");
-			List<DisplayInfo> displays = new List<DisplayInfo>();
-			Screen.GetDisplayLayout(displays);
-			displays.OrderBy((DisplayInfo x) => x.refreshRate);
-			displays.Reverse();
-			GlobalHelper.rfi_config = Mathf.CeilToInt(displays[0].refreshRate.numerator / displays[0].refreshRate.denominator);
+			List<DisplayInfo> list = new List<DisplayInfo>();
+			Screen.GetDisplayLayout(list);
+			list.OrderBy((DisplayInfo x) => x.refreshRate);
+			list.Reverse();
+			GlobalHelper.rfi_config = Mathf.CeilToInt(list[0].refreshRate.numerator / list[0].refreshRate.denominator);
 			GlobalHelper.WriteComment("Don't touch this. ");
 			GlobalHelper.WriteKeyValue("versionID", GlobalHelper.versionid, false);
 			Process.Start(new ProcessStartInfo
@@ -1972,6 +1973,106 @@ public static class GlobalHelper
 		}
 	}
 
+	private static void InitializeJudgeGrades()
+	{
+		GlobalHelper.JudgeGrades = new char[18][];
+		GlobalHelper.JudgeGrades[0] = "S".ToCharArray();
+		GlobalHelper.JudgeGrades[1] = "<color=#EDD7AA>AAAAA</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[2] = "<color=#EDB700>AAAA:</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[3] = "<color=#EDB700>AAAA.</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[4] = "<color=#EDB700>AAAA</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[5] = "<color=#EDB700>AAA:</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[6] = "<color=#EDB700>AAA.</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[7] = "<color=#66CC66>AAA</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[8] = "<color=#66CC66>AA:</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[9] = "<color=#66CC66>AA.</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[10] = "<color=#66CC66>AA</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[11] = "<color=#DA5797>A:</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[12] = "<color=#DA5797>A.</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[13] = "<color=#DA5797>A</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[14] = "<color=#5B78BB>B</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[15] = "<color=#5B78BB>C</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[16] = "<color=#8C6239>D</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[17] = new char[] { ' ' };
+	}
+
+	public static char[] GetGrade(float score, bool percent)
+	{
+		if (percent)
+		{
+			score /= 100f;
+		}
+		if (score == 0f)
+		{
+			return GlobalHelper.JudgeGrades[17];
+		}
+		if (score >= 0.999999f)
+		{
+			return GlobalHelper.JudgeGrades[0];
+		}
+		if (score >= 0.999935f)
+		{
+			return GlobalHelper.JudgeGrades[1];
+		}
+		if (score >= 0.9998f)
+		{
+			return GlobalHelper.JudgeGrades[2];
+		}
+		if (score >= 0.9997f)
+		{
+			return GlobalHelper.JudgeGrades[3];
+		}
+		if (score >= 0.99955f)
+		{
+			return GlobalHelper.JudgeGrades[4];
+		}
+		if (score >= 0.999f)
+		{
+			return GlobalHelper.JudgeGrades[5];
+		}
+		if (score >= 0.998f)
+		{
+			return GlobalHelper.JudgeGrades[6];
+		}
+		if (score >= 0.997f)
+		{
+			return GlobalHelper.JudgeGrades[7];
+		}
+		if (score >= 0.99f)
+		{
+			return GlobalHelper.JudgeGrades[8];
+		}
+		if (score >= 0.965f)
+		{
+			return GlobalHelper.JudgeGrades[9];
+		}
+		if (score >= 0.93f)
+		{
+			return GlobalHelper.JudgeGrades[10];
+		}
+		if (score >= 0.9f)
+		{
+			return GlobalHelper.JudgeGrades[11];
+		}
+		if (score >= 0.85f)
+		{
+			return GlobalHelper.JudgeGrades[12];
+		}
+		if (score >= 0.8f)
+		{
+			return GlobalHelper.JudgeGrades[13];
+		}
+		if (score >= 0.7f)
+		{
+			return GlobalHelper.JudgeGrades[14];
+		}
+		if (score >= 0.6f)
+		{
+			return GlobalHelper.JudgeGrades[15];
+		}
+		return GlobalHelper.JudgeGrades[16];
+	}
+
 	private static bool? _rainbowSPBarCache;
 
 	private static bool? _rainbowFlamesCache;
@@ -2119,6 +2220,8 @@ public static class GlobalHelper
 	private static string _fpsTextCache;
 
 	private static int? _rfi_configCache;
+
+	public static char[][] JudgeGrades;
 
 	public enum JudgeLevel
 	{

@@ -606,7 +606,8 @@ public class GameManager : MonoBehaviour
 		return (float)(this.currentTick - this.\u02BB\u02B4\u02B6\u02BC\u02BD\u02B5\u02C1\u02B3\u02BC\u02B3\u02BA) / (float)this.\u02C0\u02B2\u02B8\u02BC\u02BD\u02B6\u02B4\u02B8\u02B4\u02B6\u02BC;
 	}
 
-	private void \u02C0\u02C0\u02B4\u02B8\u02BE\u02B4\u02B6\u02B5\u02B4\u02BD\u02B7(float \u02B4\u02BE\u02B7\u02B3\u02B8\u02B2\u02B2\u02C1\u02BB\u02BB\u02B6, float \u02B7\u02BC\u02B9\u02BE\u02C1\u02BE\u02B5\u02B7\u02B6\u02BC\u02BA)
+	[Comment("Method name is a guess and probably wrong")]
+	private void ChangeHighwayPlacement(float \u02B4\u02BE\u02B7\u02B3\u02B8\u02B2\u02B2\u02C1\u02BB\u02BB\u02B6, float \u02B7\u02BC\u02B9\u02BE\u02C1\u02BE\u02B5\u02B7\u02B6\u02BC\u02BA)
 	{
 		for (int i = 0; i < this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD.Length; i++)
 		{
@@ -627,7 +628,7 @@ public class GameManager : MonoBehaviour
 		this.\u02BC\u02B4\u02B9\u02BC\u02B8\u02B6\u02B5\u02BE\u02C0\u02BA\u02B6();
 		yield return FadeBehaviour.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02B9\u02B9\u02B6\u02BE\u02BE\u02C1\u02B3\u02B8\u02B6\u02C0();
 		yield return new WaitForSeconds(0.25f);
-		this.\u02BB\u02B8\u02B2\u02BC\u02B4\u02B4\u02BE\u02B6\u02BC\u02B4\u02B4 = true;
+		this.hasSongStarted = true;
 		this.\u02B6\u02B4\u02B8\u02B9\u02BC\u02B5\u02B8\u02B4\u02B3\u02BB\u02B6();
 		GameAudioManager.PlaySound(SoundEffectsChannel.Beginning);
 		foreach (BasePlayer basePlayer in this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD)
@@ -1081,7 +1082,7 @@ public class GameManager : MonoBehaviour
 		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
 		{
 			this.\u02B5\u02BA\u02B4\u02BA\u02B6\u02C1\u02BB\u02BE\u02B6\u02BC\u02BE.gameObject.SetActive(true);
-			this.\u02BB\u02B8\u02B2\u02BC\u02B4\u02B4\u02BE\u02B6\u02BC\u02B4\u02B4 = true;
+			this.hasSongStarted = true;
 		}
 		else
 		{
@@ -1359,7 +1360,7 @@ public class GameManager : MonoBehaviour
 
 	private void Update()
 	{
-		if (!this.\u02BB\u02B8\u02B2\u02BC\u02B4\u02B4\u02BE\u02B6\u02BC\u02B4\u02B4)
+		if (!this.hasSongStarted)
 		{
 			return;
 		}
@@ -1367,7 +1368,7 @@ public class GameManager : MonoBehaviour
 		{
 			this.\u02B2\u02BE\u02BD\u02C1\u02BA\u02C1\u02B8\u02B8\u02B4\u02B6\u02B6 = Screen.width;
 			this.\u02B3\u02B7\u02BB\u02B4\u02BC\u02B3\u02B5\u02B9\u02BD\u02B3\u02B2 = Screen.height;
-			this.\u02C0\u02C0\u02B4\u02B8\u02BE\u02B4\u02B6\u02B5\u02B4\u02BD\u02B7((float)Screen.width, (float)Screen.height);
+			this.ChangeHighwayPlacement((float)Screen.width, (float)Screen.height);
 		}
 		this.\u02C0\u02BE\u02C1\u02BD\u02C0\u02BC\u02BB\u02B4\u02C1\u02B3\u02B9 = 0f;
 		this.\u02BB\u02B4\u02B6\u02BC\u02BD\u02B5\u02C1\u02B3\u02BC\u02B3\u02BA = this.currentTick;
@@ -1698,7 +1699,7 @@ public class GameManager : MonoBehaviour
 	[HideInInspector]
 	public bool[] \u02B6\u02B7\u02BF\u02C0\u02B6\u02B7\u02B2\u02BE\u02C1\u02B7\u02C0;
 
-	private bool \u02BB\u02B8\u02B2\u02BC\u02B4\u02B4\u02BE\u02B6\u02BC\u02B4\u02B4;
+	private bool hasSongStarted;
 
 	[HideInInspector]
 	public bool \u02BC\u02BF\u02B5\u02B5\u02C0\u02BF\u02BC\u02C0\u02B5\u02B4\u02BE;
