@@ -12,6 +12,23 @@
   "items": [
     {
       "show": true,
+      "date": 1735755501,
+      "author": "PIC",
+      "description": "Clone Hero Rewind | 2024",
+      "datatype": "link",
+      "data": "https://youtu.be/oobJUgZD-qM"
+    },
+    {
+      "show": true,
+      "date": 1735755500,
+      "author": "PIC",
+      "description": "Community Track Pack 16: Phoenix | Official Release"
+      "datatype": "link",
+      "data": "https://youtu.be/nsvNXsk3xdA"
+    },
+    
+    {
+      "show": true,
       "date": 1735478846,
       "author": "<color=#ffaaff>Andrea</color>",
       "description": "Update V2.1.1 released",
