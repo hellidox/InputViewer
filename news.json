@@ -12,6 +12,14 @@
   "items": [
     {
       "show": true,
+      "date": 1735927776,
+      "author": "The Pars",
+      "description": "The Pars - par new year",
+      "datatype": "link",
+      "data": "https://soundcloud.com/the-pars-626476704/sets/par-new-year"
+    },
+    {
+      "show": true,
       "date": 1735755502,
       "author": "PIC",
       "description": "Clone Hero Rewind | 2024",
