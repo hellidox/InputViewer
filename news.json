@@ -12,9 +12,17 @@
   "items": [
     {
       "show": true,
+      "date": 1736267491,
+      "author": "The Pars",
+      "description": "stream golfcore",
+      "datatype": "link",
+      "data": "https://soundcloud.com/the-pars-626476704/sets/golfcore"
+    },
+    {
+      "show": true,
       "date": 1735927776,
       "author": "The Pars",
-      "description": "The Pars - par new year",
+      "description": "stream par new year",
       "datatype": "link",
       "data": "https://soundcloud.com/the-pars-626476704/sets/par-new-year"
     },
