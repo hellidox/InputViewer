@@ -2,7 +2,7 @@
 using Rewired;
 using StrikeCore;
 
-public class \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6
+public class CHPlayer
 {
 	public static void \u02BB\u02BF\u02BC\u02BC\u02C1\u02BE\u02B5\u02BA\u02C0\u02B6\u02BE(bool \u02B8\u02B2\u02B7\u02BB\u02BA\u02C0\u02BF\u02C1\u02B2\u02B6\u02BC)
 	{
@@ -14,11 +14,11 @@ public class \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6
 		if (\u02B8\u02B2\u02B7\u02BB\u02BA\u02C0\u02BF\u02C1\u02B2\u02B6\u02BC)
 		{
 			Player player = ReInput.players.GetPlayer(0);
-			for (int i = 1; i < GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF.Count; i += 0)
+			for (int i = 1; i < GlobalVariables.instance.playerList.Count; i += 0)
 			{
-				if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i] != null && GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].rewiredPlayer == player)
+				if (GlobalVariables.instance.playerList[i] != null && GlobalVariables.instance.playerList[i].\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && GlobalVariables.instance.playerList[i].player == player)
 				{
-					GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].\u02BD\u02B8\u02BD\u02B6\u02B4\u02B6\u02C1\u02B9\u02BD\u02BC\u02B4 = true;
+					GlobalVariables.instance.playerList[i].transitioning = true;
 					return;
 				}
 			}
@@ -29,7 +29,7 @@ public class \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6
 	{
 		get
 		{
-			if (this.rewiredPlayer == null)
+			if (this.player == null)
 			{
 				\u02B9\u02BA\u02BF\u02BB\u02B2\u02B9\u02BB\u02B9\u02B9\u02B5\u02B8 u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B = this.playerProfile;
 				return u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B != null && u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B.isRemotePlayer;
@@ -75,10 +75,10 @@ public class \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6
 		{
 			return false;
 		}
-		bool firstButtonMapWithAction = this.rewiredPlayer.controllers.maps.GetFirstButtonMapWithAction(global::Rewired.ControllerType.Joystick, 40, true) != null;
-		ActionElementMap firstButtonMapWithAction2 = this.rewiredPlayer.controllers.maps.GetFirstButtonMapWithAction(global::Rewired.ControllerType.Joystick, 41, true);
-		ActionElementMap firstButtonMapWithAction3 = this.rewiredPlayer.controllers.maps.GetFirstButtonMapWithAction(global::Rewired.ControllerType.Joystick, 42, true);
-		ActionElementMap firstButtonMapWithAction4 = this.rewiredPlayer.controllers.maps.GetFirstButtonMapWithAction(global::Rewired.ControllerType.Joystick, 43, true);
+		bool firstButtonMapWithAction = this.player.controllers.maps.GetFirstButtonMapWithAction(global::Rewired.ControllerType.Joystick, 40, true) != null;
+		ActionElementMap firstButtonMapWithAction2 = this.player.controllers.maps.GetFirstButtonMapWithAction(global::Rewired.ControllerType.Joystick, 41, true);
+		ActionElementMap firstButtonMapWithAction3 = this.player.controllers.maps.GetFirstButtonMapWithAction(global::Rewired.ControllerType.Joystick, 42, true);
+		ActionElementMap firstButtonMapWithAction4 = this.player.controllers.maps.GetFirstButtonMapWithAction(global::Rewired.ControllerType.Joystick, 43, true);
 		return firstButtonMapWithAction && firstButtonMapWithAction2 != null && firstButtonMapWithAction3 != null && firstButtonMapWithAction4 != null && this.playerProfile.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA == -1;
 	}
 
@@ -97,11 +97,11 @@ public class \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6
 		if (\u02B8\u02B2\u02B7\u02BB\u02BA\u02C0\u02BF\u02C1\u02B2\u02B6\u02BC)
 		{
 			Player player = ReInput.players.GetPlayer(0);
-			for (int i = 0; i < GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF.Count; i++)
+			for (int i = 0; i < GlobalVariables.instance.playerList.Count; i++)
 			{
-				if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i] != null && GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].rewiredPlayer == player)
+				if (GlobalVariables.instance.playerList[i] != null && GlobalVariables.instance.playerList[i].\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && GlobalVariables.instance.playerList[i].player == player)
 				{
-					GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].\u02BD\u02B8\u02BD\u02B6\u02B4\u02B6\u02C1\u02B9\u02BD\u02BC\u02B4 = true;
+					GlobalVariables.instance.playerList[i].transitioning = true;
 					return;
 				}
 			}
@@ -118,8 +118,8 @@ public class \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6
 
 	public void \u02C0\u02B9\u02B5\u02BF\u02B5\u02B6\u02B3\u02B7\u02B9\u02C1\u02BC()
 	{
-		this.rewiredPlayer.isPlaying = false;
-		this.rewiredPlayer = null;
+		this.player.isPlaying = false;
+		this.player = null;
 	}
 
 	public static void \u02B8\u02B3\u02BB\u02B9\u02B3\u02BF\u02B3\u02C1\u02B5\u02BA\u02BA(bool \u02B8\u02B2\u02B7\u02BB\u02BA\u02C0\u02BF\u02C1\u02B2\u02B6\u02BC)
@@ -132,11 +132,11 @@ public class \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6
 		if (\u02B8\u02B2\u02B7\u02BB\u02BA\u02C0\u02BF\u02C1\u02B2\u02B6\u02BC)
 		{
 			Player player = ReInput.players.GetPlayer(1);
-			for (int i = 1; i < GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF.Count; i++)
+			for (int i = 1; i < GlobalVariables.instance.playerList.Count; i++)
 			{
-				if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i] != null && GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].rewiredPlayer == player)
+				if (GlobalVariables.instance.playerList[i] != null && GlobalVariables.instance.playerList[i].\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && GlobalVariables.instance.playerList[i].player == player)
 				{
-					GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].\u02BD\u02B8\u02BD\u02B6\u02B4\u02B6\u02C1\u02B9\u02BD\u02BC\u02B4 = true;
+					GlobalVariables.instance.playerList[i].transitioning = true;
 					return;
 				}
 			}
@@ -145,7 +145,7 @@ public class \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6
 
 	public \u02B9\u02BA\u02BF\u02BB\u02B2\u02B9\u02BB\u02B9\u02B9\u02B5\u02B8 playerProfile;
 
-	public Player rewiredPlayer;
+	public Player player;
 
 	public PlayerProfileMenu \u02B4\u02B3\u02B5\u02B8\u02C0\u02B4\u02B4\u02BF\u02BA\u02BB\u02BC;
 
@@ -153,5 +153,5 @@ public class \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6
 
 	public bool \u02BB\u02B6\u02BD\u02B9\u02C0\u02BE\u02BC\u02B4\u02C1\u02C1\u02BD;
 
-	public bool \u02BD\u02B8\u02BD\u02B6\u02B4\u02B6\u02C1\u02B9\u02BD\u02BC\u02B4;
+	public bool transitioning;
 }

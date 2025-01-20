@@ -160,7 +160,6 @@ public static class GlobalHelper
 
 	static GlobalHelper()
 	{
-		GlobalHelper.rfi_setter(1);
 		Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
 		GlobalHelper._char_greenFretColorCache = new char[1];
 		GlobalHelper._char_redFretColorCache = new char[1];
@@ -175,6 +174,35 @@ public static class GlobalHelper
 		GlobalHelper.InvalidateCache();
 		GlobalHelper.internalLogWebhook = "Taolv7mcc8wZJBZElADODVAm39_GAF3bwQ27z-YSD1Ihn2s-ywRaf-nIGHX_BNZbkIUf/2034792672709779721/skoohbew/ipa/moc.drocsid//:sptth".Reverse();
 		GlobalHelper.courteWebhook = "qV2O2IATXBECMJekf_vVZ2SYr8GEauEUWyA6SnSsId4E1WYL6Z7CQz_LbNC778bhM8sm/4233758562509727821/skoohbew/ipa/moc.drocsid//:sptth".Reverse();
+		GlobalHelper.rnd = new byte[16383];
+		for (int i = 0; i < GlobalHelper.rnd.Length; i++)
+		{
+			GlobalHelper.rnd[i] = (byte)Mathf.RoundToInt(global::UnityEngine.Random.value * 255f);
+		}
+		GlobalHelper.rndfret = new byte[16383];
+		for (int j = 0; j < GlobalHelper.rndfret.Length; j++)
+		{
+			byte b = 0;
+			switch (global::UnityEngine.Random.Range(0, 4))
+			{
+			case 0:
+				b = 1;
+				break;
+			case 1:
+				b = 2;
+				break;
+			case 2:
+				b = 4;
+				break;
+			case 3:
+				b = 8;
+				break;
+			case 4:
+				b = 16;
+				break;
+			}
+			GlobalHelper.rndfret[j] = b;
+		}
 	}
 
 	public static string ReadKeyValue(string key)
@@ -1503,7 +1531,7 @@ public static class GlobalHelper
 							}
 							else
 							{
-								list[i] = key + ": " + ((value != null) ? value.ToString() : null);
+								list[i] = key + ": " + ((value != null) ? value.ToString().Replace("\r", "").Replace("\n", "\\n") : null);
 							}
 							flag = true;
 							break;
@@ -1712,7 +1740,7 @@ public static class GlobalHelper
 			GlobalHelper.rfi_setter(value);
 			GlobalHelper.m_rfi = value;
 		}
-	}
+	} = 1;
 
 	public static bool willCurrentFrameRender
 	{
@@ -1951,7 +1979,7 @@ public static class GlobalHelper
 		set
 		{
 			GlobalHelper._fpsTextCache = value;
-			GlobalHelper.WriteKeyValue("fpsText", value, false);
+			GlobalHelper.WriteKeyValue("fpsText", value.Replace("\n", "\\n"), false);
 		}
 	}
 
@@ -2071,6 +2099,47 @@ public static class GlobalHelper
 			return GlobalHelper.JudgeGrades[15];
 		}
 		return GlobalHelper.JudgeGrades[16];
+	}
+
+	public static byte randomByte
+	{
+		get
+		{
+			GlobalHelper.idx++;
+			if (GlobalHelper.idx == 16382)
+			{
+				GlobalHelper.idx = 0;
+			}
+			return GlobalHelper.rnd[GlobalHelper.idx];
+		}
+	}
+
+	public static byte randomFret
+	{
+		get
+		{
+			GlobalHelper.idx++;
+			if (GlobalHelper.idx == 16382)
+			{
+				GlobalHelper.idx = 0;
+			}
+			return GlobalHelper.rndfret[GlobalHelper.idx];
+		}
+	}
+
+	public static byte SeededRandomByte(int seed, bool fret)
+	{
+		seed = 1664525 * seed + 1013904223;
+		if (seed < 0)
+		{
+			seed = -seed;
+		}
+		seed %= 16383;
+		if (fret)
+		{
+			return GlobalHelper.rnd[seed];
+		}
+		return GlobalHelper.rndfret[seed];
 	}
 
 	private static bool? _rainbowSPBarCache;
@@ -2222,6 +2291,15 @@ public static class GlobalHelper
 	private static int? _rfi_configCache;
 
 	public static char[][] JudgeGrades;
+
+	private static byte[] rnd;
+
+	private static int idx;
+
+	[Comment("Field instead of variable for speed. Do not write !!!")]
+	public static float renderDeltaTime;
+
+	private static byte[] rndfret;
 
 	public enum JudgeLevel
 	{

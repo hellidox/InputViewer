@@ -18,7 +18,7 @@ public class v1Popup : ConfirmationMenu
 		{
 			Application.OpenURL(this.postURL);
 		}
-		base.\u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3();
+		base.ConfirmPressed();
 	}
 
 	public override void \u02B5\u02B4\u02BE\u02B6\u02BC\u02BC\u02C0\u02BC\u02B5\u02BC\u02BF()
@@ -42,13 +42,13 @@ public class v1Popup : ConfirmationMenu
 	{
 	}
 
-	public override void \u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3()
+	public override void ConfirmPressed()
 	{
 		if (base.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC == 0)
 		{
 			Application.OpenURL(this.postURL);
 		}
-		base.\u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3();
+		base.ConfirmPressed();
 	}
 
 	public override void \u02C0\u02B8\u02BD\u02B8\u02BB\u02BC\u02BE\u02B2\u02B2\u02B3\u02B5()
@@ -66,7 +66,7 @@ public class v1Popup : ConfirmationMenu
 		{
 			Application.OpenURL(this.postURL);
 		}
-		base.\u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3();
+		base.ConfirmPressed();
 	}
 
 	public override void \u02B3\u02C1\u02B8\u02BA\u02B2\u02B8\u02B5\u02B6\u02B2\u02B5\u02BA()
@@ -84,7 +84,7 @@ public class v1Popup : ConfirmationMenu
 		{
 			Application.OpenURL(this.postURL);
 		}
-		base.\u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3();
+		base.ConfirmPressed();
 	}
 
 	[SerializeField]

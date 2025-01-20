@@ -31,7 +31,7 @@ public class MainMenu : BaseMenu
 		Application.Quit();
 	}
 
-	public override void \u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3()
+	public override void ConfirmPressed()
 	{
 		if (GlobalVariables.\u02B3\u02B9\u02BD\u02BA\u02B7\u02B6\u02BC\u02C0\u02BC\u02B3\u02BC || this.songScan.\u02B7\u02B4\u02BF\u02BE\u02BA\u02BF\u02BE\u02B9\u02BD\u02B2\u02BA)
 		{
@@ -62,7 +62,7 @@ public class MainMenu : BaseMenu
 					{
 						return;
 					}
-					if (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3)
+					if (!GlobalVariables.instance.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3)
 					{
 						base.StartCoroutine(this.\u02BD\u02BF\u02B8\u02C1\u02B4\u02C1\u02BE\u02B7\u02B3\u02C1\u02BE(true));
 						return;
@@ -72,9 +72,9 @@ public class MainMenu : BaseMenu
 						return;
 					}
 					this.songSelect.SetActive(true);
-					GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02BA\u02BB\u02B8\u02B9\u02C0\u02BD\u02B5\u02B4\u02B6\u02B3 = true;
-					GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4 = false;
-					GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 = GameMode.Versus;
+					GlobalVariables.instance.\u02C1\u02BA\u02BB\u02B8\u02B9\u02C0\u02BD\u02B5\u02B4\u02B6\u02B3 = true;
+					GlobalVariables.instance.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4 = false;
+					GlobalVariables.instance.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 = GameMode.Versus;
 					this.\u02B7\u02BA\u02BF\u02B2\u02BA\u02BC\u02BC\u02BB\u02B2\u02BC\u02BF.\u02B3\u02BE\u02B8\u02B5\u02C0\u02B8\u02BF\u02C0\u02B3\u02B7\u02B7(false);
 					this.\u02B8\u02B6\u02B9\u02BF\u02BF\u02BD\u02B6\u02B7\u02B3\u02BA\u02B9(false, false);
 				}
@@ -88,7 +88,7 @@ public class MainMenu : BaseMenu
 					{
 						return;
 					}
-					if (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3)
+					if (!GlobalVariables.instance.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3)
 					{
 						base.StartCoroutine(this.\u02BD\u02BF\u02B8\u02C1\u02B4\u02C1\u02BE\u02B7\u02B3\u02C1\u02BE(true));
 						this.\u02B2\u02BF\u02BD\u02B5\u02B7\u02C1\u02B3\u02BE\u02BC\u02C1\u02B3 = true;
@@ -99,9 +99,9 @@ public class MainMenu : BaseMenu
 						return;
 					}
 					this.songSelect.SetActive(true);
-					GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02BA\u02BB\u02B8\u02B9\u02C0\u02BD\u02B5\u02B4\u02B6\u02B3 = true;
-					GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4 = false;
-					GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 = GameMode.Quickplay;
+					GlobalVariables.instance.\u02C1\u02BA\u02BB\u02B8\u02B9\u02C0\u02BD\u02B5\u02B4\u02B6\u02B3 = true;
+					GlobalVariables.instance.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4 = false;
+					GlobalVariables.instance.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 = GameMode.Quickplay;
 					this.\u02B7\u02BA\u02BF\u02B2\u02BA\u02BC\u02BC\u02BB\u02B2\u02BC\u02BF.\u02B3\u02BE\u02B8\u02B5\u02C0\u02B8\u02BF\u02C0\u02B3\u02B7\u02B7(false);
 					this.\u02B8\u02B6\u02B9\u02BF\u02BF\u02BD\u02B6\u02B7\u02B3\u02BA\u02B9(false, false);
 				}
@@ -153,7 +153,7 @@ public class MainMenu : BaseMenu
 				int num2 = 0;
 				for (int i = 0; i < 4; i++)
 				{
-					if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
+					if (GlobalVariables.instance.playerList[i].\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
 					{
 						num2++;
 					}
@@ -163,7 +163,7 @@ public class MainMenu : BaseMenu
 					this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("Too many players! Only one player is supported!", "Okay", null, null, null, null);
 					return;
 				}
-				if (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3)
+				if (!GlobalVariables.instance.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3)
 				{
 					base.StartCoroutine(this.\u02BD\u02BF\u02B8\u02C1\u02B4\u02C1\u02BE\u02B7\u02B3\u02C1\u02BE(true));
 					return;
@@ -186,7 +186,7 @@ public class MainMenu : BaseMenu
 			{
 				return;
 			}
-			if (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3)
+			if (!GlobalVariables.instance.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3)
 			{
 				base.StartCoroutine(this.\u02BD\u02BF\u02B8\u02C1\u02B4\u02C1\u02BE\u02B7\u02B3\u02C1\u02BE(true));
 				return;
@@ -196,8 +196,8 @@ public class MainMenu : BaseMenu
 				return;
 			}
 			this.songSelect.SetActive(true);
-			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02BA\u02BB\u02B8\u02B9\u02C0\u02BD\u02B5\u02B4\u02B6\u02B3 = false;
-			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4 = true;
+			GlobalVariables.instance.\u02C1\u02BA\u02BB\u02B8\u02B9\u02C0\u02BD\u02B5\u02B4\u02B6\u02B3 = false;
+			GlobalVariables.instance.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4 = true;
 			this.\u02B7\u02BA\u02BF\u02B2\u02BA\u02BC\u02BC\u02BB\u02B2\u02BC\u02BF.\u02B3\u02BE\u02B8\u02B5\u02C0\u02B8\u02BF\u02C0\u02B3\u02B7\u02B7(false);
 			this.\u02B8\u02B6\u02B9\u02BF\u02BF\u02BD\u02B6\u02B7\u02B3\u02BA\u02B9(false, false);
 		}
@@ -216,7 +216,7 @@ public class MainMenu : BaseMenu
 		{
 			base.gameObject.SetActive(false);
 		}
-		base.\u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3();
+		base.ConfirmPressed();
 	}
 
 	private IEnumerator \u02B7\u02C0\u02B6\u02B9\u02C1\u02B3\u02B3\u02B3\u02BC\u02C1\u02BC(bool \u02C0\u02B5\u02BD\u02C1\u02B3\u02BF\u02BF\u02BB\u02B2\u02B9\u02BD = true)
@@ -264,14 +264,14 @@ public class MainMenu : BaseMenu
 	private IEnumerator \u02BD\u02BF\u02B8\u02C1\u02B4\u02C1\u02BE\u02B7\u02B3\u02C1\u02BE(bool \u02C0\u02B5\u02BD\u02C1\u02B3\u02BF\u02BF\u02BB\u02B2\u02B9\u02BD = true)
 	{
 		this.remoteIconAndSourceUpdater.\u02BB\u02B8\u02BC\u02BF\u02BB\u02BB\u02B6\u02B7\u02B2\u02B7\u02BC(\u02C0\u02B5\u02BD\u02C1\u02B3\u02BF\u02BF\u02BB\u02B2\u02B9\u02BD);
-		while (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3)
+		while (!GlobalVariables.instance.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3)
 		{
 			yield return null;
 		}
 		this.\u02B2\u02BF\u02BD\u02B5\u02B7\u02C1\u02B3\u02BE\u02BC\u02C1\u02B3 = false;
 		if (\u02C0\u02B5\u02BD\u02C1\u02B3\u02BF\u02BF\u02BB\u02B2\u02B9\u02BD)
 		{
-			this.\u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3();
+			this.ConfirmPressed();
 		}
 		yield break;
 	}
@@ -307,7 +307,7 @@ public class MainMenu : BaseMenu
 			yield return null;
 		}
 		this.\u02C1\u02B7\u02BF\u02BD\u02C0\u02BC\u02B9\u02BF\u02B6\u02C1\u02BE = false;
-		this.\u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3();
+		this.ConfirmPressed();
 		yield break;
 	}
 
@@ -338,7 +338,7 @@ public class MainMenu : BaseMenu
 		TimeSpan timeSpan = TimeSpan.FromSeconds((double)GlobalVariables.playTime);
 		this.buildVersion.text = string.Concat(new string[]
 		{
-			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02B3\u02B7\u02BC\u02B5\u02B3\u02B8\u02BB\u02BE\u02B5\u02B3,
+			GlobalVariables.instance.\u02B4\u02B3\u02B7\u02BC\u02B5\u02B3\u02B8\u02BB\u02BE\u02B5\u02B3,
 			" IVMod version ",
 			GlobalHelper.version,
 			"\nTime played: ",
@@ -357,7 +357,7 @@ public class MainMenu : BaseMenu
 		this.buildVersion.fontSize = this.fs;
 		this.buildVersion.fontWeight = FontWeight.Black;
 		base.OnEnable();
-		if (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B9\u02B4\u02BC\u02B8\u02B7\u02C0\u02BB\u02B9\u02B9\u02B5\u02C0)
+		if (!GlobalVariables.instance.\u02B9\u02B4\u02BC\u02B8\u02B7\u02C0\u02BB\u02B9\u02B9\u02B5\u02C0)
 		{
 			this.\u02B7\u02BA\u02BF\u02B2\u02BA\u02BC\u02BC\u02BB\u02B2\u02BC\u02BF.\u02B9\u02BF\u02B3\u02C1\u02B9\u02B2\u02B9\u02BA\u02B8\u02B5\u02B9();
 		}
@@ -376,7 +376,7 @@ public class MainMenu : BaseMenu
 		MainMenu.\u02BA\u02BD\u02BB\u02C0\u02BB\u02BE\u02BA\u02B9\u02BA\u02B2\u02BB u02BA_u02BD_u02BB_u02C0_u02BB_u02BE_u02BA_u02B9_u02BA_u02B2_u02BB = new MainMenu.\u02BA\u02BD\u02BB\u02C0\u02BB\u02BE\u02BA\u02B9\u02BA\u02B2\u02BB();
 		yield return new WaitForEndOfFrame();
 		u02BA_u02BD_u02BB_u02C0_u02BB_u02BE_u02BA_u02B9_u02BA_u02B2_u02BB.rnd = new global::System.Random();
-		string[] BuildTagsRandom = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C0\u02C0\u02B6\u02BD\u02BE\u02C1\u02B3\u02BF\u02BE\u02B3\u02C1.Concat(new string[]
+		string[] BuildTagsRandom = GlobalVariables.instance.\u02C0\u02C0\u02B6\u02BD\u02BE\u02C1\u02B3\u02BF\u02BE\u02B3\u02C1.Concat(new string[]
 		{
 			"dear matt money. fuck you matt money", "now with 90% less allocations", "System.char[]", "<rotate=-45><voffset=7.25em>m</voffset><voffset=7.0em>a</voffset><voffset=6.75em>n</voffset><voffset=6.5em> </voffset><voffset=6.25em>w</voffset><voffset=6.0em>h</voffset><voffset=5.75em>y</voffset><voffset=5.5em> </voffset><voffset=5.25em>t</voffset><voffset=5.0em>h</voffset><voffset=4.75em>e</voffset><voffset=4.5em> </voffset><voffset=4.25em>f</voffset><voffset=4.0em>u</voffset><voffset=3.75em>c</voffset><voffset=3.5em>k</voffset><voffset=3.25em> </voffset><voffset=3.0em>t</voffset><voffset=2.75em>h</voffset><voffset=2.5em>i</voffset><voffset=2.25em>s</voffset><voffset=2.0em> </voffset><voffset=1.75em>d</voffset><voffset=1.5em>i</voffset><voffset=1.25em>a</voffset><voffset=1.0em>g</voffset><voffset=0.75em>o</voffset><voffset=0.5em>n</voffset><voffset=0.25em>a</voffset><voffset=0.0em>l</voffset></rotate>", "<size=255px><voffset=700px>what</voffset></size>", "not good neighbor", "oh, 9/11....", "i hate this video game", "spunch bop", "what the frick dude",
 			"what the fuck that input viewer", "shut up dnspy", "what is a garbage collector", "\n\nBORN TO ZSTRING\nWORLD IS A FUCK\nAPPEND EM ALL 1989\nI am alloc man\n410,757,864,530 FORMATTED STRING", "WHY DIDNT THIS GIVE ME AN ERROR", "HOW DO I CAUSE CRASHES LIKE\nTHIS IN A CHECKED lANGUAGE", "the strings\nthe strings", "ERROR: SymGetSymFromAddr64, GetLastError: 'Attempt to access invalid address.", "i need help", "im talking from inside the machine",
@@ -450,15 +450,15 @@ public class MainMenu : BaseMenu
 				{
 					if (!what)
 					{
-						BuildTagsRandom = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02B6\u02BF\u02B8\u02B3\u02B5\u02BF\u02B9\u02C1\u02BC\u02B6.OrderBy(new Func<string, int>(u02BA_u02BD_u02BB_u02C0_u02BB_u02BE_u02BA_u02B9_u02BA_u02B2_u02BB.\u02B9\u02BA\u02BB\u02B4\u02BB\u02BE\u02C0\u02B3\u02BE\u02C0\u02BE)).ToArray<string>();
+						BuildTagsRandom = GlobalVariables.instance.\u02B4\u02B6\u02BF\u02B8\u02B3\u02B5\u02BF\u02B9\u02C1\u02BC\u02B6.OrderBy(new Func<string, int>(u02BA_u02BD_u02BB_u02C0_u02BB_u02BE_u02BA_u02B9_u02BA_u02B2_u02BB.\u02B9\u02BA\u02BB\u02B4\u02BB\u02BE\u02C0\u02B3\u02BE\u02C0\u02BE)).ToArray<string>();
 						what = true;
 					}
 				}
 				else
 				{
 					List<string> list = new List<string>();
-					list.AddRange(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B5\u02B7\u02B5\u02B4\u02BB\u02B4\u02B5\u02B4\u02C1\u02B6\u02BE);
-					list.AddRange(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C0\u02C0\u02B6\u02BD\u02BE\u02C1\u02B3\u02BF\u02BE\u02B3\u02C1);
+					list.AddRange(GlobalVariables.instance.\u02B5\u02B7\u02B5\u02B4\u02BB\u02B4\u02B5\u02B4\u02C1\u02B6\u02BE);
+					list.AddRange(GlobalVariables.instance.\u02C0\u02C0\u02B6\u02BD\u02BE\u02C1\u02B3\u02BF\u02BE\u02B3\u02C1);
 					IEnumerable<string> enumerable = list;
 					Func<string, int> func;
 					if ((func = u02BA_u02BD_u02BB_u02C0_u02BB_u02BE_u02BA_u02B9_u02BA_u02B2_u02BB.nt) == null)
@@ -491,11 +491,11 @@ public class MainMenu : BaseMenu
 		this.\u02C1\u02BD\u02C0\u02C0\u02B9\u02BA\u02BC\u02B3\u02B3\u02BD\u02B2();
 		if (Input.GetKeyUp((KeyCode)(-103)) && !ColorProfileEditor.\u02BF\u02BE\u02B9\u02BB\u02B2\u02BC\u02B7\u02BD\u02B2\u02B6\u02B6() && !SongPathsManager.\u02BF\u02B3\u02B6\u02B5\u02BB\u02B7\u02BE\u02BF\u02C1\u02BA\u02BF() && !this.controlMapper.isOpen && this.controlMapper.enabled)
 		{
-			foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
+			foreach (CHPlayer chplayer in GlobalVariables.instance.playerList)
 			{
-				if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
+				if (chplayer.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
 				{
-					u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02B4\u02B3\u02B5\u02B8\u02C0\u02B4\u02B4\u02BF\u02BA\u02BB\u02BC.\u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8();
+					chplayer.\u02B4\u02B3\u02B5\u02B8\u02C0\u02B4\u02B4\u02BF\u02BA\u02BB\u02BC.\u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8();
 				}
 			}
 			this.controlMapper.Open();
@@ -503,20 +503,20 @@ public class MainMenu : BaseMenu
 		}
 		if (this.\u02B7\u02B4\u02B4\u02B3\u02BF\u02B6\u02BF\u02C1\u02BA\u02BF\u02B5 && PlayerPrefs.GetInt("album_track", 0) == 0)
 		{
-			for (int i = 0; i < GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF.Count; i += 0)
+			for (int i = 0; i < GlobalVariables.instance.playerList.Count; i += 0)
 			{
-				if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].playerProfile != null && !this.notSupportedMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
+				if (GlobalVariables.instance.playerList[i].playerProfile != null && !this.notSupportedMenu.isActive)
 				{
 					this.notSupportedMenu.\u02B7\u02B3\u02BC\u02BE\u02BF\u02B7\u02B4\u02C0\u02B9\u02BC\u02BF(this.\u02BC\u02BE\u02B6\u02B5\u02B9\u02C0\u02B7\u02C1\u02BC\u02B7\u02B7, "Available", ")", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B6\u02BF\u02BD\u02BC\u02BA\u02C1\u02B2\u02B4\u02BB\u02BB\u02BA), new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B5\u02B4\u02B8\u02B3\u02BB\u02BC\u02B4\u02BC\u02B6\u02BE\u02B4), this.\u02B3\u02B2\u02B7\u02BA\u02C1\u02C0\u02BB\u02BE\u02B9\u02B3\u02B2);
 					break;
 				}
 			}
 		}
-		if (this.\u02BF\u02C1\u02B5\u02BD\u02BB\u02C1\u02B6\u02B8\u02B6\u02BB\u02B8 && GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02BE\u02C1\u02B4\u02B4\u02B6\u02BA\u02BB\u02C1\u02BE\u02BB)
+		if (this.\u02BF\u02C1\u02B5\u02BD\u02BB\u02C1\u02B6\u02B8\u02B6\u02BB\u02B8 && GlobalVariables.instance.\u02BE\u02BE\u02C1\u02B4\u02B4\u02B6\u02BA\u02BB\u02C1\u02BE\u02BB)
 		{
-			for (int j = 1; j < GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF.Count; j++)
+			for (int j = 1; j < GlobalVariables.instance.playerList.Count; j++)
 			{
-				if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[j].playerProfile != null && !this.notSupportedMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
+				if (GlobalVariables.instance.playerList[j].playerProfile != null && !this.notSupportedMenu.isActive)
 				{
 					this.notSupportedMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD(this.\u02BC\u02BE\u02B6\u02B5\u02B9\u02C0\u02B7\u02C1\u02BC\u02B7\u02B7, "Blur Command Buffer", "Source", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B5\u02BE\u02B3\u02BB\u02BA\u02B7\u02B5\u02B2\u02B2\u02B8\u02BB), new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(Application.Quit), this.\u02B3\u02B2\u02B7\u02BA\u02C1\u02C0\u02BB\u02BE\u02B9\u02B3\u02B2);
 					this.\u02BF\u02C1\u02B5\u02BD\u02BB\u02C1\u02B6\u02B8\u02B6\u02BB\u02B8 = false;
@@ -524,7 +524,7 @@ public class MainMenu : BaseMenu
 				}
 			}
 		}
-		if (this.controlMapper.isOpen || this.confirmMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 || this.notSupportedMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 || this.\u02B2\u02BF\u02BD\u02B5\u02B7\u02C1\u02B3\u02BE\u02BC\u02C1\u02B3 || this.v1popup.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
+		if (this.controlMapper.isOpen || this.confirmMenu.isActive || this.notSupportedMenu.isActive || this.\u02B2\u02BF\u02BD\u02B5\u02B7\u02C1\u02B3\u02BE\u02BC\u02C1\u02B3 || this.v1popup.isActive)
 		{
 			return;
 		}
@@ -538,7 +538,7 @@ public class MainMenu : BaseMenu
 
 	private void \u02B8\u02BB\u02B9\u02B3\u02B6\u02BA\u02B9\u02B7\u02BF\u02B5\u02B7()
 	{
-		int num = StringUtils.ExtractCommitId(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02B3\u02B7\u02BC\u02B5\u02B3\u02B8\u02BB\u02BE\u02B5\u02B3);
+		int num = StringUtils.ExtractCommitId(GlobalVariables.instance.\u02B4\u02B3\u02B7\u02BC\u02B5\u02B3\u02B8\u02BB\u02BE\u02B5\u02B3);
 		int num2 = StringUtils.ExtractCommitId(\u02B8\u02BC\u02BC\u02C0\u02BB\u02C1\u02BB\u02BC\u02B2\u02B7\u02C0.\u02BE\u02BA\u02B8\u02BC\u02B5\u02B7\u02C1\u02C1\u02BA\u02B3\u02B9);
 		this.\u02BF\u02C1\u02B5\u02BD\u02BB\u02C1\u02B6\u02B8\u02B6\u02BB\u02B8 = num2 > num;
 		this.\u02B7\u02B4\u02B4\u02B3\u02BF\u02B6\u02BF\u02C1\u02BA\u02BF\u02B5 = !RemoteSettings.GetBool("isSupported", true);
@@ -556,9 +556,9 @@ public class MainMenu : BaseMenu
 	{
 		if (!this.\u02B9\u02B3\u02B4\u02B7\u02B7\u02B7\u02BC\u02BE\u02B6\u02B6\u02B6 && PlayerPrefs.GetInt("Default Sort Filter", 0) == 0)
 		{
-			for (int i = 0; i < GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF.Count; i++)
+			for (int i = 0; i < GlobalVariables.instance.playerList.Count; i++)
 			{
-				if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].playerProfile != null && !this.v1popup.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
+				if (GlobalVariables.instance.playerList[i].playerProfile != null && !this.v1popup.isActive)
 				{
 					this.v1popup.\u02B5\u02B8\u02C0\u02B7\u02BF\u02B7\u02B5\u02BD\u02C1\u02B8\u02B7("Rhythm Guitar", "allow_duplicate_songs", "full_playlist", null, null, "isEOL");
 					PlayerPrefs.SetInt("teststuff", 1);
@@ -606,13 +606,13 @@ public class MainMenu : BaseMenu
 	{
 		if (BassAudioManager.Instance.\u02C1\u02B2\u02C1\u02BA\u02BA\u02C1\u02BA\u02B4\u02BD\u02C0\u02BE != null)
 		{
-			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02BA\u02BB\u02B8\u02B9\u02C0\u02BD\u02B5\u02B4\u02B6\u02B3 = true;
-			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4 = false;
-			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02C1\u02BF\u02BD\u02B5\u02BE\u02C1\u02BE\u02B8\u02BF\u02B7 = BassAudioManager.Instance.\u02C1\u02B2\u02C1\u02BA\u02BA\u02C1\u02BA\u02B4\u02BD\u02C0\u02BE;
-			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 = GameMode.Quickplay;
+			GlobalVariables.instance.\u02C1\u02BA\u02BB\u02B8\u02B9\u02C0\u02BD\u02B5\u02B4\u02B6\u02B3 = true;
+			GlobalVariables.instance.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4 = false;
+			GlobalVariables.instance.\u02B7\u02C1\u02BF\u02BD\u02B5\u02BE\u02C1\u02BE\u02B8\u02BF\u02B7 = BassAudioManager.Instance.\u02C1\u02B2\u02C1\u02BA\u02BA\u02C1\u02BA\u02B4\u02BD\u02C0\u02BE;
+			GlobalVariables.instance.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 = GameMode.Quickplay;
 			this.songSelect.SetActive(true);
-			this.songSelect.GetComponent<SongSelect>().\u02BC\u02C1\u02C0\u02BE\u02BD\u02BD\u02B2\u02BB\u02B9\u02B9\u02BF((SongEntry)GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02C1\u02BF\u02BD\u02B5\u02BE\u02C1\u02BE\u02B8\u02BF\u02B7);
-			this.songSelect.GetComponent<SongSelect>().\u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3();
+			this.songSelect.GetComponent<SongSelect>().\u02BC\u02C1\u02C0\u02BE\u02BD\u02BD\u02B2\u02BB\u02B9\u02B9\u02BF((SongEntry)GlobalVariables.instance.\u02B7\u02C1\u02BF\u02BD\u02B5\u02BE\u02C1\u02BE\u02B8\u02BF\u02B7);
+			this.songSelect.GetComponent<SongSelect>().ConfirmPressed();
 			this.\u02B7\u02BA\u02BF\u02B2\u02BA\u02BC\u02BC\u02BB\u02B2\u02BC\u02BF.\u02B3\u02BE\u02B8\u02B5\u02C0\u02B8\u02BF\u02C0\u02B3\u02B7\u02B7(false);
 			base.gameObject.SetActive(false);
 		}
@@ -620,7 +620,7 @@ public class MainMenu : BaseMenu
 
 	private string \u02B8\u02B6\u02BC\u02C0\u02B9\u02B9\u02B4\u02BA\u02C1\u02B3\u02BA(string \u02BA\u02BB\u02B2\u02C0\u02BD\u02BF\u02B4\u02BC\u02BC\u02BC\u02BB)
 	{
-		return \u02BA\u02BB\u02B2\u02C0\u02BD\u02BF\u02B4\u02BC\u02BC\u02BC\u02BB + "_" + ((SettingsController.language.CurrentValue == 4) ? "Portuguese" : GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BC\u02C0\u02B5\u02BD\u02B2\u02BC\u02BA\u02BC\u02B9\u02B6\u02B6[SettingsController.language.CurrentValue]);
+		return \u02BA\u02BB\u02B2\u02C0\u02BD\u02BF\u02B4\u02BC\u02BC\u02BC\u02BB + "_" + ((SettingsController.language.CurrentValue == 4) ? "Portuguese" : GlobalVariables.instance.\u02BC\u02C0\u02B5\u02BD\u02B2\u02BC\u02BA\u02BC\u02B9\u02B6\u02B6[SettingsController.language.CurrentValue]);
 	}
 
 	public void \u02BC\u02BD\u02B3\u02BC\u02BD\u02B2\u02B8\u02B7\u02BC\u02BF\u02BF()
@@ -638,9 +638,9 @@ public class MainMenu : BaseMenu
 	{
 		if (!this.\u02B9\u02B3\u02B4\u02B7\u02B7\u02B7\u02BC\u02BE\u02B6\u02B6\u02B6 && PlayerPrefs.GetInt("v1shownpopup", 0) == 0)
 		{
-			for (int i = 0; i < GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF.Count; i++)
+			for (int i = 0; i < GlobalVariables.instance.playerList.Count; i++)
 			{
-				if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].playerProfile != null && !this.v1popup.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
+				if (GlobalVariables.instance.playerList[i].playerProfile != null && !this.v1popup.isActive)
 				{
 					this.v1popup.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("v1popupHeader", "v1popupReadGuide", "Continue", null, null, "v1popupMessage");
 					PlayerPrefs.SetInt("v1shownpopup", 1);
@@ -696,11 +696,11 @@ public class MainMenu : BaseMenu
 		this.\u02BB\u02BF\u02C0\u02BC\u02B8\u02BC\u02BA\u02C0\u02BA\u02C1\u02BB();
 		if (Input.GetKeyUp(KeyCode.Space) && !ColorProfileEditor.\u02BF\u02B3\u02B6\u02B5\u02BB\u02B7\u02BE\u02BF\u02C1\u02BA\u02BF() && !SongPathsManager.\u02BF\u02B3\u02B6\u02B5\u02BB\u02B7\u02BE\u02BF\u02C1\u02BA\u02BF() && !this.controlMapper.isOpen && this.controlMapper.enabled)
 		{
-			foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
+			foreach (CHPlayer chplayer in GlobalVariables.instance.playerList)
 			{
-				if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
+				if (chplayer.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
 				{
-					u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02B4\u02B3\u02B5\u02B8\u02C0\u02B4\u02B4\u02BF\u02BA\u02BB\u02BC.\u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8();
+					chplayer.\u02B4\u02B3\u02B5\u02B8\u02C0\u02B4\u02B4\u02BF\u02BA\u02BB\u02BC.\u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8();
 				}
 			}
 			this.controlMapper.Open();
@@ -708,20 +708,20 @@ public class MainMenu : BaseMenu
 		}
 		if (this.\u02B7\u02B4\u02B4\u02B3\u02BF\u02B6\u02BF\u02C1\u02BA\u02BF\u02B5 && PlayerPrefs.GetInt("isEOL", 0) == 0)
 		{
-			for (int i = 0; i < GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF.Count; i++)
+			for (int i = 0; i < GlobalVariables.instance.playerList.Count; i++)
 			{
-				if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].playerProfile != null && !this.notSupportedMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
+				if (GlobalVariables.instance.playerList[i].playerProfile != null && !this.notSupportedMenu.isActive)
 				{
 					this.notSupportedMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD(this.\u02BC\u02BE\u02B6\u02B5\u02B9\u02C0\u02B7\u02C1\u02BC\u02B7\u02B7, "Visit Website", "OK", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B6\u02BF\u02BD\u02BC\u02BA\u02C1\u02B2\u02B4\u02BB\u02BB\u02BA), new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B5\u02B4\u02B8\u02B3\u02BB\u02BC\u02B4\u02BC\u02B6\u02BE\u02B4), this.\u02B3\u02B2\u02B7\u02BA\u02C1\u02C0\u02BB\u02BE\u02B9\u02B3\u02B2);
 					break;
 				}
 			}
 		}
-		if (this.\u02BF\u02C1\u02B5\u02BD\u02BB\u02C1\u02B6\u02B8\u02B6\u02BB\u02B8 && GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02BE\u02C1\u02B4\u02B4\u02B6\u02BA\u02BB\u02C1\u02BE\u02BB)
+		if (this.\u02BF\u02C1\u02B5\u02BD\u02BB\u02C1\u02B6\u02B8\u02B6\u02BB\u02B8 && GlobalVariables.instance.\u02BE\u02BE\u02C1\u02B4\u02B4\u02B6\u02BA\u02BB\u02C1\u02BE\u02BB)
 		{
-			for (int j = 0; j < GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF.Count; j++)
+			for (int j = 0; j < GlobalVariables.instance.playerList.Count; j++)
 			{
-				if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[j].playerProfile != null && !this.notSupportedMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
+				if (GlobalVariables.instance.playerList[j].playerProfile != null && !this.notSupportedMenu.isActive)
 				{
 					this.notSupportedMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD(this.\u02BC\u02BE\u02B6\u02B5\u02B9\u02C0\u02B7\u02C1\u02BC\u02B7\u02B7, "Go to Discord", "Quit", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B5\u02BE\u02B3\u02BB\u02BA\u02B7\u02B5\u02B2\u02B2\u02B8\u02BB), new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(Application.Quit), this.\u02B3\u02B2\u02B7\u02BA\u02C1\u02C0\u02BB\u02BE\u02B9\u02B3\u02B2);
 					this.\u02BF\u02C1\u02B5\u02BD\u02BB\u02C1\u02B6\u02B8\u02B6\u02BB\u02B8 = false;
@@ -729,7 +729,7 @@ public class MainMenu : BaseMenu
 				}
 			}
 		}
-		if (this.controlMapper.isOpen || this.confirmMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 || this.notSupportedMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 || this.\u02B2\u02BF\u02BD\u02B5\u02B7\u02C1\u02B3\u02BE\u02BC\u02C1\u02B3 || this.v1popup.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
+		if (this.controlMapper.isOpen || this.confirmMenu.isActive || this.notSupportedMenu.isActive || this.\u02B2\u02BF\u02BD\u02B5\u02B7\u02C1\u02B3\u02BE\u02BC\u02C1\u02B3 || this.v1popup.isActive)
 		{
 			return;
 		}
@@ -783,7 +783,7 @@ public class MainMenu : BaseMenu
 
 	private void \u02B7\u02B5\u02BD\u02B2\u02BE\u02B3\u02B5\u02B5\u02B6\u02B4\u02B3()
 	{
-		int num = StringUtils.ExtractCommitId(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02B3\u02B7\u02BC\u02B5\u02B3\u02B8\u02BB\u02BE\u02B5\u02B3);
+		int num = StringUtils.ExtractCommitId(GlobalVariables.instance.\u02B4\u02B3\u02B7\u02BC\u02B5\u02B3\u02B8\u02BB\u02BE\u02B5\u02B3);
 		int num2 = StringUtils.ExtractCommitId(\u02B8\u02BC\u02BC\u02C0\u02BB\u02C1\u02BB\u02BC\u02B2\u02B7\u02C0.\u02BE\u02BA\u02B8\u02BC\u02B5\u02B7\u02C1\u02C1\u02BA\u02B3\u02B9);
 		this.\u02BF\u02C1\u02B5\u02BD\u02BB\u02C1\u02B6\u02B8\u02B6\u02BB\u02B8 = num2 > num;
 		this.\u02B7\u02B4\u02B4\u02B3\u02BF\u02B6\u02BF\u02C1\u02BA\u02BF\u02B5 = RemoteSettings.GetBool("Combo Bonus", false);
@@ -959,24 +959,24 @@ public class MainMenu : BaseMenu
 		GlobalVariables.swr = true;
 		base.Start();
 		this.\u02B8\u02BB\u02B9\u02B3\u02B6\u02BA\u02B9\u02B7\u02BF\u02B5\u02B7();
-		FadeBehaviour.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02C0\u02B2\u02BF\u02C0\u02BA\u02C0\u02BB\u02B4\u02BC\u02BE();
+		FadeBehaviour.instance.\u02BE\u02C0\u02B2\u02BF\u02C0\u02BA\u02C0\u02BB\u02B4\u02BC\u02BE();
 		DateTime now = DateTime.Now;
 		global::UnityEngine.Random.InitState(now.Month + now.Day + (60 - now.Minute) + (60 - now.Second) + (1000 - now.Millisecond) + global::UnityEngine.Random.Range(-99999, 99999));
 		if (\u02B8\u02B8\u02B7\u02BE\u02B3\u02BF\u02B3\u02B4\u02B4\u02B9\u02BA.\u02BF\u02BB\u02B4\u02B5\u02B9\u02B4\u02B5\u02C1\u02B4\u02BC\u02B6)
 		{
 			this.analyticsDialog.SetActive(true);
 		}
-		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02BC\u02B3\u02BB\u02B2\u02B6\u02BA\u02BB\u02BA\u02BC\u02BD)
+		if (GlobalVariables.instance.\u02B6\u02BC\u02B3\u02BB\u02B2\u02B6\u02BA\u02BB\u02BA\u02BC\u02BD)
 		{
 			base.gameObject.SetActive(false);
 			this.onlineMenu.SetActive(true);
-			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02BC\u02B3\u02BB\u02B2\u02B6\u02BA\u02BB\u02BA\u02BC\u02BD = false;
+			GlobalVariables.instance.\u02B6\u02BC\u02B3\u02BB\u02B2\u02B6\u02BA\u02BB\u02BA\u02BC\u02BD = false;
 		}
-		else if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B9\u02B4\u02BC\u02B8\u02B7\u02C0\u02BB\u02B9\u02B9\u02B5\u02C0)
+		else if (GlobalVariables.instance.\u02B9\u02B4\u02BC\u02B8\u02B7\u02C0\u02BB\u02B9\u02B9\u02B5\u02C0)
 		{
 			this.songSelect.SetActive(true);
 			base.gameObject.SetActive(false);
-			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B9\u02B4\u02BC\u02B8\u02B7\u02C0\u02BB\u02B9\u02B9\u02B5\u02C0 = false;
+			GlobalVariables.instance.\u02B9\u02B4\u02BC\u02B8\u02B7\u02C0\u02BB\u02B9\u02B9\u02B5\u02C0 = false;
 		}
 		else if (CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BA\u02B8\u02B6\u02BB\u02B5\u02B2\u02B8\u02B6\u02BB\u02BB)
 		{
@@ -987,9 +987,9 @@ public class MainMenu : BaseMenu
 		{
 			this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("bassinitfail", "Quit", null, new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B6\u02B5\u02BF\u02BF\u02B4\u02B8\u02C0\u02B3\u02B6\u02C1\u02C1), new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B6\u02B5\u02BF\u02BF\u02B4\u02B8\u02C0\u02B3\u02B6\u02C1\u02C1), null);
 		}
-		else if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BF\u02B6\u02B4\u02BB\u02BC\u02BF\u02B7\u02B9\u02BF\u02C0\u02B5)
+		else if (GlobalVariables.instance.\u02BF\u02B6\u02B4\u02BB\u02BC\u02BF\u02B7\u02B9\u02BF\u02C0\u02B5)
 		{
-			if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02B5\u02BE\u02C1\u02B9\u02B2\u02B4\u02B7\u02BA\u02C1\u02BA)
+			if (GlobalVariables.instance.\u02B6\u02B5\u02BE\u02C1\u02B9\u02B2\u02B4\u02B7\u02BA\u02C1\u02BA)
 			{
 				this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("This song requires a rescan!", "Scan Songs", "Don't Scan Songs", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02BC\u02BD\u02B3\u02BC\u02BD\u02B2\u02B8\u02B7\u02BC\u02BF\u02BF), null, null);
 			}
@@ -997,10 +997,10 @@ public class MainMenu : BaseMenu
 			{
 				this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("Couldn't load that song", "Continue", null, null, null, null);
 			}
-			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02B5\u02BE\u02C1\u02B9\u02B2\u02B4\u02B7\u02BA\u02C1\u02BA = false;
-			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BF\u02B6\u02B4\u02BB\u02BC\u02BF\u02B7\u02B9\u02BF\u02C0\u02B5 = false;
+			GlobalVariables.instance.\u02B6\u02B5\u02BE\u02C1\u02B9\u02B2\u02B4\u02B7\u02BA\u02C1\u02BA = false;
+			GlobalVariables.instance.\u02BF\u02B6\u02B4\u02BB\u02BC\u02BF\u02B7\u02B9\u02BF\u02C0\u02B5 = false;
 		}
-		if (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3)
+		if (!GlobalVariables.instance.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3)
 		{
 			base.StartCoroutine(this.\u02BD\u02BF\u02B8\u02C1\u02B4\u02C1\u02BE\u02B7\u02B3\u02C1\u02BE(false));
 		}

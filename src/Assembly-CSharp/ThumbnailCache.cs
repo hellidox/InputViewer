@@ -224,7 +224,7 @@ public class ThumbnailCache : MonoBehaviour
 		if (this.\u02B5\u02BA\u02BB\u02B8\u02BA\u02BA\u02B8\u02B3\u02BE\u02B2\u02BB < this.\u02B3\u02B7\u02B9\u02BC\u02BE\u02B5\u02B8\u02BE\u02B4\u02BA\u02BC)
 		{
 			this.\u02B5\u02BA\u02BB\u02B8\u02BA\u02BA\u02B8\u02B3\u02BE\u02B2\u02BB++;
-			VideoPlayer videoPlayer = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.gameObject.AddComponent<VideoPlayer>();
+			VideoPlayer videoPlayer = GlobalVariables.instance.gameObject.AddComponent<VideoPlayer>();
 			this.\u02C0\u02BA\u02B8\u02C1\u02BB\u02BE\u02B9\u02B6\u02BF\u02B6\u02B5.Enqueue(videoPlayer);
 			return videoPlayer;
 		}
@@ -235,9 +235,9 @@ public class ThumbnailCache : MonoBehaviour
 	{
 		get
 		{
-			if (ThumbnailCache.\u02B7\u02B3\u02BE\u02B8\u02BB\u02B5\u02B7\u02B9\u02C1\u02B5\u02B9 == null && !GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.TryGetComponent<ThumbnailCache>(out ThumbnailCache.\u02B7\u02B3\u02BE\u02B8\u02BB\u02B5\u02B7\u02B9\u02C1\u02B5\u02B9))
+			if (ThumbnailCache.\u02B7\u02B3\u02BE\u02B8\u02BB\u02B5\u02B7\u02B9\u02C1\u02B5\u02B9 == null && !GlobalVariables.instance.TryGetComponent<ThumbnailCache>(out ThumbnailCache.\u02B7\u02B3\u02BE\u02B8\u02BB\u02B5\u02B7\u02B9\u02C1\u02B5\u02B9))
 			{
-				ThumbnailCache.\u02B7\u02B3\u02BE\u02B8\u02BB\u02B5\u02B7\u02B9\u02C1\u02B5\u02B9 = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.gameObject.AddComponent<ThumbnailCache>();
+				ThumbnailCache.\u02B7\u02B3\u02BE\u02B8\u02BB\u02B5\u02B7\u02B9\u02C1\u02B5\u02B9 = GlobalVariables.instance.gameObject.AddComponent<ThumbnailCache>();
 			}
 			return ThumbnailCache.\u02B7\u02B3\u02BE\u02B8\u02BB\u02B5\u02B7\u02B9\u02C1\u02B5\u02B9;
 		}
@@ -291,7 +291,7 @@ public class ThumbnailCache : MonoBehaviour
 		if (this.\u02B5\u02BA\u02BB\u02B8\u02BA\u02BA\u02B8\u02B3\u02BE\u02B2\u02BB < this.\u02B3\u02B7\u02B9\u02BC\u02BE\u02B5\u02B8\u02BE\u02B4\u02BA\u02BC)
 		{
 			this.\u02B5\u02BA\u02BB\u02B8\u02BA\u02BA\u02B8\u02B3\u02BE\u02B2\u02BB++;
-			VideoPlayer videoPlayer = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.gameObject.AddComponent<VideoPlayer>();
+			VideoPlayer videoPlayer = GlobalVariables.instance.gameObject.AddComponent<VideoPlayer>();
 			this.\u02C0\u02BA\u02B8\u02C1\u02BB\u02BE\u02B9\u02B6\u02BF\u02B6\u02B5.Enqueue(videoPlayer);
 			return videoPlayer;
 		}

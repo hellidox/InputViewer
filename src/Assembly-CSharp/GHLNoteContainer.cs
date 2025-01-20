@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class GHLNoteContainer : MonoBehaviour, \u02BF\u02BB\u02BF\u02B2\u02B6\u02C1\u02BC\u02BD\u02B3\u02BB\u02BB, \u02C0\u02C1\u02B8\u02BF\u02BB\u02BB\u02B9\u02BC\u02B9\u02BD\u02B7
+public class GHLNoteContainer : MonoBehaviour, BaseNoteContainer, \u02C0\u02C1\u02B8\u02BF\u02BB\u02BB\u02B9\u02BC\u02B9\u02BD\u02B7
 {
 	public Vector3 \u02B8\u02C0\u02BF\u02BE\u02BF\u02B9\u02BE\u02B3\u02BA\u02BF\u02B7 { get; set; }
 

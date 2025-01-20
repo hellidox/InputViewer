@@ -66,11 +66,11 @@ public abstract class BasePlayer : MonoBehaviour
 
 	protected virtual void Awake()
 	{
-		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 == null)
+		if (GlobalVariables.instance == null)
 		{
 			return;
 		}
-		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
+		if (GlobalVariables.instance.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
 		{
 			this.spBar.gameObject.SetActive(false);
 			this.healthContainer.gameObject.SetActive(false);
@@ -79,9 +79,9 @@ public abstract class BasePlayer : MonoBehaviour
 		}
 		else if (!SettingsController.\u02BB\u02C0\u02B7\u02B8\u02B3\u02BE\u02B7\u02BB\u02BA\u02B8\u02BA && !CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BA\u02B8\u02B6\u02BB\u02B5\u02B2\u02B8\u02B6\u02BB\u02BB)
 		{
-			GameMode u02B6_u02B9_u02B5_u02BA_u02BD_u02B9_u02BD_u02BC_u02B9_u02B3_u02C = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1;
+			GameMode u02B6_u02B9_u02B5_u02BA_u02BD_u02B9_u02BD_u02BC_u02B9_u02B3_u02C = GlobalVariables.instance.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1;
 		}
-		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 != GameMode.Versus || GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
+		if (GlobalVariables.instance.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 != GameMode.Versus || GlobalVariables.instance.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
 		{
 			base.transform.Find("PlayerOverlays/Versus").gameObject.SetActive(false);
 		}
@@ -101,11 +101,11 @@ public abstract class BasePlayer : MonoBehaviour
 		this.\u02B5\u02C1\u02BA\u02B9\u02B6\u02B7\u02B9\u02BC\u02B7\u02BD\u02B4 = this.player.playerProfile.HasModifier(Modifier.AllOpens);
 		if (this.\u02BC\u02B2\u02B2\u02BB\u02B7\u02B4\u02B3\u02B6\u02C1\u02BC\u02C0 || this.\u02BF\u02C1\u02BF\u02BE\u02C1\u02B2\u02BC\u02BE\u02B3\u02BB\u02B8)
 		{
-			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BB\u02BA\u02C1\u02B8\u02BA\u02C0\u02BD\u02BE\u02B7\u02B7\u02BA = \u02BD\u02B9\u02B2\u02B5\u02BD\u02BC\u02BE\u02BE\u02BE\u02B7\u02B2.Modifier;
+			GlobalVariables.instance.\u02BB\u02BA\u02C1\u02B8\u02BA\u02C0\u02BD\u02BE\u02B7\u02B7\u02BA = \u02BD\u02B9\u02B2\u02B5\u02BD\u02BC\u02BE\u02BE\u02BE\u02B7\u02B2.Modifier;
 		}
 		else
 		{
-			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BB\u02BA\u02C1\u02B8\u02BA\u02C0\u02BD\u02BE\u02B7\u02B7\u02BA = \u02BD\u02B9\u02B2\u02B5\u02BD\u02BC\u02BE\u02BE\u02BE\u02B7\u02B2.None;
+			GlobalVariables.instance.\u02BB\u02BA\u02C1\u02B8\u02BA\u02C0\u02BD\u02BE\u02B7\u02B7\u02BA = \u02BD\u02B9\u02B2\u02B5\u02BD\u02BC\u02BE\u02BE\u02BE\u02B7\u02B2.None;
 		}
 		if (this.\u02BB\u02BD\u02C0\u02B5\u02B8\u02B3\u02BD\u02B6\u02B7\u02BB\u02B7)
 		{
@@ -123,7 +123,7 @@ public abstract class BasePlayer : MonoBehaviour
 
 	protected virtual void \u02B4\u02C0\u02BF\u02BA\u02BD\u02BA\u02B3\u02B8\u02B7\u02B7\u02BA()
 	{
-		float num = ((GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BB\u02BA\u02C1\u02B8\u02BA\u02C0\u02BD\u02BE\u02B7\u02B7\u02BA != \u02BD\u02B9\u02B2\u02B5\u02BD\u02BC\u02BE\u02BE\u02BE\u02B7\u02B2.None) ? 0f : 1f);
+		float num = ((GlobalVariables.instance.\u02BB\u02BA\u02C1\u02B8\u02BA\u02C0\u02BD\u02BE\u02B7\u02B7\u02BA != \u02BD\u02B9\u02B2\u02B5\u02BD\u02BC\u02BE\u02BE\u02BE\u02B7\u02B2.None) ? 0f : 1f);
 		DesaturateSprite[] u02B5_u02BE_u02B5_u02B8_u02B8_u02B4_u02BF_u02BC_u02B4_u02B8_u02B = this.\u02B5\u02BE\u02B5\u02B8\u02B8\u02B4\u02BF\u02BC\u02B4\u02B8\u02B2;
 		for (int i = 0; i < u02B5_u02BE_u02B5_u02B8_u02B8_u02B4_u02BF_u02BC_u02B4_u02B8_u02B.Length; i++)
 		{
@@ -269,7 +269,7 @@ public abstract class BasePlayer : MonoBehaviour
 	{
 		this.\u02B3\u02B9\u02B8\u02BF\u02C1\u02B9\u02B2\u02BC\u02B5\u02BB\u02BB = 0;
 		this.\u02B9\u02B2\u02BF\u02BD\u02B3\u02B7\u02BF\u02BA\u02BD\u02B9\u02B5 = 0;
-		foreach (Note note in this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0)
+		foreach (Note note in this.Notes)
 		{
 			if (note.\u02BF\u02BE\u02B5\u02B3\u02C1\u02C1\u02B2\u02BF\u02B5\u02BB\u02B4)
 			{
@@ -284,10 +284,10 @@ public abstract class BasePlayer : MonoBehaviour
 
 	public virtual void \u02B6\u02B7\u02B6\u02B2\u02BD\u02BC\u02BC\u02BE\u02BF\u02B5\u02B5()
 	{
-		if (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
+		if (!GlobalVariables.instance.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
 		{
 			\u02B6\u02C0\u02B5\u02C1\u02B9\u02BF\u02C0\u02B6\u02BF\u02B2\u02BE.\u02B9\u02B2\u02BC\u02BA\u02B6\u02B7\u02BE\u02B6\u02BF\u02BA\u02B9 u02B9_u02B2_u02BC_u02BA_u02B6_u02B7_u02BE_u02B6_u02BF_u02BA_u02B = \u02B6\u02C0\u02B5\u02C1\u02B9\u02BF\u02C0\u02B6\u02BF\u02B2\u02BE.\u02B9\u02B9\u02BE\u02B4\u02B3\u02B6\u02BC\u02B5\u02B3\u02BC\u02BC(this, this.gameManager.song, true);
-			this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0 = u02B9_u02B2_u02BC_u02BA_u02B6_u02B7_u02BE_u02B6_u02BF_u02BA_u02B.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0;
+			this.Notes = u02B9_u02B2_u02BC_u02BA_u02B6_u02B7_u02BE_u02B6_u02BF_u02BA_u02B.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0;
 			this.\u02BB\u02B5\u02C1\u02BC\u02C1\u02BA\u02BB\u02BD\u02BB\u02BD\u02B2 = u02B9_u02B2_u02BC_u02BA_u02B6_u02B7_u02BE_u02B6_u02BF_u02BA_u02B;
 			this.\u02C1\u02B2\u02B7\u02B9\u02C0\u02B8\u02B7\u02BD\u02BD\u02B7\u02B3();
 			this.\u02B2\u02BB\u02B3\u02B8\u02B5\u02B2\u02C0\u02BF\u02BA\u02B4\u02BC = u02B9_u02B2_u02BC_u02BA_u02B6_u02B7_u02BE_u02B6_u02BF_u02BA_u02B.\u02B2\u02BB\u02B3\u02B8\u02B5\u02B2\u02C0\u02BF\u02BA\u02B4\u02BC;
@@ -347,13 +347,13 @@ public abstract class BasePlayer : MonoBehaviour
 	protected float \u02C0\u02B5\u02C1\u02B4\u02BE\u02B6\u02BD\u02BA\u02BC\u02B4\u02B9(Note \u02B7\u02BF\u02BA\u02BE\u02B7\u02B7\u02B5\u02B3\u02B2\u02C0\u02BC, Note \u02B5\u02B5\u02C1\u02B6\u02BA\u02B8\u02B3\u02BE\u02B7\u02B7\u02B6, float \u02B6\u02B5\u02C0\u02B8\u02C1\u02BB\u02BF\u02BD\u02BF\u02B4\u02BE, float \u02B3\u02BD\u02B2\u02C0\u02BB\u02B4\u02B9\u02BF\u02BF\u02B6\u02B5)
 	{
 		float num;
-		if (\u02B7\u02BF\u02BA\u02BE\u02B7\u02B7\u02B5\u02B3\u02B2\u02C0\u02BC == null || \u02B5\u02B5\u02C1\u02B6\u02BA\u02B8\u02B3\u02BE\u02B7\u02B7\u02B6 == null || \u02B7\u02BF\u02BA\u02BE\u02B7\u02B7\u02B5\u02B3\u02B2\u02C0\u02BC.\u02B2\u02B8\u02BA\u02BA\u02BC\u02B7\u02B5\u02B5\u02B6\u02B5\u02C1 - \u02B5\u02B5\u02C1\u02B6\u02BA\u02B8\u02B3\u02BE\u02B7\u02B7\u02B6.\u02B2\u02B8\u02BA\u02BA\u02BC\u02B7\u02B5\u02B5\u02B6\u02B5\u02C1 == 0f)
+		if (\u02B7\u02BF\u02BA\u02BE\u02B7\u02B7\u02B5\u02B3\u02B2\u02C0\u02BC == null || \u02B5\u02B5\u02C1\u02B6\u02BA\u02B8\u02B3\u02BE\u02B7\u02B7\u02B6 == null || \u02B7\u02BF\u02BA\u02BE\u02B7\u02B7\u02B5\u02B3\u02B2\u02C0\u02BC.time - \u02B5\u02B5\u02C1\u02B6\u02BA\u02B8\u02B3\u02BE\u02B7\u02B7\u02B6.time == 0f)
 		{
 			num = \u02B3\u02BD\u02B2\u02C0\u02BB\u02B4\u02B9\u02BF\u02BF\u02B6\u02B5;
 		}
 		else
 		{
-			num = Mathf.Clamp((\u02B5\u02B5\u02C1\u02B6\u02BA\u02B8\u02B3\u02BE\u02B7\u02B7\u02B6.\u02B2\u02B8\u02BA\u02BA\u02BC\u02B7\u02B5\u02B5\u02B6\u02B5\u02C1 - \u02B7\u02BF\u02BA\u02BE\u02B7\u02B7\u02B5\u02B3\u02B2\u02C0\u02BC.\u02B2\u02B8\u02BA\u02BA\u02BC\u02B7\u02B5\u02B5\u02B6\u02B5\u02C1) / 2f, \u02B6\u02B5\u02C0\u02B8\u02C1\u02BB\u02BF\u02BD\u02BF\u02B4\u02BE, \u02B3\u02BD\u02B2\u02C0\u02BB\u02B4\u02B9\u02BF\u02BF\u02B6\u02B5);
+			num = Mathf.Clamp((\u02B5\u02B5\u02C1\u02B6\u02BA\u02B8\u02B3\u02BE\u02B7\u02B7\u02B6.time - \u02B7\u02BF\u02BA\u02BE\u02B7\u02B7\u02B5\u02B3\u02B2\u02C0\u02BC.time) / 2f, \u02B6\u02B5\u02C0\u02B8\u02C1\u02BB\u02BF\u02BD\u02BF\u02B4\u02BE, \u02B3\u02BD\u02B2\u02C0\u02BB\u02B4\u02B9\u02BF\u02BF\u02B6\u02B5);
 		}
 		return num;
 	}
@@ -365,9 +365,9 @@ public abstract class BasePlayer : MonoBehaviour
 
 	protected float \u02C0\u02BC\u02B5\u02BE\u02BE\u02C0\u02B8\u02C0\u02BD\u02C0\u02BA(Note \u02B9\u02BF\u02B3\u02BB\u02BC\u02B3\u02B9\u02BE\u02BF\u02C0\u02B4, float \u02B6\u02B5\u02C0\u02B8\u02C1\u02BB\u02BF\u02BD\u02BF\u02B4\u02BE, float \u02B3\u02BD\u02B2\u02C0\u02BB\u02B4\u02B9\u02BF\u02BF\u02B6\u02B5)
 	{
-		int num = this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0.\u02B2\u02B4\u02B6\u02B8\u02C0\u02C0\u02B4\u02C0\u02B2\u02BE\u02BD(\u02B9\u02BF\u02B3\u02BB\u02BC\u02B3\u02B9\u02BE\u02BF\u02C0\u02B4, this.\u02BA\u02B8\u02B6\u02BF\u02B7\u02BF\u02BB\u02BC\u02B9\u02B5\u02B9);
-		Note note = this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0.\u02B5\u02B5\u02B9\u02B6\u02BF\u02C0\u02B9\u02B8\u02B8\u02B8\u02C0(\u02B9\u02BF\u02B3\u02BB\u02BC\u02B3\u02B9\u02BE\u02BF\u02C0\u02B4.tickPosition, num);
-		Note note2 = this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0.\u02B7\u02B9\u02B2\u02BF\u02B7\u02BF\u02B2\u02C1\u02B4\u02B7\u02B2(\u02B9\u02BF\u02B3\u02BB\u02BC\u02B3\u02B9\u02BE\u02BF\u02C0\u02B4.tickPosition, num, false);
+		int num = this.Notes.\u02B2\u02B4\u02B6\u02B8\u02C0\u02C0\u02B4\u02C0\u02B2\u02BE\u02BD(\u02B9\u02BF\u02B3\u02BB\u02BC\u02B3\u02B9\u02BE\u02BF\u02C0\u02B4, this.\u02BA\u02B8\u02B6\u02BF\u02B7\u02BF\u02BB\u02BC\u02B9\u02B5\u02B9);
+		Note note = this.Notes.\u02B5\u02B5\u02B9\u02B6\u02BF\u02C0\u02B9\u02B8\u02B8\u02B8\u02C0(\u02B9\u02BF\u02B3\u02BB\u02BC\u02B3\u02B9\u02BE\u02BF\u02C0\u02B4.tickPosition, num);
+		Note note2 = this.Notes.\u02B7\u02B9\u02B2\u02BF\u02B7\u02BF\u02B2\u02C1\u02B4\u02B7\u02B2(\u02B9\u02BF\u02B3\u02BB\u02BC\u02B3\u02B9\u02BE\u02BF\u02C0\u02B4.tickPosition, num, false);
 		float num2 = this.\u02C0\u02B5\u02C1\u02B4\u02BE\u02B6\u02BD\u02BA\u02BC\u02B4\u02B9(\u02B9\u02BF\u02B3\u02BB\u02BC\u02B3\u02B9\u02BE\u02BF\u02C0\u02B4, note, \u02B6\u02B5\u02C0\u02B8\u02C1\u02BB\u02BF\u02BD\u02BF\u02B4\u02BE, \u02B3\u02BD\u02B2\u02C0\u02BB\u02B4\u02B9\u02BF\u02BF\u02B6\u02B5);
 		float num3 = this.\u02C0\u02B5\u02C1\u02B4\u02BE\u02B6\u02BD\u02BA\u02BC\u02B4\u02B9(note2, \u02B9\u02BF\u02B3\u02BB\u02BC\u02B3\u02B9\u02BE\u02BF\u02C0\u02B4, \u02B6\u02B5\u02C0\u02B8\u02C1\u02BB\u02BF\u02BD\u02BF\u02B4\u02BE, \u02B3\u02BD\u02B2\u02C0\u02BB\u02B4\u02B9\u02BF\u02BF\u02B6\u02B5);
 		return this.\u02B9\u02B9\u02B4\u02C1\u02B9\u02B6\u02B2\u02BA\u02B2\u02B2\u02BF(num2 + num3);
@@ -380,7 +380,7 @@ public abstract class BasePlayer : MonoBehaviour
 		Note.\u02C0\u02C1\u02C0\u02BC\u02B5\u02BC\u02C0\u02B5\u02B7\u02B8\u02B3 u02C0_u02C1_u02C0_u02BC_u02B5_u02BC_u02C0_u02B5_u02B7_u02B8_u02B = \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02BE\u02BD\u02B6\u02BB\u02B8\u02BE\u02B3\u02B4\u02BF\u02B3\u02B2.\u02BC\u02C0\u02B8\u02B9\u02B4\u02BB\u02BE\u02B6\u02BC\u02B7\u02C1();
 		while (u02C0_u02C1_u02C0_u02BC_u02B5_u02BC_u02C0_u02B5_u02B7_u02B8_u02B.\u02BF\u02B5\u02B7\u02BB\u02B5\u02BB\u02B7\u02B5\u02B6\u02BA\u02BC())
 		{
-			if (!u02C0_u02C1_u02C0_u02BC_u02B5_u02BC_u02C0_u02B5_u02B7_u02B8_u02B.\u02B9\u02BA\u02BB\u02B4\u02C0\u02B4\u02B6\u02B2\u02B9\u02B3\u02BF.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4)
+			if (!u02C0_u02C1_u02C0_u02BC_u02B5_u02BC_u02C0_u02B5_u02B7_u02B8_u02B.\u02B9\u02BA\u02BB\u02B4\u02C0\u02B4\u02B6\u02B2\u02B9\u02B3\u02BF.wasHit)
 			{
 				flag = false;
 				break;
@@ -418,9 +418,9 @@ public abstract class BasePlayer : MonoBehaviour
 		}
 		if (\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02B5\u02B7\u02BB\u02B7\u02BA\u02B3\u02B2\u02B7\u02C1\u02B3\u02B4 && this.\u02BF\u02B7\u02B6\u02B6\u02BE\u02BE\u02C0\u02C0\u02BB\u02B2\u02C1 && flag)
 		{
-			if (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
+			if (!GlobalVariables.instance.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
 			{
-				\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02C0\u02B7\u02C1\u02B5\u02B9\u02B3\u02BF\u02B5\u02BC\u02B9\u02C0 &= ~Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.STAR_POWER_END;
+				\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.flags &= ~Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.STAR_POWER_END;
 				this.\u02B8\u02B8\u02B3\u02BD\u02B2\u02BB\u02BF\u02B8\u02B3\u02B8\u02BD(0.25f, true);
 				this.\u02C0\u02B4\u02B5\u02B8\u02B6\u02B8\u02B2\u02BE\u02B6\u02B5\u02B2 = true;
 			}
@@ -455,9 +455,9 @@ public abstract class BasePlayer : MonoBehaviour
 		else
 		{
 			this.health -= this.healthGain;
-			if (this.health < 0f && !GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02B8\u02B9\u02BA\u02BB\u02C1\u02BB\u02B9\u02BE\u02C1\u02B9)
+			if (this.health < 0f && !GlobalVariables.instance.\u02BE\u02B8\u02B9\u02BA\u02BB\u02C1\u02BB\u02B9\u02BE\u02C1\u02B9)
 			{
-				GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02B8\u02B9\u02BA\u02BB\u02C1\u02BB\u02B9\u02BE\u02C1\u02B9 = true;
+				GlobalVariables.instance.\u02BE\u02B8\u02B9\u02BA\u02BB\u02C1\u02BB\u02B9\u02BE\u02C1\u02B9 = true;
 				GameAudioManager.PlaySound(SoundEffectsChannel.SongFail);
 				this.gameManager.EndSong();
 			}
@@ -475,19 +475,19 @@ public abstract class BasePlayer : MonoBehaviour
 
 	public void \u02BA\u02B6\u02C0\u02B4\u02B4\u02BC\u02B7\u02BB\u02B2\u02C0\u02BF()
 	{
-		if (this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0[this.\u02BA\u02B8\u02B6\u02BF\u02B7\u02BF\u02BB\u02BC\u02B9\u02B5\u02B9].IsExtendedSustain)
+		if (this.Notes[this.\u02BA\u02B8\u02B6\u02BF\u02B7\u02BF\u02BB\u02BC\u02B9\u02B5\u02B9].IsExtendedSustain)
 		{
 			for (int i = this.\u02BA\u02B8\u02B6\u02BF\u02B7\u02BF\u02BB\u02BC\u02B9\u02B5\u02B9 - 1; i > 0; i--)
 			{
-				Note note = this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0[i];
+				Note note = this.Notes[i];
 				if (!note.IsExtendedSustain || !note.isStarPower)
 				{
 					break;
 				}
-				note.\u02C0\u02B7\u02C1\u02B5\u02B9\u02B3\u02BF\u02B5\u02BC\u02B9\u02C0 &= ~Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.STAR_POWER;
+				note.flags &= ~Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.STAR_POWER;
 			}
 		}
-		foreach (Note note2 in EnumerableRanges.EnumerateRange<Note>(this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0, this.\u02BA\u02B8\u02B6\u02BF\u02B7\u02BF\u02BB\u02BC\u02B9\u02B5\u02B9, int.MaxValue))
+		foreach (Note note2 in EnumerableRanges.EnumerateRange<Note>(this.Notes, this.\u02BA\u02B8\u02B6\u02BF\u02B7\u02BF\u02BB\u02BC\u02B9\u02B5\u02B9, int.MaxValue))
 		{
 			if (note2.\u02B5\u02B7\u02BB\u02B7\u02BA\u02B3\u02B2\u02B7\u02C1\u02B3\u02B4)
 			{
@@ -495,14 +495,14 @@ public abstract class BasePlayer : MonoBehaviour
 				while (u02C0_u02C1_u02C0_u02BC_u02B5_u02BC_u02C0_u02B5_u02B7_u02B8_u02B.\u02BF\u02B5\u02B7\u02BB\u02B5\u02BB\u02B7\u02B5\u02B6\u02BA\u02BC())
 				{
 					Note note3 = u02C0_u02C1_u02C0_u02BC_u02B5_u02BC_u02C0_u02B5_u02B7_u02B8_u02B.\u02B9\u02BA\u02BB\u02B4\u02C0\u02B4\u02B6\u02B2\u02B9\u02B3\u02BF;
-					note3.\u02C0\u02B7\u02C1\u02B5\u02B9\u02B3\u02BF\u02B5\u02BC\u02B9\u02C0 &= ~Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.STAR_POWER;
-					note3.\u02C0\u02B7\u02C1\u02B5\u02B9\u02B3\u02BF\u02B5\u02BC\u02B9\u02C0 &= ~Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.STAR_POWER_END;
+					note3.flags &= ~Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.STAR_POWER;
+					note3.flags &= ~Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.STAR_POWER_END;
 				}
 				return;
 			}
 			if (note2.isStarPower)
 			{
-				note2.\u02C0\u02B7\u02C1\u02B5\u02B9\u02B3\u02BF\u02B5\u02BC\u02B9\u02C0 &= ~Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.STAR_POWER;
+				note2.flags &= ~Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.STAR_POWER;
 			}
 		}
 	}
@@ -614,7 +614,7 @@ public abstract class BasePlayer : MonoBehaviour
 			{
 				if (GlobalHelper.soundOnJudgeBreak)
 				{
-					BassAudioManager.Instance.PlaySoundInternal(SoundEffectsChannel.FreestyleSnare, 0, 116.666664f * GlobalHelper.judgeBreakSoundVolume);
+					BassAudioManager.Instance.PlaySoundInternal(SoundEffectsChannel.FreestyleSnare, 0, 25f * GlobalHelper.judgeBreakSoundVolume);
 				}
 				this.missFromWindow = false;
 			}
@@ -654,7 +654,7 @@ public abstract class BasePlayer : MonoBehaviour
 		}
 		int num = 0;
 		int num2 = 0;
-		foreach (Note note in this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0)
+		foreach (Note note in this.Notes)
 		{
 			int num3;
 			if (note.\u02BC\u02BF\u02B7\u02B2\u02C0\u02C1\u02BD\u02BC\u02B9\u02B4\u02B8)
@@ -864,7 +864,7 @@ public abstract class BasePlayer : MonoBehaviour
 			}
 			if (GlobalHelper.showHPBar)
 			{
-				if (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02B8\u02B9\u02BA\u02BB\u02C1\u02BB\u02B9\u02BE\u02C1\u02B9)
+				if (!GlobalVariables.instance.\u02BE\u02B8\u02B9\u02BA\u02BB\u02C1\u02BB\u02B9\u02BE\u02C1\u02B9)
 				{
 					this.healthContainer.gameObject.SetActive(true);
 				}
@@ -890,7 +890,7 @@ public abstract class BasePlayer : MonoBehaviour
 		this.\u02B9\u02BF\u02B7\u02BE\u02B9\u02B5\u02B4\u02B9\u02B6\u02B9\u02B6 = 0;
 		if (!this.gameManager.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5)
 		{
-			if (!this.player.playerProfile.isRemotePlayer && this.player.rewiredPlayer.GetButtonDown(16))
+			if (!this.player.playerProfile.isRemotePlayer && this.player.player.GetButtonDown(16))
 			{
 				this.gameManager.\u02B7\u02BB\u02B6\u02C0\u02BE\u02B5\u02B8\u02C0\u02B3\u02C0\u02BD(this.player);
 			}
@@ -943,14 +943,14 @@ public abstract class BasePlayer : MonoBehaviour
 
 	protected virtual void \u02B9\u02C0\u02B2\u02BA\u02B9\u02BF\u02BE\u02BE\u02BD\u02B4\u02B7()
 	{
-		if (this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0 == null || this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0.Count == 0)
+		if (this.Notes == null || this.Notes.Count == 0)
 		{
 			return;
 		}
-		Note note = this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0[this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0.Count - 1];
-		this.\u02C0\u02B2\u02B2\u02BA\u02B5\u02B9\u02BD\u02B6\u02BD\u02B6\u02B9 = !this.gameManager.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5 && this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0.Count > 0 && this.\u02BA\u02B8\u02B6\u02BF\u02B7\u02BF\u02BB\u02BC\u02B9\u02B5\u02B9 > 0 && !note.\u02BC\u02B9\u02B4\u02B6\u02B5\u02BC\u02BB\u02BC\u02BB\u02B4\u02B7;
+		Note note = this.Notes[this.Notes.Count - 1];
+		this.\u02C0\u02B2\u02B2\u02BA\u02B5\u02B9\u02BD\u02B6\u02BD\u02B6\u02B9 = !this.gameManager.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5 && this.Notes.Count > 0 && this.\u02BA\u02B8\u02B6\u02BF\u02B7\u02BF\u02BB\u02BC\u02B9\u02B5\u02B9 > 0 && !note.\u02BC\u02B9\u02B4\u02B6\u02B5\u02BC\u02BB\u02BC\u02BB\u02B4\u02B7;
 		uint num = 0U;
-		foreach (Note note2 in EnumerableRanges.EnumerateRange<Note>(this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0, this.\u02BA\u02B8\u02B6\u02BF\u02B7\u02BF\u02BB\u02BC\u02B9\u02B5\u02B9, int.MaxValue))
+		foreach (Note note2 in EnumerableRanges.EnumerateRange<Note>(this.Notes, this.\u02BA\u02B8\u02B6\u02BF\u02B7\u02BF\u02BB\u02BC\u02B9\u02B5\u02B9, int.MaxValue))
 		{
 			if (this.\u02B2\u02B3\u02B6\u02B9\u02B6\u02B8\u02B3\u02BE\u02BE\u02B3\u02B6)
 			{
@@ -964,12 +964,12 @@ public abstract class BasePlayer : MonoBehaviour
 				this.\u02B4\u02B4\u02BF\u02B5\u02B4\u02B6\u02BA\u02B7\u02B2\u02B9\u02C1 = 0f;
 				this.\u02B8\u02B2\u02B4\u02BF\u02C0\u02B8\u02C0\u02BA\u02B9\u02B2\u02B7 = -this.hitWindow;
 			}
-			double num3 = (double)note2.\u02B2\u02B8\u02BA\u02BA\u02BC\u02B7\u02B5\u02B5\u02B6\u02B5\u02C1 - this.gameManager.songTime;
+			double num3 = (double)note2.time - this.gameManager.songTime;
 			if (num3 > (double)this.\u02B4\u02B4\u02BF\u02B5\u02B4\u02B6\u02BA\u02B7\u02B2\u02B9\u02C1)
 			{
-				while (this.\u02BA\u02B8\u02B6\u02BF\u02B7\u02BF\u02BB\u02BC\u02B9\u02B5\u02B9 < this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0.Count)
+				while (this.\u02BA\u02B8\u02B6\u02BF\u02B7\u02BF\u02BB\u02BC\u02B9\u02B5\u02B9 < this.Notes.Count)
 				{
-					Note note3 = this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0[this.\u02BA\u02B8\u02B6\u02BF\u02B7\u02BF\u02BB\u02BC\u02B9\u02B5\u02B9];
+					Note note3 = this.Notes[this.\u02BA\u02B8\u02B6\u02BF\u02B7\u02BF\u02BB\u02BC\u02B9\u02B5\u02B9];
 					bool flag = false;
 					Note.\u02C0\u02C1\u02C0\u02BC\u02B5\u02BC\u02C0\u02B5\u02B7\u02B8\u02B3 u02C0_u02C1_u02C0_u02BC_u02B5_u02BC_u02C0_u02B5_u02B7_u02B8_u02B = note3.\u02BE\u02BD\u02B6\u02BB\u02B8\u02BE\u02B3\u02B4\u02BF\u02B3\u02B2.\u02BC\u02C0\u02B8\u02B9\u02B4\u02BB\u02BE\u02B6\u02BC\u02B7\u02C1();
 					while (u02C0_u02C1_u02C0_u02BC_u02B5_u02BC_u02C0_u02B5_u02B7_u02B8_u02B.\u02BF\u02B5\u02B7\u02BB\u02B5\u02BB\u02B7\u02B5\u02B6\u02BA\u02BC())
@@ -1033,16 +1033,16 @@ public abstract class BasePlayer : MonoBehaviour
 			{
 				num2 = \u02B4\u02BD\u02B7\u02B7\u02B6\u02BC\u02BB\u02B4\u02B3\u02B2\u02BD[j + 1].\u02B3\u02BF\u02B9\u02BA\u02B5\u02B9\u02B7\u02BC\u02BC\u02B8\u02B8;
 			}
-			while (i < this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0.Count)
+			while (i < this.Notes.Count)
 			{
-				Note note = this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0[i];
+				Note note = this.Notes[i];
 				if (num2 > 0U && note.tickPosition >= num2)
 				{
 					break;
 				}
 				if (!note.IsDisjoint || !note.\u02B5\u02C0\u02B3\u02C0\u02B6\u02B5\u02B8\u02BD\u02B6\u02B4\u02B4)
 				{
-					if (note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4)
+					if (note.wasHit)
 					{
 						num3++;
 					}
@@ -1116,11 +1116,11 @@ public abstract class BasePlayer : MonoBehaviour
 	{
 		get
 		{
-			if (this.\u02BA\u02B8\u02B6\u02BF\u02B7\u02BF\u02BB\u02BC\u02B9\u02B5\u02B9 >= this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0.Count)
+			if (this.\u02BA\u02B8\u02B6\u02BF\u02B7\u02BF\u02BB\u02BC\u02B9\u02B5\u02B9 >= this.Notes.Count)
 			{
 				return null;
 			}
-			return this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0[this.\u02BA\u02B8\u02B6\u02BF\u02B7\u02BF\u02BB\u02BC\u02B9\u02B5\u02B9];
+			return this.Notes[this.\u02BA\u02B8\u02B6\u02BF\u02B7\u02BF\u02BB\u02BC\u02B9\u02B5\u02B9];
 		}
 	}
 
@@ -1162,11 +1162,11 @@ public abstract class BasePlayer : MonoBehaviour
 		{
 			if (weightSystem != GlobalHelper.WeightSystem.Etterna)
 			{
-				array2 = new float[] { 1f, 1f, 0.983f, 0.655f, 0.255f, -0.5f, -1f, -0.636f };
+				array2 = new float[] { 1f, 1f, 0.983f, 0.655f, 0.255f, -0.5f, -1f, -0.255f };
 			}
 			else
 			{
-				array2 = new float[] { 1f, 1f, 0.673f, 0.327f, 0f, -0.255f, -0.5f, -1f };
+				array2 = new float[] { 1f, 1f, 0.673f, 0.327f, 0f, -0.255f, -0.5f, 0f };
 			}
 		}
 		else
@@ -1267,7 +1267,7 @@ public abstract class BasePlayer : MonoBehaviour
 	public bool \u02B2\u02BF\u02BD\u02B2\u02C0\u02BD\u02BA\u02B2\u02BC\u02B5\u02B6;
 
 	[HideInInspector]
-	public \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 player;
+	public CHPlayer player;
 
 	[SerializeField]
 	protected SPBar spBar;
@@ -1283,7 +1283,7 @@ public abstract class BasePlayer : MonoBehaviour
 
 	public \u02B6\u02C0\u02B5\u02C1\u02B9\u02BF\u02C0\u02B6\u02BF\u02B2\u02BE.\u02B9\u02B2\u02BC\u02BA\u02B6\u02B7\u02BE\u02B6\u02BF\u02BA\u02B9 \u02BB\u02B5\u02C1\u02BC\u02C1\u02BA\u02BB\u02BD\u02BB\u02BD\u02B2;
 
-	public List<Note> \u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0;
+	public List<Note> Notes;
 
 	public List<\u02B4\u02C1\u02B5\u02BD\u02BD\u02B7\u02BA\u02BB\u02B4\u02C0\u02B8> \u02B4\u02B7\u02BC\u02C1\u02B2\u02B8\u02B2\u02BD\u02BD\u02BC\u02BF;
 
