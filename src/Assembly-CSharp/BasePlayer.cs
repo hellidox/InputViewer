@@ -271,11 +271,11 @@ public abstract class BasePlayer : MonoBehaviour
 		this.\u02B9\u02B2\u02BF\u02BD\u02B3\u02B7\u02BF\u02BA\u02BD\u02B9\u02B5 = 0;
 		foreach (Note note in this.Notes)
 		{
-			if (note.\u02BF\u02BE\u02B5\u02B3\u02C1\u02C1\u02B2\u02BF\u02B5\u02BB\u02B4)
+			if (note.IsAccent)
 			{
 				this.\u02B9\u02B2\u02BF\u02BD\u02B3\u02B7\u02BF\u02BA\u02BD\u02B9\u02B5++;
 			}
-			if (note.\u02BD\u02BE\u02BC\u02B8\u02BC\u02B2\u02B4\u02B4\u02BA\u02BF\u02B6)
+			if (note.IsDrumGhost)
 			{
 				this.\u02B3\u02B9\u02B8\u02BF\u02C1\u02B9\u02B2\u02BC\u02B5\u02BB\u02BB++;
 			}
@@ -657,7 +657,7 @@ public abstract class BasePlayer : MonoBehaviour
 		foreach (Note note in this.Notes)
 		{
 			int num3;
-			if (note.\u02BC\u02BF\u02B7\u02B2\u02C0\u02C1\u02BD\u02BC\u02B9\u02B4\u02B8)
+			if (note.IsCymbal && (this.player.playerProfile.IsDrumsInstrument || !GlobalHelper.engineFixes))
 			{
 				num3 = 15;
 			}
@@ -666,7 +666,7 @@ public abstract class BasePlayer : MonoBehaviour
 				num3 = 0;
 			}
 			int num4;
-			if (note.\u02BF\u02BE\u02B5\u02B3\u02C1\u02C1\u02B2\u02BF\u02B5\u02BB\u02B4 || note.\u02BD\u02BE\u02BC\u02B8\u02BC\u02B2\u02B4\u02B4\u02BA\u02BF\u02B6)
+			if ((note.IsAccent || note.IsDrumGhost) && (this.player.playerProfile.IsDrumsInstrument || !GlobalHelper.engineFixes))
 			{
 				num4 = 2;
 			}

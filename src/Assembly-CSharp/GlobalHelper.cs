@@ -182,27 +182,9 @@ public static class GlobalHelper
 		GlobalHelper.rndfret = new byte[16383];
 		for (int j = 0; j < GlobalHelper.rndfret.Length; j++)
 		{
-			byte b = 0;
-			switch (global::UnityEngine.Random.Range(0, 4))
-			{
-			case 0:
-				b = 1;
-				break;
-			case 1:
-				b = 2;
-				break;
-			case 2:
-				b = 4;
-				break;
-			case 3:
-				b = 8;
-				break;
-			case 4:
-				b = 16;
-				break;
-			}
-			GlobalHelper.rndfret[j] = b;
+			GlobalHelper.rndfret[j] = GlobalHelper.rnd[j] & 31;
 		}
+		GlobalHelper.renderFrameInterval = 1;
 	}
 
 	public static string ReadKeyValue(string key)
@@ -269,6 +251,7 @@ public static class GlobalHelper
 		GlobalHelper._renderFrameIntervalCache = null;
 		GlobalHelper._useJudgeLevelCache = null;
 		GlobalHelper._rainbowFlamesCache = null;
+		GlobalHelper._engineFixesCache = null;
 		GlobalHelper._rainbowFlameSpeedCache = null;
 		GlobalHelper._highwaySpeedCache = null;
 		GlobalHelper._colorIntensityCache = null;
@@ -436,6 +419,10 @@ public static class GlobalHelper
 			list.OrderBy((DisplayInfo x) => x.refreshRate);
 			list.Reverse();
 			GlobalHelper.rfi_config = Mathf.CeilToInt(list[0].refreshRate.numerator / list[0].refreshRate.denominator);
+			GlobalHelper.WriteComment("Fixes some issues that technically change how the engine work, but are worth fixing.");
+			GlobalHelper.WriteComment("Current fixes:");
+			GlobalHelper.WriteComment("- Fixes cymbal notes increasing base score of non pro-drum charts (decreasing average multiplier)");
+			GlobalHelper.engineFixes = true;
 			GlobalHelper.WriteComment("Don't touch this. ");
 			GlobalHelper.WriteKeyValue("versionID", GlobalHelper.versionid, false);
 			Process.Start(new ProcessStartInfo
@@ -1740,7 +1727,7 @@ public static class GlobalHelper
 			GlobalHelper.rfi_setter(value);
 			GlobalHelper.m_rfi = value;
 		}
-	} = 1;
+	}
 
 	public static bool willCurrentFrameRender
 	{
@@ -2142,6 +2129,24 @@ public static class GlobalHelper
 		return GlobalHelper.rndfret[seed];
 	}
 
+	public static bool engineFixes
+	{
+		get
+		{
+			if (GlobalHelper._engineFixesCache != null)
+			{
+				return GlobalHelper._engineFixesCache.Value;
+			}
+			GlobalHelper._engineFixesCache = new bool?(GlobalHelper.ReadBool("engineFixes"));
+			return GlobalHelper._engineFixesCache.Value;
+		}
+		set
+		{
+			GlobalHelper._engineFixesCache = new bool?(value);
+			GlobalHelper.WriteKeyValue("engineFixes", value, false);
+		}
+	}
+
 	private static bool? _rainbowSPBarCache;
 
 	private static bool? _rainbowFlamesCache;
@@ -2300,6 +2305,8 @@ public static class GlobalHelper
 	public static float renderDeltaTime;
 
 	private static byte[] rndfret;
+
+	private static bool? _engineFixesCache;
 
 	public enum JudgeLevel
 	{

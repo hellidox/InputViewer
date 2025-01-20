@@ -68,7 +68,7 @@ public class Note : \u02B6\u02BC\u02C0\u02C1\u02B2\u02B4\u02BF\u02BE\u02B5\u02B2
 		return (this._noteMask & 61) > 1;
 	}
 
-	public bool \u02BC\u02BF\u02B7\u02B2\u02C0\u02C1\u02BD\u02BC\u02B9\u02B4\u02B8
+	public bool IsCymbal
 	{
 		get
 		{
@@ -155,7 +155,7 @@ public class Note : \u02B6\u02BC\u02C0\u02C1\u02B2\u02B4\u02BF\u02BE\u02B5\u02B2
 		}
 	}
 
-	public bool \u02BF\u02BE\u02B5\u02B3\u02C1\u02C1\u02B2\u02BF\u02B5\u02BB\u02B4
+	public bool IsAccent
 	{
 		get
 		{
@@ -212,7 +212,7 @@ public class Note : \u02B6\u02BC\u02C0\u02C1\u02B2\u02B4\u02BF\u02BE\u02B5\u02B2
 
 	public float length { get; set; }
 
-	public bool \u02BD\u02BE\u02BC\u02B8\u02BC\u02B2\u02B4\u02B4\u02BA\u02BF\u02B6
+	public bool IsDrumGhost
 	{
 		get
 		{
