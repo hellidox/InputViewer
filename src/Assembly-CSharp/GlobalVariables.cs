@@ -124,9 +124,9 @@ public class GlobalVariables : MonoBehaviour
 	{
 		byte b = 0;
 		Instrument instrument = Instrument.None;
-		foreach (CHPlayer chplayer in this.playerList)
+		foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in this.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
 		{
-			if (chplayer.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && chplayer.playerProfile != null)
+			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.playerProfile != null)
 			{
 				b += 1;
 				if (b > 1)
@@ -134,7 +134,7 @@ public class GlobalVariables : MonoBehaviour
 					instrument = Instrument.Band;
 					break;
 				}
-				instrument = chplayer.playerProfile.instrument;
+				instrument = u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.playerProfile.instrument;
 			}
 		}
 		return instrument;
@@ -326,7 +326,7 @@ public class GlobalVariables : MonoBehaviour
 
 	public Texture2D \u02BC\u02B3\u02C1\u02C0\u02B6\u02B2\u02BE\u02B7\u02C1\u02BF\u02B5(int \u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5, bool \u02BE\u02C1\u02B2\u02C1\u02B7\u02BC\u02B8\u02B7\u02B5\u02B3\u02B9 = false)
 	{
-		HighwayData highwayData = GlobalVariables.instance.\u02B3\u02B9\u02BC\u02B7\u02BA\u02B9\u02BA\u02B2\u02B4\u02B7\u02B3[\u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5];
+		HighwayData highwayData = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B3\u02B9\u02BC\u02B7\u02BA\u02B9\u02BA\u02B2\u02B4\u02B7\u02B3[\u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5];
 		if (highwayData.isVideoHighway && !\u02BE\u02C1\u02B2\u02C1\u02B7\u02BC\u02B8\u02B7\u02B5\u02B3\u02B9)
 		{
 			return null;
@@ -370,13 +370,7 @@ public class GlobalVariables : MonoBehaviour
 
 	private void Update()
 	{
-		this._rdt += Time.unscaledDeltaTime;
-		if (GlobalHelper.willCurrentFrameRender)
-		{
-			GlobalHelper.renderDeltaTime = this._rdt;
-			this._rdt = 0f;
-		}
-		if (!GlobalVariables.ignoreFrameReset)
+		if (GlobalVariables.ignoreFrameReset)
 		{
 			GlobalVariables.framereset += Time.unscaledDeltaTime;
 			if ((double)GlobalVariables.framereset > 0.5)
@@ -583,7 +577,7 @@ public class GlobalVariables : MonoBehaviour
 
 	public void \u02B6\u02BC\u02B4\u02B9\u02B7\u02B4\u02BE\u02BF\u02B4\u02BE\u02B4(bool \u02C1\u02BB\u02B2\u02B7\u02BD\u02B9\u02BF\u02C0\u02B6\u02C0\u02B3)
 	{
-		if ((Time.frameCount & 255) != 0)
+		if ((Time.frameCount & 255) == 0)
 		{
 			return;
 		}
@@ -593,24 +587,24 @@ public class GlobalVariables : MonoBehaviour
 	private void Awake()
 	{
 		GlobalVariables.LoadStats();
-		if (GlobalVariables.instance != null)
+		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 != null)
 		{
 			global::UnityEngine.Object.Destroy(this);
 			return;
 		}
-		GlobalVariables.instance = this;
+		GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 = this;
 		global::UnityEngine.Object.DontDestroyOnLoad(base.gameObject);
 		this.\u02C1\u02B7\u02BD\u02B7\u02B7\u02BD\u02B6\u02B4\u02BA\u02B2\u02BA = new \u02B7\u02BE\u02BA\u02BE\u02BA\u02B2\u02BF\u02B2\u02C0\u02B2\u02C0();
 		this.\u02B8\u02B2\u02B9\u02B4\u02B2\u02B7\u02B4\u02B3\u02B9\u02B6\u02BF = new \u02B5\u02B4\u02BA\u02C1\u02B5\u02BD\u02BE\u02B9\u02B8\u02B9\u02C0();
 		this.\u02B4\u02B3\u02B7\u02BC\u02B5\u02B3\u02B8\u02BB\u02BE\u02B5\u02B3 = Resources.Load<TextAsset>("version").text;
 		this.\u02B5\u02BF\u02BD\u02B8\u02B7\u02B3\u02BC\u02B6\u02B4\u02BB\u02B5 = GlobalVariables.\u02C1\u02BF\u02B3\u02B6\u02B9\u02BE\u02BB\u02BA\u02B3\u02B5\u02B7(this.\u02B4\u02B3\u02B7\u02BC\u02B5\u02B3\u02B8\u02BB\u02BE\u02B5\u02B3);
 		Screen.sleepTimeout = -1;
-		this.playerList = new List<CHPlayer>
+		this.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF = new List<\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6>
 		{
-			new CHPlayer(),
-			new CHPlayer(),
-			new CHPlayer(),
-			new CHPlayer()
+			new \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6(),
+			new \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6(),
+			new \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6(),
+			new \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6()
 		};
 		base.gameObject.AddComponent<DiscordController>().\u02B5\u02BE\u02BA\u02B2\u02BD\u02BB\u02B9\u02BE\u02BA\u02B2\u02B3();
 		this.\u02B5\u02B3\u02B3\u02BB\u02BA\u02BB\u02C0\u02BE\u02B2\u02B5\u02B9();
@@ -777,9 +771,9 @@ public class GlobalVariables : MonoBehaviour
 
 	public bool \u02B4\u02B5\u02B7\u02B4\u02B3\u02B8\u02BE\u02C0\u02B5\u02B4\u02B4()
 	{
-		foreach (CHPlayer chplayer in this.playerList)
+		foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in this.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
 		{
-			if (chplayer.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && chplayer.\u02C0\u02B5\u02B2\u02B2\u02BB\u02B8\u02B8\u02BD\u02B9\u02BD\u02C1())
+			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02C0\u02B5\u02B2\u02B2\u02BB\u02B8\u02B8\u02BD\u02B9\u02BD\u02C1())
 			{
 				return true;
 			}
@@ -907,9 +901,9 @@ public class GlobalVariables : MonoBehaviour
 
 	public bool \u02BA\u02B3\u02BE\u02B6\u02BF\u02B3\u02BB\u02C1\u02B6\u02C1\u02BF()
 	{
-		foreach (CHPlayer chplayer in this.playerList)
+		foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in this.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
 		{
-			if (chplayer.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && chplayer.\u02C0\u02B5\u02B2\u02B2\u02BB\u02B8\u02B8\u02BD\u02B9\u02BD\u02C1())
+			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02C0\u02B5\u02B2\u02B2\u02BB\u02B8\u02B8\u02BD\u02B9\u02BD\u02C1())
 			{
 				return true;
 			}
@@ -953,19 +947,15 @@ public class GlobalVariables : MonoBehaviour
 		}
 	}
 
-	private void PreUpdate()
-	{
-	}
-
 	public object \u02B7\u02C1\u02BF\u02BD\u02B5\u02BE\u02C1\u02BE\u02B8\u02BF\u02B7;
 
 	public SongEntry \u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1;
 
 	public \u02B5\u02B4\u02BA\u02C1\u02B5\u02BD\u02BE\u02B9\u02B8\u02B9\u02C0 \u02B8\u02B2\u02B9\u02B4\u02B2\u02B7\u02B4\u02B3\u02B9\u02B6\u02BF;
 
-	public List<CHPlayer> playerList;
+	public List<\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6> \u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF;
 
-	public CHPlayer \u02B4\u02B8\u02BE\u02C1\u02B8\u02B7\u02B4\u02BA\u02BF\u02B7\u02BE;
+	public \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02B4\u02B8\u02BE\u02C1\u02B8\u02B7\u02B4\u02BA\u02BF\u02B7\u02BE;
 
 	[NonSerialized]
 	public string[] \u02B6\u02B8\u02B9\u02C1\u02BB\u02BE\u02B2\u02BF\u02BD\u02B4\u02BB;
@@ -1006,7 +996,7 @@ public class GlobalVariables : MonoBehaviour
 
 	public static bool \u02B3\u02B9\u02BD\u02BA\u02B7\u02B6\u02BC\u02C0\u02BC\u02B3\u02BC;
 
-	public static GlobalVariables instance;
+	public static GlobalVariables \u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7;
 
 	public static bool \u02B4\u02B8\u02BB\u02B6\u02B8\u02B6\u02BA\u02BA\u02B3\u02B3\u02B6;
 
@@ -1103,8 +1093,6 @@ public class GlobalVariables : MonoBehaviour
 	public static bool overstrummed;
 
 	public static bool ignoreFrameReset;
-
-	private float _rdt;
 
 	[Serializable]
 	private class InternalHighwayJsonData

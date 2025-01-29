@@ -80,13 +80,13 @@ public class Ball : MonoBehaviour
 	private void \u02B4\u02BE\u02B2\u02C0\u02B5\u02B7\u02C1\u02BC\u02B5\u02B8\u02B4()
 	{
 		int num = 0;
-		if (GlobalVariables.instance && GlobalVariables.instance.\u02C1\u02B8\u02B7\u02B9\u02B6\u02BD\u02B8\u02B9\u02C1\u02C1\u02B3 != null)
+		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 && GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02B8\u02B7\u02B9\u02B6\u02BD\u02B8\u02B9\u02C1\u02C1\u02B3 != null)
 		{
 			int u02BC_u02B8_u02B6_u02B3_u02B3_u02BA_u02BD_u02BA_u02BD_u02BF_u02BC = this.\u02BC\u02B8\u02B6\u02B3\u02B3\u02BA\u02BD\u02BA\u02BD\u02BF\u02BC;
 			this.\u02BC\u02B8\u02B6\u02B3\u02B3\u02BA\u02BD\u02BA\u02BD\u02BF\u02BC = u02BC_u02B8_u02B6_u02B3_u02B3_u02BA_u02BD_u02BA_u02BD_u02BF_u02BC + 1;
 			if (u02BC_u02B8_u02B6_u02B3_u02B3_u02BA_u02BD_u02BA_u02BD_u02BF_u02BC < this.\u02B9\u02BC\u02C0\u02BC\u02BA\u02C1\u02B9\u02B7\u02BE\u02B2\u02B9)
 			{
-				num = GlobalVariables.instance.\u02C1\u02B8\u02B7\u02B9\u02B6\u02BD\u02B8\u02B9\u02C1\u02C1\u02B3.Count;
+				num = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02B8\u02B7\u02B9\u02B6\u02BD\u02B8\u02B9\u02C1\u02C1\u02B3.Count;
 			}
 		}
 		num += this.\u02BB\u02C1\u02C1\u02B5\u02B6\u02BB\u02B7\u02BD\u02BE\u02B2\u02BE.Length;
@@ -105,7 +105,7 @@ public class Ball : MonoBehaviour
 		if (num2 >= this.\u02BB\u02C1\u02C1\u02B5\u02B6\u02BB\u02B7\u02BD\u02BE\u02B2\u02BE.Length)
 		{
 			num2 -= this.\u02BB\u02C1\u02C1\u02B5\u02B6\u02BB\u02B7\u02BD\u02BE\u02B2\u02BE.Length;
-			this.\u02BF\u02B5\u02B8\u02B6\u02BC\u02BD\u02BE\u02B6\u02B5\u02BE\u02B2.sprite = GlobalVariables.instance.\u02C1\u02B8\u02B7\u02B9\u02B6\u02BD\u02B8\u02B9\u02C1\u02C1\u02B3.Values.ElementAt(num2);
+			this.\u02BF\u02B5\u02B8\u02B6\u02BC\u02BD\u02BE\u02B6\u02B5\u02BE\u02B2.sprite = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02B8\u02B7\u02B9\u02B6\u02BD\u02B8\u02B9\u02C1\u02C1\u02B3.Values.ElementAt(num2);
 			this.\u02B5\u02C0\u02C1\u02B6\u02B6\u02BA\u02BD\u02BB\u02BB\u02B3\u02B7.offset = new Vector2(0.32f, 0.32f);
 			return;
 		}
@@ -244,13 +244,13 @@ public class Ball : MonoBehaviour
 	private void \u02C1\u02BE\u02BB\u02B2\u02B4\u02B9\u02BB\u02B4\u02C0\u02BC\u02B3()
 	{
 		int num = 0;
-		if (GlobalVariables.instance && GlobalVariables.instance.\u02C1\u02B8\u02B7\u02B9\u02B6\u02BD\u02B8\u02B9\u02C1\u02C1\u02B3 != null)
+		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 && GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02B8\u02B7\u02B9\u02B6\u02BD\u02B8\u02B9\u02C1\u02C1\u02B3 != null)
 		{
 			int u02BC_u02B8_u02B6_u02B3_u02B3_u02BA_u02BD_u02BA_u02BD_u02BF_u02BC = this.\u02BC\u02B8\u02B6\u02B3\u02B3\u02BA\u02BD\u02BA\u02BD\u02BF\u02BC;
 			this.\u02BC\u02B8\u02B6\u02B3\u02B3\u02BA\u02BD\u02BA\u02BD\u02BF\u02BC = u02BC_u02B8_u02B6_u02B3_u02B3_u02BA_u02BD_u02BA_u02BD_u02BF_u02BC + 0;
 			if (u02BC_u02B8_u02B6_u02B3_u02B3_u02BA_u02BD_u02BA_u02BD_u02BF_u02BC < this.\u02B9\u02BC\u02C0\u02BC\u02BA\u02C1\u02B9\u02B7\u02BE\u02B2\u02B9)
 			{
-				num = GlobalVariables.instance.\u02C1\u02B8\u02B7\u02B9\u02B6\u02BD\u02B8\u02B9\u02C1\u02C1\u02B3.Count;
+				num = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02B8\u02B7\u02B9\u02B6\u02BD\u02B8\u02B9\u02C1\u02C1\u02B3.Count;
 			}
 		}
 		num += this.\u02BB\u02C1\u02C1\u02B5\u02B6\u02BB\u02B7\u02BD\u02BE\u02B2\u02BE.Length;
@@ -269,7 +269,7 @@ public class Ball : MonoBehaviour
 		if (num2 >= this.\u02BB\u02C1\u02C1\u02B5\u02B6\u02BB\u02B7\u02BD\u02BE\u02B2\u02BE.Length)
 		{
 			num2 -= this.\u02BB\u02C1\u02C1\u02B5\u02B6\u02BB\u02B7\u02BD\u02BE\u02B2\u02BE.Length;
-			this.\u02BF\u02B5\u02B8\u02B6\u02BC\u02BD\u02BE\u02B6\u02B5\u02BE\u02B2.sprite = GlobalVariables.instance.\u02C1\u02B8\u02B7\u02B9\u02B6\u02BD\u02B8\u02B9\u02C1\u02C1\u02B3.Values.ElementAt(num2);
+			this.\u02BF\u02B5\u02B8\u02B6\u02BC\u02BD\u02BE\u02B6\u02B5\u02BE\u02B2.sprite = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02B8\u02B7\u02B9\u02B6\u02BD\u02B8\u02B9\u02C1\u02C1\u02B3.Values.ElementAt(num2);
 			this.\u02B5\u02C0\u02C1\u02B6\u02B6\u02BA\u02BD\u02BB\u02BB\u02B3\u02B7.offset = new Vector2(940f, 1112f);
 			return;
 		}
@@ -345,13 +345,13 @@ public class Ball : MonoBehaviour
 	private void \u02BE\u02C1\u02B2\u02BF\u02B5\u02C0\u02B5\u02BD\u02B3\u02B8\u02B2()
 	{
 		int num = 1;
-		if (GlobalVariables.instance && GlobalVariables.instance.\u02C1\u02B8\u02B7\u02B9\u02B6\u02BD\u02B8\u02B9\u02C1\u02C1\u02B3 != null)
+		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 && GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02B8\u02B7\u02B9\u02B6\u02BD\u02B8\u02B9\u02C1\u02C1\u02B3 != null)
 		{
 			int u02BC_u02B8_u02B6_u02B3_u02B3_u02BA_u02BD_u02BA_u02BD_u02BF_u02BC = this.\u02BC\u02B8\u02B6\u02B3\u02B3\u02BA\u02BD\u02BA\u02BD\u02BF\u02BC;
 			this.\u02BC\u02B8\u02B6\u02B3\u02B3\u02BA\u02BD\u02BA\u02BD\u02BF\u02BC = u02BC_u02B8_u02B6_u02B3_u02B3_u02BA_u02BD_u02BA_u02BD_u02BF_u02BC + 1;
 			if (u02BC_u02B8_u02B6_u02B3_u02B3_u02BA_u02BD_u02BA_u02BD_u02BF_u02BC < this.\u02B9\u02BC\u02C0\u02BC\u02BA\u02C1\u02B9\u02B7\u02BE\u02B2\u02B9)
 			{
-				num = GlobalVariables.instance.\u02C1\u02B8\u02B7\u02B9\u02B6\u02BD\u02B8\u02B9\u02C1\u02C1\u02B3.Count;
+				num = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02B8\u02B7\u02B9\u02B6\u02BD\u02B8\u02B9\u02C1\u02C1\u02B3.Count;
 			}
 		}
 		num += this.\u02BB\u02C1\u02C1\u02B5\u02B6\u02BB\u02B7\u02BD\u02BE\u02B2\u02BE.Length;
@@ -370,7 +370,7 @@ public class Ball : MonoBehaviour
 		if (num2 >= this.\u02BB\u02C1\u02C1\u02B5\u02B6\u02BB\u02B7\u02BD\u02BE\u02B2\u02BE.Length)
 		{
 			num2 -= this.\u02BB\u02C1\u02C1\u02B5\u02B6\u02BB\u02B7\u02BD\u02BE\u02B2\u02BE.Length;
-			this.\u02BF\u02B5\u02B8\u02B6\u02BC\u02BD\u02BE\u02B6\u02B5\u02BE\u02B2.sprite = GlobalVariables.instance.\u02C1\u02B8\u02B7\u02B9\u02B6\u02BD\u02B8\u02B9\u02C1\u02C1\u02B3.Values.ElementAt(num2);
+			this.\u02BF\u02B5\u02B8\u02B6\u02BC\u02BD\u02BE\u02B6\u02B5\u02BE\u02B2.sprite = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02B8\u02B7\u02B9\u02B6\u02BD\u02B8\u02B9\u02C1\u02C1\u02B3.Values.ElementAt(num2);
 			this.\u02B5\u02C0\u02C1\u02B6\u02B6\u02BA\u02BD\u02BB\u02BB\u02B3\u02B7.offset = new Vector2(301f, 276f);
 			return;
 		}
@@ -482,13 +482,13 @@ public class Ball : MonoBehaviour
 	private void \u02B5\u02BB\u02B2\u02B4\u02B8\u02BA\u02BF\u02B8\u02B3\u02B8\u02B6()
 	{
 		int num = 1;
-		if (GlobalVariables.instance && GlobalVariables.instance.\u02C1\u02B8\u02B7\u02B9\u02B6\u02BD\u02B8\u02B9\u02C1\u02C1\u02B3 != null)
+		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 && GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02B8\u02B7\u02B9\u02B6\u02BD\u02B8\u02B9\u02C1\u02C1\u02B3 != null)
 		{
 			int u02BC_u02B8_u02B6_u02B3_u02B3_u02BA_u02BD_u02BA_u02BD_u02BF_u02BC = this.\u02BC\u02B8\u02B6\u02B3\u02B3\u02BA\u02BD\u02BA\u02BD\u02BF\u02BC;
 			this.\u02BC\u02B8\u02B6\u02B3\u02B3\u02BA\u02BD\u02BA\u02BD\u02BF\u02BC = u02BC_u02B8_u02B6_u02B3_u02B3_u02BA_u02BD_u02BA_u02BD_u02BF_u02BC + 0;
 			if (u02BC_u02B8_u02B6_u02B3_u02B3_u02BA_u02BD_u02BA_u02BD_u02BF_u02BC < this.\u02B9\u02BC\u02C0\u02BC\u02BA\u02C1\u02B9\u02B7\u02BE\u02B2\u02B9)
 			{
-				num = GlobalVariables.instance.\u02C1\u02B8\u02B7\u02B9\u02B6\u02BD\u02B8\u02B9\u02C1\u02C1\u02B3.Count;
+				num = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02B8\u02B7\u02B9\u02B6\u02BD\u02B8\u02B9\u02C1\u02C1\u02B3.Count;
 			}
 		}
 		num += this.\u02BB\u02C1\u02C1\u02B5\u02B6\u02BB\u02B7\u02BD\u02BE\u02B2\u02BE.Length;
@@ -507,7 +507,7 @@ public class Ball : MonoBehaviour
 		if (num2 >= this.\u02BB\u02C1\u02C1\u02B5\u02B6\u02BB\u02B7\u02BD\u02BE\u02B2\u02BE.Length)
 		{
 			num2 -= this.\u02BB\u02C1\u02C1\u02B5\u02B6\u02BB\u02B7\u02BD\u02BE\u02B2\u02BE.Length;
-			this.\u02BF\u02B5\u02B8\u02B6\u02BC\u02BD\u02BE\u02B6\u02B5\u02BE\u02B2.sprite = GlobalVariables.instance.\u02C1\u02B8\u02B7\u02B9\u02B6\u02BD\u02B8\u02B9\u02C1\u02C1\u02B3.Values.ElementAt(num2);
+			this.\u02BF\u02B5\u02B8\u02B6\u02BC\u02BD\u02BE\u02B6\u02B5\u02BE\u02B2.sprite = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02B8\u02B7\u02B9\u02B6\u02BD\u02B8\u02B9\u02C1\u02C1\u02B3.Values.ElementAt(num2);
 			this.\u02B5\u02C0\u02C1\u02B6\u02B6\u02BA\u02BD\u02BB\u02BB\u02B3\u02B7.offset = new Vector2(1583f, 1275f);
 			return;
 		}

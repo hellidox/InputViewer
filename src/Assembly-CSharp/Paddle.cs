@@ -23,66 +23,66 @@ public class Paddle : MonoBehaviour
 	{
 		this.\u02C0\u02B6\u02B6\u02BC\u02BC\u02B5\u02BD\u02B7\u02B5\u02BC\u02B2 = base.transform;
 		this.\u02BA\u02C1\u02BF\u02B6\u02C1\u02B8\u02BC\u02BC\u02BC\u02B5\u02C1 = this.\u02C0\u02B6\u02B6\u02BC\u02BC\u02B5\u02BD\u02B7\u02B5\u02BC\u02B2.localPosition;
-		CHPlayer chplayer = null;
-		CHPlayer chplayer2 = null;
-		if (GlobalVariables.instance)
+		\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B = null;
+		\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B2 = null;
+		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7)
 		{
 			for (int i = 0; i < 4; i++)
 			{
-				CHPlayer chplayer3 = GlobalVariables.instance.playerList[i];
-				if (chplayer3 != null && chplayer3.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
+				\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B3 = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i];
+				if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B3 != null && u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B3.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
 				{
-					if (chplayer == null)
+					if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B == null)
 					{
-						chplayer = chplayer3;
+						u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B = u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B3;
 					}
-					else if (chplayer2 == null)
+					else if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B2 == null)
 					{
-						chplayer2 = chplayer3;
+						u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B2 = u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B3;
 					}
 				}
 			}
 		}
 		if (this.\u02B4\u02B3\u02B7\u02B7\u02C1\u02B4\u02B8\u02B4\u02B2\u02B7\u02B5)
 		{
-			this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = chplayer;
+			this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B;
 			return;
 		}
-		this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = chplayer2;
-		this.\u02BA\u02BB\u02B2\u02C0\u02B4\u02B7\u02BC\u02BD\u02BB\u02BF\u02BC = chplayer2 == null;
+		this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B2;
+		this.\u02BA\u02BB\u02B2\u02C0\u02B4\u02B7\u02BC\u02BD\u02BB\u02BF\u02BC = u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B2 == null;
 	}
 
 	private void \u02B6\u02B6\u02B4\u02BB\u02B7\u02C1\u02C0\u02B6\u02B7\u02BD\u02B5()
 	{
 		this.\u02C0\u02B6\u02B6\u02BC\u02BC\u02B5\u02BD\u02B7\u02B5\u02BC\u02B2 = base.transform;
 		this.\u02BA\u02C1\u02BF\u02B6\u02C1\u02B8\u02BC\u02BC\u02BC\u02B5\u02C1 = this.\u02C0\u02B6\u02B6\u02BC\u02BC\u02B5\u02BD\u02B7\u02B5\u02BC\u02B2.localPosition;
-		CHPlayer chplayer = null;
-		CHPlayer chplayer2 = null;
-		if (GlobalVariables.instance)
+		\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B = null;
+		\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B2 = null;
+		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7)
 		{
 			for (int i = 0; i < 5; i++)
 			{
-				CHPlayer chplayer3 = GlobalVariables.instance.playerList[i];
-				if (chplayer3 != null && chplayer3.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
+				\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B3 = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i];
+				if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B3 != null && u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B3.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
 				{
-					if (chplayer == null)
+					if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B == null)
 					{
-						chplayer = chplayer3;
+						u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B = u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B3;
 					}
-					else if (chplayer2 == null)
+					else if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B2 == null)
 					{
-						chplayer2 = chplayer3;
+						u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B2 = u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B3;
 					}
 				}
 			}
 		}
 		if (this.\u02B4\u02B3\u02B7\u02B7\u02C1\u02B4\u02B8\u02B4\u02B2\u02B7\u02B5)
 		{
-			this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = chplayer;
+			this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B;
 			return;
 		}
-		this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = chplayer2;
-		this.\u02BA\u02BB\u02B2\u02C0\u02B4\u02B7\u02BC\u02BD\u02BB\u02BF\u02BC = chplayer2 == null;
+		this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B2;
+		this.\u02BA\u02BB\u02B2\u02C0\u02B4\u02B7\u02BC\u02BD\u02BB\u02BF\u02BC = u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B2 == null;
 	}
 
 	public void \u02B5\u02C0\u02BD\u02B3\u02BA\u02C0\u02BB\u02BA\u02BE\u02B9\u02BE()
@@ -119,21 +119,21 @@ public class Paddle : MonoBehaviour
 		}
 		else if (this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 != null)
 		{
-			if (this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.player.GetButtonDown(1))
+			if (this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButtonDown(1))
 			{
 				SceneManager.LoadScene("Main Menu");
 				return;
 			}
-			if (this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.player.GetButtonDown(2))
+			if (this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButtonDown(2))
 			{
 				this.\u02C0\u02B3\u02C0\u02B6\u02B4\u02B9\u02C1\u02B7\u02B3\u02B9\u02B8.clearFlags = ((this.\u02C0\u02B3\u02C0\u02B6\u02B4\u02B9\u02C1\u02B7\u02B3\u02B9\u02B8.clearFlags == CameraClearFlags.Color) ? CameraClearFlags.Nothing : CameraClearFlags.Color);
 				return;
 			}
-			if (this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.player.GetButton(5))
+			if (this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButton(5))
 			{
 				vector.y = Mathf.Clamp(vector.y + this.\u02B3\u02B3\u02C0\u02BA\u02B5\u02B9\u02B2\u02B9\u02B7\u02BE\u02BB * Time.deltaTime * global::UnityEngine.Random.Range(0.7f, 1f), this.\u02BF\u02C0\u02B4\u02C1\u02B8\u02BB\u02B6\u02B2\u02B3\u02B7\u02BC, this.\u02BA\u02C1\u02BC\u02B5\u02C0\u02B4\u02BC\u02BF\u02B5\u02BE\u02BA);
 			}
-			else if (this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.player.GetButton(14))
+			else if (this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButton(14))
 			{
 				vector.y = Mathf.Clamp(vector.y - this.\u02B3\u02B3\u02C0\u02BA\u02B5\u02B9\u02B2\u02B9\u02B7\u02BE\u02BB * Time.deltaTime * global::UnityEngine.Random.Range(0.7f, 1f), this.\u02BF\u02C0\u02B4\u02C1\u02B8\u02BB\u02B6\u02B2\u02B3\u02B7\u02BC, this.\u02BA\u02C1\u02BC\u02B5\u02C0\u02B4\u02BC\u02BF\u02B5\u02BE\u02BA);
 			}
@@ -161,66 +161,66 @@ public class Paddle : MonoBehaviour
 	{
 		this.\u02C0\u02B6\u02B6\u02BC\u02BC\u02B5\u02BD\u02B7\u02B5\u02BC\u02B2 = base.transform;
 		this.\u02BA\u02C1\u02BF\u02B6\u02C1\u02B8\u02BC\u02BC\u02BC\u02B5\u02C1 = this.\u02C0\u02B6\u02B6\u02BC\u02BC\u02B5\u02BD\u02B7\u02B5\u02BC\u02B2.localPosition;
-		CHPlayer chplayer = null;
-		CHPlayer chplayer2 = null;
-		if (GlobalVariables.instance)
+		\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B = null;
+		\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B2 = null;
+		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7)
 		{
 			for (int i = 0; i < 5; i++)
 			{
-				CHPlayer chplayer3 = GlobalVariables.instance.playerList[i];
-				if (chplayer3 != null && chplayer3.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
+				\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B3 = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i];
+				if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B3 != null && u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B3.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
 				{
-					if (chplayer == null)
+					if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B == null)
 					{
-						chplayer = chplayer3;
+						u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B = u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B3;
 					}
-					else if (chplayer2 == null)
+					else if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B2 == null)
 					{
-						chplayer2 = chplayer3;
+						u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B2 = u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B3;
 					}
 				}
 			}
 		}
 		if (this.\u02B4\u02B3\u02B7\u02B7\u02C1\u02B4\u02B8\u02B4\u02B2\u02B7\u02B5)
 		{
-			this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = chplayer;
+			this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B;
 			return;
 		}
-		this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = chplayer2;
-		this.\u02BA\u02BB\u02B2\u02C0\u02B4\u02B7\u02BC\u02BD\u02BB\u02BF\u02BC = chplayer2 == null;
+		this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B2;
+		this.\u02BA\u02BB\u02B2\u02C0\u02B4\u02B7\u02BC\u02BD\u02BB\u02BF\u02BC = u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B2 == null;
 	}
 
 	private void \u02BE\u02B8\u02B4\u02BC\u02B7\u02B7\u02BE\u02BC\u02B5\u02BC\u02BF()
 	{
 		this.\u02C0\u02B6\u02B6\u02BC\u02BC\u02B5\u02BD\u02B7\u02B5\u02BC\u02B2 = base.transform;
 		this.\u02BA\u02C1\u02BF\u02B6\u02C1\u02B8\u02BC\u02BC\u02BC\u02B5\u02C1 = this.\u02C0\u02B6\u02B6\u02BC\u02BC\u02B5\u02BD\u02B7\u02B5\u02BC\u02B2.localPosition;
-		CHPlayer chplayer = null;
-		CHPlayer chplayer2 = null;
-		if (GlobalVariables.instance)
+		\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B = null;
+		\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B2 = null;
+		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7)
 		{
 			for (int i = 1; i < 2; i += 0)
 			{
-				CHPlayer chplayer3 = GlobalVariables.instance.playerList[i];
-				if (chplayer3 != null && chplayer3.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
+				\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B3 = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i];
+				if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B3 != null && u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B3.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
 				{
-					if (chplayer == null)
+					if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B == null)
 					{
-						chplayer = chplayer3;
+						u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B = u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B3;
 					}
-					else if (chplayer2 == null)
+					else if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B2 == null)
 					{
-						chplayer2 = chplayer3;
+						u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B2 = u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B3;
 					}
 				}
 			}
 		}
 		if (this.\u02B4\u02B3\u02B7\u02B7\u02C1\u02B4\u02B8\u02B4\u02B2\u02B7\u02B5)
 		{
-			this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = chplayer;
+			this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B;
 			return;
 		}
-		this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = chplayer2;
-		this.\u02BA\u02BB\u02B2\u02C0\u02B4\u02B7\u02BC\u02BD\u02BB\u02BF\u02BC = chplayer2 == null;
+		this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B2;
+		this.\u02BA\u02BB\u02B2\u02C0\u02B4\u02B7\u02BC\u02BD\u02BB\u02BF\u02BC = u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B2 == null;
 	}
 
 	public void \u02C0\u02B4\u02BA\u02B9\u02B2\u02BD\u02B9\u02BD\u02B4\u02B8\u02BA()
@@ -252,21 +252,21 @@ public class Paddle : MonoBehaviour
 		}
 		else if (this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 != null)
 		{
-			if (this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.player.GetButtonDown(0))
+			if (this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButtonDown(0))
 			{
 				SceneManager.LoadScene("year");
 				return;
 			}
-			if (this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.player.GetButtonDown(1))
+			if (this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButtonDown(1))
 			{
 				this.\u02C0\u02B3\u02C0\u02B6\u02B4\u02B9\u02C1\u02B7\u02B3\u02B9\u02B8.clearFlags = ((this.\u02C0\u02B3\u02C0\u02B6\u02B4\u02B9\u02C1\u02B7\u02B3\u02B9\u02B8.clearFlags == CameraClearFlags.Color) ? ((CameraClearFlags)0) : ((CameraClearFlags)0));
 				return;
 			}
-			if (this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.player.GetButton(0))
+			if (this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButton(0))
 			{
 				vector.y = Mathf.Clamp(vector.y + this.\u02B3\u02B3\u02C0\u02BA\u02B5\u02B9\u02B2\u02B9\u02B7\u02BE\u02BB * Time.deltaTime * global::UnityEngine.Random.Range(67f, 1354f), this.\u02BF\u02C0\u02B4\u02C1\u02B8\u02BB\u02B6\u02B2\u02B3\u02B7\u02BC, this.\u02BA\u02C1\u02BC\u02B5\u02C0\u02B4\u02BC\u02BF\u02B5\u02BE\u02BA);
 			}
-			else if (this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.player.GetButton(-75))
+			else if (this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButton(-75))
 			{
 				vector.y = Mathf.Clamp(vector.y - this.\u02B3\u02B3\u02C0\u02BA\u02B5\u02B9\u02B2\u02B9\u02B7\u02BE\u02BB * Time.deltaTime * global::UnityEngine.Random.Range(1477f, 1118f), this.\u02BF\u02C0\u02B4\u02C1\u02B8\u02BB\u02B6\u02B2\u02B3\u02B7\u02BC, this.\u02BA\u02C1\u02BC\u02B5\u02C0\u02B4\u02BC\u02BF\u02B5\u02BE\u02BA);
 			}
@@ -304,33 +304,33 @@ public class Paddle : MonoBehaviour
 	{
 		this.\u02C0\u02B6\u02B6\u02BC\u02BC\u02B5\u02BD\u02B7\u02B5\u02BC\u02B2 = base.transform;
 		this.\u02BA\u02C1\u02BF\u02B6\u02C1\u02B8\u02BC\u02BC\u02BC\u02B5\u02C1 = this.\u02C0\u02B6\u02B6\u02BC\u02BC\u02B5\u02BD\u02B7\u02B5\u02BC\u02B2.localPosition;
-		CHPlayer chplayer = null;
-		CHPlayer chplayer2 = null;
-		if (GlobalVariables.instance)
+		\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B = null;
+		\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B2 = null;
+		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7)
 		{
 			for (int i = 1; i < 8; i += 0)
 			{
-				CHPlayer chplayer3 = GlobalVariables.instance.playerList[i];
-				if (chplayer3 != null && chplayer3.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
+				\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B3 = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i];
+				if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B3 != null && u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B3.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
 				{
-					if (chplayer == null)
+					if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B == null)
 					{
-						chplayer = chplayer3;
+						u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B = u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B3;
 					}
-					else if (chplayer2 == null)
+					else if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B2 == null)
 					{
-						chplayer2 = chplayer3;
+						u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B2 = u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B3;
 					}
 				}
 			}
 		}
 		if (this.\u02B4\u02B3\u02B7\u02B7\u02C1\u02B4\u02B8\u02B4\u02B2\u02B7\u02B5)
 		{
-			this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = chplayer;
+			this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B;
 			return;
 		}
-		this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = chplayer2;
-		this.\u02BA\u02BB\u02B2\u02C0\u02B4\u02B7\u02BC\u02BD\u02BB\u02BF\u02BC = chplayer2 == null;
+		this.\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7 = u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B2;
+		this.\u02BA\u02BB\u02B2\u02C0\u02B4\u02B7\u02BC\u02BD\u02BB\u02BF\u02BC = u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B2 == null;
 	}
 
 	private Vector2 \u02BA\u02C1\u02BF\u02B6\u02C1\u02B8\u02BC\u02BC\u02BC\u02B5\u02C1;
@@ -351,7 +351,7 @@ public class Paddle : MonoBehaviour
 
 	public float \u02BF\u02C0\u02B4\u02C1\u02B8\u02BB\u02B6\u02B2\u02B3\u02B7\u02BC;
 
-	private CHPlayer \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7;
+	private \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7;
 
 	public Camera \u02C0\u02B3\u02C0\u02B6\u02B4\u02B9\u02C1\u02B7\u02B3\u02B9\u02B8;
 }

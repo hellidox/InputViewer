@@ -80,12 +80,12 @@ public class FadeBehaviour : MonoBehaviour
 
 	private void \u02B8\u02C1\u02B9\u02BC\u02B6\u02B9\u02B3\u02B5\u02B7\u02BF\u02BD()
 	{
-		if (FadeBehaviour.instance != null)
+		if (FadeBehaviour.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 != null)
 		{
 			global::UnityEngine.Object.Destroy(base.gameObject);
 			return;
 		}
-		FadeBehaviour.instance = this;
+		FadeBehaviour.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 = this;
 		global::UnityEngine.Object.DontDestroyOnLoad(this);
 		this.\u02B4\u02B5\u02BD\u02BA\u02BA\u02BB\u02B5\u02B4\u02B4\u02B8\u02BE = new WaitForSecondsRealtime(this.\u02B8\u02B6\u02B9\u02BC\u02B3\u02B3\u02BC\u02B6\u02C0\u02B6\u02B9);
 	}
@@ -123,7 +123,7 @@ public class FadeBehaviour : MonoBehaviour
 
 	private IEnumerator \u02C1\u02B4\u02B3\u02B6\u02C1\u02B7\u02B4\u02B9\u02C1\u02B4\u02BF(string \u02B7\u02BB\u02BE\u02BB\u02BC\u02BD\u02B7\u02B8\u02C0\u02B2\u02B7)
 	{
-		this.isFading = true;
+		this.\u02BC\u02BF\u02B7\u02BA\u02BC\u02B2\u02BA\u02B8\u02BF\u02BB\u02B3 = true;
 		yield return this.\u02BE\u02BA\u02B4\u02B8\u02B2\u02B7\u02BB\u02BD\u02C0\u02B4\u02B9();
 		Time.timeScale = 1f;
 		AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(\u02B7\u02BB\u02BE\u02BB\u02BC\u02BD\u02B7\u02B8\u02C0\u02B2\u02B7);
@@ -196,29 +196,29 @@ public class FadeBehaviour : MonoBehaviour
 
 	private void \u02B7\u02BB\u02B6\u02B6\u02B4\u02B6\u02C0\u02BC\u02BD\u02BD\u02BA(Scene \u02B4\u02B7\u02BA\u02B5\u02B7\u02C0\u02B3\u02BB\u02BF\u02C1\u02BA, Scene \u02B3\u02BA\u02B8\u02BC\u02B5\u02BD\u02B3\u02B7\u02BA\u02C1\u02B9)
 	{
-		this.isFading = false;
+		this.\u02BC\u02BF\u02B7\u02BA\u02BC\u02B2\u02BA\u02B8\u02BF\u02BB\u02B3 = false;
 	}
 
 	private void Awake()
 	{
-		if (FadeBehaviour.instance != null)
+		if (FadeBehaviour.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 != null)
 		{
 			global::UnityEngine.Object.Destroy(base.gameObject);
 			return;
 		}
-		FadeBehaviour.instance = this;
+		FadeBehaviour.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 = this;
 		global::UnityEngine.Object.DontDestroyOnLoad(this);
 		this.\u02B4\u02B5\u02BD\u02BA\u02BA\u02BB\u02B5\u02B4\u02B4\u02B8\u02BE = new WaitForSecondsRealtime(this.\u02B8\u02B6\u02B9\u02BC\u02B3\u02B3\u02BC\u02B6\u02C0\u02B6\u02B9);
 	}
 
 	private void \u02B3\u02B8\u02C1\u02BE\u02B7\u02C0\u02B8\u02B8\u02B3\u02B3\u02B7()
 	{
-		if (FadeBehaviour.instance != null)
+		if (FadeBehaviour.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 != null)
 		{
 			global::UnityEngine.Object.Destroy(base.gameObject);
 			return;
 		}
-		FadeBehaviour.instance = this;
+		FadeBehaviour.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 = this;
 		global::UnityEngine.Object.DontDestroyOnLoad(this);
 		this.\u02B4\u02B5\u02BD\u02BA\u02BA\u02BB\u02B5\u02B4\u02B4\u02B8\u02BE = new WaitForSecondsRealtime(this.\u02B8\u02B6\u02B9\u02BC\u02B3\u02B3\u02BC\u02B6\u02C0\u02B6\u02B9);
 	}
@@ -249,14 +249,14 @@ public class FadeBehaviour : MonoBehaviour
 		yield break;
 	}
 
-	public static FadeBehaviour instance;
+	public static FadeBehaviour \u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7;
 
 	[SerializeField]
 	private Image fadeGraphic;
 
 	public float \u02B8\u02B6\u02B9\u02BC\u02B3\u02B3\u02BC\u02B6\u02C0\u02B6\u02B9;
 
-	public bool isFading;
+	public bool \u02BC\u02BF\u02B7\u02BA\u02BC\u02B2\u02BA\u02B8\u02BF\u02BB\u02B3;
 
 	private WaitForSecondsRealtime \u02B4\u02B5\u02BD\u02BA\u02BA\u02BB\u02B5\u02B4\u02B4\u02B8\u02BE;
 

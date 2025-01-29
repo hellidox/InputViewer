@@ -181,7 +181,7 @@ public class PracticeUI : MonoBehaviour
 	private void Start()
 	{
 		this.sb = ZString.CreateStringBuilder();
-		if (!GlobalVariables.instance.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
+		if (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
 		{
 			global::UnityEngine.Object.Destroy(base.gameObject);
 			return;

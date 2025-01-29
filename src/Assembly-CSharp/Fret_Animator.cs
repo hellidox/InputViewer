@@ -141,7 +141,7 @@ public class Fret_Animator : BaseFretAnimator
 				{
 					num = 2f;
 				}
-				this.\u02B3\u02BF\u02B9\u02BA\u02B5\u02B9\u02B7\u02BC\u02BC\u02B8\u02B8.y = this.\u02B3\u02BF\u02B9\u02BA\u02B5\u02B9\u02B7\u02BC\u02BC\u02B8\u02B8.y - GlobalHelper.renderDeltaTime * GlobalHelper.strikelinePistonSpeed * this.\u02B7\u02BB\u02BB\u02C1\u02B6\u02B9\u02B8\u02B3\u02B9\u02B3\u02B8 * num;
+				this.\u02B3\u02BF\u02B9\u02BA\u02B5\u02B9\u02B7\u02BC\u02BC\u02B8\u02B8.y = this.\u02B3\u02BF\u02B9\u02BA\u02B5\u02B9\u02B7\u02BC\u02BC\u02B8\u02B8.y - 0.008333334f * GlobalHelper.strikelinePistonSpeed * this.\u02B7\u02BB\u02BB\u02C1\u02B6\u02B9\u02B8\u02B3\u02B9\u02B3\u02B8 * num;
 				return;
 			}
 		}
@@ -305,14 +305,16 @@ public class Fret_Animator : BaseFretAnimator
 
 	private void Update()
 	{
-		if (!GlobalHelper.willCurrentFrameRender)
+		this.ticker += Time.deltaTime * 2f;
+		while (this.ticker > 0.016666668f)
 		{
-			return;
+			this.other = !this.other;
+			this.\u02BB\u02B2\u02C1\u02B4\u02BF\u02B9\u02BF\u02BC\u02BC\u02B7\u02BC();
+			this.\u02B2\u02B3\u02B2\u02BC\u02B2\u02BE\u02BF\u02B4\u02BA\u02B2\u02C0();
+			this.\u02BA\u02B6\u02B3\u02BC\u02BD\u02B4\u02B5\u02B4\u02B7\u02B6\u02B5();
+			this.\u02C1\u02C1\u02B4\u02B6\u02BB\u02C1\u02B7\u02B5\u02BE\u02BE\u02B3();
+			this.ticker -= 0.016666668f;
 		}
-		this.\u02BB\u02B2\u02C1\u02B4\u02BF\u02B9\u02BF\u02BC\u02BC\u02B7\u02BC();
-		this.\u02B2\u02B3\u02B2\u02BC\u02B2\u02BE\u02BF\u02B4\u02BA\u02B2\u02C0();
-		this.\u02BA\u02B6\u02B3\u02BC\u02BD\u02B4\u02B5\u02B4\u02B7\u02B6\u02B5();
-		this.\u02C1\u02C1\u02B4\u02B6\u02BB\u02C1\u02B7\u02B5\u02BE\u02BE\u02B3();
 	}
 
 	private float \u02B9\u02B4\u02BD\u02BD\u02BC\u02B4\u02B3\u02B4\u02B9\u02B2\u02BC;

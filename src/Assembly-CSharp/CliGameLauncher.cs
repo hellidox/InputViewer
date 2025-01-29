@@ -14,13 +14,13 @@ public class CliGameLauncher : MonoBehaviour
 		global::UnityEngine.Object.Instantiate<GameObject>(this.globalVariablesPrefab);
 		global::UnityEngine.Object.Instantiate<GameObject>(this.rewiredInputManager);
 		global::UnityEngine.Object.Instantiate<GameObject>(this.netManager);
-		while (!GlobalVariables.instance.\u02B9\u02BE\u02B5\u02B9\u02C1\u02BB\u02B6\u02BD\u02BC\u02C1\u02B5 || !ReInput.isReady)
+		while (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B9\u02BE\u02B5\u02B9\u02C1\u02BB\u02B6\u02BD\u02BC\u02C1\u02B5 || !ReInput.isReady)
 		{
 			yield return null;
 		}
 		if (this.\u02B8\u02B7\u02B5\u02B9\u02BC\u02BF\u02BC\u02BC\u02BC\u02BF\u02BF != null)
 		{
-			foreach (\u02B9\u02BA\u02BF\u02BB\u02B2\u02B9\u02BB\u02B9\u02B9\u02B5\u02B8 u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B in GlobalVariables.instance.\u02C1\u02B7\u02BD\u02B7\u02B7\u02BD\u02B6\u02B4\u02BA\u02B2\u02BA.\u02BE\u02B6\u02BD\u02B9\u02BF\u02BB\u02BE\u02B7\u02B3\u02BE\u02B5)
+			foreach (\u02B9\u02BA\u02BF\u02BB\u02B2\u02B9\u02BB\u02B9\u02B9\u02B5\u02B8 u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02B7\u02BD\u02B7\u02B7\u02BD\u02B6\u02B4\u02BA\u02B2\u02BA.\u02BE\u02B6\u02BD\u02B9\u02BF\u02BB\u02BE\u02B7\u02B3\u02BE\u02B5)
 			{
 				if (u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B.playerName == this.\u02B8\u02B7\u02B5\u02B9\u02BC\u02BF\u02BC\u02BC\u02BC\u02BF\u02BF)
 				{
@@ -38,7 +38,7 @@ public class CliGameLauncher : MonoBehaviour
 			{
 				if (this.\u02C0\u02B6\u02C1\u02BB\u02B7\u02C1\u02BB\u02BA\u02B4\u02B8\u02BA == null)
 				{
-					this.\u02C0\u02B6\u02C1\u02BB\u02B7\u02C1\u02BB\u02BA\u02B4\u02B8\u02BA = GlobalVariables.instance.\u02C1\u02B7\u02BD\u02B7\u02B7\u02BD\u02B6\u02B4\u02BA\u02B2\u02BA.\u02B4\u02C0\u02B6\u02B9\u02BE\u02BE\u02C1\u02B2\u02B6\u02B4\u02B6(true, false);
+					this.\u02C0\u02B6\u02C1\u02BB\u02B7\u02C1\u02BB\u02BA\u02B4\u02B8\u02BA = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02B7\u02BD\u02B7\u02B7\u02BD\u02B6\u02B4\u02BA\u02B2\u02BA.\u02B4\u02C0\u02B6\u02B9\u02BE\u02BE\u02C1\u02B2\u02B6\u02B4\u02B6(true, false);
 				}
 				this.\u02C0\u02BD\u02BF\u02B5\u02B8\u02B7\u02B2\u02B5\u02B6\u02B8\u02B3();
 			}
@@ -73,7 +73,7 @@ public class CliGameLauncher : MonoBehaviour
 
 	public void \u02C0\u02BD\u02BF\u02B5\u02B8\u02B7\u02B2\u02B5\u02B6\u02B8\u02B3()
 	{
-		GlobalVariables instance = GlobalVariables.instance;
+		GlobalVariables u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7;
 		Debug.Log(this.\u02BA\u02B5\u02BE\u02C1\u02BA\u02B6\u02B2\u02B4\u02B8\u02B3\u02B3.Count);
 		for (int i = 0; i < this.\u02BA\u02B5\u02BE\u02C1\u02BA\u02B6\u02B2\u02B4\u02B8\u02B3\u02B3.Count; i++)
 		{
@@ -84,18 +84,18 @@ public class CliGameLauncher : MonoBehaviour
 		}
 		if (this.\u02C0\u02C1\u02B4\u02B6\u02B7\u02BC\u02C1\u02B3\u02BA\u02B4\u02B2 > 0)
 		{
-			instance.\u02BB\u02B4\u02BD\u02B2\u02BC\u02B7\u02C0\u02C1\u02B8\u02B4\u02BD = this.\u02C0\u02C1\u02B4\u02B6\u02B7\u02BC\u02C1\u02B3\u02BA\u02B4\u02B2;
-			instance.\u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1 = this.\u02B4\u02BC\u02BF\u02BC\u02BA\u02B9\u02B8\u02B2\u02BD\u02BE\u02BD;
+			u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B.\u02BB\u02B4\u02BD\u02B2\u02BC\u02B7\u02C0\u02C1\u02B8\u02B4\u02BD = this.\u02C0\u02C1\u02B4\u02B6\u02B7\u02BC\u02C1\u02B3\u02BA\u02B4\u02B2;
+			u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B.\u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1 = this.\u02B4\u02BC\u02BF\u02BC\u02BA\u02B9\u02B8\u02B2\u02BD\u02BE\u02BD;
 			SettingsController.\u02B3\u02BD\u02BB\u02B7\u02B5\u02B7\u02BD\u02B4\u02B4\u02BD\u02B3.CurrentValue = 0;
 			if (this.\u02BD\u02BF\u02BE\u02B5\u02B8\u02BD\u02BD\u02B3\u02B2\u02B7\u02BE)
 			{
-				instance.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 = GameMode.Versus;
+				u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 = GameMode.Versus;
 			}
 			else
 			{
-				instance.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 = GameMode.Quickplay;
+				u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 = GameMode.Quickplay;
 			}
-			FadeBehaviour.instance.\u02BB\u02B2\u02BF\u02B4\u02BA\u02B3\u02C1\u02B7\u02B6\u02B5\u02BE("Gameplay", 0f);
+			FadeBehaviour.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BB\u02B2\u02BF\u02B4\u02BA\u02B3\u02C1\u02B7\u02B6\u02B5\u02BE("Gameplay", 0f);
 		}
 		else
 		{
@@ -122,7 +122,7 @@ public class CliGameLauncher : MonoBehaviour
 
 	public void \u02C1\u02B2\u02B6\u02B6\u02B4\u02C0\u02BB\u02BA\u02B6\u02B4\u02BD()
 	{
-		GlobalVariables instance = GlobalVariables.instance;
+		GlobalVariables u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7;
 		Debug.Log(this.\u02BA\u02B5\u02BE\u02C1\u02BA\u02B6\u02B2\u02B4\u02B8\u02B3\u02B3.Count);
 		for (int i = 1; i < this.\u02BA\u02B5\u02BE\u02C1\u02BA\u02B6\u02B2\u02B4\u02B8\u02B3\u02B3.Count; i += 0)
 		{
@@ -133,18 +133,18 @@ public class CliGameLauncher : MonoBehaviour
 		}
 		if (this.\u02C0\u02C1\u02B4\u02B6\u02B7\u02BC\u02C1\u02B3\u02BA\u02B4\u02B2 > 0)
 		{
-			instance.\u02BB\u02B4\u02BD\u02B2\u02BC\u02B7\u02C0\u02C1\u02B8\u02B4\u02BD = this.\u02C0\u02C1\u02B4\u02B6\u02B7\u02BC\u02C1\u02B3\u02BA\u02B4\u02B2;
-			instance.\u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1 = this.\u02B4\u02BC\u02BF\u02BC\u02BA\u02B9\u02B8\u02B2\u02BD\u02BE\u02BD;
+			u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B.\u02BB\u02B4\u02BD\u02B2\u02BC\u02B7\u02C0\u02C1\u02B8\u02B4\u02BD = this.\u02C0\u02C1\u02B4\u02B6\u02B7\u02BC\u02C1\u02B3\u02BA\u02B4\u02B2;
+			u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B.\u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1 = this.\u02B4\u02BC\u02BF\u02BC\u02BA\u02B9\u02B8\u02B2\u02BD\u02BE\u02BD;
 			SettingsController.\u02B3\u02BD\u02BB\u02B7\u02B5\u02B7\u02BD\u02B4\u02B4\u02BD\u02B3.CurrentValue = 1;
 			if (this.\u02BD\u02BF\u02BE\u02B5\u02B8\u02BD\u02BD\u02B3\u02B2\u02B7\u02BE)
 			{
-				instance.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 = (GameMode)6;
+				u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 = (GameMode)6;
 			}
 			else
 			{
-				instance.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 = GameMode.Quickplay;
+				u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 = GameMode.Quickplay;
 			}
-			FadeBehaviour.instance.\u02BB\u02B2\u02BF\u02B4\u02BA\u02B3\u02C1\u02B7\u02B6\u02B5\u02BE("ERROR: Song length is 0 ignoring playback request.", 942f);
+			FadeBehaviour.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BB\u02B2\u02BF\u02B4\u02BA\u02B3\u02C1\u02B7\u02B6\u02B5\u02BE("ERROR: Song length is 0 ignoring playback request.", 942f);
 		}
 		else
 		{
@@ -381,14 +381,14 @@ public class CliGameLauncher : MonoBehaviour
 		{
 			return false;
 		}
-		CHPlayer chplayer = GlobalVariables.instance.playerList[\u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5];
-		chplayer.\u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7 = \u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5;
-		chplayer.player = ReInput.players.GetSystemPlayer();
+		\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[\u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5];
+		u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7 = \u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5;
+		u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.rewiredPlayer = ReInput.players.GetSystemPlayer();
 		\u02B9\u02BA\u02BF\u02BB\u02B2\u02B9\u02BB\u02B9\u02B9\u02B5\u02B8 u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B = this.\u02C0\u02B6\u02C1\u02BB\u02B7\u02C1\u02BB\u02BA\u02B4\u02B8\u02BA.\u02BD\u02B2\u02BE\u02B8\u02BF\u02B7\u02B2\u02B6\u02B2\u02BB\u02C1();
 		u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B.isBot.CurrentValue = 1;
 		u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B.displayName.CurrentValue = 0;
 		u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B.playerName.CurrentValue = "";
-		u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B.colorSettings = GlobalVariables.instance.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE.\u02C0\u02BB\u02B2\u02B6\u02B4\u02B3\u02BF\u02B2\u02B5\u02B8\u02BA(u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B.colorProfileName);
+		u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B.colorSettings = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE.\u02C0\u02BB\u02B2\u02B6\u02B4\u02B3\u02BF\u02B2\u02B5\u02B8\u02BA(u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B.colorProfileName);
 		if (this.\u02B2\u02C1\u02B5\u02BF\u02BD\u02B3\u02B9\u02B2\u02BD\u02BC\u02BC)
 		{
 			u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B.playerName.CurrentValue = this.\u02B5\u02B6\u02BD\u02BC\u02C0\u02BD\u02B2\u02B9\u02BB\u02B6\u02B3(item);
@@ -412,7 +412,7 @@ public class CliGameLauncher : MonoBehaviour
 		{
 			u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B.controllerType.CurrentValue = 0;
 		}
-		chplayer.playerProfile = u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B;
+		u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.playerProfile = u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B;
 		return true;
 	}
 
@@ -421,13 +421,13 @@ public class CliGameLauncher : MonoBehaviour
 		global::UnityEngine.Object.Instantiate<GameObject>(this.globalVariablesPrefab);
 		global::UnityEngine.Object.Instantiate<GameObject>(this.rewiredInputManager);
 		global::UnityEngine.Object.Instantiate<GameObject>(this.netManager);
-		while (!GlobalVariables.instance.\u02B9\u02BE\u02B5\u02B9\u02C1\u02BB\u02B6\u02BD\u02BC\u02C1\u02B5 || !ReInput.isReady)
+		while (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B9\u02BE\u02B5\u02B9\u02C1\u02BB\u02B6\u02BD\u02BC\u02C1\u02B5 || !ReInput.isReady)
 		{
 			yield return null;
 		}
 		if (this.\u02B8\u02B7\u02B5\u02B9\u02BC\u02BF\u02BC\u02BC\u02BC\u02BF\u02BF != null)
 		{
-			foreach (\u02B9\u02BA\u02BF\u02BB\u02B2\u02B9\u02BB\u02B9\u02B9\u02B5\u02B8 u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B in GlobalVariables.instance.\u02C1\u02B7\u02BD\u02B7\u02B7\u02BD\u02B6\u02B4\u02BA\u02B2\u02BA.\u02BE\u02B6\u02BD\u02B9\u02BF\u02BB\u02BE\u02B7\u02B3\u02BE\u02B5)
+			foreach (\u02B9\u02BA\u02BF\u02BB\u02B2\u02B9\u02BB\u02B9\u02B9\u02B5\u02B8 u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02B7\u02BD\u02B7\u02B7\u02BD\u02B6\u02B4\u02BA\u02B2\u02BA.\u02BE\u02B6\u02BD\u02B9\u02BF\u02BB\u02BE\u02B7\u02B3\u02BE\u02B5)
 			{
 				if (u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B.playerName == this.\u02B8\u02B7\u02B5\u02B9\u02BC\u02BF\u02BC\u02BC\u02BC\u02BF\u02BF)
 				{
@@ -445,7 +445,7 @@ public class CliGameLauncher : MonoBehaviour
 			{
 				if (this.\u02C0\u02B6\u02C1\u02BB\u02B7\u02C1\u02BB\u02BA\u02B4\u02B8\u02BA == null)
 				{
-					this.\u02C0\u02B6\u02C1\u02BB\u02B7\u02C1\u02BB\u02BA\u02B4\u02B8\u02BA = GlobalVariables.instance.\u02C1\u02B7\u02BD\u02B7\u02B7\u02BD\u02B6\u02B4\u02BA\u02B2\u02BA.\u02B4\u02C0\u02B6\u02B9\u02BE\u02BE\u02C1\u02B2\u02B6\u02B4\u02B6(true, false);
+					this.\u02C0\u02B6\u02C1\u02BB\u02B7\u02C1\u02BB\u02BA\u02B4\u02B8\u02BA = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02B7\u02BD\u02B7\u02B7\u02BD\u02B6\u02B4\u02BA\u02B2\u02BA.\u02B4\u02C0\u02B6\u02B9\u02BE\u02BE\u02C1\u02B2\u02B6\u02B4\u02B6(true, false);
 				}
 				this.\u02C0\u02BD\u02BF\u02B5\u02B8\u02B7\u02B2\u02B5\u02B6\u02B8\u02B3();
 			}
@@ -731,14 +731,14 @@ public class CliGameLauncher : MonoBehaviour
 		{
 			return true;
 		}
-		CHPlayer chplayer = GlobalVariables.instance.playerList[\u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5];
-		chplayer.\u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7 = \u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5;
-		chplayer.player = ReInput.players.GetSystemPlayer();
+		\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[\u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5];
+		u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02BE\u02BB\u02B5\u02B7\u02B9\u02B2\u02B6\u02BF\u02B9\u02B7\u02B7 = \u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5;
+		u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.rewiredPlayer = ReInput.players.GetSystemPlayer();
 		\u02B9\u02BA\u02BF\u02BB\u02B2\u02B9\u02BB\u02B9\u02B9\u02B5\u02B8 u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B = this.\u02C0\u02B6\u02C1\u02BB\u02B7\u02C1\u02BB\u02BA\u02B4\u02B8\u02BA.\u02BD\u02B2\u02BE\u02B8\u02BF\u02B7\u02B2\u02B6\u02B2\u02BB\u02C1();
 		u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B.isBot.CurrentValue = 0;
 		u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B.displayName.CurrentValue = 1;
 		u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B.playerName.CurrentValue = "8EDC4F";
-		u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B.colorSettings = GlobalVariables.instance.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE.\u02C0\u02BB\u02B2\u02B6\u02B4\u02B3\u02BF\u02B2\u02B5\u02B8\u02BA(u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B.colorProfileName);
+		u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B.colorSettings = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE.\u02C0\u02BB\u02B2\u02B6\u02B4\u02B3\u02BF\u02B2\u02B5\u02B8\u02BA(u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B.colorProfileName);
 		if (this.\u02B2\u02C1\u02B5\u02BF\u02BD\u02B3\u02B9\u02B2\u02BD\u02BC\u02BC)
 		{
 			u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B.playerName.CurrentValue = this.\u02B2\u02B4\u02B4\u02C1\u02BE\u02BC\u02C0\u02B8\u02B9\u02BD\u02BC(item);
@@ -762,13 +762,13 @@ public class CliGameLauncher : MonoBehaviour
 		{
 			u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B.controllerType.CurrentValue = 0;
 		}
-		chplayer.playerProfile = u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B;
+		u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.playerProfile = u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B;
 		return true;
 	}
 
 	public void \u02B5\u02C0\u02B5\u02B9\u02B2\u02B3\u02B9\u02B2\u02BA\u02B2\u02B3()
 	{
-		GlobalVariables instance = GlobalVariables.instance;
+		GlobalVariables u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7;
 		Debug.Log(this.\u02BA\u02B5\u02BE\u02C1\u02BA\u02B6\u02B2\u02B4\u02B8\u02B3\u02B3.Count);
 		for (int i = 1; i < this.\u02BA\u02B5\u02BE\u02C1\u02BA\u02B6\u02B2\u02B4\u02B8\u02B3\u02B3.Count; i += 0)
 		{
@@ -779,18 +779,18 @@ public class CliGameLauncher : MonoBehaviour
 		}
 		if (this.\u02C0\u02C1\u02B4\u02B6\u02B7\u02BC\u02C1\u02B3\u02BA\u02B4\u02B2 > 1)
 		{
-			instance.\u02BB\u02B4\u02BD\u02B2\u02BC\u02B7\u02C0\u02C1\u02B8\u02B4\u02BD = this.\u02C0\u02C1\u02B4\u02B6\u02B7\u02BC\u02C1\u02B3\u02BA\u02B4\u02B2;
-			instance.\u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1 = this.\u02B4\u02BC\u02BF\u02BC\u02BA\u02B9\u02B8\u02B2\u02BD\u02BE\u02BD;
+			u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B.\u02BB\u02B4\u02BD\u02B2\u02BC\u02B7\u02C0\u02C1\u02B8\u02B4\u02BD = this.\u02C0\u02C1\u02B4\u02B6\u02B7\u02BC\u02C1\u02B3\u02BA\u02B4\u02B2;
+			u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B.\u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1 = this.\u02B4\u02BC\u02BF\u02BC\u02BA\u02B9\u02B8\u02B2\u02BD\u02BE\u02BD;
 			SettingsController.\u02B3\u02BD\u02BB\u02B7\u02B5\u02B7\u02BD\u02B4\u02B4\u02BD\u02B3.CurrentValue = 1;
 			if (this.\u02BD\u02BF\u02BE\u02B5\u02B8\u02BD\u02BD\u02B3\u02B2\u02B7\u02BE)
 			{
-				instance.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 = (GameMode)6;
+				u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 = (GameMode)6;
 			}
 			else
 			{
-				instance.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 = GameMode.Quickplay;
+				u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 = GameMode.Quickplay;
 			}
-			FadeBehaviour.instance.\u02BB\u02B2\u02BF\u02B4\u02BA\u02B3\u02C1\u02B7\u02B6\u02B5\u02BE("targetFramerate", 1156f);
+			FadeBehaviour.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BB\u02B2\u02BF\u02B4\u02BA\u02B3\u02C1\u02B7\u02B6\u02B5\u02BE("targetFramerate", 1156f);
 		}
 		else
 		{
@@ -890,13 +890,13 @@ public class CliGameLauncher : MonoBehaviour
 		global::UnityEngine.Object.Instantiate<GameObject>(this.globalVariablesPrefab);
 		global::UnityEngine.Object.Instantiate<GameObject>(this.rewiredInputManager);
 		global::UnityEngine.Object.Instantiate<GameObject>(this.netManager);
-		while (!GlobalVariables.instance.\u02B9\u02BE\u02B5\u02B9\u02C1\u02BB\u02B6\u02BD\u02BC\u02C1\u02B5 || !ReInput.isReady)
+		while (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B9\u02BE\u02B5\u02B9\u02C1\u02BB\u02B6\u02BD\u02BC\u02C1\u02B5 || !ReInput.isReady)
 		{
 			yield return null;
 		}
 		if (this.\u02B8\u02B7\u02B5\u02B9\u02BC\u02BF\u02BC\u02BC\u02BC\u02BF\u02BF != null)
 		{
-			foreach (\u02B9\u02BA\u02BF\u02BB\u02B2\u02B9\u02BB\u02B9\u02B9\u02B5\u02B8 u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B in GlobalVariables.instance.\u02C1\u02B7\u02BD\u02B7\u02B7\u02BD\u02B6\u02B4\u02BA\u02B2\u02BA.\u02BE\u02B6\u02BD\u02B9\u02BF\u02BB\u02BE\u02B7\u02B3\u02BE\u02B5)
+			foreach (\u02B9\u02BA\u02BF\u02BB\u02B2\u02B9\u02BB\u02B9\u02B9\u02B5\u02B8 u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02B7\u02BD\u02B7\u02B7\u02BD\u02B6\u02B4\u02BA\u02B2\u02BA.\u02BE\u02B6\u02BD\u02B9\u02BF\u02BB\u02BE\u02B7\u02B3\u02BE\u02B5)
 			{
 				if (u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B.playerName == this.\u02B8\u02B7\u02B5\u02B9\u02BC\u02BF\u02BC\u02BC\u02BC\u02BF\u02BF)
 				{
@@ -914,7 +914,7 @@ public class CliGameLauncher : MonoBehaviour
 			{
 				if (this.\u02C0\u02B6\u02C1\u02BB\u02B7\u02C1\u02BB\u02BA\u02B4\u02B8\u02BA == null)
 				{
-					this.\u02C0\u02B6\u02C1\u02BB\u02B7\u02C1\u02BB\u02BA\u02B4\u02B8\u02BA = GlobalVariables.instance.\u02C1\u02B7\u02BD\u02B7\u02B7\u02BD\u02B6\u02B4\u02BA\u02B2\u02BA.\u02B4\u02C0\u02B6\u02B9\u02BE\u02BE\u02C1\u02B2\u02B6\u02B4\u02B6(true, false);
+					this.\u02C0\u02B6\u02C1\u02BB\u02B7\u02C1\u02BB\u02BA\u02B4\u02B8\u02BA = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02B7\u02BD\u02B7\u02B7\u02BD\u02B6\u02B4\u02BA\u02B2\u02BA.\u02B4\u02C0\u02B6\u02B9\u02BE\u02BE\u02C1\u02B2\u02B6\u02B4\u02B6(true, false);
 				}
 				this.\u02C0\u02BD\u02BF\u02B5\u02B8\u02B7\u02B2\u02B5\u02B6\u02B8\u02B3();
 			}
@@ -965,13 +965,13 @@ public class CliGameLauncher : MonoBehaviour
 		global::UnityEngine.Object.Instantiate<GameObject>(this.globalVariablesPrefab);
 		global::UnityEngine.Object.Instantiate<GameObject>(this.rewiredInputManager);
 		global::UnityEngine.Object.Instantiate<GameObject>(this.netManager);
-		while (!GlobalVariables.instance.\u02B9\u02BE\u02B5\u02B9\u02C1\u02BB\u02B6\u02BD\u02BC\u02C1\u02B5 || !ReInput.isReady)
+		while (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B9\u02BE\u02B5\u02B9\u02C1\u02BB\u02B6\u02BD\u02BC\u02C1\u02B5 || !ReInput.isReady)
 		{
 			yield return null;
 		}
 		if (this.\u02B8\u02B7\u02B5\u02B9\u02BC\u02BF\u02BC\u02BC\u02BC\u02BF\u02BF != null)
 		{
-			foreach (\u02B9\u02BA\u02BF\u02BB\u02B2\u02B9\u02BB\u02B9\u02B9\u02B5\u02B8 u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B in GlobalVariables.instance.\u02C1\u02B7\u02BD\u02B7\u02B7\u02BD\u02B6\u02B4\u02BA\u02B2\u02BA.\u02BE\u02B6\u02BD\u02B9\u02BF\u02BB\u02BE\u02B7\u02B3\u02BE\u02B5)
+			foreach (\u02B9\u02BA\u02BF\u02BB\u02B2\u02B9\u02BB\u02B9\u02B9\u02B5\u02B8 u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02B7\u02BD\u02B7\u02B7\u02BD\u02B6\u02B4\u02BA\u02B2\u02BA.\u02BE\u02B6\u02BD\u02B9\u02BF\u02BB\u02BE\u02B7\u02B3\u02BE\u02B5)
 			{
 				if (u02B9_u02BA_u02BF_u02BB_u02B2_u02B9_u02BB_u02B9_u02B9_u02B5_u02B.playerName == this.\u02B8\u02B7\u02B5\u02B9\u02BC\u02BF\u02BC\u02BC\u02BC\u02BF\u02BF)
 				{
@@ -989,7 +989,7 @@ public class CliGameLauncher : MonoBehaviour
 			{
 				if (this.\u02C0\u02B6\u02C1\u02BB\u02B7\u02C1\u02BB\u02BA\u02B4\u02B8\u02BA == null)
 				{
-					this.\u02C0\u02B6\u02C1\u02BB\u02B7\u02C1\u02BB\u02BA\u02B4\u02B8\u02BA = GlobalVariables.instance.\u02C1\u02B7\u02BD\u02B7\u02B7\u02BD\u02B6\u02B4\u02BA\u02B2\u02BA.\u02B4\u02C0\u02B6\u02B9\u02BE\u02BE\u02C1\u02B2\u02B6\u02B4\u02B6(true, false);
+					this.\u02C0\u02B6\u02C1\u02BB\u02B7\u02C1\u02BB\u02BA\u02B4\u02B8\u02BA = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02B7\u02BD\u02B7\u02B7\u02BD\u02B6\u02B4\u02BA\u02B2\u02BA.\u02B4\u02C0\u02B6\u02B9\u02BE\u02BE\u02C1\u02B2\u02B6\u02B4\u02B6(true, false);
 				}
 				this.\u02C0\u02BD\u02BF\u02B5\u02B8\u02B7\u02B2\u02B5\u02B6\u02B8\u02B3();
 			}

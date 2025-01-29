@@ -183,7 +183,7 @@ public class DrumSongOptionsMenu : BaseMenu
 			this.songSelect.\u02B5\u02BD\u02BB\u02BA\u02BD\u02C1\u02BC\u02BF\u02BF\u02B9\u02B9();
 			goto IL_024E;
 		}
-		this.songSelect.GreenLongPressed();
+		this.songSelect.\u02B2\u02B2\u02B9\u02B2\u02B8\u02BB\u02B7\u02B6\u02B3\u02C1\u02B5();
 		goto IL_024E;
 		IL_0248:
 		throw new NotImplementedException();
@@ -330,7 +330,7 @@ public class DrumSongOptionsMenu : BaseMenu
 			this.songSelect.\u02B5\u02BD\u02BB\u02BA\u02BD\u02C1\u02BC\u02BF\u02BF\u02B9\u02B9();
 			goto IL_024E;
 		}
-		this.songSelect.GreenLongPressed();
+		this.songSelect.\u02B2\u02B2\u02B9\u02B2\u02B8\u02BB\u02B7\u02B6\u02B3\u02C1\u02B5();
 		goto IL_024E;
 		IL_0248:
 		throw new NotImplementedException();
@@ -371,7 +371,7 @@ public class DrumSongOptionsMenu : BaseMenu
 		base.gameObject.SetActive(true);
 	}
 
-	public override void ConfirmPressed()
+	public override void \u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3()
 	{
 		base.\u02B7\u02B6\u02BC\u02BC\u02B3\u02BA\u02BE\u02C0\u02BF\u02B9\u02C1();
 		bool flag = true;
@@ -507,7 +507,7 @@ public class DrumSongOptionsMenu : BaseMenu
 			this.songSelect.\u02B5\u02BD\u02BB\u02BA\u02BD\u02C1\u02BC\u02BF\u02BF\u02B9\u02B9();
 			goto IL_024E;
 		}
-		this.songSelect.GreenLongPressed();
+		this.songSelect.\u02B2\u02B2\u02B9\u02B2\u02B8\u02BB\u02B7\u02B6\u02B3\u02C1\u02B5();
 		goto IL_024E;
 		IL_0248:
 		throw new NotImplementedException();
@@ -684,7 +684,7 @@ public class DrumSongOptionsMenu : BaseMenu
 			this.songSelect.\u02B5\u02BD\u02BB\u02BA\u02BD\u02C1\u02BC\u02BF\u02BF\u02B9\u02B9();
 			goto IL_024E;
 		}
-		this.songSelect.GreenLongPressed();
+		this.songSelect.\u02B2\u02B2\u02B9\u02B2\u02B8\u02BB\u02B7\u02B6\u02B3\u02C1\u02B5();
 		goto IL_024E;
 		IL_0248:
 		throw new NotImplementedException();
@@ -831,7 +831,7 @@ public class DrumSongOptionsMenu : BaseMenu
 			this.songSelect.\u02B5\u02BD\u02BB\u02BA\u02BD\u02C1\u02BC\u02BF\u02BF\u02B9\u02B9();
 			goto IL_024E;
 		}
-		this.songSelect.GreenLongPressed();
+		this.songSelect.\u02B2\u02B2\u02B9\u02B2\u02B8\u02BB\u02B7\u02B6\u02B3\u02C1\u02B5();
 		goto IL_024E;
 		IL_0248:
 		throw new NotImplementedException();

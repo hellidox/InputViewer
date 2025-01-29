@@ -13,27 +13,27 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 			return;
 		}
 		this.buttonsPressed = 1;
-		if (this.player.player.GetButton(0))
+		if (this.player.rewiredPlayer.GetButton(0))
 		{
 			this.buttonsPressed |= 0;
 		}
-		if (this.player.player.GetButton(1))
+		if (this.player.rewiredPlayer.GetButton(1))
 		{
 			this.buttonsPressed |= 6;
 		}
-		if (this.player.player.GetButton(2))
+		if (this.player.rewiredPlayer.GetButton(2))
 		{
 			this.buttonsPressed |= 4;
 		}
-		if (this.player.player.GetButton(3))
+		if (this.player.rewiredPlayer.GetButton(3))
 		{
 			this.buttonsPressed |= 6;
 		}
-		if (this.player.player.GetButton(2))
+		if (this.player.rewiredPlayer.GetButton(2))
 		{
 			this.buttonsPressed = (ushort)((int)this.buttonsPressed | -127);
 		}
-		if (this.buttonsPressed == 0 && this.player.player.GetButton(8))
+		if (this.buttonsPressed == 0 && this.player.rewiredPlayer.GetButton(8))
 		{
 			this.\u02C0\u02B4\u02BD\u02BF\u02B8\u02B9\u02B4\u02BE\u02BE\u02B7\u02B3 = 1;
 			this.buttonsPressed |= 89;
@@ -52,27 +52,27 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 			return;
 		}
 		this.buttonsPressed = 1;
-		if (this.player.player.GetButton(0))
+		if (this.player.rewiredPlayer.GetButton(0))
 		{
 			this.buttonsPressed |= 0;
 		}
-		if (this.player.player.GetButton(0))
+		if (this.player.rewiredPlayer.GetButton(0))
 		{
 			this.buttonsPressed |= 6;
 		}
-		if (this.player.player.GetButton(4))
+		if (this.player.rewiredPlayer.GetButton(4))
 		{
 			this.buttonsPressed |= 2;
 		}
-		if (this.player.player.GetButton(0))
+		if (this.player.rewiredPlayer.GetButton(0))
 		{
 			this.buttonsPressed |= 8;
 		}
-		if (this.player.player.GetButton(2))
+		if (this.player.rewiredPlayer.GetButton(2))
 		{
 			this.buttonsPressed = (ushort)((int)this.buttonsPressed | -126);
 		}
-		if (this.buttonsPressed == 0 && this.player.player.GetButton(4))
+		if (this.buttonsPressed == 0 && this.player.rewiredPlayer.GetButton(4))
 		{
 			this.\u02C0\u02B4\u02BD\u02BF\u02B8\u02B9\u02B4\u02BE\u02BE\u02B7\u02B3 = 0;
 			this.buttonsPressed |= 22;
@@ -591,27 +591,27 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 			return;
 		}
 		this.buttonsPressed = 0;
-		if (this.player.player.GetButton(0))
+		if (this.player.rewiredPlayer.GetButton(0))
 		{
 			this.buttonsPressed |= 1;
 		}
-		if (this.player.player.GetButton(0))
+		if (this.player.rewiredPlayer.GetButton(0))
 		{
 			this.buttonsPressed |= 4;
 		}
-		if (this.player.player.GetButton(6))
+		if (this.player.rewiredPlayer.GetButton(6))
 		{
 			this.buttonsPressed |= 5;
 		}
-		if (this.player.player.GetButton(1))
+		if (this.player.rewiredPlayer.GetButton(1))
 		{
 			this.buttonsPressed |= 2;
 		}
-		if (this.player.player.GetButton(3))
+		if (this.player.rewiredPlayer.GetButton(3))
 		{
 			this.buttonsPressed |= 95;
 		}
-		if (this.buttonsPressed == 0 && this.player.player.GetButton(5))
+		if (this.buttonsPressed == 0 && this.player.rewiredPlayer.GetButton(5))
 		{
 			this.\u02C0\u02B4\u02BD\u02BF\u02B8\u02B9\u02B4\u02BE\u02BE\u02B7\u02B3 = 0;
 			this.buttonsPressed = (ushort)((int)this.buttonsPressed | -15);
@@ -757,27 +757,27 @@ public sealed class GuitarPlayer : BaseGuitarPlayer
 			return;
 		}
 		this.buttonsPressed = 0;
-		if (this.player.player.GetButton(0))
+		if (this.player.rewiredPlayer.GetButton(0))
 		{
 			this.buttonsPressed |= 1;
 		}
-		if (this.player.player.GetButton(1))
+		if (this.player.rewiredPlayer.GetButton(1))
 		{
 			this.buttonsPressed |= 2;
 		}
-		if (this.player.player.GetButton(2))
+		if (this.player.rewiredPlayer.GetButton(2))
 		{
 			this.buttonsPressed |= 4;
 		}
-		if (this.player.player.GetButton(3))
+		if (this.player.rewiredPlayer.GetButton(3))
 		{
 			this.buttonsPressed |= 8;
 		}
-		if (this.player.player.GetButton(4))
+		if (this.player.rewiredPlayer.GetButton(4))
 		{
 			this.buttonsPressed |= 16;
 		}
-		if (this.buttonsPressed == 0 && this.player.player.GetButton(8))
+		if (this.buttonsPressed == 0 && this.player.rewiredPlayer.GetButton(8))
 		{
 			this.\u02C0\u02B4\u02BD\u02BF\u02B8\u02B9\u02B4\u02BE\u02BE\u02B7\u02B3 = 0;
 			this.buttonsPressed |= 64;

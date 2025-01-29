@@ -7,6 +7,20 @@ using UnityEngine;
 
 public class SongOptions : BaseMenu
 {
+	public virtual void \u02B2\u02C0\u02B4\u02B7\u02B8\u02B5\u02B5\u02B4\u02B7\u02C1\u02BC()
+	{
+		if (this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE == this.\u02B8\u02BD\u02BE\u02C1\u02BE\u02C0\u02B7\u02B5\u02C0\u02B7\u02BC.Length)
+		{
+			this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE = 0;
+		}
+		if (this.\u02B8\u02BD\u02BE\u02C1\u02BE\u02C0\u02B7\u02B5\u02C0\u02B7\u02BC[this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE] == -101)
+		{
+			this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE++;
+			return;
+		}
+		this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE = 1;
+	}
+
 	public override void \u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8()
 	{
 		this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE = 0;
@@ -15,19 +29,19 @@ public class SongOptions : BaseMenu
 		{
 			if (this.\u02C0\u02C1\u02BE\u02BF\u02B2\u02BC\u02C0\u02B4\u02B3\u02BD\u02C0 == 0)
 			{
-				this.lastIndex = base.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC;
+				this.\u02B6\u02B5\u02B7\u02BD\u02B4\u02BA\u02B6\u02B9\u02B2\u02B3\u02B4 = base.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC;
 				this.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(0, true);
 				base.gameObject.SetActive(false);
 				return;
 			}
 			if (this.\u02C0\u02C1\u02BE\u02BF\u02B2\u02BC\u02C0\u02B4\u02B3\u02BD\u02C0 == 4)
 			{
-				this.ChangeMenu(this.setlistOptions);
+				this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.setlistOptions);
 				return;
 			}
 			if (this.\u02C0\u02C1\u02BE\u02BF\u02B2\u02BC\u02C0\u02B4\u02B3\u02BD\u02C0 == 2)
 			{
-				this.ChangeMenu(GlobalVariables.instance.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4 ? this.mainOptionsPractice : this.mainOptions);
+				this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4 ? this.mainOptionsPractice : this.mainOptions);
 				base.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0("Setlist");
 				this.\u02C0\u02C1\u02BE\u02BF\u02B2\u02BC\u02C0\u02B4\u02B3\u02BD\u02C0 = 0;
 				return;
@@ -105,11 +119,11 @@ public class SongOptions : BaseMenu
 								goto IL_0844;
 							}
 							this.allowMultiLanguage = false;
-							this.ChangeMenu(\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02B3\u02B7\u02BE\u02B8\u02C1\u02BA\u02B5\u02B8\u02B2\u02B5\u02C0());
+							this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02B3\u02B7\u02BE\u02B8\u02C1\u02BA\u02B5\u02B8\u02B2\u02B5\u02C0());
 							if (this.menuStrings == null || this.menuStrings.Length == 0)
 							{
 								this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("GHLBass", "6 Fret Bass Guitar", null, null, null, null);
-								this.ChangeMenu(this.setlistOptions);
+								this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.setlistOptions);
 								return;
 							}
 							this.\u02C0\u02C1\u02BE\u02BF\u02B2\u02BC\u02C0\u02B4\u02B3\u02BD\u02C0 = 8;
@@ -139,7 +153,7 @@ public class SongOptions : BaseMenu
 							}
 							if (\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02BC\u02BD\u02BE\u02BB\u02B2\u02B8\u02C0\u02B6\u02BA\u02B9\u02B7 == null)
 							{
-								this.isWritingSetlistName = true;
+								this.\u02B3\u02BB\u02BF\u02C0\u02BB\u02B6\u02B5\u02B9\u02B8\u02BE\u02B9 = true;
 								this.\u02BA\u02BE\u02B9\u02B8\u02B3\u02BB\u02BB\u02C0\u02BF\u02C0\u02BE = false;
 								this.\u02B5\u02B7\u02C0\u02B6\u02BF\u02B6\u02BC\u02BE\u02B6\u02B8\u02B2();
 								return;
@@ -277,7 +291,7 @@ public class SongOptions : BaseMenu
 					{
 						goto IL_0844;
 					}
-					this.isWritingSetlistName = (this.\u02BA\u02BE\u02B9\u02B8\u02B3\u02BB\u02BB\u02C0\u02BF\u02C0\u02BE = false);
+					this.\u02B3\u02BB\u02BF\u02C0\u02BB\u02B6\u02B5\u02B9\u02B8\u02BE\u02B9 = (this.\u02BA\u02BE\u02B9\u02B8\u02B3\u02BB\u02BB\u02C0\u02BF\u02C0\u02BE = false);
 					this.\u02B5\u02B7\u02C0\u02B6\u02BF\u02B6\u02BC\u02BE\u02B6\u02B8\u02B2();
 					return;
 				}
@@ -309,15 +323,15 @@ public class SongOptions : BaseMenu
 							}
 							if (!this.setlistMenu.isActiveAndEnabled)
 							{
-								this.ChangeMenu(this.setlistOptions);
+								this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.setlistOptions);
 								return;
 							}
 							if (CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BA\u02B8\u02B6\u02BB\u02B5\u02B2\u02B8\u02B6\u02BB\u02BB)
 							{
-								this.ChangeMenu(this.setlistOptionsOnline);
+								this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.setlistOptionsOnline);
 								return;
 							}
-							this.ChangeMenu(this.setlistOptionsActive);
+							this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.setlistOptionsActive);
 							return;
 						}
 					}
@@ -370,7 +384,7 @@ public class SongOptions : BaseMenu
 					{
 						goto IL_0844;
 					}
-					this.ChangeMenu(this.instrumentScoresOptions);
+					this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.instrumentScoresOptions);
 					return;
 				}
 			}
@@ -416,7 +430,7 @@ public class SongOptions : BaseMenu
 						goto IL_0844;
 					}
 					this.allowMultiLanguage = false;
-					this.ChangeMenu(\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02B3\u02B7\u02BE\u02B8\u02C1\u02BA\u02B5\u02B8\u02B2\u02B5\u02C0());
+					this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02B3\u02B7\u02BE\u02B8\u02C1\u02BA\u02B5\u02B8\u02B2\u02B5\u02C0());
 					if (this.menuStrings == null || this.menuStrings.Length == 0)
 					{
 						this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("part", "diff_coopghl", null, null, null, null);
@@ -494,13 +508,13 @@ public class SongOptions : BaseMenu
 			return;
 		}
 		this.confirmMenu.\u02B5\u02B8\u02C0\u02B7\u02BF\u02B7\u02B5\u02BD\u02C1\u02B8\u02B7("_GlobalWhammyTexture", "Difficulty", null, null, null, null);
-		this.ChangeMenu(this.setlistOptions);
+		this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.setlistOptions);
 	}
 
 	protected virtual void \u02B3\u02C1\u02B9\u02B7\u02B4\u02BF\u02BD\u02B9\u02BB\u02BE\u02B6()
 	{
 		base.OnEnable();
-		this.\u02B8\u02B5\u02B7\u02B7\u02B2\u02B6\u02BE\u02B3\u02B8\u02BD\u02BE(GlobalVariables.instance.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4 ? this.mainOptionsPractice : this.mainOptions);
+		this.\u02B8\u02B5\u02B7\u02B7\u02B2\u02B6\u02BE\u02B3\u02B8\u02BD\u02BE(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4 ? this.mainOptionsPractice : this.mainOptions);
 		base.\u02B7\u02B6\u02BC\u02BC\u02B3\u02BA\u02BE\u02C0\u02BF\u02B9\u02C1();
 		if ((!this.\u02B4\u02BA\u02BC\u02BF\u02B3\u02BD\u02BE\u02C1\u02BC\u02C1\u02B6 && Application.platform == RuntimePlatform.OSXPlayer) || Application.platform == RuntimePlatform.OSXEditor)
 		{
@@ -540,7 +554,7 @@ public class SongOptions : BaseMenu
 	protected override void OnEnable()
 	{
 		base.OnEnable();
-		this.ChangeMenu(GlobalVariables.instance.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4 ? this.mainOptionsPractice : this.mainOptions);
+		this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4 ? this.mainOptionsPractice : this.mainOptions);
 		base.\u02B7\u02B6\u02BC\u02BC\u02B3\u02BA\u02BE\u02C0\u02BF\u02B9\u02C1();
 		if ((!this.\u02B4\u02BA\u02BC\u02BF\u02B3\u02BD\u02BE\u02C1\u02BC\u02C1\u02B6 && Application.platform == RuntimePlatform.OSXPlayer) || Application.platform == RuntimePlatform.OSXEditor)
 		{
@@ -572,6 +586,40 @@ public class SongOptions : BaseMenu
 		base.\u02B7\u02B6\u02BC\u02BC\u02B3\u02BA\u02BE\u02C0\u02BF\u02B9\u02C1();
 	}
 
+	public virtual void \u02BA\u02B4\u02B9\u02B8\u02B2\u02C0\u02B4\u02B8\u02BF\u02BA\u02B2()
+	{
+		if (this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC != null)
+		{
+			this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC.Reset();
+			this.\u02C0\u02BC\u02C0\u02BF\u02C1\u02B9\u02BD\u02B9\u02B2\u02BC\u02BA();
+			return;
+		}
+		if (this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE == this.\u02B8\u02BD\u02BE\u02C1\u02BE\u02C0\u02B7\u02B5\u02C0\u02B7\u02BC.Length)
+		{
+			this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE = 1;
+		}
+		if (this.\u02B8\u02BD\u02BE\u02C1\u02BE\u02C0\u02B7\u02B5\u02C0\u02B7\u02BC[this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE] == 91)
+		{
+			this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE += 0;
+		}
+		else
+		{
+			this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE = 0;
+		}
+		if (this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE == 4)
+		{
+			this.\u02B8\u02B5\u02B7\u02B7\u02B2\u02B6\u02BE\u02B3\u02B8\u02BD\u02BE(this.extraOptions);
+		}
+		if (this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE == -10)
+		{
+			this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.extraOptions2);
+		}
+		if (this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE == this.\u02B8\u02BD\u02BE\u02C1\u02BE\u02C0\u02B7\u02B5\u02C0\u02B7\u02BC.Length)
+		{
+			this.\u02B8\u02B5\u02B7\u02B7\u02B2\u02B6\u02BE\u02B3\u02B8\u02BD\u02BE(this.extraOptions3);
+		}
+	}
+
 	private void \u02B4\u02B8\u02C0\u02BC\u02C1\u02C1\u02B7\u02B2\u02B2\u02B4\u02B9()
 	{
 		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Song Speed")
@@ -589,11 +637,11 @@ public class SongOptions : BaseMenu
 
 	public virtual void \u02B7\u02B9\u02B8\u02C0\u02BC\u02B9\u02BC\u02B3\u02B9\u02C0\u02B3()
 	{
-		if (this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE == this.eggButtons.Length)
+		if (this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE == this.\u02B8\u02BD\u02BE\u02C1\u02BE\u02C0\u02B7\u02B5\u02C0\u02B7\u02BC.Length)
 		{
 			this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE = 1;
 		}
-		if (this.eggButtons[this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE] == -106)
+		if (this.\u02B8\u02BD\u02BE\u02C1\u02BE\u02C0\u02B7\u02B5\u02C0\u02B7\u02BC[this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE] == -106)
 		{
 			this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE++;
 			return;
@@ -641,7 +689,7 @@ public class SongOptions : BaseMenu
 		base.\u02B7\u02B6\u02BC\u02BC\u02B3\u02BA\u02BE\u02C0\u02BF\u02B9\u02C1();
 	}
 
-	private void TypeInput()
+	private void \u02B7\u02C0\u02BF\u02BD\u02B3\u02B4\u02B8\u02BB\u02B9\u02B8\u02BE()
 	{
 		bool flag = false;
 		foreach (char c in Input.inputString)
@@ -674,16 +722,16 @@ public class SongOptions : BaseMenu
 		}
 		bool flag2 = false;
 		bool flag3 = false;
-		foreach (CHPlayer chplayer in GlobalVariables.instance.playerList)
+		foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
 		{
-			if (chplayer != null && chplayer.player != null && !chplayer.\u02BD\u02BC\u02B8\u02B5\u02B5\u02B2\u02C0\u02C1\u02B3\u02C0\u02B4)
+			if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B != null && u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.rewiredPlayer != null && !u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02BD\u02BC\u02B8\u02B5\u02B5\u02B2\u02C0\u02C1\u02B3\u02C0\u02B4)
 			{
-				if (chplayer.player.GetButtonDown(0))
+				if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.rewiredPlayer.GetButtonDown(0))
 				{
 					flag2 = true;
 					break;
 				}
-				if (chplayer.player.GetButtonDown(1))
+				if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.rewiredPlayer.GetButtonDown(1))
 				{
 					flag3 = true;
 					break;
@@ -702,10 +750,10 @@ public class SongOptions : BaseMenu
 		{
 			if (flag3)
 			{
-				this.isWritingSetlistName = false;
-				this.ChangeMenu(this.setlistOptionsActive);
+				this.\u02B3\u02BB\u02BF\u02C0\u02BB\u02B6\u02B5\u02B9\u02B8\u02BE\u02B9 = false;
+				this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.setlistOptionsActive);
 				base.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(this.\u02BA\u02BE\u02B9\u02B8\u02B3\u02BB\u02BB\u02C0\u02BF\u02C0\u02BE ? "Rename Setlist" : "Save Playlist");
-				CHPlayer.\u02B2\u02B9\u02B6\u02B2\u02C0\u02BA\u02BF\u02B8\u02B5\u02B3\u02B6(true);
+				\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6.\u02B2\u02B9\u02B6\u02B2\u02C0\u02BA\u02BF\u02B8\u02B5\u02B3\u02B6(true);
 			}
 			return;
 		}
@@ -731,18 +779,18 @@ public class SongOptions : BaseMenu
 			}
 		}
 		this.setlistMenu.\u02BC\u02BF\u02B3\u02BB\u02B4\u02BD\u02BF\u02B3\u02B4\u02B8\u02B8();
-		this.isWritingSetlistName = false;
-		this.ChangeMenu(this.setlistOptionsActive);
+		this.\u02B3\u02BB\u02BF\u02C0\u02BB\u02B6\u02B5\u02B9\u02B8\u02BE\u02B9 = false;
+		this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.setlistOptionsActive);
 		base.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(this.\u02BA\u02BE\u02B9\u02B8\u02B3\u02BB\u02BB\u02C0\u02BF\u02C0\u02BE ? "Rename Setlist" : "Save Playlist");
-		CHPlayer.\u02B2\u02B9\u02B6\u02B2\u02C0\u02BA\u02BF\u02B8\u02B5\u02B3\u02B6(true);
+		\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6.\u02B2\u02B9\u02B6\u02B2\u02C0\u02BA\u02BF\u02B8\u02B5\u02B3\u02B6(true);
 	}
 
 	private void \u02B8\u02B5\u02B7\u02B7\u02B2\u02B6\u02BE\u02B3\u02B8\u02BD\u02BE(string[] \u02BC\u02C0\u02B2\u02B5\u02BE\u02B7\u02C1\u02B4\u02B7\u02BD\u02C0)
 	{
 		if (\u02BC\u02C0\u02B2\u02B5\u02BE\u02B7\u02C1\u02B4\u02B7\u02BD\u02C0 == this.menuStrings)
 		{
-			this.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(this.lastIndex, true);
-			this.lastIndex = -1;
+			this.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(this.\u02B6\u02B5\u02B7\u02BD\u02B4\u02BA\u02B6\u02B9\u02B2\u02B3\u02B4, true);
+			this.\u02B6\u02B5\u02B7\u02BD\u02B4\u02BA\u02B6\u02B9\u02B2\u02B3\u02B4 = -1;
 			return;
 		}
 		this.menuStrings = \u02BC\u02C0\u02B2\u02B5\u02BE\u02B7\u02C1\u02B4\u02B7\u02BD\u02C0;
@@ -786,29 +834,21 @@ public class SongOptions : BaseMenu
 
 	protected override void Update()
 	{
-		if (this.confirmMenu.isActive)
+		if (this.confirmMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
 		{
 			return;
 		}
-		if (this.isWritingSetlistName)
+		if (this.\u02B3\u02BB\u02BF\u02C0\u02BB\u02B6\u02B5\u02B9\u02B8\u02BE\u02B9)
 		{
-			this.TypeInput();
+			this.\u02B7\u02C0\u02BF\u02BD\u02B3\u02B4\u02B8\u02BB\u02B9\u02B8\u02BE();
 			return;
-		}
-		string[][] array = new string[][] { null, this.extraOptions, this.extraOptions2, this.extraOptions3 };
-		for (int i = 0; i < 3; i++)
-		{
-			if (Input.GetKeyDown(KeyCode.Alpha1 + i))
-			{
-				this.ChangeMenu(array[i + 1]);
-			}
 		}
 		base.Update();
 	}
 
 	private void \u02BE\u02B5\u02B5\u02C0\u02BA\u02BB\u02B8\u02B3\u02B8\u02B4\u02B3(Instrument \u02B7\u02BB\u02BA\u02BC\u02B4\u02B6\u02B4\u02B3\u02BD\u02BA\u02BF)
 	{
-		GlobalVariables.instance.\u02BA\u02C0\u02B4\u02B6\u02BE\u02B4\u02BA\u02BF\u02B5\u02BD\u02B2 = true;
+		GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BA\u02C0\u02B4\u02B6\u02BE\u02B4\u02BA\u02BF\u02B5\u02BD\u02B2 = true;
 		this.songSelect.\u02C0\u02BE\u02B5\u02B2\u02B7\u02B7\u02C0\u02BD\u02BA\u02B3\u02BB = new Instrument?(\u02B7\u02BB\u02BA\u02BC\u02B4\u02B6\u02B4\u02B3\u02BD\u02BA\u02BF);
 	}
 
@@ -854,11 +894,11 @@ public class SongOptions : BaseMenu
 
 	public override void \u02BA\u02B4\u02BC\u02B6\u02BC\u02B7\u02BD\u02B3\u02BA\u02BE\u02C0()
 	{
-		if (this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE == this.eggButtons.Length)
+		if (this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE == this.\u02B8\u02BD\u02BE\u02C1\u02BE\u02C0\u02B7\u02B5\u02C0\u02B7\u02BC.Length)
 		{
 			this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE = 0;
 		}
-		if (this.eggButtons[this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE] == 29)
+		if (this.\u02B8\u02BD\u02BE\u02C1\u02BE\u02C0\u02B7\u02B5\u02C0\u02B7\u02BC[this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE] == 29)
 		{
 			this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE++;
 			return;
@@ -866,7 +906,7 @@ public class SongOptions : BaseMenu
 		this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE = 0;
 	}
 
-	public override void ConfirmPressed()
+	public override void \u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3()
 	{
 		this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE = 0;
 		this.allowMultiLanguage = true;
@@ -922,11 +962,11 @@ public class SongOptions : BaseMenu
 								goto IL_0844;
 							}
 							this.allowMultiLanguage = false;
-							this.ChangeMenu(\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02B3\u02B7\u02BE\u02B8\u02C1\u02BA\u02B5\u02B8\u02B2\u02B5\u02C0());
+							this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02B3\u02B7\u02BE\u02B8\u02C1\u02BA\u02B5\u02B8\u02B2\u02B5\u02C0());
 							if (this.menuStrings == null || this.menuStrings.Length == 0)
 							{
 								this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("setlistNoSavedDialog", "Continue", null, null, null, null);
-								this.ChangeMenu(this.setlistOptions);
+								this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.setlistOptions);
 								return;
 							}
 							this.\u02C0\u02C1\u02BE\u02BF\u02B2\u02BC\u02C0\u02B4\u02B3\u02BD\u02C0 = 3;
@@ -956,7 +996,7 @@ public class SongOptions : BaseMenu
 							}
 							if (\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02BC\u02BD\u02BE\u02BB\u02B2\u02B8\u02C0\u02B6\u02BA\u02B9\u02B7 == null)
 							{
-								this.isWritingSetlistName = true;
+								this.\u02B3\u02BB\u02BF\u02C0\u02BB\u02B6\u02B5\u02B9\u02B8\u02BE\u02B9 = true;
 								this.\u02BA\u02BE\u02B9\u02B8\u02B3\u02BB\u02BB\u02C0\u02BF\u02C0\u02BE = false;
 								this.\u02B5\u02B7\u02C0\u02B6\u02BF\u02B6\u02BC\u02BE\u02B6\u02B8\u02B2();
 								return;
@@ -1094,7 +1134,7 @@ public class SongOptions : BaseMenu
 					{
 						goto IL_0844;
 					}
-					this.isWritingSetlistName = (this.\u02BA\u02BE\u02B9\u02B8\u02B3\u02BB\u02BB\u02C0\u02BF\u02C0\u02BE = true);
+					this.\u02B3\u02BB\u02BF\u02C0\u02BB\u02B6\u02B5\u02B9\u02B8\u02BE\u02B9 = (this.\u02BA\u02BE\u02B9\u02B8\u02B3\u02BB\u02BB\u02C0\u02BF\u02C0\u02BE = true);
 					this.\u02B5\u02B7\u02C0\u02B6\u02BF\u02B6\u02BC\u02BE\u02B6\u02B8\u02B2();
 					return;
 				}
@@ -1126,15 +1166,15 @@ public class SongOptions : BaseMenu
 							}
 							if (!this.setlistMenu.isActiveAndEnabled)
 							{
-								this.ChangeMenu(this.setlistOptions);
+								this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.setlistOptions);
 								return;
 							}
 							if (CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BA\u02B8\u02B6\u02BB\u02B5\u02B2\u02B8\u02B6\u02BB\u02BB)
 							{
-								this.ChangeMenu(this.setlistOptionsOnline);
+								this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.setlistOptionsOnline);
 								return;
 							}
-							this.ChangeMenu(this.setlistOptionsActive);
+							this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.setlistOptionsActive);
 							return;
 						}
 					}
@@ -1187,7 +1227,7 @@ public class SongOptions : BaseMenu
 					{
 						goto IL_0844;
 					}
-					this.ChangeMenu(this.instrumentScoresOptions);
+					this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.instrumentScoresOptions);
 					return;
 				}
 			}
@@ -1233,11 +1273,11 @@ public class SongOptions : BaseMenu
 						goto IL_0844;
 					}
 					this.allowMultiLanguage = false;
-					this.ChangeMenu(\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02B3\u02B7\u02BE\u02B8\u02C1\u02BA\u02B5\u02B8\u02B2\u02B5\u02C0());
+					this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02B3\u02B7\u02BE\u02B8\u02C1\u02BA\u02B5\u02B8\u02B2\u02B5\u02C0());
 					if (this.menuStrings == null || this.menuStrings.Length == 0)
 					{
 						this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("setlistNoSavedDialog", "Continue", null, null, null, null);
-						this.ChangeMenu(this.setlistOptions);
+						this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.setlistOptions);
 						return;
 					}
 					this.\u02C0\u02C1\u02BE\u02BF\u02B2\u02BC\u02C0\u02B4\u02B3\u02BD\u02C0 = 4;
@@ -1294,7 +1334,7 @@ public class SongOptions : BaseMenu
 					return;
 				}
 				this.setlistMenu.\u02B8\u02BA\u02B8\u02B4\u02B9\u02B5\u02B5\u02C1\u02B6\u02B7\u02B5(true);
-				this.ChangeMenu(this.setlistOptions);
+				this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.setlistOptions);
 				return;
 			}
 			this.\u02B9\u02B9\u02BD\u02B2\u02B7\u02B4\u02C1\u02B7\u02BB\u02B2\u02B6();
@@ -1307,11 +1347,11 @@ public class SongOptions : BaseMenu
 		if (\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02BA\u02B9\u02B8\u02B9\u02BD\u02B8\u02B4\u02B9\u02B8\u02BE\u02B7(base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0))
 		{
 			this.setlistMenu.\u02BF\u02BC\u02C1\u02BC\u02B4\u02C0\u02B5\u02BE\u02BD\u02B9\u02B6();
-			this.ChangeMenu(this.setlistOptionsActive);
+			this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.setlistOptionsActive);
 			return;
 		}
 		this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("setlistErrorDialog", "Continue", null, null, null, null);
-		this.ChangeMenu(this.setlistOptions);
+		this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.setlistOptions);
 	}
 
 	private void \u02C0\u02BC\u02C0\u02BF\u02C1\u02B9\u02BD\u02B9\u02B2\u02BC\u02BA()
@@ -1329,12 +1369,12 @@ public class SongOptions : BaseMenu
 		this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("This is permanent! Are you still sure?", "Get rid of it", "Cancel", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02C0\u02BC\u02C1\u02B3\u02B9\u02B2\u02B9\u02BB\u02B3\u02B7\u02B9), null, null);
 	}
 
-	private void ChangeMenu(string[] \u02BC\u02C0\u02B2\u02B5\u02BE\u02B7\u02C1\u02B4\u02B7\u02BD\u02C0)
+	private void \u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(string[] \u02BC\u02C0\u02B2\u02B5\u02BE\u02B7\u02C1\u02B4\u02B7\u02BD\u02C0)
 	{
 		if (\u02BC\u02C0\u02B2\u02B5\u02BE\u02B7\u02C1\u02B4\u02B7\u02BD\u02C0 == this.menuStrings)
 		{
-			this.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(this.lastIndex, true);
-			this.lastIndex = -1;
+			this.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(this.\u02B6\u02B5\u02B7\u02BD\u02B4\u02BA\u02B6\u02B9\u02B2\u02B3\u02B4, true);
+			this.\u02B6\u02B5\u02B7\u02BD\u02B4\u02BA\u02B6\u02B9\u02B2\u02B3\u02B4 = -1;
 			return;
 		}
 		this.menuStrings = \u02BC\u02C0\u02B2\u02B5\u02BE\u02B7\u02C1\u02B4\u02B7\u02BD\u02C0;
@@ -1359,11 +1399,11 @@ public class SongOptions : BaseMenu
 			this.\u02B4\u02B8\u02C0\u02BC\u02C1\u02C1\u02B7\u02B2\u02B2\u02B4\u02B9();
 			return;
 		}
-		if (this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE == this.eggButtons.Length)
+		if (this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE == this.\u02B8\u02BD\u02BE\u02C1\u02BE\u02C0\u02B7\u02B5\u02C0\u02B7\u02BC.Length)
 		{
 			this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE = 0;
 		}
-		if (this.eggButtons[this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE] == 23)
+		if (this.\u02B8\u02BD\u02BE\u02C1\u02BE\u02C0\u02B7\u02B5\u02C0\u02B7\u02BC[this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE] == 23)
 		{
 			this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE++;
 		}
@@ -1373,15 +1413,15 @@ public class SongOptions : BaseMenu
 		}
 		if (this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE == 5)
 		{
-			this.ChangeMenu(this.extraOptions);
+			this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.extraOptions);
 		}
 		if (this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE == 10)
 		{
-			this.ChangeMenu(this.extraOptions2);
+			this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.extraOptions2);
 		}
-		if (this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE == this.eggButtons.Length)
+		if (this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE == this.\u02B8\u02BD\u02BE\u02C1\u02BE\u02C0\u02B7\u02B5\u02C0\u02B7\u02BC.Length)
 		{
-			this.ChangeMenu(this.extraOptions3);
+			this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.extraOptions3);
 		}
 	}
 
@@ -1395,13 +1435,13 @@ public class SongOptions : BaseMenu
 
 	protected virtual void \u02BB\u02B7\u02C0\u02B3\u02C1\u02BD\u02B9\u02B2\u02B4\u02BE\u02B6()
 	{
-		if (this.confirmMenu.isActive)
+		if (this.confirmMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
 		{
 			return;
 		}
-		if (this.isWritingSetlistName)
+		if (this.\u02B3\u02BB\u02BF\u02C0\u02BB\u02B6\u02B5\u02B9\u02B8\u02BE\u02B9)
 		{
-			this.TypeInput();
+			this.\u02B7\u02C0\u02BF\u02BD\u02B3\u02B4\u02B8\u02BB\u02B9\u02B8\u02BE();
 			return;
 		}
 		base.Update();
@@ -1409,16 +1449,50 @@ public class SongOptions : BaseMenu
 
 	public override void \u02C0\u02BD\u02BD\u02B4\u02B5\u02B4\u02B6\u02B8\u02BD\u02B8\u02BB()
 	{
-		if (this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE == this.eggButtons.Length)
+		if (this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE == this.\u02B8\u02BD\u02BE\u02C1\u02BE\u02C0\u02B7\u02B5\u02C0\u02B7\u02BC.Length)
 		{
 			this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE = 0;
 		}
-		if (this.eggButtons[this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE] == 33)
+		if (this.\u02B8\u02BD\u02BE\u02C1\u02BE\u02C0\u02B7\u02B5\u02C0\u02B7\u02BC[this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE] == 33)
 		{
 			this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE++;
 			return;
 		}
 		this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE = 0;
+	}
+
+	public virtual void \u02B8\u02BF\u02C1\u02B7\u02B7\u02B7\u02B4\u02B2\u02B2\u02BE\u02BF()
+	{
+		if (this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC != null)
+		{
+			this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC.Reset();
+			this.\u02B4\u02B8\u02C0\u02BC\u02C1\u02C1\u02B7\u02B2\u02B2\u02B4\u02B9();
+			return;
+		}
+		if (this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE == this.\u02B8\u02BD\u02BE\u02C1\u02BE\u02C0\u02B7\u02B5\u02C0\u02B7\u02BC.Length)
+		{
+			this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE = 1;
+		}
+		if (this.\u02B8\u02BD\u02BE\u02C1\u02BE\u02C0\u02B7\u02B5\u02C0\u02B7\u02BC[this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE] == 33)
+		{
+			this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE++;
+		}
+		else
+		{
+			this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE = 0;
+		}
+		if (this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE == 1)
+		{
+			this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.extraOptions);
+		}
+		if (this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE == 3)
+		{
+			this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.extraOptions2);
+		}
+		if (this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE == this.\u02B8\u02BD\u02BE\u02C1\u02BE\u02C0\u02B7\u02B5\u02C0\u02B7\u02BC.Length)
+		{
+			this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.extraOptions3);
+		}
 	}
 
 	private void \u02B7\u02BA\u02BD\u02BA\u02B7\u02BE\u02C1\u02B9\u02B5\u02BF\u02B2()
@@ -1470,7 +1544,7 @@ public class SongOptions : BaseMenu
 
 	private void \u02C0\u02B3\u02BE\u02C1\u02B2\u02B2\u02BB\u02BD\u02B8\u02C1\u02B2(Instrument \u02B7\u02BB\u02BA\u02BC\u02B4\u02B6\u02B4\u02B3\u02BD\u02BA\u02BF)
 	{
-		GlobalVariables.instance.\u02BA\u02C0\u02B4\u02B6\u02BE\u02B4\u02BA\u02BF\u02B5\u02BD\u02B2 = true;
+		GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BA\u02C0\u02B4\u02B6\u02BE\u02B4\u02BA\u02BF\u02B5\u02BD\u02B2 = true;
 		this.songSelect.\u02C0\u02BE\u02B5\u02B2\u02B7\u02B7\u02C0\u02BD\u02BA\u02B3\u02BB = new Instrument?(\u02B7\u02BB\u02BA\u02BC\u02B4\u02B6\u02B4\u02B3\u02BD\u02BA\u02BF);
 	}
 
@@ -1489,7 +1563,7 @@ public class SongOptions : BaseMenu
 	private void \u02BC\u02BE\u02B8\u02BA\u02C0\u02B5\u02C0\u02BE\u02BF\u02BC\u02BA()
 	{
 		\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02BC\u02BE\u02B8\u02BA\u02C0\u02B5\u02C0\u02BE\u02BF\u02BC\u02BA(base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0);
-		this.ChangeMenu(this.setlistOptions);
+		this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.setlistOptions);
 		\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02BC\u02BD\u02BE\u02BB\u02B2\u02B8\u02C0\u02B6\u02BA\u02B9\u02B7 = null;
 		base.\u02B7\u02B6\u02BC\u02BC\u02B3\u02BA\u02BE\u02C0\u02BF\u02B9\u02C1();
 	}
@@ -1510,7 +1584,7 @@ public class SongOptions : BaseMenu
 		this.textObjects[2].text = LanguageManager.instance.GetString("Press Enter to confirm");
 		this.textObjects[3].text = LanguageManager.instance.GetString("Press Escape to cancel");
 		this.setlistMenu.\u02B2\u02B8\u02BC\u02BB\u02B4\u02BE\u02BD\u02C1\u02B2\u02B6\u02B9();
-		CHPlayer.\u02B2\u02B9\u02B6\u02B2\u02C0\u02BA\u02BF\u02B8\u02B5\u02B3\u02B6(false);
+		\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6.\u02B2\u02B9\u02B6\u02B2\u02C0\u02BA\u02BF\u02B8\u02B5\u02B3\u02B6(false);
 	}
 
 	[SerializeField]
@@ -1553,9 +1627,9 @@ public class SongOptions : BaseMenu
 
 	private int \u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE;
 
-	private int lastIndex;
+	private int \u02B6\u02B5\u02B7\u02BD\u02B4\u02BA\u02B6\u02B9\u02B2\u02B3\u02B4;
 
-	private bool isWritingSetlistName;
+	private bool \u02B3\u02BB\u02BF\u02C0\u02BB\u02B6\u02B5\u02B9\u02B8\u02BE\u02B9;
 
 	private bool \u02BA\u02BE\u02B9\u02B8\u02B3\u02BB\u02BB\u02C0\u02BF\u02C0\u02BE;
 
@@ -1563,7 +1637,7 @@ public class SongOptions : BaseMenu
 
 	protected GameSetting \u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC;
 
-	private int[] eggButtons = new int[]
+	private int[] \u02B8\u02BD\u02BE\u02C1\u02BE\u02C0\u02B7\u02B5\u02C0\u02B7\u02BC = new int[]
 	{
 		3, 4, 3, 3, 3, 3, 3, 3, 3, 3,
 		3, 3, 3, 3, 3, 3, 3, 3, 3, 3,

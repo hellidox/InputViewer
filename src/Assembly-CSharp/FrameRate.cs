@@ -52,24 +52,33 @@ public class FrameRate : MonoBehaviour
 		this.upperLeftTextBuilder = ZString.CreateStringBuilder();
 		this.underHighwayTextBuilder = ZString.CreateStringBuilder();
 		this.useTrails = GlobalHelper.useTrails;
-		this.squareGO = new GameObject();
-		this.square = this.squareGO.AddComponent<SpriteRenderer>();
-		Texture2D texture2D = new Texture2D(1, 1, TextureFormat.RGB24, false, false);
-		texture2D.SetPixels32(new Color32[]
+		this.trails = new TextMeshProUGUI[GlobalHelper.maxTrails];
+		for (int i = 0; i < this.trails.Length; i++)
 		{
-			new Color32
-			{
-				r = 1,
-				g = 1,
-				b = 1,
-				a = 1
-			}
-		});
-		Sprite sprite = Sprite.Create(texture2D, new Rect(new Vector2(0f, 0f), new Vector2(1f, 1f)), new Vector2(0f, 0.5f), 1f, 0U, SpriteMeshType.FullRect);
-		this.squareSprite = sprite;
-		this.square.sprite = this.squareSprite;
-		this.square.sortingOrder = 32767;
-		this.square.transform.position = Camera.main.transform.position + Camera.main.transform.forward * 5f;
+			this.trails[i] = this.textDisplay.Duplicate();
+			this.trails[i].enableWordWrapping = false;
+			this.trails[i].text = "█";
+			this.trails[i].richText = true;
+			Texture mainTexture = this.trails[i].mainTexture;
+			this.trails[i].rectTransform.pivot = new Vector2(0.5f, 0.8185f);
+			this.trails[i].mainTexture.filterMode = FilterMode.Point;
+		}
+		this.fretColors = new Color[]
+		{
+			HexColor.FromHexString(GlobalHelper.greenFretColor).AsColor(),
+			HexColor.FromHexString(GlobalHelper.redFretColor).AsColor(),
+			HexColor.FromHexString(GlobalHelper.yellowFretColor).AsColor(),
+			HexColor.FromHexString(GlobalHelper.blueFretColor).AsColor(),
+			HexColor.FromHexString(GlobalHelper.orangeFretColor).AsColor(),
+			HexColor.FromHexString(GlobalHelper.strumColor).AsColor(),
+			HexColor.FromHexString(GlobalHelper.strumColor).AsColor()
+		}.Select((Color x) => x.Saturate(1f)).ToArray<Color>();
+		Color[] array = this.fretColors;
+		for (int j = 0; j < array.Length; j++)
+		{
+			Debug.Log(array[j]);
+		}
+		this.activeTrails = new TextMeshProUGUI[7];
 	}
 
 	public FrameRate()
@@ -189,29 +198,6 @@ public class FrameRate : MonoBehaviour
 				else
 				{
 					Debug.Log("text == " + GlobalHelper.fpsText);
-					if (this.frtext_check == null)
-					{
-						try
-						{
-							text = string.Format(GlobalHelper.fpsText, new object[]
-							{
-								num2,
-								1f / this.worst,
-								num3,
-								this.best,
-								this.timeDifference * 100f,
-								(double)(this.old_ftEnd - this.old_ftStart) / 1000.0 / 1000.0 / 10.0,
-								this.old_udtTotal,
-								GlobalVariables.progress,
-								1f / GlobalHelper.renderDeltaTime
-							});
-						}
-						catch (Exception ex)
-						{
-							this.frtext_check = new bool?(false);
-							GlobalHelper.fpsText = string.Format("Bad fpstext or other error! Error: {0}", ex);
-						}
-					}
 					text = string.Format(GlobalHelper.fpsText, new object[]
 					{
 						num2,
@@ -221,8 +207,7 @@ public class FrameRate : MonoBehaviour
 						this.timeDifference * 100f,
 						(double)(this.old_ftEnd - this.old_ftStart) / 1000.0 / 1000.0 / 10.0,
 						this.old_udtTotal,
-						GlobalVariables.progress,
-						1f / GlobalHelper.renderDeltaTime
+						GlobalVariables.progress
 					});
 				}
 				this.worst = float.NegativeInfinity;
@@ -429,15 +414,14 @@ public class FrameRate : MonoBehaviour
 				}
 				if (GlobalHelper.useJudgements && GlobalHelper.showJudgementsUnderFretboard)
 				{
-					this.underHighwayTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.GetGrade(this.instance.precision.Accuracy, false)));
 					if (GlobalHelper.showAvgInaccuracy)
 					{
-						this.underHighwayTextBuilder.AppendFormat<float, float>("\n</i>{0:00.00}% - {1:00.00}ms\n", this.instance.precision.Accuracy * 100f, this.instance.precision.avgInaccuracy * 1000f);
+						this.underHighwayTextBuilder.AppendFormat<float, float>("</i>{0:00.00}% - {1:00.00}ms\n", this.instance.precision.Accuracy * 100f, this.instance.precision.avgInaccuracy * 1000f);
 						this.underHighwayTextBuilder.AppendFormat<float>("{0:00.00}", BasePlayer.lastOffset * 1000f);
 					}
 					else
 					{
-						this.underHighwayTextBuilder.AppendFormat<float, float>("\n</i>{0:00.00}%\n{1:00.00}ms\n", this.instance.precision.Accuracy * 100f, BasePlayer.lastOffset * 1000f);
+						this.underHighwayTextBuilder.AppendFormat<float, float>("</i>{0:00.00}%\n{1:00.00}ms\n", this.instance.precision.Accuracy * 100f, BasePlayer.lastOffset * 1000f);
 					}
 					switch (this.instance.precision.m_lastJudgement)
 					{
@@ -709,11 +693,6 @@ public class FrameRate : MonoBehaviour
 
 	private void UpdateTrails(BaseGuitarPlayer.inputmap minputs)
 	{
-		if (!this.trailsInitialized)
-		{
-			this.GetTrail(5);
-			return;
-		}
 		float num = this.rr;
 		if (this.trailsNeedInit)
 		{
@@ -849,21 +828,15 @@ public class FrameRate : MonoBehaviour
 
 	private TextMeshProUGUI GetTrail(int trail)
 	{
-		if (!this.trailsInitialized)
-		{
-			this.InitTrails();
-		}
-		int num = 0;
 		do
 		{
-			num++;
 			this.currentTrail++;
 			if (this.currentTrail == this.trails.Length)
 			{
 				this.currentTrail = 0;
 			}
 		}
-		while (num <= 10 && (this.trails[this.currentTrail] == this.activeTrails[0] || this.trails[this.currentTrail] == this.activeTrails[1] || this.trails[this.currentTrail] == this.activeTrails[2] || this.trails[this.currentTrail] == this.activeTrails[3] || this.trails[this.currentTrail] == this.activeTrails[4] || this.trails[this.currentTrail] == this.activeTrails[5] || this.trails[this.currentTrail] == this.activeTrails[6]));
+		while (this.trails[this.currentTrail] == this.activeTrails[0] || this.trails[this.currentTrail] == this.activeTrails[1] || this.trails[this.currentTrail] == this.activeTrails[2] || this.trails[this.currentTrail] == this.activeTrails[3] || this.trails[this.currentTrail] == this.activeTrails[4] || this.trails[this.currentTrail] == this.activeTrails[5] || this.trails[this.currentTrail] == this.activeTrails[6]);
 		TextMeshProUGUI textMeshProUGUI = this.trails[this.currentTrail];
 		textMeshProUGUI.transform.localScale = new Vector3(1.5f, 1.01f, 1f);
 		Vector2 vector = new Vector2(GlobalHelper.trailPosX * (float)Screen.width, (float)Screen.height - GlobalHelper.trailPosY * (float)Screen.height);
@@ -917,38 +890,6 @@ public class FrameRate : MonoBehaviour
 		this.trailsNeedInit = true;
 		this.rr = 1f / (float)GlobalHelper.inputViewerHz;
 		Debug.Log("fr callback");
-	}
-
-	private void InitTrails()
-	{
-		this.trails = new TextMeshProUGUI[GlobalHelper.maxTrails];
-		for (int i = 0; i < this.trails.Length; i++)
-		{
-			this.trails[i] = this.textDisplay.Duplicate();
-			this.trails[i].enableWordWrapping = false;
-			this.trails[i].text = "█";
-			this.trails[i].richText = true;
-			Texture mainTexture = this.trails[i].mainTexture;
-			this.trails[i].rectTransform.pivot = new Vector2(0.5f, 0.8185f);
-			this.trails[i].mainTexture.filterMode = FilterMode.Point;
-		}
-		this.fretColors = new Color[]
-		{
-			HexColor.FromHexString(GlobalHelper.greenFretColor).AsColor(),
-			HexColor.FromHexString(GlobalHelper.redFretColor).AsColor(),
-			HexColor.FromHexString(GlobalHelper.yellowFretColor).AsColor(),
-			HexColor.FromHexString(GlobalHelper.blueFretColor).AsColor(),
-			HexColor.FromHexString(GlobalHelper.orangeFretColor).AsColor(),
-			HexColor.FromHexString(GlobalHelper.strumColor).AsColor(),
-			HexColor.FromHexString(GlobalHelper.strumColor).AsColor()
-		}.Select((Color x) => x.Saturate(1f)).ToArray<Color>();
-		Color[] array = this.fretColors;
-		for (int j = 0; j < array.Length; j++)
-		{
-			Debug.Log(array[j]);
-		}
-		this.activeTrails = new TextMeshProUGUI[7];
-		this.trailsInitialized = true;
 	}
 
 	public float const1;
@@ -1032,6 +973,8 @@ public class FrameRate : MonoBehaviour
 	private bool _legacyBinds;
 
 	private bool cleared;
+
+	private Texture2D square;
 
 	private Sprite squareSprite;
 
@@ -1156,14 +1099,4 @@ public class FrameRate : MonoBehaviour
 	private TextMeshProUGUI lastStrum;
 
 	private bool targetFPS;
-
-	private bool? frtext_check;
-
-	private bool trailsInitialized;
-
-	private SpriteRenderer[] trailSprites;
-
-	private SpriteRenderer square;
-
-	private GameObject squareGO;
 }

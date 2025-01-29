@@ -298,7 +298,7 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 
 	protected virtual void \u02C0\u02B5\u02BC\u02B3\u02B3\u02B7\u02B9\u02B2\u02C0\u02BC\u02BB()
 	{
-		if (this.basePlayer.Notes == null)
+		if (this.basePlayer.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0 == null)
 		{
 			return;
 		}
@@ -308,32 +308,32 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		}
 		base.\u02B2\u02BF\u02B5\u02C1\u02B6\u02C0\u02B5\u02B5\u02B2\u02B2\u02B7();
 		int num = 1;
-		int num2 = this.noteStartIndex;
+		int num2 = this.\u02B2\u02B5\u02B7\u02BB\u02BD\u02B5\u02BA\u02B3\u02B2\u02BE\u02B3;
 		Vector3 zero = Vector3.zero;
-		while (num < this.maxNotePool && num2 < this.basePlayer.Notes.Count)
+		while (num < this.\u02B5\u02BB\u02B2\u02BA\u02B5\u02B6\u02B2\u02B2\u02BC\u02BD\u02B7 && num2 < this.basePlayer.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0.Count)
 		{
-			Note note = this.basePlayer.Notes[num2];
-			if ((double)note.time - this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B7\u02B4\u02BA\u02B5\u02B5\u02B8\u02BE\u02B5\u02B3\u02B5\u02BB >= (double)this.\u02B2\u02BE\u02B4\u02BE\u02B9\u02B5\u02B4\u02BA\u02B6\u02BF\u02B8)
+			Note note = this.basePlayer.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0[num2];
+			if ((double)note.\u02B2\u02B8\u02BA\u02BA\u02BC\u02B7\u02B5\u02B5\u02B6\u02B5\u02C1 - this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B7\u02B4\u02BA\u02B5\u02B5\u02B8\u02BE\u02B5\u02B3\u02B5\u02BB >= (double)this.\u02B2\u02BE\u02B4\u02BE\u02B9\u02B5\u02B4\u02BA\u02B6\u02BF\u02B8)
 			{
 				break;
 			}
-			float num3 = Helper.\u02B5\u02B9\u02C1\u02BB\u02B6\u02B3\u02BA\u02BE\u02B9\u02B5\u02BF((double)note.time, this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B7\u02B4\u02BA\u02B5\u02B5\u02B8\u02BE\u02B5\u02B3\u02B5\u02BB, this.\u02BB\u02BE\u02B6\u02B5\u02BD\u02BF\u02C1\u02B9\u02B4\u02B3\u02B9, this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4);
-			if (num2 == this.noteStartIndex && note.time < this.noteZPosCloseLimit)
+			float num3 = Helper.\u02B5\u02B9\u02C1\u02BB\u02B6\u02B3\u02BA\u02BE\u02B9\u02B5\u02BF((double)note.\u02B2\u02B8\u02BA\u02BA\u02BC\u02B7\u02B5\u02B5\u02B6\u02B5\u02C1, this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B7\u02B4\u02BA\u02B5\u02B5\u02B8\u02BE\u02B5\u02B3\u02B5\u02BB, this.\u02BB\u02BE\u02B6\u02B5\u02BD\u02BF\u02C1\u02B9\u02B4\u02B3\u02B9, this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4);
+			if (num2 == this.\u02B2\u02B5\u02B7\u02BB\u02BD\u02B5\u02BA\u02B3\u02B2\u02BE\u02B3 && note.\u02B2\u02B8\u02BA\u02BA\u02BC\u02B7\u02B5\u02B5\u02B6\u02B5\u02C1 < this.\u02B8\u02BB\u02BC\u02BE\u02B6\u02B2\u02BC\u02B4\u02C0\u02B3\u02C0)
 			{
-				this.noteStartIndex++;
-				num2 = this.noteStartIndex;
+				this.\u02B2\u02B5\u02B7\u02BB\u02BD\u02B5\u02BA\u02B3\u02B2\u02BE\u02B3++;
+				num2 = this.\u02B2\u02B5\u02B7\u02BB\u02BD\u02B5\u02BA\u02B3\u02B2\u02BE\u02B3;
 			}
-			else if (note.wasHit && !note.wasMissed)
+			else if (note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 && !note.wasMissed)
 			{
 				num2++;
 			}
 			else
 			{
-				if (!note.wasHit && !note.wasMissed)
+				if (!note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 && !note.wasMissed)
 				{
 					int num4 = this.\u02C1\u02B7\u02C0\u02B7\u02B9\u02B2\u02B2\u02BF\u02BC\u02C0\u02BF(note._noteMask);
-					this.noteObjects[num].SetActive(this.\u02B6\u02BB\u02B2\u02B5\u02BC\u02BB\u02B7\u02B3\u02C1\u02B4\u02B2);
-					DrumsNoteContainer drumsNoteContainer = this.cachedNoteContainers[num] as DrumsNoteContainer;
+					this.\u02C0\u02B2\u02BD\u02B9\u02B8\u02B5\u02BD\u02B5\u02BC\u02B9\u02BD[num].SetActive(this.\u02B6\u02BB\u02B2\u02B5\u02BC\u02BB\u02B7\u02B3\u02C1\u02B4\u02B2);
+					DrumsNoteContainer drumsNoteContainer = this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7[num] as DrumsNoteContainer;
 					drumsNoteContainer.\u02BC\u02C0\u02B9\u02B6\u02B9\u02C0\u02B8\u02B6\u02BD\u02C1\u02BD = this.basePlayer.\u02BF\u02C0\u02BA\u02B6\u02B7\u02C0\u02B2\u02BE\u02BC\u02BA\u02B2;
 					if (num4 == 3)
 					{
@@ -382,9 +382,9 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 				}
 			}
 		}
-		BaseNoteRenderer.ClearRemainingObjPool(this.noteObjects, num);
-		BaseNoteRenderer.ClearRemainingObjPool(this.\u02BA\u02B3\u02B4\u02B9\u02B6\u02C1\u02B4\u02B7\u02BF\u02B4\u02BB, num6);
-		BaseNoteRenderer.ClearRemainingObjPool(this.\u02B3\u02B5\u02B3\u02B4\u02BF\u02BF\u02BD\u02BE\u02C1\u02BF\u02B3, num5);
+		BaseNoteRenderer.\u02B3\u02B3\u02C1\u02B8\u02BA\u02B8\u02BF\u02BB\u02B2\u02BD\u02BC(this.\u02C0\u02B2\u02BD\u02B9\u02B8\u02B5\u02BD\u02B5\u02BC\u02B9\u02BD, num);
+		BaseNoteRenderer.\u02B3\u02B3\u02C1\u02B8\u02BA\u02B8\u02BF\u02BB\u02B2\u02BD\u02BC(this.\u02BA\u02B3\u02B4\u02B9\u02B6\u02C1\u02B4\u02B7\u02BF\u02B4\u02BB, num6);
+		BaseNoteRenderer.\u02B3\u02B3\u02C1\u02B8\u02BA\u02B8\u02BF\u02BB\u02B2\u02BD\u02BC(this.\u02B3\u02B5\u02B3\u02B4\u02BF\u02BF\u02BD\u02BE\u02C1\u02BF\u02B3, num5);
 	}
 
 	protected int \u02C1\u02B8\u02B7\u02BB\u02BC\u02B5\u02B4\u02B5\u02C1\u02B4\u02BF(ushort \u02B6\u02BB\u02BC\u02B4\u02BC\u02BB\u02BC\u02BD\u02BC\u02BF\u02BB)
@@ -595,10 +595,10 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 	{
 		base.\u02BE\u02BD\u02BB\u02B8\u02B5\u02BF\u02BE\u02B6\u02BD\u02B9\u02BD();
 		this.\u02B8\u02B9\u02BB\u02B2\u02B8\u02B5\u02B2\u02B3\u02B7\u02B2\u02B9();
-		BaseNoteContainer[] cachedNoteContainers = this.cachedNoteContainers;
-		for (int i = 1; i < cachedNoteContainers.Length; i++)
+		\u02BF\u02BB\u02BF\u02B2\u02B6\u02C1\u02BC\u02BD\u02B3\u02BB\u02BB[] u02B7_u02B6_u02BD_u02BC_u02BD_u02BB_u02BA_u02B2_u02B4_u02B6_u02B = this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7;
+		for (int i = 1; i < u02B7_u02B6_u02BD_u02BC_u02BD_u02BB_u02BA_u02B2_u02B4_u02B6_u02B.Length; i++)
 		{
-			DrumsNoteContainer drumsNoteContainer = (DrumsNoteContainer)cachedNoteContainers[i];
+			DrumsNoteContainer drumsNoteContainer = (DrumsNoteContainer)u02B7_u02B6_u02BD_u02BC_u02BD_u02BB_u02BA_u02B2_u02B4_u02B6_u02B[i];
 			drumsNoteContainer.\u02B4\u02B4\u02C0\u02B3\u02BB\u02BA\u02BB\u02BC\u02B6\u02BE\u02BF = this.basePlayer.player.playerProfile.drumDynamicsHidden;
 			drumsNoteContainer.\u02B5\u02C0\u02BE\u02C1\u02BD\u02BB\u02BD\u02BC\u02BC\u02BF\u02B4 = this.basePlayer.player.playerProfile.squareTomNotes;
 		}
@@ -615,7 +615,7 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 
 	protected override void Update()
 	{
-		if (this.basePlayer.Notes == null)
+		if (this.basePlayer.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0 == null)
 		{
 			return;
 		}
@@ -625,32 +625,32 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		}
 		base.\u02B2\u02BF\u02B5\u02C1\u02B6\u02C0\u02B5\u02B5\u02B2\u02B2\u02B7();
 		int num = 0;
-		int num2 = this.noteStartIndex;
+		int num2 = this.\u02B2\u02B5\u02B7\u02BB\u02BD\u02B5\u02BA\u02B3\u02B2\u02BE\u02B3;
 		Vector3 zero = Vector3.zero;
-		while (num < this.maxNotePool && num2 < this.basePlayer.Notes.Count)
+		while (num < this.\u02B5\u02BB\u02B2\u02BA\u02B5\u02B6\u02B2\u02B2\u02BC\u02BD\u02B7 && num2 < this.basePlayer.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0.Count)
 		{
-			Note note = this.basePlayer.Notes[num2];
-			if ((double)note.time - this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B7\u02B4\u02BA\u02B5\u02B5\u02B8\u02BE\u02B5\u02B3\u02B5\u02BB >= (double)this.\u02B2\u02BE\u02B4\u02BE\u02B9\u02B5\u02B4\u02BA\u02B6\u02BF\u02B8)
+			Note note = this.basePlayer.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0[num2];
+			if ((double)note.\u02B2\u02B8\u02BA\u02BA\u02BC\u02B7\u02B5\u02B5\u02B6\u02B5\u02C1 - this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B7\u02B4\u02BA\u02B5\u02B5\u02B8\u02BE\u02B5\u02B3\u02B5\u02BB >= (double)this.\u02B2\u02BE\u02B4\u02BE\u02B9\u02B5\u02B4\u02BA\u02B6\u02BF\u02B8)
 			{
 				break;
 			}
-			float num3 = Helper.\u02B5\u02B9\u02C1\u02BB\u02B6\u02B3\u02BA\u02BE\u02B9\u02B5\u02BF((double)note.time, this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B7\u02B4\u02BA\u02B5\u02B5\u02B8\u02BE\u02B5\u02B3\u02B5\u02BB, this.\u02BB\u02BE\u02B6\u02B5\u02BD\u02BF\u02C1\u02B9\u02B4\u02B3\u02B9, this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4);
-			if (num2 == this.noteStartIndex && note.time < this.noteZPosCloseLimit)
+			float num3 = Helper.\u02B5\u02B9\u02C1\u02BB\u02B6\u02B3\u02BA\u02BE\u02B9\u02B5\u02BF((double)note.\u02B2\u02B8\u02BA\u02BA\u02BC\u02B7\u02B5\u02B5\u02B6\u02B5\u02C1, this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B7\u02B4\u02BA\u02B5\u02B5\u02B8\u02BE\u02B5\u02B3\u02B5\u02BB, this.\u02BB\u02BE\u02B6\u02B5\u02BD\u02BF\u02C1\u02B9\u02B4\u02B3\u02B9, this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4);
+			if (num2 == this.\u02B2\u02B5\u02B7\u02BB\u02BD\u02B5\u02BA\u02B3\u02B2\u02BE\u02B3 && note.\u02B2\u02B8\u02BA\u02BA\u02BC\u02B7\u02B5\u02B5\u02B6\u02B5\u02C1 < this.\u02B8\u02BB\u02BC\u02BE\u02B6\u02B2\u02BC\u02B4\u02C0\u02B3\u02C0)
 			{
-				this.noteStartIndex++;
-				num2 = this.noteStartIndex;
+				this.\u02B2\u02B5\u02B7\u02BB\u02BD\u02B5\u02BA\u02B3\u02B2\u02BE\u02B3++;
+				num2 = this.\u02B2\u02B5\u02B7\u02BB\u02BD\u02B5\u02BA\u02B3\u02B2\u02BE\u02B3;
 			}
-			else if (note.wasHit && !note.wasMissed)
+			else if (note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 && !note.wasMissed)
 			{
 				num2++;
 			}
 			else
 			{
-				if (!note.wasHit && !note.wasMissed)
+				if (!note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 && !note.wasMissed)
 				{
 					int num4 = this.\u02C1\u02B7\u02C0\u02B7\u02B9\u02B2\u02B2\u02BF\u02BC\u02C0\u02BF(note._noteMask);
-					this.noteObjects[num].SetActive(!this.\u02B6\u02BB\u02B2\u02B5\u02BC\u02BB\u02B7\u02B3\u02C1\u02B4\u02B2);
-					DrumsNoteContainer drumsNoteContainer = this.cachedNoteContainers[num] as DrumsNoteContainer;
+					this.\u02C0\u02B2\u02BD\u02B9\u02B8\u02B5\u02BD\u02B5\u02BC\u02B9\u02BD[num].SetActive(!this.\u02B6\u02BB\u02B2\u02B5\u02BC\u02BB\u02B7\u02B3\u02C1\u02B4\u02B2);
+					DrumsNoteContainer drumsNoteContainer = this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7[num] as DrumsNoteContainer;
 					drumsNoteContainer.\u02BC\u02C0\u02B9\u02B6\u02B9\u02C0\u02B8\u02B6\u02BD\u02C1\u02BD = this.basePlayer.\u02BF\u02C0\u02BA\u02B6\u02B7\u02C0\u02B2\u02BE\u02BC\u02BA\u02B2;
 					if (num4 == 4)
 					{
@@ -699,16 +699,16 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 				}
 			}
 		}
-		BaseNoteRenderer.ClearRemainingObjPool(this.noteObjects, num);
-		BaseNoteRenderer.ClearRemainingObjPool(this.\u02BA\u02B3\u02B4\u02B9\u02B6\u02C1\u02B4\u02B7\u02BF\u02B4\u02BB, num6);
-		BaseNoteRenderer.ClearRemainingObjPool(this.\u02B3\u02B5\u02B3\u02B4\u02BF\u02BF\u02BD\u02BE\u02C1\u02BF\u02B3, num5);
+		BaseNoteRenderer.\u02B3\u02B3\u02C1\u02B8\u02BA\u02B8\u02BF\u02BB\u02B2\u02BD\u02BC(this.\u02C0\u02B2\u02BD\u02B9\u02B8\u02B5\u02BD\u02B5\u02BC\u02B9\u02BD, num);
+		BaseNoteRenderer.\u02B3\u02B3\u02C1\u02B8\u02BA\u02B8\u02BF\u02BB\u02B2\u02BD\u02BC(this.\u02BA\u02B3\u02B4\u02B9\u02B6\u02C1\u02B4\u02B7\u02BF\u02B4\u02BB, num6);
+		BaseNoteRenderer.\u02B3\u02B3\u02C1\u02B8\u02BA\u02B8\u02BF\u02BB\u02B2\u02BD\u02BC(this.\u02B3\u02B5\u02B3\u02B4\u02BF\u02BF\u02BD\u02BE\u02C1\u02BF\u02B3, num5);
 	}
 
 	protected override void \u02BE\u02BD\u02BB\u02B8\u02B5\u02BF\u02BE\u02B6\u02BD\u02B9\u02BD()
 	{
 		base.\u02BE\u02BD\u02BB\u02B8\u02B5\u02BF\u02BE\u02B6\u02BD\u02B9\u02BD();
 		this.\u02B8\u02B9\u02BB\u02B2\u02B8\u02B5\u02B2\u02B3\u02B7\u02B2\u02B9();
-		foreach (DrumsNoteContainer drumsNoteContainer in this.cachedNoteContainers)
+		foreach (DrumsNoteContainer drumsNoteContainer in this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7)
 		{
 			drumsNoteContainer.\u02B4\u02B4\u02C0\u02B3\u02BB\u02BA\u02BB\u02BC\u02B6\u02BE\u02BF = this.basePlayer.player.playerProfile.drumDynamicsHidden;
 			drumsNoteContainer.\u02B5\u02C0\u02BE\u02C1\u02BD\u02BB\u02BD\u02BC\u02BC\u02BF\u02B4 = this.basePlayer.player.playerProfile.squareTomNotes;
@@ -719,7 +719,7 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 	{
 		base.\u02BE\u02BD\u02BB\u02B8\u02B5\u02BF\u02BE\u02B6\u02BD\u02B9\u02BD();
 		this.\u02B8\u02B9\u02BB\u02B2\u02B8\u02B5\u02B2\u02B3\u02B7\u02B2\u02B9();
-		foreach (DrumsNoteContainer drumsNoteContainer in this.cachedNoteContainers)
+		foreach (DrumsNoteContainer drumsNoteContainer in this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7)
 		{
 			drumsNoteContainer.\u02B4\u02B4\u02C0\u02B3\u02BB\u02BA\u02BB\u02BC\u02B6\u02BE\u02BF = this.basePlayer.player.playerProfile.drumDynamicsHidden;
 			drumsNoteContainer.\u02B5\u02C0\u02BE\u02C1\u02BD\u02BB\u02BD\u02BC\u02BC\u02BF\u02B4 = this.basePlayer.player.playerProfile.squareTomNotes;
@@ -733,7 +733,7 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 
 	protected virtual void \u02B9\u02B5\u02B2\u02BB\u02B5\u02B3\u02B9\u02BC\u02BF\u02B5\u02BA()
 	{
-		if (this.basePlayer.Notes == null)
+		if (this.basePlayer.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0 == null)
 		{
 			return;
 		}
@@ -743,32 +743,32 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 		}
 		base.\u02B2\u02BF\u02B5\u02C1\u02B6\u02C0\u02B5\u02B5\u02B2\u02B2\u02B7();
 		int num = 1;
-		int num2 = this.noteStartIndex;
+		int num2 = this.\u02B2\u02B5\u02B7\u02BB\u02BD\u02B5\u02BA\u02B3\u02B2\u02BE\u02B3;
 		Vector3 zero = Vector3.zero;
-		while (num < this.maxNotePool && num2 < this.basePlayer.Notes.Count)
+		while (num < this.\u02B5\u02BB\u02B2\u02BA\u02B5\u02B6\u02B2\u02B2\u02BC\u02BD\u02B7 && num2 < this.basePlayer.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0.Count)
 		{
-			Note note = this.basePlayer.Notes[num2];
-			if ((double)note.time - this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B7\u02B4\u02BA\u02B5\u02B5\u02B8\u02BE\u02B5\u02B3\u02B5\u02BB >= (double)this.\u02B2\u02BE\u02B4\u02BE\u02B9\u02B5\u02B4\u02BA\u02B6\u02BF\u02B8)
+			Note note = this.basePlayer.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0[num2];
+			if ((double)note.\u02B2\u02B8\u02BA\u02BA\u02BC\u02B7\u02B5\u02B5\u02B6\u02B5\u02C1 - this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B7\u02B4\u02BA\u02B5\u02B5\u02B8\u02BE\u02B5\u02B3\u02B5\u02BB >= (double)this.\u02B2\u02BE\u02B4\u02BE\u02B9\u02B5\u02B4\u02BA\u02B6\u02BF\u02B8)
 			{
 				break;
 			}
-			float num3 = Helper.\u02B5\u02B9\u02C1\u02BB\u02B6\u02B3\u02BA\u02BE\u02B9\u02B5\u02BF((double)note.time, this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B7\u02B4\u02BA\u02B5\u02B5\u02B8\u02BE\u02B5\u02B3\u02B5\u02BB, this.\u02BB\u02BE\u02B6\u02B5\u02BD\u02BF\u02C1\u02B9\u02B4\u02B3\u02B9, this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4);
-			if (num2 == this.noteStartIndex && note.time < this.noteZPosCloseLimit)
+			float num3 = Helper.\u02B5\u02B9\u02C1\u02BB\u02B6\u02B3\u02BA\u02BE\u02B9\u02B5\u02BF((double)note.\u02B2\u02B8\u02BA\u02BA\u02BC\u02B7\u02B5\u02B5\u02B6\u02B5\u02C1, this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B7\u02B4\u02BA\u02B5\u02B5\u02B8\u02BE\u02B5\u02B3\u02B5\u02BB, this.\u02BB\u02BE\u02B6\u02B5\u02BD\u02BF\u02C1\u02B9\u02B4\u02B3\u02B9, this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4);
+			if (num2 == this.\u02B2\u02B5\u02B7\u02BB\u02BD\u02B5\u02BA\u02B3\u02B2\u02BE\u02B3 && note.\u02B2\u02B8\u02BA\u02BA\u02BC\u02B7\u02B5\u02B5\u02B6\u02B5\u02C1 < this.\u02B8\u02BB\u02BC\u02BE\u02B6\u02B2\u02BC\u02B4\u02C0\u02B3\u02C0)
 			{
-				this.noteStartIndex++;
-				num2 = this.noteStartIndex;
+				this.\u02B2\u02B5\u02B7\u02BB\u02BD\u02B5\u02BA\u02B3\u02B2\u02BE\u02B3++;
+				num2 = this.\u02B2\u02B5\u02B7\u02BB\u02BD\u02B5\u02BA\u02B3\u02B2\u02BE\u02B3;
 			}
-			else if (note.wasHit && !note.wasMissed)
+			else if (note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 && !note.wasMissed)
 			{
 				num2 += 0;
 			}
 			else
 			{
-				if (!note.wasHit && !note.wasMissed)
+				if (!note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 && !note.wasMissed)
 				{
 					int num4 = this.\u02C1\u02B7\u02C0\u02B7\u02B9\u02B2\u02B2\u02BF\u02BC\u02C0\u02BF(note._noteMask);
-					this.noteObjects[num].SetActive(this.\u02B6\u02BB\u02B2\u02B5\u02BC\u02BB\u02B7\u02B3\u02C1\u02B4\u02B2);
-					DrumsNoteContainer drumsNoteContainer = this.cachedNoteContainers[num] as DrumsNoteContainer;
+					this.\u02C0\u02B2\u02BD\u02B9\u02B8\u02B5\u02BD\u02B5\u02BC\u02B9\u02BD[num].SetActive(this.\u02B6\u02BB\u02B2\u02B5\u02BC\u02BB\u02B7\u02B3\u02C1\u02B4\u02B2);
+					DrumsNoteContainer drumsNoteContainer = this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7[num] as DrumsNoteContainer;
 					drumsNoteContainer.\u02BC\u02C0\u02B9\u02B6\u02B9\u02C0\u02B8\u02B6\u02BD\u02C1\u02BD = this.basePlayer.\u02BF\u02C0\u02BA\u02B6\u02B7\u02C0\u02B2\u02BE\u02BC\u02BA\u02B2;
 					if (num4 == 4)
 					{
@@ -817,9 +817,9 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 				}
 			}
 		}
-		BaseNoteRenderer.ClearRemainingObjPool(this.noteObjects, num);
-		BaseNoteRenderer.ClearRemainingObjPool(this.\u02BA\u02B3\u02B4\u02B9\u02B6\u02C1\u02B4\u02B7\u02BF\u02B4\u02BB, num6);
-		BaseNoteRenderer.ClearRemainingObjPool(this.\u02B3\u02B5\u02B3\u02B4\u02BF\u02BF\u02BD\u02BE\u02C1\u02BF\u02B3, num5);
+		BaseNoteRenderer.\u02B3\u02B3\u02C1\u02B8\u02BA\u02B8\u02BF\u02BB\u02B2\u02BD\u02BC(this.\u02C0\u02B2\u02BD\u02B9\u02B8\u02B5\u02BD\u02B5\u02BC\u02B9\u02BD, num);
+		BaseNoteRenderer.\u02B3\u02B3\u02C1\u02B8\u02BA\u02B8\u02BF\u02BB\u02B2\u02BD\u02BC(this.\u02BA\u02B3\u02B4\u02B9\u02B6\u02C1\u02B4\u02B7\u02BF\u02B4\u02BB, num6);
+		BaseNoteRenderer.\u02B3\u02B3\u02C1\u02B8\u02BA\u02B8\u02BF\u02BB\u02B2\u02BD\u02BC(this.\u02B3\u02B5\u02B3\u02B4\u02BF\u02BF\u02BD\u02BE\u02C1\u02BF\u02B3, num5);
 	}
 
 	protected override Vector3 \u02BE\u02B5\u02B3\u02B7\u02B5\u02BD\u02C1\u02B5\u02B2\u02BC\u02BD(int \u02B8\u02BD\u02BA\u02BF\u02BC\u02BB\u02BF\u02BA\u02B8\u02BC\u02BD, float \u02B4\u02BE\u02B7\u02BD\u02B3\u02C0\u02B3\u02BA\u02BC\u02B7\u02BC)
@@ -835,10 +835,10 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 	{
 		base.\u02BE\u02BD\u02BB\u02B8\u02B5\u02BF\u02BE\u02B6\u02BD\u02B9\u02BD();
 		this.\u02B8\u02B9\u02BB\u02B2\u02B8\u02B5\u02B2\u02B3\u02B7\u02B2\u02B9();
-		BaseNoteContainer[] cachedNoteContainers = this.cachedNoteContainers;
-		for (int i = 0; i < cachedNoteContainers.Length; i += 0)
+		\u02BF\u02BB\u02BF\u02B2\u02B6\u02C1\u02BC\u02BD\u02B3\u02BB\u02BB[] u02B7_u02B6_u02BD_u02BC_u02BD_u02BB_u02BA_u02B2_u02B4_u02B6_u02B = this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7;
+		for (int i = 0; i < u02B7_u02B6_u02BD_u02BC_u02BD_u02BB_u02BA_u02B2_u02B4_u02B6_u02B.Length; i += 0)
 		{
-			DrumsNoteContainer drumsNoteContainer = (DrumsNoteContainer)cachedNoteContainers[i];
+			DrumsNoteContainer drumsNoteContainer = (DrumsNoteContainer)u02B7_u02B6_u02BD_u02BC_u02BD_u02BB_u02BA_u02B2_u02B4_u02B6_u02B[i];
 			drumsNoteContainer.\u02B4\u02B4\u02C0\u02B3\u02BB\u02BA\u02BB\u02BC\u02B6\u02BE\u02BF = this.basePlayer.player.playerProfile.drumDynamicsHidden;
 			drumsNoteContainer.\u02B5\u02C0\u02BE\u02C1\u02BD\u02BB\u02BD\u02BC\u02BC\u02BF\u02B4 = this.basePlayer.player.playerProfile.squareTomNotes;
 		}

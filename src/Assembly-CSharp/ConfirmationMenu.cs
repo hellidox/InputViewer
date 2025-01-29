@@ -233,7 +233,7 @@ public class ConfirmationMenu : BaseMenu
 		}
 	}
 
-	public override void ConfirmPressed()
+	public override void \u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3()
 	{
 		string text = this.messageTitleText.text;
 		if (base.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC == 0)

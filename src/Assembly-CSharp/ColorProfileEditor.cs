@@ -132,7 +132,7 @@ public class ColorProfileEditor : MonoBehaviour
 		this.\u02BA\u02B8\u02BC\u02BE\u02B6\u02B5\u02B3\u02B2\u02BD\u02B6\u02BA.gameObject.SetActive(false);
 		string text = this.\u02BC\u02BD\u02B8\u02B4\u02BA\u02B9\u02B6\u02B9\u02BE\u02B6\u02B4.options[this.\u02BC\u02BD\u02B8\u02B4\u02BA\u02B9\u02B6\u02B9\u02BE\u02B6\u02B4.value].text;
 		this.\u02B2\u02BC\u02BD\u02BA\u02BF\u02B9\u02BD\u02BB\u02B5\u02BA\u02B6.colorProfileName.CurrentValue = text;
-		this.\u02B2\u02BC\u02BD\u02BA\u02BF\u02B9\u02BD\u02BB\u02B5\u02BA\u02B6.colorSettings = GlobalVariables.instance.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE.\u02C0\u02BB\u02B2\u02B6\u02B4\u02B3\u02BF\u02B2\u02B5\u02B8\u02BA(text);
+		this.\u02B2\u02BC\u02BD\u02BA\u02BF\u02B9\u02BD\u02BB\u02B5\u02BA\u02B6.colorSettings = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE.\u02C0\u02BB\u02B2\u02B6\u02B4\u02B3\u02BF\u02B2\u02B5\u02B8\u02BA(text);
 		Cursor.visible = SettingsController.enable_cursor;
 	}
 
@@ -147,10 +147,10 @@ public class ColorProfileEditor : MonoBehaviour
 		{
 			return;
 		}
-		string text = Path.Combine(Path.Combine(GlobalVariables.instance.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8, "Colors"), \u02C0\u02BB\u02B5\u02BA\u02BB\u02BF\u02B5\u02B5\u02B8\u02B3\u02C0 + ".ini");
+		string text = Path.Combine(Path.Combine(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8, "Colors"), \u02C0\u02BB\u02B5\u02BA\u02BB\u02BF\u02B5\u02B5\u02B8\u02B3\u02C0 + ".ini");
 		if (!File.Exists(text))
 		{
-			ColorManager u02BD_u02BA_u02B2_u02BB_u02BC_u02C0_u02BA_u02B8_u02BE_u02BB_u02BE = GlobalVariables.instance.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE;
+			ColorManager u02BD_u02BA_u02B2_u02BB_u02BC_u02C0_u02BA_u02B8_u02BE_u02BB_u02BE = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE;
 			string text2 = Settings.RegisterConfigFileName("GameColors_" + \u02C0\u02BB\u02B5\u02BA\u02BB\u02BF\u02B5\u02B5\u02B8\u02B3\u02C0, text);
 			ColorSettings colorSettings = new ColorSettings();
 			colorSettings.SetupSettings(text2);
@@ -169,10 +169,10 @@ public class ColorProfileEditor : MonoBehaviour
 		{
 			return;
 		}
-		string text = Path.Combine(Path.Combine(GlobalVariables.instance.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8, "Error while loading CLI chart"), \u02C0\u02BB\u02B5\u02BA\u02BB\u02BF\u02B5\u02B5\u02B8\u02B3\u02C0 + "_TextureScaleOffset");
+		string text = Path.Combine(Path.Combine(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8, "Error while loading CLI chart"), \u02C0\u02BB\u02B5\u02BA\u02BB\u02BF\u02B5\u02B5\u02B8\u02B3\u02C0 + "_TextureScaleOffset");
 		if (!File.Exists(text))
 		{
-			ColorManager u02BD_u02BA_u02B2_u02BB_u02BC_u02C0_u02BA_u02B8_u02BE_u02BB_u02BE = GlobalVariables.instance.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE;
+			ColorManager u02BD_u02BA_u02B2_u02BB_u02BC_u02C0_u02BA_u02B8_u02BE_u02BB_u02BE = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE;
 			string text2 = Settings.RegisterConfigFileName("Online Highway Placement" + \u02C0\u02BB\u02B5\u02BA\u02BB\u02BF\u02B5\u02B5\u02B8\u02B3\u02C0, text);
 			ColorSettings colorSettings = new ColorSettings();
 			colorSettings.SetupSettings(text2);
@@ -280,7 +280,7 @@ public class ColorProfileEditor : MonoBehaviour
 
 	private void Start()
 	{
-		this.\u02BC\u02BD\u02B8\u02B4\u02BA\u02B9\u02B6\u02B9\u02BE\u02B6\u02B4.options = GlobalVariables.instance.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE.\u02B8\u02B7\u02B3\u02BA\u02BB\u02BC\u02B3\u02B9\u02BF\u02BF\u02BD.Select(new Func<string, TMP_Dropdown.OptionData>(ColorProfileEditor.<>c.<>9.\u02BF\u02B2\u02B4\u02B5\u02B7\u02BF\u02C0\u02B7\u02B7\u02B8\u02C1)).ToList<TMP_Dropdown.OptionData>();
+		this.\u02BC\u02BD\u02B8\u02B4\u02BA\u02B9\u02B6\u02B9\u02BE\u02B6\u02B4.options = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE.\u02B8\u02B7\u02B3\u02BA\u02BB\u02BC\u02B3\u02B9\u02BF\u02BF\u02BD.Select(new Func<string, TMP_Dropdown.OptionData>(ColorProfileEditor.<>c.<>9.\u02BF\u02B2\u02B4\u02B5\u02B7\u02BF\u02C0\u02B7\u02B7\u02B8\u02C1)).ToList<TMP_Dropdown.OptionData>();
 		this.\u02B8\u02C0\u02B3\u02B2\u02BE\u02C0\u02B2\u02B6\u02BF\u02B5\u02BE.onClick.RemoveAllListeners();
 		this.\u02B8\u02C0\u02B3\u02B2\u02BE\u02C0\u02B2\u02B6\u02BF\u02B5\u02BE.onClick.AddListener(new UnityAction(this.\u02BA\u02BF\u02B7\u02B7\u02BD\u02C0\u02B6\u02B7\u02BB\u02B7\u02BE));
 		this.\u02B7\u02BE\u02BE\u02B8\u02B7\u02BF\u02B8\u02BE\u02B4\u02BA\u02B2.onClick.RemoveAllListeners();
@@ -353,7 +353,7 @@ public class ColorProfileEditor : MonoBehaviour
 	[CompilerGenerated]
 	private void \u02B7\u02B2\u02C1\u02B9\u02BA\u02B4\u02B8\u02B2\u02B8\u02BA\u02B9(int \u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5)
 	{
-		this.\u02BE\u02B2\u02BE\u02C1\u02B8\u02BD\u02BA\u02BE\u02B7\u02BC\u02BE((\u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5 < GlobalVariables.instance.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE.\u02BB\u02BF\u02BE\u02B8\u02B2\u02B7\u02BB\u02C0\u02BE\u02B2\u02B2.Count) ? \u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5 : 0);
+		this.\u02BE\u02B2\u02BE\u02C1\u02B8\u02BD\u02BA\u02BE\u02B7\u02BC\u02BE((\u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5 < GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE.\u02BB\u02BF\u02BE\u02B8\u02B2\u02B7\u02BB\u02C0\u02BE\u02B2\u02B2.Count) ? \u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5 : 0);
 	}
 
 	private void \u02BD\u02C0\u02B2\u02BD\u02B8\u02BE\u02B9\u02B9\u02BF\u02BC\u02BC(string \u02C0\u02BB\u02B5\u02BA\u02BB\u02BF\u02B5\u02B5\u02B8\u02B3\u02C0)
@@ -362,10 +362,10 @@ public class ColorProfileEditor : MonoBehaviour
 		{
 			return;
 		}
-		string text = Path.Combine(Path.Combine(GlobalVariables.instance.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8, "Quickplay"), \u02C0\u02BB\u02B5\u02BA\u02BB\u02BF\u02B5\u02B5\u02B8\u02B3\u02C0 + "diff_rhythm_ghl");
+		string text = Path.Combine(Path.Combine(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8, "Quickplay"), \u02C0\u02BB\u02B5\u02BA\u02BB\u02BF\u02B5\u02B5\u02B8\u02B3\u02C0 + "diff_rhythm_ghl");
 		if (!File.Exists(text))
 		{
-			ColorManager u02BD_u02BA_u02B2_u02BB_u02BC_u02C0_u02BA_u02B8_u02BE_u02BB_u02BE = GlobalVariables.instance.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE;
+			ColorManager u02BD_u02BA_u02B2_u02BB_u02BC_u02C0_u02BA_u02B8_u02BE_u02BB_u02BE = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE;
 			string text2 = Settings.RegisterConfigFileName("" + \u02C0\u02BB\u02B5\u02BA\u02BB\u02BF\u02B5\u02B5\u02B8\u02B3\u02C0, text);
 			ColorSettings colorSettings = new ColorSettings();
 			colorSettings.SetupSettings(text2);
@@ -384,10 +384,10 @@ public class ColorProfileEditor : MonoBehaviour
 		{
 			return;
 		}
-		string text = Path.Combine(Path.Combine(GlobalVariables.instance.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8, ""), \u02C0\u02BB\u02B5\u02BA\u02BB\u02BF\u02B5\u02B5\u02B8\u02B3\u02C0 + "Custom");
+		string text = Path.Combine(Path.Combine(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8, ""), \u02C0\u02BB\u02B5\u02BA\u02BB\u02BF\u02B5\u02B5\u02B8\u02B3\u02C0 + "Custom");
 		if (!File.Exists(text))
 		{
-			ColorManager u02BD_u02BA_u02B2_u02BB_u02BC_u02C0_u02BA_u02B8_u02BE_u02BB_u02BE = GlobalVariables.instance.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE;
+			ColorManager u02BD_u02BA_u02B2_u02BB_u02BC_u02C0_u02BA_u02B8_u02BE_u02BB_u02BE = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE;
 			string text2 = Settings.RegisterConfigFileName("No" + \u02C0\u02BB\u02B5\u02BA\u02BB\u02BF\u02B5\u02B5\u02B8\u02B3\u02C0, text);
 			ColorSettings colorSettings = new ColorSettings();
 			colorSettings.SetupSettings(text2);
@@ -445,7 +445,7 @@ public class ColorProfileEditor : MonoBehaviour
 
 	private void \u02B6\u02B6\u02B7\u02B8\u02B7\u02C1\u02C0\u02B4\u02B6\u02BE\u02B2(string \u02B4\u02B7\u02BB\u02C1\u02C0\u02B3\u02B2\u02BC\u02B6\u02BF\u02B3)
 	{
-		ColorManager u02BD_u02BA_u02B2_u02BB_u02BC_u02C0_u02BA_u02B8_u02BE_u02BB_u02BE = GlobalVariables.instance.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE;
+		ColorManager u02BD_u02BA_u02B2_u02BB_u02BC_u02C0_u02BA_u02B8_u02BE_u02BB_u02BE = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE;
 		if (\u02B4\u02B7\u02BB\u02C1\u02C0\u02B3\u02B2\u02BC\u02B6\u02BF\u02B3 == u02BD_u02BA_u02B2_u02BB_u02BC_u02C0_u02BA_u02B8_u02BE_u02BB_u02BE.\u02B3\u02B3\u02B2\u02B5\u02BB\u02B3\u02BF\u02C0\u02C1\u02BF\u02C0)
 		{
 			return;
@@ -463,7 +463,7 @@ public class ColorProfileEditor : MonoBehaviour
 
 	private void \u02B2\u02C1\u02BB\u02B6\u02B2\u02B5\u02B5\u02B7\u02B4\u02B8\u02B8(string \u02B4\u02B7\u02BB\u02C1\u02C0\u02B3\u02B2\u02BC\u02B6\u02BF\u02B3)
 	{
-		ColorManager u02BD_u02BA_u02B2_u02BB_u02BC_u02C0_u02BA_u02B8_u02BE_u02BB_u02BE = GlobalVariables.instance.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE;
+		ColorManager u02BD_u02BA_u02B2_u02BB_u02BC_u02C0_u02BA_u02B8_u02BE_u02BB_u02BE = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE;
 		if (\u02B4\u02B7\u02BB\u02C1\u02C0\u02B3\u02B2\u02BC\u02B6\u02BF\u02B3 == u02BD_u02BA_u02B2_u02BB_u02BC_u02C0_u02BA_u02B8_u02BE_u02BB_u02BE.\u02B3\u02B3\u02B2\u02B5\u02BB\u02B3\u02BF\u02C0\u02C1\u02BF\u02C0)
 		{
 			return;
@@ -494,14 +494,14 @@ public class ColorProfileEditor : MonoBehaviour
 		float num2 = (this.\u02BE\u02BA\u02B8\u02C1\u02C0\u02C1\u02BA\u02B9\u02B8\u02B8\u02B7.transform as RectTransform).sizeDelta.y + component.spacing;
 		float num3 = (this.\u02B8\u02B9\u02BD\u02BC\u02BB\u02BA\u02B5\u02B8\u02B7\u02B7\u02B8.transform as RectTransform).sizeDelta.y + component.spacing;
 		List<string> list = new List<string>(ColorProfileEditor.\u02B8\u02BF\u02B7\u02B2\u02B9\u02B7\u02B6\u02C0\u02BB\u02B9\u02B7);
-		u02BB_u02BB_u02B5_u02B8_u02B8_u02B6_u02B9_u02B8_u02B5_u02B7_u02C.colorSettings = GlobalVariables.instance.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE.\u02C0\u02BB\u02B2\u02B6\u02B4\u02B3\u02BF\u02B2\u02B5\u02B8\u02BA(this.\u02BC\u02BD\u02B8\u02B4\u02BA\u02B9\u02B6\u02B9\u02BE\u02B6\u02B4.options[\u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5].text);
+		u02BB_u02BB_u02B5_u02B8_u02B8_u02B6_u02B9_u02B8_u02B5_u02B7_u02C.colorSettings = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE.\u02C0\u02BB\u02B2\u02B6\u02B4\u02B3\u02BF\u02B2\u02B5\u02B8\u02BA(this.\u02BC\u02BD\u02B8\u02B4\u02BA\u02B9\u02B6\u02B9\u02BE\u02B6\u02B4.options[\u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5].text);
 		Color color = new Color(1f, 1f, 1f, 0.2f);
 		List<ColorGameSetting> list2 = u02BB_u02BB_u02B5_u02B8_u02B8_u02B6_u02B9_u02B8_u02B5_u02B7_u02C.colorSettings.GetType().GetFields().Where(new Func<FieldInfo, bool>(ColorProfileEditor.<>c.<>9.\u02B4\u02C1\u02BD\u02B2\u02B8\u02C0\u02B8\u02BF\u02BC\u02BA\u02BC))
 			.Select(new Func<FieldInfo, ColorGameSetting>(u02BB_u02BB_u02B5_u02B8_u02B8_u02B6_u02B9_u02B8_u02B5_u02B7_u02C.\u02BA\u02BB\u02C1\u02B5\u02BF\u02C0\u02BB\u02C1\u02BC\u02BC\u02BD))
 			.ToList<ColorGameSetting>();
 		List<Button> list3 = new List<Button>();
 		List<string> list4 = new List<string>();
-		bool flag = this.\u02BC\u02BD\u02B8\u02B4\u02BA\u02B9\u02B6\u02B9\u02BE\u02B6\u02B4.options[\u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5].text == GlobalVariables.instance.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE.\u02B3\u02B3\u02B2\u02B5\u02BB\u02B3\u02BF\u02C0\u02C1\u02BF\u02C0;
+		bool flag = this.\u02BC\u02BD\u02B8\u02B4\u02BA\u02B9\u02B6\u02B9\u02BE\u02B6\u02B4.options[\u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5].text == GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE.\u02B3\u02B3\u02B2\u02B5\u02BB\u02B3\u02BF\u02C0\u02C1\u02BF\u02C0;
 		for (int i = 0; i < list.Count; i += 2)
 		{
 			ColorProfileEditor.\u02B2\u02BA\u02B6\u02B6\u02BA\u02B8\u02B3\u02C1\u02BF\u02BE\u02B6 u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B = new ColorProfileEditor.\u02B2\u02BA\u02B6\u02B6\u02BA\u02B8\u02B3\u02C1\u02BF\u02BE\u02B6();
@@ -573,7 +573,7 @@ public class ColorProfileEditor : MonoBehaviour
 	public static void \u02BE\u02B3\u02B7\u02BD\u02BA\u02BB\u02B4\u02B7\u02B5\u02B3\u02B2(\u02B9\u02BA\u02BF\u02BB\u02B2\u02B9\u02BB\u02B9\u02B9\u02B5\u02B8 \u02C1\u02B8\u02B9\u02B7\u02BF\u02B5\u02BD\u02BD\u02BF\u02B3\u02BA)
 	{
 		ColorProfileEditor.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02B2\u02BC\u02BD\u02BA\u02BF\u02B9\u02BD\u02BB\u02B5\u02BA\u02B6 = \u02C1\u02B8\u02B9\u02B7\u02BF\u02B5\u02BD\u02BD\u02BF\u02B3\u02BA;
-		ColorProfileEditor.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02BC\u02BD\u02B8\u02B4\u02BA\u02B9\u02B6\u02B9\u02BE\u02B6\u02B4.value = GlobalVariables.instance.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE.\u02B8\u02B7\u02B3\u02BA\u02BB\u02BC\u02B3\u02B9\u02BF\u02BF\u02BD.IndexOf(\u02C1\u02B8\u02B9\u02B7\u02BF\u02B5\u02BD\u02BD\u02BF\u02B3\u02BA.colorProfileName.CurrentValue);
+		ColorProfileEditor.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02BC\u02BD\u02B8\u02B4\u02BA\u02B9\u02B6\u02B9\u02BE\u02B6\u02B4.value = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE.\u02B8\u02B7\u02B3\u02BA\u02BB\u02BC\u02B3\u02B9\u02BF\u02BF\u02BD.IndexOf(\u02C1\u02B8\u02B9\u02B7\u02BF\u02B5\u02BD\u02BD\u02BF\u02B3\u02BA.colorProfileName.CurrentValue);
 		ColorProfileEditor.\u02C1\u02B9\u02B7\u02BA\u02BB\u02C1\u02B9\u02B8\u02BB\u02B8\u02B6.\u02BA\u02B8\u02BC\u02BE\u02B6\u02B5\u02B3\u02B2\u02BD\u02B6\u02BA.gameObject.SetActive(true);
 		Cursor.visible = true;
 	}
@@ -593,14 +593,14 @@ public class ColorProfileEditor : MonoBehaviour
 		float num2 = (this.\u02BE\u02BA\u02B8\u02C1\u02C0\u02C1\u02BA\u02B9\u02B8\u02B8\u02B7.transform as RectTransform).sizeDelta.y + component.spacing;
 		float num3 = (this.\u02B8\u02B9\u02BD\u02BC\u02BB\u02BA\u02B5\u02B8\u02B7\u02B7\u02B8.transform as RectTransform).sizeDelta.y + component.spacing;
 		List<string> list = new List<string>(ColorProfileEditor.\u02B8\u02BF\u02B7\u02B2\u02B9\u02B7\u02B6\u02C0\u02BB\u02B9\u02B7);
-		u02BB_u02BB_u02B5_u02B8_u02B8_u02B6_u02B9_u02B8_u02B5_u02B7_u02C.colorSettings = GlobalVariables.instance.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE.\u02B8\u02B6\u02BC\u02BF\u02C1\u02BC\u02C1\u02C1\u02B6\u02BD\u02B9(this.\u02BC\u02BD\u02B8\u02B4\u02BA\u02B9\u02B6\u02B9\u02BE\u02B6\u02B4.options[\u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5].text);
+		u02BB_u02BB_u02B5_u02B8_u02B8_u02B6_u02B9_u02B8_u02B5_u02B7_u02C.colorSettings = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE.\u02B8\u02B6\u02BC\u02BF\u02C1\u02BC\u02C1\u02C1\u02B6\u02BD\u02B9(this.\u02BC\u02BD\u02B8\u02B4\u02BA\u02B9\u02B6\u02B9\u02BE\u02B6\u02B4.options[\u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5].text);
 		Color color = new Color(171f, 1025f, 371f, 1560f);
 		List<ColorGameSetting> list2 = u02BB_u02BB_u02B5_u02B8_u02B8_u02B6_u02B9_u02B8_u02B5_u02B7_u02C.colorSettings.GetType().GetFields().Where(new Func<FieldInfo, bool>(ColorProfileEditor.<>c.<>9.\u02B4\u02C1\u02BD\u02B2\u02B8\u02C0\u02B8\u02BF\u02BC\u02BA\u02BC))
 			.Select(new Func<FieldInfo, ColorGameSetting>(u02BB_u02BB_u02B5_u02B8_u02B8_u02B6_u02B9_u02B8_u02B5_u02B7_u02C.\u02BA\u02BB\u02C1\u02B5\u02BF\u02C0\u02BB\u02C1\u02BC\u02BC\u02BD))
 			.ToList<ColorGameSetting>();
 		List<Button> list3 = new List<Button>();
 		List<string> list4 = new List<string>();
-		bool flag = this.\u02BC\u02BD\u02B8\u02B4\u02BA\u02B9\u02B6\u02B9\u02BE\u02B6\u02B4.options[\u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5].text == GlobalVariables.instance.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE.\u02B3\u02B3\u02B2\u02B5\u02BB\u02B3\u02BF\u02C0\u02C1\u02BF\u02C0;
+		bool flag = this.\u02BC\u02BD\u02B8\u02B4\u02BA\u02B9\u02B6\u02B9\u02BE\u02B6\u02B4.options[\u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5].text == GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE.\u02B3\u02B3\u02B2\u02B5\u02BB\u02B3\u02BF\u02C0\u02C1\u02BF\u02C0;
 		for (int i = 0; i < list.Count; i += 7)
 		{
 			ColorProfileEditor.\u02B2\u02BA\u02B6\u02B6\u02BA\u02B8\u02B3\u02C1\u02BF\u02BE\u02B6 u02B2_u02BA_u02B6_u02B6_u02BA_u02B8_u02B3_u02C1_u02BF_u02BE_u02B = new ColorProfileEditor.\u02B2\u02BA\u02B6\u02B6\u02BA\u02B8\u02B3\u02C1\u02BF\u02BE\u02B6();

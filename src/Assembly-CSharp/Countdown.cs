@@ -30,11 +30,11 @@ public class Countdown : MonoBehaviour
 				if (note != lastNote)
 				{
 					lastNote = note;
-					if ((double)note.time >= this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.songTime + 10.0)
+					if ((double)note.\u02B2\u02B8\u02BA\u02BA\u02BC\u02B7\u02B5\u02B5\u02B6\u02B5\u02C1 >= this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.songTime + 10.0)
 					{
 						int noteMeasure = this.\u02B3\u02BC\u02B3\u02B6\u02BD\u02B6\u02B4\u02B5\u02B6\u02B7\u02BB.\u02BD\u02BD\u02BC\u02B4\u02B5\u02C0\u02C0\u02BA\u02B7\u02B4\u02B8(this.player.\u02B9\u02BF\u02B4\u02C1\u02C0\u02B7\u02B6\u02B9\u02BC\u02BD\u02B3);
 						double startTime = (double)this.player.\u02B3\u02BC\u02B8\u02B9\u02BE\u02BC\u02BC\u02B8\u02BD\u02C1\u02BD.\u02B2\u02B8\u02B7\u02BD\u02B5\u02B7\u02B6\u02B2\u02BF\u02BD\u02C0;
-						double endTime = (double)note.time;
+						double endTime = (double)note.\u02B2\u02B8\u02BA\u02BA\u02BC\u02B7\u02B5\u02B5\u02B6\u02B5\u02C1;
 						double timeDif = endTime - startTime;
 						this.\u02B5\u02C1\u02B7\u02BA\u02B9\u02BC\u02C1\u02B8\u02BE\u02B6\u02B7 = true;
 						this.fill.enabled = true;
@@ -110,11 +110,11 @@ public class Countdown : MonoBehaviour
 				if (note != lastNote)
 				{
 					lastNote = note;
-					if ((double)note.time >= this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.songTime + 10.0)
+					if ((double)note.\u02B2\u02B8\u02BA\u02BA\u02BC\u02B7\u02B5\u02B5\u02B6\u02B5\u02C1 >= this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.songTime + 10.0)
 					{
 						noteMeasure = this.\u02B3\u02BC\u02B3\u02B6\u02BD\u02B6\u02B4\u02B5\u02B6\u02B7\u02BB.\u02BD\u02BD\u02BC\u02B4\u02B5\u02C0\u02C0\u02BA\u02B7\u02B4\u02B8(this.player.\u02B9\u02BF\u02B4\u02C1\u02C0\u02B7\u02B6\u02B9\u02BC\u02BD\u02B3);
 						startTime = (double)this.player.\u02B3\u02BC\u02B8\u02B9\u02BE\u02BC\u02BC\u02B8\u02BD\u02C1\u02BD.\u02B2\u02B8\u02B7\u02BD\u02B5\u02B7\u02B6\u02B2\u02BF\u02BD\u02C0;
-						endTime = (double)note.time;
+						endTime = (double)note.\u02B2\u02B8\u02BA\u02BA\u02BC\u02B7\u02B5\u02B5\u02B6\u02B5\u02C1;
 						timeDif = endTime - startTime;
 						this.\u02B5\u02C1\u02B7\u02BA\u02B9\u02BC\u02C1\u02B8\u02BE\u02B6\u02B7 = true;
 						this.fill.enabled = true;
@@ -182,7 +182,7 @@ public class Countdown : MonoBehaviour
 
 	private void \u02B4\u02BA\u02BE\u02BB\u02B5\u02BB\u02C1\u02B2\u02B4\u02B2\u02BF()
 	{
-		if (GlobalVariables.instance.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
+		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
 		{
 			base.gameObject.SetActive(true);
 			return;
@@ -197,7 +197,7 @@ public class Countdown : MonoBehaviour
 
 	private void \u02BF\u02BA\u02B5\u02B8\u02B5\u02BF\u02B2\u02BF\u02B3\u02BC\u02BA()
 	{
-		if (GlobalVariables.instance.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
+		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
 		{
 			base.gameObject.SetActive(false);
 			return;
@@ -227,11 +227,11 @@ public class Countdown : MonoBehaviour
 				if (note != lastNote)
 				{
 					lastNote = note;
-					if ((double)note.time >= this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.songTime + 10.0)
+					if ((double)note.\u02B2\u02B8\u02BA\u02BA\u02BC\u02B7\u02B5\u02B5\u02B6\u02B5\u02C1 >= this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.songTime + 10.0)
 					{
 						noteMeasure = this.\u02B3\u02BC\u02B3\u02B6\u02BD\u02B6\u02B4\u02B5\u02B6\u02B7\u02BB.\u02BD\u02BD\u02BC\u02B4\u02B5\u02C0\u02C0\u02BA\u02B7\u02B4\u02B8(this.player.\u02B9\u02BF\u02B4\u02C1\u02C0\u02B7\u02B6\u02B9\u02BC\u02BD\u02B3);
 						startTime = (double)this.player.\u02B3\u02BC\u02B8\u02B9\u02BE\u02BC\u02BC\u02B8\u02BD\u02C1\u02BD.\u02B2\u02B8\u02B7\u02BD\u02B5\u02B7\u02B6\u02B2\u02BF\u02BD\u02C0;
-						endTime = (double)note.time;
+						endTime = (double)note.\u02B2\u02B8\u02BA\u02BA\u02BC\u02B7\u02B5\u02B5\u02B6\u02B5\u02C1;
 						timeDif = endTime - startTime;
 						this.\u02B5\u02C1\u02B7\u02BA\u02B9\u02BC\u02C1\u02B8\u02BE\u02B6\u02B7 = true;
 						this.fill.enabled = true;
@@ -299,7 +299,7 @@ public class Countdown : MonoBehaviour
 
 	private void Start()
 	{
-		if (GlobalVariables.instance.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
+		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
 		{
 			base.gameObject.SetActive(false);
 			return;
@@ -336,11 +336,11 @@ public class Countdown : MonoBehaviour
 				if (note != lastNote)
 				{
 					lastNote = note;
-					if ((double)note.time >= this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.songTime + 10.0)
+					if ((double)note.\u02B2\u02B8\u02BA\u02BA\u02BC\u02B7\u02B5\u02B5\u02B6\u02B5\u02C1 >= this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.songTime + 10.0)
 					{
 						noteMeasure = this.\u02B3\u02BC\u02B3\u02B6\u02BD\u02B6\u02B4\u02B5\u02B6\u02B7\u02BB.\u02BD\u02BD\u02BC\u02B4\u02B5\u02C0\u02C0\u02BA\u02B7\u02B4\u02B8(this.player.\u02B9\u02BF\u02B4\u02C1\u02C0\u02B7\u02B6\u02B9\u02BC\u02BD\u02B3);
 						startTime = (double)this.player.\u02B3\u02BC\u02B8\u02B9\u02BE\u02BC\u02BC\u02B8\u02BD\u02C1\u02BD.\u02B2\u02B8\u02B7\u02BD\u02B5\u02B7\u02B6\u02B2\u02BF\u02BD\u02C0;
-						endTime = (double)note.time;
+						endTime = (double)note.\u02B2\u02B8\u02BA\u02BA\u02BC\u02B7\u02B5\u02B5\u02B6\u02B5\u02C1;
 						timeDif = endTime - startTime;
 						this.\u02B5\u02C1\u02B7\u02BA\u02B9\u02BC\u02C1\u02B8\u02BE\u02B6\u02B7 = true;
 						this.fill.enabled = true;
@@ -401,7 +401,7 @@ public class Countdown : MonoBehaviour
 
 	private void \u02B5\u02C0\u02BE\u02B8\u02B9\u02B2\u02BD\u02C0\u02BF\u02B3\u02BD()
 	{
-		if (GlobalVariables.instance.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
+		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
 		{
 			base.gameObject.SetActive(false);
 			return;
@@ -416,7 +416,7 @@ public class Countdown : MonoBehaviour
 
 	private void \u02C0\u02BC\u02BC\u02BD\u02B8\u02BD\u02BE\u02B6\u02BE\u02BB\u02BB()
 	{
-		if (GlobalVariables.instance.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
+		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
 		{
 			base.gameObject.SetActive(false);
 			return;
@@ -431,7 +431,7 @@ public class Countdown : MonoBehaviour
 
 	private void \u02B2\u02BB\u02B6\u02B5\u02B9\u02B8\u02B2\u02B3\u02BF\u02C1\u02BF()
 	{
-		if (GlobalVariables.instance.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
+		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
 		{
 			base.gameObject.SetActive(false);
 			return;
@@ -453,7 +453,7 @@ public class Countdown : MonoBehaviour
 
 	private void \u02B3\u02BB\u02BF\u02B4\u02B9\u02BA\u02B5\u02B5\u02BE\u02BB\u02BE()
 	{
-		if (GlobalVariables.instance.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
+		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
 		{
 			base.gameObject.SetActive(false);
 			return;

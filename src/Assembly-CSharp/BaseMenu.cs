@@ -85,6 +85,27 @@ public class BaseMenu : MonoBehaviour
 		}
 	}
 
+	public virtual void \u02BF\u02B6\u02BB\u02B4\u02B9\u02BD\u02B9\u02BE\u02BE\u02BE\u02B4(byte \u02C0\u02B4\u02B4\u02BC\u02BD\u02B2\u02C1\u02C0\u02C1\u02B4\u02C1)
+	{
+		switch (\u02C0\u02B4\u02B4\u02BC\u02BD\u02B2\u02C1\u02C0\u02C1\u02B4\u02C1)
+		{
+		case 0:
+			this.\u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3();
+			return;
+		case 1:
+			this.\u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8();
+			return;
+		case 2:
+			this.\u02C1\u02B3\u02BC\u02B6\u02BD\u02B6\u02BF\u02B7\u02BB\u02B5\u02BB();
+			return;
+		case 3:
+			this.\u02B7\u02BA\u02C0\u02B8\u02BE\u02BA\u02BD\u02B4\u02BB\u02B3\u02B6();
+			return;
+		default:
+			return;
+		}
+	}
+
 	public virtual void \u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(int \u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5, bool \u02B5\u02B8\u02BD\u02B7\u02B9\u02B5\u02BE\u02BE\u02BD\u02B3\u02BF = true)
 	{
 		if (\u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5 == -1)
@@ -131,12 +152,12 @@ public class BaseMenu : MonoBehaviour
 		}
 	}
 
-	private void \u02C1\u02B4\u02B5\u02C1\u02B4\u02B3\u02BA\u02B2\u02BF\u02B6\u02BD(CHPlayer \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7)
+	private void \u02C1\u02B4\u02B5\u02C1\u02B4\u02B3\u02BA\u02B2\u02BF\u02B6\u02BD(\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7)
 	{
 		this.\u02BE\u02BE\u02BA\u02B8\u02B2\u02B4\u02BF\u02B3\u02B3\u02BE\u02B8 = \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7;
 		try
 		{
-			this.DoInput(\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7);
+			this.\u02B3\u02BA\u02BF\u02BB\u02BE\u02BE\u02B4\u02B7\u02BA\u02BB\u02B6(\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7);
 		}
 		finally
 		{
@@ -146,45 +167,45 @@ public class BaseMenu : MonoBehaviour
 
 	protected virtual void Update()
 	{
-		if (FadeBehaviour.instance.isFading)
+		if (FadeBehaviour.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BC\u02BF\u02B7\u02BA\u02BC\u02B2\u02BA\u02B8\u02BF\u02BB\u02B3)
 		{
 			return;
 		}
 		if (!this.enableSelectionWithoutProfiles)
 		{
-			this.\u02B4\u02B9\u02BE\u02B7\u02BE\u02BB\u02BF\u02BC\u02B3\u02B5\u02B8(GlobalVariables.instance.\u02C1\u02B7\u02BD\u02B7\u02B7\u02BD\u02B6\u02B4\u02BA\u02B2\u02BA.\u02BE\u02BD\u02BE\u02B5\u02BA\u02C1\u02B7\u02BD\u02BD\u02B9\u02BC <= 0);
+			this.\u02B4\u02B9\u02BE\u02B7\u02BE\u02BB\u02BF\u02BC\u02B3\u02B5\u02B8(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02B7\u02BD\u02B7\u02B7\u02BD\u02B6\u02B4\u02BA\u02B2\u02BA.\u02BE\u02BD\u02BE\u02B5\u02BA\u02C1\u02B7\u02BD\u02BD\u02B9\u02BC <= 0);
 		}
-		if (this.controllingPlayer == null)
+		if (this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4 == null)
 		{
-			if (GlobalVariables.instance.\u02B4\u02B8\u02BE\u02C1\u02B8\u02B7\u02B4\u02BA\u02BF\u02B7\u02BE != null)
+			if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02B8\u02BE\u02C1\u02B8\u02B7\u02B4\u02BA\u02BF\u02B7\u02BE != null)
 			{
-				if (this.TestTransitionInputBlock(GlobalVariables.instance.\u02B4\u02B8\u02BE\u02C1\u02B8\u02B7\u02B4\u02BA\u02BF\u02B7\u02BE))
+				if (this.\u02B4\u02B5\u02BA\u02C0\u02C1\u02B7\u02BD\u02BD\u02B6\u02B7\u02C1(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02B8\u02BE\u02C1\u02B8\u02B7\u02B4\u02BA\u02BF\u02B7\u02BE))
 				{
-					this.\u02C1\u02B4\u02B5\u02C1\u02B4\u02B3\u02BA\u02B2\u02BF\u02B6\u02BD(GlobalVariables.instance.\u02B4\u02B8\u02BE\u02C1\u02B8\u02B7\u02B4\u02BA\u02BF\u02B7\u02BE);
+					this.\u02C1\u02B4\u02B5\u02C1\u02B4\u02B3\u02BA\u02B2\u02BF\u02B6\u02BD(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02B8\u02BE\u02C1\u02B8\u02B7\u02B4\u02BA\u02BF\u02B7\u02BE);
 				}
 			}
 			else
 			{
 				for (int i = 0; i < 4; i++)
 				{
-					CHPlayer chplayer = GlobalVariables.instance.playerList[i];
-					if (chplayer.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && (!chplayer.\u02BB\u02B6\u02BD\u02B9\u02C0\u02BE\u02BC\u02B4\u02C1\u02C1\u02BD || this.isProfileMenu) && !this.disableControls && (chplayer.playerProfile == null || !chplayer.playerProfile.isRemotePlayer) && this.TestTransitionInputBlock(chplayer))
+					\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i];
+					if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && (!u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02BB\u02B6\u02BD\u02B9\u02C0\u02BE\u02BC\u02B4\u02C1\u02C1\u02BD || this.isProfileMenu) && !this.disableControls && (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.playerProfile == null || !u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.playerProfile.isRemotePlayer) && this.\u02B4\u02B5\u02BA\u02C0\u02C1\u02B7\u02BD\u02BD\u02B6\u02B7\u02C1(u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B))
 					{
-						this.\u02C1\u02B4\u02B5\u02C1\u02B4\u02B3\u02BA\u02B2\u02BF\u02B6\u02BD(chplayer);
+						this.\u02C1\u02B4\u02B5\u02C1\u02B4\u02B3\u02BA\u02B2\u02BF\u02B6\u02BD(u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B);
 					}
 				}
 			}
 		}
-		else if (this.TestTransitionInputBlock(this.controllingPlayer))
+		else if (this.\u02B4\u02B5\u02BA\u02C0\u02C1\u02B7\u02BD\u02BD\u02B6\u02B7\u02C1(this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4))
 		{
-			this.\u02C1\u02B4\u02B5\u02C1\u02B4\u02B3\u02BA\u02B2\u02BF\u02B6\u02BD(this.controllingPlayer);
+			this.\u02C1\u02B4\u02B5\u02C1\u02B4\u02B3\u02BA\u02B2\u02BF\u02B6\u02BD(this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4);
 		}
 		if (this.\u02BD\u02BE\u02C0\u02B6\u02B8\u02B5\u02B2\u02B7\u02BD\u02B7\u02BF)
 		{
 			this.\u02BD\u02BE\u02C0\u02B6\u02B8\u02B5\u02B2\u02B7\u02BD\u02B7\u02BF = false;
 			this.\u02B2\u02BD\u02B6\u02BE\u02B4\u02BE\u02B9\u02B6\u02BD\u02B4\u02B7();
 		}
-		if (BaseMenu.HAVEFUN)
+		if (BaseMenu.\u02B6\u02B7\u02BD\u02BE\u02BB\u02BE\u02C0\u02C1\u02B7\u02B4\u02C0)
 		{
 			this.\u02B9\u02B3\u02B4\u02B3\u02B7\u02B5\u02C1\u02C0\u02BE\u02BC\u02B6();
 		}
@@ -347,22 +368,22 @@ public class BaseMenu : MonoBehaviour
 
 	protected void \u02B7\u02B6\u02BC\u02BC\u02B3\u02BA\u02BE\u02C0\u02BF\u02B9\u02C1()
 	{
-		if (this.controllingPlayer == null)
+		if (this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4 == null)
 		{
-			using (List<CHPlayer>.Enumerator enumerator = GlobalVariables.instance.playerList.GetEnumerator())
+			using (List<\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6>.Enumerator enumerator = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF.GetEnumerator())
 			{
 				while (enumerator.MoveNext())
 				{
-					CHPlayer chplayer = enumerator.Current;
-					if (chplayer.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && (!chplayer.\u02BB\u02B6\u02BD\u02B9\u02C0\u02BE\u02BC\u02B4\u02C1\u02C1\u02BD || this.isProfileMenu) && !this.disableControls && (chplayer.playerProfile == null || !chplayer.playerProfile.isRemotePlayer))
+					\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B = enumerator.Current;
+					if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD && (!u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02BB\u02B6\u02BD\u02B9\u02C0\u02BE\u02BC\u02B4\u02C1\u02C1\u02BD || this.isProfileMenu) && !this.disableControls && (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.playerProfile == null || !u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.playerProfile.isRemotePlayer))
 					{
-						chplayer.transitioning = true;
+						u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02BD\u02B8\u02BD\u02B6\u02B4\u02B6\u02C1\u02B9\u02BD\u02BC\u02B4 = true;
 					}
 				}
 				return;
 			}
 		}
-		this.controllingPlayer.transitioning = true;
+		this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4.\u02BD\u02B8\u02BD\u02B6\u02B4\u02B6\u02C1\u02B9\u02BD\u02BC\u02B4 = true;
 	}
 
 	public void \u02B4\u02B9\u02BE\u02B7\u02BE\u02BB\u02BF\u02BC\u02B3\u02B5\u02B8(bool \u02BD\u02BB\u02BD\u02B6\u02B5\u02C1\u02B8\u02B5\u02B3\u02B2\u02B4)
@@ -402,7 +423,7 @@ public class BaseMenu : MonoBehaviour
 		{
 			this.\u02B7\u02B9\u02BE\u02B2\u02B3\u02C0\u02BF\u02BB\u02BD\u02BF\u02BC();
 		}
-		this.isActive = false;
+		this.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 = false;
 	}
 
 	private bool \u02C0\u02B9\u02BE\u02B2\u02C1\u02B7\u02BF\u02B9\u02B8\u02BE\u02BD()
@@ -490,7 +511,7 @@ public class BaseMenu : MonoBehaviour
 		switch (\u02C0\u02B4\u02B4\u02BC\u02BD\u02B2\u02C1\u02C0\u02C1\u02B4\u02C1)
 		{
 		case 0:
-			this.ConfirmPressed();
+			this.\u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3();
 			return;
 		case 1:
 			this.\u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8();
@@ -513,7 +534,7 @@ public class BaseMenu : MonoBehaviour
 			this.tipText.enabled = true;
 			this.\u02B9\u02BB\u02BE\u02BD\u02B3\u02C1\u02BF\u02B8\u02BD\u02B5\u02B6();
 		}
-		this.isActive = true;
+		this.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8 = true;
 		this.\u02BD\u02BE\u02C0\u02B6\u02B8\u02B5\u02B2\u02B7\u02BD\u02B7\u02BF = true;
 	}
 
@@ -542,7 +563,7 @@ public class BaseMenu : MonoBehaviour
 		return false;
 	}
 
-	public virtual void GreenLongPressed()
+	public virtual void \u02B2\u02B2\u02B9\u02B2\u02B8\u02BB\u02B7\u02B6\u02B3\u02C1\u02B5()
 	{
 	}
 
@@ -640,7 +661,7 @@ public class BaseMenu : MonoBehaviour
 		}
 	}
 
-	public virtual void ConfirmPressed()
+	public virtual void \u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3()
 	{
 		this.\u02BD\u02B5\u02BE\u02BC\u02B4\u02B6\u02B7\u02BF\u02B4\u02BF\u02C0 = true;
 		GameAudioManager.PlaySound(SoundEffectsChannel.UIConfirm);
@@ -736,9 +757,9 @@ public class BaseMenu : MonoBehaviour
 	{
 	}
 
-	protected virtual void DoInput(CHPlayer player)
+	protected virtual void \u02B3\u02BA\u02BF\u02BB\u02BE\u02BE\u02B4\u02B7\u02BA\u02BB\u02B6(\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7)
 	{
-		if (!player.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD || (player.\u02BB\u02B6\u02BD\u02B9\u02C0\u02BE\u02BC\u02B4\u02C1\u02C1\u02BD && !this.isProfileMenu) || this.disableControls || (player.playerProfile != null && player.playerProfile.isRemotePlayer))
+		if (!\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD || (\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.\u02BB\u02B6\u02BD\u02B9\u02C0\u02BE\u02BC\u02B4\u02C1\u02C1\u02BD && !this.isProfileMenu) || this.disableControls || (\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerProfile != null && \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerProfile.isRemotePlayer))
 		{
 			return;
 		}
@@ -747,45 +768,45 @@ public class BaseMenu : MonoBehaviour
 			return;
 		}
 		this.\u02B7\u02C0\u02BB\u02B6\u02B3\u02C0\u02B9\u02BF\u02B5\u02C0\u02B6 = (this.\u02BC\u02B7\u02C0\u02B6\u02C1\u02B9\u02BB\u02B2\u02BD\u02B3\u02B8 = false);
-		if (player.player.GetButtonRepeating(32))
+		if (\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButtonRepeating(32))
 		{
 			this.\u02BB\u02B3\u02BF\u02BC\u02C1\u02BC\u02BC\u02C1\u02C0\u02B5\u02BA();
 		}
-		else if (player.player.GetButtonRepeating(31))
+		else if (\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButtonRepeating(31))
 		{
 			this.\u02BD\u02B9\u02BE\u02BB\u02B9\u02BA\u02B5\u02BC\u02BE\u02C1\u02B2();
 		}
 		bool flag = false;
-		if (player.player.GetButton(0))
+		if (\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButton(0))
 		{
 			flag = true;
 		}
 		bool flag2 = true;
-		if (player.playerProfile != null)
+		if (\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerProfile != null)
 		{
-			flag2 = player.playerProfile.\u02B4\u02B3\u02B9\u02BD\u02BF\u02B8\u02B3\u02B4\u02BB\u02B5\u02B3;
+			flag2 = \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerProfile.\u02B4\u02B3\u02B9\u02BD\u02BF\u02B8\u02B3\u02B4\u02BB\u02B5\u02B3;
 		}
-		if (player.player.GetButtonDown(0))
+		if (\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButtonDown(0))
 		{
-			this.ConfirmPressed();
+			this.\u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3();
 		}
-		else if (player.player.GetButtonTimedPressDown(0, this.longPressTime))
+		else if (\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButtonTimedPressDown(0, this.longPressTime))
 		{
-			this.GreenLongPressed();
+			this.\u02B2\u02B2\u02B9\u02B2\u02B8\u02BB\u02B7\u02B6\u02B3\u02C1\u02B5();
 		}
-		else if (player.player.GetButtonTimedPressDown(1, this.longPressTime))
+		else if (\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButtonTimedPressDown(1, this.longPressTime))
 		{
 			this.\u02B8\u02B6\u02BB\u02C0\u02BA\u02B2\u02BC\u02BF\u02BF\u02BC\u02C1();
 		}
-		else if (player.player.GetButtonUp(0))
+		else if (\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButtonUp(0))
 		{
 			this.\u02C1\u02B6\u02BD\u02BC\u02BC\u02B3\u02BF\u02BF\u02C0\u02C1\u02BC();
 		}
-		else if (player.player.GetButtonDown(1))
+		else if (\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButtonDown(1))
 		{
 			this.\u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8();
 		}
-		else if (player.player.GetButtonDown(2))
+		else if (\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButtonDown(2))
 		{
 			if (flag2)
 			{
@@ -796,7 +817,7 @@ public class BaseMenu : MonoBehaviour
 				this.\u02BA\u02BC\u02C1\u02BE\u02B6\u02B4\u02B9\u02B2\u02B3\u02BD\u02B4();
 			}
 		}
-		else if (player.player.GetButtonUp(2))
+		else if (\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButtonUp(2))
 		{
 			if (flag2)
 			{
@@ -807,11 +828,11 @@ public class BaseMenu : MonoBehaviour
 				this.\u02BF\u02BB\u02BC\u02BC\u02B8\u02C1\u02B9\u02BC\u02B6\u02BA\u02B6();
 			}
 		}
-		else if (!flag2 && player.player.GetButtonTimedPressDown(2, this.longPressTime))
+		else if (!flag2 && \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButtonTimedPressDown(2, this.longPressTime))
 		{
 			this.\u02BA\u02BB\u02B7\u02B6\u02B2\u02B2\u02B8\u02BB\u02B2\u02BB\u02B7();
 		}
-		else if (player.player.GetButtonDown(3))
+		else if (\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButtonDown(3))
 		{
 			if (flag2)
 			{
@@ -822,7 +843,7 @@ public class BaseMenu : MonoBehaviour
 				this.\u02C0\u02BD\u02BD\u02B4\u02B5\u02B4\u02B6\u02B8\u02BD\u02B8\u02BB();
 			}
 		}
-		else if (player.player.GetButtonUp(3))
+		else if (\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButtonUp(3))
 		{
 			if (flag2)
 			{
@@ -833,49 +854,49 @@ public class BaseMenu : MonoBehaviour
 				this.\u02B8\u02BF\u02B4\u02B2\u02BE\u02B5\u02BC\u02B2\u02B5\u02BD\u02B8();
 			}
 		}
-		else if (!flag2 && player.player.GetButtonTimedPressDown(3, this.longPressTime))
+		else if (!flag2 && \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButtonTimedPressDown(3, this.longPressTime))
 		{
 			this.\u02B5\u02BF\u02B2\u02B4\u02BB\u02B5\u02B9\u02B4\u02BC\u02BB\u02C1();
 		}
-		else if (player.player.GetButtonDown(4))
+		else if (\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButtonDown(4))
 		{
 			this.\u02BA\u02B4\u02BC\u02B6\u02BC\u02B7\u02BD\u02B3\u02BA\u02BE\u02C0();
 		}
-		else if (player.player.GetButtonUp(4))
+		else if (\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButtonUp(4))
 		{
 			this.\u02B6\u02BE\u02B5\u02C1\u02B6\u02B6\u02B5\u02B3\u02BE\u02B4\u02B7();
 		}
-		else if (player.player.GetButtonTimedPressDown(4, this.longPressTime))
+		else if (\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButtonTimedPressDown(4, this.longPressTime))
 		{
 			this.\u02BA\u02C0\u02C1\u02B2\u02B2\u02B9\u02B2\u02BF\u02B8\u02BE\u02BC();
 		}
-		else if (player.player.GetButtonDown(6))
+		else if (\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButtonDown(6))
 		{
 			this.\u02BC\u02B7\u02BF\u02BD\u02B4\u02BE\u02C0\u02B4\u02BE\u02B7\u02B9();
 		}
-		else if (player.player.GetButtonDown(16))
+		else if (\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButtonDown(16))
 		{
 			this.\u02B7\u02B8\u02B5\u02B5\u02BF\u02C0\u02BA\u02BA\u02B3\u02BE\u02C0();
 		}
-		if (flag || !player.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
+		if (flag || !\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
 		{
 			return;
 		}
-		if (player.playerProfile != null && player.playerProfile.leftyFlip && player.playerProfile.instrument != Instrument.Drums && player.playerProfile.instrument != Instrument.ProDrums)
+		if (\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerProfile != null && \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerProfile.leftyFlip && \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerProfile.instrument != Instrument.Drums && \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.playerProfile.instrument != Instrument.ProDrums)
 		{
-			if (this.\u02C1\u02B4\u02BE\u02B2\u02BE\u02B4\u02BA\u02B5\u02B5\u02C0\u02C1(player.player, 5))
+			if (this.\u02C1\u02B4\u02BE\u02B2\u02BE\u02B4\u02BA\u02B5\u02B5\u02C0\u02C1(\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer, 5))
 			{
 				this.\u02B7\u02BA\u02C0\u02B8\u02BE\u02BA\u02BD\u02B4\u02BB\u02B3\u02B6();
 			}
-			if (this.\u02C1\u02B4\u02BE\u02B2\u02BE\u02B4\u02BA\u02B5\u02B5\u02C0\u02C1(player.player, 14))
+			if (this.\u02C1\u02B4\u02BE\u02B2\u02BE\u02B4\u02BA\u02B5\u02B5\u02C0\u02C1(\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer, 14))
 			{
 				this.\u02C1\u02B3\u02BC\u02B6\u02BD\u02B6\u02BF\u02B7\u02BB\u02B5\u02BB();
 			}
-			if (player.player.GetButtonUp(5))
+			if (\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButtonUp(5))
 			{
 				this.\u02BF\u02B5\u02BD\u02B6\u02C1\u02BB\u02BD\u02BE\u02B5\u02B2\u02BD();
 			}
-			if (player.player.GetButtonUp(14))
+			if (\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButtonUp(14))
 			{
 				this.\u02B3\u02B3\u02B9\u02BC\u02B7\u02BF\u02BA\u02B5\u02BB\u02BE\u02B8();
 				return;
@@ -883,19 +904,19 @@ public class BaseMenu : MonoBehaviour
 		}
 		else
 		{
-			if (this.\u02C1\u02B4\u02BE\u02B2\u02BE\u02B4\u02BA\u02B5\u02B5\u02C0\u02C1(player.player, 5))
+			if (this.\u02C1\u02B4\u02BE\u02B2\u02BE\u02B4\u02BA\u02B5\u02B5\u02C0\u02C1(\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer, 5))
 			{
 				this.\u02C1\u02B3\u02BC\u02B6\u02BD\u02B6\u02BF\u02B7\u02BB\u02B5\u02BB();
 			}
-			if (this.\u02C1\u02B4\u02BE\u02B2\u02BE\u02B4\u02BA\u02B5\u02B5\u02C0\u02C1(player.player, 14))
+			if (this.\u02C1\u02B4\u02BE\u02B2\u02BE\u02B4\u02BA\u02B5\u02B5\u02C0\u02C1(\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer, 14))
 			{
 				this.\u02B7\u02BA\u02C0\u02B8\u02BE\u02BA\u02BD\u02B4\u02BB\u02B3\u02B6();
 			}
-			if (player.player.GetButtonUp(5))
+			if (\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButtonUp(5))
 			{
 				this.\u02B3\u02B3\u02B9\u02BC\u02B7\u02BF\u02BA\u02B5\u02BB\u02BE\u02B8();
 			}
-			if (player.player.GetButtonUp(14))
+			if (\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButtonUp(14))
 			{
 				this.\u02BF\u02B5\u02BD\u02B6\u02C1\u02BB\u02BD\u02BE\u02B5\u02B2\u02BD();
 			}
@@ -908,9 +929,9 @@ public class BaseMenu : MonoBehaviour
 		this.\u02BA\u02BD\u02B3\u02BC\u02B8\u02BB\u02B8\u02BA\u02B5\u02C0\u02C0();
 	}
 
-	public void \u02B8\u02BE\u02BD\u02BB\u02B2\u02B6\u02B3\u02BB\u02BB\u02C0\u02B8(CHPlayer \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7)
+	public void \u02B8\u02BE\u02BD\u02BB\u02B2\u02B6\u02B3\u02BB\u02BB\u02C0\u02B8(\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7)
 	{
-		this.controllingPlayer = \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7;
+		this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4 = \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7;
 	}
 
 	protected virtual void Start()
@@ -985,16 +1006,16 @@ public class BaseMenu : MonoBehaviour
 		return this.\u02B3\u02BF\u02BB\u02BB\u02B5\u02B7\u02B8\u02BE\u02B7\u02B3\u02B3 == this.menuTopStart;
 	}
 
-	protected virtual bool TestTransitionInputBlock(CHPlayer player)
+	protected virtual bool \u02B4\u02B5\u02BA\u02C0\u02C1\u02B7\u02BD\u02BD\u02B6\u02B7\u02C1(\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7)
 	{
-		if (!player.transitioning)
+		if (!\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.\u02BD\u02B8\u02BD\u02B6\u02B4\u02B6\u02C1\u02B9\u02BD\u02BC\u02B4)
 		{
 			return true;
 		}
 		bool flag = false;
-		foreach (int num in BaseMenu.actionButtons)
+		foreach (int num in BaseMenu.\u02BD\u02B6\u02BA\u02B3\u02B4\u02BB\u02B7\u02B3\u02BA\u02B5\u02B9)
 		{
-			if (player.player.GetButton(num) || player.player.GetButtonUp(num) || player.player.GetButtonDown(num))
+			if (\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButton(num) || \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButtonUp(num) || \u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.rewiredPlayer.GetButtonDown(num))
 			{
 				flag = true;
 			}
@@ -1003,7 +1024,7 @@ public class BaseMenu : MonoBehaviour
 		{
 			return false;
 		}
-		player.transitioning = false;
+		\u02BE\u02B5\u02BB\u02B3\u02B7\u02B4\u02BC\u02B2\u02BB\u02B6\u02B7.\u02BD\u02B8\u02BD\u02B6\u02B4\u02B6\u02C1\u02B9\u02BD\u02BC\u02B4 = false;
 		return true;
 	}
 
@@ -1034,7 +1055,7 @@ public class BaseMenu : MonoBehaviour
 
 	public static bool \u02B2\u02B4\u02B4\u02B2\u02C1\u02B9\u02B4\u02BE\u02BA\u02BD\u02B4;
 
-	protected CHPlayer controllingPlayer;
+	protected \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4;
 
 	protected bool \u02BC\u02B7\u02C0\u02B6\u02C1\u02B9\u02BB\u02B2\u02BD\u02B3\u02B8;
 
@@ -1054,12 +1075,12 @@ public class BaseMenu : MonoBehaviour
 
 	protected bool \u02BD\u02BE\u02C0\u02B6\u02B8\u02B5\u02B2\u02B7\u02BD\u02B7\u02BF;
 
-	public static bool HAVEFUN;
+	public static bool \u02B6\u02B7\u02BD\u02BE\u02BB\u02BE\u02C0\u02C1\u02B7\u02B4\u02C0;
 
 	protected string \u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
 
 	[HideInInspector]
-	public bool isActive;
+	public bool \u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8;
 
 	protected int \u02BB\u02B3\u02C0\u02BC\u02BF\u02BD\u02B9\u02B2\u02BC\u02BE\u02B7;
 
@@ -1149,7 +1170,7 @@ public class BaseMenu : MonoBehaviour
 
 	protected ScrollRect \u02BD\u02B5\u02BC\u02B8\u02B2\u02C0\u02B7\u02B8\u02B9\u02C0\u02B9;
 
-	protected CHPlayer \u02BE\u02BE\u02BA\u02B8\u02B2\u02B4\u02BF\u02B3\u02B3\u02BE\u02B8;
+	protected \u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 \u02BE\u02BE\u02BA\u02B8\u02B2\u02B4\u02BF\u02B3\u02B3\u02BE\u02B8;
 
 	private float \u02C1\u02B6\u02B6\u02BB\u02B4\u02C1\u02B5\u02BF\u02B2\u02BE\u02B7;
 
@@ -1159,5 +1180,5 @@ public class BaseMenu : MonoBehaviour
 
 	private float \u02BA\u02C0\u02B4\u02B5\u02BA\u02BE\u02BB\u02BD\u02B9\u02B6\u02B2 = 0.3f;
 
-	private static int[] actionButtons = new int[] { 0, 1, 2, 3, 4 };
+	private static int[] \u02BD\u02B6\u02BA\u02B3\u02B4\u02BB\u02B7\u02B3\u02BA\u02B5\u02B9 = new int[] { 0, 1, 2, 3, 4 };
 }
