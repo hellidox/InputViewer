@@ -18,23 +18,23 @@ public class CalibrationMenu : BaseSettingMenu
 	public virtual void \u02C0\u02BE\u02B9\u02B5\u02B6\u02C1\u02B5\u02C0\u02BE\u02B8\u02C1()
 	{
 		GlobalVariables u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7;
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null)
+		if (this.changedSetting == null)
 		{
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
-			string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-			if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "song"))
+			this.changedSetting = base.currentSelectionString;
+			string changedSetting = this.changedSetting;
+			if (!(changedSetting == "song"))
 			{
-				if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Unity Game Services disconnected"))
+				if (!(changedSetting == "Unity Game Services disconnected"))
 				{
-					if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "")
+					if (changedSetting == "")
 					{
 						int currentValue = SettingsController.audioOffset.CurrentValue;
 						SettingsController.audioOffset.CurrentValue = BassAudioManager.Instance.\u02C0\u02B6\u02B9\u02BF\u02B3\u02B3\u02BF\u02B6\u02BD\u02B3\u02BF();
-						this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+						this.changedSetting = null;
 						this.pauseMenu.\u02BE\u02BC\u02BA\u02B5\u02BC\u02C1\u02B2\u02B8\u02C1\u02B7\u02B8 = currentValue == SettingsController.audioOffset.CurrentValue && this.pauseMenu.\u02BE\u02BC\u02BA\u02B5\u02BC\u02C1\u02B2\u02B8\u02C1\u02B7\u02B8;
 						return;
 					}
-					if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Returned missing glyphs are incorrect.")
+					if (changedSetting == "Returned missing glyphs are incorrect.")
 					{
 						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.show_hit_window;
 					}
@@ -68,7 +68,7 @@ public class CalibrationMenu : BaseSettingMenu
 			}
 		}
 		this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = null;
-		this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+		this.changedSetting = null;
 		this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 	}
 
@@ -91,12 +91,12 @@ public class CalibrationMenu : BaseSettingMenu
 	protected virtual GameSetting \u02BF\u02BF\u02BF\u02BB\u02C1\u02BF\u02B8\u02BC\u02BB\u02C1\u02C0(string \u02B6\u02BF\u02C1\u02C0\u02BA\u02B5\u02B3\u02B6\u02B8\u02B9\u02C1)
 	{
 		GameSetting gameSetting = null;
-		string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-		if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == ""))
+		string changedSetting = this.changedSetting;
+		if (!(changedSetting == ""))
 		{
-			if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == " + "))
+			if (!(changedSetting == " + "))
 			{
-				if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Overhits")
+				if (changedSetting == "Overhits")
 				{
 					gameSetting = SettingsController.show_hit_window;
 				}
@@ -116,23 +116,23 @@ public class CalibrationMenu : BaseSettingMenu
 	public override void \u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3()
 	{
 		GlobalVariables u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7;
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null)
+		if (this.changedSetting == null)
 		{
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
-			string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-			if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Video Offset"))
+			this.changedSetting = base.currentSelectionString;
+			string changedSetting = this.changedSetting;
+			if (!(changedSetting == "Video Offset"))
 			{
-				if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Audio Offset"))
+				if (!(changedSetting == "Audio Offset"))
 				{
-					if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Get Hardware Latency")
+					if (changedSetting == "Get Hardware Latency")
 					{
 						int currentValue = SettingsController.audioOffset.CurrentValue;
 						SettingsController.audioOffset.CurrentValue = BassAudioManager.Instance.\u02C0\u02B6\u02B9\u02BF\u02B3\u02B3\u02BF\u02B6\u02BD\u02B3\u02BF();
-						this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+						this.changedSetting = null;
 						this.pauseMenu.\u02BE\u02BC\u02BA\u02B5\u02BC\u02C1\u02B2\u02B8\u02C1\u02B7\u02B8 = currentValue != SettingsController.audioOffset.CurrentValue || this.pauseMenu.\u02BE\u02BC\u02BA\u02B5\u02BC\u02C1\u02B2\u02B8\u02C1\u02B7\u02B8;
 						return;
 					}
-					if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Show Hit Window")
+					if (changedSetting == "Show Hit Window")
 					{
 						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.show_hit_window;
 					}
@@ -166,19 +166,19 @@ public class CalibrationMenu : BaseSettingMenu
 			}
 		}
 		this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = null;
-		this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+		this.changedSetting = null;
 		this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 	}
 
 	protected virtual GameSetting \u02BE\u02C1\u02B4\u02B8\u02B4\u02BC\u02C0\u02C1\u02BC\u02B2\u02BE(string \u02B6\u02BF\u02C1\u02C0\u02BA\u02B5\u02B3\u02B6\u02B8\u02B9\u02C1)
 	{
 		GameSetting gameSetting = null;
-		string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-		if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "sub_playlist"))
+		string changedSetting = this.changedSetting;
+		if (!(changedSetting == "sub_playlist"))
 		{
-			if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Warning: These folders contain video backgrounds that wont work on all game platforms, which may be deprecated in the future."))
+			if (!(changedSetting == "Warning: These folders contain video backgrounds that wont work on all game platforms, which may be deprecated in the future."))
 			{
-				if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "album_track")
+				if (changedSetting == "album_track")
 				{
 					gameSetting = SettingsController.show_hit_window;
 				}
@@ -198,10 +198,10 @@ public class CalibrationMenu : BaseSettingMenu
 	protected virtual void \u02B3\u02B7\u02C1\u02BD\u02B3\u02B5\u02B4\u02B6\u02BF\u02BA\u02BB()
 	{
 		string text = "<b>{0}</b>/<b>{1}</b>";
-		string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-		if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Menu Music") && !(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Show Lyrics"))
+		string changedSetting = this.changedSetting;
+		if (!(changedSetting == "Menu Music") && !(changedSetting == "Show Lyrics"))
 		{
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "A track event occuring at offset {0} is out of order. It comes after the track event at {1} which is illegal.")
+			if (changedSetting == "A track event occuring at offset {0} is out of order. It comes after the track event at {1} which is illegal.")
 			{
 				text = Helper.\u02BF\u02B8\u02BD\u02BA\u02BC\u02B4\u02BE\u02B6\u02BE\u02C1\u02B2(this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC.GetBoolValue);
 			}
@@ -216,10 +216,10 @@ public class CalibrationMenu : BaseSettingMenu
 	protected override void \u02BA\u02BB\u02B5\u02B6\u02B3\u02BD\u02BA\u02BC\u02B2\u02BB\u02B5()
 	{
 		string text = "";
-		string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-		if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Video Offset") && !(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Audio Offset"))
+		string changedSetting = this.changedSetting;
+		if (!(changedSetting == "Video Offset") && !(changedSetting == "Audio Offset"))
 		{
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Show Hit Window")
+			if (changedSetting == "Show Hit Window")
 			{
 				text = Helper.\u02BF\u02B8\u02BD\u02BA\u02BC\u02B4\u02BE\u02B6\u02BE\u02C1\u02B2(this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC.GetBoolValue);
 			}
@@ -238,12 +238,12 @@ public class CalibrationMenu : BaseSettingMenu
 	protected virtual GameSetting \u02C1\u02B9\u02B6\u02B4\u02B6\u02BF\u02B6\u02B5\u02BD\u02B7\u02B4(string \u02B6\u02BF\u02C1\u02C0\u02BA\u02B5\u02B3\u02B6\u02B8\u02B9\u02C1)
 	{
 		GameSetting gameSetting = null;
-		string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-		if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Join as Spectator"))
+		string changedSetting = this.changedSetting;
+		if (!(changedSetting == "Join as Spectator"))
 		{
-			if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "FSCache Scan"))
+			if (!(changedSetting == "FSCache Scan"))
 			{
-				if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "GameColors_")
+				if (changedSetting == "GameColors_")
 				{
 					gameSetting = SettingsController.show_hit_window;
 				}
@@ -263,12 +263,12 @@ public class CalibrationMenu : BaseSettingMenu
 	protected override GameSetting GetSettingFromString(string \u02B6\u02BF\u02C1\u02C0\u02BA\u02B5\u02B3\u02B6\u02B8\u02B9\u02C1)
 	{
 		GameSetting gameSetting = null;
-		string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-		if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Video Offset"))
+		string changedSetting = this.changedSetting;
+		if (!(changedSetting == "Video Offset"))
 		{
-			if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Audio Offset"))
+			if (!(changedSetting == "Audio Offset"))
 			{
-				if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Show Hit Window")
+				if (changedSetting == "Show Hit Window")
 				{
 					gameSetting = SettingsController.show_hit_window;
 				}
@@ -345,23 +345,23 @@ public class CalibrationMenu : BaseSettingMenu
 	public virtual void \u02BD\u02B3\u02B9\u02BD\u02B3\u02BE\u02B4\u02B9\u02BB\u02BE\u02B9()
 	{
 		GlobalVariables u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7;
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null)
+		if (this.changedSetting == null)
 		{
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
-			string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-			if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "{0:N0}"))
+			this.changedSetting = base.currentSelectionString;
+			string changedSetting = this.changedSetting;
+			if (!(changedSetting == "{0:N0}"))
 			{
-				if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "\\"))
+				if (!(changedSetting == "\\"))
 				{
-					if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "No")
+					if (changedSetting == "No")
 					{
 						int currentValue = SettingsController.audioOffset.CurrentValue;
 						SettingsController.audioOffset.CurrentValue = BassAudioManager.Instance.\u02C1\u02B4\u02C1\u02BD\u02BB\u02B7\u02C1\u02B8\u02C1\u02C1\u02B5();
-						this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+						this.changedSetting = null;
 						this.pauseMenu.\u02BE\u02BC\u02BA\u02B5\u02BC\u02C1\u02B2\u02B8\u02C1\u02B7\u02B8 = currentValue != SettingsController.audioOffset.CurrentValue || this.pauseMenu.\u02BE\u02BC\u02BA\u02B5\u02BC\u02C1\u02B2\u02B8\u02C1\u02B7\u02B8;
 						return;
 					}
-					if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == " ")
+					if (changedSetting == " ")
 					{
 						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.show_hit_window;
 					}
@@ -395,7 +395,7 @@ public class CalibrationMenu : BaseSettingMenu
 			}
 		}
 		this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = null;
-		this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+		this.changedSetting = null;
 		this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 	}
 

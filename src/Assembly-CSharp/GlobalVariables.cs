@@ -370,6 +370,31 @@ public class GlobalVariables : MonoBehaviour
 
 	private void Update()
 	{
+		this.screentrack += Time.unscaledDeltaTime;
+		if (this.screentrack > 0.033333335f)
+		{
+			this.screentrack -= 0.033333335f;
+			Vector3 vector = new Vector3((float)Screen.width, (float)Screen.height, (float)Screen.currentResolution.refreshRate);
+			if (vector != this.screendetails)
+			{
+				List<Action> toRemove = new List<Action>();
+				foreach (Action action in GlobalHelper.OnResolutionChange)
+				{
+					try
+					{
+						action();
+					}
+					catch (Exception ex)
+					{
+						Debug.LogException(ex);
+						Debug.Log("Removed item from list");
+						toRemove.Add(action);
+					}
+				}
+				GlobalHelper.OnResolutionChange.RemoveAll((Action x) => toRemove.Contains(x));
+			}
+			this.screendetails = vector;
+		}
 		if (GlobalVariables.ignoreFrameReset)
 		{
 			GlobalVariables.framereset += Time.unscaledDeltaTime;
@@ -884,6 +909,14 @@ public class GlobalVariables : MonoBehaviour
 		this.\u02C0\u02B5\u02B3\u02B7\u02B9\u02BC\u02B4\u02C0\u02B7\u02B2\u02BA(text2);
 	}
 
+	public GlobalVariables()
+	{
+		this.\u02B3\u02B4\u02B5\u02B9\u02B8\u02BC\u02BC\u02B8\u02C0\u02B5\u02B9 = new List<string>();
+		this.\u02B8\u02BE\u02BA\u02B9\u02C0\u02BD\u02B2\u02B9\u02C1\u02C0\u02B8 = 22f;
+		this.\u02B7\u02BC\u02C0\u02B5\u02BF\u02B5\u02B6\u02B6\u02BB\u02B2\u02BA = new List<string>();
+		this.\u02B6\u02BD\u02BD\u02BC\u02C1\u02BE\u02B4\u02B9\u02BD\u02BF\u02BE = new List<string>();
+	}
+
 	private void \u02B5\u02B3\u02B3\u02BB\u02BA\u02BB\u02C0\u02BE\u02B2\u02B5\u02B9()
 	{
 		this.\u02BC\u02C0\u02B5\u02BD\u02B2\u02BC\u02BA\u02BC\u02B9\u02B6\u02B6 = LanguageManager.instance.LocalizationResourceManager.\u02B6\u02BB\u02BC\u02BD\u02C1\u02B3\u02B9\u02B3\u02B3\u02BC\u02B3.Keys.ToArray<string>();
@@ -1006,7 +1039,7 @@ public class GlobalVariables : MonoBehaviour
 
 	public string[] \u02BC\u02C0\u02B5\u02BD\u02B2\u02BC\u02BA\u02BC\u02B9\u02B6\u02B6;
 
-	public List<string> \u02B3\u02B4\u02B5\u02B9\u02B8\u02BC\u02BC\u02B8\u02C0\u02B5\u02B9 = new List<string>();
+	public List<string> \u02B3\u02B4\u02B5\u02B9\u02B8\u02BC\u02BC\u02B8\u02C0\u02B5\u02B9;
 
 	public string[] \u02C0\u02C0\u02B6\u02BD\u02BE\u02C1\u02B3\u02BF\u02BE\u02B3\u02C1;
 
@@ -1030,7 +1063,7 @@ public class GlobalVariables : MonoBehaviour
 
 	public bool \u02BC\u02BC\u02B5\u02B3\u02BE\u02BD\u02BA\u02B7\u02BF\u02B2\u02BD;
 
-	public float \u02B8\u02BE\u02BA\u02B9\u02C0\u02BD\u02B2\u02B9\u02C1\u02C0\u02B8 = 22f;
+	public float \u02B8\u02BE\u02BA\u02B9\u02C0\u02BD\u02B2\u02B9\u02C1\u02C0\u02B8;
 
 	public bool \u02BE\u02BE\u02C1\u02B4\u02B4\u02B6\u02BA\u02BB\u02C1\u02BE\u02BB;
 
@@ -1056,9 +1089,9 @@ public class GlobalVariables : MonoBehaviour
 
 	public Action \u02B6\u02B3\u02B7\u02B5\u02BB\u02BD\u02B3\u02B9\u02BD\u02B2\u02B7;
 
-	private List<string> \u02B7\u02BC\u02C0\u02B5\u02BF\u02B5\u02B6\u02B6\u02BB\u02B2\u02BA = new List<string>();
+	private List<string> \u02B7\u02BC\u02C0\u02B5\u02BF\u02B5\u02B6\u02B6\u02BB\u02B2\u02BA;
 
-	private List<string> \u02B6\u02BD\u02BD\u02BC\u02C1\u02BE\u02B4\u02B9\u02BD\u02BF\u02BE = new List<string>();
+	private List<string> \u02B6\u02BD\u02BD\u02BC\u02C1\u02BE\u02B4\u02B9\u02BD\u02BF\u02BE;
 
 	public static bool FCmode;
 
@@ -1093,6 +1126,10 @@ public class GlobalVariables : MonoBehaviour
 	public static bool overstrummed;
 
 	public static bool ignoreFrameReset;
+
+	private Vector3 screendetails;
+
+	private float screentrack;
 
 	[Serializable]
 	private class InternalHighwayJsonData

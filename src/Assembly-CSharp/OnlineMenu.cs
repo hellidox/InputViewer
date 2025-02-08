@@ -67,7 +67,7 @@ public class OnlineMenu : BaseMenu
 		if (CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BA\u02B8\u02B6\u02BB\u02B5\u02B2\u02B8\u02B6\u02BB\u02BB)
 		{
 			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02BC\u02B3\u02BB\u02B2\u02B6\u02BA\u02BB\u02BA\u02BC\u02BD = false;
-			this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("Are you sure you want to disconnect?", "Yes", "No", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02BC\u02B5\u02B9\u02BD\u02B4\u02B7\u02BE\u02C1\u02BB\u02BB\u02B9), null, null);
+			this.confirmMenu.Enable("Are you sure you want to disconnect?", "Yes", "No", new ConfirmationMenu.CallFunc(this.\u02BC\u02B5\u02B9\u02BD\u02B4\u02B7\u02BE\u02C1\u02BB\u02BB\u02B9), null, null);
 			return;
 		}
 		if (CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B9\u02C1\u02B4\u02B3\u02B2\u02B8\u02C0\u02B5\u02B3\u02B5\u02B4)
@@ -123,7 +123,7 @@ public class OnlineMenu : BaseMenu
 		if (CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02BB\u02B7\u02B6\u02B9\u02B5\u02BC\u02B2\u02BB\u02B2\u02BD())
 		{
 			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02BC\u02B3\u02BB\u02B2\u02B6\u02BA\u02BB\u02BA\u02BC\u02BD = false;
-			this.confirmMenu.\u02B5\u02B8\u02C0\u02B7\u02BF\u02B7\u02B5\u02BD\u02C1\u02B8\u02B7("Combo", "Single", "Video Start Time", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02BC\u02B5\u02B9\u02BD\u02B4\u02B7\u02BE\u02C1\u02BB\u02BB\u02B9), null, null);
+			this.confirmMenu.\u02B5\u02B8\u02C0\u02B7\u02BF\u02B7\u02B5\u02BD\u02C1\u02B8\u02B7("Combo", "Single", "Video Start Time", new ConfirmationMenu.CallFunc(this.\u02BC\u02B5\u02B9\u02BD\u02B4\u02B7\u02BE\u02C1\u02BB\u02BB\u02B9), null, null);
 			return;
 		}
 		if (CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B9\u02C1\u02B4\u02B3\u02B2\u02B8\u02C0\u02B5\u02B3\u02B5\u02B4)
@@ -207,7 +207,7 @@ public class OnlineMenu : BaseMenu
 
 	public override void \u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3()
 	{
-		string text = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
+		string text = base.currentSelectionString;
 		uint num = PrivateImplementationDetails.ComputeStringHash(text);
 		if (num <= 2664808298U)
 		{
@@ -285,7 +285,7 @@ public class OnlineMenu : BaseMenu
 				return;
 			}
 			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02BC\u02B3\u02BB\u02B2\u02B6\u02BA\u02BB\u02BA\u02BC\u02BD = true;
-			this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("Are you sure you want to disconnect?", "Yes", "No", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02BC\u02B5\u02B9\u02BD\u02B4\u02B7\u02BE\u02C1\u02BB\u02BB\u02B9), null, null);
+			this.confirmMenu.Enable("Are you sure you want to disconnect?", "Yes", "No", new ConfirmationMenu.CallFunc(this.\u02BC\u02B5\u02B9\u02BD\u02B4\u02B7\u02BE\u02C1\u02BB\u02BB\u02B9), null, null);
 			return;
 		}
 		else
@@ -441,7 +441,7 @@ public class OnlineMenu : BaseMenu
 		if (CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02BB\u02B7\u02B6\u02B9\u02B5\u02BC\u02B2\u02BB\u02B2\u02BD())
 		{
 			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02BC\u02B3\u02BB\u02B2\u02B6\u02BA\u02BB\u02BA\u02BC\u02BD = true;
-			this.confirmMenu.\u02B7\u02B3\u02BC\u02BE\u02BF\u02B7\u02B4\u02C0\u02B9\u02BC\u02BF("Stacktrace: ", "song", "Are you sure you want to restart?", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02BC\u02B5\u02B9\u02BD\u02B4\u02B7\u02BE\u02C1\u02BB\u02BB\u02B9), null, null);
+			this.confirmMenu.\u02B7\u02B3\u02BC\u02BE\u02BF\u02B7\u02B4\u02C0\u02B9\u02BC\u02BF("Stacktrace: ", "song", "Are you sure you want to restart?", new ConfirmationMenu.CallFunc(this.\u02BC\u02B5\u02B9\u02BD\u02B4\u02B7\u02BE\u02C1\u02BB\u02BB\u02B9), null, null);
 			return;
 		}
 		if (CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B9\u02C1\u02B4\u02B3\u02B2\u02B8\u02C0\u02B5\u02B3\u02B5\u02B4)

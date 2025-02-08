@@ -12,6 +12,15 @@
   "items": [
     {
       "show": true,
+      "date": 1739043000,
+      "author": "Thingerthing",
+      "description": "<size=164%>the plate tourny 2025</size>",
+      "datatype": "link",
+      "data": "https://discord.gg/uGZkr2y36J"
+    },
+    
+    {
+      "show": true,
       "date": 1736267491,
       "author": "The Pars",
       "description": "stream golfcore",

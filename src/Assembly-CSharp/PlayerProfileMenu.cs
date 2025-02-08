@@ -81,19 +81,19 @@ public class PlayerProfileMenu : BaseMenu
 			this.\u02BF\u02BD\u02BA\u02B9\u02BB\u02BB\u02BD\u02BF\u02BC\u02BF\u02B4(false);
 			return;
 		}
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != null)
+		if (this.changedSetting != null)
 		{
 			this.\u02B8\u02B3\u02B4\u02B9\u02BC\u02C1\u02B6\u02B7\u02B4\u02B9\u02B8(false);
 			this.menuStrings = (this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4.playerProfile.IsAnyGuitarController ? this.guitarOptions : this.drumsOptions);
 			this.\u02BA\u02BD\u02B3\u02BC\u02B8\u02BB\u02B8\u02BA\u02B5\u02C0\u02C0();
-			base.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3);
+			base.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(this.changedSetting);
 			this.instIcons.SetActive(false);
 			if (this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4.playerProfile.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA == this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC && MIDIInputManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 != null)
 			{
 				MIDIInputManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B3\u02B2\u02BE\u02BF\u02BB\u02C0\u02BE\u02BD\u02B9\u02BC\u02BB(this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4, this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC.CurrentValue);
 			}
 			this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = null;
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+			this.changedSetting = null;
 			return;
 		}
 		if (this.\u02B5\u02B7\u02B5\u02B6\u02B3\u02B4\u02B7\u02BB\u02BE\u02B6\u02B5)
@@ -257,12 +257,12 @@ public class PlayerProfileMenu : BaseMenu
 			}
 			else
 			{
-				string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-				if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Choose Instrument"))
+				string changedSetting = this.changedSetting;
+				if (!(changedSetting == "Choose Instrument"))
 				{
-					if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == ""))
+					if (!(changedSetting == ""))
 					{
-						if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "All Strums")
+						if (changedSetting == "All Strums")
 						{
 							text = ((num == 0) ? LanguageManager.\u02BA\u02B9\u02C1\u02B9\u02B2\u02BD\u02B2\u02BC\u02B7\u02BA\u02B8().GetString("6 Fret Lead Guitar") : ((num == 1) ? LanguageManager.instance.\u02BB\u02B9\u02BB\u02B8\u02B3\u02B2\u02B5\u02B6\u02B4\u02B2\u02B4("name") : GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE.\u02B8\u02B7\u02B3\u02BA\u02BB\u02BC\u02B3\u02B9\u02BF\u02BF\u02BD[num - 8]));
 							this.optionChecks[i].enabled = i == num2;
@@ -313,7 +313,7 @@ public class PlayerProfileMenu : BaseMenu
 			this.backgroundObjects[i].color = this.highlightColor;
 			i += 0;
 		}
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Alternate Tap Texture")
+		if (this.changedSetting == "Alternate Tap Texture")
 		{
 			this.\u02BB\u02B5\u02BA\u02BE\u02BD\u02B8\u02B9\u02B9\u02C1\u02B8\u02BB(base.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC - 0);
 		}
@@ -358,16 +358,16 @@ public class PlayerProfileMenu : BaseMenu
 		}
 		else
 		{
-			string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-			if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Color Profile"))
+			string changedSetting = this.changedSetting;
+			if (!(changedSetting == "Color Profile"))
 			{
-				if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Highway")
+				if (changedSetting == "Highway")
 				{
 					string text = ((num == -1) ? "Random" : GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B3\u02B9\u02BC\u02B7\u02BA\u02B9\u02BA\u02B2\u02B4\u02B7\u02B3[num].name);
 					this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4.playerProfile.highwayName.CurrentValue = text;
 					return;
 				}
-				if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Controller"))
+				if (!(changedSetting == "Controller"))
 				{
 					return;
 				}
@@ -417,7 +417,7 @@ public class PlayerProfileMenu : BaseMenu
 			return;
 		}
 		base.\u02C1\u02B3\u02BC\u02B6\u02BD\u02B6\u02BF\u02B7\u02BB\u02B5\u02BB();
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != null)
+		if (this.changedSetting != null)
 		{
 			this.\u02B6\u02BE\u02C0\u02BE\u02B3\u02B6\u02C1\u02BD\u02BA\u02C0\u02C1 = true;
 			this.\u02BA\u02BB\u02B5\u02B6\u02B3\u02BD\u02BA\u02BC\u02B2\u02BB\u02B5();
@@ -511,7 +511,7 @@ public class PlayerProfileMenu : BaseMenu
 			return;
 		}
 		base.\u02B7\u02BA\u02C0\u02B8\u02BE\u02BA\u02BD\u02B4\u02BB\u02B3\u02B6();
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != null)
+		if (this.changedSetting != null)
 		{
 			this.\u02B6\u02BE\u02C0\u02BE\u02B3\u02B6\u02C1\u02BD\u02BA\u02C0\u02C1 = true;
 			this.\u02BA\u02BB\u02B5\u02B6\u02B3\u02BD\u02BA\u02BC\u02B2\u02BB\u02B5();
@@ -627,7 +627,7 @@ public class PlayerProfileMenu : BaseMenu
 		this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4.\u02B4\u02B3\u02B5\u02B8\u02C0\u02B4\u02B4\u02BF\u02BA\u02BB\u02BC = null;
 		this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4.\u02BB\u02B6\u02BD\u02B9\u02C0\u02BE\u02BC\u02B4\u02C1\u02C1\u02BD = false;
 		this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4 = null;
-		this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+		this.changedSetting = null;
 		this.menuStrings = new string[1];
 		base.\u02BA\u02B9\u02C1\u02C1\u02BF\u02C1\u02BC\u02BA\u02B3\u02BB\u02C0();
 		if (this.\u02BA\u02BA\u02B8\u02B5\u02BC\u02B6\u02B3\u02BD\u02C0\u02B6\u02BE != null)
@@ -642,7 +642,7 @@ public class PlayerProfileMenu : BaseMenu
 	private void \u02B9\u02C1\u02C1\u02C1\u02B2\u02BE\u02B3\u02BD\u02C0\u02BD\u02B4()
 	{
 		this.menuStrings = this.profileOptions;
-		this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+		this.changedSetting = null;
 		this.\u02BA\u02BD\u02B3\u02BC\u02B8\u02BB\u02B8\u02BA\u02B5\u02C0\u02C0();
 		this.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(0, true);
 	}
@@ -780,7 +780,7 @@ public class PlayerProfileMenu : BaseMenu
 
 	private void \u02BA\u02B5\u02BC\u02C0\u02BE\u02BB\u02B3\u02C0\u02BD\u02BB\u02B8(\u02B9\u02BA\u02BF\u02BB\u02B2\u02B9\u02BB\u02B9\u02B9\u02B5\u02B8 \u02B3\u02B8\u02B9\u02B7\u02B8\u02BD\u02B4\u02C0\u02C0\u02B3\u02B9)
 	{
-		if (base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0 == "Create Profile")
+		if (base.currentSelectionString == "Create Profile")
 		{
 			this.\u02B3\u02BF\u02BB\u02BB\u02B5\u02B7\u02B8\u02BE\u02B7\u02B3\u02B3 = (this.\u02BB\u02B3\u02C0\u02BC\u02BF\u02BD\u02B9\u02B2\u02BC\u02BE\u02B7 = 0);
 			this.\u02B9\u02BF\u02BF\u02BE\u02B5\u02B2\u02B5\u02B5\u02B3\u02B8\u02C0(false);
@@ -788,7 +788,7 @@ public class PlayerProfileMenu : BaseMenu
 		}
 		if (\u02B3\u02B8\u02B9\u02B7\u02B8\u02BD\u02B4\u02C0\u02C0\u02B3\u02B9 == null)
 		{
-			if (base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0 == "Guest")
+			if (base.currentSelectionString == "Guest")
 			{
 				this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4.playerProfile = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02B7\u02BD\u02B7\u02B7\u02BD\u02B6\u02B4\u02BA\u02B2\u02BA.\u02B4\u02C0\u02B6\u02B9\u02BE\u02BE\u02C1\u02B2\u02B6\u02B4\u02B6(true, false);
 				this.\u02B2\u02B8\u02B6\u02BA\u02B9\u02B2\u02B6\u02BA\u02B3\u02B2\u02BA();
@@ -895,12 +895,12 @@ public class PlayerProfileMenu : BaseMenu
 			base.\u02B7\u02B6\u02BC\u02BC\u02B3\u02BA\u02BE\u02C0\u02BF\u02B9\u02C1();
 			return;
 		}
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null)
+		if (this.changedSetting == null)
 		{
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
+			this.changedSetting = base.currentSelectionString;
 			\u02B9\u02BA\u02BF\u02BB\u02B2\u02B9\u02BB\u02B9\u02B9\u02B5\u02B8 playerProfile = this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4.playerProfile;
 			this.\u02B8\u02BE\u02B9\u02B7\u02B8\u02B9\u02B5\u02BA\u02BF\u02C1\u02BD = PlayerProfileMenu.\u02B2\u02B9\u02C1\u02B6\u02BD\u02BD\u02B4\u02BF\u02B7\u02B6\u02B5.None;
-			string text = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
+			string text = base.currentSelectionString;
 			uint num = PrivateImplementationDetails.ComputeStringHash(text);
 			if (num <= 2503720658U)
 			{
@@ -922,7 +922,7 @@ public class PlayerProfileMenu : BaseMenu
 						else if (text == "Drop Out")
 						{
 							this.\u02BF\u02BD\u02BA\u02B9\u02BB\u02BB\u02BD\u02BF\u02BC\u02BF\u02B4(false);
-							this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+							this.changedSetting = null;
 							return;
 						}
 					}
@@ -965,7 +965,7 @@ public class PlayerProfileMenu : BaseMenu
 								if (text == "MIDI Settings")
 								{
 									this.\u02B5\u02C1\u02BD\u02BE\u02B7\u02BF\u02C0\u02B2\u02BC\u02B5\u02BE();
-									this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+									this.changedSetting = null;
 									return;
 								}
 							}
@@ -1116,7 +1116,7 @@ public class PlayerProfileMenu : BaseMenu
 					this.\u02BD\u02C1\u02BC\u02BE\u02B4\u02BA\u02B4\u02BC\u02BB\u02B4\u02BF.CrossFadeColor(this.\u02BF\u02B7\u02BB\u02BB\u02BF\u02B9\u02B9\u02BF\u02C1\u02B2\u02BC, 1f, true, false);
 					this.\u02C1\u02BB\u02B5\u02BE\u02B6\u02B8\u02C1\u02C0\u02B4\u02B9\u02BB.color = Color.white;
 					this.menuStrings = new string[] { "Yes", "No" };
-					this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+					this.changedSetting = null;
 					this.\u02BA\u02BD\u02B3\u02BC\u02B8\u02BB\u02B8\u02BA\u02B5\u02C0\u02C0();
 					base.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0("No");
 					return;
@@ -1135,11 +1135,11 @@ public class PlayerProfileMenu : BaseMenu
 					this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC.CurrentValue = (this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC ? 0 : 1);
 					this.\u02B6\u02BE\u02C0\u02BE\u02B3\u02B6\u02C1\u02BD\u02BA\u02C0\u02C1 = true;
 					this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
-					if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Bot")
+					if (this.changedSetting == "Bot")
 					{
 						this.\u02C1\u02B4\u02BD\u02BD\u02BA\u02BD\u02B5\u02BE\u02B7\u02B8\u02C0(false);
 					}
-					this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+					this.changedSetting = null;
 					return;
 				}
 			}
@@ -1163,14 +1163,14 @@ public class PlayerProfileMenu : BaseMenu
 		this.\u02BC\u02BC\u02BF\u02BB\u02B4\u02C1\u02BC\u02B2\u02B3\u02B2\u02BD();
 		this.menuStrings = (this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4.playerProfile.IsAnyGuitarController ? this.guitarOptions : this.drumsOptions);
 		this.\u02BA\u02BD\u02B3\u02BC\u02B8\u02BB\u02B8\u02BA\u02B5\u02C0\u02C0();
-		base.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3);
+		base.\u02B5\u02B6\u02B8\u02BC\u02BF\u02BF\u02BC\u02B5\u02C0\u02BB\u02C0(this.changedSetting);
 		this.instIcons.SetActive(false);
 		if (this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4.playerProfile.\u02BA\u02C0\u02BC\u02BB\u02B7\u02B3\u02B8\u02BA\u02B2\u02B9\u02BA == this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC && MIDIInputManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 != null)
 		{
 			MIDIInputManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B3\u02B2\u02BE\u02BF\u02BB\u02C0\u02BE\u02BD\u02B9\u02BC\u02BB(this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4, this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC.CurrentValue);
 		}
 		this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = null;
-		this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+		this.changedSetting = null;
 		this.\u02B6\u02BE\u02C0\u02BE\u02B3\u02B6\u02C1\u02BD\u02BA\u02C0\u02C1 = true;
 		if (this.\u02BA\u02BD\u02BF\u02B4\u02BB\u02B8\u02B4\u02BB\u02C1\u02B8\u02BA)
 		{
@@ -1323,7 +1323,7 @@ public class PlayerProfileMenu : BaseMenu
 		this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4.\u02B4\u02B3\u02B5\u02B8\u02C0\u02B4\u02B4\u02BF\u02BA\u02BB\u02BC = null;
 		this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4.\u02BB\u02B6\u02BD\u02B9\u02C0\u02BE\u02BC\u02B4\u02C1\u02C1\u02BD = false;
 		this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4 = null;
-		this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+		this.changedSetting = null;
 		this.menuStrings = new string[0];
 		base.\u02BA\u02B9\u02C1\u02C1\u02BF\u02C1\u02BC\u02BA\u02B3\u02BB\u02C0();
 		if (this.\u02BA\u02BA\u02B8\u02B5\u02BC\u02B6\u02B3\u02BD\u02C0\u02B6\u02BE != null)
@@ -1353,7 +1353,7 @@ public class PlayerProfileMenu : BaseMenu
 			return;
 		}
 		base.\u02B7\u02BA\u02C0\u02B8\u02BE\u02BA\u02BD\u02B4\u02BB\u02B3\u02B6();
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != null)
+		if (this.changedSetting != null)
 		{
 			this.\u02B6\u02BE\u02C0\u02BE\u02B3\u02B6\u02C1\u02BD\u02BA\u02C0\u02C1 = true;
 			this.\u02BA\u02BB\u02B5\u02B6\u02B3\u02BD\u02BA\u02BC\u02B2\u02BB\u02B5();
@@ -1419,12 +1419,12 @@ public class PlayerProfileMenu : BaseMenu
 			}
 			else
 			{
-				string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-				if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Highway"))
+				string changedSetting = this.changedSetting;
+				if (!(changedSetting == "Highway"))
 				{
-					if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Controller"))
+					if (!(changedSetting == "Controller"))
 					{
-						if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Color Profile")
+						if (changedSetting == "Color Profile")
 						{
 							text = ((num == 0) ? LanguageManager.instance.GetString("Random") : ((num == 1) ? LanguageManager.instance.GetString("Editor") : GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02BA\u02B2\u02BB\u02BC\u02C0\u02BA\u02B8\u02BE\u02BB\u02BE.\u02B8\u02B7\u02B3\u02BA\u02BB\u02BC\u02B3\u02B9\u02BF\u02BF\u02BD[num - 2]));
 							this.optionChecks[i].enabled = i == num2;
@@ -1475,7 +1475,7 @@ public class PlayerProfileMenu : BaseMenu
 			this.backgroundObjects[i].color = this.highlightColor;
 			i++;
 		}
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Highway")
+		if (this.changedSetting == "Highway")
 		{
 			this.\u02BB\u02B5\u02BA\u02BE\u02BD\u02B8\u02B9\u02B9\u02C1\u02B8\u02BB(base.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC - 1);
 		}
@@ -1597,7 +1597,7 @@ public class PlayerProfileMenu : BaseMenu
 			return;
 		}
 		base.\u02C1\u02B3\u02BC\u02B6\u02BD\u02B6\u02BF\u02B7\u02BB\u02B5\u02BB();
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != null)
+		if (this.changedSetting != null)
 		{
 			this.\u02B6\u02BE\u02C0\u02BE\u02B3\u02B6\u02C1\u02BD\u02BA\u02C0\u02C1 = true;
 			this.\u02BA\u02BB\u02B5\u02B6\u02B3\u02BD\u02BA\u02BC\u02B2\u02BB\u02B5();
@@ -1803,7 +1803,7 @@ public class PlayerProfileMenu : BaseMenu
 		this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4.\u02B4\u02B3\u02B5\u02B8\u02C0\u02B4\u02B4\u02BF\u02BA\u02BB\u02BC = null;
 		this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4.\u02BB\u02B6\u02BD\u02B9\u02C0\u02BE\u02BC\u02B4\u02C1\u02C1\u02BD = false;
 		this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4 = null;
-		this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+		this.changedSetting = null;
 		this.menuStrings = new string[0];
 		base.\u02BA\u02B9\u02C1\u02C1\u02BF\u02C1\u02BC\u02BA\u02B3\u02BB\u02C0();
 		if (this.\u02BA\u02BA\u02B8\u02B5\u02BC\u02B6\u02B3\u02BD\u02C0\u02B6\u02BE != null)

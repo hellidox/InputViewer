@@ -51,7 +51,7 @@ public class DrumSongOptionsMenu : BaseMenu
 	{
 		base.\u02B7\u02B6\u02BC\u02BC\u02B3\u02BA\u02BE\u02C0\u02BF\u02B9\u02C1();
 		bool flag = false;
-		string text = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
+		string text = base.currentSelectionString;
 		uint num = PrivateImplementationDetails.ComputeStringHash(text);
 		if (num <= 3U)
 		{
@@ -198,7 +198,7 @@ public class DrumSongOptionsMenu : BaseMenu
 	{
 		base.\u02B7\u02B6\u02BC\u02BC\u02B3\u02BA\u02BE\u02C0\u02BF\u02B9\u02C1();
 		bool flag = false;
-		string text = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
+		string text = base.currentSelectionString;
 		uint num = PrivateImplementationDetails.ComputeStringHash(text);
 		if (num <= 4294967235U)
 		{
@@ -375,7 +375,7 @@ public class DrumSongOptionsMenu : BaseMenu
 	{
 		base.\u02B7\u02B6\u02BC\u02BC\u02B3\u02BA\u02BE\u02C0\u02BF\u02B9\u02C1();
 		bool flag = true;
-		string text = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
+		string text = base.currentSelectionString;
 		uint num = PrivateImplementationDetails.ComputeStringHash(text);
 		if (num <= 1426972151U)
 		{
@@ -552,7 +552,7 @@ public class DrumSongOptionsMenu : BaseMenu
 	{
 		base.\u02B7\u02B6\u02BC\u02BC\u02B3\u02BA\u02BE\u02C0\u02BF\u02B9\u02C1();
 		bool flag = true;
-		string text = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
+		string text = base.currentSelectionString;
 		uint num = PrivateImplementationDetails.ComputeStringHash(text);
 		if (num <= 4294967197U)
 		{
@@ -699,7 +699,7 @@ public class DrumSongOptionsMenu : BaseMenu
 	{
 		base.\u02B7\u02B6\u02BC\u02BC\u02B3\u02BA\u02BE\u02C0\u02BF\u02B9\u02C1();
 		bool flag = true;
-		string text = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
+		string text = base.currentSelectionString;
 		uint num = PrivateImplementationDetails.ComputeStringHash(text);
 		if (num <= 163U)
 		{

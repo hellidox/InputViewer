@@ -20,7 +20,9 @@ public class FrameRate : MonoBehaviour
 	{
 		this.trailsNeedInit = true;
 		this._onInvalidate = new Action(this.__onInvalidate);
+		this._onResolutionChange = new Action(this.__onResolutionChange);
 		GlobalHelper.OnInvalidate.Add(this._onInvalidate);
+		GlobalHelper.OnResolutionChange.Add(this._onResolutionChange);
 		if (GlobalHelper.rfi_config > 0)
 		{
 			Debug.Log(string.Format("rfi asdfg {0}", GlobalHelper.rfi_config));
@@ -52,33 +54,24 @@ public class FrameRate : MonoBehaviour
 		this.upperLeftTextBuilder = ZString.CreateStringBuilder();
 		this.underHighwayTextBuilder = ZString.CreateStringBuilder();
 		this.useTrails = GlobalHelper.useTrails;
-		this.trails = new TextMeshProUGUI[GlobalHelper.maxTrails];
-		for (int i = 0; i < this.trails.Length; i++)
+		this.squareGO = new GameObject();
+		this.square = this.squareGO.AddComponent<SpriteRenderer>();
+		Texture2D texture2D = new Texture2D(1, 1, TextureFormat.RGB24, false, false);
+		texture2D.SetPixels32(new Color32[]
 		{
-			this.trails[i] = this.textDisplay.Duplicate();
-			this.trails[i].enableWordWrapping = false;
-			this.trails[i].text = "█";
-			this.trails[i].richText = true;
-			Texture mainTexture = this.trails[i].mainTexture;
-			this.trails[i].rectTransform.pivot = new Vector2(0.5f, 0.8185f);
-			this.trails[i].mainTexture.filterMode = FilterMode.Point;
-		}
-		this.fretColors = new Color[]
-		{
-			HexColor.FromHexString(GlobalHelper.greenFretColor).AsColor(),
-			HexColor.FromHexString(GlobalHelper.redFretColor).AsColor(),
-			HexColor.FromHexString(GlobalHelper.yellowFretColor).AsColor(),
-			HexColor.FromHexString(GlobalHelper.blueFretColor).AsColor(),
-			HexColor.FromHexString(GlobalHelper.orangeFretColor).AsColor(),
-			HexColor.FromHexString(GlobalHelper.strumColor).AsColor(),
-			HexColor.FromHexString(GlobalHelper.strumColor).AsColor()
-		}.Select((Color x) => x.Saturate(1f)).ToArray<Color>();
-		Color[] array = this.fretColors;
-		for (int j = 0; j < array.Length; j++)
-		{
-			Debug.Log(array[j]);
-		}
-		this.activeTrails = new TextMeshProUGUI[7];
+			new Color32
+			{
+				r = 1,
+				g = 1,
+				b = 1,
+				a = 1
+			}
+		});
+		Sprite sprite = Sprite.Create(texture2D, new Rect(new Vector2(0f, 0f), new Vector2(1f, 1f)), new Vector2(0f, 0.5f), 1f, 0U, SpriteMeshType.FullRect);
+		this.squareSprite = sprite;
+		this.square.sprite = this.squareSprite;
+		this.square.sortingOrder = 32767;
+		this.square.transform.position = Camera.main.transform.position + Camera.main.transform.forward * 5f;
 	}
 
 	public FrameRate()
@@ -198,6 +191,29 @@ public class FrameRate : MonoBehaviour
 				else
 				{
 					Debug.Log("text == " + GlobalHelper.fpsText);
+					if (this.frtext_check == null)
+					{
+						try
+						{
+							text = string.Format(GlobalHelper.fpsText, new object[]
+							{
+								num2,
+								1f / this.worst,
+								num3,
+								this.best,
+								this.timeDifference * 100f,
+								(double)(this.old_ftEnd - this.old_ftStart) / 1000.0 / 1000.0 / 10.0,
+								this.old_udtTotal,
+								GlobalVariables.progress,
+								1f / GlobalHelper.renderDeltaTime
+							});
+						}
+						catch (Exception ex)
+						{
+							this.frtext_check = new bool?(false);
+							GlobalHelper.fpsText = string.Format("Bad fpstext or other error! Error: {0}", ex);
+						}
+					}
 					text = string.Format(GlobalHelper.fpsText, new object[]
 					{
 						num2,
@@ -207,7 +223,8 @@ public class FrameRate : MonoBehaviour
 						this.timeDifference * 100f,
 						(double)(this.old_ftEnd - this.old_ftStart) / 1000.0 / 1000.0 / 10.0,
 						this.old_udtTotal,
-						GlobalVariables.progress
+						GlobalVariables.progress,
+						1f / GlobalHelper.renderDeltaTime
 					});
 				}
 				this.worst = float.NegativeInfinity;
@@ -414,14 +431,15 @@ public class FrameRate : MonoBehaviour
 				}
 				if (GlobalHelper.useJudgements && GlobalHelper.showJudgementsUnderFretboard)
 				{
+					this.underHighwayTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.GetGrade(this.instance.precision.Accuracy, false)));
 					if (GlobalHelper.showAvgInaccuracy)
 					{
-						this.underHighwayTextBuilder.AppendFormat<float, float>("</i>{0:00.00}% - {1:00.00}ms\n", this.instance.precision.Accuracy * 100f, this.instance.precision.avgInaccuracy * 1000f);
+						this.underHighwayTextBuilder.AppendFormat<float, float>("\n</i>{0:00.00}% - {1:00.00}ms\n", this.instance.precision.Accuracy * 100f, this.instance.precision.avgInaccuracy * 1000f);
 						this.underHighwayTextBuilder.AppendFormat<float>("{0:00.00}", BasePlayer.lastOffset * 1000f);
 					}
 					else
 					{
-						this.underHighwayTextBuilder.AppendFormat<float, float>("</i>{0:00.00}%\n{1:00.00}ms\n", this.instance.precision.Accuracy * 100f, BasePlayer.lastOffset * 1000f);
+						this.underHighwayTextBuilder.AppendFormat<float, float>("\n</i>{0:00.00}%\n{1:00.00}ms\n", this.instance.precision.Accuracy * 100f, BasePlayer.lastOffset * 1000f);
 					}
 					switch (this.instance.precision.m_lastJudgement)
 					{
@@ -693,15 +711,12 @@ public class FrameRate : MonoBehaviour
 
 	private void UpdateTrails(BaseGuitarPlayer.inputmap minputs)
 	{
-		float num = this.rr;
-		if (this.trailsNeedInit)
+		if (!this.trailsInitialized)
 		{
-			Vector2 vector = new Vector2(45f, 22.5f);
-			this.releaseOffset = vector.y * ((float)Screen.height / 1080f);
-			this.sizePerChar = vector.x * 0.95f;
-			this.scaleSpeed = (float)Screen.height / vector.y * GlobalHelper.trailSpeed;
-			this.trailsNeedInit = false;
+			this.GetTrail(5);
+			return;
 		}
+		float num = this.rr;
 		if (num != 0f)
 		{
 			if (Input.GetKey(KeyCode.Alpha0))
@@ -801,7 +816,7 @@ public class FrameRate : MonoBehaviour
 		{
 			if (!this.activeHashes.Contains(this.trails[j]))
 			{
-				array2[j].transform.localPosition -= new Vector3(0f, this.scaleSpeed * num * 25f * ((float)Screen.height / 1080f), 0f);
+				array2[j].transform.localPosition -= new Vector3(0f, this.scaleSpeed * num * 25f, 0f);
 			}
 		}
 		for (int k = 0; k < this.activeTrails.Length; k++)
@@ -828,15 +843,21 @@ public class FrameRate : MonoBehaviour
 
 	private TextMeshProUGUI GetTrail(int trail)
 	{
+		if (!this.trailsInitialized)
+		{
+			this.InitTrails();
+		}
+		int num = 0;
 		do
 		{
+			num++;
 			this.currentTrail++;
 			if (this.currentTrail == this.trails.Length)
 			{
 				this.currentTrail = 0;
 			}
 		}
-		while (this.trails[this.currentTrail] == this.activeTrails[0] || this.trails[this.currentTrail] == this.activeTrails[1] || this.trails[this.currentTrail] == this.activeTrails[2] || this.trails[this.currentTrail] == this.activeTrails[3] || this.trails[this.currentTrail] == this.activeTrails[4] || this.trails[this.currentTrail] == this.activeTrails[5] || this.trails[this.currentTrail] == this.activeTrails[6]);
+		while (num <= 10 && (this.trails[this.currentTrail] == this.activeTrails[0] || this.trails[this.currentTrail] == this.activeTrails[1] || this.trails[this.currentTrail] == this.activeTrails[2] || this.trails[this.currentTrail] == this.activeTrails[3] || this.trails[this.currentTrail] == this.activeTrails[4] || this.trails[this.currentTrail] == this.activeTrails[5] || this.trails[this.currentTrail] == this.activeTrails[6]));
 		TextMeshProUGUI textMeshProUGUI = this.trails[this.currentTrail];
 		textMeshProUGUI.transform.localScale = new Vector3(1.5f, 1.01f, 1f);
 		Vector2 vector = new Vector2(GlobalHelper.trailPosX * (float)Screen.width, (float)Screen.height - GlobalHelper.trailPosY * (float)Screen.height);
@@ -871,6 +892,10 @@ public class FrameRate : MonoBehaviour
 		{
 			this.lastStrum = textMeshProUGUI;
 		}
+		else if (textMeshProUGUI == this.lastStrum)
+		{
+			this.lastStrum = null;
+		}
 		return textMeshProUGUI;
 	}
 
@@ -890,6 +915,49 @@ public class FrameRate : MonoBehaviour
 		this.trailsNeedInit = true;
 		this.rr = 1f / (float)GlobalHelper.inputViewerHz;
 		Debug.Log("fr callback");
+	}
+
+	private void InitTrails()
+	{
+		this.trails = new TextMeshProUGUI[GlobalHelper.maxTrails];
+		for (int i = 0; i < this.trails.Length; i++)
+		{
+			this.trails[i] = this.textDisplay.Duplicate();
+			this.trails[i].enableWordWrapping = false;
+			this.trails[i].text = "█";
+			this.trails[i].richText = true;
+			Texture mainTexture = this.trails[i].mainTexture;
+			this.trails[i].rectTransform.pivot = new Vector2(0.5f, 0.8185f);
+			this.trails[i].mainTexture.filterMode = FilterMode.Point;
+		}
+		this.fretColors = new Color[]
+		{
+			HexColor.FromHexString(GlobalHelper.greenFretColor).AsColor(),
+			HexColor.FromHexString(GlobalHelper.redFretColor).AsColor(),
+			HexColor.FromHexString(GlobalHelper.yellowFretColor).AsColor(),
+			HexColor.FromHexString(GlobalHelper.blueFretColor).AsColor(),
+			HexColor.FromHexString(GlobalHelper.orangeFretColor).AsColor(),
+			HexColor.FromHexString(GlobalHelper.strumColor).AsColor(),
+			HexColor.FromHexString(GlobalHelper.strumColor).AsColor()
+		}.Select((Color x) => x.Saturate(1f)).ToArray<Color>();
+		Color[] array = this.fretColors;
+		for (int j = 0; j < array.Length; j++)
+		{
+			Debug.Log(array[j]);
+		}
+		this.activeTrails = new TextMeshProUGUI[7];
+		this.__onResolutionChange();
+		this.trailsInitialized = true;
+	}
+
+	private void __onResolutionChange()
+	{
+		Vector2 vector = new Vector2(45f, 22.5f);
+		float num = Mathf.Min(1f, (float)Screen.width / (float)Screen.height / 1.7777778f);
+		this.releaseOffset = vector.y * ((float)Screen.height / 1080f);
+		this.sizePerChar = vector.x * 0.95f * num;
+		this.scaleSpeed = 1080f / vector.y * GlobalHelper.trailSpeed;
+		this.trailsNeedInit = false;
 	}
 
 	public float const1;
@@ -973,8 +1041,6 @@ public class FrameRate : MonoBehaviour
 	private bool _legacyBinds;
 
 	private bool cleared;
-
-	private Texture2D square;
 
 	private Sprite squareSprite;
 
@@ -1099,4 +1165,16 @@ public class FrameRate : MonoBehaviour
 	private TextMeshProUGUI lastStrum;
 
 	private bool targetFPS;
+
+	private bool? frtext_check;
+
+	private bool trailsInitialized;
+
+	private SpriteRenderer[] trailSprites;
+
+	private SpriteRenderer square;
+
+	private GameObject squareGO;
+
+	private Action _onResolutionChange;
 }

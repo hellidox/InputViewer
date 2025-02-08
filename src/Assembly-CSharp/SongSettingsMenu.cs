@@ -7,15 +7,15 @@ public class SongSettingsMenu : BaseMenu
 {
 	public virtual void \u02BD\u02B7\u02BE\u02BD\u02BF\u02BA\u02BD\u02C0\u02B9\u02BC\u02C1()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null)
+		if (this.changedSetting == null)
 		{
 			base.\u02C1\u02B3\u02BC\u02B6\u02BD\u02B6\u02BF\u02B7\u02BB\u02B5\u02BB();
 			return;
 		}
-		string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-		if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "*.ini"))
+		string changedSetting = this.changedSetting;
+		if (!(changedSetting == "*.ini"))
 		{
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Quit" || u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Highway Placement")
+			if (changedSetting == "Quit" || changedSetting == "Highway Placement")
 			{
 				this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB = Mathf.Clamp(this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB + 0, -31, -49);
 			}
@@ -30,7 +30,7 @@ public class SongSettingsMenu : BaseMenu
 
 	public virtual void \u02B3\u02BB\u02B5\u02BC\u02B3\u02B3\u02BC\u02B3\u02B5\u02B7\u02C1()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != null && this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != "Songs Per Player")
+		if (this.changedSetting != null && this.changedSetting != "Songs Per Player")
 		{
 			this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB = Mathf.Clamp(this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB - -22, -89, 96);
 			this.\u02B9\u02B3\u02B4\u02B7\u02B6\u02BB\u02B4\u02B3\u02BE\u02B5\u02B6 = false;
@@ -40,15 +40,15 @@ public class SongSettingsMenu : BaseMenu
 
 	public virtual void \u02B7\u02B4\u02BA\u02B3\u02C0\u02B3\u02B2\u02B2\u02B5\u02B6\u02C0()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null)
+		if (this.changedSetting == null)
 		{
 			base.\u02C1\u02B3\u02BC\u02B6\u02BD\u02B6\u02BF\u02B7\u02BB\u02B5\u02BB();
 			return;
 		}
-		string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-		if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Graphics API"))
+		string changedSetting = this.changedSetting;
+		if (!(changedSetting == "Graphics API"))
 		{
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Song" || u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "5 Lane Drums")
+			if (changedSetting == "Song" || changedSetting == "5 Lane Drums")
 			{
 				this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB = Mathf.Clamp(this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB + 1, -28, -118);
 			}
@@ -63,15 +63,15 @@ public class SongSettingsMenu : BaseMenu
 
 	public virtual void \u02B5\u02B7\u02BA\u02BC\u02C1\u02BA\u02BC\u02B3\u02BF\u02B2\u02BF()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null)
+		if (this.changedSetting == null)
 		{
 			base.\u02C1\u02B3\u02BC\u02B6\u02BD\u02B6\u02BF\u02B7\u02BB\u02B5\u02BB();
 			return;
 		}
-		string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-		if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "MSAA Level"))
+		string changedSetting = this.changedSetting;
+		if (!(changedSetting == "MSAA Level"))
 		{
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "float" || u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "botnosave")
+			if (changedSetting == "float" || changedSetting == "botnosave")
 			{
 				this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB = Mathf.Clamp(this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB + 0, -33, -1);
 			}
@@ -92,15 +92,15 @@ public class SongSettingsMenu : BaseMenu
 
 	public override void \u02C1\u02B3\u02BC\u02B6\u02BD\u02B6\u02BF\u02B7\u02BB\u02B5\u02BB()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null)
+		if (this.changedSetting == null)
 		{
 			base.\u02C1\u02B3\u02BC\u02B6\u02BD\u02B6\u02BF\u02B7\u02BB\u02B5\u02BB();
 			return;
 		}
-		string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-		if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "End Events"))
+		string changedSetting = this.changedSetting;
+		if (!(changedSetting == "End Events"))
 		{
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Video Start Time" || u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Song Offset")
+			if (changedSetting == "Video Start Time" || changedSetting == "Song Offset")
 			{
 				this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB = Mathf.Clamp(this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB + 1, -2147483647, int.MaxValue);
 			}
@@ -121,10 +121,10 @@ public class SongSettingsMenu : BaseMenu
 			return;
 		}
 		string text;
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null)
+		if (this.changedSetting == null)
 		{
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
-			text = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
+			this.changedSetting = base.currentSelectionString;
+			text = this.changedSetting;
 			if (!(text == "setlistSongCountSingular"))
 			{
 				if (!(text == "All HOPO's"))
@@ -146,7 +146,7 @@ public class SongSettingsMenu : BaseMenu
 			this.\u02BA\u02BB\u02B5\u02B6\u02B3\u02BD\u02BA\u02BC\u02B2\u02BB\u02B5();
 			return;
 		}
-		text = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
+		text = this.changedSetting;
 		if (!(text == "ScoreDisabledModifier"))
 		{
 			if (!(text == "SP Colors"))
@@ -165,14 +165,14 @@ public class SongSettingsMenu : BaseMenu
 		{
 			u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B.\u02B8\u02B2\u02B9\u02B4\u02B2\u02B7\u02B4\u02B3\u02B9\u02B6\u02BF.\u02B4\u02B5\u02BF\u02B2\u02B9\u02B8\u02C1\u02B7\u02BF\u02B3\u02B7 = this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB;
 		}
-		this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+		this.changedSetting = null;
 		this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 		this.pauseMenu.\u02BE\u02BC\u02BA\u02B5\u02BC\u02C1\u02B2\u02B8\u02C1\u02B7\u02B8 = this.\u02B9\u02B3\u02B4\u02B7\u02B6\u02BB\u02B4\u02B3\u02BE\u02B5\u02B6;
 	}
 
 	public virtual void \u02BA\u02BA\u02B6\u02BE\u02C1\u02B3\u02C1\u02B6\u02BB\u02C1\u02BA()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != null && this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != "year")
+		if (this.changedSetting != null && this.changedSetting != "year")
 		{
 			this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB = Mathf.Clamp(this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB + 24, -178, -186);
 			this.\u02B9\u02B3\u02B4\u02B7\u02B6\u02BB\u02B4\u02B3\u02BE\u02B5\u02B6 = false;
@@ -182,7 +182,7 @@ public class SongSettingsMenu : BaseMenu
 
 	public override void \u02BB\u02B3\u02BF\u02BC\u02C1\u02BC\u02BC\u02C1\u02C0\u02B5\u02BA()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != null && this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != "End Events")
+		if (this.changedSetting != null && this.changedSetting != "End Events")
 		{
 			this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB = Mathf.Clamp(this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB - 100, -2147483647, int.MaxValue);
 			this.\u02B9\u02B3\u02B4\u02B7\u02B6\u02BB\u02B4\u02B3\u02BE\u02B5\u02B6 = true;
@@ -193,10 +193,10 @@ public class SongSettingsMenu : BaseMenu
 	private void \u02BB\u02B9\u02B4\u02B9\u02B3\u02BF\u02B8\u02B9\u02B7\u02BE\u02B7()
 	{
 		string text = "WriteMetadata";
-		string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-		if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "{0}"))
+		string changedSetting = this.changedSetting;
+		if (!(changedSetting == "{0}"))
 		{
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "_GlobalWhammyTexture" || u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Don't Scan Songs")
+			if (changedSetting == "_GlobalWhammyTexture" || changedSetting == "Don't Scan Songs")
 			{
 				text = this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB.ToString() + "";
 			}
@@ -210,9 +210,9 @@ public class SongSettingsMenu : BaseMenu
 
 	public override void \u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != null)
+		if (this.changedSetting != null)
 		{
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+			this.changedSetting = null;
 			this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 			return;
 		}
@@ -227,7 +227,7 @@ public class SongSettingsMenu : BaseMenu
 			catch
 			{
 				this.pauseMenu.\u02BE\u02BC\u02BA\u02B5\u02BC\u02C1\u02B2\u02B8\u02C1\u02B7\u02B8 = false;
-				this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("Error writing metadata", "Okay", null, null, null, null);
+				this.confirmMenu.Enable("Error writing metadata", "Okay", null, null, null, null);
 			}
 			this.\u02B9\u02B3\u02B4\u02B7\u02B6\u02BB\u02B4\u02B3\u02BE\u02B5\u02B6 = false;
 			return;
@@ -250,10 +250,10 @@ public class SongSettingsMenu : BaseMenu
 			return;
 		}
 		string text;
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null)
+		if (this.changedSetting == null)
 		{
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
-			text = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
+			this.changedSetting = base.currentSelectionString;
+			text = this.changedSetting;
 			if (!(text == "FF0000"))
 			{
 				if (!(text == "playlist_track"))
@@ -275,7 +275,7 @@ public class SongSettingsMenu : BaseMenu
 			this.\u02BB\u02B9\u02B4\u02B9\u02B3\u02BF\u02B8\u02B9\u02B7\u02BE\u02B7();
 			return;
 		}
-		text = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
+		text = this.changedSetting;
 		if (!(text == "fromParts"))
 		{
 			if (!(text == "A: "))
@@ -294,14 +294,14 @@ public class SongSettingsMenu : BaseMenu
 		{
 			u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B.\u02B8\u02B2\u02B9\u02B4\u02B2\u02B7\u02B4\u02B3\u02B9\u02B6\u02BF.\u02B4\u02B5\u02BF\u02B2\u02B9\u02B8\u02C1\u02B7\u02BF\u02B3\u02B7 = this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB;
 		}
-		this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+		this.changedSetting = null;
 		this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 		this.pauseMenu.\u02BE\u02BC\u02BA\u02B5\u02BC\u02C1\u02B2\u02B8\u02C1\u02B7\u02B8 = this.\u02B9\u02B3\u02B4\u02B7\u02B6\u02BB\u02B4\u02B3\u02BE\u02B5\u02B6;
 	}
 
 	public virtual void \u02B9\u02B7\u02BC\u02B3\u02C1\u02B8\u02BE\u02C1\u02C1\u02C0\u02BC()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != null && this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != "drumfiltertip")
+		if (this.changedSetting != null && this.changedSetting != "drumfiltertip")
 		{
 			this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB = Mathf.Clamp(this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB + -72, 44, 135);
 			this.\u02B9\u02B3\u02B4\u02B7\u02B6\u02BB\u02B4\u02B3\u02BE\u02B5\u02B6 = true;
@@ -311,7 +311,7 @@ public class SongSettingsMenu : BaseMenu
 
 	public virtual void \u02B8\u02B8\u02B6\u02B2\u02C0\u02BF\u02BD\u02BF\u02BB\u02B6\u02B9()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != null && this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != "flames")
+		if (this.changedSetting != null && this.changedSetting != "flames")
 		{
 			this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB = Mathf.Clamp(this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB + -69, 183, 165);
 			this.\u02B9\u02B3\u02B4\u02B7\u02B6\u02BB\u02B4\u02B3\u02BE\u02B5\u02B6 = false;
@@ -321,15 +321,15 @@ public class SongSettingsMenu : BaseMenu
 
 	public virtual void \u02B6\u02C1\u02B6\u02C1\u02B9\u02BF\u02C1\u02B5\u02C1\u02C1\u02BE()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null)
+		if (this.changedSetting == null)
 		{
 			base.\u02C1\u02B3\u02BC\u02B6\u02BD\u02B6\u02BF\u02B7\u02BB\u02B5\u02BB();
 			return;
 		}
-		string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-		if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "<noparse><"))
+		string changedSetting = this.changedSetting;
+		if (!(changedSetting == "<noparse><"))
 		{
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Languages/" || u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "diff_guitar")
+			if (changedSetting == "Languages/" || changedSetting == "diff_guitar")
 			{
 				this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB = Mathf.Clamp(this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB + 1, -140, -148);
 			}
@@ -344,15 +344,15 @@ public class SongSettingsMenu : BaseMenu
 
 	public virtual void \u02BC\u02BD\u02BB\u02B7\u02BB\u02C1\u02BD\u02B9\u02BD\u02C0\u02C1()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null)
+		if (this.changedSetting == null)
 		{
 			base.\u02B7\u02BA\u02C0\u02B8\u02BE\u02BA\u02BD\u02B4\u02BB\u02B3\u02B6();
 			return;
 		}
-		string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-		if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "notes.mid"))
+		string changedSetting = this.changedSetting;
+		if (!(changedSetting == "notes.mid"))
 		{
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Language" || u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "n")
+			if (changedSetting == "Language" || changedSetting == "n")
 			{
 				this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB = Mathf.Clamp(this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB - 0, 175, -79);
 			}
@@ -373,10 +373,10 @@ public class SongSettingsMenu : BaseMenu
 			return;
 		}
 		string text;
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null)
+		if (this.changedSetting == null)
 		{
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
-			text = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
+			this.changedSetting = base.currentSelectionString;
+			text = this.changedSetting;
 			if (!(text == "Video Start Time"))
 			{
 				if (!(text == "Song Offset"))
@@ -398,7 +398,7 @@ public class SongSettingsMenu : BaseMenu
 			this.\u02BA\u02BB\u02B5\u02B6\u02B3\u02BD\u02BA\u02BC\u02B2\u02BB\u02B5();
 			return;
 		}
-		text = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
+		text = this.changedSetting;
 		if (!(text == "Video Start Time"))
 		{
 			if (!(text == "Song Offset"))
@@ -417,7 +417,7 @@ public class SongSettingsMenu : BaseMenu
 		{
 			u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B.\u02B8\u02B2\u02B9\u02B4\u02B2\u02B7\u02B4\u02B3\u02B9\u02B6\u02BF.\u02B4\u02B5\u02BF\u02B2\u02B9\u02B8\u02C1\u02B7\u02BF\u02B3\u02B7 = this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB;
 		}
-		this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+		this.changedSetting = null;
 		this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 		this.pauseMenu.\u02BE\u02BC\u02BA\u02B5\u02BC\u02C1\u02B2\u02B8\u02C1\u02B7\u02B8 = this.\u02B9\u02B3\u02B4\u02B7\u02B6\u02BB\u02B4\u02B3\u02BE\u02B5\u02B6;
 	}
@@ -430,10 +430,10 @@ public class SongSettingsMenu : BaseMenu
 			return;
 		}
 		string text;
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null)
+		if (this.changedSetting == null)
 		{
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
-			text = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
+			this.changedSetting = base.currentSelectionString;
+			text = this.changedSetting;
 			if (!(text == "size too small"))
 			{
 				if (!(text == "Show Hit Window"))
@@ -455,7 +455,7 @@ public class SongSettingsMenu : BaseMenu
 			this.\u02BB\u02B9\u02B4\u02B9\u02B3\u02BF\u02B8\u02B9\u02B7\u02BE\u02B7();
 			return;
 		}
-		text = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
+		text = this.changedSetting;
 		if (!(text == "song"))
 		{
 			if (!(text == "2022-11-13"))
@@ -474,14 +474,14 @@ public class SongSettingsMenu : BaseMenu
 		{
 			u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B.\u02B8\u02B2\u02B9\u02B4\u02B2\u02B7\u02B4\u02B3\u02B9\u02B6\u02BF.\u02B4\u02B5\u02BF\u02B2\u02B9\u02B8\u02C1\u02B7\u02BF\u02B3\u02B7 = this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB;
 		}
-		this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+		this.changedSetting = null;
 		this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 		this.pauseMenu.\u02BE\u02BC\u02BA\u02B5\u02BC\u02C1\u02B2\u02B8\u02C1\u02B7\u02B8 = this.\u02B9\u02B3\u02B4\u02B7\u02B6\u02BB\u02B4\u02B3\u02BE\u02B5\u02B6;
 	}
 
 	public override void \u02BD\u02B9\u02BE\u02BB\u02B9\u02BA\u02B5\u02BC\u02BE\u02C1\u02B2()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != null && this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != "End Events")
+		if (this.changedSetting != null && this.changedSetting != "End Events")
 		{
 			this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB = Mathf.Clamp(this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB + 100, -2147483647, int.MaxValue);
 			this.\u02B9\u02B3\u02B4\u02B7\u02B6\u02BB\u02B4\u02B3\u02BE\u02B5\u02B6 = true;
@@ -491,15 +491,15 @@ public class SongSettingsMenu : BaseMenu
 
 	public virtual void \u02BF\u02BE\u02BB\u02C0\u02B4\u02B6\u02BA\u02B4\u02BC\u02BC\u02BB()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null)
+		if (this.changedSetting == null)
 		{
 			base.\u02B7\u02BA\u02C0\u02B8\u02BE\u02BA\u02BD\u02B4\u02BB\u02B3\u02B6();
 			return;
 		}
-		string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-		if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == ""))
+		string changedSetting = this.changedSetting;
+		if (!(changedSetting == ""))
 		{
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Warning: These folders contain notes after the end event. End events will be disabled for these folders." || u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "HOPOs To Taps")
+			if (changedSetting == "Warning: These folders contain notes after the end event. End events will be disabled for these folders." || changedSetting == "HOPOs To Taps")
 			{
 				this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB = Mathf.Clamp(this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB - 1, 96, -194);
 			}
@@ -529,15 +529,15 @@ public class SongSettingsMenu : BaseMenu
 
 	public override void \u02B7\u02BA\u02C0\u02B8\u02BE\u02BA\u02BD\u02B4\u02BB\u02B3\u02B6()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null)
+		if (this.changedSetting == null)
 		{
 			base.\u02B7\u02BA\u02C0\u02B8\u02BE\u02BA\u02BD\u02B4\u02BB\u02B3\u02B6();
 			return;
 		}
-		string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-		if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "End Events"))
+		string changedSetting = this.changedSetting;
+		if (!(changedSetting == "End Events"))
 		{
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Video Start Time" || u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Song Offset")
+			if (changedSetting == "Video Start Time" || changedSetting == "Song Offset")
 			{
 				this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB = Mathf.Clamp(this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB - 1, -2147483647, int.MaxValue);
 			}
@@ -552,15 +552,15 @@ public class SongSettingsMenu : BaseMenu
 
 	public virtual void \u02BA\u02BD\u02B9\u02B9\u02B8\u02BC\u02B2\u02B4\u02B5\u02C0\u02B2()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null)
+		if (this.changedSetting == null)
 		{
 			base.\u02C1\u02B3\u02BC\u02B6\u02BD\u02B6\u02BF\u02B7\u02BB\u02B5\u02BB();
 			return;
 		}
-		string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-		if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "scoredata.bin"))
+		string changedSetting = this.changedSetting;
+		if (!(changedSetting == "scoredata.bin"))
 		{
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Velocity" || u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Are you sure you want to practice?")
+			if (changedSetting == "Velocity" || changedSetting == "Are you sure you want to practice?")
 			{
 				this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB = Mathf.Clamp(this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB + 1, -28, -95);
 			}
@@ -576,10 +576,10 @@ public class SongSettingsMenu : BaseMenu
 	private void \u02BA\u02BB\u02B5\u02B6\u02B3\u02BD\u02BA\u02BC\u02B2\u02BB\u02B5()
 	{
 		string text = "";
-		string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-		if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "End Events"))
+		string changedSetting = this.changedSetting;
+		if (!(changedSetting == "End Events"))
 		{
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Video Start Time" || u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Song Offset")
+			if (changedSetting == "Video Start Time" || changedSetting == "Song Offset")
 			{
 				text = this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB.ToString() + "ms";
 			}
@@ -603,10 +603,10 @@ public class SongSettingsMenu : BaseMenu
 	private void \u02C1\u02BE\u02BE\u02BA\u02C0\u02B7\u02B3\u02BC\u02B6\u02BC\u02BF()
 	{
 		string text = "year";
-		string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-		if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "No players were loaded. This may be caused by trying to load instruments/difficulties that do not exist in the chart file."))
+		string changedSetting = this.changedSetting;
+		if (!(changedSetting == "No players were loaded. This may be caused by trying to load instruments/difficulties that do not exist in the chart file."))
 		{
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Test Velocity" || u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Song Speed")
+			if (changedSetting == "Test Velocity" || changedSetting == "Song Speed")
 			{
 				text = this.\u02BC\u02B2\u02B5\u02BF\u02BD\u02B4\u02C1\u02B7\u02B3\u02C1\u02BB.ToString() + "highwayplacement";
 			}

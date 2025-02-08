@@ -11,9 +11,9 @@ public class VideoSettingsMenu : BaseSettingMenu
 {
 	public virtual void \u02B9\u02B5\u02BF\u02BF\u02BB\u02B2\u02B8\u02BF\u02B3\u02B7\u02C1()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != null)
+		if (this.changedSetting != null)
 		{
-			if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Songs are still scanning...")
+			if (this.changedSetting == "Songs are still scanning...")
 			{
 				if (this.\u02BA\u02B9\u02B4\u02B5\u02B7\u02BE\u02B9\u02BC\u02B5\u02B9\u02B3 > 0)
 				{
@@ -21,7 +21,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 					this.\u02BA\u02BB\u02B5\u02B6\u02B3\u02BD\u02BA\u02BC\u02B2\u02BB\u02B5();
 				}
 			}
-			else if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Loading CLI Gameplay" && this.\u02B4\u02BD\u02B9\u02BE\u02B9\u02BF\u02C0\u02BE\u02B2\u02B7\u02B2 > 0)
+			else if (this.changedSetting == "Loading CLI Gameplay" && this.\u02B4\u02BD\u02B9\u02BE\u02B9\u02BF\u02C0\u02BE\u02B2\u02B7\u02B2 > 0)
 			{
 				this.\u02B4\u02BD\u02B9\u02BE\u02B9\u02BF\u02C0\u02BE\u02B2\u02B7\u02B2 = this.\u02B4\u02BD\u02B9\u02BE\u02B9\u02BF\u02C0\u02BE\u02B2\u02B7\u02B2;
 				this.\u02BA\u02BB\u02B5\u02B6\u02B3\u02BD\u02BA\u02BC\u02B2\u02BB\u02B5();
@@ -32,17 +32,17 @@ public class VideoSettingsMenu : BaseSettingMenu
 
 	protected virtual void \u02B7\u02B4\u02BD\u02BD\u02B6\u02BB\u02BF\u02BE\u02B4\u02B2\u02C0()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "song")
+		if (this.changedSetting == "song")
 		{
 			this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
-			this.confirmMenu.\u02B7\u02B3\u02BC\u02BE\u02BF\u02B7\u02B4\u02C0\u02B9\u02BC\u02BF("album", "Random", null, new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B7\u02C1\u02BF\u02B2\u02B5\u02BE\u02BB\u02B6\u02C0\u02BC\u02C0), new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B3\u02BC\u02B9\u02BD\u02BB\u02B6\u02B5\u02B9\u02BC\u02BD\u02BE), null);
+			this.changedSetting = null;
+			this.confirmMenu.\u02B7\u02B3\u02BC\u02BE\u02BF\u02B7\u02B4\u02C0\u02B9\u02BC\u02BF("album", "Random", null, new ConfirmationMenu.CallFunc(this.\u02B7\u02C1\u02BF\u02B2\u02B5\u02BE\u02BB\u02B6\u02C0\u02BC\u02C0), new ConfirmationMenu.CallFunc(this.\u02B3\u02BC\u02B9\u02BD\u02BB\u02B6\u02B5\u02B9\u02BC\u02BD\u02BE), null);
 		}
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Pro Drums")
+		if (this.changedSetting == "Pro Drums")
 		{
 			base.StartCoroutine(this.\u02B6\u02B8\u02B4\u02C1\u02B4\u02BD\u02B2\u02BD\u02B2\u02B9\u02B5(this.\u02B4\u02BD\u02B9\u02BE\u02B9\u02BF\u02C0\u02BE\u02B2\u02B7\u02B2));
 		}
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Ride")
+		if (this.changedSetting == "Ride")
 		{
 			if (this.\u02BD\u02C1\u02B5\u02BB\u02B5\u02B5\u02C1\u02C1\u02B3\u02BA\u02BD.Count == 0)
 			{
@@ -50,20 +50,20 @@ public class VideoSettingsMenu : BaseSettingMenu
 			}
 			Resolution resolution = this.\u02BD\u02C1\u02B5\u02BB\u02B5\u02B5\u02C1\u02C1\u02B3\u02BA\u02BD[this.\u02BA\u02B9\u02B4\u02B5\u02B7\u02BE\u02B9\u02BC\u02B5\u02B9\u02B3];
 			Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+			this.changedSetting = null;
 			this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 		}
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == " + ")
+		if (this.changedSetting == " + ")
 		{
 			QualitySettings.antiAliasing = this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC.CurrentValue;
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+			this.changedSetting = null;
 			this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 		}
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "settings.ini")
+		if (this.changedSetting == "settings.ini")
 		{
 			Screen.SetResolution(Screen.width, Screen.height, GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02B6\u02BD\u02BC\u02BB\u02BD\u02BB\u02B8\u02C0\u02C0\u02C1());
 		}
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Spray")
+		if (this.changedSetting == "Spray")
 		{
 			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B2\u02BE\u02BE\u02B6\u02B5\u02BB\u02C0\u02C0\u02B6\u02C1\u02B8(false);
 		}
@@ -71,9 +71,9 @@ public class VideoSettingsMenu : BaseSettingMenu
 
 	public override void \u02C1\u02B3\u02BC\u02B6\u02BD\u02B6\u02BF\u02B7\u02BB\u02B5\u02BB()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != null)
+		if (this.changedSetting != null)
 		{
-			if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Resolution")
+			if (this.changedSetting == "Resolution")
 			{
 				if (this.\u02BA\u02B9\u02B4\u02B5\u02B7\u02BE\u02B9\u02BC\u02B5\u02B9\u02B3 + 1 < this.\u02BD\u02C1\u02B5\u02BB\u02B5\u02B5\u02C1\u02C1\u02B3\u02BA\u02BD.Count)
 				{
@@ -81,7 +81,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 					this.\u02BA\u02BB\u02B5\u02B6\u02B3\u02BD\u02BA\u02BC\u02B2\u02BB\u02B5();
 				}
 			}
-			else if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Display" && this.\u02B4\u02BD\u02B9\u02BE\u02B9\u02BF\u02C0\u02BE\u02B2\u02B7\u02B2 + 1 < this.\u02B4\u02BF\u02B7\u02B9\u02B2\u02C0\u02BD\u02C0\u02BA\u02BB\u02BC.Count)
+			else if (this.changedSetting == "Display" && this.\u02B4\u02BD\u02B9\u02BE\u02B9\u02BF\u02C0\u02BE\u02B2\u02B7\u02B2 + 1 < this.\u02B4\u02BF\u02B7\u02B9\u02B2\u02C0\u02BD\u02C0\u02BA\u02BB\u02BC.Count)
 			{
 				this.\u02B4\u02BD\u02B9\u02BE\u02B9\u02BF\u02C0\u02BE\u02B2\u02B7\u02B2++;
 				this.\u02BA\u02BB\u02B5\u02B6\u02B3\u02BD\u02BA\u02BC\u02B2\u02BB\u02B5();
@@ -92,17 +92,17 @@ public class VideoSettingsMenu : BaseSettingMenu
 
 	protected override void \u02B5\u02B8\u02B6\u02B4\u02BB\u02B4\u02BF\u02BE\u02B5\u02BE\u02C1()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Graphics API")
+		if (this.changedSetting == "Graphics API")
 		{
 			this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
-			this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("graphicsRestartNeeded", "Okay", null, new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B3\u02BC\u02B9\u02BD\u02BB\u02B6\u02B5\u02B9\u02BC\u02BD\u02BE), new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B3\u02BC\u02B9\u02BD\u02BB\u02B6\u02B5\u02B9\u02BC\u02BD\u02BE), null);
+			this.changedSetting = null;
+			this.confirmMenu.Enable("graphicsRestartNeeded", "Okay", null, new ConfirmationMenu.CallFunc(this.\u02B3\u02BC\u02B9\u02BD\u02BB\u02B6\u02B5\u02B9\u02BC\u02BD\u02BE), new ConfirmationMenu.CallFunc(this.\u02B3\u02BC\u02B9\u02BD\u02BB\u02B6\u02B5\u02B9\u02BC\u02BD\u02BE), null);
 		}
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Display")
+		if (this.changedSetting == "Display")
 		{
 			base.StartCoroutine(this.\u02B6\u02B8\u02B4\u02C1\u02B4\u02BD\u02B2\u02BD\u02B2\u02B9\u02B5(this.\u02B4\u02BD\u02B9\u02BE\u02B9\u02BF\u02C0\u02BE\u02B2\u02B7\u02B2));
 		}
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Resolution")
+		if (this.changedSetting == "Resolution")
 		{
 			if (this.\u02BD\u02C1\u02B5\u02BB\u02B5\u02B5\u02C1\u02C1\u02B3\u02BA\u02BD.Count == 0)
 			{
@@ -110,20 +110,20 @@ public class VideoSettingsMenu : BaseSettingMenu
 			}
 			Resolution resolution = this.\u02BD\u02C1\u02B5\u02BB\u02B5\u02B5\u02C1\u02C1\u02B3\u02BA\u02BD[this.\u02BA\u02B9\u02B4\u02B5\u02B7\u02BE\u02B9\u02BC\u02B5\u02B9\u02B3];
 			Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+			this.changedSetting = null;
 			this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 		}
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "MSAA Level")
+		if (this.changedSetting == "MSAA Level")
 		{
 			QualitySettings.antiAliasing = this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC.CurrentValue;
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+			this.changedSetting = null;
 			this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 		}
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Fullscreen")
+		if (this.changedSetting == "Fullscreen")
 		{
 			Screen.SetResolution(Screen.width, Screen.height, GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02B6\u02BD\u02BC\u02BB\u02BD\u02BB\u02B8\u02C0\u02C0\u02C1());
 		}
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Framerate")
+		if (this.changedSetting == "Framerate")
 		{
 			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02BC\u02B4\u02B9\u02B7\u02B4\u02BE\u02BF\u02B4\u02BE\u02B4(true);
 		}
@@ -313,9 +313,9 @@ public class VideoSettingsMenu : BaseSettingMenu
 
 	public virtual void \u02BA\u02BE\u02B2\u02B5\u02B3\u02BD\u02BB\u02B2\u02C0\u02BC\u02B9()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != null)
+		if (this.changedSetting != null)
 		{
-			if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "v1shownpopup")
+			if (this.changedSetting == "v1shownpopup")
 			{
 				if (this.\u02BA\u02B9\u02B4\u02B5\u02B7\u02BE\u02B9\u02BC\u02B5\u02B9\u02B3 + 1 < this.\u02BD\u02C1\u02B5\u02BB\u02B5\u02B5\u02C1\u02C1\u02B3\u02BA\u02BD.Count)
 				{
@@ -323,7 +323,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 					this.\u02BA\u02BB\u02B5\u02B6\u02B3\u02BD\u02BA\u02BC\u02B2\u02BB\u02B5();
 				}
 			}
-			else if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == ": " && this.\u02B4\u02BD\u02B9\u02BE\u02B9\u02BF\u02C0\u02BE\u02B2\u02B7\u02B2 + 1 < this.\u02B4\u02BF\u02B7\u02B9\u02B2\u02C0\u02BD\u02C0\u02BA\u02BB\u02BC.Count)
+			else if (this.changedSetting == ": " && this.\u02B4\u02BD\u02B9\u02BE\u02B9\u02BF\u02C0\u02BE\u02B2\u02B7\u02B2 + 1 < this.\u02B4\u02BF\u02B7\u02B9\u02B2\u02C0\u02BD\u02C0\u02BA\u02BB\u02BC.Count)
 			{
 				this.\u02B4\u02BD\u02B9\u02BE\u02B9\u02BF\u02C0\u02BE\u02B2\u02B7\u02B2 += 0;
 				this.\u02BA\u02BB\u02B5\u02B6\u02B3\u02BD\u02BA\u02BC\u02B2\u02BB\u02B5();
@@ -518,9 +518,9 @@ public class VideoSettingsMenu : BaseSettingMenu
 
 	public virtual void \u02B3\u02C0\u02BB\u02C1\u02BD\u02C0\u02B8\u02BC\u02BA\u02BF\u02C0()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != null)
+		if (this.changedSetting != null)
 		{
-			if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "'>")
+			if (this.changedSetting == "'>")
 			{
 				if (this.\u02BA\u02B9\u02B4\u02B5\u02B7\u02BE\u02B9\u02BC\u02B5\u02B9\u02B3 + 1 < this.\u02BD\u02C1\u02B5\u02BB\u02B5\u02B5\u02C1\u02C1\u02B3\u02BA\u02BD.Count)
 				{
@@ -528,7 +528,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 					this.\u02BA\u02BB\u02B5\u02B6\u02B3\u02BD\u02BA\u02BC\u02B2\u02BB\u02B5();
 				}
 			}
-			else if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Crowd" && this.\u02B4\u02BD\u02B9\u02BE\u02B9\u02BF\u02C0\u02BE\u02B2\u02B7\u02B2 + 0 < this.\u02B4\u02BF\u02B7\u02B9\u02B2\u02C0\u02BD\u02C0\u02BA\u02BB\u02BC.Count)
+			else if (this.changedSetting == "Crowd" && this.\u02B4\u02BD\u02B9\u02BE\u02B9\u02BF\u02C0\u02BE\u02B2\u02B7\u02B2 + 0 < this.\u02B4\u02BF\u02B7\u02B9\u02B2\u02C0\u02BD\u02C0\u02BA\u02BB\u02BC.Count)
 			{
 				this.\u02B4\u02BD\u02B9\u02BE\u02B9\u02BF\u02C0\u02BE\u02B2\u02B7\u02B2 += 0;
 				this.\u02BA\u02BB\u02B5\u02B6\u02B3\u02BD\u02BA\u02BC\u02B2\u02BB\u02B5();
@@ -779,9 +779,9 @@ public class VideoSettingsMenu : BaseSettingMenu
 
 	public override void \u02B7\u02BA\u02C0\u02B8\u02BE\u02BA\u02BD\u02B4\u02BB\u02B3\u02B6()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != null)
+		if (this.changedSetting != null)
 		{
-			if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Resolution")
+			if (this.changedSetting == "Resolution")
 			{
 				if (this.\u02BA\u02B9\u02B4\u02B5\u02B7\u02BE\u02B9\u02BC\u02B5\u02B9\u02B3 > 0)
 				{
@@ -789,7 +789,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 					this.\u02BA\u02BB\u02B5\u02B6\u02B3\u02BD\u02BA\u02BC\u02B2\u02BB\u02B5();
 				}
 			}
-			else if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Display" && this.\u02B4\u02BD\u02B9\u02BE\u02B9\u02BF\u02C0\u02BE\u02B2\u02B7\u02B2 > 0)
+			else if (this.changedSetting == "Display" && this.\u02B4\u02BD\u02B9\u02BE\u02B9\u02BF\u02C0\u02BE\u02B2\u02B7\u02B2 > 0)
 			{
 				this.\u02B4\u02BD\u02B9\u02BE\u02B9\u02BF\u02C0\u02BE\u02B2\u02B7\u02B2--;
 				this.\u02BA\u02BB\u02B5\u02B6\u02B3\u02BD\u02BA\u02BC\u02B2\u02BB\u02B5();
@@ -1113,12 +1113,12 @@ public class VideoSettingsMenu : BaseSettingMenu
 
 	protected override void \u02BA\u02BB\u02B5\u02B6\u02B3\u02BD\u02BA\u02BC\u02B2\u02BB\u02B5()
 	{
-		string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-		if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Resolution") && !(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Display") && !(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Menu Backgrounds") && !(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Framerate") && !(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "MSAA Level") && u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Show Mouse Cursor")
+		string changedSetting = this.changedSetting;
+		if (!(changedSetting == "Resolution") && !(changedSetting == "Display") && !(changedSetting == "Menu Backgrounds") && !(changedSetting == "Framerate") && !(changedSetting == "MSAA Level") && changedSetting == "Show Mouse Cursor")
 		{
 			Cursor.visible = this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC.GetBoolValue;
 		}
-		this.\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0(this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3);
+		this.\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0(this.changedSetting);
 	}
 
 	public override void SetBools()
@@ -1458,9 +1458,9 @@ public class VideoSettingsMenu : BaseSettingMenu
 
 	public virtual void \u02BF\u02BE\u02BB\u02C0\u02B4\u02B6\u02BA\u02B4\u02BC\u02BC\u02BB()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != null)
+		if (this.changedSetting != null)
 		{
-			if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "profiles.ini")
+			if (this.changedSetting == "profiles.ini")
 			{
 				if (this.\u02BA\u02B9\u02B4\u02B5\u02B7\u02BE\u02B9\u02BC\u02B5\u02B9\u02B3 > 0)
 				{
@@ -1468,7 +1468,7 @@ public class VideoSettingsMenu : BaseSettingMenu
 					this.\u02BA\u02BB\u02B5\u02B6\u02B3\u02BD\u02BA\u02BC\u02B2\u02BB\u02B5();
 				}
 			}
-			else if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Hide Accents/Ghosts" && this.\u02B4\u02BD\u02B9\u02BE\u02B9\u02BF\u02C0\u02BE\u02B2\u02B7\u02B2 > 1)
+			else if (this.changedSetting == "Hide Accents/Ghosts" && this.\u02B4\u02BD\u02B9\u02BE\u02B9\u02BF\u02C0\u02BE\u02B2\u02B7\u02B2 > 1)
 			{
 				this.\u02B4\u02BD\u02B9\u02BE\u02B9\u02BF\u02C0\u02BE\u02B2\u02B7\u02B2--;
 				this.\u02BA\u02BB\u02B5\u02B6\u02B3\u02BD\u02BA\u02BC\u02B2\u02BB\u02B5();
@@ -1479,11 +1479,11 @@ public class VideoSettingsMenu : BaseSettingMenu
 
 	public override void \u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null)
+		if (this.changedSetting == null)
 		{
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
-			string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-			uint num = PrivateImplementationDetails.ComputeStringHash(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B);
+			this.changedSetting = base.currentSelectionString;
+			string changedSetting = this.changedSetting;
+			uint num = PrivateImplementationDetails.ComputeStringHash(changedSetting);
 			if (num <= 1595303295U)
 			{
 				if (num <= 1026214520U)
@@ -1494,13 +1494,13 @@ public class VideoSettingsMenu : BaseSettingMenu
 						{
 							if (num == 546503048U)
 							{
-								if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Graphics API")
+								if (changedSetting == "Graphics API")
 								{
 									this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02BB\u02B5\u02BA\u02B6\u02BE\u02BA\u02B6\u02BD\u02B3\u02B9\u02BF;
 								}
 							}
 						}
-						else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Show FPS")
+						else if (changedSetting == "Show FPS")
 						{
 							this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02B8\u02B3\u02B7\u02C0\u02B5\u02BA\u02BC\u02BA\u02BE\u02BA\u02B3;
 						}
@@ -1509,14 +1509,14 @@ public class VideoSettingsMenu : BaseSettingMenu
 					{
 						if (num == 1026214520U)
 						{
-							if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Fullscreen")
+							if (changedSetting == "Fullscreen")
 							{
 								this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02BD\u02BF\u02B7\u02B9\u02B6\u02B8\u02BB\u02BA\u02B7\u02B8\u02B3;
 								return;
 							}
 						}
 					}
-					else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Flames")
+					else if (changedSetting == "Flames")
 					{
 						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02C0\u02B6\u02BC\u02BF\u02BF\u02C0\u02BF\u02BC\u02B4\u02B3\u02BC;
 					}
@@ -1527,12 +1527,12 @@ public class VideoSettingsMenu : BaseSettingMenu
 					{
 						if (num == 1510332853U)
 						{
-							if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Display"))
+							if (!(changedSetting == "Display"))
 							{
 							}
 						}
 					}
-					else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "MSAA Level")
+					else if (changedSetting == "MSAA Level")
 					{
 						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.msaaLevel;
 					}
@@ -1541,13 +1541,13 @@ public class VideoSettingsMenu : BaseSettingMenu
 				{
 					if (num == 1595303295U)
 					{
-						if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Show Mouse Cursor")
+						if (changedSetting == "Show Mouse Cursor")
 						{
 							this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.enable_cursor;
 						}
 					}
 				}
-				else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "SP Lightning")
+				else if (changedSetting == "SP Lightning")
 				{
 					this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02C1\u02B6\u02B5\u02C1\u02B7\u02BE\u02B5\u02B9\u02B9\u02BB\u02C1;
 				}
@@ -1560,13 +1560,13 @@ public class VideoSettingsMenu : BaseSettingMenu
 					{
 						if (num == 2086318127U)
 						{
-							if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Menu Backgrounds")
+							if (changedSetting == "Menu Backgrounds")
 							{
 								this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02B7\u02B9\u02B4\u02C1\u02B9\u02BC\u02B8\u02BD\u02BE\u02B5\u02B8;
 							}
 						}
 					}
-					else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "SP Colors")
+					else if (changedSetting == "SP Colors")
 					{
 						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02C1\u02BF\u02BC\u02B4\u02BE\u02B7\u02BD\u02BC\u02B5\u02BC\u02B7;
 					}
@@ -1575,13 +1575,13 @@ public class VideoSettingsMenu : BaseSettingMenu
 				{
 					if (num == 2897502726U)
 					{
-						if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Vsync")
+						if (changedSetting == "Vsync")
 						{
 							this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02B3\u02B2\u02BD\u02C1\u02B2\u02B4\u02B5\u02B3\u02C1\u02B2\u02B6;
 						}
 					}
 				}
-				else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Highway SP Effects")
+				else if (changedSetting == "Highway SP Effects")
 				{
 					this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02C1\u02B3\u02BA\u02B9\u02B4\u02B3\u02BB\u02B6\u02BC\u02BC\u02BB;
 				}
@@ -1592,13 +1592,13 @@ public class VideoSettingsMenu : BaseSettingMenu
 				{
 					if (num == 3134466500U)
 					{
-						if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Particles")
+						if (changedSetting == "Particles")
 						{
 							this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02C1\u02BF\u02B3\u02BF\u02C1\u02BC\u02BC\u02BA\u02BF\u02BD\u02BE;
 						}
 					}
 				}
-				else if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Resolution"))
+				else if (!(changedSetting == "Resolution"))
 				{
 				}
 			}
@@ -1606,13 +1606,13 @@ public class VideoSettingsMenu : BaseSettingMenu
 			{
 				if (num == 4135836962U)
 				{
-					if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Song Display")
+					if (changedSetting == "Song Display")
 					{
 						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02B3\u02B9\u02C1\u02BF\u02B2\u02B2\u02B6\u02BF\u02B4\u02B4\u02B2;
 					}
 				}
 			}
-			else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Framerate")
+			else if (changedSetting == "Framerate")
 			{
 				this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.fpsCap;
 			}
@@ -1623,18 +1623,18 @@ public class VideoSettingsMenu : BaseSettingMenu
 		this.\u02B5\u02B8\u02B6\u02B4\u02BB\u02B4\u02BF\u02BE\u02B5\u02BE\u02C1();
 		this.backgroundObjects[base.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC].sprite = this.\u02BD\u02BD\u02B6\u02C1\u02B6\u02BD\u02BA\u02B8\u02BE\u02BF\u02B9;
 		this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = null;
-		this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+		this.changedSetting = null;
 		this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 	}
 
 	protected virtual void \u02BC\u02C1\u02BD\u02B8\u02B9\u02BD\u02BB\u02B9\u02B5\u02B2\u02B6()
 	{
-		string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-		if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "SETLIST LENGTH") && !(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Blur Command Buffer") && !(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "setlistSongCountPlural") && !(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "notSupportedTitle") && !(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "song") && u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "New Setlist")
+		string changedSetting = this.changedSetting;
+		if (!(changedSetting == "SETLIST LENGTH") && !(changedSetting == "Blur Command Buffer") && !(changedSetting == "setlistSongCountPlural") && !(changedSetting == "notSupportedTitle") && !(changedSetting == "song") && changedSetting == "New Setlist")
 		{
 			Cursor.visible = this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC.GetBoolValue;
 		}
-		this.\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0(this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3);
+		this.\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0(this.changedSetting);
 	}
 
 	private IEnumerator \u02B6\u02B8\u02B4\u02C1\u02B4\u02BD\u02B2\u02BD\u02B2\u02B9\u02B5(int \u02B2\u02BB\u02C0\u02C0\u02BB\u02BB\u02B5\u02BE\u02BA\u02C0\u02BB)

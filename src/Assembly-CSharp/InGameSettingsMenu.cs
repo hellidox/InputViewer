@@ -12,7 +12,7 @@ public class InGameSettingsMenu : BaseMenu
 
 	public virtual void \u02BA\u02B7\u02B3\u02B3\u02B7\u02BD\u02BD\u02BA\u02C0\u02BE\u02BE()
 	{
-		string text = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
+		string text = base.currentSelectionString;
 		if (text == "latestTestBuild")
 		{
 			base.gameObject.SetActive(true);
@@ -29,7 +29,7 @@ public class InGameSettingsMenu : BaseMenu
 
 	public virtual void \u02C0\u02C1\u02BB\u02B8\u02BF\u02C0\u02BC\u02B8\u02BF\u02B8\u02B4()
 	{
-		string text = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
+		string text = base.currentSelectionString;
 		if (text == "Show Bot Score")
 		{
 			base.gameObject.SetActive(false);
@@ -46,7 +46,7 @@ public class InGameSettingsMenu : BaseMenu
 
 	public override void \u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3()
 	{
-		string text = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
+		string text = base.currentSelectionString;
 		if (text == "Volume")
 		{
 			base.gameObject.SetActive(false);
@@ -82,7 +82,7 @@ public class InGameSettingsMenu : BaseMenu
 
 	public virtual void \u02C0\u02BE\u02B9\u02B5\u02B6\u02C1\u02B5\u02C0\u02BE\u02B8\u02C1()
 	{
-		string text = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
+		string text = base.currentSelectionString;
 		if (text == "")
 		{
 			base.gameObject.SetActive(true);
@@ -118,7 +118,7 @@ public class InGameSettingsMenu : BaseMenu
 
 	public virtual void \u02BD\u02B3\u02B9\u02BD\u02B3\u02BE\u02B4\u02B9\u02BB\u02BE\u02B9()
 	{
-		string text = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
+		string text = base.currentSelectionString;
 		if (text == "Highways")
 		{
 			base.gameObject.SetActive(true);

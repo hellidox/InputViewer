@@ -25,7 +25,7 @@ public class SongOptions : BaseMenu
 	{
 		this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE = 0;
 		this.allowMultiLanguage = true;
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null)
+		if (this.changedSetting == null)
 		{
 			if (this.\u02C0\u02C1\u02BE\u02BF\u02B2\u02BC\u02C0\u02B4\u02B3\u02BD\u02C0 == 0)
 			{
@@ -50,14 +50,14 @@ public class SongOptions : BaseMenu
 		else
 		{
 			this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = null;
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+			this.changedSetting = null;
 			this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 		}
 	}
 
 	public override void \u02BB\u02B3\u02BF\u02BC\u02C1\u02BC\u02BC\u02C1\u02C0\u02B5\u02BA()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Song Speed")
+		if (this.changedSetting == "Song Speed")
 		{
 			this.\u02B4\u02B8\u02C0\u02BC\u02C1\u02C1\u02B7\u02B2\u02B2\u02B4\u02B9();
 		}
@@ -67,21 +67,21 @@ public class SongOptions : BaseMenu
 	{
 		this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE = 1;
 		this.allowMultiLanguage = false;
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != null)
+		if (this.changedSetting != null)
 		{
 			this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = null;
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+			this.changedSetting = null;
 			this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 			return;
 		}
 		if (this.\u02C0\u02C1\u02BE\u02BF\u02B2\u02BC\u02C0\u02B4\u02B3\u02BD\u02C0 == 6)
 		{
-			this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("{0:n0}", "Solid Solo!", "Drums", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02BC\u02BE\u02B8\u02BA\u02C0\u02B5\u02C0\u02BE\u02BF\u02BC\u02BA), null, null);
+			this.confirmMenu.Enable("{0:n0}", "Solid Solo!", "Drums", new ConfirmationMenu.CallFunc(this.\u02BC\u02BE\u02B8\u02BA\u02C0\u02B5\u02C0\u02BE\u02BF\u02BC\u02BA), null, null);
 			return;
 		}
 		if (this.\u02C0\u02C1\u02BE\u02BF\u02B2\u02BC\u02C0\u02B4\u02B3\u02BD\u02C0 != 6)
 		{
-			string text = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
+			string text = base.currentSelectionString;
 			uint num = PrivateImplementationDetails.ComputeStringHash(text);
 			if (num <= 4294967228U)
 			{
@@ -122,7 +122,7 @@ public class SongOptions : BaseMenu
 							this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02B3\u02B7\u02BE\u02B8\u02C1\u02BA\u02B5\u02B8\u02B2\u02B5\u02C0());
 							if (this.menuStrings == null || this.menuStrings.Length == 0)
 							{
-								this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("GHLBass", "6 Fret Bass Guitar", null, null, null, null);
+								this.confirmMenu.Enable("GHLBass", "6 Fret Bass Guitar", null, null, null, null);
 								this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.setlistOptions);
 								return;
 							}
@@ -160,7 +160,7 @@ public class SongOptions : BaseMenu
 							}
 							if (\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02C1\u02BC\u02B7\u02B8\u02B9\u02B4\u02BC\u02B9\u02B5\u02B8\u02B7(\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02BC\u02BD\u02BE\u02BB\u02B2\u02B8\u02C0\u02B6\u02BA\u02B9\u02B7) && \u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02B5\u02BC\u02B8\u02B9\u02B3\u02B6\u02C1\u02BA\u02C0\u02B9\u02BA != null)
 							{
-								this.confirmMenu.\u02B7\u02B3\u02BC\u02BE\u02BF\u02B7\u02B4\u02C0\u02B9\u02BC\u02BF("Ready", "", "Display", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02BB\u02BF\u02B5\u02BD\u02B4\u02B8\u02B9\u02BD\u02B8\u02C1\u02B7), null, null);
+								this.confirmMenu.\u02B7\u02B3\u02BC\u02BE\u02BF\u02B7\u02B4\u02C0\u02B9\u02BC\u02BF("Ready", "", "Display", new ConfirmationMenu.CallFunc(this.\u02BB\u02BF\u02B5\u02BD\u02B4\u02B8\u02B9\u02BD\u02B8\u02C1\u02B7), null, null);
 								return;
 							}
 							this.\u02BB\u02BF\u02B5\u02BD\u02B4\u02B8\u02B9\u02BD\u02B8\u02C1\u02B7();
@@ -341,7 +341,7 @@ public class SongOptions : BaseMenu
 						{
 							goto IL_0844;
 						}
-						this.confirmMenu.\u02B7\u02B3\u02BC\u02BE\u02BF\u02B7\u02B4\u02C0\u02B9\u02BC\u02BF("MIDI Profiles", "Editor", "#", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B7\u02BA\u02BD\u02BA\u02B7\u02BE\u02C1\u02B9\u02B5\u02BF\u02B2), null, null);
+						this.confirmMenu.\u02B7\u02B3\u02BC\u02BE\u02BF\u02B7\u02B4\u02C0\u02B9\u02BC\u02BF("MIDI Profiles", "Editor", "#", new ConfirmationMenu.CallFunc(this.\u02B7\u02BA\u02BD\u02BA\u02B7\u02BE\u02C1\u02B9\u02B5\u02BF\u02B2), null, null);
 						return;
 					}
 				}
@@ -433,7 +433,7 @@ public class SongOptions : BaseMenu
 					this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02B3\u02B7\u02BE\u02B8\u02C1\u02BA\u02B5\u02B8\u02B2\u02B5\u02C0());
 					if (this.menuStrings == null || this.menuStrings.Length == 0)
 					{
-						this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("part", "diff_coopghl", null, null, null, null);
+						this.confirmMenu.Enable("part", "diff_coopghl", null, null, null, null);
 						this.\u02B8\u02B5\u02B7\u02B7\u02B2\u02B6\u02BE\u02B3\u02B8\u02BD\u02BE(this.setlistOptions);
 						return;
 					}
@@ -497,11 +497,11 @@ public class SongOptions : BaseMenu
 			this.\u02B9\u02B9\u02BD\u02B2\u02B7\u02B4\u02C1\u02B7\u02BB\u02B2\u02B6();
 			return;
 			IL_0844:
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
+			this.changedSetting = base.currentSelectionString;
 			this.\u02B4\u02B8\u02C0\u02BC\u02C1\u02C1\u02B7\u02B2\u02B2\u02B4\u02B9();
 			return;
 		}
-		if (\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02BA\u02B9\u02B8\u02B9\u02BD\u02B8\u02B4\u02B9\u02B8\u02BE\u02B7(base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0))
+		if (\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02BA\u02B9\u02B8\u02B9\u02BD\u02B8\u02B4\u02B9\u02B8\u02BE\u02B7(base.currentSelectionString))
 		{
 			this.setlistMenu.\u02B8\u02BE\u02B3\u02B7\u02B2\u02B2\u02B5\u02B7\u02BB\u02BF\u02B3();
 			this.\u02B8\u02B5\u02B7\u02B7\u02B2\u02B6\u02BE\u02B3\u02B8\u02BD\u02BE(this.setlistOptionsActive);
@@ -542,11 +542,11 @@ public class SongOptions : BaseMenu
 	{
 		if (\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02B3\u02B5\u02C0\u02B2\u02BB\u02BD\u02BE\u02BB\u02BA\u02B7\u02B7(\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02BC\u02BD\u02BE\u02BB\u02B2\u02B8\u02C0\u02B6\u02BA\u02B9\u02B7))
 		{
-			this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("Setlist was saved", "Continue", null, null, null, null);
+			this.confirmMenu.Enable("Setlist was saved", "Continue", null, null, null, null);
 		}
 		else
 		{
-			this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("Problem saving setlist", "Continue", null, null, null, null);
+			this.confirmMenu.Enable("Problem saving setlist", "Continue", null, null, null, null);
 		}
 		base.\u02B7\u02B6\u02BC\u02BC\u02B3\u02BA\u02BE\u02C0\u02BF\u02B9\u02C1();
 	}
@@ -622,7 +622,7 @@ public class SongOptions : BaseMenu
 
 	private void \u02B4\u02B8\u02C0\u02BC\u02C1\u02C1\u02B7\u02B2\u02B2\u02B4\u02B9()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Song Speed")
+		if (this.changedSetting == "Song Speed")
 		{
 			this.textObjects[this.\u02B3\u02BF\u02BB\u02BB\u02B5\u02B7\u02B8\u02BE\u02B7\u02B3\u02B3].text = this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC.GetPercentString;
 			this.songSelect.\u02B3\u02C1\u02C0\u02B2\u02B9\u02BB\u02B6\u02B6\u02B4\u02C0\u02BB();
@@ -632,7 +632,7 @@ public class SongOptions : BaseMenu
 
 	private void \u02B4\u02BA\u02B9\u02BB\u02BE\u02BE\u02BC\u02BD\u02BC\u02BF\u02BE()
 	{
-		this.confirmMenu.\u02B7\u02B3\u02BC\u02BE\u02BF\u02B7\u02B4\u02C0\u02B9\u02BC\u02BF("Default Search By Current Sort", "album", "<uppercase>", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02C0\u02BC\u02C1\u02B3\u02B9\u02B2\u02B9\u02BB\u02B3\u02B7\u02B9), null, null);
+		this.confirmMenu.\u02B7\u02B3\u02BC\u02BE\u02BF\u02B7\u02B4\u02C0\u02B9\u02BC\u02BF("Default Search By Current Sort", "album", "<uppercase>", new ConfirmationMenu.CallFunc(this.\u02C0\u02BC\u02C1\u02B3\u02B9\u02B2\u02B9\u02BB\u02B3\u02B7\u02B9), null, null);
 	}
 
 	public virtual void \u02B7\u02B9\u02B8\u02C0\u02BC\u02B9\u02BC\u02B3\u02B9\u02C0\u02B3()
@@ -771,7 +771,7 @@ public class SongOptions : BaseMenu
 			\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02BC\u02BD\u02BE\u02BB\u02B2\u02B8\u02C0\u02B6\u02BA\u02B9\u02B7 = text;
 			if (\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02C1\u02BC\u02B7\u02B8\u02B9\u02B4\u02BC\u02B9\u02B5\u02B8\u02B7(\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02BC\u02BD\u02BE\u02BB\u02B2\u02B8\u02C0\u02B6\u02BA\u02B9\u02B7))
 			{
-				this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("A setlist with that name already exists", "Overwrite", "Cancel", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02BB\u02BF\u02B5\u02BD\u02B4\u02B8\u02B9\u02BD\u02B8\u02C1\u02B7), null, null);
+				this.confirmMenu.Enable("A setlist with that name already exists", "Overwrite", "Cancel", new ConfirmationMenu.CallFunc(this.\u02BB\u02BF\u02B5\u02BD\u02B4\u02B8\u02B9\u02BD\u02B8\u02C1\u02B7), null, null);
 			}
 			else
 			{
@@ -809,7 +809,7 @@ public class SongOptions : BaseMenu
 
 	public virtual void \u02B5\u02C0\u02B9\u02B3\u02B8\u02BB\u02B6\u02B4\u02C0\u02BB\u02BA()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == ".ini")
+		if (this.changedSetting == ".ini")
 		{
 			this.\u02C0\u02BC\u02C0\u02BF\u02C1\u02B9\u02BD\u02B9\u02B2\u02BC\u02BA();
 		}
@@ -826,7 +826,7 @@ public class SongOptions : BaseMenu
 
 	public virtual void \u02BB\u02B3\u02BB\u02B7\u02C1\u02B7\u02B2\u02B8\u02B7\u02BB\u02BF()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Enabled")
+		if (this.changedSetting == "Enabled")
 		{
 			this.\u02B4\u02B8\u02C0\u02BC\u02C1\u02C1\u02B7\u02B2\u02B2\u02B4\u02B9();
 		}
@@ -887,7 +887,7 @@ public class SongOptions : BaseMenu
 		base.gameObject.SetActive(false);
 		if (flag)
 		{
-			this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("There was an error deleting the file", "Continue", null, null, null, null);
+			this.confirmMenu.Enable("There was an error deleting the file", "Continue", null, null, null, null);
 		}
 		base.\u02B7\u02B6\u02BC\u02BC\u02B3\u02BA\u02BE\u02C0\u02BF\u02B9\u02C1();
 	}
@@ -910,21 +910,21 @@ public class SongOptions : BaseMenu
 	{
 		this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE = 0;
 		this.allowMultiLanguage = true;
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != null)
+		if (this.changedSetting != null)
 		{
 			this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = null;
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+			this.changedSetting = null;
 			this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 			return;
 		}
 		if (this.\u02C0\u02C1\u02BE\u02BF\u02B2\u02BC\u02C0\u02B4\u02B3\u02BD\u02C0 == 3)
 		{
-			this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("setlistDeleteDialog", "Yes", "No", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02BC\u02BE\u02B8\u02BA\u02C0\u02B5\u02C0\u02BE\u02BF\u02BC\u02BA), null, null);
+			this.confirmMenu.Enable("setlistDeleteDialog", "Yes", "No", new ConfirmationMenu.CallFunc(this.\u02BC\u02BE\u02B8\u02BA\u02C0\u02B5\u02C0\u02BE\u02BF\u02BC\u02BA), null, null);
 			return;
 		}
 		if (this.\u02C0\u02C1\u02BE\u02BF\u02B2\u02BC\u02C0\u02B4\u02B3\u02BD\u02C0 != 4)
 		{
-			string text = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
+			string text = base.currentSelectionString;
 			uint num = PrivateImplementationDetails.ComputeStringHash(text);
 			if (num <= 2242673754U)
 			{
@@ -965,7 +965,7 @@ public class SongOptions : BaseMenu
 							this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02B3\u02B7\u02BE\u02B8\u02C1\u02BA\u02B5\u02B8\u02B2\u02B5\u02C0());
 							if (this.menuStrings == null || this.menuStrings.Length == 0)
 							{
-								this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("setlistNoSavedDialog", "Continue", null, null, null, null);
+								this.confirmMenu.Enable("setlistNoSavedDialog", "Continue", null, null, null, null);
 								this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.setlistOptions);
 								return;
 							}
@@ -1003,7 +1003,7 @@ public class SongOptions : BaseMenu
 							}
 							if (\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02C1\u02BC\u02B7\u02B8\u02B9\u02B4\u02BC\u02B9\u02B5\u02B8\u02B7(\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02BC\u02BD\u02BE\u02BB\u02B2\u02B8\u02C0\u02B6\u02BA\u02B9\u02B7) && \u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02B5\u02BC\u02B8\u02B9\u02B3\u02B6\u02C1\u02BA\u02C0\u02B9\u02BA != null)
 							{
-								this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("A setlist with that name already exists", "Overwrite", "Cancel", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02BB\u02BF\u02B5\u02BD\u02B4\u02B8\u02B9\u02BD\u02B8\u02C1\u02B7), null, null);
+								this.confirmMenu.Enable("A setlist with that name already exists", "Overwrite", "Cancel", new ConfirmationMenu.CallFunc(this.\u02BB\u02BF\u02B5\u02BD\u02B4\u02B8\u02B9\u02BD\u02B8\u02C1\u02B7), null, null);
 								return;
 							}
 							this.\u02BB\u02BF\u02B5\u02BD\u02B4\u02B8\u02B9\u02BD\u02B8\u02C1\u02B7();
@@ -1155,7 +1155,7 @@ public class SongOptions : BaseMenu
 							{
 								goto IL_0844;
 							}
-							this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("Yo dawg, I heard you like lanes so this activates lanes!", "Enable", "Cancel", null, null, null);
+							this.confirmMenu.Enable("Yo dawg, I heard you like lanes so this activates lanes!", "Enable", "Cancel", null, null, null);
 							return;
 						}
 						else
@@ -1184,7 +1184,7 @@ public class SongOptions : BaseMenu
 						{
 							goto IL_0844;
 						}
-						this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("Are you sure you want to delete this song?", "Yes", "No", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B3\u02BD\u02C0\u02BD\u02BC\u02BE\u02BD\u02B6\u02BB\u02B8\u02B2), null, null);
+						this.confirmMenu.Enable("Are you sure you want to delete this song?", "Yes", "No", new ConfirmationMenu.CallFunc(this.\u02B3\u02BD\u02C0\u02BD\u02BC\u02BE\u02BD\u02B6\u02BB\u02B8\u02B2), null, null);
 						return;
 					}
 				}
@@ -1276,7 +1276,7 @@ public class SongOptions : BaseMenu
 					this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02B3\u02B7\u02BE\u02B8\u02C1\u02BA\u02B5\u02B8\u02B2\u02B5\u02C0());
 					if (this.menuStrings == null || this.menuStrings.Length == 0)
 					{
-						this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("setlistNoSavedDialog", "Continue", null, null, null, null);
+						this.confirmMenu.Enable("setlistNoSavedDialog", "Continue", null, null, null, null);
 						this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.setlistOptions);
 						return;
 					}
@@ -1305,7 +1305,7 @@ public class SongOptions : BaseMenu
 					{
 						goto IL_0844;
 					}
-					this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("This mode is so secret, no one knows what it does!", "Enable", "Cancel", null, null, null);
+					this.confirmMenu.Enable("This mode is so secret, no one knows what it does!", "Enable", "Cancel", null, null, null);
 					return;
 				}
 			}
@@ -1340,23 +1340,23 @@ public class SongOptions : BaseMenu
 			this.\u02B9\u02B9\u02BD\u02B2\u02B7\u02B4\u02C1\u02B7\u02BB\u02B2\u02B6();
 			return;
 			IL_0844:
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
+			this.changedSetting = base.currentSelectionString;
 			this.\u02B4\u02B8\u02C0\u02BC\u02C1\u02C1\u02B7\u02B2\u02B2\u02B4\u02B9();
 			return;
 		}
-		if (\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02BA\u02B9\u02B8\u02B9\u02BD\u02B8\u02B4\u02B9\u02B8\u02BE\u02B7(base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0))
+		if (\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02BA\u02B9\u02B8\u02B9\u02BD\u02B8\u02B4\u02B9\u02B8\u02BE\u02B7(base.currentSelectionString))
 		{
 			this.setlistMenu.\u02BF\u02BC\u02C1\u02BC\u02B4\u02C0\u02B5\u02BE\u02BD\u02B9\u02B6();
 			this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.setlistOptionsActive);
 			return;
 		}
-		this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("setlistErrorDialog", "Continue", null, null, null, null);
+		this.confirmMenu.Enable("setlistErrorDialog", "Continue", null, null, null, null);
 		this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.setlistOptions);
 	}
 
 	private void \u02C0\u02BC\u02C0\u02BF\u02C1\u02B9\u02BD\u02B9\u02B2\u02BC\u02BA()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Audio")
+		if (this.changedSetting == "Audio")
 		{
 			this.textObjects[this.\u02B3\u02BF\u02BB\u02BB\u02B5\u02B7\u02B8\u02BE\u02B7\u02B3\u02B3].text = this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC.GetPercentString;
 			this.songSelect.\u02B3\u02C1\u02C0\u02B2\u02B9\u02BB\u02B6\u02B6\u02B4\u02C0\u02BB();
@@ -1366,7 +1366,7 @@ public class SongOptions : BaseMenu
 
 	private void \u02B3\u02BD\u02C0\u02BD\u02BC\u02BE\u02BD\u02B6\u02BB\u02B8\u02B2()
 	{
-		this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("This is permanent! Are you still sure?", "Get rid of it", "Cancel", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02C0\u02BC\u02C1\u02B3\u02B9\u02B2\u02B9\u02BB\u02B3\u02B7\u02B9), null, null);
+		this.confirmMenu.Enable("This is permanent! Are you still sure?", "Get rid of it", "Cancel", new ConfirmationMenu.CallFunc(this.\u02C0\u02BC\u02C1\u02B3\u02B9\u02B2\u02B9\u02BB\u02B3\u02B7\u02B9), null, null);
 	}
 
 	private void \u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(string[] \u02BC\u02C0\u02B2\u02B5\u02BE\u02B7\u02C1\u02B4\u02B7\u02BD\u02C0)
@@ -1427,7 +1427,7 @@ public class SongOptions : BaseMenu
 
 	public override void \u02BD\u02B9\u02BE\u02BB\u02B9\u02BA\u02B5\u02BC\u02BE\u02C1\u02B2()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Song Speed")
+		if (this.changedSetting == "Song Speed")
 		{
 			this.\u02B4\u02B8\u02C0\u02BC\u02C1\u02C1\u02B7\u02B2\u02B2\u02B4\u02B9();
 		}
@@ -1497,13 +1497,13 @@ public class SongOptions : BaseMenu
 
 	private void \u02B7\u02BA\u02BD\u02BA\u02B7\u02BE\u02C1\u02B9\u02B5\u02BF\u02B2()
 	{
-		this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("Intensity - Pro Drums", "Please wait while the song is loaded.", "'>", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02C0\u02BC\u02C1\u02B3\u02B9\u02B2\u02B9\u02BB\u02B3\u02B7\u02B9), null, null);
+		this.confirmMenu.Enable("Intensity - Pro Drums", "Please wait while the song is loaded.", "'>", new ConfirmationMenu.CallFunc(this.\u02C0\u02BC\u02C1\u02B3\u02B9\u02B2\u02B9\u02BB\u02B3\u02B7\u02B9), null, null);
 	}
 
 	public override void \u02C1\u02B3\u02BC\u02B6\u02BD\u02B6\u02BF\u02B7\u02BB\u02B5\u02BB()
 	{
 		this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE = 0;
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null)
+		if (this.changedSetting == null)
 		{
 			base.\u02C1\u02B3\u02BC\u02B6\u02BD\u02B6\u02BF\u02B7\u02BB\u02B5\u02BB();
 			return;
@@ -1514,7 +1514,7 @@ public class SongOptions : BaseMenu
 
 	public virtual void \u02BE\u02C0\u02C0\u02BB\u02B2\u02BD\u02BA\u02BE\u02BC\u02B9\u02BE()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Song")
+		if (this.changedSetting == "Song")
 		{
 			this.\u02C0\u02BC\u02C0\u02BF\u02C1\u02B9\u02BD\u02B9\u02B2\u02BC\u02BA();
 		}
@@ -1551,7 +1551,7 @@ public class SongOptions : BaseMenu
 	public override void \u02B7\u02BA\u02C0\u02B8\u02BE\u02BA\u02BD\u02B4\u02BB\u02B3\u02B6()
 	{
 		this.\u02BD\u02BD\u02B8\u02BE\u02B4\u02BC\u02BD\u02C1\u02BB\u02C0\u02BE = 0;
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null)
+		if (this.changedSetting == null)
 		{
 			base.\u02B7\u02BA\u02C0\u02B8\u02BE\u02BA\u02BD\u02B4\u02BB\u02B3\u02B6();
 			return;
@@ -1562,7 +1562,7 @@ public class SongOptions : BaseMenu
 
 	private void \u02BC\u02BE\u02B8\u02BA\u02C0\u02B5\u02C0\u02BE\u02BF\u02BC\u02BA()
 	{
-		\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02BC\u02BE\u02B8\u02BA\u02C0\u02B5\u02C0\u02BE\u02BF\u02BC\u02BA(base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0);
+		\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02BC\u02BE\u02B8\u02BA\u02C0\u02B5\u02C0\u02BE\u02BF\u02BC\u02BA(base.currentSelectionString);
 		this.\u02BE\u02B7\u02B2\u02B3\u02B5\u02B7\u02B7\u02B9\u02B3\u02BF\u02BC(this.setlistOptions);
 		\u02B5\u02B5\u02BA\u02B3\u02BC\u02BA\u02C0\u02B7\u02B6\u02BC\u02B9.\u02BC\u02BD\u02BE\u02BB\u02B2\u02B8\u02C0\u02B6\u02BA\u02B9\u02B7 = null;
 		base.\u02B7\u02B6\u02BC\u02BC\u02B3\u02BA\u02BE\u02C0\u02BF\u02B9\u02C1();

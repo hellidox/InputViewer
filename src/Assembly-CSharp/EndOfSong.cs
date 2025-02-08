@@ -108,7 +108,7 @@ public class EndOfSong : MonoBehaviour
 		{
 			if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02B8\u02BE\u02C1\u02B8\u02B7\u02B4\u02BA\u02BF\u02B7\u02BE.rewiredPlayer.GetButtonDown(1))
 			{
-				this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("Are you sure you want to quit?", "Yes", "No", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02BA\u02BD\u02B4\u02B2\u02BC\u02B3\u02B9\u02B2\u02C0\u02B2\u02B2), null, null);
+				this.confirmMenu.Enable("Are you sure you want to quit?", "Yes", "No", new ConfirmationMenu.CallFunc(this.\u02BA\u02BD\u02B4\u02B2\u02BC\u02B3\u02B9\u02B2\u02C0\u02B2\u02B2), null, null);
 				return;
 			}
 			if (CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02BE\u02BD\u02B6\u02BD\u02B6\u02BF\u02B4\u02BA\u02B3\u02BD && GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02B8\u02BE\u02C1\u02B8\u02B7\u02B4\u02BA\u02BF\u02B7\u02BE.rewiredPlayer.GetButtonDown(0))

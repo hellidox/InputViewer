@@ -7,19 +7,19 @@ public class AudioSettingsMenu : BaseSettingMenu
 {
 	protected override void \u02BA\u02BB\u02B5\u02B6\u02B3\u02BD\u02BA\u02BC\u02B2\u02BB\u02B5()
 	{
-		this.\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0(this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3);
+		this.\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0(this.changedSetting);
 		this.\u02BC\u02C1\u02C1\u02BB\u02BD\u02BF\u02BA\u02C1\u02C0\u02BF\u02BE();
 	}
 
 	public override void \u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3()
 	{
 		GlobalVariables u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7;
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null)
+		if (this.changedSetting == null)
 		{
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
+			this.changedSetting = base.currentSelectionString;
 			this.backgroundObjects[base.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC].sprite = this.\u02B4\u02BA\u02B4\u02B2\u02B9\u02BF\u02BB\u02BE\u02B2\u02B9\u02B9;
-			string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-			uint num = PrivateImplementationDetails.ComputeStringHash(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B);
+			string changedSetting = this.changedSetting;
+			uint num = PrivateImplementationDetails.ComputeStringHash(changedSetting);
 			if (num <= 2242673754U)
 			{
 				if (num <= 559764484U)
@@ -30,13 +30,13 @@ public class AudioSettingsMenu : BaseSettingMenu
 						{
 							if (num == 229110729U)
 							{
-								if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Audio Backend")
+								if (changedSetting == "Audio Backend")
 								{
 									this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.audioBackend;
 								}
 							}
 						}
-						else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Whammy SFX")
+						else if (changedSetting == "Whammy SFX")
 						{
 							this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.whammy_sfx;
 						}
@@ -45,13 +45,13 @@ public class AudioSettingsMenu : BaseSettingMenu
 					{
 						if (num == 559764484U)
 						{
-							if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Preview Music")
+							if (changedSetting == "Preview Music")
 							{
 								this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.preview_volume;
 							}
 						}
 					}
-					else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Vocals")
+					else if (changedSetting == "Vocals")
 					{
 						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.volume_Stems[3];
 					}
@@ -62,13 +62,13 @@ public class AudioSettingsMenu : BaseSettingMenu
 					{
 						if (num == 1279923219U)
 						{
-							if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Audio Latency")
+							if (changedSetting == "Audio Latency")
 							{
 								this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.latency_mode;
 							}
 						}
 					}
-					else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Master Volume")
+					else if (changedSetting == "Master Volume")
 					{
 						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.master_volume;
 					}
@@ -77,13 +77,13 @@ public class AudioSettingsMenu : BaseSettingMenu
 				{
 					if (num == 2242673754U)
 					{
-						if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Drums")
+						if (changedSetting == "Drums")
 						{
 							this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.volume_Stems[6];
 						}
 					}
 				}
-				else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Keys")
+				else if (changedSetting == "Keys")
 				{
 					this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.volume_Stems[11];
 				}
@@ -96,13 +96,13 @@ public class AudioSettingsMenu : BaseSettingMenu
 					{
 						if (num == 2441828660U)
 						{
-							if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Song")
+							if (changedSetting == "Song")
 							{
 								this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.volume_Stems[12];
 							}
 						}
 					}
-					else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Drums Freestyle")
+					else if (changedSetting == "Drums Freestyle")
 					{
 						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.freestyle_drums;
 					}
@@ -111,13 +111,13 @@ public class AudioSettingsMenu : BaseSettingMenu
 				{
 					if (num == 3022894065U)
 					{
-						if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Rhythm")
+						if (changedSetting == "Rhythm")
 						{
 							this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.volume_Stems[2];
 						}
 					}
 				}
-				else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Menu Music")
+				else if (changedSetting == "Menu Music")
 				{
 					this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.menu_volume;
 				}
@@ -128,13 +128,13 @@ public class AudioSettingsMenu : BaseSettingMenu
 				{
 					if (num == 3411634414U)
 					{
-						if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Crowd")
+						if (changedSetting == "Crowd")
 						{
 							this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.volume_Stems[13];
 						}
 					}
 				}
-				else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Bass")
+				else if (changedSetting == "Bass")
 				{
 					this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.volume_Stems[1];
 				}
@@ -145,18 +145,18 @@ public class AudioSettingsMenu : BaseSettingMenu
 				{
 					if (num == 4188053186U)
 					{
-						if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Sound Effects")
+						if (changedSetting == "Sound Effects")
 						{
 							this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.sounds;
 						}
 					}
 				}
-				else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Guitar")
+				else if (changedSetting == "Guitar")
 				{
 					this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.volume_Stems[0];
 				}
 			}
-			else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Track Mute")
+			else if (changedSetting == "Track Mute")
 			{
 				this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.mute_volume;
 			}
@@ -166,7 +166,7 @@ public class AudioSettingsMenu : BaseSettingMenu
 		this.\u02B5\u02B8\u02B6\u02B4\u02BB\u02B4\u02BF\u02BE\u02B5\u02BE\u02C1();
 		this.backgroundObjects[base.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC].sprite = this.\u02BD\u02BD\u02B6\u02C1\u02B6\u02BD\u02BA\u02B8\u02BE\u02BF\u02B9;
 		this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = null;
-		this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+		this.changedSetting = null;
 		this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 	}
 
@@ -354,12 +354,12 @@ public class AudioSettingsMenu : BaseSettingMenu
 
 	private void \u02BC\u02C1\u02C1\u02BB\u02BD\u02BF\u02BA\u02C1\u02C0\u02BF\u02BE()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Master Volume")
+		if (this.changedSetting == "Master Volume")
 		{
 			BassAudioManager.Instance.\u02BD\u02BB\u02B3\u02B3\u02B3\u02BA\u02B6\u02B6\u02C0\u02B9\u02B3(SettingsController.menu_volume.GetCurrentVolume);
 			return;
 		}
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Menu Music")
+		if (this.changedSetting == "Menu Music")
 		{
 			if (this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC.CurrentValue == 0)
 			{
@@ -371,14 +371,14 @@ public class AudioSettingsMenu : BaseSettingMenu
 
 	protected override void \u02B5\u02B8\u02B6\u02B4\u02BB\u02B4\u02BF\u02BE\u02B5\u02BE\u02C1()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Audio Latency")
+		if (this.changedSetting == "Audio Latency")
 		{
 			this.menuMusic.\u02B3\u02BE\u02B8\u02B5\u02C0\u02B8\u02BF\u02C0\u02B3\u02B7\u02B7(true);
 			BassAudioManager.Instance.\u02B7\u02B9\u02B2\u02C0\u02B8\u02B6\u02BE\u02C0\u02B5\u02B4\u02B6();
 			this.menuMusic.\u02B9\u02BF\u02B3\u02C1\u02B9\u02B2\u02B9\u02BA\u02B8\u02B5\u02B9();
 			return;
 		}
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Audio Backend")
+		if (this.changedSetting == "Audio Backend")
 		{
 			this.menuMusic.\u02B3\u02BE\u02B8\u02B5\u02C0\u02B8\u02BF\u02C0\u02B3\u02B7\u02B7(true);
 			BassAudioManager.Instance.\u02B7\u02B9\u02B2\u02C0\u02B8\u02B6\u02BE\u02C0\u02B5\u02B4\u02B6();
@@ -709,12 +709,12 @@ public class AudioSettingsMenu : BaseSettingMenu
 
 	private void \u02BD\u02BB\u02B5\u02B4\u02BF\u02B3\u02B3\u02B6\u02B4\u02B8\u02C1()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "")
+		if (this.changedSetting == "")
 		{
 			BassAudioManager.Instance.\u02BD\u02BB\u02B3\u02B3\u02B3\u02BA\u02B6\u02B6\u02C0\u02B9\u02B3(SettingsController.menu_volume.GetCurrentVolume);
 			return;
 		}
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "#")
+		if (this.changedSetting == "#")
 		{
 			if (this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC.CurrentValue == 0)
 			{
@@ -900,7 +900,7 @@ public class AudioSettingsMenu : BaseSettingMenu
 
 	protected virtual void \u02BB\u02BA\u02BE\u02B3\u02BA\u02B6\u02B9\u02B7\u02BD\u02BA\u02B3()
 	{
-		this.\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0(this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3);
+		this.\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0(this.changedSetting);
 		this.\u02BC\u02C1\u02C1\u02BB\u02BD\u02BF\u02BA\u02C1\u02C0\u02BF\u02BE();
 	}
 

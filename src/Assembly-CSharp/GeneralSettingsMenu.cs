@@ -175,15 +175,15 @@ public class GeneralSettingsMenu : BaseSettingMenu
 
 	protected override void \u02BA\u02BB\u02B5\u02B6\u02B3\u02BD\u02BA\u02BC\u02B2\u02BB\u02B5()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null || this.songScan.\u02B7\u02B4\u02BF\u02BE\u02BA\u02BF\u02BE\u02B9\u02BD\u02B2\u02BA || this.confirmMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
+		if (this.changedSetting == null || this.songScan.\u02B7\u02B4\u02BF\u02BE\u02BA\u02BF\u02BE\u02B9\u02BD\u02B2\u02BA || this.confirmMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
 		{
 			return;
 		}
-		string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-		string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B2 = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-		if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B2 == "Language"))
+		string changedSetting = this.changedSetting;
+		string changedSetting2 = this.changedSetting;
+		if (!(changedSetting2 == "Language"))
 		{
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B2 == "Show Full Playlist")
+			if (changedSetting2 == "Show Full Playlist")
 			{
 				\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02C1\u02BC\u02B6\u02C1\u02B4\u02B6\u02BC\u02BA\u02B3\u02BE\u02B8();
 			}
@@ -192,7 +192,7 @@ public class GeneralSettingsMenu : BaseSettingMenu
 		{
 			this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[0].text = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BC\u02C0\u02B5\u02BD\u02B2\u02BC\u02BA\u02BC\u02B9\u02B6\u02B6[this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC.CurrentValue];
 		}
-		this.\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0(this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3);
+		this.\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0(this.changedSetting);
 	}
 
 	protected override GameSetting GetSettingFromString(string \u02BC\u02BE\u02B6\u02B7\u02BD\u02B6\u02B3\u02B5\u02B3\u02BE\u02C0)
@@ -363,11 +363,11 @@ public class GeneralSettingsMenu : BaseSettingMenu
 	public virtual void \u02B3\u02C1\u02B8\u02BA\u02B2\u02B8\u02B5\u02B6\u02B2\u02B5\u02BA()
 	{
 		GlobalVariables u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7;
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null)
+		if (this.changedSetting == null)
 		{
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
-			string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-			uint num = PrivateImplementationDetails.ComputeStringHash(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B);
+			this.changedSetting = base.currentSelectionString;
+			string changedSetting = this.changedSetting;
+			uint num = PrivateImplementationDetails.ComputeStringHash(changedSetting);
 			if (num <= 119U)
 			{
 				if (num <= 4294967133U)
@@ -378,15 +378,15 @@ public class GeneralSettingsMenu : BaseSettingMenu
 						{
 							if (num == 4294967100U)
 							{
-								if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Ready")
+								if (changedSetting == "Ready")
 								{
 									Helper.\u02BA\u02BB\u02B7\u02B4\u02B2\u02BC\u02B4\u02B2\u02B9\u02B3\u02BD(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B5\u02BB\u02B7\u02BB\u02B8\u02B5\u02B9\u02BA\u02B3\u02B8\u02BA);
-									this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+									this.changedSetting = null;
 									return;
 								}
 							}
 						}
-						else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "{\"icons\":")
+						else if (changedSetting == "{\"icons\":")
 						{
 							this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.auto_screenshot;
 						}
@@ -397,18 +397,18 @@ public class GeneralSettingsMenu : BaseSettingMenu
 						{
 							if (num == 15U)
 							{
-								if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "album.jpg")
+								if (changedSetting == "album.jpg")
 								{
 									this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.showremotenames;
 								}
 							}
 						}
-						else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "{0}, {1}, {2}")
+						else if (changedSetting == "{0}, {1}, {2}")
 						{
 							this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.drum_pad_scrolling;
 						}
 					}
-					else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "loading_phrase")
+					else if (changedSetting == "loading_phrase")
 					{
 						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = \u02BF\u02B3\u02B6\u02B5\u02C1\u02B5\u02B3\u02BF\u02B7\u02B4\u02B9.\u02B9\u02C1\u02BE\u02B3\u02B5\u02B6\u02C0\u02BA\u02B9\u02B5\u02B4;
 					}
@@ -421,22 +421,22 @@ public class GeneralSettingsMenu : BaseSettingMenu
 						{
 							if (num == 155U)
 							{
-								if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "part drums")
+								if (changedSetting == "part drums")
 								{
 									Helper.\u02BA\u02BB\u02B7\u02B4\u02B2\u02BC\u02B4\u02B2\u02B9\u02B3\u02BD(GameLogManager.\u02BA\u02BF\u02B2\u02B6\u02B6\u02B5\u02BE\u02BF\u02BD\u02B4\u02BF());
-									this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+									this.changedSetting = null;
 									return;
 								}
 							}
 						}
-						else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Guitar Coop")
+						else if (changedSetting == "Guitar Coop")
 						{
-							this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("playerCount", "Received too many song start packets!", "Classic", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B2\u02BE\u02B8\u02B3\u02BC\u02B3\u02C1\u02B3\u02C1\u02BB\u02BE), null, null);
-							this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+							this.confirmMenu.Enable("playerCount", "Received too many song start packets!", "Classic", new ConfirmationMenu.CallFunc(this.\u02B2\u02BE\u02B8\u02B3\u02BC\u02B3\u02C1\u02B3\u02C1\u02BB\u02BE), null, null);
+							this.changedSetting = null;
 							return;
 						}
 					}
-					else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Song Offset")
+					else if (changedSetting == "Song Offset")
 					{
 						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = \u02BF\u02B3\u02B6\u02B5\u02C1\u02B5\u02B3\u02BF\u02B7\u02B4\u02B9.\u02B3\u02BD\u02B9\u02B4\u02C0\u02B2\u02B4\u02BF\u02BD\u02B9\u02C1;
 					}
@@ -447,18 +447,18 @@ public class GeneralSettingsMenu : BaseSettingMenu
 					{
 						if (num == 61U)
 						{
-							if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "highway_")
+							if (changedSetting == "highway_")
 							{
 								this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02BC\u02BA\u02BE\u02BB\u02B7\u02BE\u02BD\u02BE\u02BC\u02B2\u02B7;
 							}
 						}
 					}
-					else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Kick")
+					else if (changedSetting == "Kick")
 					{
 						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.highwayplacement;
 					}
 				}
-				else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "hasMedium")
+				else if (changedSetting == "hasMedium")
 				{
 					this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = \u02BF\u02B3\u02B6\u02B5\u02C1\u02B5\u02B3\u02BF\u02B7\u02B4\u02B9.\u02BC\u02BB\u02BD\u02B5\u02BD\u02B5\u02B5\u02BD\u02B9\u02BA\u02BF;
 				}
@@ -473,20 +473,20 @@ public class GeneralSettingsMenu : BaseSettingMenu
 						{
 							if (num == 16U)
 							{
-								if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "t1 gems")
+								if (changedSetting == "t1 gems")
 								{
 									this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = \u02BF\u02B3\u02B6\u02B5\u02C1\u02B5\u02B3\u02BF\u02B7\u02B4\u02B9.\u02BB\u02BC\u02B7\u02B9\u02BF\u02C1\u02C1\u02B6\u02B9\u02B6\u02C1;
 								}
 							}
 						}
-						else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Are you sure you want to quit?")
+						else if (changedSetting == "Are you sure you want to quit?")
 						{
 							SongPathsManager.\u02C1\u02B5\u02C0\u02B4\u02BD\u02BD\u02BD\u02BD\u02C1\u02BE\u02B2();
-							this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+							this.changedSetting = null;
 							return;
 						}
 					}
-					else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "You must restart, settings were changed")
+					else if (changedSetting == "You must restart, settings were changed")
 					{
 						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = \u02BF\u02B3\u02B6\u02B5\u02C1\u02B5\u02B3\u02BF\u02B7\u02B4\u02B9.\u02B4\u02B9\u02B5\u02B7\u02BA\u02C0\u02B6\u02BE\u02BB\u02B7\u02C0;
 					}
@@ -497,20 +497,20 @@ public class GeneralSettingsMenu : BaseSettingMenu
 					{
 						if (num == 76U)
 						{
-							if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Dynamics Threshold")
+							if (changedSetting == "Dynamics Threshold")
 							{
 								this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.language;
 							}
 						}
 					}
-					else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Played")
+					else if (changedSetting == "Played")
 					{
 						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.force_remote_righty;
 					}
 				}
-				else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "song")
+				else if (changedSetting == "song")
 				{
-					this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+					this.changedSetting = null;
 					if (this.songScan.\u02B8\u02B3\u02BA\u02B6\u02BA\u02BF\u02B3\u02B5\u02B7\u02B8\u02B6)
 					{
 						this.confirmMenu.\u02B7\u02B3\u02BC\u02BE\u02BF\u02B7\u02B4\u02C0\u02B9\u02BC\u02BF("star_deployed", ">", null, null, null, null);
@@ -528,26 +528,26 @@ public class GeneralSettingsMenu : BaseSettingMenu
 					{
 						if (num == 4294967114U)
 						{
-							if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Ball(Clone)")
+							if (changedSetting == "Ball(Clone)")
 							{
-								this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+								this.changedSetting = null;
 								this.analyticsMenu.SetActive(false);
 							}
 						}
 					}
-					else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Text resource in language file '{0}' c")
+					else if (changedSetting == "Text resource in language file '{0}' c")
 					{
-						this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+						this.changedSetting = null;
 						if (this.songScan.\u02B8\u02B3\u02BA\u02B6\u02BA\u02BF\u02B3\u02B5\u02B7\u02B8\u02B6)
 						{
-							this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("song", "Show in File Explorer", null, null, null, null);
+							this.confirmMenu.Enable("song", "Show in File Explorer", null, null, null, null);
 							return;
 						}
 						base.StartCoroutine(this.\u02B7\u02BE\u02BF\u02B6\u02BE\u02BC\u02C0\u02B6\u02B4\u02B3\u02BB(true));
 						return;
 					}
 				}
-				else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "particles")
+				else if (changedSetting == "particles")
 				{
 					this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02BA\u02BF\u02BF\u02B7\u02B4\u02B6\u02BD\u02BC\u02BE\u02B5\u02BA;
 				}
@@ -558,22 +558,22 @@ public class GeneralSettingsMenu : BaseSettingMenu
 				{
 					if (num == 4294967232U)
 					{
-						if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "More Stats")
+						if (changedSetting == "More Stats")
 						{
 							this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.only_show_local_players;
 						}
 					}
 				}
-				else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "")
+				else if (changedSetting == "")
 				{
 					this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.full_playlist;
 				}
 			}
-			else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == " cannot find next node called ")
+			else if (changedSetting == " cannot find next node called ")
 			{
-				this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+				this.changedSetting = null;
 				SettingsController.\u02BF\u02BC\u02B2\u02B5\u02C0\u02B5\u02B4\u02C0\u02B3\u02B3\u02BF.Reset();
-				this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("charter", "songs.json", null, null, null, null);
+				this.confirmMenu.Enable("charter", "songs.json", null, null, null, null);
 				return;
 			}
 			this.\u02BA\u02BB\u02B5\u02B6\u02B3\u02BD\u02BA\u02BC\u02B2\u02BB\u02B5();
@@ -583,21 +583,21 @@ public class GeneralSettingsMenu : BaseSettingMenu
 		this.\u02B5\u02B8\u02B6\u02B4\u02BB\u02B4\u02BF\u02BE\u02B5\u02BE\u02C1();
 		this.backgroundObjects[base.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC].sprite = this.\u02BD\u02BD\u02B6\u02C1\u02B6\u02BD\u02BA\u02B8\u02BE\u02BF\u02B9;
 		this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = null;
-		this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+		this.changedSetting = null;
 		this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 	}
 
 	protected virtual void \u02BB\u02BA\u02BE\u02B3\u02BA\u02B6\u02B9\u02B7\u02BD\u02BA\u02B3()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null || this.songScan.\u02B7\u02B4\u02BF\u02BE\u02BA\u02BF\u02BE\u02B9\u02BD\u02B2\u02BA || this.confirmMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
+		if (this.changedSetting == null || this.songScan.\u02B7\u02B4\u02BF\u02BE\u02BA\u02BF\u02BE\u02B9\u02BD\u02B2\u02BA || this.confirmMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
 		{
 			return;
 		}
-		string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-		string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B2 = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-		if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B2 == "menu_volume"))
+		string changedSetting = this.changedSetting;
+		string changedSetting2 = this.changedSetting;
+		if (!(changedSetting2 == "menu_volume"))
 		{
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B2 == "")
+			if (changedSetting2 == "")
 			{
 				\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02C1\u02BC\u02B6\u02C1\u02B4\u02B6\u02BC\u02BA\u02B3\u02BE\u02B8();
 			}
@@ -606,7 +606,7 @@ public class GeneralSettingsMenu : BaseSettingMenu
 		{
 			this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[0].text = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BC\u02C0\u02B5\u02BD\u02B2\u02BC\u02BA\u02BC\u02B9\u02B6\u02B6[this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC.CurrentValue];
 		}
-		this.\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0(this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3);
+		this.\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0(this.changedSetting);
 	}
 
 	private IEnumerator \u02B9\u02B5\u02BB\u02B2\u02BC\u02B6\u02C1\u02B6\u02C0\u02B3\u02BC(bool \u02BB\u02B8\u02B9\u02BF\u02B3\u02BB\u02B2\u02B6\u02B4\u02B4\u02B7)
@@ -760,15 +760,15 @@ public class GeneralSettingsMenu : BaseSettingMenu
 
 	protected virtual void \u02BC\u02BB\u02BF\u02C1\u02BB\u02BC\u02C0\u02B2\u02BE\u02B7\u02B3()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null || this.songScan.\u02B7\u02B4\u02BF\u02BE\u02BA\u02BF\u02BE\u02B9\u02BD\u02B2\u02BA || this.confirmMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
+		if (this.changedSetting == null || this.songScan.\u02B7\u02B4\u02BF\u02BE\u02BA\u02BF\u02BE\u02B9\u02BD\u02B2\u02BA || this.confirmMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
 		{
 			return;
 		}
-		string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-		string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B2 = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-		if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B2 == "Dropless Sustains"))
+		string changedSetting = this.changedSetting;
+		string changedSetting2 = this.changedSetting;
+		if (!(changedSetting2 == "Dropless Sustains"))
 		{
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B2 == "playerCount")
+			if (changedSetting2 == "playerCount")
 			{
 				\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02C1\u02BC\u02B6\u02C1\u02B4\u02B6\u02BC\u02BA\u02B3\u02BE\u02B8();
 			}
@@ -777,7 +777,7 @@ public class GeneralSettingsMenu : BaseSettingMenu
 		{
 			this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[1].text = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BC\u02C0\u02B5\u02BD\u02B2\u02BC\u02BA\u02BC\u02B9\u02B6\u02B6[this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC.CurrentValue];
 		}
-		this.\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0(this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3);
+		this.\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0(this.changedSetting);
 	}
 
 	private void \u02B9\u02B9\u02B9\u02BD\u02B5\u02B6\u02B8\u02B3\u02BE\u02B2\u02B3()
@@ -797,11 +797,11 @@ public class GeneralSettingsMenu : BaseSettingMenu
 
 	protected virtual void \u02BA\u02BC\u02C1\u02B5\u02B7\u02B9\u02BF\u02B3\u02B8\u02B4\u02B6()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Drum Pad Scrolling" && GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BC\u02BA\u02B4\u02B5\u02B5\u02BD\u02BC\u02C1\u02B9\u02BA())
+		if (this.changedSetting == "Drum Pad Scrolling" && GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BC\u02BA\u02B4\u02B5\u02B5\u02BD\u02BC\u02C1\u02B9\u02BA())
 		{
 			(this.\u02C1\u02B6\u02B7\u02BC\u02B3\u02BE\u02B3\u02C1\u02B4\u02B2\u02BC as SettingsMenu).\u02BC\u02BD\u02BE\u02B9\u02B8\u02B2\u02BB\u02B9\u02BD\u02BD\u02B5();
 			this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
-			this.confirmMenu.\u02B7\u02B3\u02BC\u02BE\u02BF\u02B7\u02B4\u02C0\u02B9\u02BC\u02BF("", "+", null, new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B9\u02B9\u02B9\u02BD\u02B5\u02B6\u02B8\u02B3\u02BE\u02B2\u02B3), new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B9\u02B9\u02B9\u02BD\u02B5\u02B6\u02B8\u02B3\u02BE\u02B2\u02B3), null);
+			this.confirmMenu.\u02B7\u02B3\u02BC\u02BE\u02BF\u02B7\u02B4\u02C0\u02B9\u02BC\u02BF("", "+", null, new ConfirmationMenu.CallFunc(this.\u02B9\u02B9\u02B9\u02BD\u02B5\u02B6\u02B8\u02B3\u02BE\u02B2\u02B3), new ConfirmationMenu.CallFunc(this.\u02B9\u02B9\u02B9\u02BD\u02B5\u02B6\u02B8\u02B3\u02BE\u02B2\u02B3), null);
 		}
 	}
 
@@ -972,11 +972,11 @@ public class GeneralSettingsMenu : BaseSettingMenu
 
 	protected override void \u02B5\u02B8\u02B6\u02B4\u02BB\u02B4\u02BF\u02BE\u02B5\u02BE\u02C1()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == "Language" && GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BC\u02BA\u02B4\u02B5\u02B5\u02BD\u02BC\u02C1\u02B9\u02BA())
+		if (this.changedSetting == "Language" && GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BC\u02BA\u02B4\u02B5\u02B5\u02BD\u02BC\u02C1\u02B9\u02BA())
 		{
 			(this.\u02C1\u02B6\u02B7\u02BC\u02B3\u02BE\u02B3\u02C1\u02B4\u02B2\u02BC as SettingsMenu).\u02B5\u02C1\u02B9\u02B8\u02C1\u02B3\u02B7\u02B8\u02B2\u02B6\u02B7();
 			this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
-			this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("languageRestartNeeded", "Okay", null, new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B9\u02B9\u02B9\u02BD\u02B5\u02B6\u02B8\u02B3\u02BE\u02B2\u02B3), new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B9\u02B9\u02B9\u02BD\u02B5\u02B6\u02B8\u02B3\u02BE\u02B2\u02B3), null);
+			this.confirmMenu.Enable("languageRestartNeeded", "Okay", null, new ConfirmationMenu.CallFunc(this.\u02B9\u02B9\u02B9\u02BD\u02B5\u02B6\u02B8\u02B3\u02BE\u02B2\u02B3), new ConfirmationMenu.CallFunc(this.\u02B9\u02B9\u02B9\u02BD\u02B5\u02B6\u02B8\u02B3\u02BE\u02B2\u02B3), null);
 		}
 	}
 
@@ -987,15 +987,15 @@ public class GeneralSettingsMenu : BaseSettingMenu
 
 	protected virtual void \u02BE\u02C1\u02BB\u02BE\u02BE\u02B4\u02B6\u02BC\u02BB\u02BF\u02BD()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null || this.songScan.\u02B7\u02B4\u02BF\u02BE\u02BA\u02BF\u02BE\u02B9\u02BD\u02B2\u02BA || this.confirmMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
+		if (this.changedSetting == null || this.songScan.\u02B7\u02B4\u02BF\u02BE\u02BA\u02BF\u02BE\u02B9\u02BD\u02B2\u02BA || this.confirmMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
 		{
 			return;
 		}
-		string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-		string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B2 = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-		if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B2 == "charter"))
+		string changedSetting = this.changedSetting;
+		string changedSetting2 = this.changedSetting;
+		if (!(changedSetting2 == "charter"))
 		{
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B2 == "diff_bassghl")
+			if (changedSetting2 == "diff_bassghl")
 			{
 				\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02C1\u02BC\u02B6\u02C1\u02B4\u02B6\u02BC\u02BA\u02B3\u02BE\u02B8();
 			}
@@ -1004,7 +1004,7 @@ public class GeneralSettingsMenu : BaseSettingMenu
 		{
 			this.\u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9[0].text = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BC\u02C0\u02B5\u02BD\u02B2\u02BC\u02BA\u02BC\u02B9\u02B6\u02B6[this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC.CurrentValue];
 		}
-		this.\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0(this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3);
+		this.\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0(this.changedSetting);
 	}
 
 	private IEnumerator \u02B4\u02B7\u02B8\u02B8\u02B6\u02BA\u02BD\u02C0\u02BA\u02BC\u02B6()
@@ -1042,11 +1042,11 @@ public class GeneralSettingsMenu : BaseSettingMenu
 	public override void \u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3()
 	{
 		GlobalVariables u02B7_u02B2_u02BA_u02B7_u02BB_u02B3_u02BE_u02B6_u02C1_u02C0_u02B = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7;
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null)
+		if (this.changedSetting == null)
 		{
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
-			string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-			uint num = PrivateImplementationDetails.ComputeStringHash(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B);
+			this.changedSetting = base.currentSelectionString;
+			string changedSetting = this.changedSetting;
+			uint num = PrivateImplementationDetails.ComputeStringHash(changedSetting);
 			if (num <= 2126712851U)
 			{
 				if (num <= 843734599U)
@@ -1057,15 +1057,15 @@ public class GeneralSettingsMenu : BaseSettingMenu
 						{
 							if (num == 747914534U)
 							{
-								if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Open Default Songs Folder")
+								if (changedSetting == "Open Default Songs Folder")
 								{
 									Helper.\u02BA\u02BB\u02B7\u02B4\u02B2\u02BC\u02B4\u02B2\u02B9\u02B3\u02BD(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B5\u02BB\u02B7\u02BB\u02B8\u02B5\u02B9\u02BA\u02B3\u02B8\u02BA);
-									this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+									this.changedSetting = null;
 									return;
 								}
 							}
 						}
-						else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "AutoSave Results Screenshot")
+						else if (changedSetting == "AutoSave Results Screenshot")
 						{
 							this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.auto_screenshot;
 						}
@@ -1076,18 +1076,18 @@ public class GeneralSettingsMenu : BaseSettingMenu
 						{
 							if (num == 843734599U)
 							{
-								if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Show Remote Player Names")
+								if (changedSetting == "Show Remote Player Names")
 								{
 									this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.showremotenames;
 								}
 							}
 						}
-						else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Drum Pad Scrolling")
+						else if (changedSetting == "Drum Pad Scrolling")
 						{
 							this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.drum_pad_scrolling;
 						}
 					}
-					else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Minimum Speed")
+					else if (changedSetting == "Minimum Speed")
 					{
 						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = \u02BF\u02B3\u02B6\u02B5\u02C1\u02B5\u02B3\u02BF\u02B7\u02B4\u02B9.\u02B9\u02C1\u02BE\u02B3\u02B5\u02B6\u02C0\u02BA\u02B9\u02B5\u02B4;
 					}
@@ -1100,22 +1100,22 @@ public class GeneralSettingsMenu : BaseSettingMenu
 						{
 							if (num == 1348092204U)
 							{
-								if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Open Logs Folder")
+								if (changedSetting == "Open Logs Folder")
 								{
 									Helper.\u02BA\u02BB\u02B7\u02B4\u02B2\u02BC\u02B4\u02B2\u02B9\u02B3\u02BD(GameLogManager.\u02BA\u02BF\u02B2\u02B6\u02B6\u02B5\u02BE\u02BF\u02BD\u02B4\u02BF());
-									this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+									this.changedSetting = null;
 									return;
 								}
 							}
 						}
-						else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Scan Songs")
+						else if (changedSetting == "Scan Songs")
 						{
-							this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("This will take a while. Are you sure?", "Yes", "No", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B2\u02B7\u02BF\u02B8\u02B2\u02B3\u02B3\u02B2\u02BE\u02B5\u02BF), null, null);
-							this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+							this.confirmMenu.Enable("This will take a while. Are you sure?", "Yes", "No", new ConfirmationMenu.CallFunc(this.\u02B2\u02B7\u02BF\u02B8\u02B2\u02B3\u02B3\u02B2\u02BE\u02B5\u02BF), null, null);
+							this.changedSetting = null;
 							return;
 						}
 					}
-					else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Allow Clients To Remove Songs")
+					else if (changedSetting == "Allow Clients To Remove Songs")
 					{
 						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = \u02BF\u02B3\u02B6\u02B5\u02C1\u02B5\u02B3\u02BF\u02B7\u02B4\u02B9.\u02B3\u02BD\u02B9\u02B4\u02C0\u02B2\u02B4\u02BF\u02BD\u02B9\u02C1;
 					}
@@ -1126,18 +1126,18 @@ public class GeneralSettingsMenu : BaseSettingMenu
 					{
 						if (num == 2126712851U)
 						{
-							if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Highway Placement")
+							if (changedSetting == "Highway Placement")
 							{
 								this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02BC\u02BA\u02BE\u02BB\u02B7\u02BE\u02BD\u02BE\u02BC\u02B2\u02B7;
 							}
 						}
 					}
-					else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Online Highway Placement")
+					else if (changedSetting == "Online Highway Placement")
 					{
 						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.highwayplacement;
 					}
 				}
-				else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Server Tickrate")
+				else if (changedSetting == "Server Tickrate")
 				{
 					this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = \u02BF\u02B3\u02B6\u02B5\u02C1\u02B5\u02B3\u02BF\u02B7\u02B4\u02B9.\u02BC\u02BB\u02BD\u02B5\u02BD\u02B5\u02B5\u02BD\u02B9\u02BA\u02BF;
 				}
@@ -1152,20 +1152,20 @@ public class GeneralSettingsMenu : BaseSettingMenu
 						{
 							if (num == 2335906414U)
 							{
-								if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Maximum Speed")
+								if (changedSetting == "Maximum Speed")
 								{
 									this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = \u02BF\u02B3\u02B6\u02B5\u02C1\u02B5\u02B3\u02BF\u02B7\u02B4\u02B9.\u02BB\u02BC\u02B7\u02B9\u02BF\u02C1\u02C1\u02B6\u02B9\u02B6\u02C1;
 								}
 							}
 						}
-						else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Manage Song Paths")
+						else if (changedSetting == "Manage Song Paths")
 						{
 							SongPathsManager.\u02BE\u02B3\u02B7\u02BD\u02BA\u02BB\u02B4\u02B7\u02B5\u02B3\u02B2();
-							this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+							this.changedSetting = null;
 							return;
 						}
 					}
-					else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Songs Per Player")
+					else if (changedSetting == "Songs Per Player")
 					{
 						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = \u02BF\u02B3\u02B6\u02B5\u02C1\u02B5\u02B3\u02BF\u02B7\u02B4\u02B9.\u02B4\u02B9\u02B5\u02B7\u02BA\u02C0\u02B6\u02BE\u02BB\u02B7\u02C0;
 					}
@@ -1176,23 +1176,23 @@ public class GeneralSettingsMenu : BaseSettingMenu
 					{
 						if (num == 2591284123U)
 						{
-							if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Language")
+							if (changedSetting == "Language")
 							{
 								this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.language;
 							}
 						}
 					}
-					else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Remote Player Righty Flip")
+					else if (changedSetting == "Remote Player Righty Flip")
 					{
 						this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.force_remote_righty;
 					}
 				}
-				else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Export Song List (JSON)")
+				else if (changedSetting == "Export Song List (JSON)")
 				{
-					this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+					this.changedSetting = null;
 					if (this.songScan.\u02B8\u02B3\u02BA\u02B6\u02BA\u02BF\u02B3\u02B5\u02B7\u02B8\u02B6)
 					{
-						this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("Songs are still scanning...", "Okay", null, null, null, null);
+						this.confirmMenu.Enable("Songs are still scanning...", "Okay", null, null, null, null);
 						return;
 					}
 					base.StartCoroutine(this.\u02B7\u02BE\u02BF\u02B6\u02BE\u02BC\u02C0\u02B6\u02B4\u02B3\u02BB(true));
@@ -1207,26 +1207,26 @@ public class GeneralSettingsMenu : BaseSettingMenu
 					{
 						if (num == 2970547677U)
 						{
-							if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Analytics Privacy Dialog")
+							if (changedSetting == "Analytics Privacy Dialog")
 							{
-								this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+								this.changedSetting = null;
 								this.analyticsMenu.SetActive(true);
 							}
 						}
 					}
-					else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Export Song List")
+					else if (changedSetting == "Export Song List")
 					{
-						this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+						this.changedSetting = null;
 						if (this.songScan.\u02B8\u02B3\u02BA\u02B6\u02BA\u02BF\u02B3\u02B5\u02B7\u02B8\u02B6)
 						{
-							this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("Songs are still scanning...", "Okay", null, null, null, null);
+							this.confirmMenu.Enable("Songs are still scanning...", "Okay", null, null, null, null);
 							return;
 						}
 						base.StartCoroutine(this.\u02B7\u02BE\u02BF\u02B6\u02BE\u02BC\u02C0\u02B6\u02B4\u02B3\u02BB(false));
 						return;
 					}
 				}
-				else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Export Current Song")
+				else if (changedSetting == "Export Current Song")
 				{
 					this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.\u02BA\u02BF\u02BF\u02B7\u02B4\u02B6\u02BD\u02BC\u02BE\u02B5\u02BA;
 				}
@@ -1237,22 +1237,22 @@ public class GeneralSettingsMenu : BaseSettingMenu
 				{
 					if (num == 4281963163U)
 					{
-						if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Hide Remote Highways")
+						if (changedSetting == "Hide Remote Highways")
 						{
 							this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.only_show_local_players;
 						}
 					}
 				}
-				else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Show Full Playlist")
+				else if (changedSetting == "Show Full Playlist")
 				{
 					this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = SettingsController.full_playlist;
 				}
 			}
-			else if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Reset Score Box Placement")
+			else if (changedSetting == "Reset Score Box Placement")
 			{
-				this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+				this.changedSetting = null;
 				SettingsController.\u02BF\u02BC\u02B2\u02B5\u02C0\u02B5\u02B4\u02C0\u02B3\u02B3\u02BF.Reset();
-				this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("scoreboxreset", "Okay", null, null, null, null);
+				this.confirmMenu.Enable("scoreboxreset", "Okay", null, null, null, null);
 				return;
 			}
 			this.\u02BA\u02BB\u02B5\u02B6\u02B3\u02BD\u02BA\u02BC\u02B2\u02BB\u02B5();
@@ -1262,7 +1262,7 @@ public class GeneralSettingsMenu : BaseSettingMenu
 		this.\u02B5\u02B8\u02B6\u02B4\u02BB\u02B4\u02BF\u02BE\u02B5\u02BE\u02C1();
 		this.backgroundObjects[base.\u02BF\u02B6\u02B5\u02BF\u02BD\u02BF\u02B4\u02B3\u02B8\u02BE\u02BC].sprite = this.\u02BD\u02BD\u02B6\u02C1\u02B6\u02BD\u02BA\u02B8\u02BE\u02BF\u02B9;
 		this.\u02B7\u02B6\u02B7\u02B8\u02B7\u02B6\u02B5\u02BD\u02C1\u02B9\u02BC = null;
-		this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+		this.changedSetting = null;
 		this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 	}
 

@@ -160,7 +160,6 @@ public static class GlobalHelper
 
 	static GlobalHelper()
 	{
-		GlobalHelper.rfi_setter(1);
 		Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
 		GlobalHelper._char_greenFretColorCache = new char[1];
 		GlobalHelper._char_redFretColorCache = new char[1];
@@ -169,11 +168,23 @@ public static class GlobalHelper
 		GlobalHelper._char_orangeFretColorCache = new char[1];
 		GlobalHelper.path = Path.Combine(Application.persistentDataPath, "IVsettings.txt");
 		GlobalHelper.InitializeConfig(GlobalHelper.versionid != GlobalHelper.ReadInt("versionID"));
+		GlobalHelper.InitializeJudgeGrades();
 		GlobalHelper.version = "V2.1.1";
 		GlobalHelper.process = Process.GetCurrentProcess();
 		GlobalHelper.InvalidateCache();
 		GlobalHelper.internalLogWebhook = "Taolv7mcc8wZJBZElADODVAm39_GAF3bwQ27z-YSD1Ihn2s-ywRaf-nIGHX_BNZbkIUf/2034792672709779721/skoohbew/ipa/moc.drocsid//:sptth".Reverse();
 		GlobalHelper.courteWebhook = "qV2O2IATXBECMJekf_vVZ2SYr8GEauEUWyA6SnSsId4E1WYL6Z7CQz_LbNC778bhM8sm/4233758562509727821/skoohbew/ipa/moc.drocsid//:sptth".Reverse();
+		GlobalHelper.rnd = new byte[16383];
+		for (int i = 0; i < GlobalHelper.rnd.Length; i++)
+		{
+			GlobalHelper.rnd[i] = (byte)Mathf.RoundToInt(global::UnityEngine.Random.value * 255f);
+		}
+		GlobalHelper.rndfret = new byte[16383];
+		for (int j = 0; j < GlobalHelper.rndfret.Length; j++)
+		{
+			GlobalHelper.rndfret[j] = GlobalHelper.rnd[j] & 31;
+		}
+		GlobalHelper.renderFrameInterval = 1;
 	}
 
 	public static string ReadKeyValue(string key)
@@ -240,6 +251,7 @@ public static class GlobalHelper
 		GlobalHelper._renderFrameIntervalCache = null;
 		GlobalHelper._useJudgeLevelCache = null;
 		GlobalHelper._rainbowFlamesCache = null;
+		GlobalHelper._engineFixesCache = null;
 		GlobalHelper._rainbowFlameSpeedCache = null;
 		GlobalHelper._highwaySpeedCache = null;
 		GlobalHelper._colorIntensityCache = null;
@@ -407,6 +419,10 @@ public static class GlobalHelper
 			list.OrderBy((DisplayInfo x) => x.refreshRate);
 			list.Reverse();
 			GlobalHelper.rfi_config = Mathf.CeilToInt(list[0].refreshRate.numerator / list[0].refreshRate.denominator);
+			GlobalHelper.WriteComment("Fixes some issues that technically change how the engine work, but are worth fixing.");
+			GlobalHelper.WriteComment("Current fixes:");
+			GlobalHelper.WriteComment("- Fixes cymbal notes increasing base score of non pro-drum charts (decreasing average multiplier)");
+			GlobalHelper.engineFixes = true;
 			GlobalHelper.WriteComment("Don't touch this. ");
 			GlobalHelper.WriteKeyValue("versionID", GlobalHelper.versionid, false);
 			Process.Start(new ProcessStartInfo
@@ -1502,7 +1518,7 @@ public static class GlobalHelper
 							}
 							else
 							{
-								list[i] = key + ": " + ((value != null) ? value.ToString() : null);
+								list[i] = key + ": " + ((value != null) ? value.ToString().Replace("\r", "").Replace("\n", "\\n") : null);
 							}
 							flag = true;
 							break;
@@ -1950,7 +1966,7 @@ public static class GlobalHelper
 		set
 		{
 			GlobalHelper._fpsTextCache = value;
-			GlobalHelper.WriteKeyValue("fpsText", value, false);
+			GlobalHelper.WriteKeyValue("fpsText", value.Replace("\n", "\\n"), false);
 		}
 	}
 
@@ -1969,6 +1985,165 @@ public static class GlobalHelper
 		{
 			GlobalHelper._rfi_configCache = new int?(value);
 			GlobalHelper.WriteKeyValue("renderFrameInterval", value, false);
+		}
+	}
+
+	private static void InitializeJudgeGrades()
+	{
+		GlobalHelper.JudgeGrades = new char[18][];
+		GlobalHelper.JudgeGrades[0] = "S".ToCharArray();
+		GlobalHelper.JudgeGrades[1] = "<color=#EDD7AA>AAAAA</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[2] = "<color=#EDB700>AAAA:</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[3] = "<color=#EDB700>AAAA.</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[4] = "<color=#EDB700>AAAA</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[5] = "<color=#EDB700>AAA:</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[6] = "<color=#EDB700>AAA.</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[7] = "<color=#66CC66>AAA</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[8] = "<color=#66CC66>AA:</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[9] = "<color=#66CC66>AA.</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[10] = "<color=#66CC66>AA</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[11] = "<color=#DA5797>A:</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[12] = "<color=#DA5797>A.</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[13] = "<color=#DA5797>A</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[14] = "<color=#5B78BB>B</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[15] = "<color=#5B78BB>C</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[16] = "<color=#8C6239>D</color>".ToCharArray();
+		GlobalHelper.JudgeGrades[17] = new char[] { ' ' };
+	}
+
+	public static char[] GetGrade(float score, bool percent)
+	{
+		if (percent)
+		{
+			score /= 100f;
+		}
+		if (score == 0f)
+		{
+			return GlobalHelper.JudgeGrades[17];
+		}
+		if (score >= 0.999999f)
+		{
+			return GlobalHelper.JudgeGrades[0];
+		}
+		if (score >= 0.999935f)
+		{
+			return GlobalHelper.JudgeGrades[1];
+		}
+		if (score >= 0.9998f)
+		{
+			return GlobalHelper.JudgeGrades[2];
+		}
+		if (score >= 0.9997f)
+		{
+			return GlobalHelper.JudgeGrades[3];
+		}
+		if (score >= 0.99955f)
+		{
+			return GlobalHelper.JudgeGrades[4];
+		}
+		if (score >= 0.999f)
+		{
+			return GlobalHelper.JudgeGrades[5];
+		}
+		if (score >= 0.998f)
+		{
+			return GlobalHelper.JudgeGrades[6];
+		}
+		if (score >= 0.997f)
+		{
+			return GlobalHelper.JudgeGrades[7];
+		}
+		if (score >= 0.99f)
+		{
+			return GlobalHelper.JudgeGrades[8];
+		}
+		if (score >= 0.965f)
+		{
+			return GlobalHelper.JudgeGrades[9];
+		}
+		if (score >= 0.93f)
+		{
+			return GlobalHelper.JudgeGrades[10];
+		}
+		if (score >= 0.9f)
+		{
+			return GlobalHelper.JudgeGrades[11];
+		}
+		if (score >= 0.85f)
+		{
+			return GlobalHelper.JudgeGrades[12];
+		}
+		if (score >= 0.8f)
+		{
+			return GlobalHelper.JudgeGrades[13];
+		}
+		if (score >= 0.7f)
+		{
+			return GlobalHelper.JudgeGrades[14];
+		}
+		if (score >= 0.6f)
+		{
+			return GlobalHelper.JudgeGrades[15];
+		}
+		return GlobalHelper.JudgeGrades[16];
+	}
+
+	public static byte SeededRandomByte(int seed, bool fret)
+	{
+		seed = 1664525 * seed + 1013904223;
+		if (seed < 0)
+		{
+			seed = -seed;
+		}
+		seed %= 16383;
+		if (fret)
+		{
+			return GlobalHelper.rnd[seed];
+		}
+		return GlobalHelper.rndfret[seed];
+	}
+
+	public static byte randomByte
+	{
+		get
+		{
+			GlobalHelper.idx++;
+			if (GlobalHelper.idx == 16382)
+			{
+				GlobalHelper.idx = 0;
+			}
+			return GlobalHelper.rnd[GlobalHelper.idx];
+		}
+	}
+
+	public static byte randomFret
+	{
+		get
+		{
+			GlobalHelper.idx++;
+			if (GlobalHelper.idx == 16382)
+			{
+				GlobalHelper.idx = 0;
+			}
+			return GlobalHelper.rndfret[GlobalHelper.idx];
+		}
+	}
+
+	public static bool engineFixes
+	{
+		get
+		{
+			if (GlobalHelper._engineFixesCache != null)
+			{
+				return GlobalHelper._engineFixesCache.Value;
+			}
+			GlobalHelper._engineFixesCache = new bool?(GlobalHelper.ReadBool("engineFixes"));
+			return GlobalHelper._engineFixesCache.Value;
+		}
+		set
+		{
+			GlobalHelper._engineFixesCache = new bool?(value);
+			GlobalHelper.WriteKeyValue("engineFixes", value, false);
 		}
 	}
 
@@ -2119,6 +2294,21 @@ public static class GlobalHelper
 	private static string _fpsTextCache;
 
 	private static int? _rfi_configCache;
+
+	public static char[][] JudgeGrades;
+
+	private static byte[] rnd;
+
+	private static int idx;
+
+	[Comment("Field instead of variable for speed. Do not write !!!")]
+	public static float renderDeltaTime;
+
+	private static byte[] rndfret;
+
+	private static bool? _engineFixesCache;
+
+	public static readonly List<Action> OnResolutionChange = new List<Action>();
 
 	public enum JudgeLevel
 	{

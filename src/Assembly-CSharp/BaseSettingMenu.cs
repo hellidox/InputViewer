@@ -33,10 +33,10 @@ public abstract class BaseSettingMenu : BaseMenu
 
 	public override void \u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != null)
+		if (this.changedSetting != null)
 		{
 			this.\u02B5\u02B8\u02B6\u02B4\u02BB\u02B4\u02BF\u02BE\u02B5\u02BE\u02C1();
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+			this.changedSetting = null;
 			this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 		}
 		else
@@ -61,7 +61,7 @@ public abstract class BaseSettingMenu : BaseMenu
 
 	public override void \u02C1\u02B3\u02BC\u02B6\u02BD\u02B6\u02BF\u02B7\u02BB\u02B5\u02BB()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null)
+		if (this.changedSetting == null)
 		{
 			this.\u02BC\u02B7\u02C0\u02B6\u02C1\u02B9\u02BB\u02B2\u02BD\u02B3\u02B8 = true;
 			this.\u02BE\u02B4\u02BD\u02B6\u02B5\u02B7\u02BB\u02BE\u02B3\u02B5\u02B9(this.\u02B7\u02BE\u02BD\u02BF\u02B7\u02BE\u02B4\u02B4\u02BA\u02B9\u02C1);
@@ -87,7 +87,7 @@ public abstract class BaseSettingMenu : BaseMenu
 
 	public override void \u02B7\u02BA\u02C0\u02B8\u02BE\u02BA\u02BD\u02B4\u02BB\u02B3\u02B6()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null)
+		if (this.changedSetting == null)
 		{
 			this.\u02B7\u02C0\u02BB\u02B6\u02B3\u02C0\u02B9\u02BF\u02B5\u02C0\u02B6 = true;
 			this.\u02B7\u02C1\u02BA\u02BA\u02B2\u02B5\u02B7\u02BD\u02BC\u02C1\u02BE(this.\u02B7\u02BE\u02BD\u02BF\u02B7\u02BE\u02B4\u02B4\u02BA\u02B9\u02C1);
@@ -114,11 +114,11 @@ public abstract class BaseSettingMenu : BaseMenu
 	protected override void Update()
 	{
 		base.Update();
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 != null)
+		if (this.changedSetting != null)
 		{
 			if (Input.GetKeyDown(KeyCode.End))
 			{
-				GameSetting settingFromString = this.GetSettingFromString(this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3);
+				GameSetting settingFromString = this.GetSettingFromString(this.changedSetting);
 				if (settingFromString != null)
 				{
 					settingFromString.CurrentValue = settingFromString.MaxValue;
@@ -127,7 +127,7 @@ public abstract class BaseSettingMenu : BaseMenu
 			}
 			if (Input.GetKeyDown(KeyCode.Home))
 			{
-				GameSetting settingFromString2 = this.GetSettingFromString(this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3);
+				GameSetting settingFromString2 = this.GetSettingFromString(this.changedSetting);
 				if (settingFromString2 != null)
 				{
 					settingFromString2.CurrentValue = settingFromString2.MinValue;
@@ -169,7 +169,7 @@ public abstract class BaseSettingMenu : BaseMenu
 	[HideInInspector]
 	public bool \u02B6\u02BE\u02C0\u02BE\u02B3\u02B6\u02C1\u02BD\u02BA\u02C0\u02C1;
 
-	public Image \u02BB\u02C1\u02BD\u02BC\u02BE\u02BA\u02BA\u02B5\u02B9\u02BD\u02BA;
+	public Image fadeImage;
 
 	public TextMeshProUGUI[] \u02B7\u02BE\u02BA\u02B4\u02BB\u02B2\u02B6\u02BA\u02C0\u02B3\u02B9;
 

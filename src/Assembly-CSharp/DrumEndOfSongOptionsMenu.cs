@@ -22,7 +22,7 @@ public class DrumEndOfSongOptionsMenu : BaseMenu
 
 	public virtual void \u02B3\u02B5\u02B3\u02BA\u02C1\u02BC\u02B4\u02BA\u02B8\u02BB\u02BD()
 	{
-		string text = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
+		string text = base.currentSelectionString;
 		if (text == "GameColors_")
 		{
 			this.endOfSong.\u02C0\u02B2\u02C0\u02BD\u02BF\u02BD\u02B2\u02BD\u02BE\u02C1\u02B6();
@@ -112,7 +112,7 @@ public class DrumEndOfSongOptionsMenu : BaseMenu
 
 	public override void \u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3()
 	{
-		string text = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
+		string text = base.currentSelectionString;
 		if (text == "Replay")
 		{
 			this.endOfSong.\u02C0\u02B2\u02C0\u02BD\u02BF\u02BD\u02B2\u02BD\u02BE\u02C1\u02B6();
@@ -227,7 +227,7 @@ public class DrumEndOfSongOptionsMenu : BaseMenu
 
 	public virtual void \u02B6\u02B6\u02B6\u02BC\u02B7\u02B9\u02B7\u02BC\u02B4\u02B6\u02B3()
 	{
-		string text = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
+		string text = base.currentSelectionString;
 		if (text == "{0} {1} {2}")
 		{
 			this.endOfSong.\u02C0\u02B2\u02C0\u02BD\u02BF\u02BD\u02B2\u02BD\u02BE\u02C1\u02B6();

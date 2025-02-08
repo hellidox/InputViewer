@@ -42,7 +42,7 @@ public class MainMenu : BaseMenu
 			this.news.openNewsItem(this.news.\u02B7\u02BC\u02C1\u02B9\u02B7\u02BF\u02BC\u02BD\u02BF\u02B9\u02B6);
 			return;
 		}
-		string text = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
+		string text = base.currentSelectionString;
 		uint num = PrivateImplementationDetails.ComputeStringHash(text);
 		if (num <= 2900663587U)
 		{
@@ -127,7 +127,7 @@ public class MainMenu : BaseMenu
 				{
 					return;
 				}
-				this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("Are you sure you want to quit?", "Yes", "No", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B6\u02B6\u02B5\u02B8\u02B9\u02BC\u02B6\u02BB\u02BD\u02BA\u02BD), null, null);
+				this.confirmMenu.Enable("Are you sure you want to quit?", "Yes", "No", new ConfirmationMenu.CallFunc(this.\u02B6\u02B6\u02B5\u02B8\u02B9\u02BC\u02B6\u02BB\u02BD\u02BA\u02BD), null, null);
 				return;
 			}
 			else
@@ -147,7 +147,7 @@ public class MainMenu : BaseMenu
 				}
 				if (\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02BD\u02BD\u02B6\u02B3\u02B2\u02B6\u02BB\u02BF\u02BE\u02B6\u02B4.Count == 0)
 				{
-					this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("No songs were found!", "Scan Songs", "Don't Scan Songs", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02BC\u02BD\u02B3\u02BC\u02BD\u02B2\u02B8\u02B7\u02BC\u02BF\u02BF), null, null);
+					this.confirmMenu.Enable("No songs were found!", "Scan Songs", "Don't Scan Songs", new ConfirmationMenu.CallFunc(this.ScanSongs), null, null);
 					return;
 				}
 				int num2 = 0;
@@ -160,7 +160,7 @@ public class MainMenu : BaseMenu
 				}
 				if (num2 > 1)
 				{
-					this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("Too many players! Only one player is supported!", "Okay", null, null, null, null);
+					this.confirmMenu.Enable("Too many players! Only one player is supported!", "Okay", null, null, null, null);
 					return;
 				}
 				if (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3)
@@ -507,7 +507,7 @@ public class MainMenu : BaseMenu
 			{
 				if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].playerProfile != null && !this.notSupportedMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
 				{
-					this.notSupportedMenu.\u02B7\u02B3\u02BC\u02BE\u02BF\u02B7\u02B4\u02C0\u02B9\u02BC\u02BF(this.\u02BC\u02BE\u02B6\u02B5\u02B9\u02C0\u02B7\u02C1\u02BC\u02B7\u02B7, "Available", ")", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B6\u02BF\u02BD\u02BC\u02BA\u02C1\u02B2\u02B4\u02BB\u02BB\u02BA), new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B5\u02B4\u02B8\u02B3\u02BB\u02BC\u02B4\u02BC\u02B6\u02BE\u02B4), this.\u02B3\u02B2\u02B7\u02BA\u02C1\u02C0\u02BB\u02BE\u02B9\u02B3\u02B2);
+					this.notSupportedMenu.\u02B7\u02B3\u02BC\u02BE\u02BF\u02B7\u02B4\u02C0\u02B9\u02BC\u02BF(this.\u02BC\u02BE\u02B6\u02B5\u02B9\u02C0\u02B7\u02C1\u02BC\u02B7\u02B7, "Available", ")", new ConfirmationMenu.CallFunc(this.\u02B6\u02BF\u02BD\u02BC\u02BA\u02C1\u02B2\u02B4\u02BB\u02BB\u02BA), new ConfirmationMenu.CallFunc(this.\u02B5\u02B4\u02B8\u02B3\u02BB\u02BC\u02B4\u02BC\u02B6\u02BE\u02B4), this.\u02B3\u02B2\u02B7\u02BA\u02C1\u02C0\u02BB\u02BE\u02B9\u02B3\u02B2);
 					break;
 				}
 			}
@@ -518,7 +518,7 @@ public class MainMenu : BaseMenu
 			{
 				if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[j].playerProfile != null && !this.notSupportedMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
 				{
-					this.notSupportedMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD(this.\u02BC\u02BE\u02B6\u02B5\u02B9\u02C0\u02B7\u02C1\u02BC\u02B7\u02B7, "Blur Command Buffer", "Source", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B5\u02BE\u02B3\u02BB\u02BA\u02B7\u02B5\u02B2\u02B2\u02B8\u02BB), new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(Application.Quit), this.\u02B3\u02B2\u02B7\u02BA\u02C1\u02C0\u02BB\u02BE\u02B9\u02B3\u02B2);
+					this.notSupportedMenu.Enable(this.\u02BC\u02BE\u02B6\u02B5\u02B9\u02C0\u02B7\u02C1\u02BC\u02B7\u02B7, "Blur Command Buffer", "Source", new ConfirmationMenu.CallFunc(this.\u02B5\u02BE\u02B3\u02BB\u02BA\u02B7\u02B5\u02B2\u02B2\u02B8\u02BB), new ConfirmationMenu.CallFunc(Application.Quit), this.\u02B3\u02B2\u02B7\u02BA\u02C1\u02C0\u02BB\u02BE\u02B9\u02B3\u02B2);
 					this.\u02BF\u02C1\u02B5\u02BD\u02BB\u02C1\u02B6\u02B8\u02B6\u02BB\u02B8 = false;
 					break;
 				}
@@ -623,13 +623,13 @@ public class MainMenu : BaseMenu
 		return \u02BA\u02BB\u02B2\u02C0\u02BD\u02BF\u02B4\u02BC\u02BC\u02BC\u02BB + "_" + ((SettingsController.language.CurrentValue == 4) ? "Portuguese" : GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BC\u02C0\u02B5\u02BD\u02B2\u02BC\u02BA\u02BC\u02B9\u02B6\u02B6[SettingsController.language.CurrentValue]);
 	}
 
-	public void \u02BC\u02BD\u02B3\u02BC\u02BD\u02B2\u02B8\u02B7\u02BC\u02BF\u02BF()
+	public void ScanSongs()
 	{
 		this.songScan.\u02BB\u02B7\u02BC\u02C0\u02BC\u02B8\u02BB\u02B5\u02C1\u02B3\u02BE();
 		this.songScan.\u02BA\u02B9\u02C0\u02C1\u02BF\u02BB\u02B3\u02B9\u02BB\u02B5\u02B3(true);
 	}
 
-	private void \u02B6\u02B5\u02BF\u02BF\u02B4\u02B8\u02C0\u02B3\u02B6\u02C1\u02C1()
+	private void ForceQuit()
 	{
 		Application.Quit();
 	}
@@ -642,7 +642,7 @@ public class MainMenu : BaseMenu
 			{
 				if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].playerProfile != null && !this.v1popup.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
 				{
-					this.v1popup.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("v1popupHeader", "v1popupReadGuide", "Continue", null, null, "v1popupMessage");
+					this.v1popup.Enable("v1popupHeader", "v1popupReadGuide", "Continue", null, null, "v1popupMessage");
 					PlayerPrefs.SetInt("v1shownpopup", 1);
 					this.\u02B9\u02B3\u02B4\u02B7\u02B7\u02B7\u02BC\u02BE\u02B6\u02B6\u02B6 = true;
 					return;
@@ -712,7 +712,7 @@ public class MainMenu : BaseMenu
 			{
 				if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].playerProfile != null && !this.notSupportedMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
 				{
-					this.notSupportedMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD(this.\u02BC\u02BE\u02B6\u02B5\u02B9\u02C0\u02B7\u02C1\u02BC\u02B7\u02B7, "Visit Website", "OK", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B6\u02BF\u02BD\u02BC\u02BA\u02C1\u02B2\u02B4\u02BB\u02BB\u02BA), new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B5\u02B4\u02B8\u02B3\u02BB\u02BC\u02B4\u02BC\u02B6\u02BE\u02B4), this.\u02B3\u02B2\u02B7\u02BA\u02C1\u02C0\u02BB\u02BE\u02B9\u02B3\u02B2);
+					this.notSupportedMenu.Enable(this.\u02BC\u02BE\u02B6\u02B5\u02B9\u02C0\u02B7\u02C1\u02BC\u02B7\u02B7, "Visit Website", "OK", new ConfirmationMenu.CallFunc(this.\u02B6\u02BF\u02BD\u02BC\u02BA\u02C1\u02B2\u02B4\u02BB\u02BB\u02BA), new ConfirmationMenu.CallFunc(this.\u02B5\u02B4\u02B8\u02B3\u02BB\u02BC\u02B4\u02BC\u02B6\u02BE\u02B4), this.\u02B3\u02B2\u02B7\u02BA\u02C1\u02C0\u02BB\u02BE\u02B9\u02B3\u02B2);
 					break;
 				}
 			}
@@ -723,7 +723,7 @@ public class MainMenu : BaseMenu
 			{
 				if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[j].playerProfile != null && !this.notSupportedMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
 				{
-					this.notSupportedMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD(this.\u02BC\u02BE\u02B6\u02B5\u02B9\u02C0\u02B7\u02C1\u02BC\u02B7\u02B7, "Go to Discord", "Quit", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B5\u02BE\u02B3\u02BB\u02BA\u02B7\u02B5\u02B2\u02B2\u02B8\u02BB), new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(Application.Quit), this.\u02B3\u02B2\u02B7\u02BA\u02C1\u02C0\u02BB\u02BE\u02B9\u02B3\u02B2);
+					this.notSupportedMenu.Enable(this.\u02BC\u02BE\u02B6\u02B5\u02B9\u02C0\u02B7\u02C1\u02BC\u02B7\u02B7, "Go to Discord", "Quit", new ConfirmationMenu.CallFunc(this.\u02B5\u02BE\u02B3\u02BB\u02BA\u02B7\u02B5\u02B2\u02B2\u02B8\u02BB), new ConfirmationMenu.CallFunc(Application.Quit), this.\u02B3\u02B2\u02B7\u02BA\u02C1\u02C0\u02BB\u02BE\u02B9\u02B3\u02B2);
 					this.\u02BF\u02C1\u02B5\u02BD\u02BB\u02C1\u02B6\u02B8\u02B6\u02BB\u02B8 = false;
 					break;
 				}
@@ -745,7 +745,7 @@ public class MainMenu : BaseMenu
 		}
 		if (\u02BE\u02B2\u02BD\u02BB\u02BA\u02B6\u02BA\u02BA\u02B7\u02BF\u02BA.\u02BD\u02BD\u02B6\u02B3\u02B2\u02B6\u02BB\u02BF\u02BE\u02B6\u02B4.Count == 0)
 		{
-			this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("No songs were found!", "Scan Songs", "Don't Scan Songs", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02BC\u02BD\u02B3\u02BC\u02BD\u02B2\u02B8\u02B7\u02BC\u02BF\u02BF), null, null);
+			this.confirmMenu.Enable("No songs were found!", "Scan Songs", "Don't Scan Songs", new ConfirmationMenu.CallFunc(this.ScanSongs), null, null);
 			return false;
 		}
 		return true;
@@ -887,7 +887,9 @@ public class MainMenu : BaseMenu
 		if (!GlobalVariables.swr)
 		{
 			Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+			Debug.Log("sending update check");
 			base.StartCoroutine(this.UpdateCheck("https://raw.githubusercontent.com/hellidox/hellidox.github.io/main/ivversion"));
+			Debug.Log("sent update check");
 			string text3 = "";
 			foreach (string text4 in File.ReadAllText(GlobalHelper.path).Replace("\r", "").Split("\n", StringSplitOptions.None))
 			{
@@ -916,7 +918,7 @@ public class MainMenu : BaseMenu
 			{
 				if (text6 == "Disable")
 				{
-					goto IL_0584;
+					goto IL_05AC;
 				}
 			}
 			else
@@ -924,6 +926,7 @@ public class MainMenu : BaseMenu
 				text5 = "> user is anonymous. <@";
 			}
 			TimeSpan timeSpan = TimeSpan.FromSeconds((double)PlayerPrefs.GetInt("Playtime", 0));
+			Debug.Log("sending debug log");
 			base.StartCoroutine(this.PostRequest(GlobalHelper.internalLogWebhook, string.Concat(new string[]
 			{
 				"{\"content\":\"<@",
@@ -946,7 +949,8 @@ public class MainMenu : BaseMenu
 				"\\n```",
 				"\", \"embeds\": null, \"attachments\": null}"
 			})));
-			IL_0584:
+			Debug.Log("sent debug log");
+			IL_05AC:
 			if (SystemInfo.graphicsDeviceName.Contains("AMD") && SystemInfo.graphicsDeviceType != GraphicsDeviceType.Direct3D12)
 			{
 				GlobalHelper.ShowMessage("if you're on an AMD gpu you PROBABLY want to be using dx12.", "api checker", 0U);
@@ -985,17 +989,17 @@ public class MainMenu : BaseMenu
 		}
 		if (!BassAudioManager.Instance.\u02B8\u02B8\u02B6\u02BF\u02BB\u02B9\u02B4\u02B4\u02B9\u02BA\u02BF)
 		{
-			this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("bassinitfail", "Quit", null, new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B6\u02B5\u02BF\u02BF\u02B4\u02B8\u02C0\u02B3\u02B6\u02C1\u02C1), new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B6\u02B5\u02BF\u02BF\u02B4\u02B8\u02C0\u02B3\u02B6\u02C1\u02C1), null);
+			this.confirmMenu.Enable("bassinitfail", "Quit", null, new ConfirmationMenu.CallFunc(this.ForceQuit), new ConfirmationMenu.CallFunc(this.ForceQuit), null);
 		}
 		else if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BF\u02B6\u02B4\u02BB\u02BC\u02BF\u02B7\u02B9\u02BF\u02C0\u02B5)
 		{
 			if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02B5\u02BE\u02C1\u02B9\u02B2\u02B4\u02B7\u02BA\u02C1\u02BA)
 			{
-				this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("This song requires a rescan!", "Scan Songs", "Don't Scan Songs", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02BC\u02BD\u02B3\u02BC\u02BD\u02B2\u02B8\u02B7\u02BC\u02BF\u02BF), null, null);
+				this.confirmMenu.Enable("This song requires a rescan!", "Scan Songs", "Don't Scan Songs", new ConfirmationMenu.CallFunc(this.ScanSongs), null, null);
 			}
 			else
 			{
-				this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("Couldn't load that song", "Continue", null, null, null, null);
+				this.confirmMenu.Enable("Couldn't load that song", "Continue", null, null, null, null);
 			}
 			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02B5\u02BE\u02C1\u02B9\u02B2\u02B4\u02B7\u02BA\u02C1\u02BA = false;
 			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BF\u02B6\u02B4\u02BB\u02BC\u02BF\u02B7\u02B9\u02BF\u02C0\u02B5 = false;

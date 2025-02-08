@@ -7,7 +7,7 @@ public class SettingsMenu : BaseMenu
 {
 	protected virtual void \u02BE\u02B9\u02B7\u02B5\u02BC\u02B2\u02B8\u02BC\u02C0\u02B9\u02BE()
 	{
-		this.\u02BE\u02BB\u02B3\u02B6\u02B6\u02C0\u02C0\u02B7\u02B2\u02B4\u02BA = string.Empty;
+		this.previousSelectionString = string.Empty;
 		(this.generalMenu as GeneralSettingsMenu).\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0("Highway Placement");
 		(this.audioMenu as AudioSettingsMenu).\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0("_z");
 		(this.videoMenu as VideoSettingsMenu).\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0(": ");
@@ -34,57 +34,57 @@ public class SettingsMenu : BaseMenu
 
 	public override void \u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null)
+		if (this.changedSetting == null)
 		{
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
-			string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "General")
+			this.changedSetting = base.currentSelectionString;
+			string changedSetting = this.changedSetting;
+			if (changedSetting == "General")
 			{
-				this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+				this.changedSetting = null;
 				this.generalMenu.gameObject.SetActive(true);
 				this.generalMenu.enabled = true;
-				(this.generalMenu as GeneralSettingsMenu).\u02BB\u02C1\u02BD\u02BC\u02BE\u02BA\u02BA\u02B5\u02B9\u02BD\u02BA.sprite = this.\u02B7\u02B6\u02B2\u02BF\u02C1\u02B5\u02B2\u02C0\u02B6\u02B7\u02B4;
+				(this.generalMenu as GeneralSettingsMenu).fadeImage.sprite = this.\u02B7\u02B6\u02B2\u02BF\u02C1\u02B5\u02B2\u02C0\u02B6\u02B7\u02B4;
 				base.enabled = false;
 				return;
 			}
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Audio")
+			if (changedSetting == "Audio")
 			{
-				this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+				this.changedSetting = null;
 				this.audioMenu.gameObject.SetActive(true);
 				this.audioMenu.enabled = true;
-				(this.audioMenu as AudioSettingsMenu).\u02BB\u02C1\u02BD\u02BC\u02BE\u02BA\u02BA\u02B5\u02B9\u02BD\u02BA.sprite = this.\u02B7\u02B6\u02B2\u02BF\u02C1\u02B5\u02B2\u02C0\u02B6\u02B7\u02B4;
+				(this.audioMenu as AudioSettingsMenu).fadeImage.sprite = this.\u02B7\u02B6\u02B2\u02BF\u02C1\u02B5\u02B2\u02C0\u02B6\u02B7\u02B4;
 				base.enabled = false;
 				return;
 			}
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Video")
+			if (changedSetting == "Video")
 			{
-				this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+				this.changedSetting = null;
 				this.videoMenu.gameObject.SetActive(true);
 				this.videoMenu.enabled = true;
-				(this.videoMenu as VideoSettingsMenu).\u02BB\u02C1\u02BD\u02BC\u02BE\u02BA\u02BA\u02B5\u02B9\u02BD\u02BA.sprite = this.\u02B7\u02B6\u02B2\u02BF\u02C1\u02B5\u02B2\u02C0\u02B6\u02B7\u02B4;
+				(this.videoMenu as VideoSettingsMenu).fadeImage.sprite = this.\u02B7\u02B6\u02B2\u02BF\u02C1\u02B5\u02B2\u02C0\u02B6\u02B7\u02B4;
 				base.enabled = false;
 				return;
 			}
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Gameplay")
+			if (changedSetting == "Gameplay")
 			{
-				this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+				this.changedSetting = null;
 				this.gameplayMenu.gameObject.SetActive(true);
 				this.gameplayMenu.enabled = true;
-				(this.gameplayMenu as GameplaySettingsMenu).\u02BB\u02C1\u02BD\u02BC\u02BE\u02BA\u02BA\u02B5\u02B9\u02BD\u02BA.sprite = this.\u02B7\u02B6\u02B2\u02BF\u02C1\u02B5\u02B2\u02C0\u02B6\u02B7\u02B4;
+				(this.gameplayMenu as GameplaySettingsMenu).fadeImage.sprite = this.\u02B7\u02B6\u02B2\u02BF\u02C1\u02B5\u02B2\u02C0\u02B6\u02B7\u02B4;
 				base.enabled = false;
 				return;
 			}
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Credits")
+			if (changedSetting == "Credits")
 			{
 				GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B9\u02BB\u02BE\u02B6\u02BE\u02C0\u02B5\u02B9\u02B9\u02B8\u02B8(false);
 				SceneManager.LoadScene("Credits");
 				return;
 			}
-			if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Back"))
+			if (!(changedSetting == "Back"))
 			{
 				return;
 			}
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+			this.changedSetting = null;
 			this.mainMenu.SetActive(true);
 			base.gameObject.SetActive(false);
 		}
@@ -95,7 +95,7 @@ public class SettingsMenu : BaseMenu
 		this.\u02B9\u02B8\u02C0\u02B7\u02BA\u02B3\u02BB\u02C0\u02B3\u02C1\u02B8();
 	}
 
-	private void \u02BB\u02BB\u02B4\u02B2\u02BA\u02BF\u02BE\u02BE\u02B6\u02BA\u02B6()
+	private void ResetMenuObjects()
 	{
 		this.generalMenu.gameObject.SetActive(false);
 		this.audioMenu.gameObject.SetActive(false);
@@ -133,11 +133,11 @@ public class SettingsMenu : BaseMenu
 
 	protected override void Update()
 	{
-		if (this.\u02BE\u02BB\u02B3\u02B6\u02B6\u02C0\u02C0\u02B7\u02B2\u02B4\u02BA != base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0)
+		if (this.previousSelectionString != base.currentSelectionString)
 		{
-			this.\u02BE\u02BB\u02B3\u02B6\u02B6\u02C0\u02C0\u02B7\u02B2\u02B4\u02BA = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
-			this.\u02BB\u02BB\u02B4\u02B2\u02BA\u02BF\u02BE\u02BE\u02B6\u02BA\u02B6();
-			string text = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
+			this.previousSelectionString = base.currentSelectionString;
+			this.ResetMenuObjects();
+			string text = base.currentSelectionString;
 			if (!(text == "General"))
 			{
 				if (!(text == "Audio"))
@@ -148,35 +148,35 @@ public class SettingsMenu : BaseMenu
 						{
 							if (text == "Back")
 							{
-								this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+								this.changedSetting = null;
 							}
 						}
 						else
 						{
-							this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+							this.changedSetting = null;
 							this.gameplayMenu.gameObject.SetActive(true);
-							(this.gameplayMenu as GameplaySettingsMenu).\u02BB\u02C1\u02BD\u02BC\u02BE\u02BA\u02BA\u02B5\u02B9\u02BD\u02BA.sprite = this.\u02BA\u02C0\u02B7\u02C1\u02BE\u02B7\u02C1\u02B2\u02C0\u02B8\u02BC;
+							(this.gameplayMenu as GameplaySettingsMenu).fadeImage.sprite = this.fadeGradient;
 						}
 					}
 					else
 					{
-						this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+						this.changedSetting = null;
 						this.videoMenu.gameObject.SetActive(true);
-						(this.videoMenu as VideoSettingsMenu).\u02BB\u02C1\u02BD\u02BC\u02BE\u02BA\u02BA\u02B5\u02B9\u02BD\u02BA.sprite = this.\u02BA\u02C0\u02B7\u02C1\u02BE\u02B7\u02C1\u02B2\u02C0\u02B8\u02BC;
+						(this.videoMenu as VideoSettingsMenu).fadeImage.sprite = this.fadeGradient;
 					}
 				}
 				else
 				{
-					this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+					this.changedSetting = null;
 					this.audioMenu.gameObject.SetActive(true);
-					(this.audioMenu as AudioSettingsMenu).\u02BB\u02C1\u02BD\u02BC\u02BE\u02BA\u02BA\u02B5\u02B9\u02BD\u02BA.sprite = this.\u02BA\u02C0\u02B7\u02C1\u02BE\u02B7\u02C1\u02B2\u02C0\u02B8\u02BC;
+					(this.audioMenu as AudioSettingsMenu).fadeImage.sprite = this.fadeGradient;
 				}
 			}
 			else
 			{
-				this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+				this.changedSetting = null;
 				this.generalMenu.gameObject.SetActive(true);
-				(this.generalMenu as GeneralSettingsMenu).\u02BB\u02C1\u02BD\u02BC\u02BE\u02BA\u02BA\u02B5\u02B9\u02BD\u02BA.sprite = this.\u02BA\u02C0\u02B7\u02C1\u02BE\u02B7\u02C1\u02B2\u02C0\u02B8\u02BC;
+				(this.generalMenu as GeneralSettingsMenu).fadeImage.sprite = this.fadeGradient;
 			}
 		}
 		base.Update();
@@ -184,7 +184,7 @@ public class SettingsMenu : BaseMenu
 
 	protected virtual void \u02B3\u02C1\u02B9\u02B7\u02B4\u02BF\u02BD\u02B9\u02BB\u02BE\u02B6()
 	{
-		this.\u02BE\u02BB\u02B3\u02B6\u02B6\u02C0\u02C0\u02B7\u02B2\u02B4\u02BA = string.Empty;
+		this.previousSelectionString = string.Empty;
 		(this.generalMenu as GeneralSettingsMenu).\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0("Star Animation FPS");
 		(this.audioMenu as AudioSettingsMenu).\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0("guitar");
 		(this.videoMenu as VideoSettingsMenu).\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0("while lexing the header section");
@@ -199,11 +199,11 @@ public class SettingsMenu : BaseMenu
 
 	protected virtual void \u02B4\u02B6\u02BD\u02B5\u02C0\u02B6\u02BA\u02C1\u02C0\u02BC\u02BB()
 	{
-		if (this.\u02BE\u02BB\u02B3\u02B6\u02B6\u02C0\u02C0\u02B7\u02B2\u02B4\u02BA != base.\u02BC\u02B4\u02C0\u02BC\u02BE\u02BD\u02B8\u02B9\u02BF\u02BA\u02B7())
+		if (this.previousSelectionString != base.\u02BC\u02B4\u02C0\u02BC\u02BE\u02BD\u02B8\u02B9\u02BF\u02BA\u02B7())
 		{
-			this.\u02BE\u02BB\u02B3\u02B6\u02B6\u02C0\u02C0\u02B7\u02B2\u02B4\u02BA = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
+			this.previousSelectionString = base.currentSelectionString;
 			this.\u02BC\u02BB\u02BC\u02BE\u02B9\u02BA\u02BA\u02B2\u02B7\u02B5\u02B7();
-			string text = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
+			string text = base.currentSelectionString;
 			if (!(text == "Easy"))
 			{
 				if (!(text == "drum_pad_scrolling"))
@@ -214,35 +214,35 @@ public class SettingsMenu : BaseMenu
 						{
 							if (text == "Video Offset")
 							{
-								this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+								this.changedSetting = null;
 							}
 						}
 						else
 						{
-							this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+							this.changedSetting = null;
 							this.gameplayMenu.gameObject.SetActive(false);
-							(this.gameplayMenu as GameplaySettingsMenu).\u02BB\u02C1\u02BD\u02BC\u02BE\u02BA\u02BA\u02B5\u02B9\u02BD\u02BA.sprite = this.\u02BA\u02C0\u02B7\u02C1\u02BE\u02B7\u02C1\u02B2\u02C0\u02B8\u02BC;
+							(this.gameplayMenu as GameplaySettingsMenu).fadeImage.sprite = this.fadeGradient;
 						}
 					}
 					else
 					{
-						this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+						this.changedSetting = null;
 						this.videoMenu.gameObject.SetActive(true);
-						(this.videoMenu as VideoSettingsMenu).\u02BB\u02C1\u02BD\u02BC\u02BE\u02BA\u02BA\u02B5\u02B9\u02BD\u02BA.sprite = this.\u02BA\u02C0\u02B7\u02C1\u02BE\u02B7\u02C1\u02B2\u02C0\u02B8\u02BC;
+						(this.videoMenu as VideoSettingsMenu).fadeImage.sprite = this.fadeGradient;
 					}
 				}
 				else
 				{
-					this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+					this.changedSetting = null;
 					this.audioMenu.gameObject.SetActive(true);
-					(this.audioMenu as AudioSettingsMenu).\u02BB\u02C1\u02BD\u02BC\u02BE\u02BA\u02BA\u02B5\u02B9\u02BD\u02BA.sprite = this.\u02BA\u02C0\u02B7\u02C1\u02BE\u02B7\u02C1\u02B2\u02C0\u02B8\u02BC;
+					(this.audioMenu as AudioSettingsMenu).fadeImage.sprite = this.fadeGradient;
 				}
 			}
 			else
 			{
-				this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+				this.changedSetting = null;
 				this.generalMenu.gameObject.SetActive(false);
-				(this.generalMenu as GeneralSettingsMenu).\u02BB\u02C1\u02BD\u02BC\u02BE\u02BA\u02BA\u02B5\u02B9\u02BD\u02BA.sprite = this.\u02BA\u02C0\u02B7\u02C1\u02BE\u02B7\u02C1\u02B2\u02C0\u02B8\u02BC;
+				(this.generalMenu as GeneralSettingsMenu).fadeImage.sprite = this.fadeGradient;
 			}
 		}
 		base.Update();
@@ -263,7 +263,7 @@ public class SettingsMenu : BaseMenu
 
 	protected override void OnEnable()
 	{
-		this.\u02BE\u02BB\u02B3\u02B6\u02B6\u02C0\u02C0\u02B7\u02B2\u02B4\u02BA = string.Empty;
+		this.previousSelectionString = string.Empty;
 		(this.generalMenu as GeneralSettingsMenu).\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0("");
 		(this.audioMenu as AudioSettingsMenu).\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0("");
 		(this.videoMenu as VideoSettingsMenu).\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0("");
@@ -273,7 +273,7 @@ public class SettingsMenu : BaseMenu
 		this.videoMenu.\u02BE\u02B2\u02B9\u02BF\u02B3\u02C0\u02B2\u02B4\u02B5\u02B7\u02BA();
 		this.gameplayMenu.\u02BE\u02B2\u02B9\u02BF\u02B3\u02C0\u02B2\u02B4\u02B5\u02B7\u02BA();
 		base.OnEnable();
-		this.\u02BB\u02BB\u02B4\u02B2\u02BA\u02BF\u02BE\u02BE\u02B6\u02BA\u02B6();
+		this.ResetMenuObjects();
 	}
 
 	private void \u02B7\u02B5\u02C1\u02B2\u02BC\u02BE\u02B3\u02BC\u02B2\u02C1\u02B4()
@@ -299,7 +299,7 @@ public class SettingsMenu : BaseMenu
 
 	protected virtual void \u02C0\u02B4\u02BF\u02B7\u02BD\u02B7\u02B6\u02BA\u02B6\u02BD\u02B3()
 	{
-		this.\u02BE\u02BB\u02B3\u02B6\u02B6\u02C0\u02C0\u02B7\u02B2\u02B4\u02BA = string.Empty;
+		this.previousSelectionString = string.Empty;
 		(this.generalMenu as GeneralSettingsMenu).\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0("Leave");
 		(this.audioMenu as AudioSettingsMenu).\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0("8EDC4F");
 		(this.videoMenu as VideoSettingsMenu).\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0("_y");
@@ -323,7 +323,7 @@ public class SettingsMenu : BaseMenu
 
 	protected virtual void \u02B3\u02BC\u02BB\u02BF\u02C1\u02BE\u02B4\u02BC\u02BE\u02BF\u02B8()
 	{
-		this.\u02BE\u02BB\u02B3\u02B6\u02B6\u02C0\u02C0\u02B7\u02B2\u02B4\u02BA = string.Empty;
+		this.previousSelectionString = string.Empty;
 		(this.generalMenu as GeneralSettingsMenu).\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0("Continue");
 		(this.audioMenu as AudioSettingsMenu).\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0("groupFcCount");
 		(this.videoMenu as VideoSettingsMenu).\u02BA\u02B4\u02BC\u02BA\u02B7\u02B7\u02B7\u02BE\u02B7\u02C1\u02C0("Solid Solo!");
@@ -343,57 +343,57 @@ public class SettingsMenu : BaseMenu
 
 	public virtual void \u02BD\u02B3\u02B9\u02BD\u02B3\u02BE\u02B4\u02B9\u02BB\u02BE\u02B9()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null)
+		if (this.changedSetting == null)
 		{
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
-			string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "")
+			this.changedSetting = base.currentSelectionString;
+			string changedSetting = this.changedSetting;
+			if (changedSetting == "")
 			{
-				this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+				this.changedSetting = null;
 				this.generalMenu.gameObject.SetActive(true);
 				this.generalMenu.enabled = true;
-				(this.generalMenu as GeneralSettingsMenu).\u02BB\u02C1\u02BD\u02BC\u02BE\u02BA\u02BA\u02B5\u02B9\u02BD\u02BA.sprite = this.\u02B7\u02B6\u02B2\u02BF\u02C1\u02B5\u02B2\u02C0\u02B6\u02B7\u02B4;
+				(this.generalMenu as GeneralSettingsMenu).fadeImage.sprite = this.\u02B7\u02B6\u02B2\u02BF\u02C1\u02B5\u02B2\u02C0\u02B6\u02B7\u02B4;
 				base.enabled = true;
 				return;
 			}
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "guitarcoop")
+			if (changedSetting == "guitarcoop")
 			{
-				this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+				this.changedSetting = null;
 				this.audioMenu.gameObject.SetActive(false);
 				this.audioMenu.enabled = true;
-				(this.audioMenu as AudioSettingsMenu).\u02BB\u02C1\u02BD\u02BC\u02BE\u02BA\u02BA\u02B5\u02B9\u02BD\u02BA.sprite = this.\u02B7\u02B6\u02B2\u02BF\u02C1\u02B5\u02B2\u02C0\u02B6\u02B7\u02B4;
+				(this.audioMenu as AudioSettingsMenu).fadeImage.sprite = this.\u02B7\u02B6\u02B2\u02BF\u02C1\u02B5\u02B2\u02C0\u02B6\u02B7\u02B4;
 				base.enabled = false;
 				return;
 			}
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Language: '")
+			if (changedSetting == "Language: '")
 			{
-				this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+				this.changedSetting = null;
 				this.videoMenu.gameObject.SetActive(true);
 				this.videoMenu.enabled = true;
-				(this.videoMenu as VideoSettingsMenu).\u02BB\u02C1\u02BD\u02BC\u02BE\u02BA\u02BA\u02B5\u02B9\u02BD\u02BA.sprite = this.\u02B7\u02B6\u02B2\u02BF\u02C1\u02B5\u02B2\u02C0\u02B6\u02B7\u02B4;
+				(this.videoMenu as VideoSettingsMenu).fadeImage.sprite = this.\u02B7\u02B6\u02B2\u02BF\u02C1\u02B5\u02B2\u02C0\u02B6\u02B7\u02B4;
 				base.enabled = true;
 				return;
 			}
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "highway_sp")
+			if (changedSetting == "highway_sp")
 			{
-				this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+				this.changedSetting = null;
 				this.gameplayMenu.gameObject.SetActive(true);
 				this.gameplayMenu.enabled = true;
-				(this.gameplayMenu as GameplaySettingsMenu).\u02BB\u02C1\u02BD\u02BC\u02BE\u02BA\u02BA\u02B5\u02B9\u02BD\u02BA.sprite = this.\u02B7\u02B6\u02B2\u02BF\u02C1\u02B5\u02B2\u02C0\u02B6\u02B7\u02B4;
+				(this.gameplayMenu as GameplaySettingsMenu).fadeImage.sprite = this.\u02B7\u02B6\u02B2\u02BF\u02C1\u02B5\u02B2\u02C0\u02B6\u02B7\u02B4;
 				base.enabled = false;
 				return;
 			}
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "song")
+			if (changedSetting == "song")
 			{
 				GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B9\u02BB\u02BE\u02B6\u02BE\u02C0\u02B5\u02B9\u02B9\u02B8\u02B8(false);
 				SceneManager.LoadScene("songName");
 				return;
 			}
-			if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "ModChart Prep"))
+			if (!(changedSetting == "ModChart Prep"))
 			{
 				return;
 			}
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+			this.changedSetting = null;
 			this.mainMenu.SetActive(false);
 			base.gameObject.SetActive(true);
 		}
@@ -401,57 +401,57 @@ public class SettingsMenu : BaseMenu
 
 	public virtual void \u02B2\u02BA\u02B2\u02BC\u02B6\u02B4\u02BB\u02B6\u02B8\u02BE\u02B3()
 	{
-		if (this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 == null)
+		if (this.changedSetting == null)
 		{
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
-			string u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B = this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Audio Backend")
+			this.changedSetting = base.currentSelectionString;
+			string changedSetting = this.changedSetting;
+			if (changedSetting == "Audio Backend")
 			{
-				this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+				this.changedSetting = null;
 				this.generalMenu.gameObject.SetActive(false);
 				this.generalMenu.enabled = false;
-				(this.generalMenu as GeneralSettingsMenu).\u02BB\u02C1\u02BD\u02BC\u02BE\u02BA\u02BA\u02B5\u02B9\u02BD\u02BA.sprite = this.\u02B7\u02B6\u02B2\u02BF\u02C1\u02B5\u02B2\u02C0\u02B6\u02B7\u02B4;
+				(this.generalMenu as GeneralSettingsMenu).fadeImage.sprite = this.\u02B7\u02B6\u02B2\u02BF\u02C1\u02B5\u02B2\u02C0\u02B6\u02B7\u02B4;
 				base.enabled = true;
 				return;
 			}
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "ERROR: These folders contain charts that another song has (duplicate charts)!")
+			if (changedSetting == "ERROR: These folders contain charts that another song has (duplicate charts)!")
 			{
-				this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+				this.changedSetting = null;
 				this.audioMenu.gameObject.SetActive(false);
 				this.audioMenu.enabled = false;
-				(this.audioMenu as AudioSettingsMenu).\u02BB\u02C1\u02BD\u02BC\u02BE\u02BA\u02BA\u02B5\u02B9\u02BD\u02BA.sprite = this.\u02B7\u02B6\u02B2\u02BF\u02C1\u02B5\u02B2\u02C0\u02B6\u02B7\u02B4;
+				(this.audioMenu as AudioSettingsMenu).fadeImage.sprite = this.\u02B7\u02B6\u02B2\u02BF\u02C1\u02B5\u02B2\u02C0\u02B6\u02B7\u02B4;
 				base.enabled = true;
 				return;
 			}
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "6-fret Rhythm")
+			if (changedSetting == "6-fret Rhythm")
 			{
-				this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+				this.changedSetting = null;
 				this.videoMenu.gameObject.SetActive(false);
 				this.videoMenu.enabled = false;
-				(this.videoMenu as VideoSettingsMenu).\u02BB\u02C1\u02BD\u02BC\u02BE\u02BA\u02BA\u02B5\u02B9\u02BD\u02BA.sprite = this.\u02B7\u02B6\u02B2\u02BF\u02C1\u02B5\u02B2\u02C0\u02B6\u02B7\u02B4;
+				(this.videoMenu as VideoSettingsMenu).fadeImage.sprite = this.\u02B7\u02B6\u02B2\u02BF\u02C1\u02B5\u02B2\u02C0\u02B6\u02B7\u02B4;
 				base.enabled = true;
 				return;
 			}
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "part drum")
+			if (changedSetting == "part drum")
 			{
-				this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+				this.changedSetting = null;
 				this.gameplayMenu.gameObject.SetActive(false);
 				this.gameplayMenu.enabled = false;
-				(this.gameplayMenu as GameplaySettingsMenu).\u02BB\u02C1\u02BD\u02BC\u02BE\u02BA\u02BA\u02B5\u02B9\u02BD\u02BA.sprite = this.\u02B7\u02B6\u02B2\u02BF\u02C1\u02B5\u02B2\u02C0\u02B6\u02B7\u02B4;
+				(this.gameplayMenu as GameplaySettingsMenu).fadeImage.sprite = this.\u02B7\u02B6\u02B2\u02BF\u02C1\u02B5\u02B2\u02C0\u02B6\u02B7\u02B4;
 				base.enabled = true;
 				return;
 			}
-			if (u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "Online Highway Placement")
+			if (changedSetting == "Online Highway Placement")
 			{
 				GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B9\u02BC\u02BB\u02BC\u02C1\u02C0\u02B4\u02B9\u02BC\u02BC\u02C0(true);
 				SceneManager.LoadScene("Pastel Burst");
 				return;
 			}
-			if (!(u02BE_u02BA_u02B2_u02BB_u02BA_u02B3_u02B2_u02B2_u02B6_u02BF_u02B == "connectionclosed"))
+			if (!(changedSetting == "connectionclosed"))
 			{
 				return;
 			}
-			this.\u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3 = null;
+			this.changedSetting = null;
 			this.mainMenu.SetActive(true);
 			base.gameObject.SetActive(false);
 		}
@@ -490,9 +490,9 @@ public class SettingsMenu : BaseMenu
 
 	private List<string> \u02BA\u02C1\u02C0\u02BE\u02B3\u02BA\u02B2\u02BF\u02BD\u02B8\u02C0;
 
-	public Sprite \u02BA\u02C0\u02B7\u02C1\u02BE\u02B7\u02C1\u02B2\u02C0\u02B8\u02BC;
+	public Sprite fadeGradient;
 
 	public Sprite \u02B7\u02B6\u02B2\u02BF\u02C1\u02B5\u02B2\u02C0\u02B6\u02B7\u02B4;
 
-	private string \u02BE\u02BB\u02B3\u02B6\u02B6\u02C0\u02C0\u02B7\u02B2\u02B4\u02BA = string.Empty;
+	private string previousSelectionString = string.Empty;
 }

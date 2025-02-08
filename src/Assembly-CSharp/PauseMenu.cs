@@ -233,7 +233,7 @@ public class PauseMenu : BaseMenu
 	protected override void \u02BE\u02B4\u02BD\u02B6\u02B5\u02B7\u02BB\u02BE\u02B3\u02B5\u02B9(bool \u02BE\u02B5\u02B9\u02B4\u02C0\u02C0\u02BF\u02BB\u02C0\u02B5\u02B9 = true)
 	{
 		base.\u02BE\u02B4\u02BD\u02B6\u02B5\u02B7\u02BB\u02BE\u02B3\u02B5\u02B9(\u02BE\u02B5\u02B9\u02B4\u02C0\u02C0\u02BF\u02BB\u02C0\u02B5\u02B9);
-		string text = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
+		string text = base.currentSelectionString;
 		if (text == "Set A Position" || text == "Set B Position")
 		{
 			this.\u02B6\u02B2\u02B3\u02C0\u02BB\u02B7\u02BE\u02BD\u02C0\u02B6\u02B9(true);
@@ -259,7 +259,7 @@ public class PauseMenu : BaseMenu
 
 	public override void \u02BB\u02B3\u02BF\u02BC\u02C1\u02BC\u02BC\u02C1\u02C0\u02B5\u02BA()
 	{
-		string text = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
+		string text = base.currentSelectionString;
 		if (text == "Set A Position")
 		{
 			float num = this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.song.\u02B9\u02B4\u02B6\u02B8\u02BE\u02B2\u02B6\u02C0\u02BC\u02BA\u02B7(this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02BF\u02B6\u02BA\u02C0\u02C0\u02BC\u02B4\u02B9\u02BB\u02B3\u02BB) - this.\u02B4\u02B5\u02B9\u02BC\u02B4\u02BF\u02B7\u02C0\u02B8\u02B9\u02B7;
@@ -457,7 +457,7 @@ public class PauseMenu : BaseMenu
 
 	public override void \u02BD\u02B9\u02BE\u02BB\u02B9\u02BA\u02B5\u02BC\u02BE\u02C1\u02B2()
 	{
-		string text = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
+		string text = base.currentSelectionString;
 		if (text == "Set A Position")
 		{
 			float num = this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.song.\u02B9\u02B4\u02B6\u02B8\u02BE\u02B2\u02B6\u02C0\u02BC\u02BA\u02B7(this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02BF\u02B6\u02BA\u02C0\u02C0\u02BC\u02B4\u02B9\u02BB\u02B3\u02BB) + this.\u02B4\u02B5\u02B9\u02BC\u02B4\u02BF\u02B7\u02C0\u02B8\u02B9\u02B7;
@@ -571,7 +571,7 @@ public class PauseMenu : BaseMenu
 	{
 		if (this.\u02BE\u02BC\u02BA\u02B5\u02BC\u02C1\u02B2\u02B8\u02C1\u02B7\u02B8 && !CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BA\u02B8\u02B6\u02BB\u02B5\u02B2\u02B8\u02B6\u02BB\u02BB)
 		{
-			this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("You must restart, settings were changed", "Restart", "Quit", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B7\u02BB\u02B8\u02BF\u02B9\u02C1\u02B4\u02C0\u02B4\u02C0\u02BF), new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B2\u02B4\u02B3\u02B8\u02B4\u02C0\u02B6\u02BD\u02BC\u02B7\u02B6), null);
+			this.confirmMenu.Enable("You must restart, settings were changed", "Restart", "Quit", new ConfirmationMenu.CallFunc(this.\u02B7\u02BB\u02B8\u02BF\u02B9\u02C1\u02B4\u02C0\u02B4\u02C0\u02BF), new ConfirmationMenu.CallFunc(this.\u02B2\u02B4\u02B3\u02B8\u02B4\u02C0\u02B6\u02BD\u02BC\u02B7\u02B6), null);
 			return;
 		}
 		this.\u02B8\u02B8\u02B4\u02BB\u02B7\u02B6\u02B6\u02C0\u02C1\u02BD\u02B2 = false;
@@ -598,7 +598,7 @@ public class PauseMenu : BaseMenu
 	protected override void \u02B7\u02C1\u02BA\u02BA\u02B2\u02B5\u02B7\u02BD\u02BC\u02C1\u02BE(bool \u02BE\u02B5\u02B9\u02B4\u02C0\u02C0\u02BF\u02BB\u02C0\u02B5\u02B9 = true)
 	{
 		base.\u02B7\u02C1\u02BA\u02BA\u02B2\u02B5\u02B7\u02BD\u02BC\u02C1\u02BE(\u02BE\u02B5\u02B9\u02B4\u02C0\u02C0\u02BF\u02BB\u02C0\u02B5\u02B9);
-		string text = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
+		string text = base.currentSelectionString;
 		if (text == "Set A Position" || text == "Set B Position")
 		{
 			this.\u02B6\u02B2\u02B3\u02C0\u02BB\u02B7\u02BE\u02BD\u02C0\u02B6\u02B9(true);
@@ -618,7 +618,7 @@ public class PauseMenu : BaseMenu
 
 	public override void \u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3()
 	{
-		string text = base.\u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0;
+		string text = base.currentSelectionString;
 		uint num = PrivateImplementationDetails.ComputeStringHash(text);
 		if (num <= 2065848082U)
 		{
@@ -636,7 +636,7 @@ public class PauseMenu : BaseMenu
 						{
 							return;
 						}
-						this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("Are you sure you want to restart?", "Yes", "No", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B7\u02BB\u02B8\u02BF\u02B9\u02C1\u02B4\u02C0\u02B4\u02C0\u02BF), null, null);
+						this.confirmMenu.Enable("Are you sure you want to restart?", "Yes", "No", new ConfirmationMenu.CallFunc(this.\u02B7\u02BB\u02B8\u02BF\u02B9\u02C1\u02B4\u02C0\u02B4\u02C0\u02BF), null, null);
 						return;
 					}
 					else
@@ -709,7 +709,7 @@ public class PauseMenu : BaseMenu
 					}
 					if (this.\u02BE\u02BC\u02BA\u02B5\u02BC\u02C1\u02B2\u02B8\u02C1\u02B7\u02B8)
 					{
-						this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("You must restart, settings were changed", "Restart", "Quit", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B7\u02BB\u02B8\u02BF\u02B9\u02C1\u02B4\u02C0\u02B4\u02C0\u02BF), null, null);
+						this.confirmMenu.Enable("You must restart, settings were changed", "Restart", "Quit", new ConfirmationMenu.CallFunc(this.\u02B7\u02BB\u02B8\u02BF\u02B9\u02C1\u02B4\u02C0\u02B4\u02C0\u02BF), null, null);
 						return;
 					}
 					this.\u02BB\u02C0\u02BE\u02BB\u02BD\u02BE\u02B3\u02B7\u02B8\u02B7\u02B2();
@@ -726,7 +726,7 @@ public class PauseMenu : BaseMenu
 				{
 					return;
 				}
-				this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("Are you sure you want to end the current setlist?", "Yes", "No", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(\u02B3\u02B7\u02B4\u02BE\u02BE\u02C1\u02BE\u02BB\u02B2\u02B9\u02BA.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02B6\u02B6\u02B9\u02B8\u02B3\u02C0\u02B6\u02BB\u02BD\u02BA), null, null);
+				this.confirmMenu.Enable("Are you sure you want to end the current setlist?", "Yes", "No", new ConfirmationMenu.CallFunc(\u02B3\u02B7\u02B4\u02BE\u02BE\u02C1\u02BE\u02BB\u02B2\u02B9\u02BA.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02B6\u02B6\u02B9\u02B8\u02B3\u02C0\u02B6\u02BB\u02BD\u02BA), null, null);
 				return;
 			}
 			else if (!(text == "Quickplay"))
@@ -767,7 +767,7 @@ public class PauseMenu : BaseMenu
 					}
 					if (this.\u02BE\u02BC\u02BA\u02B5\u02BC\u02C1\u02B2\u02B8\u02C1\u02B7\u02B8)
 					{
-						this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("You must restart, settings were changed", "Restart", "Quit", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B7\u02BB\u02B8\u02BF\u02B9\u02C1\u02B4\u02C0\u02B4\u02C0\u02BF), null, null);
+						this.confirmMenu.Enable("You must restart, settings were changed", "Restart", "Quit", new ConfirmationMenu.CallFunc(this.\u02B7\u02BB\u02B8\u02BF\u02B9\u02C1\u02B4\u02C0\u02B4\u02C0\u02BF), null, null);
 						return;
 					}
 					this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B5\u02BA\u02B4\u02BA\u02B6\u02C1\u02BB\u02BE\u02B6\u02BC\u02BE.SetActive(true);
@@ -793,7 +793,7 @@ public class PauseMenu : BaseMenu
 				{
 					return;
 				}
-				this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("Are you sure you want to quit?", "Yes", "No", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B2\u02B4\u02B3\u02B8\u02B4\u02C0\u02B6\u02BD\u02BC\u02B7\u02B6), null, null);
+				this.confirmMenu.Enable("Are you sure you want to quit?", "Yes", "No", new ConfirmationMenu.CallFunc(this.\u02B2\u02B4\u02B3\u02B8\u02B4\u02C0\u02B6\u02BD\u02BC\u02B7\u02B6), null, null);
 				return;
 			}
 		}
@@ -809,7 +809,7 @@ public class PauseMenu : BaseMenu
 				{
 					return;
 				}
-				this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("Are you sure you want to quit?", "Yes", "No", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B6\u02B6\u02B5\u02B8\u02B9\u02BC\u02B6\u02BB\u02BD\u02BA\u02BD), null, null);
+				this.confirmMenu.Enable("Are you sure you want to quit?", "Yes", "No", new ConfirmationMenu.CallFunc(this.\u02B6\u02B6\u02B5\u02B8\u02B9\u02BC\u02B6\u02BB\u02BD\u02BA\u02BD), null, null);
 				return;
 			}
 			else
@@ -818,7 +818,7 @@ public class PauseMenu : BaseMenu
 				{
 					return;
 				}
-				this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("Are you sure you want to skip this song?", "Yes", "No", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02BC\u02BA\u02BC\u02BD\u02B3\u02BE\u02BE\u02B2\u02B4\u02B8\u02B4), null, null);
+				this.confirmMenu.Enable("Are you sure you want to skip this song?", "Yes", "No", new ConfirmationMenu.CallFunc(this.\u02BC\u02BA\u02BC\u02BD\u02B3\u02BE\u02BE\u02B2\u02B4\u02B8\u02B4), null, null);
 				return;
 			}
 		}
@@ -832,7 +832,7 @@ public class PauseMenu : BaseMenu
 			{
 				return;
 			}
-			this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("Are you sure you want to practice?", "Yes", "No", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02BC\u02B3\u02B2\u02B6\u02B9\u02C0\u02C0\u02BF\u02BC\u02BA\u02B7), null, null);
+			this.confirmMenu.Enable("Are you sure you want to practice?", "Yes", "No", new ConfirmationMenu.CallFunc(this.\u02BC\u02B3\u02B2\u02B6\u02B9\u02C0\u02C0\u02BF\u02BC\u02BA\u02B7), null, null);
 			return;
 		}
 		else
@@ -855,7 +855,7 @@ public class PauseMenu : BaseMenu
 			this.\u02BB\u02C0\u02BE\u02BB\u02BD\u02BE\u02B3\u02B7\u02B8\u02B7\u02B2();
 			return;
 		}
-		this.confirmMenu.\u02C0\u02B7\u02B3\u02B8\u02B2\u02B9\u02B2\u02BC\u02BE\u02B8\u02BD("Are you sure you want to stop practicing?", "Yes", "No", new ConfirmationMenu.\u02BF\u02B3\u02BF\u02BF\u02C0\u02B2\u02BE\u02B8\u02B6\u02BD\u02B7(this.\u02B6\u02B4\u02B9\u02C1\u02BA\u02B7\u02B5\u02B3\u02B6\u02C1\u02BF), null, null);
+		this.confirmMenu.Enable("Are you sure you want to stop practicing?", "Yes", "No", new ConfirmationMenu.CallFunc(this.\u02B6\u02B4\u02B9\u02C1\u02BA\u02B7\u02B5\u02B3\u02B6\u02C1\u02BF), null, null);
 	}
 
 	public void \u02BF\u02BD\u02BF\u02BD\u02BA\u02BA\u02C1\u02B4\u02BA\u02BC\u02B4()

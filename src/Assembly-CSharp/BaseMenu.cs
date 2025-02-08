@@ -213,7 +213,7 @@ public class BaseMenu : MonoBehaviour
 		this.\u02B7\u02B9\u02BF\u02B5\u02B6\u02B5\u02B9\u02B8\u02B6\u02B2\u02B4 -= Time.unscaledDeltaTime;
 	}
 
-	protected string \u02B2\u02BF\u02BF\u02BE\u02BD\u02B8\u02BE\u02C0\u02B3\u02B3\u02C0
+	protected string currentSelectionString
 	{
 		get
 		{
@@ -1077,7 +1077,7 @@ public class BaseMenu : MonoBehaviour
 
 	public static bool \u02B6\u02B7\u02BD\u02BE\u02BB\u02BE\u02C0\u02C1\u02B7\u02B4\u02C0;
 
-	protected string \u02BE\u02BA\u02B2\u02BB\u02BA\u02B3\u02B2\u02B2\u02B6\u02BF\u02B3;
+	protected string changedSetting;
 
 	[HideInInspector]
 	public bool \u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8;
