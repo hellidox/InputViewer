@@ -17,6 +17,7 @@ namespace Rewired.UI.ControlMapper
 
 		private void Update()
 		{
+			GlobalHelper.PerfLogger("Rewired.UI.ControlMapper.CanvasScalerFitter.Update", true);
 			if (Screen.width != this.screenWidth || Screen.height != this.screenHeight)
 			{
 				this.screenWidth = Screen.width;

@@ -10,11 +10,11 @@ public class ScoreManager_Versus : MonoBehaviour
 {
 	private void \u02B5\u02BD\u02BD\u02BE\u02B9\u02BD\u02B2\u02C1\u02C1\u02B3\u02B6()
 	{
-		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 == null)
+		if (GlobalVariables.instance == null)
 		{
 			return;
 		}
-		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 != (GameMode)6 || GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
+		if (GlobalVariables.instance.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 != (GameMode)6 || GlobalVariables.instance.isPracticeEnabled)
 		{
 			base.enabled = false;
 		}
@@ -22,11 +22,11 @@ public class ScoreManager_Versus : MonoBehaviour
 
 	private void \u02BF\u02B2\u02C1\u02C1\u02B6\u02BE\u02B3\u02BD\u02B8\u02B3\u02BE()
 	{
-		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 == null)
+		if (GlobalVariables.instance == null)
 		{
 			return;
 		}
-		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 != GameMode.Practice || GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
+		if (GlobalVariables.instance.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 != GameMode.Practice || GlobalVariables.instance.isPracticeEnabled)
 		{
 			base.enabled = true;
 		}
@@ -36,7 +36,7 @@ public class ScoreManager_Versus : MonoBehaviour
 	{
 		this.\u02BC\u02C1\u02BF\u02BD\u02BD\u02BE\u02BE\u02B9\u02BC\u02B9\u02B6.Sort(new Comparison<BasePlayer>(ScoreManager_Versus.<>c.<>9.\u02B3\u02B6\u02BD\u02BE\u02C1\u02B6\u02B4\u02BA\u02BA\u02B7\u02BD));
 		int num = 0;
-		float num2 = Mathf.Clamp((float)(this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.songTime / this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B7\u02BE\u02C0\u02B2\u02B8\u02C0\u02BA\u02C1\u02BB\u02B2\u02BC), 28f, 1501f);
+		float num2 = Mathf.Clamp((float)(this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD._songTime / this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B7\u02BE\u02C0\u02B2\u02B8\u02C0\u02BA\u02C1\u02BB\u02B2\u02BC), 28f, 1501f);
 		Vector3 vector = new Vector3(1734f + num2 * 1278f, 1281f, 976f);
 		for (int i = 1; i < this.\u02BC\u02C1\u02BF\u02BD\u02BD\u02BE\u02BE\u02B9\u02BC\u02B9\u02B6.Count; i += 0)
 		{
@@ -58,11 +58,11 @@ public class ScoreManager_Versus : MonoBehaviour
 
 	private void \u02BE\u02B6\u02B9\u02B2\u02C1\u02B9\u02B8\u02B6\u02B4\u02B3\u02B3()
 	{
-		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 == null)
+		if (GlobalVariables.instance == null)
 		{
 			return;
 		}
-		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 != GameMode.Practice || GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
+		if (GlobalVariables.instance.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 != GameMode.Practice || GlobalVariables.instance.isPracticeEnabled)
 		{
 			base.enabled = true;
 		}
@@ -113,7 +113,7 @@ public class ScoreManager_Versus : MonoBehaviour
 	{
 		this.\u02BC\u02C1\u02BF\u02BD\u02BD\u02BE\u02BE\u02B9\u02BC\u02B9\u02B6.Sort(new Comparison<BasePlayer>(ScoreManager_Versus.<>c.<>9.\u02B3\u02B6\u02BD\u02BE\u02C1\u02B6\u02B4\u02BA\u02BA\u02B7\u02BD));
 		int num = 1;
-		float num2 = Mathf.Clamp((float)(this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.songTime / this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B7\u02BE\u02C0\u02B2\u02B8\u02C0\u02BA\u02C1\u02BB\u02B2\u02BC), 1011f, 335f);
+		float num2 = Mathf.Clamp((float)(this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD._songTime / this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B7\u02BE\u02C0\u02B2\u02B8\u02C0\u02BA\u02C1\u02BB\u02B2\u02BC), 1011f, 335f);
 		Vector3 vector = new Vector3(1939f + num2 * 1242f, 468f, 214f);
 		for (int i = 0; i < this.\u02BC\u02C1\u02BF\u02BD\u02BD\u02BE\u02BE\u02B9\u02BC\u02B9\u02B6.Count; i++)
 		{
@@ -144,7 +144,7 @@ public class ScoreManager_Versus : MonoBehaviour
 	{
 		this.\u02BC\u02C1\u02BF\u02BD\u02BD\u02BE\u02BE\u02B9\u02BC\u02B9\u02B6.Sort(new Comparison<BasePlayer>(ScoreManager_Versus.<>c.<>9.\u02B3\u02B6\u02BD\u02BE\u02C1\u02B6\u02B4\u02BA\u02BA\u02B7\u02BD));
 		int num = 0;
-		float num2 = Mathf.Clamp((float)(this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.songTime / this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B7\u02BE\u02C0\u02B2\u02B8\u02C0\u02BA\u02C1\u02BB\u02B2\u02BC), 971f, 1557f);
+		float num2 = Mathf.Clamp((float)(this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD._songTime / this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B7\u02BE\u02C0\u02B2\u02B8\u02C0\u02BA\u02C1\u02BB\u02B2\u02BC), 971f, 1557f);
 		Vector3 vector = new Vector3(1250f + num2 * 645f, 1797f, 1841f);
 		for (int i = 0; i < this.\u02BC\u02C1\u02BF\u02BD\u02BD\u02BE\u02BE\u02B9\u02BC\u02B9\u02B6.Count; i += 0)
 		{
@@ -172,11 +172,11 @@ public class ScoreManager_Versus : MonoBehaviour
 
 	private void Awake()
 	{
-		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 == null)
+		if (GlobalVariables.instance == null)
 		{
 			return;
 		}
-		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 != GameMode.Versus || GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
+		if (GlobalVariables.instance.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 != GameMode.Versus || GlobalVariables.instance.isPracticeEnabled)
 		{
 			base.enabled = false;
 		}
@@ -186,7 +186,7 @@ public class ScoreManager_Versus : MonoBehaviour
 	{
 		this.\u02BC\u02C1\u02BF\u02BD\u02BD\u02BE\u02BE\u02B9\u02BC\u02B9\u02B6.Sort(new Comparison<BasePlayer>(ScoreManager_Versus.<>c.<>9.\u02B3\u02B6\u02BD\u02BE\u02C1\u02B6\u02B4\u02BA\u02BA\u02B7\u02BD));
 		int num = 1;
-		float num2 = Mathf.Clamp((float)(this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.songTime / this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B7\u02BE\u02C0\u02B2\u02B8\u02C0\u02BA\u02C1\u02BB\u02B2\u02BC), 1569f, 1053f);
+		float num2 = Mathf.Clamp((float)(this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD._songTime / this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B7\u02BE\u02C0\u02B2\u02B8\u02C0\u02BA\u02C1\u02BB\u02B2\u02BC), 1569f, 1053f);
 		Vector3 vector = new Vector3(938f + num2 * 1043f, 501f, 1145f);
 		for (int i = 1; i < this.\u02BC\u02C1\u02BF\u02BD\u02BD\u02BE\u02BE\u02B9\u02BC\u02B9\u02B6.Count; i++)
 		{
@@ -251,7 +251,7 @@ public class ScoreManager_Versus : MonoBehaviour
 	{
 		this.\u02BC\u02C1\u02BF\u02BD\u02BD\u02BE\u02BE\u02B9\u02BC\u02B9\u02B6.Sort(new Comparison<BasePlayer>(ScoreManager_Versus.<>c.<>9.\u02B3\u02B6\u02BD\u02BE\u02C1\u02B6\u02B4\u02BA\u02BA\u02B7\u02BD));
 		int num = 1;
-		float num2 = Mathf.Clamp((float)(this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.songTime / this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B7\u02BE\u02C0\u02B2\u02B8\u02C0\u02BA\u02C1\u02BB\u02B2\u02BC), 0f, 1f);
+		float num2 = Mathf.Clamp((float)(this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD._songTime / this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02B7\u02BE\u02C0\u02B2\u02B8\u02C0\u02BA\u02C1\u02BB\u02B2\u02BC), 0f, 1f);
 		Vector3 vector = new Vector3(-237.5f + num2 * 475f, -32f, 0f);
 		for (int i = 0; i < this.\u02BC\u02C1\u02BF\u02BD\u02BD\u02BE\u02BE\u02B9\u02BC\u02B9\u02B6.Count; i++)
 		{

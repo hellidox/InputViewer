@@ -146,6 +146,7 @@ namespace Rewired.UI.ControlMapper
 
 		protected override void Update()
 		{
+			GlobalHelper.PerfLogger("Rewired.UI.ControlMapper.CalibrationWindow.Update", true);
 			if (!base.initialized)
 			{
 				return;

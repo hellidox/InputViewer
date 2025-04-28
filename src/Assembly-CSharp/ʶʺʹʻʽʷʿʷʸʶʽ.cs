@@ -379,7 +379,7 @@ public static class \u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6
 	public static void \u02BE\u02BF\u02BA\u02B6\u02BC\u02B5\u02BD\u02BD\u02BB\u02BE\u02B9(List<Note> \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8, Instrument \u02B7\u02BB\u02BA\u02BC\u02B4\u02B6\u02B4\u02B3\u02BD\u02BA\u02BF)
 	{
 		int num = 0;
-		string checksumString = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1.checksumString;
+		string checksumString = GlobalVariables.instance.\u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1.checksumString;
 		for (int i = 0; i < checksumString.Length; i++)
 		{
 			num += (int)checksumString[i];

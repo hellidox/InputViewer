@@ -203,10 +203,10 @@ public class Animator : MonoBehaviour
 		if (GlobalHelper.rainbowFlames)
 		{
 			this.timeval += Time.deltaTime * GlobalHelper.rainbowFlameSpeed / 100f;
-			this.particleColor = global::Animator.Rainbow(this.timeval);
-			this.altparticleColor = global::Animator.Rainbow(this.timeval);
-			this.particleColor = global::Animator.Rainbow(this.timeval);
-			this.altparticleColor = global::Animator.Rainbow(this.timeval);
+			this.particleColor = global::Animator.Rainbow(this.timeval, default(Color));
+			this.altparticleColor = global::Animator.Rainbow(this.timeval, default(Color));
+			this.particleColor = global::Animator.Rainbow(this.timeval, default(Color));
+			this.altparticleColor = global::Animator.Rainbow(this.timeval, default(Color));
 		}
 		if (this.\u02B9\u02BD\u02B2\u02B5\u02B6\u02B7\u02BC\u02B9\u02B5\u02B9\u02BA)
 		{
@@ -230,26 +230,17 @@ public class Animator : MonoBehaviour
 		}
 	}
 
-	public static Color Rainbow(float progress)
+	public static Color Rainbow(float progress, Color color = default(Color))
 	{
-		float num = Math.Abs(progress % 1f) * 6f;
-		int num2 = (int)(num % 1f * 255f);
-		int num3 = 255 - num2;
-		switch ((int)num)
+		if (color.maxColorComponent > 0f)
 		{
-		case 0:
-			return new Color(1f, (float)num2 / 255f, 0f);
-		case 1:
-			return new Color((float)num3 / 255f, 1f, 0f);
-		case 2:
-			return new Color(0f, 1f, (float)num2 / 255f);
-		case 3:
-			return new Color(0f, (float)num3 / 255f, 1f);
-		case 4:
-			return new Color((float)num2 / 255f, 0f, 1f);
-		default:
-			return new Color(1f, 0f, (float)num3 / 255f);
+			float num;
+			float num2;
+			float num3;
+			Color.RGBToHSV(color, out num, out num2, out num3);
+			return Color.HSVToRGB((progress + num) % 1f, num2, num3);
 		}
+		return Color.HSVToRGB(progress % 1f, 1f, 1f);
 	}
 
 	public float \u02BD\u02C0\u02BD\u02BF\u02C1\u02B9\u02BB\u02B5\u02BD\u02B4\u02BC = 0.01f;

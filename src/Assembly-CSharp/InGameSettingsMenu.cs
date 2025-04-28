@@ -63,7 +63,7 @@ public class InGameSettingsMenu : BaseMenu
 
 	public virtual void \u02B9\u02C1\u02B5\u02B5\u02B2\u02BF\u02BA\u02BB\u02BB\u02B9\u02B7()
 	{
-		GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B9\u02BB\u02BE\u02B6\u02BE\u02C0\u02B5\u02B9\u02B9\u02B8\u02B8(false);
+		GlobalVariables.instance.\u02B9\u02BB\u02BE\u02B6\u02BE\u02C0\u02B5\u02B9\u02B9\u02B8\u02B8(false);
 		this.\u02BB\u02BA\u02B5\u02B2\u02B7\u02B6\u02BC\u02B3\u02BA\u02B4\u02B3.gameObject.SetActive(true);
 		base.gameObject.SetActive(true);
 	}
@@ -99,7 +99,7 @@ public class InGameSettingsMenu : BaseMenu
 
 	public virtual void \u02BC\u02BD\u02B2\u02B9\u02BB\u02C1\u02BB\u02B6\u02B4\u02BC\u02BE()
 	{
-		GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B9\u02BB\u02BE\u02B6\u02BE\u02C0\u02B5\u02B9\u02B9\u02B8\u02B8(false);
+		GlobalVariables.instance.\u02B9\u02BB\u02BE\u02B6\u02BE\u02C0\u02B5\u02B9\u02B9\u02B8\u02B8(false);
 		this.\u02BB\u02BA\u02B5\u02B2\u02B7\u02B6\u02BC\u02B3\u02BA\u02B4\u02B3.gameObject.SetActive(false);
 		base.gameObject.SetActive(true);
 	}
@@ -164,7 +164,7 @@ public class InGameSettingsMenu : BaseMenu
 
 	public override void \u02B3\u02BC\u02BA\u02C0\u02C0\u02B8\u02B2\u02B4\u02B3\u02C1\u02B8()
 	{
-		GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B9\u02BB\u02BE\u02B6\u02BE\u02C0\u02B5\u02B9\u02B9\u02B8\u02B8(false);
+		GlobalVariables.instance.\u02B9\u02BB\u02BE\u02B6\u02BE\u02C0\u02B5\u02B9\u02B9\u02B8\u02B8(false);
 		this.\u02BB\u02BA\u02B5\u02B2\u02B7\u02B6\u02BC\u02B3\u02BA\u02B4\u02B3.gameObject.SetActive(true);
 		base.gameObject.SetActive(false);
 	}

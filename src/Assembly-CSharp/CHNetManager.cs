@@ -201,7 +201,7 @@ public class CHNetManager : MonoBehaviour
 	{
 		get
 		{
-			return GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B5\u02BF\u02BD\u02B8\u02B7\u02B3\u02BC\u02B6\u02B4\u02BB\u02B5;
+			return GlobalVariables.instance.\u02B5\u02BF\u02BD\u02B8\u02B7\u02B3\u02BC\u02B6\u02B4\u02BB\u02B5;
 		}
 	}
 

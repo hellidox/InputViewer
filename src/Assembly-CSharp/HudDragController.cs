@@ -88,6 +88,11 @@ public class HudDragController : MonoBehaviour
 		yield break;
 	}
 
+	public HudDragController()
+	{
+		HudDragController.instance = this;
+	}
+
 	private IEnumerator Start()
 	{
 		this.renderers = this.hud.gameObject.GetComponentsInChildren<SpriteRenderer>();
@@ -434,7 +439,7 @@ public class HudDragController : MonoBehaviour
 	private Transform hud;
 
 	[SerializeField]
-	private Camera hudCamera;
+	public Camera hudCamera;
 
 	[SerializeField]
 	private GameManager gameManager;
@@ -456,4 +461,6 @@ public class HudDragController : MonoBehaviour
 	private float ticker;
 
 	private SpriteRenderer[] starRenderers;
+
+	public static HudDragController instance;
 }

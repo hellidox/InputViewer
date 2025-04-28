@@ -66,11 +66,11 @@ public abstract class BasePlayer : MonoBehaviour
 
 	protected virtual void Awake()
 	{
-		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 == null)
+		if (GlobalVariables.instance == null)
 		{
 			return;
 		}
-		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
+		if (GlobalVariables.instance.isPracticeEnabled)
 		{
 			this.spBar.gameObject.SetActive(false);
 			this.healthContainer.gameObject.SetActive(false);
@@ -79,9 +79,9 @@ public abstract class BasePlayer : MonoBehaviour
 		}
 		else if (!SettingsController.\u02BB\u02C0\u02B7\u02B8\u02B3\u02BE\u02B7\u02BB\u02BA\u02B8\u02BA && !CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BA\u02B8\u02B6\u02BB\u02B5\u02B2\u02B8\u02B6\u02BB\u02BB)
 		{
-			GameMode u02B6_u02B9_u02B5_u02BA_u02BD_u02B9_u02BD_u02BC_u02B9_u02B3_u02C = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1;
+			GameMode u02B6_u02B9_u02B5_u02BA_u02BD_u02B9_u02BD_u02BC_u02B9_u02B3_u02C = GlobalVariables.instance.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1;
 		}
-		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 != GameMode.Versus || GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
+		if (GlobalVariables.instance.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 != GameMode.Versus || GlobalVariables.instance.isPracticeEnabled)
 		{
 			base.transform.Find("PlayerOverlays/Versus").gameObject.SetActive(false);
 		}
@@ -101,18 +101,18 @@ public abstract class BasePlayer : MonoBehaviour
 		this.\u02B5\u02C1\u02BA\u02B9\u02B6\u02B7\u02B9\u02BC\u02B7\u02BD\u02B4 = this.player.playerProfile.HasModifier(Modifier.AllOpens);
 		if (this.\u02BC\u02B2\u02B2\u02BB\u02B7\u02B4\u02B3\u02B6\u02C1\u02BC\u02C0 || this.\u02BF\u02C1\u02BF\u02BE\u02C1\u02B2\u02BC\u02BE\u02B3\u02BB\u02B8)
 		{
-			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BB\u02BA\u02C1\u02B8\u02BA\u02C0\u02BD\u02BE\u02B7\u02B7\u02BA = \u02BD\u02B9\u02B2\u02B5\u02BD\u02BC\u02BE\u02BE\u02BE\u02B7\u02B2.Modifier;
+			GlobalVariables.instance.\u02BB\u02BA\u02C1\u02B8\u02BA\u02C0\u02BD\u02BE\u02B7\u02B7\u02BA = \u02BD\u02B9\u02B2\u02B5\u02BD\u02BC\u02BE\u02BE\u02BE\u02B7\u02B2.Modifier;
 		}
 		else
 		{
-			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BB\u02BA\u02C1\u02B8\u02BA\u02C0\u02BD\u02BE\u02B7\u02B7\u02BA = \u02BD\u02B9\u02B2\u02B5\u02BD\u02BC\u02BE\u02BE\u02BE\u02B7\u02B2.None;
+			GlobalVariables.instance.\u02BB\u02BA\u02C1\u02B8\u02BA\u02C0\u02BD\u02BE\u02B7\u02B7\u02BA = \u02BD\u02B9\u02B2\u02B5\u02BD\u02BC\u02BE\u02BE\u02BE\u02B7\u02B2.None;
 		}
 		if (this.\u02BB\u02BD\u02C0\u02B5\u02B8\u02B3\u02BD\u02B6\u02B7\u02BB\u02B7)
 		{
 			this.\u02BC\u02BD\u02BF\u02BA\u02B8\u02B5\u02B3\u02B8\u02BE\u02C0\u02BC.\u02BD\u02B6\u02B3\u02B3\u02BC\u02B2\u02B3\u02B3\u02BB\u02B6\u02BB();
 		}
 		this.hittableNotes = new Note[20];
-		this.\u02B7\u02B9\u02BA\u02B6\u02B3\u02B4\u02B5\u02C1\u02B4\u02B9\u02B6 = new \u02BB\u02B9\u02B2\u02B3\u02B4\u02B3\u02BF\u02C0\u02B4\u02B8\u02B9();
+		this.\u02B7\u02B9\u02BA\u02B6\u02B3\u02B4\u02B5\u02C1\u02B4\u02B9\u02B6 = new GameColorSettings();
 		if (this.player.playerProfile.colorProfileName == "Random" && !CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BA\u02B8\u02B6\u02BB\u02B5\u02B2\u02B8\u02B6\u02BB\u02BB)
 		{
 			this.player.playerProfile.\u02B4\u02BF\u02B9\u02BF\u02B3\u02B9\u02B9\u02B6\u02B5\u02BF\u02BB();
@@ -123,7 +123,7 @@ public abstract class BasePlayer : MonoBehaviour
 
 	protected virtual void \u02B4\u02C0\u02BF\u02BA\u02BD\u02BA\u02B3\u02B8\u02B7\u02B7\u02BA()
 	{
-		float num = ((GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BB\u02BA\u02C1\u02B8\u02BA\u02C0\u02BD\u02BE\u02B7\u02B7\u02BA != \u02BD\u02B9\u02B2\u02B5\u02BD\u02BC\u02BE\u02BE\u02BE\u02B7\u02B2.None) ? 0f : 1f);
+		float num = ((GlobalVariables.instance.\u02BB\u02BA\u02C1\u02B8\u02BA\u02C0\u02BD\u02BE\u02B7\u02B7\u02BA != \u02BD\u02B9\u02B2\u02B5\u02BD\u02BC\u02BE\u02BE\u02BE\u02B7\u02B2.None) ? 0f : 1f);
 		DesaturateSprite[] u02B5_u02BE_u02B5_u02B8_u02B8_u02B4_u02BF_u02BC_u02B4_u02B8_u02B = this.\u02B5\u02BE\u02B5\u02B8\u02B8\u02B4\u02BF\u02BC\u02B4\u02B8\u02B2;
 		for (int i = 0; i < u02B5_u02BE_u02B5_u02B8_u02B8_u02B4_u02BF_u02BC_u02B4_u02B8_u02B.Length; i++)
 		{
@@ -284,7 +284,7 @@ public abstract class BasePlayer : MonoBehaviour
 
 	public virtual void \u02B6\u02B7\u02B6\u02B2\u02BD\u02BC\u02BC\u02BE\u02BF\u02B5\u02B5()
 	{
-		if (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
+		if (!GlobalVariables.instance.isPracticeEnabled)
 		{
 			\u02B6\u02C0\u02B5\u02C1\u02B9\u02BF\u02C0\u02B6\u02BF\u02B2\u02BE.\u02B9\u02B2\u02BC\u02BA\u02B6\u02B7\u02BE\u02B6\u02BF\u02BA\u02B9 u02B9_u02B2_u02BC_u02BA_u02B6_u02B7_u02BE_u02B6_u02BF_u02BA_u02B = \u02B6\u02C0\u02B5\u02C1\u02B9\u02BF\u02C0\u02B6\u02BF\u02B2\u02BE.\u02B9\u02B9\u02BE\u02B4\u02B3\u02B6\u02BC\u02B5\u02B3\u02BC\u02BC(this, this.gameManager.song, true);
 			this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0 = u02B9_u02B2_u02BC_u02BA_u02B6_u02B7_u02BE_u02B6_u02BF_u02BA_u02B.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0;
@@ -418,7 +418,7 @@ public abstract class BasePlayer : MonoBehaviour
 		}
 		if (\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02B5\u02B7\u02BB\u02B7\u02BA\u02B3\u02B2\u02B7\u02C1\u02B3\u02B4 && this.\u02BF\u02B7\u02B6\u02B6\u02BE\u02BE\u02C0\u02C0\u02BB\u02B2\u02C1 && flag)
 		{
-			if (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
+			if (!GlobalVariables.instance.isPracticeEnabled)
 			{
 				\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02C0\u02B7\u02C1\u02B5\u02B9\u02B3\u02BF\u02B5\u02BC\u02B9\u02C0 &= ~Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.STAR_POWER_END;
 				this.\u02B8\u02B8\u02B3\u02BD\u02B2\u02BB\u02BF\u02B8\u02B3\u02B8\u02BD(0.25f, true);
@@ -455,9 +455,9 @@ public abstract class BasePlayer : MonoBehaviour
 		else
 		{
 			this.health -= this.healthGain;
-			if (this.health < 0f && !GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02B8\u02B9\u02BA\u02BB\u02C1\u02BB\u02B9\u02BE\u02C1\u02B9)
+			if (this.health < 0f && !GlobalVariables.instance.\u02BE\u02B8\u02B9\u02BA\u02BB\u02C1\u02BB\u02B9\u02BE\u02C1\u02B9)
 			{
-				GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02B8\u02B9\u02BA\u02BB\u02C1\u02BB\u02B9\u02BE\u02C1\u02B9 = true;
+				GlobalVariables.instance.\u02BE\u02B8\u02B9\u02BA\u02BB\u02C1\u02BB\u02B9\u02BE\u02C1\u02B9 = true;
 				GameAudioManager.PlaySound(SoundEffectsChannel.SongFail);
 				this.gameManager.EndSong();
 			}
@@ -864,7 +864,7 @@ public abstract class BasePlayer : MonoBehaviour
 			}
 			if (GlobalHelper.showHPBar)
 			{
-				if (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02B8\u02B9\u02BA\u02BB\u02C1\u02BB\u02B9\u02BE\u02C1\u02B9)
+				if (!GlobalVariables.instance.\u02BE\u02B8\u02B9\u02BA\u02BB\u02C1\u02BB\u02B9\u02BE\u02C1\u02B9)
 				{
 					this.healthContainer.gameObject.SetActive(true);
 				}
@@ -920,7 +920,7 @@ public abstract class BasePlayer : MonoBehaviour
 		{
 			this.UpdateAI();
 		}
-		if (!this.\u02B5\u02BB\u02BA\u02B2\u02C1\u02BB\u02B6\u02B5\u02BE\u02B9\u02BF && this.gameManager.songTime >= 0.0)
+		if (!this.\u02B5\u02BB\u02BA\u02B2\u02C1\u02BB\u02B6\u02B5\u02BE\u02B9\u02BF && this.gameManager._songTime >= 0.0)
 		{
 			this.\u02B6\u02BC\u02BD\u02B3\u02B6\u02B3\u02BD\u02B9\u02BF\u02BA\u02B6 = BassAudioManager.Instance.\u02B6\u02B5\u02BD\u02C0\u02B6\u02BA\u02B2\u02B9\u02C1\u02BD\u02BD(this.player.playerProfile.moonInstrument);
 			this.\u02B5\u02BB\u02BA\u02B2\u02C1\u02BB\u02B6\u02B5\u02BE\u02B9\u02BF = true;
@@ -964,7 +964,7 @@ public abstract class BasePlayer : MonoBehaviour
 				this.\u02B4\u02B4\u02BF\u02B5\u02B4\u02B6\u02BA\u02B7\u02B2\u02B9\u02C1 = 0f;
 				this.\u02B8\u02B2\u02B4\u02BF\u02C0\u02B8\u02C0\u02BA\u02B9\u02B2\u02B7 = -this.hitWindow;
 			}
-			double num3 = (double)note2.\u02B2\u02B8\u02BA\u02BA\u02BC\u02B7\u02B5\u02B5\u02B6\u02B5\u02C1 - this.gameManager.songTime;
+			double num3 = (double)note2.\u02B2\u02B8\u02BA\u02BA\u02BC\u02B7\u02B5\u02B5\u02B6\u02B5\u02C1 - this.gameManager._songTime;
 			if (num3 > (double)this.\u02B4\u02B4\u02BF\u02B5\u02B4\u02B6\u02BA\u02B7\u02B2\u02B9\u02C1)
 			{
 				while (this.\u02BA\u02B8\u02B6\u02BF\u02B7\u02BF\u02BB\u02BC\u02B9\u02B5\u02B9 < this.\u02C0\u02B6\u02B5\u02BE\u02BB\u02B9\u02B2\u02BF\u02C0\u02BB\u02C0.Count)
@@ -1231,6 +1231,14 @@ public abstract class BasePlayer : MonoBehaviour
 		return this.buttonsPressed;
 	}
 
+	public SPBar _spBar
+	{
+		get
+		{
+			return this.spBar;
+		}
+	}
+
 	[SerializeField]
 	public BaseNoteRenderer noteRenderer;
 
@@ -1431,7 +1439,7 @@ public abstract class BasePlayer : MonoBehaviour
 	[SerializeField]
 	protected TrackSidebarColoring trackSidebarRight;
 
-	private \u02BB\u02B9\u02B2\u02B3\u02B4\u02B3\u02BF\u02C0\u02B4\u02B8\u02B9 \u02B7\u02B9\u02BA\u02B6\u02B3\u02B4\u02B5\u02C1\u02B4\u02B9\u02B6;
+	private GameColorSettings \u02B7\u02B9\u02BA\u02B6\u02B3\u02B4\u02B5\u02C1\u02B4\u02B9\u02B6;
 
 	public \u02BE\u02B9\u02B7\u02C0\u02BC\u02BC\u02C1\u02BD\u02BC\u02BD\u02BE \u02B5\u02BF\u02B6\u02B6\u02C1\u02B7\u02C1\u02C0\u02B3\u02B2\u02B2;
 
@@ -1488,6 +1496,11 @@ public abstract class BasePlayer : MonoBehaviour
 	{
 		public PrecisionData()
 		{
+			this.hits = new Dictionary<BasePlayer.Judgement, int>();
+			for (int i = 0; i <= 6; i++)
+			{
+				this.hits.Add((BasePlayer.Judgement)i, 0);
+			}
 			this.m_totalInacc = 0f;
 			this.avgInaccuracyCache = 0f;
 			this.m_precisionCache = 0f;
@@ -1500,6 +1513,11 @@ public abstract class BasePlayer : MonoBehaviour
 
 		public void Clear()
 		{
+			this.hits = new Dictionary<BasePlayer.Judgement, int>();
+			for (int i = 0; i <= 6; i++)
+			{
+				this.hits.Add((BasePlayer.Judgement)i, 0);
+			}
 			this.m_totalInacc = 0f;
 			this.judgements = new int[6];
 			this.totalJudgements = 0;
@@ -1563,11 +1581,19 @@ public abstract class BasePlayer : MonoBehaviour
 
 		public void AddJudgement(BasePlayer.JudgementAndFloat jaf)
 		{
+			if (!GlobalHelper.useJudgements)
+			{
+				return;
+			}
 			this.totalJudgements++;
 			this.totalPrecision += (double)jaf.val;
 			this.m_lastJudgement = jaf.judgement;
 			this.m_totalInacc += jaf.inacc;
 			BasePlayer.lastVal = jaf.val;
+			Dictionary<BasePlayer.Judgement, int> dictionary = this.hits;
+			BasePlayer.Judgement judgement = jaf.judgement;
+			int num = dictionary[judgement];
+			dictionary[judgement] = num + 1;
 		}
 
 		public float avgInaccuracy
@@ -1597,6 +1623,8 @@ public abstract class BasePlayer : MonoBehaviour
 		public float m_totalInacc;
 
 		public float avgInaccuracyCache;
+
+		public Dictionary<BasePlayer.Judgement, int> hits;
 	}
 
 	public struct JudgementAndFloat

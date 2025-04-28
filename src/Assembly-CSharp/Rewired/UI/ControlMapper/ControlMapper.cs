@@ -921,6 +921,7 @@ namespace Rewired.UI.ControlMapper
 
 		private void Update()
 		{
+			GlobalHelper.PerfLogger("Rewired.UI.ControlMapper.ControlMapper.Update", true);
 			if (!this.isOpen)
 			{
 				return;

@@ -62,7 +62,7 @@ public class MainMenu : BaseMenu
 					{
 						return;
 					}
-					if (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3)
+					if (!GlobalVariables.instance.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3)
 					{
 						base.StartCoroutine(this.\u02BD\u02BF\u02B8\u02C1\u02B4\u02C1\u02BE\u02B7\u02B3\u02C1\u02BE(true));
 						return;
@@ -72,9 +72,9 @@ public class MainMenu : BaseMenu
 						return;
 					}
 					this.songSelect.SetActive(true);
-					GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02BA\u02BB\u02B8\u02B9\u02C0\u02BD\u02B5\u02B4\u02B6\u02B3 = true;
-					GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4 = false;
-					GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 = GameMode.Versus;
+					GlobalVariables.instance.\u02C1\u02BA\u02BB\u02B8\u02B9\u02C0\u02BD\u02B5\u02B4\u02B6\u02B3 = true;
+					GlobalVariables.instance.isPracticeEnabled = false;
+					GlobalVariables.instance.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 = GameMode.Versus;
 					this.\u02B7\u02BA\u02BF\u02B2\u02BA\u02BC\u02BC\u02BB\u02B2\u02BC\u02BF.\u02B3\u02BE\u02B8\u02B5\u02C0\u02B8\u02BF\u02C0\u02B3\u02B7\u02B7(false);
 					this.\u02B8\u02B6\u02B9\u02BF\u02BF\u02BD\u02B6\u02B7\u02B3\u02BA\u02B9(false, false);
 				}
@@ -88,7 +88,7 @@ public class MainMenu : BaseMenu
 					{
 						return;
 					}
-					if (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3)
+					if (!GlobalVariables.instance.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3)
 					{
 						base.StartCoroutine(this.\u02BD\u02BF\u02B8\u02C1\u02B4\u02C1\u02BE\u02B7\u02B3\u02C1\u02BE(true));
 						this.\u02B2\u02BF\u02BD\u02B5\u02B7\u02C1\u02B3\u02BE\u02BC\u02C1\u02B3 = true;
@@ -99,9 +99,9 @@ public class MainMenu : BaseMenu
 						return;
 					}
 					this.songSelect.SetActive(true);
-					GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02BA\u02BB\u02B8\u02B9\u02C0\u02BD\u02B5\u02B4\u02B6\u02B3 = true;
-					GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4 = false;
-					GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 = GameMode.Quickplay;
+					GlobalVariables.instance.\u02C1\u02BA\u02BB\u02B8\u02B9\u02C0\u02BD\u02B5\u02B4\u02B6\u02B3 = true;
+					GlobalVariables.instance.isPracticeEnabled = false;
+					GlobalVariables.instance.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 = GameMode.Quickplay;
 					this.\u02B7\u02BA\u02BF\u02B2\u02BA\u02BC\u02BC\u02BB\u02B2\u02BC\u02BF.\u02B3\u02BE\u02B8\u02B5\u02C0\u02B8\u02BF\u02C0\u02B3\u02B7\u02B7(false);
 					this.\u02B8\u02B6\u02B9\u02BF\u02BF\u02BD\u02B6\u02B7\u02B3\u02BA\u02B9(false, false);
 				}
@@ -153,7 +153,7 @@ public class MainMenu : BaseMenu
 				int num2 = 0;
 				for (int i = 0; i < 4; i++)
 				{
-					if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
+					if (GlobalVariables.instance.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
 					{
 						num2++;
 					}
@@ -163,7 +163,7 @@ public class MainMenu : BaseMenu
 					this.confirmMenu.Enable("Too many players! Only one player is supported!", "Okay", null, null, null, null);
 					return;
 				}
-				if (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3)
+				if (!GlobalVariables.instance.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3)
 				{
 					base.StartCoroutine(this.\u02BD\u02BF\u02B8\u02C1\u02B4\u02C1\u02BE\u02B7\u02B3\u02C1\u02BE(true));
 					return;
@@ -186,7 +186,7 @@ public class MainMenu : BaseMenu
 			{
 				return;
 			}
-			if (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3)
+			if (!GlobalVariables.instance.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3)
 			{
 				base.StartCoroutine(this.\u02BD\u02BF\u02B8\u02C1\u02B4\u02C1\u02BE\u02B7\u02B3\u02C1\u02BE(true));
 				return;
@@ -196,8 +196,8 @@ public class MainMenu : BaseMenu
 				return;
 			}
 			this.songSelect.SetActive(true);
-			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02BA\u02BB\u02B8\u02B9\u02C0\u02BD\u02B5\u02B4\u02B6\u02B3 = false;
-			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4 = true;
+			GlobalVariables.instance.\u02C1\u02BA\u02BB\u02B8\u02B9\u02C0\u02BD\u02B5\u02B4\u02B6\u02B3 = false;
+			GlobalVariables.instance.isPracticeEnabled = true;
 			this.\u02B7\u02BA\u02BF\u02B2\u02BA\u02BC\u02BC\u02BB\u02B2\u02BC\u02BF.\u02B3\u02BE\u02B8\u02B5\u02C0\u02B8\u02BF\u02C0\u02B3\u02B7\u02B7(false);
 			this.\u02B8\u02B6\u02B9\u02BF\u02BF\u02BD\u02B6\u02B7\u02B3\u02BA\u02B9(false, false);
 		}
@@ -264,7 +264,7 @@ public class MainMenu : BaseMenu
 	private IEnumerator \u02BD\u02BF\u02B8\u02C1\u02B4\u02C1\u02BE\u02B7\u02B3\u02C1\u02BE(bool \u02C0\u02B5\u02BD\u02C1\u02B3\u02BF\u02BF\u02BB\u02B2\u02B9\u02BD = true)
 	{
 		this.remoteIconAndSourceUpdater.\u02BB\u02B8\u02BC\u02BF\u02BB\u02BB\u02B6\u02B7\u02B2\u02B7\u02BC(\u02C0\u02B5\u02BD\u02C1\u02B3\u02BF\u02BF\u02BB\u02B2\u02B9\u02BD);
-		while (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3)
+		while (!GlobalVariables.instance.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3)
 		{
 			yield return null;
 		}
@@ -338,7 +338,7 @@ public class MainMenu : BaseMenu
 		TimeSpan timeSpan = TimeSpan.FromSeconds((double)GlobalVariables.playTime);
 		this.buildVersion.text = string.Concat(new string[]
 		{
-			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02B3\u02B7\u02BC\u02B5\u02B3\u02B8\u02BB\u02BE\u02B5\u02B3,
+			GlobalVariables.instance.\u02B4\u02B3\u02B7\u02BC\u02B5\u02B3\u02B8\u02BB\u02BE\u02B5\u02B3,
 			" IVMod version ",
 			GlobalHelper.version,
 			"\nTime played: ",
@@ -357,7 +357,7 @@ public class MainMenu : BaseMenu
 		this.buildVersion.fontSize = this.fs;
 		this.buildVersion.fontWeight = FontWeight.Black;
 		base.OnEnable();
-		if (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B9\u02B4\u02BC\u02B8\u02B7\u02C0\u02BB\u02B9\u02B9\u02B5\u02C0)
+		if (!GlobalVariables.instance.\u02B9\u02B4\u02BC\u02B8\u02B7\u02C0\u02BB\u02B9\u02B9\u02B5\u02C0)
 		{
 			this.\u02B7\u02BA\u02BF\u02B2\u02BA\u02BC\u02BC\u02BB\u02B2\u02BC\u02BF.\u02B9\u02BF\u02B3\u02C1\u02B9\u02B2\u02B9\u02BA\u02B8\u02B5\u02B9();
 		}
@@ -376,14 +376,20 @@ public class MainMenu : BaseMenu
 		MainMenu.\u02BA\u02BD\u02BB\u02C0\u02BB\u02BE\u02BA\u02B9\u02BA\u02B2\u02BB u02BA_u02BD_u02BB_u02C0_u02BB_u02BE_u02BA_u02B9_u02BA_u02B2_u02BB = new MainMenu.\u02BA\u02BD\u02BB\u02C0\u02BB\u02BE\u02BA\u02B9\u02BA\u02B2\u02BB();
 		yield return new WaitForEndOfFrame();
 		u02BA_u02BD_u02BB_u02C0_u02BB_u02BE_u02BA_u02B9_u02BA_u02B2_u02BB.rnd = new global::System.Random();
-		string[] BuildTagsRandom = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C0\u02C0\u02B6\u02BD\u02BE\u02C1\u02B3\u02BF\u02BE\u02B3\u02C1.Concat(new string[]
+		string[] BuildTagsRandom = GlobalVariables.instance.buildTags.Concat(new string[]
 		{
 			"dear matt money. fuck you matt money", "now with 90% less allocations", "System.char[]", "<rotate=-45><voffset=7.25em>m</voffset><voffset=7.0em>a</voffset><voffset=6.75em>n</voffset><voffset=6.5em> </voffset><voffset=6.25em>w</voffset><voffset=6.0em>h</voffset><voffset=5.75em>y</voffset><voffset=5.5em> </voffset><voffset=5.25em>t</voffset><voffset=5.0em>h</voffset><voffset=4.75em>e</voffset><voffset=4.5em> </voffset><voffset=4.25em>f</voffset><voffset=4.0em>u</voffset><voffset=3.75em>c</voffset><voffset=3.5em>k</voffset><voffset=3.25em> </voffset><voffset=3.0em>t</voffset><voffset=2.75em>h</voffset><voffset=2.5em>i</voffset><voffset=2.25em>s</voffset><voffset=2.0em> </voffset><voffset=1.75em>d</voffset><voffset=1.5em>i</voffset><voffset=1.25em>a</voffset><voffset=1.0em>g</voffset><voffset=0.75em>o</voffset><voffset=0.5em>n</voffset><voffset=0.25em>a</voffset><voffset=0.0em>l</voffset></rotate>", "<size=255px><voffset=700px>what</voffset></size>", "not good neighbor", "oh, 9/11....", "i hate this video game", "spunch bop", "what the frick dude",
 			"what the fuck that input viewer", "shut up dnspy", "what is a garbage collector", "\n\nBORN TO ZSTRING\nWORLD IS A FUCK\nAPPEND EM ALL 1989\nI am alloc man\n410,757,864,530 FORMATTED STRING", "WHY DIDNT THIS GIVE ME AN ERROR", "HOW DO I CAUSE CRASHES LIKE\nTHIS IN A CHECKED lANGUAGE", "the strings\nthe strings", "ERROR: SymGetSymFromAddr64, GetLastError: 'Attempt to access invalid address.", "i need help", "im talking from inside the machine",
 			"no there is no Array.Push();", "perkcheddy is a bald what?", "im gonna hit you in the head with a meat tenderier", "among us", "family guy funny mome ts", "autoclon v4 unknowncheats download", "hack tuah. mod on thnat string", "overtap warrior", "fc zigman", "\n\n\ni just fcd lxrs inferno                                       !!!!!",
 			"petergri ffin", "dnspy tutorial", "free rat with ur input viewer", "it's over.", "why you {1} drone", "drone hero", "the low snare frequency is wrong", "Hi my name's Tyrone Rodriguez I'm\nthe producer on Cave Story for WiiWare", "Five years ago what we got is Cave\nStory or 洞窟物語 on, uh, freeware PC", "It's like the ultimate independent game,\nand almost in a, uh, Remastered Version for WiiWare",
-			"That game gained a huge following thanks to its\nbeautiful game design, artwork, story, and everything\nthat's been wrapped together so well", "it would be so awesome", "it would be so cool", "it would be so awesome\nit would be so cool", "This mod is not authentic 開発室Ｐｉｘｅｌenough.", "<size=86%>I'm leaving this server because it'\r\ns hypocritical circle jerk garbage a\r\nnd I'm honestly sick of having to de\r\nal with unlikable, sarcastic asshole\r\ns whenever I want to say literally a\r\nnything. This isn't the Cave Story c\r\nommunity I signed up for. Hell. This\r\n is barely cave story. It's just a b\r\nunch of picky closet furries who sit\r\n around talking shit and sucking eac\r\nhothers' dicks all day. Goodbye and\r\ngo fuck yourselves.", this.courtestr, "", ""
+			"That game gained a huge following thanks to its\nbeautiful game design, artwork, story, and everything\nthat's been wrapped together so well", "it would be so awesome", "it would be so cool", "it would be so awesome\nit would be so cool", "This mod is not authentic 開発室Ｐｉｘｅｌenough.", "<size=86%>I'm leaving this server because it'\r\ns hypocritical circle jerk garbage a\r\nnd I'm honestly sick of having to de\r\nal with unlikable, sarcastic asshole\r\ns whenever I want to say literally a\r\nnything. This isn't the Cave Story c\r\nommunity I signed up for. Hell. This\r\n is barely cave story. It's just a b\r\nunch of picky closet furries who sit\r\n around talking shit and sucking eac\r\nhothers' dicks all day. Goodbye and\r\ngo fuck yourselves.", this.courtestr, "monika"
 		}).OrderBy(new Func<string, int>(u02BA_u02BD_u02BB_u02C0_u02BB_u02BE_u02BA_u02B9_u02BA_u02B2_u02BB.\u02BE\u02BF\u02B3\u02B2\u02B9\u02B5\u02BB\u02BA\u02B5\u02B6\u02B3)).ToArray<string>();
+		string[] array = BuildTagsRandom;
+		for (int i = 0; i < array.Length; i++)
+		{
+			Debug.Log(array[i]);
+		}
+		Debug.Log(BuildTagsRandom.Length);
 		int currentTag = 0;
 		float startTime = Time.time;
 		bool what = false;
@@ -404,14 +410,26 @@ public class MainMenu : BaseMenu
 					"> was courted.",
 					"\", \"embeds\": null, \"attachments\": null}"
 				});
-				string[] array = new string[] { "moosie", "moosie", "moosie", "moosie", "moosie", "moosie", "frif" };
+				string[] array2 = new string[] { "moosie", "moosie", "moosie", "moosie", "moosie", "moosie", "frif" };
 				if (Input.GetKey(KeyCode.F8))
 				{
-					while (!BuildTagsRandom[currentTag].Contains("72747C", StringComparison.Ordinal))
+					if (!Input.GetKey(KeyCode.F9))
 					{
-						int num = currentTag;
-						currentTag = num + 1;
-						currentTag %= BuildTagsRandom.Length;
+						while (!BuildTagsRandom[currentTag].Contains("72747C", StringComparison.Ordinal))
+						{
+							int num = currentTag;
+							currentTag = num + 1;
+							currentTag %= BuildTagsRandom.Length;
+						}
+					}
+					else
+					{
+						while (!BuildTagsRandom[currentTag].Contains("monika", StringComparison.Ordinal))
+						{
+							int num2 = currentTag;
+							currentTag = num2 + 1;
+							currentTag %= BuildTagsRandom.Length;
+						}
 					}
 					text = string.Concat(new string[]
 					{
@@ -432,7 +450,23 @@ public class MainMenu : BaseMenu
 				}
 				if (text2.Contains("{1}"))
 				{
-					text2 = string.Format(text2, null, array[Mathf.RoundToInt(Time.realtimeSinceStartup * 4f) % array.Length]);
+					text2 = string.Format(text2, null, array2[Mathf.RoundToInt(Time.realtimeSinceStartup * 4f) % array2.Length]);
+				}
+				if (text2 == "monika")
+				{
+					text2 = MainMenu.mstr;
+					if (global::UnityEngine.Random.Range(0f, 1f) < 0.33f)
+					{
+						MainMenu.monika = true;
+					}
+				}
+				else
+				{
+					if (MainMenu.monika)
+					{
+						MainMenu.monikaJustEnded = true;
+					}
+					MainMenu.monika = false;
 				}
 				this.buildTag.enableWordWrapping = false;
 				this.buildTag.text = text2;
@@ -440,9 +474,9 @@ public class MainMenu : BaseMenu
 				{
 					base.StartCoroutine(this.PostRequest(GlobalHelper.courteWebhook, text));
 				}
-				int num2 = currentTag;
-				currentTag = (num2 + 1) % BuildTagsRandom.Length;
-				yield return new WaitForSeconds(what ? 120f : 15f);
+				int num3 = currentTag;
+				currentTag = (num3 + 1) % BuildTagsRandom.Length;
+				yield return new WaitForSeconds(MainMenu.monika ? 3f : (what ? 120f : 15f));
 			}
 			else
 			{
@@ -450,15 +484,15 @@ public class MainMenu : BaseMenu
 				{
 					if (!what)
 					{
-						BuildTagsRandom = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02B6\u02BF\u02B8\u02B3\u02B5\u02BF\u02B9\u02C1\u02BC\u02B6.OrderBy(new Func<string, int>(u02BA_u02BD_u02BB_u02C0_u02BB_u02BE_u02BA_u02B9_u02BA_u02B2_u02BB.\u02B9\u02BA\u02BB\u02B4\u02BB\u02BE\u02C0\u02B3\u02BE\u02C0\u02BE)).ToArray<string>();
+						BuildTagsRandom = GlobalVariables.instance.\u02B4\u02B6\u02BF\u02B8\u02B3\u02B5\u02BF\u02B9\u02C1\u02BC\u02B6.OrderBy(new Func<string, int>(u02BA_u02BD_u02BB_u02C0_u02BB_u02BE_u02BA_u02B9_u02BA_u02B2_u02BB.\u02B9\u02BA\u02BB\u02B4\u02BB\u02BE\u02C0\u02B3\u02BE\u02C0\u02BE)).ToArray<string>();
 						what = true;
 					}
 				}
 				else
 				{
 					List<string> list = new List<string>();
-					list.AddRange(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B5\u02B7\u02B5\u02B4\u02BB\u02B4\u02B5\u02B4\u02C1\u02B6\u02BE);
-					list.AddRange(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C0\u02C0\u02B6\u02BD\u02BE\u02C1\u02B3\u02BF\u02BE\u02B3\u02C1);
+					list.AddRange(GlobalVariables.instance.\u02B5\u02B7\u02B5\u02B4\u02BB\u02B4\u02B5\u02B4\u02C1\u02B6\u02BE);
+					list.AddRange(GlobalVariables.instance.buildTags);
 					IEnumerable<string> enumerable = list;
 					Func<string, int> func;
 					if ((func = u02BA_u02BD_u02BB_u02C0_u02BB_u02BE_u02BA_u02B9_u02BA_u02B2_u02BB.nt) == null)
@@ -491,7 +525,7 @@ public class MainMenu : BaseMenu
 		this.\u02C1\u02BD\u02C0\u02C0\u02B9\u02BA\u02BC\u02B3\u02B3\u02BD\u02B2();
 		if (Input.GetKeyUp((KeyCode)(-103)) && !ColorProfileEditor.\u02BF\u02BE\u02B9\u02BB\u02B2\u02BC\u02B7\u02BD\u02B2\u02B6\u02B6() && !SongPathsManager.\u02BF\u02B3\u02B6\u02B5\u02BB\u02B7\u02BE\u02BF\u02C1\u02BA\u02BF() && !this.controlMapper.isOpen && this.controlMapper.enabled)
 		{
-			foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
+			foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in GlobalVariables.instance.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
 			{
 				if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
 				{
@@ -503,20 +537,20 @@ public class MainMenu : BaseMenu
 		}
 		if (this.\u02B7\u02B4\u02B4\u02B3\u02BF\u02B6\u02BF\u02C1\u02BA\u02BF\u02B5 && PlayerPrefs.GetInt("album_track", 0) == 0)
 		{
-			for (int i = 0; i < GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF.Count; i += 0)
+			for (int i = 0; i < GlobalVariables.instance.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF.Count; i += 0)
 			{
-				if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].playerProfile != null && !this.notSupportedMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
+				if (GlobalVariables.instance.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].playerProfile != null && !this.notSupportedMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
 				{
 					this.notSupportedMenu.\u02B7\u02B3\u02BC\u02BE\u02BF\u02B7\u02B4\u02C0\u02B9\u02BC\u02BF(this.\u02BC\u02BE\u02B6\u02B5\u02B9\u02C0\u02B7\u02C1\u02BC\u02B7\u02B7, "Available", ")", new ConfirmationMenu.CallFunc(this.\u02B6\u02BF\u02BD\u02BC\u02BA\u02C1\u02B2\u02B4\u02BB\u02BB\u02BA), new ConfirmationMenu.CallFunc(this.\u02B5\u02B4\u02B8\u02B3\u02BB\u02BC\u02B4\u02BC\u02B6\u02BE\u02B4), this.\u02B3\u02B2\u02B7\u02BA\u02C1\u02C0\u02BB\u02BE\u02B9\u02B3\u02B2);
 					break;
 				}
 			}
 		}
-		if (this.\u02BF\u02C1\u02B5\u02BD\u02BB\u02C1\u02B6\u02B8\u02B6\u02BB\u02B8 && GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02BE\u02C1\u02B4\u02B4\u02B6\u02BA\u02BB\u02C1\u02BE\u02BB)
+		if (this.\u02BF\u02C1\u02B5\u02BD\u02BB\u02C1\u02B6\u02B8\u02B6\u02BB\u02B8 && GlobalVariables.instance.\u02BE\u02BE\u02C1\u02B4\u02B4\u02B6\u02BA\u02BB\u02C1\u02BE\u02BB)
 		{
-			for (int j = 1; j < GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF.Count; j++)
+			for (int j = 1; j < GlobalVariables.instance.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF.Count; j++)
 			{
-				if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[j].playerProfile != null && !this.notSupportedMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
+				if (GlobalVariables.instance.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[j].playerProfile != null && !this.notSupportedMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
 				{
 					this.notSupportedMenu.Enable(this.\u02BC\u02BE\u02B6\u02B5\u02B9\u02C0\u02B7\u02C1\u02BC\u02B7\u02B7, "Blur Command Buffer", "Source", new ConfirmationMenu.CallFunc(this.\u02B5\u02BE\u02B3\u02BB\u02BA\u02B7\u02B5\u02B2\u02B2\u02B8\u02BB), new ConfirmationMenu.CallFunc(Application.Quit), this.\u02B3\u02B2\u02B7\u02BA\u02C1\u02C0\u02BB\u02BE\u02B9\u02B3\u02B2);
 					this.\u02BF\u02C1\u02B5\u02BD\u02BB\u02C1\u02B6\u02B8\u02B6\u02BB\u02B8 = false;
@@ -538,7 +572,7 @@ public class MainMenu : BaseMenu
 
 	private void \u02B8\u02BB\u02B9\u02B3\u02B6\u02BA\u02B9\u02B7\u02BF\u02B5\u02B7()
 	{
-		int num = StringUtils.ExtractCommitId(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02B3\u02B7\u02BC\u02B5\u02B3\u02B8\u02BB\u02BE\u02B5\u02B3);
+		int num = StringUtils.ExtractCommitId(GlobalVariables.instance.\u02B4\u02B3\u02B7\u02BC\u02B5\u02B3\u02B8\u02BB\u02BE\u02B5\u02B3);
 		int num2 = StringUtils.ExtractCommitId(\u02B8\u02BC\u02BC\u02C0\u02BB\u02C1\u02BB\u02BC\u02B2\u02B7\u02C0.\u02BE\u02BA\u02B8\u02BC\u02B5\u02B7\u02C1\u02C1\u02BA\u02B3\u02B9);
 		this.\u02BF\u02C1\u02B5\u02BD\u02BB\u02C1\u02B6\u02B8\u02B6\u02BB\u02B8 = num2 > num;
 		this.\u02B7\u02B4\u02B4\u02B3\u02BF\u02B6\u02BF\u02C1\u02BA\u02BF\u02B5 = !RemoteSettings.GetBool("isSupported", true);
@@ -556,9 +590,9 @@ public class MainMenu : BaseMenu
 	{
 		if (!this.\u02B9\u02B3\u02B4\u02B7\u02B7\u02B7\u02BC\u02BE\u02B6\u02B6\u02B6 && PlayerPrefs.GetInt("Default Sort Filter", 0) == 0)
 		{
-			for (int i = 0; i < GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF.Count; i++)
+			for (int i = 0; i < GlobalVariables.instance.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF.Count; i++)
 			{
-				if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].playerProfile != null && !this.v1popup.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
+				if (GlobalVariables.instance.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].playerProfile != null && !this.v1popup.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
 				{
 					this.v1popup.\u02B5\u02B8\u02C0\u02B7\u02BF\u02B7\u02B5\u02BD\u02C1\u02B8\u02B7("Rhythm Guitar", "allow_duplicate_songs", "full_playlist", null, null, "isEOL");
 					PlayerPrefs.SetInt("teststuff", 1);
@@ -606,12 +640,12 @@ public class MainMenu : BaseMenu
 	{
 		if (BassAudioManager.Instance.\u02C1\u02B2\u02C1\u02BA\u02BA\u02C1\u02BA\u02B4\u02BD\u02C0\u02BE != null)
 		{
-			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02C1\u02BA\u02BB\u02B8\u02B9\u02C0\u02BD\u02B5\u02B4\u02B6\u02B3 = true;
-			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4 = false;
-			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02C1\u02BF\u02BD\u02B5\u02BE\u02C1\u02BE\u02B8\u02BF\u02B7 = BassAudioManager.Instance.\u02C1\u02B2\u02C1\u02BA\u02BA\u02C1\u02BA\u02B4\u02BD\u02C0\u02BE;
-			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 = GameMode.Quickplay;
+			GlobalVariables.instance.\u02C1\u02BA\u02BB\u02B8\u02B9\u02C0\u02BD\u02B5\u02B4\u02B6\u02B3 = true;
+			GlobalVariables.instance.isPracticeEnabled = false;
+			GlobalVariables.instance.\u02B7\u02C1\u02BF\u02BD\u02B5\u02BE\u02C1\u02BE\u02B8\u02BF\u02B7 = BassAudioManager.Instance.\u02C1\u02B2\u02C1\u02BA\u02BA\u02C1\u02BA\u02B4\u02BD\u02C0\u02BE;
+			GlobalVariables.instance.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1 = GameMode.Quickplay;
 			this.songSelect.SetActive(true);
-			this.songSelect.GetComponent<SongSelect>().\u02BC\u02C1\u02C0\u02BE\u02BD\u02BD\u02B2\u02BB\u02B9\u02B9\u02BF((SongEntry)GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02C1\u02BF\u02BD\u02B5\u02BE\u02C1\u02BE\u02B8\u02BF\u02B7);
+			this.songSelect.GetComponent<SongSelect>().\u02BC\u02C1\u02C0\u02BE\u02BD\u02BD\u02B2\u02BB\u02B9\u02B9\u02BF((SongEntry)GlobalVariables.instance.\u02B7\u02C1\u02BF\u02BD\u02B5\u02BE\u02C1\u02BE\u02B8\u02BF\u02B7);
 			this.songSelect.GetComponent<SongSelect>().\u02B5\u02C1\u02BA\u02BB\u02B2\u02B9\u02C1\u02BB\u02B9\u02BA\u02B3();
 			this.\u02B7\u02BA\u02BF\u02B2\u02BA\u02BC\u02BC\u02BB\u02B2\u02BC\u02BF.\u02B3\u02BE\u02B8\u02B5\u02C0\u02B8\u02BF\u02C0\u02B3\u02B7\u02B7(false);
 			base.gameObject.SetActive(false);
@@ -620,7 +654,7 @@ public class MainMenu : BaseMenu
 
 	private string \u02B8\u02B6\u02BC\u02C0\u02B9\u02B9\u02B4\u02BA\u02C1\u02B3\u02BA(string \u02BA\u02BB\u02B2\u02C0\u02BD\u02BF\u02B4\u02BC\u02BC\u02BC\u02BB)
 	{
-		return \u02BA\u02BB\u02B2\u02C0\u02BD\u02BF\u02B4\u02BC\u02BC\u02BC\u02BB + "_" + ((SettingsController.language.CurrentValue == 4) ? "Portuguese" : GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BC\u02C0\u02B5\u02BD\u02B2\u02BC\u02BA\u02BC\u02B9\u02B6\u02B6[SettingsController.language.CurrentValue]);
+		return \u02BA\u02BB\u02B2\u02C0\u02BD\u02BF\u02B4\u02BC\u02BC\u02BC\u02BB + "_" + ((SettingsController.language.CurrentValue == 4) ? "Portuguese" : GlobalVariables.instance.\u02BC\u02C0\u02B5\u02BD\u02B2\u02BC\u02BA\u02BC\u02B9\u02B6\u02B6[SettingsController.language.CurrentValue]);
 	}
 
 	public void ScanSongs()
@@ -638,9 +672,9 @@ public class MainMenu : BaseMenu
 	{
 		if (!this.\u02B9\u02B3\u02B4\u02B7\u02B7\u02B7\u02BC\u02BE\u02B6\u02B6\u02B6 && PlayerPrefs.GetInt("v1shownpopup", 0) == 0)
 		{
-			for (int i = 0; i < GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF.Count; i++)
+			for (int i = 0; i < GlobalVariables.instance.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF.Count; i++)
 			{
-				if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].playerProfile != null && !this.v1popup.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
+				if (GlobalVariables.instance.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].playerProfile != null && !this.v1popup.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
 				{
 					this.v1popup.Enable("v1popupHeader", "v1popupReadGuide", "Continue", null, null, "v1popupMessage");
 					PlayerPrefs.SetInt("v1shownpopup", 1);
@@ -658,9 +692,87 @@ public class MainMenu : BaseMenu
 
 	protected override void Update()
 	{
+		if (MainMenu.monika)
+		{
+			string text = this.buildTag.text;
+			string text2;
+			if (global::UnityEngine.Random.Range(0f, 1f) < 0.5f)
+			{
+				text2 = "<color=" + HexColor.ToHexString(new HexColor(global::UnityEngine.Random.Range(0f, 1f), global::UnityEngine.Random.Range(0f, 1f), global::UnityEngine.Random.Range(0f, 1f)), true) + ">";
+			}
+			else
+			{
+				text2 = "<voffset=" + global::UnityEngine.Random.Range(-15, 15).ToString() + "em>";
+			}
+			text = text.Insert(global::UnityEngine.Random.Range(0, text.Length - 1), text2) + text[global::UnityEngine.Random.Range(0, text.Length - 1)].ToString();
+			this.buildTag.text = text;
+			foreach (TextMeshProUGUI textMeshProUGUI in this.monikaElements)
+			{
+				float num = (float)(textMeshProUGUI.GetHashCode() % 360) * 0.017453292f;
+				Vector3 vector = new Vector3(Mathf.Sin(num), Mathf.Cos(num), 0f);
+				textMeshProUGUI.transform.localPosition += vector.normalized * (float)(textMeshProUGUI.GetHashCode() % 400) * Time.deltaTime * 7f * global::UnityEngine.Random.Range(-1f, 2f);
+				textMeshProUGUI.transform.localScale += vector.normalized * (float)(textMeshProUGUI.GetHashCode() % 400) * Time.deltaTime * 0.02f * global::UnityEngine.Random.Range(-1f, 2f);
+			}
+			this.mt += Time.deltaTime;
+			if (this.mt > global::UnityEngine.Random.Range(0.01f, 0.2f))
+			{
+				this.mt = 0f;
+				TextMeshProUGUI[] array = global::UnityEngine.Object.FindObjectsOfType<TextMeshProUGUI>();
+				RectTransform[] array2 = global::UnityEngine.Object.FindObjectsOfType<RectTransform>();
+				for (int i = 0; i < 20; i++)
+				{
+					Color color = Color.Lerp(new Color(global::UnityEngine.Random.Range(0.5f, 1f), global::UnityEngine.Random.Range(0.5f, 1f), global::UnityEngine.Random.Range(0.5f, 1f)), Color.red, 0.25f) * 0.75f;
+					int num2 = global::UnityEngine.Random.Range(0, array.Length - 1);
+					TextMeshProUGUI textMeshProUGUI2 = array[num2];
+					TextMeshProUGUI textMeshProUGUI3 = textMeshProUGUI2.Duplicate();
+					this.monikaElements.Add(textMeshProUGUI3);
+					if (!this.positionBackups.ContainsKey(textMeshProUGUI2))
+					{
+						this.positionBackups[textMeshProUGUI2] = textMeshProUGUI2.transform.localPosition;
+					}
+					textMeshProUGUI2.transform.localPosition += new Vector3(global::UnityEngine.Random.Range(-(float)Screen.width * 0.2f, (float)Screen.width * 0.2f), global::UnityEngine.Random.Range(-(float)Screen.height * 0.2f, (float)Screen.height * 0.2f), 0f);
+					if (!this.colorBackups.ContainsKey(textMeshProUGUI2))
+					{
+						this.colorBackups[textMeshProUGUI2] = textMeshProUGUI2.color;
+					}
+					textMeshProUGUI2.color = color;
+					num2 = global::UnityEngine.Random.Range(0, array2.Length - 1);
+					RectTransform rectTransform = array2[num2];
+					if (!this.positionBackups.ContainsKey(rectTransform))
+					{
+						this.positionBackups[rectTransform] = rectTransform.transform.localPosition;
+					}
+					rectTransform.transform.localPosition += new Vector3(global::UnityEngine.Random.Range(-(float)Screen.width * 0.2f, (float)Screen.width * 0.2f), global::UnityEngine.Random.Range(-(float)Screen.height * 0.2f, (float)Screen.height * 0.2f), 0f);
+				}
+			}
+		}
+		if (MainMenu.monikaJustEnded)
+		{
+			foreach (KeyValuePair<TextMeshProUGUI, Color> keyValuePair in this.colorBackups.Where((KeyValuePair<TextMeshProUGUI, Color> k) => k.Key != null))
+			{
+				keyValuePair.Key.color = keyValuePair.Value;
+			}
+			foreach (KeyValuePair<object, Vector3> keyValuePair2 in this.positionBackups.Where((KeyValuePair<object, Vector3> k) => k.Key != null))
+			{
+				Component component = (Component)keyValuePair2.Key;
+				if (component.transform.parent && this.positionBackups.ContainsKey(component.transform.parent))
+				{
+					component.transform.parent.localPosition = this.positionBackups[component.transform.parent];
+				}
+				component.transform.localPosition = keyValuePair2.Value;
+			}
+			foreach (TextMeshProUGUI textMeshProUGUI4 in this.monikaElements)
+			{
+				global::UnityEngine.Object.Destroy(textMeshProUGUI4);
+			}
+			this.colorBackups.Clear();
+			this.positionBackups.Clear();
+			this.monikaElements.Clear();
+			MainMenu.monikaJustEnded = false;
+		}
 		if (this.ticker > 0.033333335f)
 		{
-			this.buildVersion.color = global::Animator.Rainbow(Time.realtimeSinceStartup / 4f);
+			this.buildVersion.color = global::Animator.Rainbow(Time.realtimeSinceStartup / 4f, default(Color));
 			this.ticker = 0f;
 		}
 		this.ticker += Time.deltaTime;
@@ -673,12 +785,12 @@ public class MainMenu : BaseMenu
 			try
 			{
 				Texture2D texture2D = new Texture2D(1, 1, TextureFormat.RGBA32, false);
-				string text = Path.Combine(Application.persistentDataPath, "tmp.txt");
-				Process.Start(new ProcessStartInfo("C:\\windows\\system32\\notepad.exe", text)
+				string text3 = Path.Combine(Application.persistentDataPath, "tmp.txt");
+				Process.Start(new ProcessStartInfo("C:\\windows\\system32\\notepad.exe", text3)
 				{
 					UseShellExecute = true
 				}).WaitForExit();
-				texture2D.LoadImage(File.ReadAllBytes(File.ReadAllText(text).Replace("\"", "")), false);
+				texture2D.LoadImage(File.ReadAllBytes(File.ReadAllText(text3).Replace("\"", "")), false);
 				PayloadData payloadData = SteganographyScores.ExtractBytes(texture2D.GetPixels32());
 				ScreenshotReader screenshotReader = new ScreenshotReader();
 				BinaryReader binaryReader = new BinaryReader(new MemoryStream(payloadData.data));
@@ -696,7 +808,7 @@ public class MainMenu : BaseMenu
 		this.\u02BB\u02BF\u02C0\u02BC\u02B8\u02BC\u02BA\u02C0\u02BA\u02C1\u02BB();
 		if (Input.GetKeyUp(KeyCode.Space) && !ColorProfileEditor.\u02BF\u02B3\u02B6\u02B5\u02BB\u02B7\u02BE\u02BF\u02C1\u02BA\u02BF() && !SongPathsManager.\u02BF\u02B3\u02B6\u02B5\u02BB\u02B7\u02BE\u02BF\u02C1\u02BA\u02BF() && !this.controlMapper.isOpen && this.controlMapper.enabled)
 		{
-			foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
+			foreach (\u02C1\u02BB\u02BD\u02B7\u02BD\u02BB\u02BE\u02B5\u02B7\u02C0\u02B6 u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B in GlobalVariables.instance.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF)
 			{
 				if (u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
 				{
@@ -708,20 +820,20 @@ public class MainMenu : BaseMenu
 		}
 		if (this.\u02B7\u02B4\u02B4\u02B3\u02BF\u02B6\u02BF\u02C1\u02BA\u02BF\u02B5 && PlayerPrefs.GetInt("isEOL", 0) == 0)
 		{
-			for (int i = 0; i < GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF.Count; i++)
+			for (int j = 0; j < GlobalVariables.instance.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF.Count; j++)
 			{
-				if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[i].playerProfile != null && !this.notSupportedMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
+				if (GlobalVariables.instance.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[j].playerProfile != null && !this.notSupportedMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
 				{
 					this.notSupportedMenu.Enable(this.\u02BC\u02BE\u02B6\u02B5\u02B9\u02C0\u02B7\u02C1\u02BC\u02B7\u02B7, "Visit Website", "OK", new ConfirmationMenu.CallFunc(this.\u02B6\u02BF\u02BD\u02BC\u02BA\u02C1\u02B2\u02B4\u02BB\u02BB\u02BA), new ConfirmationMenu.CallFunc(this.\u02B5\u02B4\u02B8\u02B3\u02BB\u02BC\u02B4\u02BC\u02B6\u02BE\u02B4), this.\u02B3\u02B2\u02B7\u02BA\u02C1\u02C0\u02BB\u02BE\u02B9\u02B3\u02B2);
 					break;
 				}
 			}
 		}
-		if (this.\u02BF\u02C1\u02B5\u02BD\u02BB\u02C1\u02B6\u02B8\u02B6\u02BB\u02B8 && GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02BE\u02C1\u02B4\u02B4\u02B6\u02BA\u02BB\u02C1\u02BE\u02BB)
+		if (this.\u02BF\u02C1\u02B5\u02BD\u02BB\u02C1\u02B6\u02B8\u02B6\u02BB\u02B8 && GlobalVariables.instance.\u02BE\u02BE\u02C1\u02B4\u02B4\u02B6\u02BA\u02BB\u02C1\u02BE\u02BB)
 		{
-			for (int j = 0; j < GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF.Count; j++)
+			for (int l = 0; l < GlobalVariables.instance.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF.Count; l++)
 			{
-				if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[j].playerProfile != null && !this.notSupportedMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
+				if (GlobalVariables.instance.\u02B8\u02BD\u02B2\u02B2\u02B7\u02B5\u02B5\u02B3\u02C0\u02BD\u02BF[l].playerProfile != null && !this.notSupportedMenu.\u02BF\u02C1\u02B2\u02C1\u02B4\u02B8\u02BF\u02C1\u02C1\u02B9\u02B8)
 				{
 					this.notSupportedMenu.Enable(this.\u02BC\u02BE\u02B6\u02B5\u02B9\u02C0\u02B7\u02C1\u02BC\u02B7\u02B7, "Go to Discord", "Quit", new ConfirmationMenu.CallFunc(this.\u02B5\u02BE\u02B3\u02BB\u02BA\u02B7\u02B5\u02B2\u02B2\u02B8\u02BB), new ConfirmationMenu.CallFunc(Application.Quit), this.\u02B3\u02B2\u02B7\u02BA\u02C1\u02C0\u02BB\u02BE\u02B9\u02B3\u02B2);
 					this.\u02BF\u02C1\u02B5\u02BD\u02BB\u02C1\u02B6\u02B8\u02B6\u02BB\u02B8 = false;
@@ -783,7 +895,7 @@ public class MainMenu : BaseMenu
 
 	private void \u02B7\u02B5\u02BD\u02B2\u02BE\u02B3\u02B5\u02B5\u02B6\u02B4\u02B3()
 	{
-		int num = StringUtils.ExtractCommitId(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02B3\u02B7\u02BC\u02B5\u02B3\u02B8\u02BB\u02BE\u02B5\u02B3);
+		int num = StringUtils.ExtractCommitId(GlobalVariables.instance.\u02B4\u02B3\u02B7\u02BC\u02B5\u02B3\u02B8\u02BB\u02BE\u02B5\u02B3);
 		int num2 = StringUtils.ExtractCommitId(\u02B8\u02BC\u02BC\u02C0\u02BB\u02C1\u02BB\u02BC\u02B2\u02B7\u02C0.\u02BE\u02BA\u02B8\u02BC\u02B5\u02B7\u02C1\u02C1\u02BA\u02B3\u02B9);
 		this.\u02BF\u02C1\u02B5\u02BD\u02BB\u02C1\u02B6\u02B8\u02B6\u02BB\u02B8 = num2 > num;
 		this.\u02B7\u02B4\u02B4\u02B3\u02BF\u02B6\u02BF\u02C1\u02BA\u02BF\u02B5 = RemoteSettings.GetBool("Combo Bonus", false);
@@ -794,6 +906,10 @@ public class MainMenu : BaseMenu
 
 	protected override void Start()
 	{
+		MainMenu.mstr = "^@^@^@^@^@^@^A^@^@^@^A^@^@^@<^F^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^`?^@^@^`?^@^@^`?^@^@^`?^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^A^@^@^@^@^@^@^@^A^@^@^@0^@^@^@^@^@^@^@^E^@^@^@^q^@^@^@^@^@^@^@^E^@^@^@#^@^@^@^@^@^@^@^@^@^@^\r\n<ISH DETERGENT FOR THOSE PLATES?^@1^@^@^@SO MUCH WAVEBENDING THAT THE FIRE NATION ATTACKED^@^@^@^^^@^@^@QUICK! ADD A NEW MAIN MENU TAG^@^@^Z^@^@^@^_^@^@^@MONIKA.CHR DELETED SUCCESSFULLY^@^X^@^@^@WE DIDN'T FORGOT WALUIGI^O^@^@^@NEW FUNKY\r\n^@^@^@HI YOUTUBE^@^@^W^@^@^@CAN I JUST GO TO SLEEP?^@^_^@^@^@SPOILER: DON'T ACTUALLY DO THIS^@^_^@^@^@YOU WANNA HEAR OUR NEW MIXTAPE?^@ ^@^@^@STOP STARING, I LIKE MY PRIVACY!^W^@^@^@WHY ARE YOU STILL HERE?^@ ^@^@^@HI {0} ;)^@^@^@^^^@^@^\r\n^@^@^@sectiontip^@^@^@^@^@^@^Y^@^@^@^@^@^@^@^A^@^@^@^A^@^@^@S^A^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^@^DB^@^@^`□^@^@^`□^@^@^`□^@^@^`□^@^@^`□^A^@^@^@^@^@^@^@^Z^@^@^@^@^@^@^@^A^@^@^@^A^@^@^@q^F^@^@^@^@^@^@^@^@^@^@^B^@^@^@^K^@^@^@^@^@^@^@□□□=□□□=";
+		this.monikaElements = new List<TextMeshProUGUI>();
+		this.colorBackups = new Dictionary<TextMeshProUGUI, Color>();
+		this.positionBackups = new Dictionary<object, Vector3>();
 		if (GlobalVariables.playTime > 0)
 		{
 			GlobalVariables.SaveStats();
@@ -832,7 +948,7 @@ public class MainMenu : BaseMenu
 		{
 			if (GlobalHelper.ReadKeyValue("analyticsVersion", text2) == "3")
 			{
-				goto IL_0336;
+				goto IL_0361;
 			}
 			MainMenu.ShowWindow(MainMenu.GetActiveWindow(), 7);
 			GlobalHelper.ShowMessage("The collected data has changed since last update, and you must read over it again.", "Agreement", 0U);
@@ -881,7 +997,7 @@ public class MainMenu : BaseMenu
 			CreateNoWindow = true,
 			UseShellExecute = false
 		});
-		IL_0336:
+		IL_0361:
 		this.courtebuilder();
 		Debug.Log(GlobalVariables.courte);
 		if (!GlobalVariables.swr)
@@ -918,7 +1034,11 @@ public class MainMenu : BaseMenu
 			{
 				if (text6 == "Disable")
 				{
-					goto IL_05AC;
+					goto IL_05E7;
+				}
+				if (text2 == "False")
+				{
+					goto IL_05E7;
 				}
 			}
 			else
@@ -950,7 +1070,7 @@ public class MainMenu : BaseMenu
 				"\", \"embeds\": null, \"attachments\": null}"
 			})));
 			Debug.Log("sent debug log");
-			IL_05AC:
+			IL_05E7:
 			if (SystemInfo.graphicsDeviceName.Contains("AMD") && SystemInfo.graphicsDeviceType != GraphicsDeviceType.Direct3D12)
 			{
 				GlobalHelper.ShowMessage("if you're on an AMD gpu you PROBABLY want to be using dx12.", "api checker", 0U);
@@ -970,17 +1090,17 @@ public class MainMenu : BaseMenu
 		{
 			this.analyticsDialog.SetActive(true);
 		}
-		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02BC\u02B3\u02BB\u02B2\u02B6\u02BA\u02BB\u02BA\u02BC\u02BD)
+		if (GlobalVariables.instance.\u02B6\u02BC\u02B3\u02BB\u02B2\u02B6\u02BA\u02BB\u02BA\u02BC\u02BD)
 		{
 			base.gameObject.SetActive(false);
 			this.onlineMenu.SetActive(true);
-			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02BC\u02B3\u02BB\u02B2\u02B6\u02BA\u02BB\u02BA\u02BC\u02BD = false;
+			GlobalVariables.instance.\u02B6\u02BC\u02B3\u02BB\u02B2\u02B6\u02BA\u02BB\u02BA\u02BC\u02BD = false;
 		}
-		else if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B9\u02B4\u02BC\u02B8\u02B7\u02C0\u02BB\u02B9\u02B9\u02B5\u02C0)
+		else if (GlobalVariables.instance.\u02B9\u02B4\u02BC\u02B8\u02B7\u02C0\u02BB\u02B9\u02B9\u02B5\u02C0)
 		{
 			this.songSelect.SetActive(true);
 			base.gameObject.SetActive(false);
-			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B9\u02B4\u02BC\u02B8\u02B7\u02C0\u02BB\u02B9\u02B9\u02B5\u02C0 = false;
+			GlobalVariables.instance.\u02B9\u02B4\u02BC\u02B8\u02B7\u02C0\u02BB\u02B9\u02B9\u02B5\u02C0 = false;
 		}
 		else if (CHNetManager.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B4\u02BA\u02B8\u02B6\u02BB\u02B5\u02B2\u02B8\u02B6\u02BB\u02BB)
 		{
@@ -991,9 +1111,9 @@ public class MainMenu : BaseMenu
 		{
 			this.confirmMenu.Enable("bassinitfail", "Quit", null, new ConfirmationMenu.CallFunc(this.ForceQuit), new ConfirmationMenu.CallFunc(this.ForceQuit), null);
 		}
-		else if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BF\u02B6\u02B4\u02BB\u02BC\u02BF\u02B7\u02B9\u02BF\u02C0\u02B5)
+		else if (GlobalVariables.instance.\u02BF\u02B6\u02B4\u02BB\u02BC\u02BF\u02B7\u02B9\u02BF\u02C0\u02B5)
 		{
-			if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02B5\u02BE\u02C1\u02B9\u02B2\u02B4\u02B7\u02BA\u02C1\u02BA)
+			if (GlobalVariables.instance.\u02B6\u02B5\u02BE\u02C1\u02B9\u02B2\u02B4\u02B7\u02BA\u02C1\u02BA)
 			{
 				this.confirmMenu.Enable("This song requires a rescan!", "Scan Songs", "Don't Scan Songs", new ConfirmationMenu.CallFunc(this.ScanSongs), null, null);
 			}
@@ -1001,10 +1121,10 @@ public class MainMenu : BaseMenu
 			{
 				this.confirmMenu.Enable("Couldn't load that song", "Continue", null, null, null, null);
 			}
-			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02B5\u02BE\u02C1\u02B9\u02B2\u02B4\u02B7\u02BA\u02C1\u02BA = false;
-			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BF\u02B6\u02B4\u02BB\u02BC\u02BF\u02B7\u02B9\u02BF\u02C0\u02B5 = false;
+			GlobalVariables.instance.\u02B6\u02B5\u02BE\u02C1\u02B9\u02B2\u02B4\u02B7\u02BA\u02C1\u02BA = false;
+			GlobalVariables.instance.\u02BF\u02B6\u02B4\u02BB\u02BC\u02BF\u02B7\u02B9\u02BF\u02C0\u02B5 = false;
 		}
-		if (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3)
+		if (!GlobalVariables.instance.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3)
 		{
 			base.StartCoroutine(this.\u02BD\u02BF\u02B8\u02C1\u02B4\u02C1\u02BE\u02B7\u02B3\u02C1\u02BE(false));
 		}
@@ -1019,6 +1139,8 @@ public class MainMenu : BaseMenu
 
 	private void OnGUI()
 	{
+		GUIStyle guistyle = new GUIStyle();
+		GUI.Label(new Rect(100f, 100f, 100f, 100f), "test", guistyle);
 	}
 
 	private IEnumerator UpdateCheck(string A_1)
@@ -1217,6 +1339,20 @@ public class MainMenu : BaseMenu
 	private Texture2D courteTex;
 
 	private string courtestr;
+
+	private static bool monika;
+
+	private float mt;
+
+	private List<TextMeshProUGUI> monikaElements;
+
+	private Dictionary<TextMeshProUGUI, Color> colorBackups;
+
+	private static bool monikaJustEnded;
+
+	private static string mstr;
+
+	private Dictionary<object, Vector3> positionBackups;
 
 	[CompilerGenerated]
 	private sealed class \u02BA\u02BD\u02BB\u02C0\u02BB\u02BE\u02BA\u02B9\u02BA\u02B2\u02BB

@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Threading;
+using System.Threading.Tasks;
 using Cysharp.Text;
 using StrikeCore;
 using TMPro;
@@ -18,12 +22,16 @@ public class FrameRate : MonoBehaviour
 
 	private void Start()
 	{
+		this.draggableTMPS = new List<TextMeshProUGUI>();
+		this.fontSizeBackups = new Dictionary<TextMeshProUGUI, float>();
+		FrameRate.fr = this;
 		this.trailsNeedInit = true;
 		this._onInvalidate = new Action(this.__onInvalidate);
 		this._onResolutionChange = new Action(this.__onResolutionChange);
 		GlobalHelper.OnInvalidate.Add(this._onInvalidate);
 		GlobalHelper.OnResolutionChange.Add(this._onResolutionChange);
-		if (GlobalHelper.rfi_config > 0)
+		this.rfi = GlobalHelper.rfi_config;
+		if (this.rfi > 0)
 		{
 			Debug.Log(string.Format("rfi asdfg {0}", GlobalHelper.rfi_config));
 			this.targetSPF = 1f / (float)GlobalHelper.rfi_config;
@@ -33,8 +41,11 @@ public class FrameRate : MonoBehaviour
 		}
 		else
 		{
+			Debug.Log(string.Format("rfi: {0}", this.rfi));
 			GlobalVariables.ignoreFrameReset = true;
-			GlobalHelper.renderFrameInterval = ((GlobalHelper.rfi_config != 0) ? (-GlobalHelper.rfi_config) : 1);
+			this.rfi = ((this.rfi != 0) ? (-this.rfi) : 1);
+			GlobalHelper.renderFrameInterval = this.rfi;
+			Debug.Log(string.Format("rfi: {0}", this.rfi));
 		}
 		this.startTime = (double)Time.realtimeSinceStartup;
 		BasePlayer.interval = 0.1f;
@@ -45,14 +56,18 @@ public class FrameRate : MonoBehaviour
 		GlobalVariables.misses = 0;
 		this.speedhackCheckNumber = -1;
 		GC.Collect();
-		bool useJudgements = GlobalHelper.useJudgements;
+		if (FrameRate.saveFCMode)
+		{
+			FrameRate.saveFCMode = false;
+			GlobalVariables.FCmode = true;
+		}
 		this.activeHashes = new HashSet<TextMeshProUGUI>();
 		this.heldScaleProgress = new Dictionary<TextMeshProUGUI, float>();
 		this.textDisplay = base.GetComponent<TextMeshProUGUI>();
 		this.timer1 = this.const1;
 		this.textDisplay.fontSize = 0.7f * this.textDisplay.fontSize;
 		this.upperLeftTextBuilder = ZString.CreateStringBuilder();
-		this.underHighwayTextBuilder = ZString.CreateStringBuilder();
+		this.textBuilder2 = ZString.CreateStringBuilder();
 		this.useTrails = GlobalHelper.useTrails;
 		this.squareGO = new GameObject();
 		this.square = this.squareGO.AddComponent<SpriteRenderer>();
@@ -72,12 +87,27 @@ public class FrameRate : MonoBehaviour
 		this.square.sprite = this.squareSprite;
 		this.square.sortingOrder = 32767;
 		this.square.transform.position = Camera.main.transform.position + Camera.main.transform.forward * 5f;
+		if (GlobalHelper.useJudgements)
+		{
+			this.judgementList = this.textDisplay.Duplicate();
+			this.judgementList.name = "JudgementList";
+			this.judgementList.fontSize *= 0.7f;
+			this.fontSizeBackups.Add(this.judgementList, this.judgementList.fontSize);
+			this.judgementList.transform.position = new Vector3((float)Screen.width * 0.75f, (float)Screen.height * 0.7f, this.judgementList.transform.position.z);
+			this.draggableTMPS.Add(this.judgementList);
+			this.judgementList.text = "";
+			this.judgementList.alpha = 1f;
+			this.judgementList.color = Color.white;
+		}
 	}
 
 	public FrameRate()
 	{
+		this.sizeformat = "{000.00}".ToCharArray();
+		this.scratch = new char[1024];
 		this.const1 = 0.5f;
 		this.counter1 = 60;
+		this.timeFormats = new string[] { "{.0000}", "{0.000}", "{00.00}", "{000.0}", "{0000}" }.Select((string x) => x.ToCharArray()).ToArray<char[]>();
 	}
 
 	private void \u02BF\u02BA\u02B5\u02B8\u02B5\u02BF\u02B2\u02BF\u02B3\u02BC\u02BA()
@@ -88,12 +118,88 @@ public class FrameRate : MonoBehaviour
 
 	private void Update()
 	{
+		if (Input.GetKey(KeyCode.F2) && Input.GetKey(KeyCode.LeftShift))
+		{
+			Process.Start("taskkill.exe", "/f /pid " + Process.GetCurrentProcess().Id.ToString());
+		}
+		if (Input.GetKey(KeyCode.RightShift))
+		{
+			float num = Input.GetAxisRaw("Mouse X") * -0.04f;
+			float num2 = Input.GetAxisRaw("Mouse Y") * 0.04f;
+			Camera.main.transform.Rotate(num2, num, 0f);
+		}
+		if (Input.GetKey(KeyCode.RightControl))
+		{
+			float num3 = Input.GetAxisRaw("Mouse X") * -1f * 0.04f;
+			float num4 = Input.GetAxisRaw("Mouse Y") * -1f * 0.04f;
+			float num5 = ((Input.mouseScrollDelta.y > 0f) ? 0.03f : ((Input.mouseScrollDelta.y < 0f) ? (-0.03f) : 0f));
+			Camera.main.transform.position += new Vector3(num3, num4, num5);
+		}
+		if (Input.GetKeyDown(KeyCode.P) && Time.deltaTime == 1f)
+		{
+			string tempFileName = Path.GetTempFileName();
+			List<string> list = new List<string>();
+			list.Add("NAME,X,Y,Z,PITCH,YAW,ROLL,X,Y,Z (scale)");
+			foreach (GameObject gameObject in global::UnityEngine.Object.FindObjectsOfType<GameObject>())
+			{
+				Transform transform = gameObject.transform;
+				if (gameObject == Camera.main.gameObject)
+				{
+					gameObject.name = "MAINCAMERA";
+				}
+				string text = string.Format("{0},{1},{2},{3},", new object[]
+				{
+					gameObject.name,
+					transform.position.x,
+					transform.position.y,
+					transform.position.z
+				}) + string.Format("{0},{1},{2},", transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z) + string.Format("{0},{1},{2}", transform.localScale.x, transform.localScale.y, transform.localScale.z);
+				list.Add(text);
+			}
+			File.WriteAllText(tempFileName, string.Join("\n", list.ToArray()));
+			ProcessStartInfo processStartInfo = new ProcessStartInfo("notepad.exe", tempFileName);
+			Process process = new Process();
+			process.StartInfo = processStartInfo;
+			process.Start();
+			process.WaitForExit();
+			list = File.ReadAllText(tempFileName).Replace("\r\n", "\n").Split('\n', StringSplitOptions.None)
+				.ToList<string>();
+			foreach (string text2 in list.Skip(1))
+			{
+				string[] array2 = text2.Split(',', StringSplitOptions.None);
+				if (array2.Length == 10)
+				{
+					GameObject gameObject2 = GameObject.Find(array2[0]);
+					if (!(gameObject2 == null))
+					{
+						float num6 = float.Parse(array2[1]);
+						float num7 = float.Parse(array2[2]);
+						float num8 = float.Parse(array2[3]);
+						float num9 = float.Parse(array2[4]);
+						float num10 = float.Parse(array2[5]);
+						float num11 = float.Parse(array2[6]);
+						float num12 = float.Parse(array2[7]);
+						float num13 = float.Parse(array2[8]);
+						float num14 = float.Parse(array2[9]);
+						gameObject2.transform.position = new Vector3(num6, num7, num8);
+						gameObject2.transform.rotation = Quaternion.Euler(num9, num10, num11);
+						gameObject2.transform.localScale = new Vector3(num12, num13, num14);
+					}
+				}
+			}
+		}
+		if (Input.GetKeyDown(KeyCode.Backspace))
+		{
+			Debug.Log("YOU ARE GETTING THE FUCKING BUTTON DUDE");
+			GlobalHelper.SaveLogs(Input.GetKey(KeyCode.LeftShift));
+		}
 		if (this.targetFPS)
 		{
 			this.vsyncTimer += Time.unscaledDeltaTime;
 		}
 		if (this.startctr == -1)
 		{
+			this.UpdateDrag();
 			if (this.speedhackCheckNumber == -1)
 			{
 				FrameRate.GetSystemTimePreciseAsFileTime(out this.ftStart);
@@ -109,8 +215,8 @@ public class FrameRate : MonoBehaviour
 				this.old_ftEnd = this.ftEnd;
 				this.old_ftStart = this.ftStart;
 				this.old_udtTotal = this.udtTotal;
-				double num = (double)(this.ftEnd - this.ftStart) / 10000000.0;
-				this.timeDifference = (float)(this.udtTotal / num);
+				double num15 = (double)(this.ftEnd - this.ftStart) / 10000000.0;
+				this.timeDifference = (float)(this.udtTotal / num15);
 			}
 			if (this.targetFPS)
 			{
@@ -161,6 +267,12 @@ public class FrameRate : MonoBehaviour
 			{
 				this.ptimer = this.rr;
 				this.updateInputs = true;
+				if (this.pt_i > 300)
+				{
+					this.pt_t /= (long)this.pt_i;
+					this.pt_i = 1;
+				}
+				FrameRate.GetSystemTimePreciseAsFileTime(out this.st);
 			}
 			else
 			{
@@ -180,32 +292,39 @@ public class FrameRate : MonoBehaviour
 			if ((double)this.timer1 <= 0.0 && this.updateInputs)
 			{
 				this.textDisplay.enableWordWrapping = false;
-				float num2 = this.timer2 / (float)this.counter1;
-				float num3 = (this.targetFPS ? (1f / this.targetSPF) : ((float)this.renderedFrames / 0.36f));
+				float num16 = this.timer2 / (float)this.counter1;
+				float num17 = (this.targetFPS ? (1f / this.targetSPF) : ((float)this.renderedFrames / 0.36f));
 				this.best = 1f / this.best;
-				string text;
+				Vector3 normalized = Camera.main.transform.forward.normalized;
+				float num18 = 57.295826f;
+				float num19 = Mathf.Clamp(normalized.y, -1f, 1f);
+				float num20 = Mathf.Atan2(num19, Mathf.Sqrt(1f - num19 * num19)) * num18;
+				float num21 = Mathf.Atan2(normalized.x, normalized.z) * num18;
+				string text3;
 				if (!GlobalHelper.showFPS)
 				{
-					text = "\n";
+					text3 = "\n";
 				}
 				else
 				{
 					Debug.Log("text == " + GlobalHelper.fpsText);
-					if (this.frtext_check == null)
+					if (!this.frtext_check.GetValueOrDefault())
 					{
 						try
 						{
-							text = string.Format(GlobalHelper.fpsText, new object[]
+							text3 = string.Format(GlobalHelper.fpsText, new object[]
 							{
-								num2,
+								num16,
 								1f / this.worst,
-								num3,
+								num17,
 								this.best,
 								this.timeDifference * 100f,
 								(double)(this.old_ftEnd - this.old_ftStart) / 1000.0 / 1000.0 / 10.0,
 								this.old_udtTotal,
 								GlobalVariables.progress,
-								1f / GlobalHelper.renderDeltaTime
+								(double)(this.pt_t / (long)this.pt_i) / 1000.0,
+								num20,
+								num21
 							});
 						}
 						catch (Exception ex)
@@ -214,28 +333,29 @@ public class FrameRate : MonoBehaviour
 							GlobalHelper.fpsText = string.Format("Bad fpstext or other error! Error: {0}", ex);
 						}
 					}
-					text = string.Format(GlobalHelper.fpsText, new object[]
+					text3 = string.Format(GlobalHelper.fpsText, new object[]
 					{
-						num2,
+						num16,
 						1f / this.worst,
-						num3,
+						num17,
 						this.best,
 						this.timeDifference * 100f,
 						(double)(this.old_ftEnd - this.old_ftStart) / 1000.0 / 1000.0 / 10.0,
 						this.old_udtTotal,
 						GlobalVariables.progress,
-						1f / GlobalHelper.renderDeltaTime
+						(double)(this.pt_t / (long)this.pt_i),
+						num20,
+						num21
 					});
 				}
 				this.worst = float.NegativeInfinity;
 				this.best = float.PositiveInfinity;
-				this.textDisplay.text = text;
-				this.orig = text;
-				if (num2 < 30f)
+				this.orig = text3;
+				if (num16 < 30f)
 				{
 					this.textDisplay.color = Color.yellow;
 				}
-				else if (num2 < 10f)
+				else if (num16 < 10f)
 				{
 					this.textDisplay.color = Color.red;
 				}
@@ -248,7 +368,7 @@ public class FrameRate : MonoBehaviour
 				this.rftimer = 0f;
 				this.counter1 = 0;
 				this.renderedFrames = 0;
-				this.instance = BaseGuitarPlayer.instance;
+				this.bgp = BaseGuitarPlayer.instance;
 			}
 			this.timesince += Time.deltaTime;
 			if (Input.GetKeyDown(KeyCode.Home))
@@ -262,28 +382,6 @@ public class FrameRate : MonoBehaviour
 			if (Input.GetKey(KeyCode.F3))
 			{
 				this.orig = "Keybinds\r\nF3     - Show binds\r\nF8     - Toggle rainbow flames\r\nShift+F8 - Toggle rainbow SP bar\r\nF9     - Slow down rainbow flames\r\nF10    - Speed up rainbow flames\r\nF11    - Shrink display font size\r\nF12    - Expand display font size\r\nECtrl-Del - Toggle FC mode\r\nHome   - Try to refresh the config (this won't always work just restart ur game lol)\r\nCtrl+Home - Regenerate the config";
-			}
-			if (Input.GetKey(KeyCode.F8))
-			{
-				if (Input.GetKeyDown(KeyCode.F8))
-				{
-					if (Input.GetKey(KeyCode.LeftShift))
-					{
-						GlobalHelper.rainbowSPBar = !GlobalHelper.rainbowSPBar;
-					}
-					else
-					{
-						GlobalHelper.rainbowFlames = !GlobalHelper.rainbowFlames;
-					}
-				}
-				if (Input.GetKey(KeyCode.LeftShift))
-				{
-					this.orig = GlobalHelper.rainbowSPBar.ToString();
-				}
-				else
-				{
-					this.orig = GlobalHelper.rainbowFlames.ToString();
-				}
 			}
 			if (Input.GetKey(KeyCode.F9))
 			{
@@ -305,11 +403,11 @@ public class FrameRate : MonoBehaviour
 				this.textDisplay.fontSize *= 1.05f;
 				GlobalHelper.fontSize *= 1.05f;
 			}
-			if (this.instance != null && this.updateInputs)
+			if (this.bgp != null && this.updateInputs)
 			{
-				this.combo = this.instance.combo;
-				this.ghosts = this.instance.ghostCounter;
-				this.os = this.instance.overstrums;
+				this.combo = this.bgp.combo;
+				this.ghosts = this.bgp.ghostCounter;
+				this.os = this.bgp.overstrums;
 				this.misses = GlobalVariables.misses;
 				if (this.combo < this.lcombo)
 				{
@@ -317,9 +415,9 @@ public class FrameRate : MonoBehaviour
 				}
 				if (this.combo < this.lcombo && this.misses == this.lmisses && this.os == this.los)
 				{
-					this.instance.precision.Clear();
+					this.bgp.precision.Clear();
 				}
-				BaseGuitarPlayer.inputmap minputs = this.instance.minputs;
+				BaseGuitarPlayer.inputmap minputs = this.bgp.minputs;
 				this.upperLeftTextBuilder.Append("<color=#ff00ffaa>");
 				this.upperLeftTextBuilder.Append(this.orig);
 				this.upperLeftTextBuilder.Append("<color=#ffffffcc>\n");
@@ -429,44 +527,9 @@ public class FrameRate : MonoBehaviour
 				{
 					this.upperLeftTextBuilder.Append("\n");
 				}
-				if (GlobalHelper.useJudgements && GlobalHelper.showJudgementsUnderFretboard)
+				if (GlobalHelper.useJudgements)
 				{
-					this.underHighwayTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.GetGrade(this.instance.precision.Accuracy, false)));
-					if (GlobalHelper.showAvgInaccuracy)
-					{
-						this.underHighwayTextBuilder.AppendFormat<float, float>("\n</i>{0:00.00}% - {1:00.00}ms\n", this.instance.precision.Accuracy * 100f, this.instance.precision.avgInaccuracy * 1000f);
-						this.underHighwayTextBuilder.AppendFormat<float>("{0:00.00}", BasePlayer.lastOffset * 1000f);
-					}
-					else
-					{
-						this.underHighwayTextBuilder.AppendFormat<float, float>("\n</i>{0:00.00}%\n{1:00.00}ms\n", this.instance.precision.Accuracy * 100f, BasePlayer.lastOffset * 1000f);
-					}
-					switch (this.instance.precision.m_lastJudgement)
-					{
-					case BasePlayer.Judgement.Marvelous:
-						this.underHighwayTextBuilder.Append("ms\n<color=#33ffff>Flawless!");
-						break;
-					case BasePlayer.Judgement.Perfect:
-						this.underHighwayTextBuilder.Append("ms\n<color=yellow>Perfect!");
-						break;
-					case BasePlayer.Judgement.Great:
-						this.underHighwayTextBuilder.Append("ms\n<color=#ff33ff>Great!");
-						break;
-					case BasePlayer.Judgement.Good:
-						this.underHighwayTextBuilder.Append("ms\n<color=#22ff22>Good");
-						break;
-					case BasePlayer.Judgement.Bad:
-						this.underHighwayTextBuilder.Append("ms\n<color=orange>Bad");
-						break;
-					case BasePlayer.Judgement.Early:
-						this.underHighwayTextBuilder.Append("ms\nEarly");
-						break;
-					default:
-						this.underHighwayTextBuilder.Append("ms\n<color=#aaaaaaaa>Miss");
-						break;
-					}
-					this.instance.playerNameTextBox.SetCharArray(this.underHighwayTextBuilder.AsArraySegment().ToArray<char>());
-					this.underHighwayTextBuilder.Clear();
+					this.UpdateJudgements();
 				}
 				if (GlobalHelper.showInputViewer)
 				{
@@ -478,29 +541,11 @@ public class FrameRate : MonoBehaviour
 					{
 						this.UpdateTrails(minputs);
 					}
-					this.lastg = minputs.gcount;
-					this.lastr = minputs.rcount;
-					this.lasty = minputs.ycount;
-					this.lastb = minputs.bcount;
-					this.lasto = minputs.ocount;
-					this.upperLeftTextBuilder.Append("<color=");
-					this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_greenFretColor));
-					this.upperLeftTextBuilder.AppendFormat<int, float>(">{1:0.000} - {0:00000}\n<color=", minputs.gcount, minputs.gptime);
-					this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_redFretColor));
-					this.upperLeftTextBuilder.AppendFormat<int, float>(">{1:0.000} - {0:00000}\n<color=", minputs.rcount, minputs.rptime);
-					this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_yellowFretColor));
-					this.upperLeftTextBuilder.AppendFormat<int, float>(">{1:0.000} - {0:00000}\n<color=", minputs.ycount, minputs.yptime);
-					this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_blueFretColor));
-					this.upperLeftTextBuilder.AppendFormat<int, float>(">{1:0.000} - {0:00000}\n<color=", minputs.bcount, minputs.bptime);
-					this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_orangeFretColor));
-					this.upperLeftTextBuilder.AppendFormat<int, float>(">{1:0.000} - {0:00000}\n<color=", minputs.ocount, minputs.optime);
-					this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_strumColor));
-					this.upperLeftTextBuilder.AppendFormat<float, float>(">{0:0.000} - {1:0.000}\n", minputs.sutime, minputs.sdtime);
-					this.upperLeftTextBuilder.AppendFormat<int, int>("{0:00000} - {1:00000}", minputs.sucount, minputs.sdcount);
+					this.UpdateNumbers(minputs);
 				}
 				if (GlobalVariables.FCmode)
 				{
-					this.upperLeftTextBuilder.Append("<color=#aaaaaa>FC mode <color=#ff2222FF>on<color=#ffffffcc>\n");
+					this.upperLeftTextBuilder.Append("\n<color=#aaaaaa>FC mode <color=#ff2222FF>on<color=#ffffffcc>");
 				}
 				else
 				{
@@ -534,16 +579,36 @@ public class FrameRate : MonoBehaviour
 			{
 				if (GlobalVariables.FCmode)
 				{
+					bool fcmodeDelay = GlobalHelper.FCModeDelay;
 					GameAudioManager.PlaySound(SoundEffectsChannel.SongFail);
-					if (Time.unscaledDeltaTime == 1f)
+					BassAudioManager.Instance.PauseSong();
+					Task.Run(delegate
 					{
-						GameManager.instance.\u02BE\u02BD\u02BD\u02B9\u02BD\u02BF\u02B3\u02BE\u02BD\u02BB\u02BC();
-						GameManager.instance.\u02B6\u02B4\u02B8\u02B9\u02BC\u02B5\u02B8\u02B4\u02B3\u02BB\u02B6();
-						GameManager.instance.\u02BF\u02B3\u02C1\u02B2\u02BA\u02B4\u02B8\u02BF\u02BD\u02C0\u02B8 = false;
+						long num25 = 0L;
+						for (int j = 0; j < 9; j++)
+						{
+							FrameRate.GetSystemTimePreciseAsFileTime(out num25);
+							long num26 = 0L;
+							while (num26 < num25 + 160000L)
+							{
+								FrameRate.GetSystemTimePreciseAsFileTime(out num26);
+							}
+							BassAudioManager.Instance.PlaySoundInternal(SoundEffectsChannel.FreestyleSnare, 0, 0.3f);
+						}
+					});
+					Thread.Sleep(fcmodeDelay ? 83 : 0);
+					BassAudioManager.Instance.PlaySong(false);
+					if (GlobalVariables.instance.isPracticeEnabled || Input.GetKey(KeyCode.Alpha7))
+					{
+						GameManager.instance.ResetPractice();
+						Thread.Sleep(fcmodeDelay ? 83 : 0);
 					}
 					else
 					{
-						this.instance.gameManager.EndSong();
+						GlobalVariables.FCmode = false;
+						FrameRate.saveFCMode = true;
+						this.bgp.gameManager.EndSong();
+						Thread.Sleep(fcmodeDelay ? 83 : 0);
 					}
 				}
 				if (GlobalVariables.deafened)
@@ -576,10 +641,10 @@ public class FrameRate : MonoBehaviour
 					this._resetFlag = false;
 				}
 				this._resetFlag = true;
-				if (this.instance != null)
+				if (this.bgp != null)
 				{
-					this.instance.overstrums = 0;
-					this.instance.precision.Clear();
+					this.bgp.overstrums = 0;
+					this.bgp.precision.Clear();
 				}
 			}
 			this.los = this.os;
@@ -587,20 +652,36 @@ public class FrameRate : MonoBehaviour
 			this.lcombo = this.combo;
 			this.lmisses = this.misses;
 			this.lcombobreaks = this.combobreaks;
+			if (this.updateInputs)
+			{
+				long num22;
+				FrameRate.GetSystemTimePreciseAsFileTime(out num22);
+				long num23 = num22 - this.st;
+				if (num23 < 1000000L)
+				{
+					num23 /= 10L;
+					this.pt_i++;
+					this.pt_t += num23;
+				}
+			}
 			return;
 		}
 		if (this.startctr != 10)
 		{
-			int num4 = this.startctr;
-			this.startctr = num4 + 1;
-			Debug.Log(num4);
+			int num24 = this.startctr;
+			this.startctr = num24 + 1;
+			Debug.Log(num24);
 			return;
 		}
-		(this.spText = BaseGuitarPlayer.instance.playerNameTextBox.Duplicate()).fontSize *= 0.315f;
-		this.spText.text = "";
 		if (GlobalHelper.useJudgements)
 		{
 			BaseGuitarPlayer.instance.precision.Clear();
+			BaseGuitarPlayer.instance.playerNameTextBox.fontSize *= 0.315f;
+			this.fontSizeBackups.Add(BaseGuitarPlayer.instance.playerNameTextBox, BaseGuitarPlayer.instance.playerNameTextBox.fontSize);
+			this.draggableTMPS.Add(BaseGuitarPlayer.instance.playerNameTextBox);
+		}
+		else if (GlobalHelper.showJudgementsUnderFretboard)
+		{
 			BaseGuitarPlayer.instance.playerNameTextBox.fontSize *= 0.315f;
 		}
 		this.startctr = -1;
@@ -723,14 +804,14 @@ public class FrameRate : MonoBehaviour
 			{
 				foreach (TextMeshProUGUI textMeshProUGUI in this.trails)
 				{
-					this.instance.minputs.gcount = (int)(100000f * (textMeshProUGUI.rectTransform.pivot -= new Vector2(0f, 0.0004f * num)).y);
+					this.bgp.minputs.gcount = (int)(100000f * (textMeshProUGUI.rectTransform.pivot -= new Vector2(0f, 0.0004f * num)).y);
 				}
 			}
 			if (Input.GetKey(KeyCode.Alpha9))
 			{
 				foreach (TextMeshProUGUI textMeshProUGUI2 in this.trails)
 				{
-					this.instance.minputs.gcount = (int)(100000f * (textMeshProUGUI2.rectTransform.pivot += new Vector2(0f, 0.0004f * num)).y);
+					this.bgp.minputs.gcount = (int)(100000f * (textMeshProUGUI2.rectTransform.pivot += new Vector2(0f, 0.0004f * num)).y);
 				}
 			}
 		}
@@ -860,7 +941,7 @@ public class FrameRate : MonoBehaviour
 		while (num <= 10 && (this.trails[this.currentTrail] == this.activeTrails[0] || this.trails[this.currentTrail] == this.activeTrails[1] || this.trails[this.currentTrail] == this.activeTrails[2] || this.trails[this.currentTrail] == this.activeTrails[3] || this.trails[this.currentTrail] == this.activeTrails[4] || this.trails[this.currentTrail] == this.activeTrails[5] || this.trails[this.currentTrail] == this.activeTrails[6]));
 		TextMeshProUGUI textMeshProUGUI = this.trails[this.currentTrail];
 		textMeshProUGUI.transform.localScale = new Vector3(1.5f, 1.01f, 1f);
-		Vector2 vector = new Vector2(GlobalHelper.trailPosX * (float)Screen.width, (float)Screen.height - GlobalHelper.trailPosY * (float)Screen.height);
+		Vector2 vector = new Vector2(GlobalHelper.trailPosX * (float)Screen.width + this.sizePerChar * 0.5f, (float)Screen.height - GlobalHelper.trailPosY * (float)Screen.height);
 		switch (trail)
 		{
 		case 0:
@@ -885,8 +966,9 @@ public class FrameRate : MonoBehaviour
 			vector += new Vector2(this.sizePerChar * 1f, 0f);
 			break;
 		}
+		vector.x = (float)Math.Floor((double)vector.x);
 		textMeshProUGUI.transform.position = vector;
-		textMeshProUGUI.color = this.fretColors[trail];
+		textMeshProUGUI.color = this.fret_colors[trail];
 		this.heldScaleProgress[textMeshProUGUI] = 0f;
 		if (trail == 5 || trail == 6)
 		{
@@ -914,6 +996,21 @@ public class FrameRate : MonoBehaviour
 		};
 		this.trailsNeedInit = true;
 		this.rr = 1f / (float)GlobalHelper.inputViewerHz;
+		this.rfi = GlobalHelper.rfi_config;
+		if (this.rfi > 0)
+		{
+			Debug.Log(string.Format("rfi asdfg {0}", GlobalHelper.rfi_config));
+			this.targetSPF = 1f / (float)GlobalHelper.rfi_config;
+			Debug.Log(this.targetSPF);
+			this.targetFPS = true;
+			GlobalVariables.ignoreFrameReset = false;
+		}
+		else
+		{
+			GlobalVariables.ignoreFrameReset = true;
+			this.rfi = ((this.rfi != 0) ? (-this.rfi) : 1);
+			GlobalHelper.renderFrameInterval = this.rfi;
+		}
 		Debug.Log("fr callback");
 	}
 
@@ -923,12 +1020,15 @@ public class FrameRate : MonoBehaviour
 		for (int i = 0; i < this.trails.Length; i++)
 		{
 			this.trails[i] = this.textDisplay.Duplicate();
+			this.trails[i].gameObject.name = string.Format("trail_{0}", i);
 			this.trails[i].enableWordWrapping = false;
 			this.trails[i].text = "█";
 			this.trails[i].richText = true;
 			Texture mainTexture = this.trails[i].mainTexture;
 			this.trails[i].rectTransform.pivot = new Vector2(0.5f, 0.8185f);
 			this.trails[i].mainTexture.filterMode = FilterMode.Point;
+			this.trails[i].alignment = TextAlignmentOptions.Top;
+			this.trails[i].transform.localScale = new Vector3(1.5f, 1.01f, 1f);
 		}
 		this.fretColors = new Color[]
 		{
@@ -952,12 +1052,184 @@ public class FrameRate : MonoBehaviour
 
 	private void __onResolutionChange()
 	{
-		Vector2 vector = new Vector2(45f, 22.5f);
-		float num = Mathf.Min(1f, (float)Screen.width / (float)Screen.height / 1.7777778f);
-		this.releaseOffset = vector.y * ((float)Screen.height / 1080f);
-		this.sizePerChar = vector.x * 0.95f * num;
+		this.trails[0].fontSize = this.trails[0].fontSize;
+		float num = this.trails[0].fontSize * this.trails[0].transform.localScale.x;
+		Debug.Log(string.Format("width: {0} fs {1} ls {2}", num, this.trails[0].fontSize, this.trails[0].transform.localScale.x));
+		Vector2 vector = new Vector2(num, 22.5f);
+		float num2 = (float)Screen.width / 1080f;
+		this.releaseOffset = vector.y;
+		this.sizePerChar = num;
 		this.scaleSpeed = 1080f / vector.y * GlobalHelper.trailSpeed;
 		this.trailsNeedInit = false;
+	}
+
+	private Color[] fret_colors
+	{
+		get
+		{
+			if (this.bgp && this.bgp._spBar && this.bgp._spBar.gameColorSettings != null && GlobalHelper.rainbowEverything)
+			{
+				return new Color[]
+				{
+					this.bgp._spBar.gameColorSettings.guitarNoteGreen,
+					this.bgp._spBar.gameColorSettings.guitarNoteRed,
+					this.bgp._spBar.gameColorSettings.guitarNoteYellow,
+					this.bgp._spBar.gameColorSettings.guitarNoteBlue,
+					this.bgp._spBar.gameColorSettings.guitarNoteOrange,
+					this.bgp._spBar.gameColorSettings.guitarNoteOpen,
+					this.bgp._spBar.gameColorSettings.guitarNoteOpen
+				};
+			}
+			return this.fretColors;
+		}
+	}
+
+	private void UpdateJudgements()
+	{
+		float num = (float)GameManager.instance.songTime - GlobalVariables.lastBeat;
+		float num2 = 0.083333336f;
+		float num3 = 1f;
+		if (num >= 0f && num <= num2)
+		{
+			float num4 = num / num2;
+			num3 = 1.02f - 0.02f * num4;
+		}
+		float num5 = num3 * 18.5f - 18.5f;
+		if (this.judgementList)
+		{
+			this.judgementList.fontSize = this.fontSizeBackups[this.judgementList] + num5;
+			this.textBuilder2.Clear();
+			foreach (KeyValuePair<BasePlayer.Judgement, int> keyValuePair in this.bgp.precision.hits)
+			{
+				if (keyValuePair.Value > 0)
+				{
+					this.textBuilder2.Append(new ReadOnlySpan<char>(keyValuePair.Key.ToCharArray()));
+					this.textBuilder2.AppendFormat<int>("</color>: <color=#ffffff99>x</color>{0}\n", keyValuePair.Value);
+				}
+				else
+				{
+					this.textBuilder2.Append('\n');
+				}
+			}
+			this.textBuilder2.AsArraySegment().CopyTo(this.scratch, 0);
+			this.scratch[this.textBuilder2.Length] = '\0';
+			this.judgementList.SetCharArray(this.scratch);
+		}
+		if (GlobalHelper.showJudgementsUnderFretboard)
+		{
+			this.textBuilder2.Clear();
+			this.textBuilder2.Append(new ReadOnlySpan<char>(GlobalHelper.GetGrade(this.bgp.precision.Accuracy, false)));
+			if (GlobalHelper.showAvgInaccuracy)
+			{
+				this.textBuilder2.AppendFormat<float, float>("\n</i>{0:00.00}% - {1:00.00}ms\n", this.bgp.precision.Accuracy * 100f, this.bgp.precision.avgInaccuracy * 1000f);
+				this.textBuilder2.AppendFormat<float>("{0:00.00}", BasePlayer.lastOffset * 1000f);
+			}
+			else
+			{
+				this.textBuilder2.AppendFormat<float, float>("\n</i>{0:00.00}%\n{1:00.00}ms\n", this.bgp.precision.Accuracy * 100f, BasePlayer.lastOffset * 1000f);
+			}
+			switch (this.bgp.precision.m_lastJudgement)
+			{
+			case BasePlayer.Judgement.Marvelous:
+				this.textBuilder2.Append("ms\n<color=#33ffff>Flawless!");
+				break;
+			case BasePlayer.Judgement.Perfect:
+				this.textBuilder2.Append("ms\n<color=yellow>Perfect!");
+				break;
+			case BasePlayer.Judgement.Great:
+				this.textBuilder2.Append("ms\n<color=#ff33ff>Great!");
+				break;
+			case BasePlayer.Judgement.Good:
+				this.textBuilder2.Append("ms\n<color=#22ff22>Good");
+				break;
+			case BasePlayer.Judgement.Bad:
+				this.textBuilder2.Append("ms\n<color=orange>Bad");
+				break;
+			case BasePlayer.Judgement.Early:
+				this.textBuilder2.Append("ms\nEarly");
+				break;
+			default:
+				this.textBuilder2.Append("ms\n<color=#aaaaaaaa>Miss");
+				break;
+			}
+			this.textBuilder2.AsArraySegment().CopyTo(this.scratch, 0);
+			this.scratch[this.textBuilder2.Length] = '\0';
+			this.bgp.playerNameTextBox.SetCharArray(this.scratch);
+			this.bgp.playerNameTextBox.fontSize = this.fontSizeBackups[this.bgp.playerNameTextBox] + num5 * 0.25f;
+			this.textBuilder2.Clear();
+		}
+	}
+
+	private void UpdateDrag()
+	{
+		if (Input.GetKey(KeyCode.LeftControl) && Input.GetMouseButton(0))
+		{
+			float num = (float)Screen.width / 1920f * 0.06f;
+			float num2 = (float)Screen.height / 1080f * 0.06f;
+			TextMeshProUGUI textMeshProUGUI = null;
+			float num3 = (float)Screen.width / 20f;
+			foreach (TextMeshProUGUI textMeshProUGUI2 in this.draggableTMPS)
+			{
+				if (Vector3.Distance(textMeshProUGUI2.transform.position, new Vector3(Input.mousePosition.x, Input.mousePosition.y, textMeshProUGUI2.transform.position.z)) < num3)
+				{
+					textMeshProUGUI = textMeshProUGUI2;
+				}
+				if (textMeshProUGUI)
+				{
+					if (textMeshProUGUI.name == "NameText")
+					{
+						textMeshProUGUI.transform.position += new Vector3(Input.GetAxisRaw("Mouse X") * num, Input.GetAxisRaw("Mouse Y") * num2, 0f);
+					}
+					else
+					{
+						textMeshProUGUI.transform.position = Input.mousePosition;
+					}
+				}
+			}
+		}
+	}
+
+	private void UpdateNumbers(BaseGuitarPlayer.inputmap minputs)
+	{
+		this.lastg = minputs.gcount;
+		this.lastr = minputs.rcount;
+		this.lasty = minputs.ycount;
+		this.lastb = minputs.bcount;
+		this.lasto = minputs.ocount;
+		this.upperLeftTextBuilder.Append("<color=");
+		this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_greenFretColor));
+		this.upperLeftTextBuilder.AppendFormat<int, float>(">{1:0.000} - {0:00000}\n<color=", minputs.gcount, minputs.gptime);
+		this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_redFretColor));
+		this.upperLeftTextBuilder.AppendFormat<int, float>(">{1:0.000} - {0:00000}\n<color=", minputs.rcount, minputs.rptime);
+		this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_yellowFretColor));
+		this.upperLeftTextBuilder.AppendFormat<int, float>(">{1:0.000} - {0:00000}\n<color=", minputs.ycount, minputs.yptime);
+		this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_blueFretColor));
+		this.upperLeftTextBuilder.AppendFormat<int, float>(">{1:0.000} - {0:00000}\n<color=", minputs.bcount, minputs.bptime);
+		this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_orangeFretColor));
+		this.upperLeftTextBuilder.AppendFormat<int, float>(">{1:0.000} - {0:00000}\n<color=", minputs.ocount, minputs.optime);
+		this.upperLeftTextBuilder.Append(new ReadOnlySpan<char>(GlobalHelper.char_strumColor));
+		this.upperLeftTextBuilder.AppendFormat<float, float>(">{0:0.000} - {1:0.000}\n", minputs.sutime, minputs.sdtime);
+		this.upperLeftTextBuilder.AppendFormat<int, int>("{0:00000} - {1:00000}", minputs.sucount, minputs.sdcount);
+		if (Input.GetKey(KeyCode.LeftControl))
+		{
+			this.upperLeftTextBuilder.AppendFormat<Vector3>("\n{0} mouse pos", new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z));
+			foreach (TextMeshProUGUI textMeshProUGUI in this.draggableTMPS)
+			{
+				this.upperLeftTextBuilder.AppendFormat<Vector3, string>("\n{0} - {1}", textMeshProUGUI.transform.position, textMeshProUGUI.name);
+				this.upperLeftTextBuilder.AppendFormat<float>(" {0:N0}", Vector3.Distance(new Vector3(textMeshProUGUI.transform.position.x, textMeshProUGUI.transform.position.y, 0f), Input.mousePosition));
+			}
+		}
+	}
+
+	private void OnGUI()
+	{
+		if (Input.GetKey(KeyCode.LeftControl))
+		{
+			foreach (TextMeshProUGUI textMeshProUGUI in this.draggableTMPS)
+			{
+				GUI.Toggle(new Rect(textMeshProUGUI.transform.position.x, (float)Screen.height - textMeshProUGUI.transform.position.y, 128f, 128f), true, new GUIContent(textMeshProUGUI.name, "test"), GUIStyle.none);
+			}
+		}
 	}
 
 	public float const1;
@@ -984,7 +1256,7 @@ public class FrameRate : MonoBehaviour
 
 	private const string constwhite = "<color=white>";
 
-	private BaseGuitarPlayer instance;
+	private BaseGuitarPlayer bgp;
 
 	private int misses;
 
@@ -1052,7 +1324,7 @@ public class FrameRate : MonoBehaviour
 
 	private Utf16ValueStringBuilder upperLeftTextBuilder;
 
-	private Utf16ValueStringBuilder underHighwayTextBuilder;
+	private Utf16ValueStringBuilder textBuilder2;
 
 	private float ofs;
 
@@ -1177,4 +1449,37 @@ public class FrameRate : MonoBehaviour
 	private GameObject squareGO;
 
 	private Action _onResolutionChange;
+
+	private double last_fcmode;
+
+	private static bool saveFCMode;
+
+	private int pt_i;
+
+	private long pt_t;
+
+	private long st;
+
+	private TextMeshProUGUI judgementList;
+
+	private Utf16ValueStringBuilder sb3;
+
+	private char[] scratch;
+
+	private List<TextMeshProUGUI> draggableTMPS;
+
+	private bool setLock;
+
+	private Camera hudcam;
+
+	public static FrameRate fr;
+
+	private float lastBeat;
+
+	private char[] sizeformat;
+
+	[Comment("Indexed by digits to left of decimal (0, 1, 2, 3, 4)")]
+	private char[][] timeFormats;
+
+	private Dictionary<TextMeshProUGUI, float> fontSizeBackups;
 }

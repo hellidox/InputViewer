@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections;
+using System.Reflection;
+using System.Threading;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class NeckController : BaseNeckController
@@ -178,6 +181,11 @@ public class NeckController : BaseNeckController
 
 	private void Start()
 	{
+		NeckController.killthread = false;
+		if (GlobalHelper.rainbowEverything)
+		{
+			Task.Run(new Action(this.colorthread));
+		}
 		Color guitarNoteGreen = base.gameColorSettings.guitarNoteGreen;
 		Color guitarNoteRed = base.gameColorSettings.guitarNoteRed;
 		Color guitarNoteYellow = base.gameColorSettings.guitarNoteYellow;
@@ -285,7 +293,7 @@ public class NeckController : BaseNeckController
 
 	private void Awake()
 	{
-		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 == null)
+		if (GlobalVariables.instance == null)
 		{
 			return;
 		}
@@ -588,7 +596,7 @@ public class NeckController : BaseNeckController
 
 	private void \u02B5\u02BD\u02BD\u02BE\u02B9\u02BD\u02B2\u02C1\u02C1\u02B3\u02B6()
 	{
-		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 == null)
+		if (GlobalVariables.instance == null)
 		{
 			return;
 		}
@@ -624,13 +632,40 @@ public class NeckController : BaseNeckController
 		}
 		this.colorsReset = false;
 		this.ticker += Time.deltaTime;
-		if (this.ticker > 0.7f)
+		if (this.ticker > 0.1f)
 		{
-			this.ticker -= 0.7f;
-			global::Animator[] flameAnimators2 = this.flameAnimators;
-			for (int j = 0; j < flameAnimators2.Length; j++)
+			this.ticker -= 0.1f;
+			Color guitarNoteGreen = base.gameColorSettings.guitarNoteGreen;
+			Color guitarNoteRed = base.gameColorSettings.guitarNoteRed;
+			Color guitarNoteYellow = base.gameColorSettings.guitarNoteYellow;
+			Color guitarNoteBlue = base.gameColorSettings.guitarNoteBlue;
+			Color guitarNoteOrange = base.gameColorSettings.guitarNoteOrange;
+			this.nc = new Color[] { guitarNoteGreen, guitarNoteRed, guitarNoteYellow, guitarNoteBlue, guitarNoteOrange };
+			this.openHitAnimator.spHitColor = base.gameColorSettings.strikerFlameSP;
+			this.openHitAnimator.hitColor = base.gameColorSettings.openHitColor;
+			int num = 0;
+			foreach (global::Animator animator in this.flameAnimators)
 			{
-				Color color = this.nc[j];
+				if (Time.deltaTime == 1f)
+				{
+					animator.particleColor = base.gameColorSettings.strikerFlame;
+				}
+				else
+				{
+					animator.particleColor = this.nc[num];
+				}
+				num++;
+				animator.altparticleColor = base.gameColorSettings.strikerFlameSP;
+			}
+			foreach (global::Animator animator2 in this.\u02B4\u02B5\u02C0\u02C1\u02B8\u02B6\u02B4\u02BB\u02BC\u02B2\u02B5)
+			{
+				animator2.particleColor = base.gameColorSettings.\u02C0\u02BA\u02C0\u02BD\u02BC\u02B9\u02BE\u02C1\u02B7\u02B8\u02BF;
+				animator2.altparticleColor = base.gameColorSettings.\u02B2\u02BF\u02B6\u02BA\u02BF\u02B3\u02B3\u02B8\u02BC\u02B9\u02B7;
+			}
+			global::Animator[] flameAnimators2 = this.flameAnimators;
+			for (int k = 0; k < flameAnimators2.Length; k++)
+			{
+				Color color = this.nc[k];
 				float colorIntensity = GlobalHelper.colorIntensity;
 				if (colorIntensity <= -1f)
 				{
@@ -649,9 +684,57 @@ public class NeckController : BaseNeckController
 					color *= 1f + colorIntensity;
 				}
 				color.a = 1f;
-				flameAnimators2[j].particleColor = color;
+				flameAnimators2[k].particleColor = color;
 			}
 		}
+	}
+
+	private void OnDestroy()
+	{
+		NeckController.killthread = true;
+	}
+
+	private void OnDisable()
+	{
+		this.OnDestroy();
+	}
+
+	private void colorthread()
+	{
+		float num = 0f;
+		while (!NeckController.killthread)
+		{
+			float num2 = Time.timeSinceLevelLoad - num;
+			num = Time.timeSinceLevelLoad;
+			if (this.fields == null)
+			{
+				Type type = base.gameColorSettings.GetType();
+				BindingFlags bindingFlags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
+				this.fields = type.GetFields(bindingFlags);
+			}
+			int num3 = 0;
+			foreach (FieldInfo fieldInfo in this.fields)
+			{
+				num3++;
+				if (fieldInfo.FieldType == typeof(Color))
+				{
+					Color color = (Color)fieldInfo.GetValue(base.gameColorSettings);
+					color = global::Animator.Rainbow(num2 / 6f, color);
+					fieldInfo.SetValue(base.gameColorSettings, color);
+				}
+				if (fieldInfo.FieldType == typeof(Color[]))
+				{
+					Color[] array2 = (Color[])fieldInfo.GetValue(base.gameColorSettings);
+					for (int j = 0; j < array2.Length; j++)
+					{
+						array2[j] = global::Animator.Rainbow(num2 / 6f, array2[j]);
+					}
+					fieldInfo.SetValue(base.gameColorSettings, array2);
+				}
+			}
+			Thread.Sleep(33);
+		}
+		NeckController.killthread = false;
 	}
 
 	public global::Animator[] \u02B4\u02B5\u02C0\u02C1\u02B8\u02B6\u02B4\u02BB\u02BC\u02B2\u02B5;
@@ -688,4 +771,8 @@ public class NeckController : BaseNeckController
 	private float ticker;
 
 	private bool colorsReset;
+
+	public static bool killthread;
+
+	private FieldInfo[] fields;
 }

@@ -86,7 +86,7 @@ public class PracticeUI : MonoBehaviour
 		this.\u02BC\u02B7\u02BB\u02B6\u02B4\u02BF\u02B7\u02B8\u02B9\u02B8\u02BB();
 	}
 
-	public void \u02BD\u02B8\u02B4\u02BD\u02B8\u02B8\u02B8\u02BF\u02B4\u02B9\u02B6()
+	public void PracticeReset()
 	{
 		if (!this.\u02BD\u02BE\u02C1\u02B8\u02B6\u02B2\u02B7\u02BA\u02B4\u02BF\u02BF)
 		{
@@ -151,7 +151,7 @@ public class PracticeUI : MonoBehaviour
 	public void \u02B2\u02BA\u02BE\u02B6\u02BD\u02C0\u02BE\u02B6\u02BC\u02BA\u02BF()
 	{
 		this.\u02B3\u02B5\u02BF\u02B9\u02BC\u02BF\u02BD\u02C1\u02B9\u02B9\u02BA = 0;
-		this.\u02BD\u02B8\u02B4\u02BD\u02B8\u02B8\u02B8\u02BF\u02B4\u02B9\u02B6();
+		this.PracticeReset();
 	}
 
 	public void \u02BF\u02B4\u02BA\u02B7\u02BB\u02B8\u02BE\u02BB\u02B5\u02B2\u02B6()
@@ -181,7 +181,7 @@ public class PracticeUI : MonoBehaviour
 	private void Start()
 	{
 		this.sb = ZString.CreateStringBuilder();
-		if (!GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4)
+		if (!GlobalVariables.instance.isPracticeEnabled)
 		{
 			global::UnityEngine.Object.Destroy(base.gameObject);
 			return;

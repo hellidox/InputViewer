@@ -5,25 +5,26 @@ public class BeatPulse : MonoBehaviour
 {
 	private void Update()
 	{
-		if (this.gameManager.songTime < 0.0)
+		if (this.gameManager._songTime < 0.0)
 		{
 			return;
 		}
-		if (this.gameManager.songTime < (double)this.currentTime)
+		GlobalVariables.lastBeat = this.currentBeat;
+		if (this.gameManager._songTime < (double)this.currentTime)
 		{
 			return;
 		}
 		while (this.beatIndex + 1 < this.beats.times.Count)
 		{
-			if ((double)this.nextBeat > this.gameManager.songTime)
+			if ((double)this.nextBeat > this.gameManager._songTime)
 			{
 				this.nextBeat = this.currentBeat;
 				break;
 			}
 			this.UpdateBeats();
 		}
-		this.percent = (this.currentBeat - (float)this.gameManager.songTime) / this.beatToBeatDif;
-		this.currentTime = (float)this.gameManager.songTime;
+		this.percent = (this.currentBeat - (float)this.gameManager._songTime) / this.beatToBeatDif;
+		this.currentTime = (float)this.gameManager._songTime;
 	}
 
 	private void Start()
@@ -65,4 +66,6 @@ public class BeatPulse : MonoBehaviour
 	private float beatToBeatDif;
 
 	private float currentTime;
+
+	public static FrameRate fr;
 }

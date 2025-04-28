@@ -27,7 +27,7 @@ public class MenuMusic : MonoBehaviour
 					BassAudioManager.Instance.\u02BD\u02BB\u02B3\u02B3\u02B3\u02BA\u02B6\u02B6\u02C0\u02B9\u02B3(SettingsController.menu_volume.GetCurrentVolume);
 					if (BassAudioManager.Instance.\u02B9\u02BE\u02B9\u02B8\u02B2\u02B2\u02BE\u02BC\u02B5\u02B9\u02BC > 0.0)
 					{
-						BassAudioManager.Instance.\u02BD\u02B7\u02B2\u02BE\u02B7\u02BD\u02C1\u02BE\u02C1\u02B9\u02B7(true);
+						BassAudioManager.Instance.PlaySong(true);
 						BassAudioManager.Instance.\u02BD\u02BB\u02B3\u02B3\u02B3\u02BA\u02B6\u02B6\u02C0\u02B9\u02B3(SettingsController.menu_volume.GetCurrentVolume);
 						BassAudioManager.Instance.\u02B2\u02BC\u02BD\u02BF\u02B2\u02BE\u02BA\u02BA\u02B3\u02C1\u02B8(100);
 						BassAudioManager.Instance.\u02C1\u02B2\u02C1\u02BA\u02BA\u02C1\u02BA\u02B4\u02BD\u02C0\u02BE = songEntry;
@@ -137,10 +137,10 @@ public class MenuMusic : MonoBehaviour
 		{
 			if (\u02BE\u02BE\u02B5\u02C0\u02B7\u02B3\u02B5\u02B7\u02BF\u02B8\u02BA)
 			{
-				BassAudioManager.Instance.\u02BD\u02B7\u02B2\u02BE\u02B7\u02BD\u02C1\u02BE\u02C1\u02B9\u02B7(false);
+				BassAudioManager.Instance.PlaySong(false);
 				return;
 			}
-			BassAudioManager.Instance.\u02B7\u02BB\u02B6\u02C0\u02BE\u02B5\u02B8\u02C0\u02B3\u02C0\u02BD();
+			BassAudioManager.Instance.PauseSong();
 		}
 	}
 
@@ -153,7 +153,7 @@ public class MenuMusic : MonoBehaviour
 				BassAudioManager.Instance.\u02BB\u02BC\u02BF\u02B8\u02BC\u02B6\u02BC\u02B3\u02B9\u02BC\u02B6(false);
 				return;
 			}
-			BassAudioManager.Instance.\u02B7\u02BB\u02B6\u02C0\u02BE\u02B5\u02B8\u02C0\u02B3\u02C0\u02BD();
+			BassAudioManager.Instance.PauseSong();
 		}
 	}
 
@@ -203,7 +203,7 @@ public class MenuMusic : MonoBehaviour
 				BassAudioManager.Instance.\u02BB\u02BC\u02BF\u02B8\u02BC\u02B6\u02BC\u02B3\u02B9\u02BC\u02B6(true);
 				return;
 			}
-			BassAudioManager.Instance.\u02B7\u02BB\u02B6\u02C0\u02BE\u02B5\u02B8\u02C0\u02B3\u02C0\u02BD();
+			BassAudioManager.Instance.PauseSong();
 		}
 	}
 
@@ -226,10 +226,10 @@ public class MenuMusic : MonoBehaviour
 		{
 			if (\u02BE\u02BE\u02B5\u02C0\u02B7\u02B3\u02B5\u02B7\u02BF\u02B8\u02BA)
 			{
-				BassAudioManager.Instance.\u02BD\u02B7\u02B2\u02BE\u02B7\u02BD\u02C1\u02BE\u02C1\u02B9\u02B7(true);
+				BassAudioManager.Instance.PlaySong(true);
 				return;
 			}
-			BassAudioManager.Instance.\u02B7\u02BB\u02B6\u02C0\u02BE\u02B5\u02B8\u02C0\u02B3\u02C0\u02BD();
+			BassAudioManager.Instance.PauseSong();
 		}
 	}
 

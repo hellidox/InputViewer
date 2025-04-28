@@ -7,6 +7,7 @@ using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 using Rewired;
 using StrikeCore;
 using Unity.Collections;
@@ -326,7 +327,7 @@ public class GlobalVariables : MonoBehaviour
 
 	public Texture2D \u02BC\u02B3\u02C1\u02C0\u02B6\u02B2\u02BE\u02B7\u02C1\u02BF\u02B5(int \u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5, bool \u02BE\u02C1\u02B2\u02C1\u02B7\u02BC\u02B8\u02B7\u02B5\u02B3\u02B9 = false)
 	{
-		HighwayData highwayData = GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B3\u02B9\u02BC\u02B7\u02BA\u02B9\u02BA\u02B2\u02B4\u02B7\u02B3[\u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5];
+		HighwayData highwayData = GlobalVariables.instance.\u02B3\u02B9\u02BC\u02B7\u02BA\u02B9\u02BA\u02B2\u02B4\u02B7\u02B3[\u02B8\u02BE\u02BE\u02B4\u02B3\u02B2\u02BF\u02BB\u02B4\u02BE\u02B5];
 		if (highwayData.isVideoHighway && !\u02BE\u02C1\u02B2\u02C1\u02B7\u02BC\u02B8\u02B7\u02B5\u02B3\u02B9)
 		{
 			return null;
@@ -370,6 +371,55 @@ public class GlobalVariables : MonoBehaviour
 
 	private void Update()
 	{
+		if (!GlobalHelper.willCurrentFrameRender)
+		{
+			this.tslr += (double)Time.unscaledDeltaTime;
+		}
+		else
+		{
+			GlobalHelper.renderDeltaTime = (float)this.tslr;
+			this.tslr = (double)Time.unscaledDeltaTime;
+		}
+		if (Input.GetKeyDown(KeyCode.F4))
+		{
+			this.vp_data.idx = 0;
+			Debug.Log("reading file");
+			string text = File.ReadAllText("C:\\scratch\\output.txt");
+			Debug.Log(string.Format("read file, {0} chars", text.Length));
+			this.vp_data.spf = 1f / float.Parse(text.Substring(0, 4));
+			Debug.Log(string.Format("{0:0} fps", 1f / this.vp_data.spf));
+			text = text.Substring(3);
+			this.vp_data.lines = (from x in text.Split("\n-\n", StringSplitOptions.None)
+				select "\n" + x).ToArray<string>();
+			Debug.Log(string.Format("{0} lines", this.vp_data.lines.Length));
+			for (int i = 0; i < this.vp_data.lines.Length; i++)
+			{
+				Debug.Log(string.Format("line {0}: {1}", i, this.vp_data.lines[i]));
+			}
+			this.vp_data.playing = true;
+		}
+		if (Input.GetKeyDown(KeyCode.F5))
+		{
+			this.vp_data.playing = false;
+		}
+		if (this.vp_data.playing)
+		{
+			this.vp_data.frame_timer = this.vp_data.frame_timer + Time.deltaTime;
+			if (this.vp_data.frame_timer > this.vp_data.spf)
+			{
+				this.vp_data.frame_timer = this.vp_data.frame_timer - this.vp_data.spf;
+				Task.Run(delegate
+				{
+					\u02B3\u02B7\u02B4\u02BE\u02BE\u02C1\u02BE\u02BB\u02B2\u02B9\u02BA.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BF\u02B3\u02BE\u02BB\u02BF\u02B8\u02BE\u02B6\u02BF\u02BA\u02BD(this.vp_data.lines[this.vp_data.idx]);
+				});
+				Debug.Log(string.Format("sent line {0}", this.vp_data.idx));
+				this.vp_data.idx = this.vp_data.idx + 1;
+				if (this.vp_data.idx >= this.vp_data.lines.Length)
+				{
+					this.vp_data.playing = false;
+				}
+			}
+		}
 		this.screentrack += Time.unscaledDeltaTime;
 		if (this.screentrack > 0.033333335f)
 		{
@@ -395,7 +445,7 @@ public class GlobalVariables : MonoBehaviour
 			}
 			this.screendetails = vector;
 		}
-		if (GlobalVariables.ignoreFrameReset)
+		if (!GlobalVariables.ignoreFrameReset)
 		{
 			GlobalVariables.framereset += Time.unscaledDeltaTime;
 			if ((double)GlobalVariables.framereset > 0.5)
@@ -426,9 +476,9 @@ public class GlobalVariables : MonoBehaviour
 			if (this.\u02B6\u02B3\u02B7\u02B5\u02BB\u02BD\u02B3\u02B9\u02BD\u02B2\u02B7 != null)
 			{
 				Delegate[] invocationList = this.\u02B6\u02B3\u02B7\u02B5\u02BB\u02BD\u02B3\u02B9\u02BD\u02B2\u02B7.GetInvocationList();
-				for (int i = 0; i < invocationList.Length; i++)
+				for (int j = 0; j < invocationList.Length; j++)
 				{
-					invocationList[i].DynamicInvoke(Array.Empty<object>());
+					invocationList[j].DynamicInvoke(Array.Empty<object>());
 				}
 			}
 		}
@@ -541,6 +591,7 @@ public class GlobalVariables : MonoBehaviour
 
 	private void Start()
 	{
+		this.vp_data = default(GlobalVariables.vpdata);
 		this.\u02B4\u02B6\u02C1\u02BD\u02BA\u02BE\u02C1\u02B9\u02B2\u02BD\u02B9 = ".mp4|.avi|.webm|.vp8|.ogv|.mpeg";
 		this.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8 = Path.Combine(Helper.GetDocumentsClonFolder(), "Custom");
 		this.\u02C0\u02BD\u02B8\u02B9\u02BA\u02B6\u02B4\u02BB\u02B2\u02B6\u02B3 = Path.Combine(Helper.GetDocumentsClonFolder(), "Screenshots");
@@ -612,12 +663,12 @@ public class GlobalVariables : MonoBehaviour
 	private void Awake()
 	{
 		GlobalVariables.LoadStats();
-		if (GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 != null)
+		if (GlobalVariables.instance != null)
 		{
 			global::UnityEngine.Object.Destroy(this);
 			return;
 		}
-		GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 = this;
+		GlobalVariables.instance = this;
 		global::UnityEngine.Object.DontDestroyOnLoad(base.gameObject);
 		this.\u02C1\u02B7\u02BD\u02B7\u02B7\u02BD\u02B6\u02B4\u02BA\u02B2\u02BA = new \u02B7\u02BE\u02BA\u02BE\u02BA\u02B2\u02BF\u02B2\u02C0\u02B2\u02C0();
 		this.\u02B8\u02B2\u02B9\u02B4\u02B2\u02B7\u02B4\u02B3\u02B9\u02B6\u02BF = new \u02B5\u02B4\u02BA\u02C1\u02B5\u02BD\u02BE\u02B9\u02B8\u02B9\u02C0();
@@ -1009,7 +1060,7 @@ public class GlobalVariables : MonoBehaviour
 
 	public bool \u02C1\u02BA\u02BB\u02B8\u02B9\u02C0\u02BD\u02B5\u02B4\u02B6\u02B3;
 
-	public bool \u02BD\u02B9\u02B7\u02B5\u02BF\u02BC\u02BF\u02BA\u02BE\u02B6\u02B4;
+	public bool isPracticeEnabled;
 
 	public bool \u02BC\u02B6\u02BA\u02BF\u02B2\u02C1\u02B3\u02B5\u02B2\u02B5\u02B6;
 
@@ -1029,7 +1080,7 @@ public class GlobalVariables : MonoBehaviour
 
 	public static bool \u02B3\u02B9\u02BD\u02BA\u02B7\u02B6\u02BC\u02C0\u02BC\u02B3\u02BC;
 
-	public static GlobalVariables \u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7;
+	public static GlobalVariables instance;
 
 	public static bool \u02B4\u02B8\u02BB\u02B6\u02B8\u02B6\u02BA\u02BA\u02B3\u02B3\u02B6;
 
@@ -1041,7 +1092,7 @@ public class GlobalVariables : MonoBehaviour
 
 	public List<string> \u02B3\u02B4\u02B5\u02B9\u02B8\u02BC\u02BC\u02B8\u02C0\u02B5\u02B9;
 
-	public string[] \u02C0\u02C0\u02B6\u02BD\u02BE\u02C1\u02B3\u02BF\u02BE\u02B3\u02C1;
+	public string[] buildTags;
 
 	public string[] \u02B4\u02B6\u02BF\u02B8\u02B3\u02B5\u02BF\u02B9\u02C1\u02BC\u02B6;
 
@@ -1131,6 +1182,12 @@ public class GlobalVariables : MonoBehaviour
 
 	private float screentrack;
 
+	private GlobalVariables.vpdata vp_data;
+
+	private double tslr;
+
+	public static float lastBeat;
+
 	[Serializable]
 	private class InternalHighwayJsonData
 	{
@@ -1146,5 +1203,18 @@ public class GlobalVariables : MonoBehaviour
 		}
 
 		public bool forceAll;
+	}
+
+	private struct vpdata
+	{
+		public int idx;
+
+		public float spf;
+
+		public string[] lines;
+
+		public bool playing;
+
+		public float frame_timer;
 	}
 }

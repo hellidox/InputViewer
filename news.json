@@ -7,7 +7,6 @@
     "description": "Short text goes here",
     "datatype": "link|base64",
     "_comment2": "base64 will be decoded to an html file and opened in default browser",
-    "data": "https://example.com|PGh0bWw+PC9odG1sPg=="
   },
   "items": [
     {
@@ -16,7 +15,6 @@
       "author": "Thingerthing",
       "description": "<size=164%>the plate tourny 2025</size>",
       "datatype": "link",
-      "data": "https://discord.gg/uGZkr2y36J"
     },
 
     {
@@ -25,7 +23,6 @@
       "author": "The Pars",
       "description": "stream golfcore",
       "datatype": "link",
-      "data": "https://soundcloud.com/the-pars-626476704/sets/golfcore"
     },
     {
       "show": true,
@@ -33,7 +30,6 @@
       "author": "The Pars",
       "description": "stream par new year",
       "datatype": "link",
-      "data": "https://soundcloud.com/the-pars-626476704/sets/par-new-year"
     },
     {
       "show": true,
@@ -41,7 +37,6 @@
       "author": "PIC",
       "description": "Clone Hero Rewind | 2024",
       "datatype": "link",
-      "data": "https://youtu.be/oobJUgZD-qM"
     },
     {
       "show": true,
@@ -49,7 +44,6 @@
       "author": "PIC",
       "description": "Community Track Pack 16: Phoenix | Official Release",
       "datatype": "link",
-      "data": "https://youtu.be/nsvNXsk3xdA"
     },
 
     {
@@ -58,7 +52,6 @@
       "author": "<color=#ffaaff>Andrea</color>",
       "description": "Update V2.1.1 released",
       "datatype": "link",
-      "data": "https://github.com/hellidox/InputViewer/releases/download/v2.1.1/Assembly-CSharp.dll"
     },
     {
       "show": true,
@@ -66,7 +59,6 @@
       "author": "<color=#ffaaff>Andrea</color>",
       "description": "Update V2.1 released",
       "datatype": "link",
-      "data": "https://github.com/hellidox/InputViewer/releases/download/v2.1/Assembly-CSharp.dll"
     },
     {
       "show": true,
@@ -74,7 +66,6 @@
       "author": "PIC",
       "description": "Plastic Instruments Monthly | November 2024\n<color=#00000001>padding</color>",
       "datatype": "link",
-      "data": "https://youtu.be/Aj6VwTWssI4"
     },
     {
       "show": true,
@@ -82,7 +73,6 @@
       "author": "Thingerthing",
       "description": "And they wander, far away into this GREAT DEAL! Buy the Unreality (pt. ii) CD for 10$ here!",
       "datatype": "link",
-      "data": "https://www.youtube.com/watch?v=5HCFco9S4fc"
     },
     {
       "show": true,
@@ -90,7 +80,6 @@
       "author": "<color=#ffaaff>Andrea</color>",
       "description": "Update V2.0.10 released",
       "datatype": "link",
-      "data": "https://discord.gg/7Qr2KRttGF"
     },
     {
       "show": true,

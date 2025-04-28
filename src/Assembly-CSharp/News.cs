@@ -99,7 +99,7 @@ public class News : MonoBehaviour
 			global::UnityEngine.Object.Destroy(this.newsItemContainers[i]);
 		}
 		this.newsItemContainers.Clear();
-		using (UnityWebRequest unityWebRequest = UnityWebRequest.Get("https://raw.githubusercontent.com/hellidox/InputViewer/refs/heads/main/news.json"))
+		using (UnityWebRequest unityWebRequest = UnityWebRequest.Get(string.Format("https://raw.githubusercontent.com/hellidox/InputViewer/refs/heads/main/news.json?cache-break-{0:0.00000000}", global::UnityEngine.Random.value)))
 		{
 			unityWebRequest.timeout = 10;
 			unityWebRequest.SetRequestHeader("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:129.0) Gecko/20100101 Firefox/129.0");
@@ -227,6 +227,37 @@ public class News : MonoBehaviour
 		this.contentContainer.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, Mathf.Abs(num));
 		this.contentContainer.gameObject.AddComponent<UnrollChildMenuitems>();
 		this.\u02B9\u02BE\u02B5\u02B9\u02C1\u02BB\u02B6\u02BD\u02BC\u02C1\u02B5 = true;
+	}
+
+	public void _ConnectToNews()
+	{
+		for (int i = 1; i < this.newsItemContainers.Count; i++)
+		{
+			global::UnityEngine.Object.Destroy(this.newsItemContainers[i]);
+		}
+		this.newsItemContainers.Clear();
+		using (UnityWebRequest unityWebRequest = UnityWebRequest.Get(string.Format("https://raw.githubusercontent.com/hellidox/InputViewer/refs/heads/main/news.json?cache-break-{0:0.00000000}", global::UnityEngine.Random.value)))
+		{
+			unityWebRequest.timeout = 10;
+			unityWebRequest.SetRequestHeader("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:129.0) Gecko/20100101 Firefox/129.0");
+			unityWebRequest.SendWebRequest();
+			while (!unityWebRequest.isDone)
+			{
+				Thread.Sleep(50);
+			}
+			if (unityWebRequest.isNetworkError || unityWebRequest.isHttpError)
+			{
+				Debug.Log(unityWebRequest.error);
+			}
+			else
+			{
+				string @string = Encoding.UTF8.GetString(unityWebRequest.downloadHandler.data, 3, unityWebRequest.downloadHandler.data.Length - 3);
+				Debug.Log(@string);
+				this.custom_newsCollection = new ANewsCollection();
+				this.custom_newsCollection = JsonUtility.FromJson<ANewsCollection>(@string);
+				this.CreateNewsFromCustomCollection(this.custom_newsCollection);
+			}
+		}
 	}
 
 	private NewsCollection newsCollection;

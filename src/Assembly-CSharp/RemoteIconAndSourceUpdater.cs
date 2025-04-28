@@ -26,13 +26,13 @@ public class RemoteIconAndSourceUpdater : MonoBehaviour
 			this.progressBody.text = LanguageManager.instance.GetString("Please Wait.");
 			this.progressTitle.text = LanguageManager.instance.GetString("UPDATING ICONS...");
 			yield return this.\u02B5\u02BF\u02C0\u02BE\u02BE\u02BD\u02B9\u02B7\u02BA\u02BC\u02B3();
-			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02B4\u02BB\u02C0\u02B5\u02B6\u02B6\u02B9\u02B9\u02B3\u02C0(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8);
+			GlobalVariables.instance.\u02B7\u02B4\u02BB\u02C0\u02B5\u02B6\u02B6\u02B9\u02B9\u02B3\u02C0(GlobalVariables.instance.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8);
 			this.progressTitle.text = LanguageManager.instance.GetString("UPDATING SERVER LIST...");
 			yield return RemoteIconAndSourceUpdater.\u02B3\u02BF\u02BE\u02B5\u02B6\u02B2\u02B4\u02BC\u02BC\u02C1\u02B8(new RemoteIconAndSourceUpdater.\u02B3\u02B6\u02B4\u02B3\u02B6\u02B9\u02BB\u02B4\u02B2\u02B4\u02BE(RemoteIconAndSourceUpdater.<>c.<>9.\u02BB\u02C1\u02C1\u02C0\u02B2\u02BE\u02C0\u02B2\u02BE\u02B2\u02BE));
 			this.progressTitle.text = LanguageManager.instance.GetString("UPDATING SOURCES...");
 			yield return RemoteIconAndSourceUpdater.\u02C1\u02C0\u02B8\u02B4\u02BE\u02B2\u02BD\u02B9\u02B7\u02B7\u02B2(Application.persistentDataPath);
 		}
-		GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3 = true;
+		GlobalVariables.instance.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3 = true;
 		this.\u02B2\u02BA\u02BB\u02BC\u02BF\u02BD\u02B5\u02C0\u02B5\u02C0\u02B6.SetActive(false);
 		yield break;
 	}
@@ -53,13 +53,13 @@ public class RemoteIconAndSourceUpdater : MonoBehaviour
 			this.progressBody.text = LanguageManager.instance.GetString("Please Wait.");
 			this.progressTitle.text = LanguageManager.instance.GetString("UPDATING ICONS...");
 			yield return this.\u02B5\u02BF\u02C0\u02BE\u02BE\u02BD\u02B9\u02B7\u02BA\u02BC\u02B3();
-			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02B4\u02BB\u02C0\u02B5\u02B6\u02B6\u02B9\u02B9\u02B3\u02C0(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8);
+			GlobalVariables.instance.\u02B7\u02B4\u02BB\u02C0\u02B5\u02B6\u02B6\u02B9\u02B9\u02B3\u02C0(GlobalVariables.instance.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8);
 			this.progressTitle.text = LanguageManager.instance.GetString("UPDATING SERVER LIST...");
 			yield return RemoteIconAndSourceUpdater.\u02B3\u02BF\u02BE\u02B5\u02B6\u02B2\u02B4\u02BC\u02BC\u02C1\u02B8(new RemoteIconAndSourceUpdater.\u02B3\u02B6\u02B4\u02B3\u02B6\u02B9\u02BB\u02B4\u02B2\u02B4\u02BE(RemoteIconAndSourceUpdater.<>c.<>9.\u02BB\u02C1\u02C1\u02C0\u02B2\u02BE\u02C0\u02B2\u02BE\u02B2\u02BE));
 			this.progressTitle.text = LanguageManager.instance.GetString("UPDATING SOURCES...");
 			yield return RemoteIconAndSourceUpdater.\u02C1\u02C0\u02B8\u02B4\u02BE\u02B2\u02BD\u02B9\u02B7\u02B7\u02B2(Application.persistentDataPath);
 		}
-		GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3 = true;
+		GlobalVariables.instance.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3 = true;
 		this.\u02B2\u02BA\u02BB\u02BC\u02BF\u02BD\u02B5\u02C0\u02B5\u02C0\u02B6.SetActive(false);
 		yield break;
 	}
@@ -206,13 +206,13 @@ public class RemoteIconAndSourceUpdater : MonoBehaviour
 			this.progressBody.text = LanguageManager.instance.GetString("Please Wait.");
 			this.progressTitle.text = LanguageManager.instance.GetString("UPDATING ICONS...");
 			yield return this.\u02B5\u02BF\u02C0\u02BE\u02BE\u02BD\u02B9\u02B7\u02BA\u02BC\u02B3();
-			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B7\u02B4\u02BB\u02C0\u02B5\u02B6\u02B6\u02B9\u02B9\u02B3\u02C0(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8);
+			GlobalVariables.instance.\u02B7\u02B4\u02BB\u02C0\u02B5\u02B6\u02B6\u02B9\u02B9\u02B3\u02C0(GlobalVariables.instance.\u02B5\u02B3\u02B5\u02B7\u02BD\u02B6\u02B5\u02BB\u02BF\u02B3\u02B8);
 			this.progressTitle.text = LanguageManager.instance.GetString("UPDATING SERVER LIST...");
 			yield return RemoteIconAndSourceUpdater.\u02B3\u02BF\u02BE\u02B5\u02B6\u02B2\u02B4\u02BC\u02BC\u02C1\u02B8(new RemoteIconAndSourceUpdater.\u02B3\u02B6\u02B4\u02B3\u02B6\u02B9\u02BB\u02B4\u02B2\u02B4\u02BE(RemoteIconAndSourceUpdater.<>c.<>9.\u02BB\u02C1\u02C1\u02C0\u02B2\u02BE\u02C0\u02B2\u02BE\u02B2\u02BE));
 			this.progressTitle.text = LanguageManager.instance.GetString("UPDATING SOURCES...");
 			yield return RemoteIconAndSourceUpdater.\u02C1\u02C0\u02B8\u02B4\u02BE\u02B2\u02BD\u02B9\u02B7\u02B7\u02B2(Application.persistentDataPath);
 		}
-		GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3 = true;
+		GlobalVariables.instance.\u02BE\u02B7\u02BB\u02B8\u02B6\u02B8\u02BA\u02B9\u02BF\u02B8\u02B3 = true;
 		this.\u02B2\u02BA\u02BB\u02BC\u02BF\u02BD\u02B5\u02C0\u02B5\u02C0\u02B6.SetActive(false);
 		yield break;
 	}

@@ -36,7 +36,7 @@ public class SongEntry
 	{
 		try
 		{
-			GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02B2\u02B9\u02B4\u02B2\u02B7\u02B4\u02B3\u02B9\u02B6\u02BF.\u02B3\u02B7\u02B5\u02BE\u02B4\u02BA\u02BB\u02B6\u02B3\u02BF\u02B6();
+			GlobalVariables.instance.\u02B8\u02B2\u02B9\u02B4\u02B2\u02B7\u02B4\u02B3\u02B9\u02B6\u02BF.\u02B3\u02B7\u02B5\u02BE\u02B4\u02BA\u02BB\u02B6\u02B3\u02BF\u02B6();
 			this.isTypeCached = false;
 			using (Stream stream = File.Open(\u02B8\u02BA\u02BB\u02B4\u02B5\u02B4\u02B6\u02B6\u02C0\u02B9\u02BF, FileMode.Open))
 			{
@@ -79,7 +79,7 @@ public class SongEntry
 								}
 								else if (text2 == "offset")
 								{
-									GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02B2\u02B9\u02B4\u02B2\u02B7\u02B4\u02B3\u02B9\u02B6\u02BF.\u02BB\u02B4\u02B2\u02B3\u02B4\u02BD\u02B9\u02B8\u02B5\u02B8\u02BC = (int)Math.Ceiling((double)(float.Parse(text) * 1000f));
+									GlobalVariables.instance.\u02B8\u02B2\u02B9\u02B4\u02B2\u02B7\u02B4\u02B3\u02B9\u02B6\u02BF.\u02BB\u02B4\u02B2\u02B3\u02B4\u02BD\u02B9\u02B8\u02B5\u02B8\u02BC = (int)Math.Ceiling((double)(float.Parse(text) * 1000f));
 								}
 							}
 							else if (num <= 1986820544U)
@@ -392,7 +392,7 @@ public class SongEntry
 		iniparser.WriteValue("song", "charter", this.Charter.\u02C1\u02B4\u02BF\u02C1\u02BE\u02B9\u02B6\u02B7\u02B5\u02B7\u02B5);
 		iniparser.WriteValue("song", "modchart", this.modchart);
 		iniparser.WriteValue("song", "song_length", (this.songLength > 0) ? this.songLength : ((int)(BassAudioManager.Instance.\u02B2\u02BF\u02B2\u02B9\u02B4\u02BC\u02BB\u02B4\u02B2\u02C1\u02BD * 1000.0)));
-		iniparser.WriteValue("song", "end_events", GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02B2\u02B9\u02B4\u02B2\u02B7\u02B4\u02B3\u02B9\u02B6\u02BF.\u02BC\u02B4\u02BA\u02B8\u02B9\u02B4\u02BD\u02BE\u02C0\u02C0\u02BA);
+		iniparser.WriteValue("song", "end_events", GlobalVariables.instance.\u02B8\u02B2\u02B9\u02B4\u02B2\u02B7\u02B4\u02B3\u02B9\u02B6\u02BF.\u02BC\u02B4\u02BA\u02B8\u02B9\u02B4\u02BD\u02BE\u02C0\u02C0\u02BA);
 		if (iniparser.IsKeyExists("song", "diff_coop"))
 		{
 			int num = iniparser.ReadValue("song", "diff_coop", -2);
@@ -422,8 +422,8 @@ public class SongEntry
 		}
 		if (\u02B4\u02BF\u02BB\u02C1\u02BA\u02BC\u02BD\u02BE\u02BA\u02B8\u02BA)
 		{
-			iniparser.WriteValue("song", "delay", GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02B2\u02B9\u02B4\u02B2\u02B7\u02B4\u02B3\u02B9\u02B6\u02BF.\u02BB\u02B4\u02B2\u02B3\u02B4\u02BD\u02B9\u02B8\u02B5\u02B8\u02BC);
-			iniparser.WriteValue("song", "video_start_time", GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02B2\u02B9\u02B4\u02B2\u02B7\u02B4\u02B3\u02B9\u02B6\u02BF.\u02B4\u02B5\u02BF\u02B2\u02B9\u02B8\u02C1\u02B7\u02BF\u02B3\u02B7);
+			iniparser.WriteValue("song", "delay", GlobalVariables.instance.\u02B8\u02B2\u02B9\u02B4\u02B2\u02B7\u02B4\u02B3\u02B9\u02B6\u02BF.\u02BB\u02B4\u02B2\u02B3\u02B4\u02BD\u02B9\u02B8\u02B5\u02B8\u02BC);
+			iniparser.WriteValue("song", "video_start_time", GlobalVariables.instance.\u02B8\u02B2\u02B9\u02B4\u02B2\u02B7\u02B4\u02B3\u02B9\u02B6\u02BF.\u02B4\u02B5\u02BF\u02B2\u02B9\u02B8\u02C1\u02B7\u02BF\u02B3\u02B7);
 		}
 		try
 		{
@@ -537,8 +537,8 @@ public class SongEntry
 			}
 			if (!songHash.Equals(this.checksum))
 			{
-				GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B6\u02B5\u02BE\u02C1\u02B9\u02B2\u02B4\u02B7\u02BA\u02C1\u02BA = true;
-				Debug.Log(GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1.Name.\u02C1\u02B4\u02BF\u02C1\u02BE\u02B9\u02B6\u02B7\u02B5\u02B7\u02B5 + " needs to be rescanned!");
+				GlobalVariables.instance.\u02B6\u02B5\u02BE\u02C1\u02B9\u02B2\u02B4\u02B7\u02BA\u02C1\u02BA = true;
+				Debug.Log(GlobalVariables.instance.\u02BA\u02B9\u02BD\u02BA\u02B4\u02B4\u02BF\u02BD\u02B8\u02B3\u02C1.Name.\u02C1\u02B4\u02BF\u02C1\u02BE\u02B9\u02B6\u02B7\u02B5\u02B7\u02B5 + " needs to be rescanned!");
 			}
 			goto IL_0092;
 		}
@@ -850,7 +850,7 @@ public class SongEntry
 			SongEntry.metadataCache[6] = "Clone Hero";
 			return;
 		}
-		foreach (string text in GlobalVariables.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B3\u02B4\u02B5\u02B9\u02B8\u02BC\u02BC\u02B8\u02C0\u02B5\u02B9)
+		foreach (string text in GlobalVariables.instance.\u02B3\u02B4\u02B5\u02B9\u02B8\u02BC\u02BC\u02B8\u02C0\u02B5\u02B9)
 		{
 			if (this.folderPath.StartsWith(text))
 			{
