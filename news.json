@@ -6,7 +6,7 @@
     "author": "name",
     "description": "Short text goes here",
     "datatype": "link|base64",
-    "_comment2": "base64 will be decoded to an html file and opened in default browser",
+    "_comment2": "base64 will be decoded to an html file and opened in default browser"
   },
   "items": [
     {
