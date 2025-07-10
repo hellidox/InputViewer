@@ -24,17 +24,17 @@ public class VersusHUD : MonoBehaviour
 	private IEnumerator \u02B2\u02BB\u02B6\u02B5\u02B9\u02B8\u02B2\u02B3\u02BF\u02C1\u02BF()
 	{
 		GameManager manager = GameObject.Find("Game Manager").GetComponent<GameManager>();
-		while (manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD == null || manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD.Length == 0)
+		while (manager.playerObjects == null || manager.playerObjects.Length == 0)
 		{
 			yield return null;
 		}
 		this.\u02B8\u02B9\u02B6\u02B7\u02C0\u02B2\u02B9\u02BF\u02C1\u02B5\u02BF = new BasePlayer[2];
 		int num = 0;
-		for (int i = 0; i < manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD.Length; i++)
+		for (int i = 0; i < manager.playerObjects.Length; i++)
 		{
-			if (manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[i] != null)
+			if (manager.playerObjects[i] != null)
 			{
-				this.\u02B8\u02B9\u02B6\u02B7\u02C0\u02B2\u02B9\u02BF\u02C1\u02B5\u02BF[num++] = manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[i];
+				this.\u02B8\u02B9\u02B6\u02B7\u02C0\u02B2\u02B9\u02BF\u02C1\u02B5\u02BF[num++] = manager.playerObjects[i];
 			}
 		}
 		yield break;
@@ -43,17 +43,17 @@ public class VersusHUD : MonoBehaviour
 	private IEnumerator \u02B8\u02B4\u02B9\u02B6\u02BA\u02C0\u02B8\u02C0\u02C0\u02B2\u02B4()
 	{
 		manager = GameObject.Find("Game Manager").GetComponent<GameManager>();
-		while (manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD == null || manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD.Length == 0)
+		while (manager.playerObjects == null || manager.playerObjects.Length == 0)
 		{
 			yield return null;
 		}
 		this.\u02B8\u02B9\u02B6\u02B7\u02C0\u02B2\u02B9\u02BF\u02C1\u02B5\u02BF = new BasePlayer[2];
 		int num = 0;
-		for (int i = 0; i < manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD.Length; i++)
+		for (int i = 0; i < manager.playerObjects.Length; i++)
 		{
-			if (manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[i] != null)
+			if (manager.playerObjects[i] != null)
 			{
-				this.\u02B8\u02B9\u02B6\u02B7\u02C0\u02B2\u02B9\u02BF\u02C1\u02B5\u02BF[num++] = manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[i];
+				this.\u02B8\u02B9\u02B6\u02B7\u02C0\u02B2\u02B9\u02BF\u02C1\u02B5\u02BF[num++] = manager.playerObjects[i];
 			}
 		}
 		yield break;
@@ -62,17 +62,17 @@ public class VersusHUD : MonoBehaviour
 	private IEnumerator \u02B2\u02BB\u02B6\u02B4\u02BE\u02B8\u02B9\u02B2\u02B3\u02B6\u02C1()
 	{
 		manager = GameObject.Find("Game Manager").GetComponent<GameManager>();
-		while (manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD == null || manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD.Length == 0)
+		while (manager.playerObjects == null || manager.playerObjects.Length == 0)
 		{
 			yield return null;
 		}
 		this.\u02B8\u02B9\u02B6\u02B7\u02C0\u02B2\u02B9\u02BF\u02C1\u02B5\u02BF = new BasePlayer[2];
 		int num = 0;
-		for (int i = 0; i < manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD.Length; i++)
+		for (int i = 0; i < manager.playerObjects.Length; i++)
 		{
-			if (manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[i] != null)
+			if (manager.playerObjects[i] != null)
 			{
-				this.\u02B8\u02B9\u02B6\u02B7\u02C0\u02B2\u02B9\u02BF\u02C1\u02B5\u02BF[num++] = manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[i];
+				this.\u02B8\u02B9\u02B6\u02B7\u02C0\u02B2\u02B9\u02BF\u02C1\u02B5\u02BF[num++] = manager.playerObjects[i];
 			}
 		}
 		yield break;
@@ -103,17 +103,17 @@ public class VersusHUD : MonoBehaviour
 	private IEnumerator \u02C0\u02BE\u02B2\u02BE\u02C0\u02B5\u02B3\u02B7\u02B2\u02B8\u02B5()
 	{
 		manager = GameObject.Find("Game Manager").GetComponent<GameManager>();
-		while (manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD == null || manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD.Length == 0)
+		while (manager.playerObjects == null || manager.playerObjects.Length == 0)
 		{
 			yield return null;
 		}
 		this.\u02B8\u02B9\u02B6\u02B7\u02C0\u02B2\u02B9\u02BF\u02C1\u02B5\u02BF = new BasePlayer[2];
 		int num = 0;
-		for (int i = 0; i < manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD.Length; i++)
+		for (int i = 0; i < manager.playerObjects.Length; i++)
 		{
-			if (manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[i] != null)
+			if (manager.playerObjects[i] != null)
 			{
-				this.\u02B8\u02B9\u02B6\u02B7\u02C0\u02B2\u02B9\u02BF\u02C1\u02B5\u02BF[num++] = manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[i];
+				this.\u02B8\u02B9\u02B6\u02B7\u02C0\u02B2\u02B9\u02BF\u02C1\u02B5\u02BF[num++] = manager.playerObjects[i];
 			}
 		}
 		yield break;
@@ -156,17 +156,17 @@ public class VersusHUD : MonoBehaviour
 	private IEnumerator \u02B4\u02BC\u02BE\u02BF\u02B4\u02B5\u02BF\u02B7\u02BA\u02BA\u02BB()
 	{
 		manager = GameObject.Find("Game Manager").GetComponent<GameManager>();
-		while (manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD == null || manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD.Length == 0)
+		while (manager.playerObjects == null || manager.playerObjects.Length == 0)
 		{
 			yield return null;
 		}
 		this.\u02B8\u02B9\u02B6\u02B7\u02C0\u02B2\u02B9\u02BF\u02C1\u02B5\u02BF = new BasePlayer[2];
 		int num = 0;
-		for (int i = 0; i < manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD.Length; i++)
+		for (int i = 0; i < manager.playerObjects.Length; i++)
 		{
-			if (manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[i] != null)
+			if (manager.playerObjects[i] != null)
 			{
-				this.\u02B8\u02B9\u02B6\u02B7\u02C0\u02B2\u02B9\u02BF\u02C1\u02B5\u02BF[num++] = manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[i];
+				this.\u02B8\u02B9\u02B6\u02B7\u02C0\u02B2\u02B9\u02BF\u02C1\u02B5\u02BF[num++] = manager.playerObjects[i];
 			}
 		}
 		yield break;
@@ -175,17 +175,17 @@ public class VersusHUD : MonoBehaviour
 	private IEnumerator \u02B7\u02B8\u02BD\u02C0\u02B2\u02B4\u02B7\u02C0\u02BC\u02BE\u02B3()
 	{
 		manager = GameObject.Find("Game Manager").GetComponent<GameManager>();
-		while (manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD == null || manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD.Length == 0)
+		while (manager.playerObjects == null || manager.playerObjects.Length == 0)
 		{
 			yield return null;
 		}
 		this.\u02B8\u02B9\u02B6\u02B7\u02C0\u02B2\u02B9\u02BF\u02C1\u02B5\u02BF = new BasePlayer[2];
 		int num = 0;
-		for (int i = 0; i < manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD.Length; i++)
+		for (int i = 0; i < manager.playerObjects.Length; i++)
 		{
-			if (manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[i] != null)
+			if (manager.playerObjects[i] != null)
 			{
-				this.\u02B8\u02B9\u02B6\u02B7\u02C0\u02B2\u02B9\u02BF\u02C1\u02B5\u02BF[num++] = manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[i];
+				this.\u02B8\u02B9\u02B6\u02B7\u02C0\u02B2\u02B9\u02BF\u02C1\u02B5\u02BF[num++] = manager.playerObjects[i];
 			}
 		}
 		yield break;
@@ -205,17 +205,17 @@ public class VersusHUD : MonoBehaviour
 	private IEnumerator \u02B2\u02B7\u02B5\u02C0\u02B4\u02B3\u02B8\u02B3\u02C0\u02BD\u02B5()
 	{
 		manager = GameObject.Find("Game Manager").GetComponent<GameManager>();
-		while (manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD == null || manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD.Length == 0)
+		while (manager.playerObjects == null || manager.playerObjects.Length == 0)
 		{
 			yield return null;
 		}
 		this.\u02B8\u02B9\u02B6\u02B7\u02C0\u02B2\u02B9\u02BF\u02C1\u02B5\u02BF = new BasePlayer[2];
 		int num = 0;
-		for (int i = 0; i < manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD.Length; i++)
+		for (int i = 0; i < manager.playerObjects.Length; i++)
 		{
-			if (manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[i] != null)
+			if (manager.playerObjects[i] != null)
 			{
-				this.\u02B8\u02B9\u02B6\u02B7\u02C0\u02B2\u02B9\u02BF\u02C1\u02B5\u02BF[num++] = manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[i];
+				this.\u02B8\u02B9\u02B6\u02B7\u02C0\u02B2\u02B9\u02BF\u02C1\u02B5\u02BF[num++] = manager.playerObjects[i];
 			}
 		}
 		yield break;
@@ -224,17 +224,17 @@ public class VersusHUD : MonoBehaviour
 	private IEnumerator \u02BF\u02BA\u02B5\u02B8\u02B5\u02BF\u02B2\u02BF\u02B3\u02BC\u02BA()
 	{
 		manager = GameObject.Find("Game Manager").GetComponent<GameManager>();
-		while (manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD == null || manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD.Length == 0)
+		while (manager.playerObjects == null || manager.playerObjects.Length == 0)
 		{
 			yield return null;
 		}
 		this.\u02B8\u02B9\u02B6\u02B7\u02C0\u02B2\u02B9\u02BF\u02C1\u02B5\u02BF = new BasePlayer[2];
 		int num = 0;
-		for (int i = 0; i < manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD.Length; i++)
+		for (int i = 0; i < manager.playerObjects.Length; i++)
 		{
-			if (manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[i] != null)
+			if (manager.playerObjects[i] != null)
 			{
-				this.\u02B8\u02B9\u02B6\u02B7\u02C0\u02B2\u02B9\u02BF\u02C1\u02B5\u02BF[num++] = manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[i];
+				this.\u02B8\u02B9\u02B6\u02B7\u02C0\u02B2\u02B9\u02BF\u02C1\u02B5\u02BF[num++] = manager.playerObjects[i];
 			}
 		}
 		yield break;
@@ -250,17 +250,17 @@ public class VersusHUD : MonoBehaviour
 	private IEnumerator Start()
 	{
 		manager = GameObject.Find("Game Manager").GetComponent<GameManager>();
-		while (manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD == null || manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD.Length == 0)
+		while (manager.playerObjects == null || manager.playerObjects.Length == 0)
 		{
 			yield return null;
 		}
 		this.\u02B8\u02B9\u02B6\u02B7\u02C0\u02B2\u02B9\u02BF\u02C1\u02B5\u02BF = new BasePlayer[2];
 		int num = 0;
-		for (int i = 0; i < manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD.Length; i++)
+		for (int i = 0; i < manager.playerObjects.Length; i++)
 		{
-			if (manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[i] != null)
+			if (manager.playerObjects[i] != null)
 			{
-				this.\u02B8\u02B9\u02B6\u02B7\u02C0\u02B2\u02B9\u02BF\u02C1\u02B5\u02BF[num++] = manager.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[i];
+				this.\u02B8\u02B9\u02B6\u02B7\u02C0\u02B2\u02B9\u02BF\u02C1\u02B5\u02BF[num++] = manager.playerObjects[i];
 			}
 		}
 		yield break;

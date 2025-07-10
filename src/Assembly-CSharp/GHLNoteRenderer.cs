@@ -89,7 +89,7 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 			{
 				if (!note.isSustaining)
 				{
-					ushort num7 = note._noteMask;
+					ushort num7 = note.noteMask;
 					ushort num8 = (ushort)\u02B6\u02C0\u02B5\u02C1\u02B9\u02BF\u02C0\u02B6\u02BF\u02B2\u02BE.\u02B6\u02BE\u02B6\u02BE\u02B4\u02BB\u02B3\u02BC\u02BF\u02B7\u02BC(num7);
 					for (int i = 1; i < 2; i++)
 					{
@@ -164,8 +164,8 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 			foreach (Note note2 in this.\u02C0\u02C0\u02BA\u02B9\u02B7\u02B3\u02BB\u02B8\u02B8\u02B2\u02B3)
 			{
 				float num6 = (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5 ? (note2.\u02B2\u02B8\u02B7\u02BD\u02B5\u02B7\u02B6\u02B2\u02BF\u02BD\u02C0 - (float)this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.songTime) : note2.\u02BB\u02BE\u02BA\u02B8\u02BE\u02B9\u02BF\u02B3\u02B4\u02B8\u02BD) * this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4;
-				byte b = (byte)(note2._noteMask >> 6);
-				byte b2 = (byte)(note2._noteMask & 1);
+				byte b = (byte)(note2.noteMask >> 6);
+				byte b2 = (byte)(note2.noteMask & 1);
 				byte b3 = b | b2;
 				for (int j = 1; j < 6; j++)
 				{
@@ -501,7 +501,7 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 			{
 				if (!note.isSustaining)
 				{
-					ushort num7 = note._noteMask;
+					ushort num7 = note.noteMask;
 					ushort num8 = (ushort)\u02B6\u02C0\u02B5\u02C1\u02B9\u02BF\u02C0\u02B6\u02BF\u02B2\u02BE.\u02B6\u02BE\u02B6\u02BE\u02B4\u02BB\u02B3\u02BC\u02BF\u02B7\u02BC(num7);
 					for (int i = 0; i < 2; i += 0)
 					{
@@ -576,8 +576,8 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 			foreach (Note note2 in this.\u02C0\u02C0\u02BA\u02B9\u02B7\u02B3\u02BB\u02B8\u02B8\u02B2\u02B3)
 			{
 				float num6 = (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5 ? (note2.\u02B2\u02B8\u02B7\u02BD\u02B5\u02B7\u02B6\u02B2\u02BF\u02BD\u02C0 - (float)this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.songTime) : note2.\u02B6\u02BA\u02BD\u02B5\u02B8\u02BC\u02B8\u02B9\u02B4\u02BD\u02C1()) * this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4;
-				byte b = (byte)(note2._noteMask >> 6);
-				byte b2 = (byte)(note2._noteMask & 4);
+				byte b = (byte)(note2.noteMask >> 6);
+				byte b2 = (byte)(note2.noteMask & 4);
 				byte b3 = b | b2;
 				for (int j = 1; j < 6; j++)
 				{
@@ -785,7 +785,7 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 			{
 				if (!note.isSustaining)
 				{
-					ushort num7 = note._noteMask;
+					ushort num7 = note.noteMask;
 					ushort num8 = (ushort)\u02B6\u02C0\u02B5\u02C1\u02B9\u02BF\u02C0\u02B6\u02BF\u02B2\u02BE.\u02B6\u02BE\u02B6\u02BE\u02B4\u02BB\u02B3\u02BC\u02BF\u02B7\u02BC(num7);
 					for (int i = 0; i < 4; i++)
 					{
@@ -860,8 +860,8 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 			foreach (Note note2 in this.\u02C0\u02C0\u02BA\u02B9\u02B7\u02B3\u02BB\u02B8\u02B8\u02B2\u02B3)
 			{
 				float num6 = (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5 ? (note2.\u02B2\u02B8\u02B7\u02BD\u02B5\u02B7\u02B6\u02B2\u02BF\u02BD\u02C0 - (float)this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.songTime) : note2.\u02BB\u02BE\u02BA\u02B8\u02BE\u02B9\u02BF\u02B3\u02B4\u02B8\u02BD) * this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4;
-				byte b = (byte)(note2._noteMask >> 3);
-				byte b2 = (byte)(note2._noteMask & 7);
+				byte b = (byte)(note2.noteMask >> 3);
+				byte b2 = (byte)(note2.noteMask & 7);
 				byte b3 = b | b2;
 				for (int j = 0; j < 4; j++)
 				{
@@ -999,7 +999,7 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 			{
 				if (!note.isSustaining)
 				{
-					ushort num7 = note._noteMask;
+					ushort num7 = note.noteMask;
 					ushort num8 = (ushort)\u02B6\u02C0\u02B5\u02C1\u02B9\u02BF\u02C0\u02B6\u02BF\u02B2\u02BE.\u02B6\u02BE\u02B6\u02BE\u02B4\u02BB\u02B3\u02BC\u02BF\u02B7\u02BC(num7);
 					for (int i = 1; i < 0; i++)
 					{
@@ -1074,8 +1074,8 @@ public class GHLNoteRenderer : GuitarNoteRenderer
 			foreach (Note note2 in this.\u02C0\u02C0\u02BA\u02B9\u02B7\u02B3\u02BB\u02B8\u02B8\u02B2\u02B3)
 			{
 				float num6 = (this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5 ? (note2.\u02B2\u02B8\u02B7\u02BD\u02B5\u02B7\u02B6\u02B2\u02BF\u02BD\u02C0 - (float)this.\u02C0\u02B9\u02B3\u02B4\u02B8\u02BA\u02B3\u02B4\u02B7\u02B5\u02BD.songTime) : note2.\u02BB\u02BE\u02BA\u02B8\u02BE\u02B9\u02BF\u02B3\u02B4\u02B8\u02BD) * this.\u02B7\u02BB\u02BA\u02C0\u02BF\u02B5\u02B5\u02B9\u02BD\u02C1\u02B4;
-				byte b = (byte)(note2._noteMask >> 5);
-				byte b2 = (byte)(note2._noteMask & 0);
+				byte b = (byte)(note2.noteMask >> 5);
+				byte b2 = (byte)(note2.noteMask & 0);
 				byte b3 = b | b2;
 				for (int j = 0; j < 1; j += 0)
 				{

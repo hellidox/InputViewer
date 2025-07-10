@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
+using A;
 using Cysharp.Text;
 using StrikeCore;
 using TMPro;
@@ -23,6 +23,7 @@ public class FrameRate : MonoBehaviour
 	private void Start()
 	{
 		this.draggableTMPS = new List<TextMeshProUGUI>();
+		this.lags = new List<Tuple<float, float>>();
 		this.fontSizeBackups = new Dictionary<TextMeshProUGUI, float>();
 		FrameRate.fr = this;
 		this.trailsNeedInit = true;
@@ -135,59 +136,6 @@ public class FrameRate : MonoBehaviour
 			float num5 = ((Input.mouseScrollDelta.y > 0f) ? 0.03f : ((Input.mouseScrollDelta.y < 0f) ? (-0.03f) : 0f));
 			Camera.main.transform.position += new Vector3(num3, num4, num5);
 		}
-		if (Input.GetKeyDown(KeyCode.P) && Time.deltaTime == 1f)
-		{
-			string tempFileName = Path.GetTempFileName();
-			List<string> list = new List<string>();
-			list.Add("NAME,X,Y,Z,PITCH,YAW,ROLL,X,Y,Z (scale)");
-			foreach (GameObject gameObject in global::UnityEngine.Object.FindObjectsOfType<GameObject>())
-			{
-				Transform transform = gameObject.transform;
-				if (gameObject == Camera.main.gameObject)
-				{
-					gameObject.name = "MAINCAMERA";
-				}
-				string text = string.Format("{0},{1},{2},{3},", new object[]
-				{
-					gameObject.name,
-					transform.position.x,
-					transform.position.y,
-					transform.position.z
-				}) + string.Format("{0},{1},{2},", transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z) + string.Format("{0},{1},{2}", transform.localScale.x, transform.localScale.y, transform.localScale.z);
-				list.Add(text);
-			}
-			File.WriteAllText(tempFileName, string.Join("\n", list.ToArray()));
-			ProcessStartInfo processStartInfo = new ProcessStartInfo("notepad.exe", tempFileName);
-			Process process = new Process();
-			process.StartInfo = processStartInfo;
-			process.Start();
-			process.WaitForExit();
-			list = File.ReadAllText(tempFileName).Replace("\r\n", "\n").Split('\n', StringSplitOptions.None)
-				.ToList<string>();
-			foreach (string text2 in list.Skip(1))
-			{
-				string[] array2 = text2.Split(',', StringSplitOptions.None);
-				if (array2.Length == 10)
-				{
-					GameObject gameObject2 = GameObject.Find(array2[0]);
-					if (!(gameObject2 == null))
-					{
-						float num6 = float.Parse(array2[1]);
-						float num7 = float.Parse(array2[2]);
-						float num8 = float.Parse(array2[3]);
-						float num9 = float.Parse(array2[4]);
-						float num10 = float.Parse(array2[5]);
-						float num11 = float.Parse(array2[6]);
-						float num12 = float.Parse(array2[7]);
-						float num13 = float.Parse(array2[8]);
-						float num14 = float.Parse(array2[9]);
-						gameObject2.transform.position = new Vector3(num6, num7, num8);
-						gameObject2.transform.rotation = Quaternion.Euler(num9, num10, num11);
-						gameObject2.transform.localScale = new Vector3(num12, num13, num14);
-					}
-				}
-			}
-		}
 		if (Input.GetKeyDown(KeyCode.Backspace))
 		{
 			Debug.Log("YOU ARE GETTING THE FUCKING BUTTON DUDE");
@@ -215,8 +163,8 @@ public class FrameRate : MonoBehaviour
 				this.old_ftEnd = this.ftEnd;
 				this.old_ftStart = this.ftStart;
 				this.old_udtTotal = this.udtTotal;
-				double num15 = (double)(this.ftEnd - this.ftStart) / 10000000.0;
-				this.timeDifference = (float)(this.udtTotal / num15);
+				double num6 = (double)(this.ftEnd - this.ftStart) / 10000000.0;
+				this.timeDifference = (float)(this.udtTotal / num6);
 			}
 			if (this.targetFPS)
 			{
@@ -262,6 +210,10 @@ public class FrameRate : MonoBehaviour
 			{
 				this.best = Time.unscaledDeltaTime;
 			}
+			if (GlobalHelper.showLag && (double)Time.unscaledDeltaTime > 0.01)
+			{
+				this.lags.Add(new Tuple<float, float>(Time.timeSinceLevelLoad, Time.unscaledDeltaTime));
+			}
 			this.ptimer -= Time.unscaledDeltaTime;
 			if (this.ptimer < 0f)
 			{
@@ -292,18 +244,18 @@ public class FrameRate : MonoBehaviour
 			if ((double)this.timer1 <= 0.0 && this.updateInputs)
 			{
 				this.textDisplay.enableWordWrapping = false;
-				float num16 = this.timer2 / (float)this.counter1;
-				float num17 = (this.targetFPS ? (1f / this.targetSPF) : ((float)this.renderedFrames / 0.36f));
+				float num7 = this.timer2 / (float)this.counter1;
+				float num8 = (this.targetFPS ? (1f / this.targetSPF) : ((float)this.renderedFrames / 0.36f));
 				this.best = 1f / this.best;
 				Vector3 normalized = Camera.main.transform.forward.normalized;
-				float num18 = 57.295826f;
-				float num19 = Mathf.Clamp(normalized.y, -1f, 1f);
-				float num20 = Mathf.Atan2(num19, Mathf.Sqrt(1f - num19 * num19)) * num18;
-				float num21 = Mathf.Atan2(normalized.x, normalized.z) * num18;
-				string text3;
+				float num9 = 57.295826f;
+				float num10 = Mathf.Clamp(normalized.y, -1f, 1f);
+				float num11 = Mathf.Atan2(num10, Mathf.Sqrt(1f - num10 * num10)) * num9;
+				float num12 = Mathf.Atan2(normalized.x, normalized.z) * num9;
+				string text;
 				if (!GlobalHelper.showFPS)
 				{
-					text3 = "\n";
+					text = "\n";
 				}
 				else
 				{
@@ -312,19 +264,19 @@ public class FrameRate : MonoBehaviour
 					{
 						try
 						{
-							text3 = string.Format(GlobalHelper.fpsText, new object[]
+							text = string.Format(GlobalHelper.fpsText, new object[]
 							{
-								num16,
+								num7,
 								1f / this.worst,
-								num17,
+								num8,
 								this.best,
 								this.timeDifference * 100f,
 								(double)(this.old_ftEnd - this.old_ftStart) / 1000.0 / 1000.0 / 10.0,
 								this.old_udtTotal,
 								GlobalVariables.progress,
 								(double)(this.pt_t / (long)this.pt_i) / 1000.0,
-								num20,
-								num21
+								num11,
+								num12
 							});
 						}
 						catch (Exception ex)
@@ -333,29 +285,29 @@ public class FrameRate : MonoBehaviour
 							GlobalHelper.fpsText = string.Format("Bad fpstext or other error! Error: {0}", ex);
 						}
 					}
-					text3 = string.Format(GlobalHelper.fpsText, new object[]
+					text = string.Format(GlobalHelper.fpsText, new object[]
 					{
-						num16,
+						num7,
 						1f / this.worst,
-						num17,
+						num8,
 						this.best,
 						this.timeDifference * 100f,
 						(double)(this.old_ftEnd - this.old_ftStart) / 1000.0 / 1000.0 / 10.0,
 						this.old_udtTotal,
 						GlobalVariables.progress,
 						(double)(this.pt_t / (long)this.pt_i),
-						num20,
-						num21
+						num11,
+						num12
 					});
 				}
 				this.worst = float.NegativeInfinity;
 				this.best = float.PositiveInfinity;
-				this.orig = text3;
-				if (num16 < 30f)
+				this.orig = text;
+				if (num7 < 30f)
 				{
 					this.textDisplay.color = Color.yellow;
 				}
-				else if (num16 < 10f)
+				else if (num7 < 10f)
 				{
 					this.textDisplay.color = Color.red;
 				}
@@ -363,6 +315,7 @@ public class FrameRate : MonoBehaviour
 				{
 					this.textDisplay.color = Color.green;
 				}
+				this.lags.RemoveAll((Tuple<float, float> x) => Time.timeSinceLevelLoad - x.Item1 > 2f);
 				this.timer1 = 0.36f;
 				this.timer2 = 0f;
 				this.rftimer = 0f;
@@ -545,11 +498,23 @@ public class FrameRate : MonoBehaviour
 				}
 				if (GlobalVariables.FCmode)
 				{
-					this.upperLeftTextBuilder.Append("\n<color=#aaaaaa>FC mode <color=#ff2222FF>on<color=#ffffffcc>");
+					this.upperLeftTextBuilder.Append("\n<color=#aaaaaa>FC mode <color=#ff2222FF>on<color=#ffffffcc>\n");
 				}
 				else
 				{
 					this.upperLeftTextBuilder.Append("\n");
+				}
+				if (GlobalHelper.showLag && this.lags.Any<Tuple<float, float>>())
+				{
+					this.upperLeftTextBuilder.Append("<color=#ffffff44>");
+					int ctr = 0;
+					int i = this.lags.Count - 1;
+					while (i >= 0 && ctr < 6)
+					{
+						ctr++;
+						this.upperLeftTextBuilder.AppendFormat<float>("{0:N0}ms\n", this.lags[i].Item2 * 1000f);
+						i--;
+					}
 				}
 				this.textDisplay.SetCharArray(this.upperLeftTextBuilder.AsArraySegment().ToArray<char>());
 				this.upperLeftTextBuilder.Clear();
@@ -584,14 +549,14 @@ public class FrameRate : MonoBehaviour
 					BassAudioManager.Instance.PauseSong();
 					Task.Run(delegate
 					{
-						long num25 = 0L;
+						long num16 = 0L;
 						for (int j = 0; j < 9; j++)
 						{
-							FrameRate.GetSystemTimePreciseAsFileTime(out num25);
-							long num26 = 0L;
-							while (num26 < num25 + 160000L)
+							FrameRate.GetSystemTimePreciseAsFileTime(out num16);
+							long num17 = 0L;
+							while (num17 < num16 + 160000L)
 							{
-								FrameRate.GetSystemTimePreciseAsFileTime(out num26);
+								FrameRate.GetSystemTimePreciseAsFileTime(out num17);
 							}
 							BassAudioManager.Instance.PlaySoundInternal(SoundEffectsChannel.FreestyleSnare, 0, 0.3f);
 						}
@@ -654,23 +619,23 @@ public class FrameRate : MonoBehaviour
 			this.lcombobreaks = this.combobreaks;
 			if (this.updateInputs)
 			{
-				long num22;
-				FrameRate.GetSystemTimePreciseAsFileTime(out num22);
-				long num23 = num22 - this.st;
-				if (num23 < 1000000L)
+				long num13;
+				FrameRate.GetSystemTimePreciseAsFileTime(out num13);
+				long num14 = num13 - this.st;
+				if (num14 < 1000000L)
 				{
-					num23 /= 10L;
+					num14 /= 10L;
 					this.pt_i++;
-					this.pt_t += num23;
+					this.pt_t += num14;
 				}
 			}
 			return;
 		}
 		if (this.startctr != 10)
 		{
-			int num24 = this.startctr;
-			this.startctr = num24 + 1;
-			Debug.Log(num24);
+			int num15 = this.startctr;
+			this.startctr = num15 + 1;
+			Debug.Log(num15);
 			return;
 		}
 		if (GlobalHelper.useJudgements)
@@ -1482,4 +1447,6 @@ public class FrameRate : MonoBehaviour
 	private char[][] timeFormats;
 
 	private Dictionary<TextMeshProUGUI, float> fontSizeBackups;
+
+	private List<Tuple<float, float>> lags;
 }

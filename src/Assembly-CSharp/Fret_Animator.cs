@@ -1,4 +1,5 @@
 ﻿using System;
+using A;
 using UnityEngine;
 
 public class Fret_Animator : BaseFretAnimator

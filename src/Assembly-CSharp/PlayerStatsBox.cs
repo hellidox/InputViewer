@@ -194,8 +194,9 @@ public class PlayerStatsBox : BaseMenu
 			int numberOfHitNotes = this.\u02B6\u02B7\u02BF\u02BB\u02C1\u02C0\u02B2\u02B2\u02BE\u02B5\u02B5.sectionNotesInfo[num].numberOfHitNotes;
 			int numberOfTotalNotes = this.\u02B6\u02B7\u02BF\u02BB\u02C1\u02C0\u02B2\u02B2\u02BE\u02B5\u02B5.sectionNotesInfo[num].numberOfTotalNotes;
 			int num2 = (int)((float)numberOfHitNotes / (float)numberOfTotalNotes * 100f);
+			float num3 = (float)numberOfHitNotes / (float)numberOfTotalNotes * 100f;
 			this.\u02B3\u02BE\u02B5\u02BF\u02C1\u02BC\u02B7\u02B5\u02BC\u02BB\u02BB[i].\u02B7\u02BE\u02B7\u02B2\u02B9\u02C1\u02BA\u02BD\u02B6\u02B7\u02B6(\u02BD\u02B7\u02B4\u02B2\u02BA\u02C1\u02B9\u02BA\u02B2\u02B2\u02BF.\u02BB\u02B3\u02C0\u02B9\u02B7\u02B4\u02BD\u02B7\u02BF\u02B9\u02C0[num], true);
-			this.\u02B6\u02B9\u02C1\u02BA\u02B8\u02BD\u02BF\u02BC\u02B9\u02BB\u02B3[i].text = ((numberOfTotalNotes == 0) ? "N/A" : string.Format("{0}%", num2));
+			this.\u02B6\u02B9\u02C1\u02BA\u02B8\u02BD\u02BF\u02BC\u02B9\u02BB\u02B3[i].text = ((numberOfTotalNotes == 0) ? "N/A" : string.Format("{0:N2}%", num3, num2));
 			this.\u02B6\u02B6\u02B3\u02B5\u02BE\u02B5\u02BD\u02C0\u02B3\u02C1\u02B9[i].text = ((numberOfTotalNotes == 0) ? "" : string.Format("{0:N0}", numberOfTotalNotes - numberOfHitNotes));
 			num++;
 		}
@@ -209,7 +210,7 @@ public class PlayerStatsBox : BaseMenu
 		bool flag = this.\u02C0\u02B4\u02BC\u02BA\u02B4\u02C1\u02BF\u02B3\u02B7\u02B6\u02B6 % 2 == 0;
 		for (int k = 0; k < this.\u02BB\u02BD\u02C1\u02C0\u02C1\u02BF\u02B5\u02B6\u02BF\u02C1\u02C1.Length; k++)
 		{
-			this.\u02BB\u02BD\u02C1\u02C0\u02C1\u02BF\u02B5\u02B6\u02BF\u02C1\u02C1[k].enabled = k % 2 == (flag ? 1 : 0);
+			this.\u02BB\u02BD\u02C1\u02C0\u02C1\u02BF\u02B5\u02B6\u02BF\u02C1\u02C1[k].enabled = k % 2 == ((flag > false) ? 1 : 0);
 		}
 	}
 
@@ -260,7 +261,7 @@ public class PlayerStatsBox : BaseMenu
 		}
 		else
 		{
-			this.\u02BD\u02B7\u02B2\u02BA\u02BF\u02B7\u02BF\u02B7\u02BF\u02BD\u02B9.text = ((instrument != Instrument.None) ? this.\u02B6\u02B7\u02BF\u02BB\u02C1\u02C0\u02B2\u02B2\u02BE\u02B5\u02B5.AccuracyString : (this.\u02BD\u02B7\u02B2\u02BA\u02BF\u02B7\u02BF\u02B7\u02BF\u02BD\u02B9.text = ""));
+			this.\u02BD\u02B7\u02B2\u02BA\u02BF\u02B7\u02BF\u02B7\u02BF\u02BD\u02B9.text = ((instrument != Instrument.None) ? string.Format("{0:N2}%", this.\u02B6\u02B7\u02BF\u02BB\u02C1\u02C0\u02B2\u02B2\u02BE\u02B5\u02B5.NotesHitPercent(), this.\u02B6\u02B7\u02BF\u02BB\u02C1\u02C0\u02B2\u02B2\u02BE\u02B5\u02B5.AccuracyString) : (this.\u02BD\u02B7\u02B2\u02BA\u02BF\u02B7\u02BF\u02B7\u02BF\u02BD\u02B9.text = ""));
 		}
 		for (int i = 6 - this.\u02B6\u02B7\u02BF\u02BB\u02C1\u02C0\u02B2\u02B2\u02BE\u02B5\u02B5.stars; i >= 0; i--)
 		{

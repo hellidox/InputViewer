@@ -125,7 +125,7 @@ public static class \u02B6\u02C0\u02B5\u02C1\u02B9\u02BF\u02C0\u02B6\u02BF\u02B2
 
 	private static Note \u02B6\u02BA\u02BA\u02B5\u02BB\u02B5\u02B9\u02BE\u02C1\u02B7\u02BE(Note \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2, bool \u02B4\u02B8\u02BD\u02B9\u02B9\u02B3\u02BE\u02B2\u02B9\u02C1\u02BC = false)
 	{
-		uint num = (uint)\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.noteMask;
+		uint num = (uint)\u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.DisjointMask;
 		uint num2;
 		if (\u02B4\u02B8\u02BD\u02B9\u02B9\u02B3\u02BE\u02B2\u02B9\u02C1\u02BC && (num & 384U) != 0U)
 		{
@@ -139,7 +139,7 @@ public static class \u02B6\u02C0\u02B5\u02C1\u02B9\u02BF\u02C0\u02B6\u02BF\u02B2
 		while (u02C0_u02C1_u02C0_u02BC_u02B5_u02BC_u02C0_u02B5_u02B7_u02B8_u02B.\u02BF\u02B5\u02B7\u02BB\u02B5\u02BB\u02B7\u02B5\u02B6\u02BA\u02BC())
 		{
 			Note note = u02C0_u02C1_u02C0_u02BC_u02B5_u02BC_u02C0_u02B5_u02B7_u02B8_u02B.\u02B9\u02BA\u02BB\u02B4\u02C0\u02B4\u02B6\u02B2\u02B9\u02B3\u02BF;
-			if ((uint)note._noteMask == num2)
+			if ((uint)note.noteMask == num2)
 			{
 				return note;
 			}
@@ -149,7 +149,7 @@ public static class \u02B6\u02C0\u02B5\u02C1\u02B9\u02BF\u02C0\u02B6\u02BF\u02B2
 
 	private static Note \u02B6\u02B8\u02B2\u02B7\u02B5\u02B8\u02BB\u02BB\u02B8\u02B9\u02B8(Note \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2, bool \u02B4\u02B8\u02BD\u02B9\u02B9\u02B3\u02BE\u02B2\u02B9\u02C1\u02BC = false)
 	{
-		ushort num = \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.noteMask;
+		ushort num = \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2.DisjointMask;
 		uint num2 = (uint)(num & 127);
 		uint num3 = (uint)(num & 384);
 		uint num4 = 0U;
@@ -165,7 +165,7 @@ public static class \u02B6\u02C0\u02B5\u02C1\u02B9\u02BF\u02C0\u02B6\u02BF\u02B2
 		while (u02C0_u02C1_u02C0_u02BC_u02B5_u02BC_u02C0_u02B5_u02B7_u02B8_u02B.\u02BF\u02B5\u02B7\u02BB\u02B5\u02BB\u02B7\u02B5\u02B6\u02BA\u02BC())
 		{
 			Note note = u02C0_u02C1_u02C0_u02BC_u02B5_u02BC_u02C0_u02B5_u02B7_u02B8_u02B.\u02B9\u02BA\u02BB\u02B4\u02C0\u02B4\u02B6\u02B2\u02B9\u02B3\u02BF;
-			if ((uint)note._noteMask == num4)
+			if ((uint)note.noteMask == num4)
 			{
 				return note;
 			}
@@ -459,14 +459,14 @@ public static class \u02B6\u02C0\u02B5\u02C1\u02B9\u02BF\u02C0\u02B6\u02BF\u02B2
 		{
 			int num3 = \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8.\u02C1\u02B4\u02B5\u02BA\u02B7\u02B2\u02B2\u02BE\u02BB\u02BF\u02BF(u02B5_u02B7_u02B8_u02B7_u02BE_u02BB_u02C0_u02B9_u02BC_u02B2_u02C.\u02B3\u02BF\u02B9\u02BA\u02B5\u02B9\u02B7\u02BC\u02BC\u02B8\u02B8 - 1U, num, 0);
 			Note note = \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[num3];
-			ushort num4 = \u02B6\u02C0\u02B5\u02C1\u02B9\u02BF\u02C0\u02B6\u02BF\u02B2\u02BE.\u02BF\u02B9\u02BD\u02BD\u02B5\u02BB\u02BA\u02B8\u02BB\u02B5\u02B3(note, true, false)._noteMask;
+			ushort num4 = \u02B6\u02C0\u02B5\u02C1\u02B9\u02BF\u02C0\u02B6\u02BF\u02B2\u02BE.\u02BF\u02B9\u02BD\u02BD\u02B5\u02BB\u02BA\u02B8\u02BB\u02B5\u02B3(note, true, false).noteMask;
 			Note note2 = null;
 			if (u02B5_u02B7_u02B8_u02B7_u02BE_u02BB_u02C0_u02B9_u02BC_u02B2_u02C.\u02BF\u02BC\u02B9\u02BB\u02BB\u02B9\u02B4\u02B2\u02BC\u02BA\u02C1)
 			{
 				int num5 = \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8.\u02C1\u02B4\u02B5\u02BA\u02B7\u02B2\u02B2\u02BE\u02BB\u02BF\u02BF(note.tickPosition, num, num3);
 				note2 = \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[num5];
 				Note note3 = \u02B6\u02C0\u02B5\u02C1\u02B9\u02BF\u02C0\u02B6\u02BF\u02B2\u02BE.\u02BF\u02B9\u02BD\u02BD\u02B5\u02BB\u02BA\u02B8\u02BB\u02B5\u02B3(note2, false, false);
-				num4 |= note3._noteMask;
+				num4 |= note3.noteMask;
 			}
 			int num6 = \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8.\u02C1\u02C1\u02B3\u02B3\u02C1\u02B8\u02B2\u02BE\u02B4\u02B6\u02B9(u02B5_u02B7_u02B8_u02B7_u02BE_u02BB_u02C0_u02B9_u02BC_u02B2_u02C.\u02B3\u02BF\u02B9\u02BA\u02B5\u02B9\u02B7\u02BC\u02BC\u02B8\u02B8 + u02B5_u02B7_u02B8_u02B7_u02BE_u02BB_u02C0_u02B9_u02BC_u02B2_u02C.\u02BD\u02B9\u02B8\u02B2\u02C1\u02B4\u02B8\u02C0\u02B3\u02BB\u02BC + 1U, num3);
 			if (num6 == -1)
@@ -478,7 +478,7 @@ public static class \u02B6\u02C0\u02B5\u02C1\u02B9\u02BF\u02C0\u02B6\u02BF\u02B2
 			{
 				for (int i = num3; i <= num6; i++)
 				{
-					if ((\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i]._noteMask & num4) != 0)
+					if ((\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].noteMask & num4) != 0)
 					{
 						if (u02B5_u02B7_u02B8_u02B7_u02BE_u02BB_u02C0_u02B9_u02BC_u02B2_u02C.\u02BF\u02BC\u02B9\u02BB\u02BB\u02B9\u02B4\u02B2\u02BC\u02BA\u02C1)
 						{
@@ -863,10 +863,10 @@ public static class \u02B6\u02C0\u02B5\u02C1\u02B9\u02BF\u02C0\u02B6\u02BF\u02B2
 		Note.\u02B5\u02B8\u02B9\u02B2\u02BC\u02BB\u02BE\u02B8\u02B5\u02C1\u02BC u02B5_u02B8_u02B9_u02B2_u02BC_u02BB_u02BE_u02B8_u02B5_u02C1_u02BC = \u02B6\u02C0\u02B5\u02C1\u02B9\u02BF\u02C0\u02B6\u02BF\u02B2\u02BE.\u02B6\u02BE\u02B6\u02BE\u02B4\u02BB\u02B3\u02BC\u02BF\u02B7\u02BC(\u02B4\u02B9\u02BE\u02BF\u02BE\u02BA\u02B5\u02B9\u02B2\u02B8\u02B4);
 		for (Note note = \u02C0\u02B8\u02BE\u02BF\u02B2\u02B6\u02BB\u02BF\u02B8\u02BA\u02B2; note != null; note = note.\u02BF\u02BB\u02B7\u02BA\u02BA\u02BB\u02C0\u02BF\u02B8\u02B4\u02B3)
 		{
-			if ((\u02B6\u02C0\u02B5\u02C1\u02B9\u02BF\u02C0\u02B6\u02BF\u02B2\u02BE.\u02B6\u02BE\u02B6\u02BE\u02B4\u02BB\u02B3\u02BC\u02BF\u02B7\u02BC(note._noteMask) & u02B5_u02B8_u02B9_u02B2_u02BC_u02BB_u02BE_u02B8_u02B5_u02C1_u02BC) != (Note.\u02B5\u02B8\u02B9\u02B2\u02BC\u02BB\u02BE\u02B8\u02B5\u02C1\u02BC)0)
+			if ((\u02B6\u02C0\u02B5\u02C1\u02B9\u02BF\u02C0\u02B6\u02BF\u02B2\u02BE.\u02B6\u02BE\u02B6\u02BE\u02B4\u02BB\u02B3\u02BC\u02BF\u02B7\u02BC(note.noteMask) & u02B5_u02B8_u02B9_u02B2_u02BC_u02BB_u02BE_u02B8_u02B5_u02C1_u02BC) != (Note.\u02B5\u02B8\u02B9\u02B2\u02BC\u02BB\u02BE\u02B8\u02B5\u02C1\u02BC)0)
 			{
 				Note note2 = note;
-				note2._noteMask |= (ushort)((byte)\u02B4\u02B9\u02BE\u02BF\u02BE\u02BA\u02B5\u02B9\u02B2\u02B8\u02B4);
+				note2.noteMask |= (ushort)((byte)\u02B4\u02B9\u02BE\u02BF\u02BE\u02BA\u02B5\u02B9\u02B2\u02B8\u02B4);
 				return true;
 			}
 		}

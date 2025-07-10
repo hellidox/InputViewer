@@ -8,6 +8,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using A;
 using Rewired;
 using StrikeCore;
 using Unity.Collections;
@@ -1072,7 +1073,7 @@ public class GlobalVariables : MonoBehaviour
 
 	public bool \u02B6\u02B5\u02BE\u02C1\u02B9\u02B2\u02B4\u02B7\u02BA\u02C1\u02BA;
 
-	public bool \u02B3\u02B9\u02B8\u02B6\u02C1\u02B4\u02C1\u02B2\u02C1\u02B5\u02C0;
+	public bool noteBomber;
 
 	public bool \u02BA\u02C0\u02B4\u02B6\u02BE\u02B4\u02BA\u02BF\u02B5\u02BD\u02B2;
 

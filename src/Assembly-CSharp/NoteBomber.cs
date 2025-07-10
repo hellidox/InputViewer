@@ -157,7 +157,7 @@ public class NoteBomber : MonoBehaviour
 		this.\u02BC\u02C0\u02B7\u02B7\u02B5\u02B9\u02B9\u02C1\u02BB\u02B5\u02B3.GetComponent<RotateScript>().\u02BE\u02B3\u02BB\u02BF\u02BC\u02C1\u02BC\u02C1\u02B2\u02BF\u02C0 = true;
 		this.\u02B6\u02BB\u02BD\u02BA\u02BC\u02B2\u02B9\u02B4\u02B3\u02BA\u02B2.GetComponent<RotateScript>().\u02BE\u02B3\u02BB\u02BF\u02BC\u02C1\u02BC\u02C1\u02B2\u02BF\u02C0 = true;
 		this.\u02B2\u02B8\u02B7\u02BD\u02BF\u02C1\u02BC\u02B7\u02B8\u02B7\u02C0.GetComponent<RotateScript>().\u02BE\u02B3\u02BB\u02BF\u02BC\u02C1\u02BC\u02C1\u02B2\u02BF\u02C0 = true;
-		GlobalVariables.instance.\u02B3\u02B9\u02B8\u02B6\u02C1\u02B4\u02C1\u02B2\u02C1\u02B5\u02C0 = true;
+		GlobalVariables.instance.noteBomber = true;
 	}
 
 	[CompilerGenerated]

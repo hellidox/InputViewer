@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
 		if (!this.\u02BB\u02B7\u02B2\u02B2\u02BE\u02BD\u02B5\u02BC\u02C1\u02C1\u02C0)
 		{
 			this.\u02BB\u02B7\u02B2\u02B2\u02BE\u02BD\u02B5\u02BC\u02C1\u02C1\u02C0 = true;
-			\u02BD\u02B7\u02B4\u02B2\u02BA\u02C1\u02B9\u02BA\u02B2\u02B2\u02BF.\u02B8\u02C0\u02BA\u02B6\u02BA\u02B9\u02B7\u02BB\u02B6\u02B8\u02BD(this.song, this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD);
+			\u02BD\u02B7\u02B4\u02B2\u02BA\u02C1\u02B9\u02BA\u02B2\u02B2\u02BF.\u02B8\u02C0\u02BA\u02B6\u02BA\u02B9\u02B7\u02BB\u02B6\u02B8\u02BD(this.song, this.playerObjects);
 			Dictionary<string, object> dictionary = new Dictionary<string, object>();
 			dictionary.Add("playerCount", GlobalVariables.instance.\u02BB\u02B4\u02BD\u02B2\u02BC\u02B7\u02C0\u02C1\u02B8\u02B4\u02BD);
 			dictionary.Add("gameMode", this.\u02B7\u02BA\u02B3\u02BE\u02B3\u02BF\u02B6\u02B5\u02C0\u02C1\u02C0.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1.ToString());
@@ -243,7 +243,7 @@ public class GameManager : MonoBehaviour
 			\u02B8\u02B8\u02B7\u02BE\u02B3\u02BF\u02B3\u02B4\u02B4\u02B9\u02BA.\u02C1\u02B6\u02B3\u02C0\u02B4\u02BB\u02BF\u02BF\u02B7\u02B2\u02C0("PracticeQuit", dictionary);
 			return;
 		}
-		\u02BD\u02B7\u02B4\u02B2\u02BA\u02C1\u02B9\u02BA\u02B2\u02B2\u02BF.\u02B8\u02C0\u02BA\u02B6\u02BA\u02B9\u02B7\u02BB\u02B6\u02B8\u02BD(this.song, this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD);
+		\u02BD\u02B7\u02B4\u02B2\u02BA\u02C1\u02B9\u02BA\u02B2\u02B2\u02BF.\u02B8\u02C0\u02BA\u02B6\u02BA\u02B9\u02B7\u02BB\u02B6\u02B8\u02BD(this.song, this.playerObjects);
 		Dictionary<string, object> dictionary2 = new Dictionary<string, object>();
 		dictionary2.Add("playerCount", GlobalVariables.instance.\u02BB\u02B4\u02BD\u02B2\u02BC\u02B7\u02C0\u02C1\u02B8\u02B4\u02BD);
 		dictionary2.Add("gameMode", this.\u02B7\u02BA\u02B3\u02BE\u02B3\u02BF\u02B6\u02B5\u02C0\u02C1\u02C0.\u02B6\u02B9\u02B5\u02BA\u02BD\u02B9\u02BD\u02BC\u02B9\u02B3\u02C1.ToString());
@@ -300,19 +300,19 @@ public class GameManager : MonoBehaviour
 		int num = 0;
 		BasePlayer basePlayer = null;
 		BasePlayer basePlayer2 = null;
-		BasePlayer basePlayer3 = this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[\u02B3\u02B7\u02B4\u02BE\u02BE\u02C1\u02BE\u02BB\u02B2\u02B9\u02BA.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02B3\u02B2\u02BA\u02BD\u02B6\u02BF\u02BA\u02C1\u02BA\u02B9];
-		for (int i = 0; i < this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD.Length; i++)
+		BasePlayer basePlayer3 = this.playerObjects[\u02B3\u02B7\u02B4\u02BE\u02BE\u02C1\u02BE\u02BB\u02B2\u02B9\u02BA.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02B8\u02B3\u02B2\u02BA\u02BD\u02B6\u02BF\u02BA\u02C1\u02BA\u02B9];
+		for (int i = 0; i < this.playerObjects.Length; i++)
 		{
-			if (!(this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[i] == null))
+			if (!(this.playerObjects[i] == null))
 			{
 				num++;
 				if (basePlayer == null)
 				{
-					basePlayer = this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[i];
+					basePlayer = this.playerObjects[i];
 				}
 				else if (basePlayer2 == null)
 				{
-					basePlayer2 = this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[i];
+					basePlayer2 = this.playerObjects[i];
 				}
 			}
 		}
@@ -516,10 +516,10 @@ public class GameManager : MonoBehaviour
 
 	private void \u02B9\u02BB\u02B8\u02B6\u02C0\u02B5\u02B9\u02BD\u02B7\u02BA\u02BF()
 	{
-		BasePlayer[] u02BE_u02B8_u02C1_u02B3_u02BD_u02B9_u02B7_u02B4_u02BD_u02B5_u02BD = this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD;
-		for (int i = 1; i < u02BE_u02B8_u02C1_u02B3_u02BD_u02B9_u02B7_u02B4_u02BD_u02B5_u02BD.Length; i++)
+		BasePlayer[] array = this.playerObjects;
+		for (int i = 1; i < array.Length; i++)
 		{
-			BasePlayer basePlayer = u02BE_u02B8_u02C1_u02B3_u02BD_u02B9_u02B7_u02B4_u02BD_u02B5_u02BD[i];
+			BasePlayer basePlayer = array[i];
 			if (!(basePlayer == null))
 			{
 				basePlayer.isMutedAudio = false;
@@ -600,9 +600,9 @@ public class GameManager : MonoBehaviour
 
 	private void \u02C0\u02C0\u02B4\u02B8\u02BE\u02B4\u02B6\u02B5\u02B4\u02BD\u02B7(float \u02B4\u02BE\u02B7\u02B3\u02B8\u02B2\u02B2\u02C1\u02BB\u02BB\u02B6, float \u02B7\u02BC\u02B9\u02BE\u02C1\u02BE\u02B5\u02B7\u02B6\u02BC\u02BA)
 	{
-		for (int i = 0; i < this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD.Length; i++)
+		for (int i = 0; i < this.playerObjects.Length; i++)
 		{
-			BasePlayer basePlayer = this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[i];
+			BasePlayer basePlayer = this.playerObjects[i];
 			if (!(basePlayer == null) && basePlayer.player.\u02BC\u02BA\u02BE\u02B2\u02C0\u02BE\u02B6\u02B5\u02BC\u02B3\u02BD)
 			{
 				float num = \u02B4\u02BE\u02B7\u02B3\u02B8\u02B2\u02B2\u02C1\u02BB\u02BB\u02B6 / \u02B7\u02BC\u02B9\u02BE\u02C1\u02BE\u02B5\u02B7\u02B6\u02BC\u02BA / 1.7777778f;
@@ -622,7 +622,7 @@ public class GameManager : MonoBehaviour
 		this.\u02BB\u02B8\u02B2\u02BC\u02B4\u02B4\u02BE\u02B6\u02BC\u02B4\u02B4 = true;
 		this.\u02B6\u02B4\u02B8\u02B9\u02BC\u02B5\u02B8\u02B4\u02B3\u02BB\u02B6();
 		GameAudioManager.PlaySound(SoundEffectsChannel.Beginning);
-		foreach (BasePlayer basePlayer in this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD)
+		foreach (BasePlayer basePlayer in this.playerObjects)
 		{
 			if (basePlayer && basePlayer.isActiveAndEnabled)
 			{
@@ -749,7 +749,7 @@ public class GameManager : MonoBehaviour
 
 	public void \u02B6\u02B4\u02B8\u02B9\u02BC\u02B5\u02B8\u02B4\u02B3\u02BB\u02B6()
 	{
-		foreach (BasePlayer basePlayer in this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD)
+		foreach (BasePlayer basePlayer in this.playerObjects)
 		{
 			if (!(basePlayer == null) && basePlayer.enabled && basePlayer.player.playerProfile != null && !basePlayer.player.playerProfile.isRemotePlayer)
 			{
@@ -918,7 +918,7 @@ public class GameManager : MonoBehaviour
 				this.\u02C1\u02B3\u02C0\u02BF\u02BC\u02B5\u02B5\u02B2\u02B9\u02B5\u02BB = 1;
 			}
 		}
-		this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD = new BasePlayer[4];
+		this.playerObjects = new BasePlayer[4];
 		Transform transform = GameObject.Find("HUD").transform;
 		Vector3 position = transform.position;
 		transform.localPosition = this.\u02BA\u02B7\u02B6\u02B6\u02B4\u02B6\u02B2\u02B9\u02BD\u02BD\u02C1();
@@ -976,19 +976,19 @@ public class GameManager : MonoBehaviour
 					component.\u02B6\u02B7\u02B6\u02B2\u02BD\u02BC\u02BC\u02BE\u02BF\u02B5\u02B5();
 					this.starProgress.\u02BD\u02BA\u02B5\u02B9\u02C1\u02BE\u02BA\u02BF\u02B9\u02B7\u02B8(component.\u02C1\u02BA\u02BA\u02C0\u02B7\u02BA\u02B3\u02BF\u02C1\u02B7\u02C1());
 				}
-				this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[j] = component;
+				this.playerObjects[j] = component;
 				num3++;
 				if (this.\u02B7\u02BA\u02B3\u02BE\u02B3\u02BF\u02B6\u02B5\u02C0\u02C1\u02C0.isPracticeEnabled || SettingsController.song_speed > 100 || !SettingsController.whammy_sfx || !BassAudioManager.Instance.\u02C1\u02B3\u02BD\u02C0\u02C1\u02B5\u02B6\u02BF\u02B5\u02BE\u02BD || u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.playerProfile.instrument == Instrument.ProDrums || u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.playerProfile.instrument == Instrument.Drums)
 				{
-					this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[j].\u02B2\u02BF\u02BD\u02B2\u02C0\u02BD\u02BA\u02B2\u02BC\u02B5\u02B6 = false;
+					this.playerObjects[j].\u02B2\u02BF\u02BD\u02B2\u02C0\u02BD\u02BA\u02B2\u02BC\u02B5\u02B6 = false;
 				}
 				if (this.\u02B5\u02B6\u02B6\u02B5\u02B9\u02BC\u02B7\u02BF\u02B8\u02B8\u02C0.Contains(u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.playerProfile.instrument))
 				{
 					for (int k = 0; k < j; k++)
 					{
-						if (this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[j].player.playerProfile.instrument == u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.playerProfile.instrument)
+						if (this.playerObjects[j].player.playerProfile.instrument == u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.playerProfile.instrument)
 						{
-							this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[j].\u02B2\u02BF\u02BD\u02B2\u02C0\u02BD\u02BA\u02B2\u02BC\u02B5\u02B6 = false;
+							this.playerObjects[j].\u02B2\u02BF\u02BD\u02B2\u02C0\u02BD\u02BA\u02B2\u02BC\u02B5\u02B6 = false;
 						}
 					}
 				}
@@ -996,7 +996,7 @@ public class GameManager : MonoBehaviour
 				{
 					this.\u02B5\u02B6\u02B6\u02B5\u02B9\u02BC\u02B7\u02BF\u02B8\u02B8\u02C0.Add(u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.playerProfile.instrument);
 				}
-				if (this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[j].\u02B2\u02BF\u02BD\u02B2\u02C0\u02BD\u02BA\u02B2\u02BC\u02B5\u02B6)
+				if (this.playerObjects[j].\u02B2\u02BF\u02BD\u02B2\u02C0\u02BD\u02BA\u02B2\u02BC\u02B5\u02B6)
 				{
 					BassAudioManager.Instance.\u02B4\u02B2\u02B9\u02B2\u02BC\u02BB\u02B2\u02BF\u02B7\u02B6\u02B4(u02C1_u02BB_u02BD_u02B7_u02BD_u02BB_u02BE_u02B5_u02B7_u02C0_u02B.playerProfile.moonInstrument);
 				}
@@ -1024,11 +1024,11 @@ public class GameManager : MonoBehaviour
 		this.\u02BB\u02C0\u02BC\u02BA\u02B6\u02BB\u02B4\u02B3\u02B2\u02BB\u02BA();
 		if (GlobalVariables.instance.isPracticeEnabled)
 		{
-			for (int l = 0; l < this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD.Length; l++)
+			for (int l = 0; l < this.playerObjects.Length; l++)
 			{
-				if (this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[l] != null)
+				if (this.playerObjects[l] != null)
 				{
-					this._basePlayer = this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD[l];
+					this._basePlayer = this.playerObjects[l];
 					break;
 				}
 			}
@@ -1193,7 +1193,7 @@ public class GameManager : MonoBehaviour
 
 	private void \u02B6\u02C0\u02C1\u02BD\u02C0\u02B3\u02B5\u02B2\u02B2\u02B2\u02BB()
 	{
-		foreach (BasePlayer basePlayer in this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD)
+		foreach (BasePlayer basePlayer in this.playerObjects)
 		{
 			if (!(basePlayer == null))
 			{
@@ -1307,7 +1307,7 @@ public class GameManager : MonoBehaviour
 			{
 				this.ResetPractice();
 			}
-			else if (!FadeBehaviour.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BC\u02BF\u02B7\u02BA\u02BC\u02B2\u02BA\u02B8\u02BF\u02BB\u02B3)
+			else if (!FadeBehaviour.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.isFading)
 			{
 				GlobalVariables.instance.\u02BE\u02B8\u02B9\u02BA\u02BB\u02C1\u02BB\u02B9\u02BE\u02C1\u02B9 = false;
 				this.EndSong();
@@ -1465,7 +1465,7 @@ public class GameManager : MonoBehaviour
 
 	public void \u02BC\u02B4\u02B9\u02BC\u02B8\u02B6\u02B5\u02BE\u02C0\u02BA\u02B6()
 	{
-		foreach (BasePlayer basePlayer in this.\u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD)
+		foreach (BasePlayer basePlayer in this.playerObjects)
 		{
 			if (!(basePlayer == null) && basePlayer.enabled && basePlayer.player.playerProfile != null && !basePlayer.player.playerProfile.isRemotePlayer)
 			{
@@ -1504,7 +1504,7 @@ public class GameManager : MonoBehaviour
 	public double \u02B7\u02BE\u02C0\u02B2\u02B8\u02C0\u02BA\u02C1\u02BB\u02B2\u02BC;
 
 	[HideInInspector]
-	public BasePlayer[] \u02BE\u02B8\u02C1\u02B3\u02BD\u02B9\u02B7\u02B4\u02BD\u02B5\u02BD;
+	public BasePlayer[] playerObjects;
 
 	private float \u02BF\u02BB\u02BD\u02BC\u02B9\u02B8\u02C0\u02B6\u02B2\u02B6\u02B2;
 

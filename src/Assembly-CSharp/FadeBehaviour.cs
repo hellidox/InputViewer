@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using A;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -22,7 +23,7 @@ public class FadeBehaviour : MonoBehaviour
 
 	private void Start()
 	{
-		SceneManager.activeSceneChanged += this.\u02B7\u02BB\u02B6\u02B6\u02B4\u02B6\u02C0\u02BC\u02BD\u02BD\u02BA;
+		SceneManager.activeSceneChanged += this.OnSceneChange;
 	}
 
 	public IEnumerator \u02B3\u02BB\u02B3\u02C0\u02B2\u02BA\u02BF\u02C1\u02BA\u02BF\u02B7()
@@ -38,17 +39,6 @@ public class FadeBehaviour : MonoBehaviour
 		u02BF_u02B3_u02B9_u02BA_u02C1_u02B3_u02B4_u02B8_u02BB_u02B3_u02C.<>4__this = this;
 		u02BF_u02B3_u02B9_u02BA_u02C1_u02B3_u02B4_u02B8_u02BB_u02B3_u02C.sceneName = \u02B7\u02BB\u02BE\u02BB\u02BC\u02BD\u02B7\u02B8\u02C0\u02B2\u02B7;
 		return u02BF_u02B3_u02B9_u02BA_u02C1_u02B3_u02B4_u02B8_u02BB_u02B3_u02C;
-	}
-
-	public void \u02BF\u02BA\u02C1\u02B3\u02B3\u02B7\u02BE\u02B9\u02B9\u02B2\u02B8()
-	{
-		if (this.\u02B8\u02C0\u02B9\u02B5\u02C1\u02BA\u02BC\u02BD\u02B8\u02B7\u02BF)
-		{
-			this.\u02B8\u02C0\u02B9\u02B5\u02C1\u02BA\u02BC\u02BD\u02B8\u02B7\u02BF = true;
-			this.fadeGraphic.canvasRenderer.SetAlpha(1942f);
-			this.fadeGraphic.gameObject.SetActive(true);
-			this.fadeGraphic.CrossFadeAlpha(590f, this.\u02B8\u02B6\u02B9\u02BC\u02B3\u02B3\u02BC\u02B6\u02C0\u02B6\u02B9, false);
-		}
 	}
 
 	public IEnumerator \u02C1\u02BB\u02C0\u02BA\u02B6\u02B2\u02B7\u02B4\u02B6\u02B4\u02BC()
@@ -72,7 +62,7 @@ public class FadeBehaviour : MonoBehaviour
 			this.\u02B8\u02C0\u02B9\u02B5\u02C1\u02BA\u02BC\u02BD\u02B8\u02B7\u02BF = false;
 			this.fadeGraphic.canvasRenderer.SetAlpha(1f);
 			this.fadeGraphic.gameObject.SetActive(true);
-			this.fadeGraphic.CrossFadeAlpha(0f, this.\u02B8\u02B6\u02B9\u02BC\u02B3\u02B3\u02BC\u02B6\u02C0\u02B6\u02B9, false);
+			this.fadeGraphic.CrossFadeAlpha(0f, this.fadeTime * GlobalHelper.fadeTime, false);
 			yield return this.\u02B4\u02B5\u02BD\u02BA\u02BA\u02BB\u02B5\u02B4\u02B4\u02B8\u02BE;
 		}
 		yield break;
@@ -87,7 +77,7 @@ public class FadeBehaviour : MonoBehaviour
 		}
 		FadeBehaviour.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 = this;
 		global::UnityEngine.Object.DontDestroyOnLoad(this);
-		this.\u02B4\u02B5\u02BD\u02BA\u02BA\u02BB\u02B5\u02B4\u02B4\u02B8\u02BE = new WaitForSecondsRealtime(this.\u02B8\u02B6\u02B9\u02BC\u02B3\u02B3\u02BC\u02B6\u02C0\u02B6\u02B9);
+		this.\u02B4\u02B5\u02BD\u02BA\u02BA\u02BB\u02B5\u02B4\u02B4\u02B8\u02BE = new WaitForSecondsRealtime(this.fadeTime);
 	}
 
 	public void \u02BE\u02C0\u02B2\u02BF\u02C0\u02BA\u02C0\u02BB\u02B4\u02BC\u02BE()
@@ -97,7 +87,7 @@ public class FadeBehaviour : MonoBehaviour
 			this.\u02B8\u02C0\u02B9\u02B5\u02C1\u02BA\u02BC\u02BD\u02B8\u02B7\u02BF = false;
 			this.fadeGraphic.canvasRenderer.SetAlpha(1f);
 			this.fadeGraphic.gameObject.SetActive(true);
-			this.fadeGraphic.CrossFadeAlpha(0f, this.\u02B8\u02B6\u02B9\u02BC\u02B3\u02B3\u02BC\u02B6\u02C0\u02B6\u02B9, false);
+			this.fadeGraphic.CrossFadeAlpha(0f, this.fadeTime * GlobalHelper.fadeTime, false);
 		}
 	}
 
@@ -123,7 +113,7 @@ public class FadeBehaviour : MonoBehaviour
 
 	private IEnumerator \u02C1\u02B4\u02B3\u02B6\u02C1\u02B7\u02B4\u02B9\u02C1\u02B4\u02BF(string \u02B7\u02BB\u02BE\u02BB\u02BC\u02BD\u02B7\u02B8\u02C0\u02B2\u02B7)
 	{
-		this.\u02BC\u02BF\u02B7\u02BA\u02BC\u02B2\u02BA\u02B8\u02BF\u02BB\u02B3 = true;
+		this.isFading = true;
 		yield return this.\u02BE\u02BA\u02B4\u02B8\u02B2\u02B7\u02BB\u02BD\u02C0\u02B4\u02B9();
 		Time.timeScale = 1f;
 		AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(\u02B7\u02BB\u02BE\u02BB\u02BC\u02BD\u02B7\u02B8\u02C0\u02B2\u02B7);
@@ -138,7 +128,7 @@ public class FadeBehaviour : MonoBehaviour
 			this.\u02B8\u02C0\u02B9\u02B5\u02C1\u02BA\u02BC\u02BD\u02B8\u02B7\u02BF = true;
 			this.fadeGraphic.canvasRenderer.SetAlpha(0f);
 			this.fadeGraphic.gameObject.SetActive(true);
-			this.fadeGraphic.CrossFadeAlpha(1f, this.\u02B8\u02B6\u02B9\u02BC\u02B3\u02B3\u02BC\u02B6\u02C0\u02B6\u02B9, true);
+			this.fadeGraphic.CrossFadeAlpha(1f, this.fadeTime * GlobalHelper.fadeTime, true);
 			yield return this.\u02B4\u02B5\u02BD\u02BA\u02BA\u02BB\u02B5\u02B4\u02B4\u02B8\u02BE;
 		}
 		yield break;
@@ -151,7 +141,7 @@ public class FadeBehaviour : MonoBehaviour
 			this.\u02B8\u02C0\u02B9\u02B5\u02C1\u02BA\u02BC\u02BD\u02B8\u02B7\u02BF = false;
 			this.fadeGraphic.canvasRenderer.SetAlpha(1f);
 			this.fadeGraphic.gameObject.SetActive(true);
-			this.fadeGraphic.CrossFadeAlpha(0f, this.\u02B8\u02B6\u02B9\u02BC\u02B3\u02B3\u02BC\u02B6\u02C0\u02B6\u02B9, false);
+			this.fadeGraphic.CrossFadeAlpha(0f, this.fadeTime * GlobalHelper.fadeTime, false);
 			yield return this.\u02B4\u02B5\u02BD\u02BA\u02BA\u02BB\u02B5\u02B4\u02B4\u02B8\u02BE;
 		}
 		yield break;
@@ -164,21 +154,10 @@ public class FadeBehaviour : MonoBehaviour
 			this.\u02B8\u02C0\u02B9\u02B5\u02C1\u02BA\u02BC\u02BD\u02B8\u02B7\u02BF = true;
 			this.fadeGraphic.canvasRenderer.SetAlpha(0f);
 			this.fadeGraphic.gameObject.SetActive(true);
-			this.fadeGraphic.CrossFadeAlpha(1f, this.\u02B8\u02B6\u02B9\u02BC\u02B3\u02B3\u02BC\u02B6\u02C0\u02B6\u02B9, true);
+			this.fadeGraphic.CrossFadeAlpha(1f, this.fadeTime, true);
 			yield return this.\u02B4\u02B5\u02BD\u02BA\u02BA\u02BB\u02B5\u02B4\u02B4\u02B8\u02BE;
 		}
 		yield break;
-	}
-
-	public void \u02BA\u02C0\u02B7\u02BA\u02BC\u02B8\u02B2\u02B7\u02BB\u02B4\u02B7()
-	{
-		if (this.\u02B8\u02C0\u02B9\u02B5\u02C1\u02BA\u02BC\u02BD\u02B8\u02B7\u02BF)
-		{
-			this.\u02B8\u02C0\u02B9\u02B5\u02C1\u02BA\u02BC\u02BD\u02B8\u02B7\u02BF = true;
-			this.fadeGraphic.canvasRenderer.SetAlpha(1206f);
-			this.fadeGraphic.gameObject.SetActive(true);
-			this.fadeGraphic.CrossFadeAlpha(1410f, this.\u02B8\u02B6\u02B9\u02BC\u02B3\u02B3\u02BC\u02B6\u02C0\u02B6\u02B9, false);
-		}
 	}
 
 	public IEnumerator \u02B5\u02BF\u02C1\u02BE\u02B6\u02B8\u02B2\u02BD\u02C0\u02B3\u02B8()
@@ -188,15 +167,15 @@ public class FadeBehaviour : MonoBehaviour
 			this.\u02B8\u02C0\u02B9\u02B5\u02C1\u02BA\u02BC\u02BD\u02B8\u02B7\u02BF = true;
 			this.fadeGraphic.canvasRenderer.SetAlpha(0f);
 			this.fadeGraphic.gameObject.SetActive(true);
-			this.fadeGraphic.CrossFadeAlpha(1f, this.\u02B8\u02B6\u02B9\u02BC\u02B3\u02B3\u02BC\u02B6\u02C0\u02B6\u02B9, true);
+			this.fadeGraphic.CrossFadeAlpha(1f, this.fadeTime, true);
 			yield return this.\u02B4\u02B5\u02BD\u02BA\u02BA\u02BB\u02B5\u02B4\u02B4\u02B8\u02BE;
 		}
 		yield break;
 	}
 
-	private void \u02B7\u02BB\u02B6\u02B6\u02B4\u02B6\u02C0\u02BC\u02BD\u02BD\u02BA(Scene \u02B4\u02B7\u02BA\u02B5\u02B7\u02C0\u02B3\u02BB\u02BF\u02C1\u02BA, Scene \u02B3\u02BA\u02B8\u02BC\u02B5\u02BD\u02B3\u02B7\u02BA\u02C1\u02B9)
+	private void OnSceneChange(Scene \u02B4\u02B7\u02BA\u02B5\u02B7\u02C0\u02B3\u02BB\u02BF\u02C1\u02BA, Scene \u02B3\u02BA\u02B8\u02BC\u02B5\u02BD\u02B3\u02B7\u02BA\u02C1\u02B9)
 	{
-		this.\u02BC\u02BF\u02B7\u02BA\u02BC\u02B2\u02BA\u02B8\u02BF\u02BB\u02B3 = false;
+		this.isFading = false;
 	}
 
 	private void Awake()
@@ -208,7 +187,7 @@ public class FadeBehaviour : MonoBehaviour
 		}
 		FadeBehaviour.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 = this;
 		global::UnityEngine.Object.DontDestroyOnLoad(this);
-		this.\u02B4\u02B5\u02BD\u02BA\u02BA\u02BB\u02B5\u02B4\u02B4\u02B8\u02BE = new WaitForSecondsRealtime(this.\u02B8\u02B6\u02B9\u02BC\u02B3\u02B3\u02BC\u02B6\u02C0\u02B6\u02B9);
+		this.\u02B4\u02B5\u02BD\u02BA\u02BA\u02BB\u02B5\u02B4\u02B4\u02B8\u02BE = new WaitForSecondsRealtime(this.fadeTime);
 	}
 
 	private void \u02B3\u02B8\u02C1\u02BE\u02B7\u02C0\u02B8\u02B8\u02B3\u02B3\u02B7()
@@ -220,7 +199,7 @@ public class FadeBehaviour : MonoBehaviour
 		}
 		FadeBehaviour.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7 = this;
 		global::UnityEngine.Object.DontDestroyOnLoad(this);
-		this.\u02B4\u02B5\u02BD\u02BA\u02BA\u02BB\u02B5\u02B4\u02B4\u02B8\u02BE = new WaitForSecondsRealtime(this.\u02B8\u02B6\u02B9\u02BC\u02B3\u02B3\u02BC\u02B6\u02C0\u02B6\u02B9);
+		this.\u02B4\u02B5\u02BD\u02BA\u02BA\u02BB\u02B5\u02B4\u02B4\u02B8\u02BE = new WaitForSecondsRealtime(this.fadeTime * GlobalHelper.fadeTime);
 	}
 
 	public IEnumerator \u02BA\u02BF\u02B2\u02BC\u02BA\u02BB\u02C1\u02B6\u02B4\u02B7\u02B8()
@@ -230,7 +209,7 @@ public class FadeBehaviour : MonoBehaviour
 			this.\u02B8\u02C0\u02B9\u02B5\u02C1\u02BA\u02BC\u02BD\u02B8\u02B7\u02BF = true;
 			this.fadeGraphic.canvasRenderer.SetAlpha(0f);
 			this.fadeGraphic.gameObject.SetActive(true);
-			this.fadeGraphic.CrossFadeAlpha(1f, this.\u02B8\u02B6\u02B9\u02BC\u02B3\u02B3\u02BC\u02B6\u02C0\u02B6\u02B9, true);
+			this.fadeGraphic.CrossFadeAlpha(1f, this.fadeTime, true);
 			yield return this.\u02B4\u02B5\u02BD\u02BA\u02BA\u02BB\u02B5\u02B4\u02B4\u02B8\u02BE;
 		}
 		yield break;
@@ -243,7 +222,7 @@ public class FadeBehaviour : MonoBehaviour
 			this.\u02B8\u02C0\u02B9\u02B5\u02C1\u02BA\u02BC\u02BD\u02B8\u02B7\u02BF = false;
 			this.fadeGraphic.canvasRenderer.SetAlpha(1f);
 			this.fadeGraphic.gameObject.SetActive(true);
-			this.fadeGraphic.CrossFadeAlpha(0f, this.\u02B8\u02B6\u02B9\u02BC\u02B3\u02B3\u02BC\u02B6\u02C0\u02B6\u02B9, false);
+			this.fadeGraphic.CrossFadeAlpha(0f, this.fadeTime, false);
 			yield return this.\u02B4\u02B5\u02BD\u02BA\u02BA\u02BB\u02B5\u02B4\u02B4\u02B8\u02BE;
 		}
 		yield break;
@@ -254,9 +233,9 @@ public class FadeBehaviour : MonoBehaviour
 	[SerializeField]
 	private Image fadeGraphic;
 
-	public float \u02B8\u02B6\u02B9\u02BC\u02B3\u02B3\u02BC\u02B6\u02C0\u02B6\u02B9;
+	public float fadeTime;
 
-	public bool \u02BC\u02BF\u02B7\u02BA\u02BC\u02B2\u02BA\u02B8\u02BF\u02BB\u02B3;
+	public bool isFading;
 
 	private WaitForSecondsRealtime \u02B4\u02B5\u02BD\u02BA\u02BA\u02BB\u02B5\u02B4\u02B4\u02B8\u02BE;
 

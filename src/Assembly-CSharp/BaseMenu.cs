@@ -169,7 +169,7 @@ public class BaseMenu : MonoBehaviour
 	protected virtual void Update()
 	{
 		Thread.Sleep(1);
-		if (FadeBehaviour.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.\u02BC\u02BF\u02B7\u02BA\u02BC\u02B2\u02BA\u02B8\u02BF\u02BB\u02B3)
+		if (FadeBehaviour.\u02B7\u02B2\u02BA\u02B7\u02BB\u02B3\u02BE\u02B6\u02C1\u02C0\u02B7.isFading)
 		{
 			return;
 		}

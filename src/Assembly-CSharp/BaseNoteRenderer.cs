@@ -124,10 +124,10 @@ public abstract class BaseNoteRenderer : MonoBehaviour, \u02B6\u02BB\u02BD\u02BB
 		while (num2 <= \u02BB\u02BC\u02C1\u02B5\u02B5\u02BA\u02B9\u02B6\u02BF\u02B5\u02C0 && num2 < \u02B9\u02B5\u02B8\u02C1\u02BA\u02B2\u02BA\u02C0\u02C1\u02C1\u02BD.Count && \u02B6\u02B4\u02C0\u02B8\u02C1\u02C0\u02BE\u02BC\u02B6\u02B3\u02BF < num)
 		{
 			T t = \u02B9\u02B5\u02B8\u02C1\u02BA\u02B2\u02BA\u02C0\u02C1\u02C1\u02BD[num2];
-			Helper.UintPair this2 = Helper.NewUintPair((uint)t.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF).GetThis();
-			while (this2.MoreThanOneBitSet())
+			Helper.UintPair uintPair = Helper.NewUintPair((uint)t.\u02BF\u02C0\u02B8\u02BB\u02BA\u02B8\u02B3\u02BA\u02B4\u02BB\u02BF).dup();
+			while (uintPair.anyset_clearlowest())
 			{
-				ushort num3 = (ushort)this2.xor;
+				ushort num3 = (ushort)uintPair.xor;
 				int num4 = this.\u02C1\u02B7\u02C0\u02B7\u02B9\u02B2\u02B2\u02BF\u02BC\u02C0\u02BF(num3);
 				\u02B5\u02BA\u02B7\u02C1\u02BD\u02BD\u02C1\u02B5\u02C1\u02BB\u02BF[\u02B6\u02B4\u02C0\u02B8\u02C1\u02C0\u02BE\u02BC\u02B6\u02B3\u02BF].SetActive(true);
 				SpriteRenderer spriteRenderer = \u02BD\u02B4\u02B9\u02C1\u02C1\u02B5\u02C1\u02BE\u02B4\u02BA\u02BC[\u02B6\u02B4\u02C0\u02B8\u02C1\u02C0\u02BE\u02BC\u02B6\u02B3\u02BF];

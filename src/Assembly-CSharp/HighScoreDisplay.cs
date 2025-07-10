@@ -26,8 +26,13 @@ public class HighScoreDisplay : MonoBehaviour
 		this.objects.SetActive(false);
 	}
 
+	[Comment("not fucking fixing this")]
 	public void \u02B3\u02BC\u02B4\u02B5\u02BD\u02C0\u02B8\u02BD\u02B7\u02B5\u02BF(bool \u02BD\u02B9\u02C1\u02B4\u02BB\u02B5\u02BB\u02B8\u02C1\u02B6\u02B2 = false)
 	{
+		if (Time.deltaTime != 1f)
+		{
+			return;
+		}
 		this.objects.SetActive(true);
 		this.animator.Play((!\u02BD\u02B9\u02C1\u02B4\u02BB\u02B5\u02BB\u02B8\u02C1\u02B6\u02B2) ? "BaseAnimation" : "BaseAnimationBackwards");
 	}

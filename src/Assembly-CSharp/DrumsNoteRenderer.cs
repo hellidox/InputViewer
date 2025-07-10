@@ -331,7 +331,7 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 			{
 				if (!note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 && !note.wasMissed)
 				{
-					int num4 = this.\u02C1\u02B7\u02C0\u02B7\u02B9\u02B2\u02B2\u02BF\u02BC\u02C0\u02BF(note._noteMask);
+					int num4 = this.\u02C1\u02B7\u02C0\u02B7\u02B9\u02B2\u02B2\u02BF\u02BC\u02C0\u02BF(note.noteMask);
 					this.\u02C0\u02B2\u02BD\u02B9\u02B8\u02B5\u02BD\u02B5\u02BC\u02B9\u02BD[num].SetActive(this.\u02B6\u02BB\u02B2\u02B5\u02BC\u02BB\u02B7\u02B3\u02C1\u02B4\u02B2);
 					DrumsNoteContainer drumsNoteContainer = this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7[num] as DrumsNoteContainer;
 					drumsNoteContainer.\u02BC\u02C0\u02B9\u02B6\u02B9\u02C0\u02B8\u02B6\u02BD\u02C1\u02BD = this.basePlayer.\u02BF\u02C0\u02BA\u02B6\u02B7\u02C0\u02B2\u02BE\u02BC\u02BA\u02B2;
@@ -648,7 +648,7 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 			{
 				if (!note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 && !note.wasMissed)
 				{
-					int num4 = this.\u02C1\u02B7\u02C0\u02B7\u02B9\u02B2\u02B2\u02BF\u02BC\u02C0\u02BF(note._noteMask);
+					int num4 = this.\u02C1\u02B7\u02C0\u02B7\u02B9\u02B2\u02B2\u02BF\u02BC\u02C0\u02BF(note.noteMask);
 					this.\u02C0\u02B2\u02BD\u02B9\u02B8\u02B5\u02BD\u02B5\u02BC\u02B9\u02BD[num].SetActive(!this.\u02B6\u02BB\u02B2\u02B5\u02BC\u02BB\u02B7\u02B3\u02C1\u02B4\u02B2);
 					DrumsNoteContainer drumsNoteContainer = this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7[num] as DrumsNoteContainer;
 					drumsNoteContainer.\u02BC\u02C0\u02B9\u02B6\u02B9\u02C0\u02B8\u02B6\u02BD\u02C1\u02BD = this.basePlayer.\u02BF\u02C0\u02BA\u02B6\u02B7\u02C0\u02B2\u02BE\u02BC\u02BA\u02B2;
@@ -766,7 +766,7 @@ public class DrumsNoteRenderer : BaseNoteRenderer
 			{
 				if (!note.\u02BF\u02BF\u02B7\u02BE\u02B9\u02BC\u02B8\u02B7\u02C0\u02BC\u02B4 && !note.wasMissed)
 				{
-					int num4 = this.\u02C1\u02B7\u02C0\u02B7\u02B9\u02B2\u02B2\u02BF\u02BC\u02C0\u02BF(note._noteMask);
+					int num4 = this.\u02C1\u02B7\u02C0\u02B7\u02B9\u02B2\u02B2\u02BF\u02BC\u02C0\u02BF(note.noteMask);
 					this.\u02C0\u02B2\u02BD\u02B9\u02B8\u02B5\u02BD\u02B5\u02BC\u02B9\u02BD[num].SetActive(this.\u02B6\u02BB\u02B2\u02B5\u02BC\u02BB\u02B7\u02B3\u02C1\u02B4\u02B2);
 					DrumsNoteContainer drumsNoteContainer = this.\u02B7\u02B6\u02BD\u02BC\u02BD\u02BB\u02BA\u02B2\u02B4\u02B6\u02B7[num] as DrumsNoteContainer;
 					drumsNoteContainer.\u02BC\u02C0\u02B9\u02B6\u02B9\u02C0\u02B8\u02B6\u02BD\u02C1\u02BD = this.basePlayer.\u02BF\u02C0\u02BA\u02B6\u02B7\u02C0\u02B2\u02BE\u02BC\u02BA\u02B2;

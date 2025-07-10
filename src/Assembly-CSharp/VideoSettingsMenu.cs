@@ -1445,10 +1445,10 @@ public class VideoSettingsMenu : BaseSettingMenu
 	private void \u02B5\u02BC\u02BE\u02B3\u02C0\u02B7\u02B5\u02B6\u02BD\u02C1\u02C1()
 	{
 		this.\u02BF\u02B3\u02BC\u02BB\u02C0\u02B4\u02BC\u02C0\u02C1\u02B2\u02BE = new List<VideoSettingsMenu.\u02B8\u02BA\u02B2\u02B4\u02B5\u02C1\u02B2\u02BD\u02BB\u02B9\u02BF>();
-		Helper.UintPair this2 = Helper.NewUintPair((uint)Helper.SupportedGraphicsAPIs()).GetThis();
-		while (this2.MoreThanOneBitSet())
+		Helper.UintPair uintPair = Helper.NewUintPair((uint)Helper.SupportedGraphicsAPIs()).dup();
+		while (uintPair.anyset_clearlowest())
 		{
-			Helper.GraphicsAPI graphicsAPI = (Helper.GraphicsAPI)this2.xor;
+			Helper.GraphicsAPI graphicsAPI = (Helper.GraphicsAPI)uintPair.xor;
 			VideoSettingsMenu.\u02B8\u02BA\u02B2\u02B4\u02B5\u02C1\u02B2\u02BD\u02BB\u02B9\u02BF u02B8_u02BA_u02B2_u02B4_u02B5_u02C1_u02B2_u02BD_u02BB_u02B9_u02BF = default(VideoSettingsMenu.\u02B8\u02BA\u02B2\u02B4\u02B5\u02C1\u02B2\u02BD\u02BB\u02B9\u02BF);
 			u02B8_u02BA_u02B2_u02B4_u02B5_u02C1_u02B2_u02BD_u02BB_u02B9_u02BF.\u02BF\u02B4\u02C1\u02BC\u02BC\u02B2\u02BC\u02BB\u02BA\u02B2\u02B6 = Helper.\u02B9\u02B6\u02C0\u02B9\u02B3\u02BA\u02B8\u02BF\u02B4\u02BE\u02BB(graphicsAPI);
 			u02B8_u02BA_u02B2_u02B4_u02B5_u02C1_u02B2_u02BD_u02BB_u02B9_u02BF.\u02BB\u02B5\u02BA\u02B6\u02BE\u02BA\u02B6\u02BD\u02B3\u02B9\u02BF = graphicsAPI;

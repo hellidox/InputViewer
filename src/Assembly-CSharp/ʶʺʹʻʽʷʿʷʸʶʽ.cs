@@ -84,10 +84,10 @@ public static class \u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6
 	{
 		for (int i = 0; i < \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8.Count; i++)
 		{
-			if ((\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i]._noteMask & 112) != 0)
+			if ((\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].noteMask & 112) != 0)
 			{
 				Note note = \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i];
-				note._noteMask = (ushort)(note._noteMask >> 3);
+				note.noteMask = (ushort)(note.noteMask >> 3);
 			}
 		}
 	}
@@ -105,28 +105,28 @@ public static class \u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6
 	{
 		for (int i = 0; i < \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8.Count; i++)
 		{
-			ushort num = \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i]._noteMask;
+			ushort num = \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].noteMask;
 			if (num != 2)
 			{
 				if (num == 32)
 				{
-					if ((\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].noteMask & 8) != 0 || (\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].noteMask & 64) != 0)
+					if ((\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].DisjointMask & 8) != 0 || (\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].DisjointMask & 64) != 0)
 					{
-						\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i]._noteMask = 16;
+						\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].noteMask = 16;
 					}
 					else
 					{
-						\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i]._noteMask = 64;
+						\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].noteMask = 64;
 					}
 				}
 			}
-			else if ((\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].noteMask & 4) != 0 || (\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].noteMask & 32) != 0)
+			else if ((\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].DisjointMask & 4) != 0 || (\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].DisjointMask & 32) != 0)
 			{
-				\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i]._noteMask = 1;
+				\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].noteMask = 1;
 			}
 			else
 			{
-				\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i]._noteMask = 4;
+				\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].noteMask = 4;
 			}
 		}
 	}
@@ -136,7 +136,7 @@ public static class \u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6
 		bool flag = \u02B5\u02B5\u02B3\u02B9\u02C1\u02C1\u02B6\u02B9\u02B7\u02B8\u02B7;
 		for (int i = 0; i < \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8.Count; i++)
 		{
-			if (\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i]._noteMask == 512)
+			if (\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].noteMask == 512)
 			{
 				flag = true;
 				break;
@@ -147,38 +147,38 @@ public static class \u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6
 			\u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6\u02BD.\u02BF\u02BE\u02B2\u02BD\u02BB\u02B9\u02BA\u02B6\u02C0\u02B9\u02BD(\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8, \u02B7\u02BB\u02BA\u02BC\u02B4\u02B6\u02B4\u02B3\u02BD\u02BA\u02BF);
 			for (int j = 0; j < \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8.Count; j++)
 			{
-				ushort num = \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[j]._noteMask;
+				ushort num = \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[j].noteMask;
 				switch (num)
 				{
 				case 1:
-					\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[j]._noteMask = 1;
+					\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[j].noteMask = 1;
 					break;
 				case 2:
-					\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[j]._noteMask = 16;
+					\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[j].noteMask = 16;
 					break;
 				case 3:
 					break;
 				case 4:
-					\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[j]._noteMask = 4;
+					\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[j].noteMask = 4;
 					break;
 				default:
 					if (num != 8)
 					{
 						if (num == 512)
 						{
-							if ((\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[j].noteMask & 8) != 0 || (\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[j].noteMask & 64) != 0)
+							if ((\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[j].DisjointMask & 8) != 0 || (\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[j].DisjointMask & 64) != 0)
 							{
-								\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[j]._noteMask = 4;
+								\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[j].noteMask = 4;
 							}
 							else
 							{
-								\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[j]._noteMask = 8;
+								\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[j].noteMask = 8;
 							}
 						}
 					}
 					else
 					{
-						\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[j]._noteMask = 64;
+						\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[j].noteMask = 64;
 					}
 					break;
 				}
@@ -192,17 +192,17 @@ public static class \u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6
 		{
 			if ((\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].\u02C0\u02B7\u02C1\u02B5\u02B9\u02B3\u02BF\u02B5\u02BC\u02B9\u02C0 & Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.DRUMS_DISCO) != Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.NONE)
 			{
-				ushort num = \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i]._noteMask;
+				ushort num = \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].noteMask;
 				if (num != 1)
 				{
 					if (num == 2 || num == 16)
 					{
-						\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i]._noteMask = 1;
+						\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].noteMask = 1;
 					}
 				}
 				else
 				{
-					\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i]._noteMask = 16;
+					\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].noteMask = 16;
 				}
 			}
 		}
@@ -214,7 +214,7 @@ public static class \u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6
 		int num = 0;
 		for (int i = 0; i < \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8.Count; i++)
 		{
-			if (!dictionary.ContainsKey(i) && (\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].\u02C0\u02B7\u02C1\u02B5\u02B9\u02B3\u02BF\u02B5\u02BC\u02B9\u02C0 & Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.DRUMS_FLAM) != Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.NONE && (\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i]._noteMask & 384) == 0 && (!\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].IsDisjoint || (\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].\u02C1\u02B7\u02B6\u02BF\u02B9\u02BB\u02B8\u02BD\u02B9\u02B8\u02B3 <= 2 && (\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].noteMask & 384) != 0)))
+			if (!dictionary.ContainsKey(i) && (\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].\u02C0\u02B7\u02C1\u02B5\u02B9\u02B3\u02BF\u02B5\u02BC\u02B9\u02C0 & Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.DRUMS_FLAM) != Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.NONE && (\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].noteMask & 384) == 0 && (!\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].IsDisjoint || (\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].\u02C1\u02B7\u02B6\u02BF\u02B9\u02BB\u02B8\u02BD\u02B9\u02B8\u02B3 <= 2 && (\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].DisjointMask & 384) != 0)))
 			{
 				\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].\u02C0\u02B7\u02C1\u02B5\u02B9\u02B3\u02BF\u02B5\u02BC\u02B9\u02C0 |= Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.CHORD | Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.DISJOINT | Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.EXTENDED_SUSTAIN;
 				Note note = new Note(\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i]);
@@ -226,30 +226,30 @@ public static class \u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6
 					\u02B6\u02B2\u02B9\u02BD\u02BA\u02B3\u02BD\u02BA\u02B2\u02B6\u02B3[num].\u02B9\u02BE\u02BD\u02BF\u02BB\u02BB\u02BE\u02BF\u02BC\u02B3\u02B8 = note;
 					num++;
 				}
-				ushort num2 = \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i]._noteMask;
+				ushort num2 = \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].noteMask;
 				if (num2 <= 8)
 				{
 					switch (num2)
 					{
 					case 1:
-						note._noteMask = 2;
+						note.noteMask = 2;
 						break;
 					case 2:
-						note._noteMask = 4;
+						note.noteMask = 4;
 						break;
 					case 3:
 						goto IL_01EC;
 					case 4:
-						\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i]._noteMask = 2;
-						note._noteMask = 8;
+						\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].noteMask = 2;
+						note.noteMask = 8;
 						break;
 					default:
 						if (num2 != 8)
 						{
 							goto IL_01EC;
 						}
-						\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i]._noteMask = 4;
-						note._noteMask = 8;
+						\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].noteMask = 4;
+						note.noteMask = 8;
 						break;
 					}
 				}
@@ -261,17 +261,17 @@ public static class \u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6
 						{
 							goto IL_01EC;
 						}
-						\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i]._noteMask = 32;
-						note._noteMask = 64;
+						\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].noteMask = 32;
+						note.noteMask = 64;
 					}
 					else
 					{
-						note._noteMask = 64;
+						note.noteMask = 64;
 					}
 				}
 				else
 				{
-					note._noteMask = 32;
+					note.noteMask = 32;
 				}
 				\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].\u02B7\u02C1\u02BF\u02B4\u02BD\u02B7\u02BE\u02B3\u02BA\u02C0\u02B4 = note;
 				note.\u02BF\u02BB\u02B7\u02BA\u02BA\u02BB\u02C0\u02BF\u02B8\u02B4\u02B3 = \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i];
@@ -287,7 +287,7 @@ public static class \u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6
 	{
 		for (int i = 0; i < \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8.Count; i++)
 		{
-			if (\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i]._noteMask == 256)
+			if (\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].noteMask == 256)
 			{
 				if (\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].\u02BF\u02BB\u02B7\u02BA\u02BA\u02BB\u02C0\u02BF\u02B8\u02B4\u02B3 != null)
 				{
@@ -307,9 +307,9 @@ public static class \u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6
 	{
 		for (int i = 0; i < \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8.Count; i++)
 		{
-			if (\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i]._noteMask == 256)
+			if (\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].noteMask == 256)
 			{
-				\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i]._noteMask = 128;
+				\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i].noteMask = 128;
 			}
 		}
 		\u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8.RemoveAll(new Predicate<Note>(\u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6\u02BD.<>c.<>9.\u02B2\u02BB\u02B3\u02BD\u02B8\u02BC\u02BC\u02B3\u02BF\u02B4\u02BB));
@@ -320,7 +320,7 @@ public static class \u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6
 		for (int i = 0; i < \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8.Count; i++)
 		{
 			Note note = \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i];
-			if (note._noteMask == 128)
+			if (note.noteMask == 128)
 			{
 				if (note.\u02BF\u02BB\u02B7\u02BA\u02BA\u02BB\u02C0\u02BF\u02B8\u02B4\u02B3 != null)
 				{
@@ -349,9 +349,9 @@ public static class \u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6
 			else
 			{
 				num = note.tickPosition;
-				if (note._noteMask != 128)
+				if (note.noteMask != 128)
 				{
-					note._noteMask = 128;
+					note.noteMask = 128;
 				}
 				if (note.\u02B7\u02C1\u02BF\u02B4\u02BD\u02B7\u02BE\u02B3\u02BA\u02C0\u02B4 != null)
 				{
@@ -371,7 +371,7 @@ public static class \u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6
 		ushort num = \u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6\u02BD.\u02C1\u02BE\u02BF\u02B2\u02BD\u02B5\u02BD\u02BB\u02B8\u02C0\u02B7(\u02B7\u02BB\u02BA\u02BC\u02B4\u02B6\u02B4\u02B3\u02BD\u02BA\u02BF);
 		foreach (Note note in \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8)
 		{
-			note._noteMask = num;
+			note.noteMask = num;
 			note.\u02BA\u02C1\u02BC\u02B7\u02B7\u02B8\u02B9\u02BB\u02BD\u02BB\u02BA = \u02BF\u02BF\u02BB\u02BC\u02B5\u02B9\u02B6\u02C1\u02BB\u02B3\u02BD.\u02B8\u02C1\u02B3\u02B7\u02BC\u02BF\u02BC\u02BC\u02BF\u02C1\u02BA.Strum;
 		}
 	}
@@ -419,18 +419,18 @@ public static class \u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6
 		ushort num8 = \u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6\u02BD.\u02C1\u02BE\u02BF\u02B2\u02BD\u02B5\u02BD\u02BB\u02B8\u02C0\u02B7(\u02B7\u02BB\u02BA\u02BC\u02B4\u02B6\u02B4\u02B3\u02BD\u02BA\u02BF);
 		foreach (Note note in \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8)
 		{
-			if ((note._noteMask & num8) == 0 && (flag || (!note.IsExtendedSustain && note._noteMask != num7)))
+			if ((note.noteMask & num8) == 0 && (flag || (!note.IsExtendedSustain && note.noteMask != num7)))
 			{
-				int num9 = Helper.\u02C0\u02B4\u02B9\u02C0\u02BE\u02B5\u02BA\u02B6\u02B8\u02B6\u02BD(note._noteMask);
+				int num9 = Helper.\u02C0\u02B4\u02B9\u02C0\u02BE\u02B5\u02BA\u02B6\u02B8\u02B6\u02BD(note.noteMask);
 				ushort num10 = 0;
-				ushort num11 = note.noteMask & 127;
+				ushort num11 = note.DisjointMask & 127;
 				if (flag && num4 != 0 && num4 == num11)
 				{
 					int num12 = 0;
-					Helper.UintPair @this = Helper.NewUintPair((uint)num11).GetThis();
-					while (@this.MoreThanOneBitSet())
+					Helper.UintPair uintPair = Helper.NewUintPair((uint)num11).dup();
+					while (uintPair.anyset_clearlowest())
 					{
-						if (@this.xor == (uint)note._noteMask)
+						if (uintPair.xor == (uint)note.noteMask)
 						{
 							num10 = Helper.\u02BE\u02BB\u02B6\u02B7\u02B8\u02C0\u02BF\u02B5\u02C0\u02B6\u02B6(num2, num12);
 							break;
@@ -464,7 +464,7 @@ public static class \u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6
 				{
 					num2 = num10;
 				}
-				note._noteMask = num10;
+				note.noteMask = num10;
 				num5 = note.tickPosition;
 			}
 		}
@@ -490,7 +490,7 @@ public static class \u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6
 				while (enumerator.MoveNext())
 				{
 					Note note = enumerator.Current;
-					ushort num = note._noteMask;
+					ushort num = note.noteMask;
 					if (num != 63)
 					{
 						ushort num2 = 0;
@@ -522,7 +522,7 @@ public static class \u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6
 						{
 							num2 |= 64;
 						}
-						note._noteMask = num2;
+						note.noteMask = num2;
 					}
 				}
 				return;
@@ -542,7 +542,7 @@ public static class \u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6
 			while (enumerator.MoveNext())
 			{
 				Note note2 = enumerator.Current;
-				ushort num3 = note2._noteMask;
+				ushort num3 = note2.noteMask;
 				if (num3 != 31)
 				{
 					ushort num4 = 0;
@@ -570,7 +570,7 @@ public static class \u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6
 					{
 						num4 |= 64;
 					}
-					note2._noteMask = num4;
+					note2.noteMask = num4;
 				}
 			}
 			return;
@@ -578,56 +578,56 @@ public static class \u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6
 		IL_0160:
 		foreach (Note note3 in \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8)
 		{
-			ushort num5 = note3._noteMask;
+			ushort num5 = note3.noteMask;
 			if (num5 != 15)
 			{
 				if ((num5 & 1) != 0)
 				{
-					note3._noteMask = 8;
+					note3.noteMask = 8;
 				}
 				if ((num5 & 2) != 0)
 				{
-					note3._noteMask = 4;
+					note3.noteMask = 4;
 				}
 				if ((num5 & 4) != 0)
 				{
-					note3._noteMask = 2;
+					note3.noteMask = 2;
 				}
 				if ((num5 & 8) != 0)
 				{
-					note3._noteMask = 1;
+					note3.noteMask = 1;
 				}
 			}
 		}
 		foreach (Note note4 in \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8)
 		{
-			ushort num6 = note4._noteMask;
-			ushort num7 = note4.noteMask ^ num6;
+			ushort num6 = note4.noteMask;
+			ushort num7 = note4.DisjointMask ^ num6;
 			if (num6 != 15)
 			{
 				if ((num6 & 16) != 0 && (num7 & 8) == 0)
 				{
-					note4._noteMask = 64;
+					note4.noteMask = 64;
 				}
 				if ((num6 & 16) != 0 && (num7 & 8) != 0)
 				{
-					note4._noteMask = 32;
+					note4.noteMask = 32;
 				}
 				if ((num6 & 32) != 0 && (num7 & 4) == 0)
 				{
-					note4._noteMask = 32;
+					note4.noteMask = 32;
 				}
 				if ((num6 & 32) != 0 && (num7 & 4) != 0)
 				{
-					note4._noteMask = 16;
+					note4.noteMask = 16;
 				}
 				if ((num6 & 64) != 0 && (num7 & 2) == 0)
 				{
-					note4._noteMask = 16;
+					note4.noteMask = 16;
 				}
 				if ((num6 & 64) != 0 && (num7 & 2) != 0)
 				{
-					note4._noteMask = 32;
+					note4.noteMask = 32;
 				}
 			}
 		}
@@ -652,19 +652,19 @@ public static class \u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6
 		for (int i = 0; i < \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8.Count; i++)
 		{
 			Note note = \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8[i];
-			note.\u02BD\u02B7\u02BA\u02C1\u02B9\u02B9\u02B9\u02B7\u02B7\u02B6\u02BD = Helper.\u02C0\u02B4\u02B9\u02C0\u02BE\u02B5\u02BA\u02B6\u02B8\u02B6\u02BD(note._noteMask);
+			note.\u02BD\u02B7\u02BA\u02C1\u02B9\u02B9\u02B9\u02B7\u02B7\u02B6\u02BD = Helper.\u02C0\u02B4\u02B9\u02C0\u02BE\u02B5\u02BA\u02B6\u02B8\u02B6\u02BD(note.noteMask);
 			if (note.tickPosition != num2)
 			{
 				num2 = note.tickPosition;
-				int num7 = Helper.\u02C0\u02B4\u02B9\u02C0\u02BE\u02B5\u02BA\u02B6\u02B8\u02B6\u02BD(note.noteMask);
-				if (num7 < 3 && note._noteMask != num6)
+				int num7 = Helper.\u02C0\u02B4\u02B9\u02C0\u02BE\u02B5\u02BA\u02B6\u02B8\u02B6\u02BD(note.DisjointMask);
+				if (num7 < 3 && note.noteMask != num6)
 				{
 					if (!note.IsExtendedSustain)
 					{
 						num = i;
 					}
 					Note note2 = note;
-					ushort num8 = note.noteMask;
+					ushort num8 = note.DisjointMask;
 					if (note.IsExtendedSustain && num7 <= 2)
 					{
 						if (note.IsDisjoint)
@@ -695,7 +695,7 @@ public static class \u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6
 						{
 							foreach (Note note4 in \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8.\u02B2\u02B7\u02BF\u02BF\u02B6\u02C1\u02BA\u02B6\u02B3\u02B2\u02BE(note2.tickPosition, (uint)note2.tickLength, num9))
 							{
-								num8 |= note4._noteMask;
+								num8 |= note4.noteMask;
 							}
 						}
 					}
@@ -708,10 +708,10 @@ public static class \u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6
 					{
 						num11 = 16;
 					}
-					ushort num12 = note2.noteMask;
+					ushort num12 = note2.DisjointMask;
 					ushort num13;
 					bool flag;
-					if ((note2._noteMask & num11) != 0)
+					if ((note2.noteMask & num11) != 0)
 					{
 						num13 = Helper.\u02BE\u02BB\u02B6\u02B7\u02B8\u02C0\u02BF\u02B5\u02C0\u02B6\u02B6(num12, 0);
 						flag = true;
@@ -725,7 +725,7 @@ public static class \u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6
 					if (num3 == num12 && !note2.IsExtendedSustain)
 					{
 						Note note5 = note2;
-						note5._noteMask |= num5;
+						note5.noteMask |= num5;
 						if (Helper.\u02C0\u02B4\u02B9\u02C0\u02BE\u02B5\u02BA\u02B6\u02B8\u02B6\u02BD(num4) > 1)
 						{
 							note2.\u02C0\u02B7\u02C1\u02B5\u02B9\u02B3\u02BF\u02B5\u02BC\u02B9\u02C0 |= Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.CHORD;
@@ -760,15 +760,15 @@ public static class \u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6
 							num15++;
 						}
 						while (((num8 & num13) != 0 || (num12 & num13) != 0 || (num3 != num12 && num4 == (num12 | num13))) && num15 < 12);
-						num3 = note2.noteMask;
+						num3 = note2.DisjointMask;
 						if (num15 < 12)
 						{
 							Note note6 = note2;
-							note6._noteMask |= num13;
+							note6.noteMask |= num13;
 							note2.\u02C0\u02B7\u02C1\u02B5\u02B9\u02B3\u02BF\u02B5\u02BC\u02B9\u02C0 |= Note.\u02B4\u02B4\u02B6\u02B9\u02BC\u02B3\u02BD\u02B5\u02B4\u02B3\u02BF.CHORD;
 							num5 = num13;
 						}
-						num4 = note2.noteMask;
+						num4 = note2.DisjointMask;
 					}
 				}
 			}
@@ -779,7 +779,7 @@ public static class \u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6
 	{
 		foreach (Note note in \u02B2\u02BF\u02BA\u02BE\u02BB\u02B5\u02C1\u02BD\u02BB\u02B4\u02B8)
 		{
-			ushort num = note._noteMask;
+			ushort num = note.noteMask;
 			ushort num2 = 0;
 			if ((num & 64) != 0)
 			{
@@ -812,7 +812,7 @@ public static class \u02B6\u02BA\u02B9\u02BB\u02BD\u02B7\u02BF\u02B7\u02B8\u02B6
 					num2 |= 32;
 				}
 			}
-			note._noteMask = num2;
+			note.noteMask = num2;
 		}
 	}
 

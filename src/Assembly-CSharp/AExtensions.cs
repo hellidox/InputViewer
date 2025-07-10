@@ -146,5 +146,21 @@ public static class AExtensions
 		return AExtensions.judgements[j];
 	}
 
+	public static float NotesHitPercent(this PlayerStats ps)
+	{
+		if (ps.totalNotes <= 0)
+		{
+			return 0f;
+		}
+		return (float)ps.notesHit / (float)ps.totalNotes * 100f;
+	}
+
+	public static byte BitCount(this ulong value)
+	{
+		ulong num = value - ((value >> 1) & 6148914691236517205UL);
+		num = (num & 3689348814741910323UL) + ((num >> 2) & 3689348814741910323UL);
+		return (byte)(((num + (num >> 4)) & 1085102592571150095UL) * 72340172838076673UL >> 56);
+	}
+
 	private static Dictionary<BasePlayer.Judgement, char[]> judgements = new Dictionary<BasePlayer.Judgement, char[]>();
 }

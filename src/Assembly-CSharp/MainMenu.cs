@@ -10,6 +10,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
+using A;
 using Rewired.UI.ControlMapper;
 using StrikeCore;
 using TMPro;
@@ -1071,9 +1072,9 @@ public class MainMenu : BaseMenu
 			})));
 			Debug.Log("sent debug log");
 			IL_05E7:
-			if (SystemInfo.graphicsDeviceName.Contains("AMD") && SystemInfo.graphicsDeviceType != GraphicsDeviceType.Direct3D12)
+			if (SystemInfo.graphicsDeviceName.Contains("AMD") && SystemInfo.graphicsDeviceType != GraphicsDeviceType.Direct3D12 && SystemInfo.graphicsDeviceType != GraphicsDeviceType.Direct3D11)
 			{
-				GlobalHelper.ShowMessage("if you're on an AMD gpu you PROBABLY want to be using dx12.", "api checker", 0U);
+				GlobalHelper.ShowMessage("if you're on an AMD gpu (and you're on windows)\nyou PROBABLY want to be using directx.", "api checker", 0U);
 			}
 			if (SystemInfo.graphicsDeviceName.Contains("Intel") && SystemInfo.graphicsDeviceType != GraphicsDeviceType.OpenGL2 && SystemInfo.graphicsDeviceType != GraphicsDeviceType.OpenGLCore && SystemInfo.graphicsDeviceType != GraphicsDeviceType.OpenGLES2 && SystemInfo.graphicsDeviceType != GraphicsDeviceType.OpenGLES3)
 			{

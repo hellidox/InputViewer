@@ -935,10 +935,10 @@ public class PlayerSelectionMenu : BaseMenu
 		{
 			this.\u02B3\u02BC\u02BA\u02C0\u02B3\u02B6\u02B3\u02B7\u02B8\u02B5\u02B4(0);
 		}
-		Helper.UintPair this2 = Helper.NewUintPair((uint)this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4.playerProfile.noteModifier).GetThis();
-		while (this2.MoreThanOneBitSet())
+		Helper.UintPair uintPair = Helper.NewUintPair((uint)this.\u02B4\u02B2\u02B3\u02B2\u02B2\u02B4\u02BD\u02BE\u02B8\u02BB\u02B4.playerProfile.noteModifier).dup();
+		while (uintPair.anyset_clearlowest())
 		{
-			int num = (int)this2.xor;
+			int num = (int)uintPair.xor;
 			if (num != 1 || flag)
 			{
 				this.\u02B3\u02BC\u02BA\u02C0\u02B3\u02B6\u02B3\u02B7\u02B8\u02B5\u02B4(num);

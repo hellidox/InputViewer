@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using A;
 using StrikeCore;
 using TMPro;
 using UnityEngine;
@@ -674,7 +675,7 @@ public abstract class BasePlayer : MonoBehaviour
 			{
 				num4 = 1;
 			}
-			int num5 = ((note.\u02BD\u02B7\u02BA\u02C1\u02B9\u02B9\u02B9\u02B7\u02B7\u02B6\u02BD == -1) ? Helper.\u02C0\u02B4\u02B9\u02C0\u02BE\u02B5\u02BA\u02B6\u02B8\u02B6\u02BD(note._noteMask) : note.\u02BD\u02B7\u02BA\u02C1\u02B9\u02B9\u02B9\u02B7\u02B7\u02B6\u02BD);
+			int num5 = ((note.\u02BD\u02B7\u02BA\u02C1\u02B9\u02B9\u02B9\u02B7\u02B7\u02B6\u02BD == -1) ? Helper.\u02C0\u02B4\u02B9\u02C0\u02BE\u02B5\u02BA\u02B6\u02B8\u02B6\u02BD(note.noteMask) : note.\u02BD\u02B7\u02BA\u02C1\u02B9\u02B9\u02B9\u02B7\u02B7\u02B6\u02BD);
 			num += num5 * (50 + num3) * num4;
 			if ((float)note.tickLength >= Mathf.Ceil(this.gameManager.song.\u02C0\u02B3\u02C1\u02BB\u02B5\u02BA\u02BB\u02B3\u02C1\u02B8\u02BD / 3f))
 			{
@@ -719,7 +720,7 @@ public abstract class BasePlayer : MonoBehaviour
 		{
 			return;
 		}
-		int num = ((\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02BD\u02B7\u02BA\u02C1\u02B9\u02B9\u02B9\u02B7\u02B7\u02B6\u02BD == -1) ? Helper.\u02C0\u02B4\u02B9\u02C0\u02BE\u02B5\u02BA\u02B6\u02B8\u02B6\u02BD(\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8._noteMask) : \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02BD\u02B7\u02BA\u02C1\u02B9\u02B9\u02B9\u02B7\u02B7\u02B6\u02BD) * \u02B7\u02BE\u02B2\u02B6\u02BC\u02BF\u02B4\u02B6\u02B2\u02B8\u02B3;
+		int num = ((\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02BD\u02B7\u02BA\u02C1\u02B9\u02B9\u02B9\u02B7\u02B7\u02B6\u02BD == -1) ? Helper.\u02C0\u02B4\u02B9\u02C0\u02BE\u02B5\u02BA\u02B6\u02B8\u02B6\u02BD(\u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.noteMask) : \u02BC\u02BD\u02B6\u02BD\u02B4\u02B3\u02C0\u02C1\u02C1\u02BC\u02B8.\u02BD\u02B7\u02BA\u02C1\u02B9\u02B9\u02B9\u02B7\u02B7\u02B6\u02BD) * \u02B7\u02BE\u02B2\u02B6\u02BC\u02BF\u02B4\u02B6\u02B2\u02B8\u02B3;
 		this.\u02BC\u02BC\u02C1\u02B4\u02BF\u02B8\u02BF\u02B2\u02BA\u02B3\u02B5 += num * this.\u02BD\u02B7\u02BF\u02B4\u02C1\u02C1\u02BA\u02BB\u02BD\u02B4\u02B7;
 		this.\u02BD\u02BC\u02B7\u02B6\u02C1\u02B6\u02BF\u02B5\u02BA\u02BF\u02C1 += num;
 		if (this.\u02C1\u02B8\u02B4\u02B5\u02B3\u02BE\u02BD\u02BF\u02B9\u02B7\u02BF)
@@ -887,7 +888,7 @@ public abstract class BasePlayer : MonoBehaviour
 			}
 			this.ticker = 0f;
 		}
-		this.\u02B9\u02BF\u02B7\u02BE\u02B9\u02B5\u02B4\u02B9\u02B6\u02B9\u02B6 = 0;
+		this.hittableNotesThisFrame = 0;
 		if (!this.gameManager.\u02C0\u02C0\u02BA\u02BF\u02B3\u02BA\u02B5\u02BF\u02B9\u02BB\u02B5)
 		{
 			if (!this.player.playerProfile.isRemotePlayer && this.player.rewiredPlayer.GetButtonDown(16))
@@ -1083,7 +1084,7 @@ public abstract class BasePlayer : MonoBehaviour
 	public virtual void \u02B8\u02BF\u02C0\u02BE\u02B2\u02BA\u02C0\u02B5\u02BE\u02B7\u02BD()
 	{
 		this.gameManager.\u02B3\u02BC\u02B6\u02C0\u02BF\u02B5\u02C1\u02B4\u02BA\u02BA\u02C1.Reset();
-		this.\u02B9\u02BF\u02B7\u02BE\u02B9\u02B5\u02B4\u02B9\u02B6\u02B9\u02B6 = 0;
+		this.hittableNotesThisFrame = 0;
 		BassAudioManager.Instance.MuteInstrument(this.player.playerProfile.moonInstrument, true, -1f);
 		this.isMutedAudio = false;
 		this.\u02B7\u02BD\u02C1\u02B3\u02BD\u02B5\u02B6\u02B8\u02B8\u02B2\u02BF = false;
@@ -1140,12 +1141,12 @@ public abstract class BasePlayer : MonoBehaviour
 	[CompilerGenerated]
 	private void \u02C1\u02BA\u02BE\u02B9\u02B8\u02BB\u02B7\u02BB\u02B7\u02B3\u02B5(Note \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2, bool \u02B3\u02BF\u02C1\u02B5\u02C0\u02BC\u02BC\u02B4\u02B3\u02BF\u02B2)
 	{
-		if (\u02B3\u02BF\u02C1\u02B5\u02C0\u02BC\u02BC\u02B4\u02B3\u02BF\u02B2 && this.hittableNotes.Length == this.\u02B9\u02BF\u02B7\u02BE\u02B9\u02B5\u02B4\u02B9\u02B6\u02B9\u02B6)
+		if (\u02B3\u02BF\u02C1\u02B5\u02C0\u02BC\u02BC\u02B4\u02B3\u02BF\u02B2 && this.hittableNotes.Length == this.hittableNotesThisFrame)
 		{
 			Array.Resize<Note>(ref this.hittableNotes, this.hittableNotes.Length * 2);
 		}
-		this.hittableNotes[this.\u02B9\u02BF\u02B7\u02BE\u02B9\u02B5\u02B4\u02B9\u02B6\u02B9\u02B6] = \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2;
-		this.\u02B9\u02BF\u02B7\u02BE\u02B9\u02B5\u02B4\u02B9\u02B6\u02B9\u02B6++;
+		this.hittableNotes[this.hittableNotesThisFrame] = \u02B9\u02BF\u02B6\u02BE\u02BA\u02BE\u02C1\u02B4\u02BB\u02C1\u02B2;
+		this.hittableNotesThisFrame++;
 	}
 
 	public int ghosts()
@@ -1388,7 +1389,7 @@ public abstract class BasePlayer : MonoBehaviour
 	public int combo;
 
 	[HideInInspector]
-	public int \u02B9\u02BF\u02B7\u02BE\u02B9\u02B5\u02B4\u02B9\u02B6\u02B9\u02B6;
+	public int hittableNotesThisFrame;
 
 	[HideInInspector]
 	public int \u02BC\u02BC\u02C1\u02B4\u02BF\u02B8\u02BF\u02B2\u02BA\u02B3\u02B5;
@@ -1590,6 +1591,10 @@ public abstract class BasePlayer : MonoBehaviour
 			this.m_lastJudgement = jaf.judgement;
 			this.m_totalInacc += jaf.inacc;
 			BasePlayer.lastVal = jaf.val;
+			if (this.hits == null)
+			{
+				this.hits = new Dictionary<BasePlayer.Judgement, int>();
+			}
 			Dictionary<BasePlayer.Judgement, int> dictionary = this.hits;
 			BasePlayer.Judgement judgement = jaf.judgement;
 			int num = dictionary[judgement];

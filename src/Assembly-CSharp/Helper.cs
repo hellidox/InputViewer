@@ -458,7 +458,7 @@ public static class Helper
 
 	public struct UintPair
 	{
-		public bool MoreThanOneBitSet()
+		public bool anyset_clearlowest()
 		{
 			this.Value2 = this.Value1;
 			this.Value1 &= this.Value1 - 1U;
@@ -473,13 +473,13 @@ public static class Helper
 			}
 		}
 
-		public void UintPair(uint \u02B6\u02B2\u02BF\u02BC\u02C1\u02BA\u02B9\u02B2\u02BD\u02BE\u02B8)
+		public void SetBoth(uint val)
 		{
-			this.Value1 = \u02B6\u02B2\u02BF\u02BC\u02C1\u02BA\u02B9\u02B2\u02BD\u02BE\u02B8;
-			this.Value2 = \u02B6\u02B2\u02BF\u02BC\u02C1\u02BA\u02B9\u02B2\u02BD\u02BE\u02B8;
+			this.Value1 = val;
+			this.Value2 = val;
 		}
 
-		public Helper.UintPair GetThis()
+		public Helper.UintPair dup()
 		{
 			return this;
 		}
