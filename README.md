@@ -1,17 +1,9 @@
-# PLEASE USE THE PROVIDED DNSPY.XML
+## import viewer
 
-If your pull request touches every file it won't be merged!
+join the discord im not writing a guide
 
-# Patch Notes
+file goes in clone hero_data\\managed
 
+doesnt work on linux does work under wine/proton
 
-## V2.0.8.2
-- Fix the analytics file reader issue
-
-  
-## V2.0.8.1
-- You can now properly opt out of analytics. Only reason you couldn't before is because i forgo t
-- Total points are tracked (but not displayed, they'll be there when i fix the display) (am i stupid?)
-- You can now disable FPS counter (showFPS in config)
-- Optimized Practice UI by a lot (original calls string.Format every frame, this calls ZString.AppendFormat 30 times per second
-  ZString.AppendFormat doesn't generate garbage so less lag spikes
+make sure you read the config and change things you care about
